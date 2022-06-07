@@ -2456,6 +2456,9 @@ var radios_update = func {
     nav2 = nav2 * volume;
     rsbn = rsbn * volume;
 
+    freq1 = math.round(freq1, 0.001);
+    freq2 = math.round(freq2, 0.001);
+
     setprop("/instrumentation/comm[0]/volume", comm1);
     setprop("/instrumentation/comm[1]/volume", comm2);
     setprop("/instrumentation/adf[0]/volume", ark1);

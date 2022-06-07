@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-  <name>sec-radio</name>
+  <name>radio</name>
   <layout>vbox</layout>
 
   <nasal>
     <open>
-      source_switch = func{
+      var source_switch = func{
         if (getprop("/tu154/instrumentation/spu-7/source-sec") == 0) {
           setprop("/tu154/instrumentation/spu-7/source-sec", 1);
           setprop("/tu154/instrumentation/spu-7/ind-1", 0);
@@ -17,6 +17,15 @@
           setprop("/tu154/instrumentation/spu-7/ind-1", 1);
           setprop("/tu154/instrumentation/spu-7/ind-2", 0);
         }
+      }
+
+      var prop_ident = props.globals.getNode("/instrumentation/transponder/ident");
+      var ident_stop = maketimer(15.0, func {prop_ident.setBoolValue(0);});
+      ident_stop.simulatedTime = 1;
+      var ident = func{
+        prop_ident.setBoolValue(1);
+        ident_stop.stop();
+        ident_stop.start();
       }
     </open>
 
@@ -29,7 +38,7 @@
     <layout>hbox</layout>
     <text>
       <halign>left</halign>
-      <label>Secondary Radio Source</label>
+      <label>Additional Radio</label>
     </text>
 
     <empty>
@@ -72,6 +81,11 @@
       </hrule>
     </group>-->
 
+    <text>
+      <halign>left</halign>
+      <label>Secondary Radio Source</label>
+    </text>
+
     <checkbox>
       <halign>left</halign>
       <label> On / Off</label>
@@ -109,4 +123,44 @@
       </binding>
     </button>
     
-  </group> </PropertyList> 
+  </group>
+
+  <hrule/>
+
+
+
+  <group>
+    <stretch>true</stretch>
+    <layout>vbox</layout>
+    <halign>center</halign>
+    <valign>top</valign>
+
+
+
+    <!--<group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>De-Icing</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>-->
+
+    <text>
+      <halign>left</halign>
+      <label>Transponder</label>
+    </text>
+
+    <button>
+      <legend>Ident</legend>
+      <pref-width>120</pref-width>
+      <binding>
+        <command>nasal</command>
+        <script>ident()</script>
+      </binding>
+    </button>
+    
+  </group>
+
+</PropertyList> 

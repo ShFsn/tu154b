@@ -85,10 +85,10 @@
       <enabled type="bool">true</enabled>
 
       <item>
-        <label>Secondary Radio</label>
+        <label>Radio</label>
         <binding>
           <command>dialog-show</command>
-          <dialog-name>sec-radio</dialog-name>
+          <dialog-name>radio</dialog-name>
         </binding>
       </item>
 
