@@ -175,12 +175,12 @@ print("View registered");
 
 var resetView = func{
 	var current = sprintf("%d", getprop("/sim/current-view/view-number-raw"));
-	setprop("/sim/current-view/heading-offset-deg", getprop("sim/view["~current~"]/config/heading-offset-deg"));
-	setprop("/sim/current-view/pitch-offset-deg", getprop("sim/view["~current~"]/config/pitch-offset-deg"));
-	setprop("/sim/current-view/field-of-view", getprop("sim/view["~current~"]/config/default-field-of-view-deg"));
-	setprop("/sim/current-view/x-offset-m", getprop("sim/view["~current~"]/config/x-offset-m"));
-	setprop("/sim/current-view/y-offset-m", getprop("sim/view["~current~"]/config/y-offset-m"));
-	setprop("/sim/current-view/z-offset-m", getprop("sim/view["~current~"]/config/z-offset-m"));
+	setprop("/sim/current-view/heading-offset-deg", getprop("sim/view["~current~"]/config/heading-offset-deg")!=nil?getprop("sim/view["~current~"]/config/heading-offset-deg"):0);
+	setprop("/sim/current-view/pitch-offset-deg", getprop("sim/view["~current~"]/config/pitch-offset-deg")!=nil?getprop("sim/view["~current~"]/config/pitch-offset-deg"):0);
+	setprop("/sim/current-view/field-of-view", getprop("sim/view["~current~"]/config/default-field-of-view-deg")!=nil?getprop("sim/view["~current~"]/config/default-field-of-view-deg"):0);
+	setprop("/sim/current-view/x-offset-m", getprop("sim/view["~current~"]/config/x-offset-m")!=nil?getprop("sim/view["~current~"]/config/x-offset-m"):0);
+	setprop("/sim/current-view/y-offset-m", getprop("sim/view["~current~"]/config/y-offset-m")!=nil?getprop("sim/view["~current~"]/config/y-offset-m"):0);
+	setprop("/sim/current-view/z-offset-m", getprop("sim/view["~current~"]/config/z-offset-m")!=nil?getprop("sim/view["~current~"]/config/z-offset-m"):0);
 }
 
 
@@ -197,7 +197,7 @@ view_checker = func{
       if( wind_r == nil ) { return; }
 
       setprop("/sim/sound/window-open", 0);
-      if( internal == 1 or vnr == 105 or vnr == 106 or vnr == 107 or vnr == 108 ) {
+      if( internal == 1 or vnr == 105 or vnr == 106 or vnr == 107 or vnr == 108 or vnr == 118 or vnr == 119 ) {
             setprop("/sim/sound/internal", 1);
             setprop("/sim/sound/external", 0);
       }
@@ -206,7 +206,7 @@ view_checker = func{
             setprop("/sim/sound/external", 1);
       }
 
-      if( vnr == 105 or vnr == 106 or vnr == 107 or vnr == 108 ) {
+      if( vnr == 105 or vnr == 106 or vnr == 107 or vnr == 108 or vnr == 118 or vnr == 119 ) {
             setprop("/sim/sound/pax", 1);
       }
       else {

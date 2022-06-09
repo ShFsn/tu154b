@@ -58,6 +58,14 @@
       <desc>Fast Views Switches</desc>
      </key>
      <key>
+      <name>`</name>
+      <desc>Closer view for views 1-5 (until released)</desc>
+     </key>
+     <key>
+      <name>Alt+1-3,5-7</name>
+      <desc>Alternative views for views 1-3, 5-7</desc>
+     </key>
+     <key>
       <name>c</name>
       <desc>Reset current View</desc>
      </key>
@@ -323,13 +331,13 @@
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >0.55</x-offset-m>
-      <y-offset-m type="double" >2.18</y-offset-m>
+      <y-offset-m type="double" >2.16</y-offset-m>
       <z-offset-m type="double" >-21.75</z-offset-m>
-      <heading-offset-deg type="double">38.0</heading-offset-deg>
-      <pitch-offset-deg type="double">-28.7</pitch-offset-deg>
+      <heading-offset-deg type="double">0.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-10.0</pitch-offset-deg>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <default-field-of-view-deg type="double">103.0</default-field-of-view-deg>
+      <default-field-of-view-deg type="double">84.5</default-field-of-view-deg>
       <default-pitch-deg type="double">0</default-pitch-deg>
       <default-heading-deg type="double">0</default-heading-deg>
       <front-direction-deg type="double">0</front-direction-deg>
@@ -430,7 +438,7 @@
   </view>
 
   <view n="105">
-    <name>Left Passenger View</name>
+    <name>Left Passenger View Rear</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
     <internal type="bool">false</internal>
@@ -459,7 +467,7 @@
   </view>
 
   <view n="106">
-    <name>Right Passenger View</name>
+    <name>Right Passenger View Rear</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
     <internal type="bool">false</internal>
@@ -673,6 +681,179 @@
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
       <default-field-of-view-deg type="double">49</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="114">
+    <name>Captain Landing View</name>
+    <!--<enabled type="bool">true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >-0.55</x-offset-m>
+      <y-offset-m type="double" >2.16</y-offset-m>
+      <z-offset-m type="double" >-21.75</z-offset-m>
+      <heading-offset-deg type="double">0.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-10.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">61.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="115">
+    <name>Copilot Landing View</name>
+    <!--<enabled type="bool">true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >0.55</x-offset-m>
+      <y-offset-m type="double" >2.16</y-offset-m>
+      <z-offset-m type="double" >-21.75</z-offset-m>
+      <heading-offset-deg type="double">0.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-10.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">61.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="116">
+    <name>Navigator General View</name>
+    <!--<enabled type="bool" >true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >0.0</x-offset-m>
+      <y-offset-m type="double" >2.25</y-offset-m>
+      <z-offset-m type="double" >-21.55</z-offset-m>
+      <pitch-offset-deg type="double">-35.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">93.5</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="117">
+    <name>Flight Engineer Upper View</name>
+    <!--<enabled type="bool" >true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >-0.1</x-offset-m>
+      <y-offset-m type="double" >2.25</y-offset-m>
+      <z-offset-m type="double" >-20.5</z-offset-m>
+      <heading-offset-deg type="double">-90.0</heading-offset-deg>
+      <pitch-offset-deg type="double">8.0</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">79.1</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="118">
+    <name>Left Passenger View Front</name>
+    <!--<enabled type="bool" >true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">false</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >-2.01</x-offset-m>
+      <y-offset-m type="double" >2.01</y-offset-m>
+      <z-offset-m type="double" >-8.89</z-offset-m>
+      <heading-offset-deg type="double">105.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-12.8</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">100.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="119">
+    <name>Right Passenger View Front</name>
+    <!--<enabled type="bool" >true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">false</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >2.01</x-offset-m>
+      <y-offset-m type="double" >2.01</y-offset-m>
+      <z-offset-m type="double" >-8.89</z-offset-m>
+      <heading-offset-deg type="double">-105.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-12.8</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">100.0</default-field-of-view-deg>
       <default-pitch-deg type="double">0</default-pitch-deg>
       <default-heading-deg type="double">0</default-heading-deg>
       <front-direction-deg type="double">0</front-direction-deg>
@@ -1498,6 +1679,16 @@
         <script>view.forceView(0);</script>
       </binding>
     </key>
+    <key n="49">
+      <name>1</name>
+      <desc>Captain landing view</desc>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>view.forceView(14);</script>
+        </binding>
+      </mod-alt>
+    </key>
     <key n="50">
       <name>2</name>
       <desc>Copilot view</desc>
@@ -1506,6 +1697,16 @@
         <script>view.forceView(1);</script>
       </binding>
     </key>
+    <key n="50">
+      <name>2</name>
+      <desc>Copilot landing view</desc>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>view.forceView(15);</script>
+        </binding>
+      </mod-alt>
+    </key>
     <key n="51">
       <name>3</name>
       <desc>Navigator view</desc>
@@ -1513,6 +1714,16 @@
         <command>nasal</command>
         <script>view.forceView(2);</script>
       </binding>
+    </key>
+    <key n="51">
+      <name>3</name>
+      <desc>Navigator general view</desc>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>view.forceView(16);</script>
+        </binding>
+      </mod-alt>
     </key>
     <key n="52">
       <name>4</name>
@@ -1530,21 +1741,51 @@
         <script>view.forceView(4);</script>
       </binding>
     </key>
+    <key n="53">
+      <name>5</name>
+      <desc>Flight Engineer Upper view</desc>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>view.forceView(17);</script>
+        </binding>
+      </mod-alt>
+    </key>
      <key n="54">
       <name>6</name>
-      <desc>Left Passenger View</desc>
+      <desc>Left Passenger View Rear</desc>
       <binding>
         <command>nasal</command>
         <script>view.forceView(5);</script>
       </binding>
     </key>
+     <key n="54">
+      <name>6</name>
+      <desc>Left Passenger View Rear</desc>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>view.forceView(18);</script>
+        </binding>
+      </mod-alt>
+    </key>
     <key n="55">
       <name>7</name>
-      <desc>Right Passenger View</desc>
+      <desc>Right Passenger View Front</desc>
       <binding>
         <command>nasal</command>
         <script>view.forceView(6);</script>
       </binding>
+    </key>
+    <key n="55">
+      <name>7</name>
+      <desc>Right Passenger View Front</desc>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>view.forceView(19);</script>
+        </binding>
+      </mod-alt>
     </key>
     <key n="56">
       <name>8</name>
