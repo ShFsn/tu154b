@@ -279,6 +279,7 @@ var light_manager = {
 
 light_manager.init();
 
+var enable_lm = 0;
 var switch_calc = func () {
     version = split(".", getprop("/sim/version/flightgear"));
     version_req = 0;
@@ -293,8 +294,18 @@ var switch_calc = func () {
         # FGBUG Dynamic-lighting switch does not turn off Compositor lights as of 2020-03-19
         #(version_req != 1 or getprop("/sim/rendering/dynamic-lighting/enabled") != 1)
         version_req != 1
-    ) light_manager.start();
-    else light_manager.stop();
+    ) {
+        light_manager.start();
+        enable_lm = 1;
+        setprop("/tu154/light/headlight-selector", getprop("/tu154/light/headlight-selector")!=nil?getprop("/tu154/light/headlight-selector"):0.0);
+        setprop("/tu154/light/retract", getprop("/tu154/light/retract")!=nil?getprop("/tu154/light/retract"):0.0);
+    }
+    else {
+        light_manager.stop();
+        enable_lm = 0;
+        light_manager.enable_or_disable(0, 0);
+        light_manager.enable_or_disable(0, 1);
+    }
 }
 switch_calc();
 # FGBUG Dynamic-lighting switch does not turn off Compositor lights as of 2020-03-19
@@ -308,6 +319,7 @@ var bcn = getprop("/tu154/light/strobe/strobe_2");
 var nav = getprop("/tu154/light/nav/blue");
 
 setlistener("/tu154/light/headlight-selector", func (node) {
+    if (enable_lm == 1) {
       hl = node.getValue();
       if ((hl == 1) and (rt == 1)) {
             light_manager.enable_or_disable(1, 0);
@@ -319,8 +331,10 @@ setlistener("/tu154/light/headlight-selector", func (node) {
       } else {
             light_manager.enable_or_disable(0, 1);
       }
-}, 1, 0);
+    }
+});
 setlistener("/tu154/light/retract", func (node) {
+    if (enable_lm == 1) {
       rt = node.getValue();
       if ((hl == 1) and (rt == 1)) {
             light_manager.enable_or_disable(1, 0);
@@ -332,14 +346,15 @@ setlistener("/tu154/light/retract", func (node) {
       } else {
             light_manager.enable_or_disable(0, 1);
       }
-}, 1, 0);
+    }
+});
 setlistener("/tu154/light/strobe/strobe_2", func (node) {
       light_manager.enable_or_disable(node.getValue(), 4);
 }, 1, 0);
 setlistener("/tu154/light/nav/blue", func (node) {
       light_manager.enable_or_disable(node.getValue(), 2);
       light_manager.enable_or_disable(node.getValue(), 3);
-}, 1, 0);
+});
 
 
 ############################################# Model lights ############################################
