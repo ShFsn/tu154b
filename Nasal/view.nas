@@ -47,6 +47,17 @@ var stepView = func(step, force = 0) {
 }
 
 
+var ver_calc = func () {
+    version = split(".", getprop("/sim/version/flightgear"));
+    version_req = 0;
+    if (num(version[0]) > 2020) version_req = 1;
+    if (num(version[0]) == 2020 and num(version[1]) > 4) version_req = 1;
+    if (num(version[0]) == 2020 and num(version[1]) == 4 and num(version[2]) >= 0) version_req = 1;
+
+    if ( version_req != 1 ) return 0;
+    else return 1;
+}
+
 var forceView = func{
 	if( modview_active ) return;	# Deny view modification if ~ pressed (sub view active)
 	var n = arg[0];
@@ -57,17 +68,17 @@ var forceView = func{
 	if( n == 1 ) setprop("tu154/mod-views/copilot-view", 1);
 	else setprop("tu154/mod-views/copilot-view", 0);
 
-	var offset = getprop("tu154/mod-views/view-offset");
+	var offset = getprop("tu154/mod-views/view-offset") + ver_calc();
 	if( n > 0 ) n = n + offset;
 	setprop("sim/current-view/view-number", n);
-	gui.popupTip(views[n].getNode("name").getValue());
+	#gui.popupTip(views[n].getNode("name").getValue());
 };
 
 var modView  = func{
 	var n = getprop("sim/current-view/view-number");
 	var offset = getprop("tu154/mod-views/view-offset");
 	if( n == nil ) n = 0;
-	if( n > 0 ) n = n - offset;
+	if( n > 0 ) n = n - offset - ver_calc();
 	if( n < 0 ) return;
 	var mode = arg[0];
 	if( mode == nil ) mode = 0;
