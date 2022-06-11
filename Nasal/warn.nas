@@ -949,11 +949,11 @@ if( getprop( "fdm/jsbsim/gear/gear-pos-norm" ) != 0.0 )
 # Marker beacon
 if( getprop( "instrumentation/marker-beacon[0]/serviceable" ) ) {
 setprop("tu154/systems/electrical/indicators/beacon-inner",
-		getprop( "instrumentation/marker-beacon[0]/inner" ));
+		getprop( "instrumentation/marker-beacon[0]/inner" )!=nil?getprop( "instrumentation/marker-beacon[0]/inner" ):0);
 setprop("tu154/systems/electrical/indicators/beacon-middle",
-		getprop( "instrumentation/marker-beacon[0]/middle" ));
+		getprop( "instrumentation/marker-beacon[0]/middle" )!=nil?getprop( "instrumentation/marker-beacon[0]/middle" ):0);
 setprop("tu154/systems/electrical/indicators/beacon-outer",
-		getprop( "instrumentation/marker-beacon[0]/outer" ));
+		getprop( "instrumentation/marker-beacon[0]/outer" )!=nil?getprop( "instrumentation/marker-beacon[0]/outer" ):0);
 }
  else {
 setprop("tu154/systems/electrical/indicators/beacon-inner", 0 );
