@@ -56,6 +56,7 @@
   <object-name>ailer_interc_left</object-name>
   <object-name>aileron_left</object-name>
   <object-name>navlight_l</object-name>
+  <object-name>Lightpoint_Collision_L</object-name>
   <object-name>l_pct_tr14</object-name>
   <property>sim/systems/wingflexer/z-m</property>
   <center>
@@ -86,6 +87,7 @@
   <object-name>r_pct_tr12</object-name>
   <object-name>aileron_right</object-name>
   <object-name>navlight_r</object-name>
+  <object-name>Lightpoint_Collision_R</object-name>
   <property>sim/systems/wingflexer/z-m</property>
   <center>
     <x-m>0.375</x-m>
@@ -125,6 +127,50 @@
       <z-m>0.1192</z-m>       
      </offsets>
 </model>
+ <light>
+  <name>Lightpoint_Collision_L</name>
+  <type>point</type>
+  <position>
+   <x-m>6.8417</x-m>
+   <y-m>-18.772</y-m>
+   <z-m>0.1192</z-m>
+  </position>
+  <ambient>
+   <r>0.1</r>
+   <g>0.0098</g>
+   <b>0.0098</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>1.0</r>
+   <g>0.098</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>1.0</r>
+   <g>0.098</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </specular>
+  <!-- 1.0, 4.5 / range, 75 / range^2 -->
+  <attenuation>
+   <c>7.5</c>
+   <l>0.3</l>
+   <q>0.3</q>
+  </attenuation>
+  <range-m>50.0</range-m>
+ </light>
+<animation>
+  <type>select</type>
+  <object-name>Lightpoint_Collision_L</object-name>
+  <condition>
+    <or>
+    <property>tu154/light/nav/red</property>
+    <property>sim/multiplay/generic/int[2]</property>
+    </or>
+  </condition>
+</animation>
 <model>
   <name>navlight_r</name>
   <path>Aircraft/tu154b/Model/Lights/green.xml</path>
@@ -134,6 +180,50 @@
       <z-m>0.1192</z-m>       
      </offsets>
 </model>
+ <light>
+  <name>Lightpoint_Collision_R</name>
+  <type>point</type>
+  <position>
+   <x-m>6.8417</x-m>
+   <y-m>18.772</y-m>
+   <z-m>0.1192</z-m>
+  </position>
+  <ambient>
+   <r>0.0098</r>
+   <g>0.1</g>
+   <b>0.0098</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>0.098</r>
+   <g>1.0</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>0.098</r>
+   <g>1.0</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </specular>
+  <!-- 1.0, 4.5 / range, 75 / range^2 -->
+  <attenuation>
+   <c>7.5</c>
+   <l>0.3</l>
+   <q>0.3</q>
+  </attenuation>
+  <range-m>50.0</range-m>
+ </light>
+<animation>
+  <type>select</type>
+  <object-name>Lightpoint_Collision_R</object-name>
+  <condition>
+    <or>
+    <property>tu154/light/nav/green</property>
+    <property>sim/multiplay/generic/int[1]</property>
+    </or>
+    </condition>
+</animation>
 
 <!-- Hide gears when they are retracted. -->
 <animation>
@@ -7629,44 +7719,88 @@
 <model>
   <path>Aircraft/tu154b/Model/Lights/white.xml</path>
      <offsets>
-      <x-m>16.4956</x-m> 
-      <y-m>0</y-m> 
-      <z-m>1.57</z-m>       
+      <x-m>16.4956</x-m>
+      <y-m>0</y-m>
+      <z-m>1.57</z-m>
      </offsets>
 </model>
+ <light>
+  <name>Lightpoint_Collision_B</name>
+  <type>point</type>
+  <position>
+    <x-m>16.4956</x-m>
+    <y-m>0</y-m>
+    <z-m>1.57</z-m>
+  </position>
+  <ambient>
+   <r>0.1</r>
+   <g>0.1</g>
+   <b>0.1</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>1.0</r>
+   <g>1.0</g>
+   <b>1.0</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>1.0</r>
+   <g>1.0</g>
+   <b>1.0</b>
+   <a>1.0</a>
+  </specular>
+  <!-- 1.0, 4.5 / range, 75 / range^2 -->
+  <attenuation>
+   <c>15.0</c>
+   <l>0.3</l>
+   <q>0.3</q>
+  </attenuation>
+  <range-m>50.0</range-m>
+ </light>
+<animation>
+  <type>select</type>
+  <object-name>Lightpoint_Collision_B</object-name>
+  <condition>
+    <or>
+    <property>tu154/light/nav/blue</property>
+    <property>sim/multiplay/generic/int[0]</property>
+    </or>
+  </condition>
+</animation>
 
 <!--Nosewheel Lights-->
 <model>
   <path>Aircraft/tu154b/Model/Lights/taxiw.xml</path>
      <offsets>
-      <x-m>-18.05</x-m> 
-      <y-m>-0.19</y-m> 
-      <z-m>-1.15</z-m>       
+      <x-m>-18.05</x-m>
+      <y-m>-0.19</y-m>
+      <z-m>-1.15</z-m>
      </offsets>
 </model>
 <model>
   <path>Aircraft/tu154b/Model/Lights/taxiw.xml</path>
      <offsets>
-      <x-m>-18.05</x-m> 
-      <y-m>0.07</y-m> 
-      <z-m>-1.15</z-m>       
+      <x-m>-18.05</x-m>
+      <y-m>0.07</y-m>
+      <z-m>-1.15</z-m>
      </offsets>
 </model>
 <!--Nose Lights-->
 <model>
   <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
      <offsets>
-      <x-m>-19.1</x-m> 
-      <y-m>-0.32</y-m> 
-      <z-m>-0.7</z-m>         
+      <x-m>-19.1</x-m>
+      <y-m>-0.32</y-m>
+      <z-m>-0.7</z-m>
      </offsets>
 </model>
 <model>
   <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
      <offsets>
-      <x-m>-19.1</x-m> 
-      <y-m>0.08</y-m> 
-      <z-m>-0.7</z-m>         
+      <x-m>-19.1</x-m>
+      <y-m>0.08</y-m>
+      <z-m>-0.7</z-m>
      </offsets>
 </model>
 <!--Right Wing Lights-->
@@ -7675,7 +7809,7 @@
      <offsets>
         <x-m>-4.1</x-m>
         <y-m>3.75</y-m>
-        <z-m>-0.27</z-m>         
+        <z-m>-0.27</z-m>
      </offsets>
 </model>
 <!--Left Wing Lights-->
@@ -7684,7 +7818,7 @@
      <offsets>
         <x-m>-4.1</x-m>
         <y-m>-3.85</y-m>
-        <z-m>-0.27</z-m>         
+        <z-m>-0.27</z-m>
      </offsets>
 </model>
 
@@ -7707,20 +7841,108 @@
 <model>
   <path>Aircraft/tu154b/Model/Lights/strobe.xml</path>
      <offsets>
-      <x-m>15.2915</x-m> 
-      <y-m>0</y-m> 
-      <z-m>9.0603</z-m>       
+      <x-m>15.2915</x-m>
+      <y-m>0</y-m>
+      <z-m>9.0603</z-m>
      </offsets>
 </model>
+ <light>
+  <name>Lightpoint_Strobe_U</name>
+  <type>point</type>
+  <position>
+    <x-m>15.2915</x-m>
+    <y-m>0</y-m>
+    <z-m>9.0603</z-m>
+  </position>
+  <ambient>
+   <r>0.1</r>
+   <g>0.0098</g>
+   <b>0.0098</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>1.0</r>
+   <g>0.098</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>1.0</r>
+   <g>0.098</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </specular>
+  <!-- 1.0, 4.5 / range, 75 / range^2 -->
+  <attenuation>
+   <c>7.5</c>
+   <l>0.3</l>
+   <q>0.2</q>
+  </attenuation>
+  <range-m>50.0</range-m>
+ </light>
+<animation>
+  <type>select</type>
+  <object-name>Lightpoint_Strobe_U</object-name>
+  <condition>
+    <or>
+    <property>tu154/light/strobe/strobe_1</property>
+    <property>sim/multiplay/generic/int[6]</property>
+    </or>
+  </condition>
+</animation>
 
 <model>
   <path>Aircraft/tu154b/Model/Lights/strobe2.xml</path>
      <offsets>
-      <x-m>9.8856</x-m> 
-      <y-m>0</y-m> 
-      <z-m>0.1689</z-m>       
+      <x-m>9.8856</x-m>
+      <y-m>0</y-m>
+      <z-m>0.1689</z-m>
      </offsets>
 </model>
+ <light>
+  <name>Lightpoint_Strobe_L</name>
+  <type>point</type>
+  <position>
+    <x-m>9.8856</x-m>
+    <y-m>0</y-m>
+    <z-m>0.1689</z-m>
+  </position>
+  <ambient>
+   <r>0.1</r>
+   <g>0.0098</g>
+   <b>0.0098</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>1.0</r>
+   <g>0.098</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>1.0</r>
+   <g>0.098</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </specular>
+  <!-- 1.0, 4.5 / range, 75 / range^2 -->
+  <attenuation>
+   <c>7.5</c>
+   <l>0.3</l>
+   <q>0.2</q>
+  </attenuation>
+  <range-m>50.0</range-m>
+ </light>
+<animation>
+  <type>select</type>
+  <object-name>Lightpoint_Strobe_L</object-name>
+  <condition>
+    <or>
+    <property>tu154/light/strobe/strobe_2</property>
+    <property>sim/multiplay/generic/int[7]</property>
+    </or>
+  </condition>
+</animation>
 
 <!--
 <animation>
@@ -9303,28 +9525,6 @@
    <pitch-deg>80.0</pitch-deg>
   </offsets>
  </model>
- 
- <model>
-  <path>Aircraft/tu154b/Model/Lights/headlight-taxi.xml</path>
-  <name>taxilight_l</name>
-  <offsets>
-   <x-m>-3.71</x-m>
-   <y-m>-3.81</y-m>
-   <z-m>-0.1</z-m>
-   <pitch-deg>70.0</pitch-deg>
-  </offsets>
- </model>
- 
- <model>
-  <path>Aircraft/tu154b/Model/Lights/headlight-taxi.xml</path>
-  <name>taxilight_r</name>
-  <offsets>
-   <x-m>-3.71</x-m>
-   <y-m>3.81</y-m>
-   <z-m>-0.1</z-m>
-   <pitch-deg>70.0</pitch-deg>
-  </offsets>
- </model>
 
  <model>
   <path>Aircraft/tu154b/Model/Lights/taillight.xml</path>
@@ -9375,13 +9575,57 @@
   </offsets>
  </model>
  
- <model>
+ <!--<model>
   <path>Aircraft/tu154b/Model/Lights/lightbox.xml</path>
   <name>overhead_light</name>
   <offsets>
     <x-m>-21.73</x-m>
     <y-m>0.0</y-m>
     <z-m>2.452</z-m>
+  </offsets>
+ </model>-->
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-light_1.xml</path>
+  <name>overhead_light_1</name>
+  <offsets>
+    <x-m>-21.45</x-m>
+    <y-m>-0.2</y-m>
+    <z-m>2.1</z-m>
+    <pitch-deg>125.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-light_1.xml</path>
+  <name>overhead_light_2</name>
+  <offsets>
+    <x-m>-21.45</x-m>
+    <y-m>0.2</y-m>
+    <z-m>2.1</z-m>
+    <pitch-deg>125.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-light_2.xml</path>
+  <name>overhead_light_3</name>
+  <offsets>
+    <x-m>-22.25</x-m>
+    <y-m>-0.2</y-m>
+    <z-m>2.25</z-m>
+    <pitch-deg>120.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-light_2.xml</path>
+  <name>overhead_light_4</name>
+  <offsets>
+    <x-m>-22.25</x-m>
+    <y-m>0.2</y-m>
+    <z-m>2.25</z-m>
+    <pitch-deg>120.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
   </offsets>
  </model>
 
@@ -9448,23 +9692,25 @@
  
 <animation>
   <type>select</type>
-  <object-name>taxilight_l</object-name>
-  <object-name>taxilight_r</object-name>
   <object-name>taxilight_c</object-name>
   <condition>
+    <and>
     <equals>
       <property>tu154/light/headlight-selector</property>
       <value>0.8</value>
     </equals>
+    <equals>
+      <property>/gear/gear/position-norm</property>
+      <value>1</value>
+    </equals>
+    </and>
   </condition>
 </animation>
  
 <animation>
   <type>rotate</type>
   <object-name>headlight_l</object-name>
-  <object-name>headlight_r</object-name>
-  <object-name>taxilight_l</object-name>
-  <object-name>taxilight_r</object-name>  
+  <object-name>headlight_r</object-name>  
   <property>tu154/light/retract</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-70.0</dep></entry>
@@ -9485,7 +9731,6 @@
 <animation>
   <type>rotate</type>
   <object-name>headlight_c</object-name>
-  <object-name>taxilight_c</object-name>
   <property>tu154/light/retract</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-70.0</dep></entry>
@@ -9511,6 +9756,10 @@
   <object-name>overhead_light</object-name>
   <object-name>central_light</object-name>
   <object-name>fe_light</object-name>
+  <object-name>overhead_light_1</object-name>
+  <object-name>overhead_light_2</object-name>
+  <object-name>overhead_light_3</object-name>
+  <object-name>overhead_light_4</object-name>
   <condition>
     <greater-than>
       <property>tu154/light/instruments/int-red</property>

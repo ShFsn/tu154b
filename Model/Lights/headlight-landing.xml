@@ -45,15 +45,15 @@
      <b>0.7</b>
      <a>1.0</a>
    </specular>
-   <attenuation>
-     <c>1.0</c>
-     <l>0.002</l>
-     <q>0.00005</q>
-   </attenuation>
-   <exponent>30.0</exponent>
-   <cutoff>10</cutoff>
+    <attenuation>
+     <c>0.2</c><!--0.25-->
+     <l>0.00005</l>
+     <q>0.0000005</q>
+    </attenuation>
+   <exponent>200.0</exponent>
+   <cutoff>20</cutoff>
    <near-m>50</near-m>
-   <far-m>300</far-m>
+   <far-m>5000</far-m>
  </animation>
 
   <animation>

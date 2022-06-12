@@ -34,21 +34,21 @@
      <a>1.0</a>
    </ambient>
    <diffuse>
-     <r>0.7</r>
-     <g>0.7</g>
-     <b>0.6</b>
+     <r>0.42</r>
+     <g>0.42</g>
+     <b>0.36</b>
      <a>1.0</a>
    </diffuse>
    <specular>
-     <r>0.7</r>
-     <g>0.7</g>
-     <b>0.7</b>
+     <r>0.42</r>
+     <g>0.42</g>
+     <b>0.42</b>
      <a>1.0</a>
    </specular>
    <attenuation>
      <c>1.0</c>
      <l>0.002</l>
-     <q>0.25</q>
+     <q>0.5</q>
    </attenuation>
    <exponent>30.0</exponent>
    <cutoff>60.0</cutoff>

@@ -2,13 +2,10 @@
 
 <PropertyList>
 
-  <path>white_hl.ac</path>
+  <path>white_dl.ac</path>
 
   <effect>
   <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-	    <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
     <object-name>white</object-name>
   </effect>
 
@@ -33,19 +30,11 @@
     <object-name>white</object-name>
     <condition>
       <and>
-      <!--<property>/tu154/light/retract</property>-->
+      <property>/tu154/light/retract</property>
       <greater-than>
         <property>/tu154/light/headlight-selector</property>
-        <value>0.75</value>
+        <value>0.95</value>
       </greater-than>
-      <less-than>
-        <property>/tu154/light/headlight-selector</property>
-        <value>0.85</value>
-      </less-than>
-      <equals>
-        <property>/gear/gear/position-norm</property>
-        <value>1</value>
-      </equals>
       <greater-than>
         <property>/tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
         <value>0</value>
@@ -60,11 +49,15 @@
     <interpolation>
       <entry>
         <ind>0</ind>
-        <dep>2</dep>
+        <dep>4</dep>
       </entry>
       <entry>
-        <ind>1000</ind>
-        <dep>3</dep>
+        <ind>200</ind>
+        <dep>6</dep>
+      </entry>
+      <entry>
+        <ind>500</ind>
+        <dep>8</dep>
       </entry>
     </interpolation>
   </animation>
@@ -74,7 +67,7 @@
     <object-name>white</object-name>
     <offset>0.0</offset>
     <factor>1.0</factor>
-    <power>2</power>
+    <power>4</power>
     <two-sides type="bool">false</two-sides>
     <min>0.0</min>
     <max>1.0</max>
