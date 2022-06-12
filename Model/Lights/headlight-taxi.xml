@@ -53,7 +53,7 @@
    <exponent>10.0</exponent>
    <cutoff>60</cutoff>
    <near-m>1</near-m>
-   <far-m>1000</far-m>
+   <far-m>500</far-m>
  </animation>
  
   <animation>

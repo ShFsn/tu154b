@@ -48,12 +48,12 @@
     <attenuation>
      <c>0.2</c><!--0.25-->
      <l>0.00005</l>
-     <q>0.0000005</q>
+     <q>0.000005</q>
     </attenuation>
    <exponent>200.0</exponent>
    <cutoff>20</cutoff>
    <near-m>50</near-m>
-   <far-m>5000</far-m>
+   <far-m>2500</far-m>
  </animation>
 
   <animation>

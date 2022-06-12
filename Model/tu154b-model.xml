@@ -159,7 +159,7 @@
    <l>0.3</l>
    <q>0.3</q>
   </attenuation>
-  <range-m>50.0</range-m>
+  <range-m>25.0</range-m>
  </light>
 <animation>
   <type>select</type>
@@ -212,7 +212,7 @@
    <l>0.3</l>
    <q>0.3</q>
   </attenuation>
-  <range-m>50.0</range-m>
+  <range-m>25.0</range-m>
  </light>
 <animation>
   <type>select</type>
@@ -7756,7 +7756,7 @@
    <l>0.3</l>
    <q>0.3</q>
   </attenuation>
-  <range-m>50.0</range-m>
+  <range-m>25.0</range-m>
  </light>
 <animation>
   <type>select</type>
@@ -7878,7 +7878,7 @@
    <l>0.3</l>
    <q>0.2</q>
   </attenuation>
-  <range-m>50.0</range-m>
+  <range-m>25.0</range-m>
  </light>
 <animation>
   <type>select</type>
@@ -7931,7 +7931,7 @@
    <l>0.3</l>
    <q>0.2</q>
   </attenuation>
-  <range-m>50.0</range-m>
+  <range-m>25.0</range-m>
  </light>
 <animation>
   <type>select</type>
