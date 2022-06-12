@@ -6689,6 +6689,40 @@
 <!--Flaps-->
 <!--Outer left section-->
 <animation>
+  <type>translate</type>
+  <object-name>l_pct_tra6</object-name> 
+  <object-name>l_pct_tr12</object-name>  
+  <object-name>l_pct_tra9</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+    <entry><ind>  1.0</ind> <dep> 0.25</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>translate</type>
+  <object-name>l_pct_tra6</object-name> 
+  <object-name>l_pct_tr12</object-name>  
+  <object-name>l_pct_tra9</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+    <entry><ind>  0.62</ind>  <dep> 0.1</dep></entry>
+    <entry><ind>  1.0</ind> <dep> 0.2</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
+
+<animation>
   <type>rotate</type>
   <object-name>l_pct_tra6</object-name>  
   <property>surface-positions/flap-pos-norm</property>
@@ -6716,7 +6750,7 @@
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.33</ind>	<dep>	-3.0</dep></entry>
     <entry><ind>	0.62</ind>	<dep>	-7.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	-12.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	-16.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>0.4738</x1-m>
@@ -6737,7 +6771,7 @@
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.33</ind>	<dep>	-7.0</dep></entry>
     <entry><ind>	0.62</ind>	<dep>	-13.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	-22.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	-25.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>0.4738</x1-m>
@@ -6754,7 +6788,7 @@
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	-30.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	-15.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>2.0948</x1-m>
@@ -6767,12 +6801,31 @@
 </animation>
 <!--Inner left section-->
 <animation>
+  <type>translate</type>
+  <object-name>l_pct_tra3</object-name> 
+  <object-name>l_pct_tra4</object-name>  
+  <object-name>l_pct_tr13</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+    <entry><ind>  0.33</ind>  <dep> 0.05</dep></entry>
+    <entry><ind>  0.62</ind> <dep> 0.125</dep></entry>
+    <entry><ind>  1.0</ind> <dep> 0.31</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>-0.1</z>
+  </axis>
+</animation>
+
+<animation>
   <type>rotate</type>
   <object-name>l_pct_tr13</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	-10.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	-7.5</dep></entry>
   </interpolation>
   <axis>
     <x1-m>0.689</x1-m>
@@ -6793,7 +6846,7 @@
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.33</ind>	<dep>	-5.0</dep></entry>
     <entry><ind>	0.62</ind>	<dep>	-10.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	-15.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	-17.5</dep></entry>
   </interpolation>
   <axis>
     <x1-m>1.25</x1-m>
@@ -6832,7 +6885,7 @@
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	-30.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	-15.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>1.8846</x1-m>
@@ -6846,12 +6899,31 @@
 
 <!--Inner right section-->
 <animation>
+  <type>translate</type>
+  <object-name>r_pct_tra1</object-name> 
+  <object-name>r_pct_tra2</object-name>  
+  <object-name>r_pct_tr10</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+    <entry><ind>  0.33</ind>  <dep> 0.05</dep></entry>
+    <entry><ind>  0.62</ind> <dep> 0.125</dep></entry>
+    <entry><ind>  1.0</ind> <dep> 0.31</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>-0.1</z>
+  </axis>
+</animation>
+
+<animation>
   <type>rotate</type>
   <object-name>r_pct_tr10</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	10.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	7.5</dep></entry>
   </interpolation>
   <axis>
     <x1-m>0.689</x1-m>
@@ -6872,7 +6944,7 @@
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.33</ind>	<dep>	5.0</dep></entry>
     <entry><ind>	0.62</ind>	<dep>	10.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	15.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	17.5</dep></entry>
   </interpolation>
   <axis>
     <x1-m>1.25</x1-m>
@@ -6911,7 +6983,7 @@
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	30.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	15.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>1.8846</x1-m>
@@ -6924,6 +6996,39 @@
 </animation>
 
 <!--Outer right section-->
+<animation>
+  <type>translate</type>
+  <object-name>r_pct_tra6</object-name> 
+  <object-name>r_pct_tra7</object-name>  
+  <object-name>r_pct_tra9</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+    <entry><ind>  1.0</ind> <dep> 0.25</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>translate</type>
+  <object-name>r_pct_tra6</object-name> 
+  <object-name>r_pct_tra7</object-name>  
+  <object-name>r_pct_tra9</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+    <entry><ind>  0.62</ind>  <dep> 0.1</dep></entry>
+    <entry><ind>  1.0</ind> <dep> 0.2</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
 <animation>
   <type>rotate</type>
   <object-name>r_pct_tra9</object-name>  
@@ -6952,7 +7057,7 @@
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.33</ind>	<dep>	3.0</dep></entry>
     <entry><ind>	0.62</ind>	<dep>	7.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	12.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	16.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>0.4738</x1-m>
@@ -6973,7 +7078,7 @@
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.33</ind>	<dep>	7.0</dep></entry>
     <entry><ind>	0.62</ind>	<dep>	13.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	22.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	25.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>0.4738</x1-m>
@@ -6990,7 +7095,7 @@
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	30.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	15.0</dep></entry>
   </interpolation>
   <axis>
     <x1-m>2.0948</x1-m>
