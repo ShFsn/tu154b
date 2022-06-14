@@ -51,24 +51,27 @@ setlistener( "/controls/flight/elevator-trim", trim_handler );
 #
 # Brakes
 #
-
-var origApplyBrakes = applyBrakes;
-var applyBrakes = func(v, which = 0) {
-    if (v and getprop("controls/gear/brake-parking")) {
-       setprop("controls/gear/brake-parking", 0);
-       origApplyBrakes(0);
-    }
-    origApplyBrakes(v, which);
+props.globals.getNode("/sim/controls/brake-cancels-parking-brake", 1).setBoolValue(1);
+var park_busy = 0;
+var selectParkBrk = func() {
+	if (!park_busy) {
+		park_busy = 1;
+		var state = getprop("controls/gear/brake-parking");
+		if (state) {
+			applyBrakes(1, 0);
+			setprop("controls/gear/brake-parking", 1);
+			park_busy = 0;
+			return;
+		}
+		else {
+			applyBrakes(0, 0);
+			setprop("controls/gear/brake-parking", 0);
+			park_busy = 0;
+			return;
+		}
+	}
 }
-
-var origApplyParkingBrake = applyParkingBrake;
-var applyParkingBrake = func(v) {
-    if (v) {
-        v = origApplyParkingBrake(1);
-        origApplyBrakes(v, 0);
-    }
-    return v;
-}
+setlistener("controls/gear/brake-parking", selectParkBrk, 1, 0);
 applyParkingBrake(1);
 
 
