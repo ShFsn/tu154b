@@ -155,7 +155,7 @@
   </specular>
   <!-- 1.0, 4.5 / range, 75 / range^2 -->
   <attenuation>
-   <c>7.5</c>
+   <c>12.5</c>
    <l>0.3</l>
    <q>0.3</q>
   </attenuation>
@@ -208,7 +208,7 @@
   </specular>
   <!-- 1.0, 4.5 / range, 75 / range^2 -->
   <attenuation>
-   <c>7.5</c>
+   <c>12.5</c>
    <l>0.3</l>
    <q>0.3</q>
   </attenuation>
@@ -7270,13 +7270,16 @@
   <object-name>visor_MES2</object-name>
     <condition>
       <and>
-      <property>/tu154/light/retract</property>
+      <equals>
+        <property>/tu154/light/retract</property>
+        <value>1.0</value>
+      </equals>
       <greater-than>
         <property>/tu154/light/headlight-selector</property>
         <value>0.95</value>
       </greater-than>
       <greater-than>
-        <property>/tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+        <property>/tu154/systems/electrical/buses/DC27-bus-L/volts</property>
         <value>0</value>
       </greater-than>
       </and>
@@ -7305,7 +7308,7 @@
         <value>1</value>
       </equals>
       <greater-than>
-        <property>/tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+        <property>/tu154/systems/electrical/buses/DC27-bus-L/volts</property>
         <value>0</value>
       </greater-than>
       </and>
@@ -7857,7 +7860,7 @@
   </specular>
   <!-- 1.0, 4.5 / range, 75 / range^2 -->
   <attenuation>
-   <c>15.0</c>
+   <c>25.0</c>
    <l>0.3</l>
    <q>0.3</q>
   </attenuation>
@@ -9652,6 +9655,26 @@
     <z-m>1.75</z-m>
     <roll-deg>-135.0</roll-deg>
     <pitch-deg>-30.0</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight_point.xml</path>
+  <name>taillight_point_l</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>-2.267</y-m>
+    <z-m>1.965</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight_point.xml</path>
+  <name>taillight_point_r</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>2.267</y-m>
+    <z-m>1.965</z-m>
   </offsets>
  </model>
  

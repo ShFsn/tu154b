@@ -58,10 +58,26 @@
  
   <animation>
 	  <type>select</type>
-	  <condition>
-		  <property>tu154/light/headlight-selector</property>
-		  <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
-	  </condition>
+    <condition>
+      <and>
+      <greater-than>
+        <property>/tu154/light/headlight-selector</property>
+        <value>0.75</value>
+      </greater-than>
+      <less-than>
+        <property>/tu154/light/headlight-selector</property>
+        <value>0.85</value>
+      </less-than>
+      <equals>
+        <property>/gear/gear/position-norm</property>
+        <value>1</value>
+      </equals>
+      <greater-than>
+        <property>/tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <value>0</value>
+      </greater-than>
+      </and>
+    </condition>
   </animation> 
 
 </PropertyList> 

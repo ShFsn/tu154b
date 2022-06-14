@@ -2,10 +2,13 @@
 
 <PropertyList>
 
-  <path>white_dl.ac</path>
+  <path>white.ac</path>
 
   <effect>
   <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+  <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
     <object-name>white</object-name>
   </effect>
 
@@ -19,27 +22,12 @@
     <alpha-factor>0.01</alpha-factor>
   </animation>
 
-  <!--<animation>
-    <type>billboard</type>
-    <object-name>white</object-name>
-    <spherical type="bool">true</spherical>
-  </animation>-->
-
   <animation>
     <type>select</type>
     <object-name>white</object-name>
     <condition>
-      <and>
-      <property>/tu154/light/retract</property>
-      <greater-than>
-        <property>/tu154/light/headlight-selector</property>
-        <value>0.95</value>
-      </greater-than>
-      <greater-than>
-        <property>/tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
-        <value>0</value>
-      </greater-than>
-      </and>
+      <property>tu154/light/headlight-selector</property>
+      <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
     </condition>
   </animation>
 
@@ -49,15 +37,11 @@
     <interpolation>
       <entry>
         <ind>0</ind>
-        <dep>4</dep>
+        <dep>1</dep>
       </entry>
       <entry>
-        <ind>200</ind>
-        <dep>6</dep>
-      </entry>
-      <entry>
-        <ind>500</ind>
-        <dep>8</dep>
+        <ind>1000</ind>
+        <dep>2</dep>
       </entry>
     </interpolation>
   </animation>
@@ -67,7 +51,7 @@
     <object-name>white</object-name>
     <offset>0.0</offset>
     <factor>1.0</factor>
-    <power>4</power>
+    <power>2</power>
     <two-sides type="bool">false</two-sides>
     <min>0.0</min>
     <max>1.0</max>
@@ -77,9 +61,9 @@
       <z-m>0.0</z-m>
       </center>
     <axis>
-      <x>-1.0</x>
+      <x>0.5</x>
       <y>0.0</y>
-      <z>0.0</z>
+      <z>1.0</z>
     </axis>
   </animation>
  
