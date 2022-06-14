@@ -26,35 +26,35 @@
 	 <help>
 	   <title>Tu-154B-2</title>
    	   <key>
-	    <name>u</name>
+	    <name>U</name>
 	    <desc>Autostart (aUtostart)</desc>
 	   </key>
 	   <key>
-	    <name>f/Shift+F/Ctrl+F</name>
+	    <name>F/Shift+F/Ctrl+F</name>
 	    <desc>AP On/Autothrottle On/AP-AT Off (F - autoFlight)</desc>
 	   </key>
 	   <key>
-	    <name>Shift+N/n/Ctrl+N/*</name>
+	    <name>Shift+N/N/Ctrl+N/*</name>
 	    <desc>Set nominal/0.85/0.7/0.0 thrust</desc>
 	   </key>
 	   <key>
-	    <name>j/k</name>
+	    <name>J/K</name>
 	    <desc>Spoilers control</desc>
 	   </key>
 	   <key>
-	    <name>r</name>
+	    <name>R</name>
 	    <desc>Thrust reverser On (ReveRseR)</desc>
 	   </key>
 	   <key>
-	    <name>Shift+M</name>
+	    <name>M</name>
 	    <desc>Center aileron, elevator, and rudder (in Middle)</desc>
 	   </key>
      <key>
-      <name>g/Shift+G/Ctrl+G</name>
+      <name>G/Shift+G/Ctrl+G</name>
       <desc>Gear up, down, neutral</desc>
      </key>
      <key>
-      <name>1-9</name>
+      <name>[Keyboard Mode: Alt+] 1-9</name>
       <desc>Fast Views Switches</desc>
      </key>
      <key>
@@ -62,11 +62,11 @@
       <desc>Closer view for views 1-5 (until released)</desc>
      </key>
      <key>
-      <name>Alt+1-3,5-7</name>
+      <name>[Disabled in Keyboard Mode] Alt+1-3,5-7</name>
       <desc>Alternative views for views 1-3, 5-7</desc>
      </key>
      <key>
-      <name>c</name>
+      <name>C</name>
       <desc>Reset current View</desc>
      </key>
 	 </help>
@@ -258,10 +258,6 @@
   <f-connect-l type="bool">false</f-connect-l>
   <f-connect-r type="bool">false</f-connect-r>
  </ground-services>
-
- <replay-fix>
-  <save_state type="bool">true</save_state>
- </replay-fix>
 
  <door>
   <position-x-m type="float">-18.66</position-x-m>
@@ -868,6 +864,35 @@
     </config>
   </view>
 
+  <view n="120">
+    <name>Copilot Whole View</name>
+    <!--<enabled type="bool">true</enabled>-->
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m type="double" >0.55</x-offset-m>
+      <y-offset-m type="double" >2.16</y-offset-m>
+      <z-offset-m type="double" >-21.75</z-offset-m>
+      <heading-offset-deg type="double">38.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-28.7</pitch-offset-deg>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">103.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
   <instrumentation>
     <path>Aircraft/tu154b/Systems/instrumentation-config.xml</path>
 
@@ -1018,6 +1043,10 @@
     </als-secondary-lights>
   </rendering>
 
+  <aircraft-data>
+    <path>/tu154/options/keyboard/keyboard-mode</path>
+    <path>/instrumentation/GROZA/settings/tcas-blip-radius</path>
+  </aircraft-data>
 
 </sim>
 
@@ -1471,7 +1500,7 @@
 <!--End developer keys biding-->
 
     <key n="117">
-	    <name>u</name>
+	    <name>U</name>
 	    <desc>Auto Startup</desc>
 	    <binding>
 		    <command>nasal</command>
@@ -1486,7 +1515,7 @@
     </key>
 
     <key n="102">
-      <name>f</name>
+      <name>F</name>
       <desc>Autopilot on</desc>
       <binding>
         <command>nasal</command>
@@ -1499,7 +1528,7 @@
     </key>
 
     <key n="70">
-      <name>F</name>
+      <name>Shift-F</name>
       <desc>Autothrottle on</desc>
       <binding>
         <command>nasal</command>
@@ -1510,7 +1539,7 @@
     </key>
 
     <key n="6">
-      <name>ctrl+F</name>
+      <name>Ctrl+F</name>
       <desc>All AP off</desc>
       <binding>
         <command>nasal</command>
@@ -1522,7 +1551,7 @@
     </key>
 
     <key n="103">
-      <name>g</name>
+      <name>G</name>
       <desc>Gear handle up</desc>
       <binding>
         <command>property-assign</command>
@@ -1546,7 +1575,7 @@
       </binding>
     </key>
     <key n="71">
-      <name>G</name>
+      <name>Shift-G</name>
       <desc>Gear handle down</desc>
       <binding>
         <command>property-assign</command>
@@ -1573,7 +1602,7 @@
 
 <!-- Nominal -->
     <key n="78">
-      <name>N</name>
+      <name>Shift-N</name>
       <desc>Nominal thrust</desc>
       <binding>
         <command>property-assign</command>
@@ -1593,7 +1622,7 @@
     </key>
 
     <key n="110">
-      <name>n</name>
+      <name>N</name>
       <desc>0.85 nominal thrust</desc>
       <binding>
         <command>property-assign</command>
@@ -1671,140 +1700,391 @@
       </mod-up>
     </key>
 
+
     <key n="49">
       <name>1</name>
       <desc>Captain view</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(0);</script>
       </binding>
-    </key>
-    <key n="49">
-      <name>1</name>
-      <desc>Captain landing view</desc>
       <mod-alt>
         <binding>
           <command>nasal</command>
-          <script>view.forceView(14);</script>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(0);
+            else view.forceView(14);
+          </script>
         </binding>
       </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>property-adjust</command>
+       <property>/controls/flight/elevator-trim</property>
+       <step type="double">-0.001</step>
+      </binding>
+      <mod-shift>
+        <desc>Look back left</desc>
+        <binding>
+         <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+         <command>property-assign</command>
+         <property>/sim/current-view/goal-heading-offset-deg</property>
+         <property>/sim/view/config/back-left-direction-deg</property>
+        </binding>
+      </mod-shift>
+      <mod-ctrl>
+        <desc>Elevator trim down fast</desc>
+        <binding>
+            <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+            <command>property-adjust</command>
+            <property>/controls/flight/elevator-trim</property>
+            <step type="double">-0.05</step>
+        </binding>
+      </mod-ctrl>
     </key>
+
+
     <key n="50">
       <name>2</name>
       <desc>Copilot view</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(1);</script>
       </binding>
-    </key>
-    <key n="50">
-      <name>2</name>
-      <desc>Copilot landing view</desc>
       <mod-alt>
         <binding>
           <command>nasal</command>
-          <script>view.forceView(15);</script>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(20);
+            else view.forceView(15);
+          </script>
         </binding>
       </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>nasal</command>
+       <script>
+         controls.incElevator(-0.05, 100)
+       </script>
+      </binding>
+      <mod-shift>
+       <desc>Look back</desc>
+       <binding>
+        <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+        <command>property-assign</command>
+        <property>/sim/current-view/goal-heading-offset-deg</property>
+        <property>/sim/view/config/back-direction-deg</property>
+       </binding>
+      </mod-shift>
     </key>
+
+
     <key n="51">
       <name>3</name>
       <desc>Navigator view</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(2);</script>
       </binding>
-    </key>
-    <key n="51">
-      <name>3</name>
-      <desc>Navigator general view</desc>
       <mod-alt>
         <binding>
           <command>nasal</command>
-          <script>view.forceView(16);</script>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(2);
+            else view.forceView(16);
+          </script>
         </binding>
       </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>nasal</command>
+       <script>
+         controls.incThrottle(-0.01, -1.0)
+       </script>
+      </binding>
+      <mod-shift>
+       <desc>Look back right</desc>
+       <binding>
+        <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+        <command>property-assign</command>
+        <property>/sim/current-view/goal-heading-offset-deg</property>
+        <property>/sim/view/config/back-right-direction-deg</property>
+       </binding>
+      </mod-shift>
     </key>
+
+
     <key n="52">
       <name>4</name>
       <desc>Overhead view</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(3);</script>
       </binding>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(3);
+          </script>
+        </binding>
+      </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>nasal</command>
+       <script>
+         controls.incAileron(-0.05, -1.0)
+       </script>
+      </binding>
+      <mod-shift>
+       <desc>Look left</desc>
+       <binding>
+        <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+        <command>property-assign</command>
+        <property>/sim/current-view/goal-heading-offset-deg</property>
+        <property>/sim/view/config/left-direction-deg</property>
+       </binding>
+      </mod-shift>
+      <mod-ctrl>
+        <desc>Aileron left trim</desc>
+        <binding>
+            <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+            <command>property-adjust</command>
+            <property>/controls/flight/aileron-trim</property>
+            <step type="double">-0.01</step>
+        </binding>
+      </mod-ctrl>
     </key>
+
+
     <key n="53">
       <name>5</name>
       <desc>Flight Engineer view</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(4);</script>
       </binding>
-    </key>
-    <key n="53">
-      <name>5</name>
-      <desc>Flight Engineer Upper view</desc>
       <mod-alt>
         <binding>
           <command>nasal</command>
-          <script>view.forceView(17);</script>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(4);
+            else view.forceView(17);
+          </script>
         </binding>
       </mod-alt>
+
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>nasal</command>
+       <script>controls.centerFlightControls()</script>
+      </binding>
+      <mod-ctrl>
+        <desc>Clear all trims</desc>
+          <binding>
+              <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+              <command>property-assign</command>
+              <property>/controls/flight/elevator-trim</property>
+              <value>0</value>
+          </binding>
+          <binding>
+              <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+              <command>property-assign</command>
+              <property>/controls/flight/aileron-trim</property>
+              <value>0</value>
+          </binding>
+          <binding>
+              <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+              <command>property-assign</command>
+              <property>/controls/flight/rudder-trim</property>
+              <value>0</value>
+          </binding>
+      </mod-ctrl>
     </key>
+
+
      <key n="54">
       <name>6</name>
       <desc>Left Passenger View Rear</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(5);</script>
       </binding>
-    </key>
-     <key n="54">
-      <name>6</name>
-      <desc>Left Passenger View Rear</desc>
       <mod-alt>
         <binding>
           <command>nasal</command>
-          <script>view.forceView(18);</script>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(5);
+            else view.forceView(18);
+          </script>
         </binding>
       </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>nasal</command>
+       <script>
+         controls.incAileron(0.05, 1.0)
+       </script>
+      </binding>
+      <mod-shift>
+       <desc>Look right</desc>
+       <binding>
+        <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+        <command>property-assign</command>
+        <property>/sim/current-view/goal-heading-offset-deg</property>
+        <property>/sim/view/config/right-direction-deg</property>
+       </binding>
+      </mod-shift>
+         <mod-ctrl>
+             <desc>Aileron right trim</desc>
+             <binding>
+                 <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+                 <command>property-adjust</command>
+                 <property>/controls/flight/aileron-trim</property>
+                 <step type="double">0.01</step>
+             </binding>
+         </mod-ctrl>
     </key>
+
+
     <key n="55">
       <name>7</name>
       <desc>Right Passenger View Front</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(6);</script>
       </binding>
-    </key>
-    <key n="55">
-      <name>7</name>
-      <desc>Right Passenger View Front</desc>
       <mod-alt>
         <binding>
           <command>nasal</command>
-          <script>view.forceView(19);</script>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(6);
+            else view.forceView(19);
+          </script>
         </binding>
       </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>property-adjust</command>
+       <property>/controls/flight/elevator-trim</property>
+       <step type="double">0.001</step>
+      </binding>
+      <mod-shift>
+       <desc>Look front left</desc>
+       <binding>
+        <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+        <command>property-assign</command>
+        <property>/sim/current-view/goal-heading-offset-deg</property>
+        <property>/sim/view/config/front-left-direction-deg</property>
+       </binding>
+      </mod-shift>
+      <mod-ctrl>
+          <desc>Elevator trim up fast</desc>
+          <binding>
+              <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+              <command>property-adjust</command>
+              <property>/controls/flight/elevator-trim</property>
+              <step type="double">0.05</step>
+          </binding>
+      </mod-ctrl>
     </key>
+
+
     <key n="56">
       <name>8</name>
       <desc>Tail View</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(7);</script>
       </binding>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(7);
+          </script>
+        </binding>
+      </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+       <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+       <command>nasal</command>
+       <script>
+         controls.incElevator(0.05, -100)
+       </script>
+      </binding>
+      <mod-shift>
+       <desc>Look forward</desc>
+       <binding>
+        <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+        <command>property-assign</command>
+        <property>/sim/current-view/goal-heading-offset-deg</property>
+        <property>/sim/view/config/front-direction-deg</property>
+       </binding>
+      </mod-shift>
     </key>
+
+
     <key n="57">
       <name>9</name>
       <desc>Rear Gear view</desc>
       <binding>
+        <condition><not><property>/tu154/options/keyboard/keyboard-mode</property></not></condition>
         <command>nasal</command>
         <script>view.forceView(8);</script>
       </binding>
+      <mod-alt>
+        <binding>
+          <command>nasal</command>
+          <script>
+            if (getprop("/tu154/options/keyboard/keyboard-mode")) view.forceView(8);
+          </script>
+        </binding>
+      </mod-alt>
+
+      <repeatable type="bool">true</repeatable>
+      <binding>
+      <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+      <command>nasal</command>
+       <script>
+         controls.incThrottle(0.01, 1.0)
+       </script>
+      </binding>
+      <mod-shift>
+       <desc>Look front right</desc>
+       <binding>
+        <condition><property>/tu154/options/keyboard/keyboard-mode</property></condition>
+        <command>property-assign</command>
+        <property>/sim/current-view/goal-heading-offset-deg</property>
+        <property>/sim/view/config/front-right-direction-deg</property>
+       </binding>
+      </mod-shift>
     </key>
+
+
     <key n="99">
-      <name>c</name>
+      <name>C</name>
       <desc>Reset current View</desc>
       <binding>
         <command>nasal</command>
@@ -1812,7 +2092,7 @@
       </binding>
     </key>
 
-    <key n="77">
+    <key n="109">
       <name>M</name>
       <desc>Center aileron, elevator, and rudder</desc>
       <binding>
@@ -1823,7 +2103,7 @@
 
 <!-- Reverser -->
  <key n="114">
-  <name>r</name>
+  <name>R</name>
   <desc>Full Reverser</desc>
   <repeatable>true</repeatable>
   <!--Start reverser-->
@@ -2310,6 +2590,18 @@
       <air-cons-r type="double">0</air-cons-r>
     </variables>
   </air-cond>
+
+  <options>
+
+   <replay-fix>
+    <save_state type="bool">true</save_state>
+   </replay-fix>
+
+   <keyboard>
+    <keyboard-mode type="bool">false</keyboard-mode>
+   </keyboard>
+
+  </options>
 </tu154>
 
 <systems>

@@ -105,10 +105,31 @@
     <checkbox>
       <halign>left</halign>
       <label>Save state after replay</label>
-      <property>/sim/model/replay-fix/save_state</property>
+      <property>/tu154/options/replay-fix/save_state</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
+
+    <text><label> </label></text>
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Keyboard</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+    <checkbox>
+      <halign>left</halign>
+      <label>Keyboard Mode</label>
+      <property>/tu154/options/keyboard/keyboard-mode</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+    <text><label>1-9 buttons works as stated in Common Aircraft Keys, see aircraft help</label></text>
 
     <text><label> </label></text>
 

@@ -1,4 +1,4 @@
-var save_state = props.globals.getNode("sim/model/replay-fix/save_state", 1);
+var save_state = props.globals.getNode("tu154/options/replay-fix/save_state", 1);
 var time_node = props.globals.getNode("/sim/replay/time", 1);
 var time = getprop("/sim/replay/time");
 time = 0; 
