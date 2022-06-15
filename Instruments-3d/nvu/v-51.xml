@@ -73,7 +73,7 @@
       <wrap>false</wrap>
     </binding>
   </action>
-  <interpolation>
+  <!--<interpolation>
     <entry><ind>	-4</ind>	<dep>	-130.0</dep></entry>
     <entry><ind>	-3</ind>	<dep>	-95.0</dep></entry>
     <entry><ind>	-2</ind>	<dep>	-62.0</dep></entry>
@@ -83,6 +83,32 @@
     <entry><ind>	 2</ind>	<dep>	62.0</dep></entry>
     <entry><ind>	 3</ind>	<dep>	98.0</dep></entry>
     <entry><ind>	 4</ind>	<dep>	130.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-0.03017</y-m>
+    <z-m>0.00849</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>-->
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>selector_1</object-name>
+  <property>tu154/switches/v-51-selector-1</property>
+  <interpolation>
+    <entry><ind>  -4</ind>  <dep> -130.0</dep></entry>
+    <entry><ind>  -3</ind>  <dep> -95.0</dep></entry>
+    <entry><ind>  -2</ind>  <dep> -62.0</dep></entry>
+    <entry><ind>  -1</ind>  <dep> -31.0</dep></entry>
+    <entry><ind>   0</ind>  <dep> 0.0</dep></entry>
+    <entry><ind>   1</ind>  <dep> 31.0</dep></entry>
+    <entry><ind>   2</ind>  <dep> 62.0</dep></entry>
+    <entry><ind>   3</ind>  <dep> 98.0</dep></entry>
+    <entry><ind>   4</ind>  <dep> 130.0</dep></entry>
   </interpolation>
   <center>
     <x-m>0.0</x-m>
@@ -117,9 +143,28 @@
       </script>
     </binding>
   </action>
-  <interpolation>
+  <!--<interpolation>
     <entry><ind>	-1</ind>	<dep>	-90.0</dep></entry>
     <entry><ind>	 5</ind>	<dep>	90.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.02607</y-m>
+    <z-m>0.0133</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>-->
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>selector_2</object-name>
+  <property>tu154/switches/v-51-selector-2</property>
+  <interpolation>
+    <entry><ind>  -1</ind>  <dep> -90.0</dep></entry>
+    <entry><ind>   5</ind>  <dep> 90.0</dep></entry>
   </interpolation>
   <center>
     <x-m>0.0</x-m>
