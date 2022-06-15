@@ -34,26 +34,26 @@
      <a>1.0</a>
    </ambient>
    <diffuse>
-     <r>0.7</r>
-     <g>0.7</g>
-     <b>0.6</b>
+     <r>0.21</r>
+     <g>0.21</g>
+     <b>0.18</b>
      <a>1.0</a>
    </diffuse>
    <specular>
-     <r>0.7</r>
-     <g>0.7</g>
-     <b>0.7</b>
+     <r>0.1</r>
+     <g>0.1</g>
+     <b>0.1</b>
      <a>1.0</a>
    </specular>
    <attenuation>
-     <c>0.5</c>
-     <l>0.002</l>
-     <q>16.0</q>
+     <c>1.0</c>
+     <l>1.0</l>
+     <q>20.0</q>
    </attenuation>
-   <exponent>7.5</exponent>
-   <cutoff>80.0</cutoff>
+   <exponent>1.0</exponent>
+   <cutoff>85.0</cutoff>
    <near-m>0.1</near-m>
-   <far-m>2.0</far-m>
+   <far-m>1.0</far-m>
  </animation>
 <!--
  <animation>

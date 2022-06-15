@@ -7,10 +7,15 @@
     <switch-gor/>
   </params>
 
-<!-- Internal instruments lighting -->
+<!-- External instruments lighting -->
   <animation>
     <type>material</type>
     <object-name>handle</object-name>
+    <condition>
+      <not>
+        <property>/tu154/light/compositor-on</property>
+      </not>
+    </condition>
     <emission>
       <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
       <green-prop>sim/model/cabin-lighting/vnesh</green-prop>

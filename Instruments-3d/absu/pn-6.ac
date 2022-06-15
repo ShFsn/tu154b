@@ -2,10 +2,10 @@ AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "mat_6" rgb 0.8 0.8 0.8 amb 0.8 0.8 0.8 emis 0 0 0 spec 0.8 0.8 0.8 shi 10 trans 0
 MATERIAL "mat_5" rgb 0.533333 0.533333 0.533333 amb 0.533333 0.533333 0.533333 emis 0 0 0 spec 0.533333 0.533333 0.533333 shi 10 trans 0
-MATERIAL "mat_4" rgb 0.266667 0.266667 0.266667 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 10 trans 0
-MATERIAL "mat_2" rgb 1 1 1 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 10 trans 0
-MATERIAL "mat_3" rgb 1 1 0 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 10 trans 0
-MATERIAL "mat_1" rgb 1 1 1 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 10 trans 0
+MATERIAL "mat_4" rgb 0.266667 0.266667 0.266667 amb 0.8 0.8 0.8 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "mat_2" rgb 1 1 1 amb 0.8 0.8 0.8 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "mat_3" rgb 1 1 0 amb 0.8 0.8 0.8 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "mat_1" rgb 1 1 1 amb 0.8 0.8 0.8 emis 0 0 0 spec 1 1 1 shi 10 trans 0
 OBJECT world
 kids 30
 OBJECT group

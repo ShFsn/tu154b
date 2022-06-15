@@ -7327,9 +7327,9 @@
   <object-name>capt_panel</object-name>
   <condition>
     <not>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/tu154/light/compositor-on</property>
     </not>
-  </condition>  
+  </condition>
   <texture-prop>tu154/textures/capt-panel</texture-prop>
   <emission>
     <red-prop>sim/model/cabin-lighting/vnesh-2</red-prop>
@@ -7344,7 +7344,7 @@
   <object-name>MESH22</object-name>
   <condition>
     <not>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
@@ -7360,7 +7360,7 @@
   <object-name>MESH26</object-name>
   <condition>
     <not>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
@@ -7376,7 +7376,7 @@
   <object-name>MESH28</object-name>
   <condition>
     <not>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
@@ -7463,7 +7463,7 @@
   <object-name>lever_mi10</object-name>
   <condition>
     <not>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
@@ -7475,11 +7475,6 @@
 <animation>
   <type>material</type>
   <object-name>mapcase</object-name>
-  <condition>
-    <not>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </not>
-  </condition>
   <emission>
     <red-prop>sim/model/cabin-lighting/prib</red-prop>
     <green-prop>sim/model/cabin-lighting/prib</green-prop>
@@ -7490,11 +7485,6 @@
 <animation>
   <type>material</type>
   <object-name>ndplace</object-name>
-  <condition>
-    <not>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </not>
-  </condition>
   <emission>
     <red-prop>sim/model/cabin-lighting/lamps</red-prop>
     <green-prop>sim/model/cabin-lighting/lamps</green-prop>
@@ -7510,11 +7500,6 @@
   <object-name>ndtfc</object-name>
   <object-name>ndctr</object-name>
   <object-name>ndap</object-name>
-  <condition>
-    <not>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </not>
-  </condition>
   <emission>
     <red-prop>sim/model/cabin-lighting/lamps</red-prop>
     <green-prop>sim/model/cabin-lighting/lamps</green-prop>
@@ -9679,7 +9664,7 @@
  </model>
  
  <!--Cabin lights-->
- <model>
+ <!--<model>
   <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
   <name>capt_light</name>
   <offsets>   
@@ -9701,42 +9686,92 @@
     <pitch-deg>27.0</pitch-deg>
     <roll-deg>35.0</roll-deg>
   </offsets>
- </model>
- 
- <!--<model>
-  <path>Aircraft/tu154b/Model/Lights/lightbox.xml</path>
-  <name>overhead_light</name>
-  <offsets>
-    <x-m>-21.73</x-m>
-    <y-m>0.0</y-m>
-    <z-m>2.452</z-m>
-  </offsets>
  </model>-->
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
+  <name>panel_light_1</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>-0.67</y-m>
+    <z-m>1.97</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
+  <name>panel_light_2</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>-0.25</y-m>
+    <z-m>2.05</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
+  <name>panel_light_3</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>0.25</y-m>
+    <z-m>2.05</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
+  <name>panel_light_4</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>0.67</y-m>
+    <z-m>1.97</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
  <model>
   <path>Aircraft/tu154b/Model/Lights/overhead-light_1.xml</path>
-  <name>overhead_light_1</name>
+  <name>overhead_light_up_1</name>
   <offsets>
-    <x-m>-21.45</x-m>
-    <y-m>-0.2</y-m>
-    <z-m>2.1</z-m>
+    <x-m>-21.5</x-m>
+    <y-m>-0.3</y-m>
+    <z-m>2.2</z-m>
     <pitch-deg>125.0</pitch-deg>
     <roll-deg>0.0</roll-deg>
   </offsets>
  </model>
  <model>
   <path>Aircraft/tu154b/Model/Lights/overhead-light_1.xml</path>
-  <name>overhead_light_2</name>
+  <name>overhead_light_up_2</name>
   <offsets>
-    <x-m>-21.45</x-m>
-    <y-m>0.2</y-m>
-    <z-m>2.1</z-m>
+    <x-m>-21.5</x-m>
+    <y-m>0.0</y-m>
+    <z-m>2.2</z-m>
+    <pitch-deg>125.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-light_1.xml</path>
+  <name>overhead_light_up_3</name>
+  <offsets>
+    <x-m>-21.5</x-m>
+    <y-m>0.3</y-m>
+    <z-m>2.2</z-m>
     <pitch-deg>125.0</pitch-deg>
     <roll-deg>0.0</roll-deg>
   </offsets>
  </model>
  <model>
   <path>Aircraft/tu154b/Model/Lights/overhead-light_2.xml</path>
-  <name>overhead_light_3</name>
+  <name>overhead_light_dn_1</name>
   <offsets>
     <x-m>-22.25</x-m>
     <y-m>-0.2</y-m>
@@ -9747,7 +9782,18 @@
  </model>
  <model>
   <path>Aircraft/tu154b/Model/Lights/overhead-light_2.xml</path>
-  <name>overhead_light_4</name>
+  <name>overhead_light_dn_2</name>
+  <offsets>
+    <x-m>-22.3</x-m>
+    <y-m>0.0</y-m>
+    <z-m>2.2</z-m>
+    <pitch-deg>140.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-light_2.xml</path>
+  <name>overhead_light_dn_3</name>
   <offsets>
     <x-m>-22.25</x-m>
     <y-m>0.2</y-m>
@@ -9757,7 +9803,7 @@
   </offsets>
  </model>
 
-  <model>
+  <!--<model>
   <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
   <name>central_light</name>
   <offsets>
@@ -9778,10 +9824,10 @@
     <pitch-deg>-60.0</pitch-deg>
     <roll-deg>45.0</roll-deg>
   </offsets>
- </model>
+ </model>-->
  
 
- <model>
+ <!--<model>
   <path>Aircraft/tu154b/Model/Lights/fakelight.xml</path>
   <name>fakelight</name>
   <offsets>
@@ -9791,7 +9837,164 @@
     <pitch-deg>30.0</pitch-deg>
     <roll-deg>180.0</roll-deg>
   </offsets>
+ </model>-->
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>side_light_l_1</name>
+  <offsets>
+    <x-m>-21.85</x-m>
+    <y-m>-1.1</y-m>
+    <z-m>1.775</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>90.0</heading-deg>
+  </offsets>
  </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>side_light_l_2</name>
+  <offsets>
+    <x-m>-22.125</x-m>
+    <y-m>-1.0</y-m>
+    <z-m>1.8</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>side_light_l_3</name>
+  <offsets>
+    <x-m>-22.4</x-m>
+    <y-m>-0.9</y-m>
+    <z-m>1.825</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>90.0</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>side_light_r_1</name>
+  <offsets>
+    <x-m>-21.85</x-m>
+    <y-m>1.1</y-m>
+    <z-m>1.775</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>side_light_r_2</name>
+  <offsets>
+    <x-m>-22.125</x-m>
+    <y-m>1.0</y-m>
+    <z-m>1.8</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>side_light_r_3</name>
+  <offsets>
+    <x-m>-22.4</x-m>
+    <y-m>0.9</y-m>
+    <z-m>1.825</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/engpanel-light.xml</path>
+  <name>engpanel_light_1</name>
+  <offsets>
+    <x-m>-20.95</x-m>
+    <y-m>0.6</y-m>
+    <z-m>2.5</z-m>
+    <pitch-deg>50.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/engpanel-light.xml</path>
+  <name>engpanel_light_2</name>
+  <offsets>
+    <x-m>-20.5</x-m>
+    <y-m>0.6</y-m>
+    <z-m>2.5</z-m>
+    <pitch-deg>50.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/engpanel-light.xml</path>
+  <name>engpanel_light_3</name>
+  <offsets>
+    <x-m>-20.05</x-m>
+    <y-m>0.6</y-m>
+    <z-m>2.5</z-m>
+    <pitch-deg>50.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>-
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>engpanel_light_4</name>
+  <offsets>
+    <x-m>-20.725</x-m>
+    <y-m>0.625</y-m>
+    <z-m>2.4</z-m>
+    <pitch-deg>80.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-light.xml</path>
+  <name>engpanel_light_5</name>
+  <offsets>
+    <x-m>-20.225</x-m>
+    <y-m>0.625</y-m>
+    <z-m>2.4</z-m>
+    <pitch-deg>80.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ 
+ 
+<animation>
+  <type>select</type>
+  <object-name>panel_light_1</object-name>
+  <object-name>panel_light_2</object-name>
+  <object-name>panel_light_3</object-name>
+  <object-name>panel_light_4</object-name>
+  <object-name>overhead_light_up_1</object-name>
+  <object-name>overhead_light_up_2</object-name>
+  <object-name>overhead_light_up_3</object-name>
+  <object-name>overhead_light_dn_1</object-name>
+  <object-name>overhead_light_dn_2</object-name>
+  <object-name>overhead_light_dn_3</object-name>
+  <object-name>side_light_l_1</object-name>
+  <object-name>side_light_l_2</object-name>
+  <object-name>side_light_l_3</object-name>
+  <object-name>side_light_r_1</object-name>
+  <object-name>side_light_r_2</object-name>
+  <object-name>side_light_r_3</object-name>
+  <object-name>engpanel_light_1</object-name>
+  <object-name>engpanel_light_2</object-name>
+  <object-name>engpanel_light_3</object-name>
+  <object-name>engpanel_light_4</object-name>
+  <object-name>engpanel_light_5</object-name>
+  <condition>
+    <greater-than>
+      <property>tu154/light/instruments/int-red</property>
+      <value>0.1</value>
+    </greater-than>
+    <!--<property>sim/current-view/internal</property>-->
+  </condition>
+</animation>
  
  <model>
    <name>gear-sw-emerg2</name>
@@ -9874,27 +10077,6 @@
     <y>1.0</y>
     <z>0.0</z>
   </axis>
-</animation>
- 
- 
-<animation>
-  <type>select</type>
-  <object-name>capt_light</object-name>
-  <object-name>copilot_light</object-name>
-  <object-name>overhead_light</object-name>
-  <object-name>central_light</object-name>
-  <object-name>fe_light</object-name>
-  <object-name>overhead_light_1</object-name>
-  <object-name>overhead_light_2</object-name>
-  <object-name>overhead_light_3</object-name>
-  <object-name>overhead_light_4</object-name>
-  <condition>
-    <greater-than>
-      <property>tu154/light/instruments/int-red</property>
-      <value>0.1</value>
-    </greater-than>
-    <property>sim/current-view/internal</property>
-  </condition>
 </animation>
 
 <!-- Windshield wipers -->

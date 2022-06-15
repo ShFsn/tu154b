@@ -23,6 +23,11 @@
   <object-name>base_2</object-name>
   <object-name>base_3</object-name>
   <object-name>base_4</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
   
   <emission>
     <red-prop>sim/model/cabin-lighting/vnesh</red-prop>

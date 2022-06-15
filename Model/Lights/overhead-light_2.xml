@@ -46,11 +46,11 @@
      <a>1.0</a>
    </specular>
    <attenuation>
-     <c>1.0</c>
+     <c>2.0</c>
      <l>0.002</l>
      <q>0.5</q>
    </attenuation>
-   <exponent>30.0</exponent>
+   <exponent>15.0</exponent>
    <cutoff>60.0</cutoff>
    <near-m>0.1</near-m>
    <far-m>1.0</far-m>

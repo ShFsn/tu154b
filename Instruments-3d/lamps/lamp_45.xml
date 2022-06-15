@@ -11,6 +11,11 @@
     <type>material</type>
     <object-name>_c_1</object-name>
     <object-name>_c_2</object-name>
+    <condition>
+      <not>
+        <property>/tu154/light/compositor-on</property>
+      </not>
+    </condition>
     <emission>
       <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
       <green-prop>sim/model/cabin-lighting/vnesh</green-prop>

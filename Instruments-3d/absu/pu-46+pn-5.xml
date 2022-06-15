@@ -26,6 +26,11 @@
   <object-name>strelki</object-name>  
   <object-name>navigac</object-name>
   <object-name>posadk</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
   <emission>
     <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
     <green-prop>sim/model/cabin-lighting/vnesh</green-prop>

@@ -297,12 +297,14 @@ var switch_calc = func () {
     ) {
         light_manager.start();
         enable_lm = 1;
+        props.globals.getNode("/tu154/light/compositor-on", 1).setBoolValue(0);
         setprop("/tu154/light/headlight-selector", getprop("/tu154/light/headlight-selector")!=nil?getprop("/tu154/light/headlight-selector"):0.0);
         setprop("/tu154/light/retract", getprop("/tu154/light/retract")!=nil?getprop("/tu154/light/retract"):0.0);
     }
     else {
         light_manager.stop();
         enable_lm = 0;
+        props.globals.getNode("/tu154/light/compositor-on", 1).setBoolValue(1);
         light_manager.enable_or_disable(0, 0);
         light_manager.enable_or_disable(0, 1);
     }

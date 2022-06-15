@@ -49,6 +49,11 @@
   <object-name>cover_5</object-name>
   <object-name>cover_6</object-name>
   <object-name>cover_7</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
   <emission>
     <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
     <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
