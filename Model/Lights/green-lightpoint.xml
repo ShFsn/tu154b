@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2008, 2013 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik.nsk@gmail.com					   	#
+    #############################################################################	  
+    -->
+
+<PropertyList>
+
+ <light>
+  <name>green-lightpoint</name>
+  <type>point</type>
+  <position>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </position>
+  <ambient>
+   <r>0.0098</r>
+   <g>0.1</g>
+   <b>0.0098</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>0.098</r>
+   <g>1.0</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>0.098</r>
+   <g>1.0</g>
+   <b>0.098</b>
+   <a>1.0</a>
+  </specular>
+  <!-- 1.0, 4.5 / range, 75 / range^2 -->
+  <attenuation>
+   <c>12.5</c>
+   <l>0.3</l>
+   <q>0.3</q>
+  </attenuation>
+  <range-m>25.0</range-m>
+ </light>
+
+<animation>
+  <type>select</type>
+  <object-name>green-lightpoint</object-name>
+  <condition>
+    <or>
+    <property>tu154/light/nav/green</property>
+    <property>sim/multiplay/generic/int[1]</property>
+    </or>
+  </condition>
+</animation>
+
+</PropertyList> 

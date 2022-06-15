@@ -8,20 +8,20 @@
     -->
 
 <PropertyList>
- <path>lightbox.ac</path>
 
-<!--Point lights-->
-
-<animation>
-   <type>light</type>
-   <light-type>point</light-type>
-   <object-name>lightbox</object-name>
-   <nopreview/>
+<light>
+   <type>spot</type>
+   <name>side-lightcone</name>
    <position>
      <x>0.0</x>
      <y>0.0</y>
      <z>0.0</z>
    </position>
+   <direction>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>-1.0</z>
+   </direction>
    <ambient>
      <r>0.03</r>
      <g>0.03</g>
@@ -29,36 +29,25 @@
      <a>1.0</a>
    </ambient>
    <diffuse>
-     <r>0.7</r>
-     <g>0.7</g>
-     <b>0.6</b>
+     <r>0.21</r>
+     <g>0.21</g>
+     <b>0.18</b>
      <a>1.0</a>
    </diffuse>
    <specular>
-     <r>0.7</r>
-     <g>0.7</g>
-     <b>0.7</b>
+     <r>0.1</r>
+     <g>0.1</g>
+     <b>0.1</b>
      <a>1.0</a>
    </specular>
-   <dim-factor>
-      <offset>0.4</offset>
-   </dim-factor>   
    <attenuation>
      <c>1.0</c>
-     <l>0.002</l>
-     <q>0.00005</q>
+     <l>1.0</l>
+     <q>20.0</q>
    </attenuation>
-   <near-m>0.01</near-m>
-   <far-m>2.0</far-m>
- </animation>
- 
- <!--
-  <animation>
-	  <type>select</type>
-	  <condition>
-		  <property>tu154/light/headlight-selector</property>
-		  <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
-	  </condition>
-  </animation> -->
+   <spot-exponent>1.0</spot-exponent>
+   <spot-cutoff>85.0</spot-cutoff>
+   <range-m>0.25</range-m>
+ </light>
 
 </PropertyList> 

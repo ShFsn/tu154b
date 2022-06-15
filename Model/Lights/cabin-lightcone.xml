@@ -8,15 +8,10 @@
     -->
 
 <PropertyList>
- <path>lightcone-taxi.ac</path>
 
-<!--Spot lights-->
-
-<animation>
-   <type>light</type>
-   <light-type>spot</light-type>
-   <object-name>lightcone-taxi</object-name>
-   <nopreview/>
+<light>
+   <type>spot</type>
+   <name>lightcone-tiny</name>
    <position>
      <x>0.0</x>
      <y>0.0</y>
@@ -45,30 +40,14 @@
      <b>0.7</b>
      <a>1.0</a>
    </specular>
-   <dim-factor>
-     <property>tu154/light/retract</property>
-   </dim-factor>
    <attenuation>
-     <c>1.0</c>
+     <c>0.5</c>
      <l>0.002</l>
-     <q>0.00005</q>
+     <q>16.0</q>
    </attenuation>
-   <exponent>30.0</exponent>
-   <cutoff>60.0</cutoff>
-   <near-m>1.0</near-m>
-   <far-m>100.0</far-m>
- </animation>
- 
-  <animation>
-	  <type>select</type>
-	  <condition>
-		  <not>
-		    <property>sim/current-view/internal</property>
-		  </not>
-		  <property>tu154/light/headlight-selector</property>
-		  <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
-	  </condition>
-  </animation>   
-  
-  
+   <spot-exponent>7.5</spot-exponent>
+   <spot-cutoff>80.0</spot-cutoff>
+   <range-m>1.0</range-m>
+ </light>
+
 </PropertyList> 

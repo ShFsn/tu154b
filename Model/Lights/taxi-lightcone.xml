@@ -8,15 +8,10 @@
     -->
 
 <PropertyList>
- <path>lightcone-taxi.ac</path>
 
-<!--Spot lights-->
-
-<animation>
-   <type>light</type>
-   <light-type>spot</light-type>
-   <object-name>lightcone-taxi</object-name>
-   <nopreview/>
+<light>
+   <type>spot</type>
+   <name>taxi-lightcone</name>
    <position>
      <x>0.0</x>
      <y>0.0</y>
@@ -50,14 +45,14 @@
      <l>0.0005</l>
      <q>0.0001</q>
    </attenuation>
-   <exponent>10.0</exponent>
-   <cutoff>60</cutoff>
-   <near-m>1</near-m>
-   <far-m>500</far-m>
- </animation>
+   <spot-exponent>10.0</spot-exponent>
+   <spot-cutoff>60</spot-cutoff>
+   <range-m>500</range-m>
+ </light>
  
   <animation>
 	  <type>select</type>
+    <object-name>taxi-lightcone</object-name>
     <condition>
       <and>
       <greater-than>

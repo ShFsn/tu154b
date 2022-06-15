@@ -8,15 +8,10 @@
     -->
 
 <PropertyList>
- <path>lightcone-tiny.ac</path>
 
-<!--Spot lights-->
-
-<animation>
-   <type>light</type>
-   <light-type>spot</light-type>
-   <object-name>lightcone-tiny</object-name>
-   <nopreview/>
+<light>
+   <type>spot</type>
+   <name>taillight-lightcone</name>
    <position>
      <x>0.0</x>
      <y>0.0</y>
@@ -48,55 +43,21 @@
    <attenuation>
      <c>0.5</c>
      <l>0.002</l>
-     <q>16.0</q>
+     <q>0.01</q>
    </attenuation>
-   <exponent>7.5</exponent>
-   <cutoff>80.0</cutoff>
-   <near-m>0.1</near-m>
-   <far-m>2.0</far-m>
- </animation>
-<!--
- <animation>
-  <type>rotate</type>
-  <object-name>lightcone-tiny</object-name>
-  <property>tu154/beta</property>
-  <axis>
-    <x>1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
-</animation>
-
-<animation>
-  <type>rotate</type>
-  <object-name>lightcone-tiny</object-name>
-  <property>tu154/alpha</property>
-  <axis>
-    <x>0.0</x>
-    <y>1.0</y>
-    <z>0.0</z>
-  </axis>
-</animation>
-
-<animation>
-  <type>rotate</type>
-  <object-name>lightcone-tiny</object-name>
-  <property>tu154/theta</property>
-  <axis>
-    <x>0.0</x>
-    <y>0.0</y>
-    <z>1.0</z>
-  </axis>
-</animation>-->
-
+   <spot-exponent>30.0</spot-exponent>
+   <spot-cutoff>60.0</spot-cutoff>
+   <range-m>20.0</range-m>
+ </light>
  
- <!--
   <animation>
 	  <type>select</type>
+    <object-name>taillight-lightcone</object-name>
 	  <condition>
 		  <property>tu154/light/headlight-selector</property>
 		  <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
 	  </condition>
-  </animation> -->
-
+  </animation> 
+  
+  
 </PropertyList> 
