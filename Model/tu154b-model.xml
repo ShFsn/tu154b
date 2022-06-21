@@ -208,23 +208,13 @@
 
 <!--End VC section-->
 
-<!-- Transparent Surfaces for Rembrandt rendering -->
+<!-- Glass Shader-->
  <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>MESH178</object-name>
     <object-name>LeftWindowGlassExt</object-name>
     <object-name>RightWindowGlassExt</object-name>
  </effect>
-
-<!-- Glass Shader-->
- <animation>
-   <type>shader</type>
-   <shader>chrome</shader>
-   <texture>glass_shader.png</texture>
-   <object-name>MESH178</object-name>
-   <object-name>LeftWindowGlassExt</object-name>
-   <object-name>RightWindowGlassExt</object-name>
- </animation>
 
 <!-- 
 
@@ -7375,6 +7365,8 @@
   <object-name>LeftWindowHandle</object-name>
   <object-name>RightWindow</object-name>
   <object-name>RightWindowHandle</object-name>
+  <object-name>LeftWindowGlass</object-name>
+  <object-name>RightWindowGlass</object-name>
   <object-name>WiperLeft</object-name>
   <object-name>WiperRight</object-name>
   <!--<object-name>MESH23</object-name>-->
@@ -8451,6 +8443,7 @@
 <animation>
   <type>rotate</type>
   <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowGlass</object-name>
   <property>tu154/door/window-left</property>
   <interpolation>
     <entry>
@@ -8482,6 +8475,7 @@
 <animation>
   <type>rotate</type>
   <object-name>LeftWindowExt</object-name>
+  <object-name>LeftWindowGlassExt</object-name>
   <property>tu154/door/window-left</property>
   <interpolation>
     <entry>
@@ -8513,7 +8507,9 @@
 <animation>
   <type>translate</type>
   <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowGlass</object-name>
   <object-name>LeftWindowExt</object-name>
+  <object-name>LeftWindowGlassExt</object-name>
   <property>tu154/door/window-left</property>
   <interpolation>
     <entry>
@@ -8590,6 +8586,7 @@
 <animation>
   <type>rotate</type>
   <object-name>RightWindow</object-name>
+  <object-name>RightWindowGlass</object-name>
   <property>tu154/door/window-right</property>
   <interpolation>
     <entry>
@@ -8621,6 +8618,7 @@
 <animation>
   <type>rotate</type>
   <object-name>RightWindowExt</object-name>
+  <object-name>RightWindowGlassExt</object-name>
   <property>tu154/door/window-right</property>
   <interpolation>
     <entry>
@@ -8652,7 +8650,9 @@
 <animation>
   <type>translate</type>
   <object-name>RightWindow</object-name>
+  <object-name>RightWindowGlass</object-name>
   <object-name>RightWindowExt</object-name>
+  <object-name>RightWindowGlassExt</object-name>
   <property>tu154/door/window-right</property>
   <interpolation>
     <entry>

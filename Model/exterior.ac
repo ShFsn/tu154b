@@ -22335,7 +22335,7 @@ refs 3
 kids 0
 OBJECT group
 name "cabin_internal"
-kids 7
+kids 9
 OBJECT poly
 name "crew"
 data 8
@@ -39951,13 +39951,13 @@ refs 3
 202 0.115751 0.810302
 203 0.115078 0.811826
 204 0.114628 0.812474
-kids 1
+kids 0
 OBJECT poly
 name "LeftWindowGlassExt"
 data 23
 LeftWindowGlassExt.mesh
 crease 80.0
-texture "mainb_t.png"
+texture "maina_t.png"
 numvert 8
 -22.2775 1.90608 1.02118
 -22.2353 1.93379 1.01888
@@ -59221,13 +59221,13 @@ refs 3
 0 0.329632 0.992703
 1 0.329632 0.988936
 2 0.330137 0.99082
-kids 1
+kids 0
 OBJECT poly
 name "RightWindowGlassExt"
 data 24
 RightWindowGlassExt.mesh
 crease 80.0
-texture "mainb_t.png"
+texture "maina_t.png"
 numvert 8
 -22.6545 1.96004 -0.83982
 -22.3693 2.27418 -0.72719
