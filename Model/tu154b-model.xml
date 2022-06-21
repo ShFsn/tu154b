@@ -210,7 +210,7 @@
 
 <!-- Glass Shader-->
  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
+    <inherits-from>Effects/glass</inherits-from>
     <object-name>MESH178</object-name>
     <object-name>LeftWindowGlassExt</object-name>
     <object-name>RightWindowGlassExt</object-name>

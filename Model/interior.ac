@@ -2,7 +2,7 @@ AC3Db
 MATERIAL "mat_2.019" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 0.000
 MATERIAL "mat_4.001" rgb 0.000 0.000 0.000  amb 0.000 0.000 0.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 1.000
 MATERIAL "DoorsPanelLight" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 1.000 1.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 0.000
-MATERIAL "mat_4" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.800
+MATERIAL "mat_4" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.900
 MATERIAL "mat_7" rgb 0.000 0.000 0.000  amb 0.000 0.000 0.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.000
 OBJECT world
 name "Blender_exporter_v3.3__interior.ac"

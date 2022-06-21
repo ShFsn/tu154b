@@ -15,7 +15,7 @@
 <PropertyList>
  <path>interior.ac</path>
  <effect>
-  <inherits-from>Effects/model-transparent</inherits-from>
+  <inherits-from>Effects/glass</inherits-from>
   <object-name>MESH199</object-name>
   <object-name>LeftWindowGlass</object-name>
   <object-name>RightWindowGlass</object-name>

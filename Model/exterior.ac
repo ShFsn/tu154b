@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "mat_4" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 80 trans 0.000
-MATERIAL "mat_5" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 0.600
+MATERIAL "mat_5" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 0.900
 MATERIAL "mat_6" rgb 0.235 0.337 0.239  amb 0.235 0.337 0.239  emis 0.000 0.000 0.000  spec 0.235 0.337 0.239  shi 10 trans 1.000
 MATERIAL "mat_3" rgb 0.000 1.000 0.000  amb 0.000 1.000 0.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.000
 MATERIAL "mat_2" rgb 1.000 0.000 0.000  amb 1.000 0.000 0.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.000
