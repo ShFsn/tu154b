@@ -30,13 +30,13 @@
   </load>
  </nasal>
 
+<!--TEMPORARY-->
 <animation>
   <type>select</type>
-  <object-name>Exterior</object-name>
+  <object-name>Interior</object-name>
+  <object-name>Wipers</object-name>
   <condition>
-    <not>
-    	<property>/sim/current-view/internal</property>
-    </not>
+    <not><property>/sim/current-view/internal</property></not>
   </condition>
 </animation>
 
