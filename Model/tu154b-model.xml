@@ -9995,6 +9995,9 @@
     <z>0.379683264</z>
   </axis>
 </animation>
-
+<!-- Panel tooltips -->
+<model>
+  <path>Aircraft/tu154b/Model/Tooltips/tooltips.xml</path>
+  <name>tooltips</name>
+</model>
 </PropertyList>
-

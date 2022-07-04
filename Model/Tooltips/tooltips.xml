@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <model>
+      <name>main-panel</name>
+      <path>Aircraft/tu154b/Model/Tooltips/main-panel.xml</path>
+  </model>
+  <animation>
+    <type>material</type>
+    <object-name>main-panel</object-name>
+    <emission>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>0.0</blue>
+    </emission>
+</animation>
+  <animation>
+    <type>select</type>
+        <object-name>main-panel</object-name>
+    <condition>
+        <property>/sim/panel-hotspots</property>
+    </condition>
+  </animation>
+  
+</PropertyList>
