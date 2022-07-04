@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <text>
+    <name>tooltip</name>
+    <type type="string">literal</type>
+    <text alias="../../params/text"/>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.07</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+  </text>
+</PropertyList>
