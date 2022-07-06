@@ -44,20 +44,24 @@
 <!--Left Wing Inner-->
 <animation>
   <type>rotate</type>
-  <object-name>MESH135_1</object-name>
-  <object-name>l_pct_lea2</object-name>
-  <object-name>l_pct_lea0</object-name>
-  <object-name>MESH191</object-name>
+  <object-name>l_console_middle</object-name>
+  <object-name>l_slat_outer</object-name>
+  <object-name>l_slat_middle</object-name>
+  <object-name>left_nav_lamp</object-name>
   <object-name>left_nav</object-name>
-  <object-name>l_pct_tra7</object-name>
-  <object-name>l_pct_tra5</object-name>
-  <object-name>l_spoiler0</object-name>
-  <object-name>l_spoiler_</object-name>
+  <object-name>l_flap_pin_outer</object-name>
+  <object-name>l_flap_pin_inner</object-name>
+  <object-name>l_flap_outer_3</object-name>
+  <object-name>l_flap_outer_2</object-name>
+  <object-name>l_flap_outer_1</object-name>
+  <object-name>l_spoiler_inner</object-name>
+  <object-name>l_spoiler_outer</object-name>
+  <object-name>l_flap_cover_outer</object-name>
+  <object-name>l_flap_cover_inner</object-name>
   <object-name>ailer_interc_left</object-name>
   <object-name>aileron_left</object-name>
   <object-name>navlight_l</object-name>
   <object-name>Lightpoint_Collision_L</object-name>
-  <object-name>l_pct_tr14</object-name>
   <property>sim/systems/wingflexer/z-m</property>
   <center>
     <x-m>0.375</x-m>
@@ -73,18 +77,23 @@
 <!--Right Wing Inner-->
 <animation>
   <type>rotate</type>
-  <object-name>MESH91_1</object-name>
-  <object-name>r_pct_lea2</object-name>
-  <object-name>r_pct_lea0</object-name>
-  <object-name>MESH197</object-name>
+  <object-name>r_console_middle</object-name>
+  <object-name>r_slat_middle</object-name>
+  <object-name>r_slat_outer</object-name>
+  <object-name>right_nav_lamp</object-name>
   <object-name>right_nav</object-name>
-  <object-name>r_pct_tra3</object-name>
-  <object-name>r_pct_tra8</object-name>
-  <object-name>r_spoiler0</object-name>
-  <object-name>r_spoiler_</object-name>
+  <object-name>r_flap_pin_outer</object-name>
+  <object-name>r_flap_pin_inner</object-name>
+  <object-name>r_flap_pin_inner</object-name>
+  <object-name>r_flap_pin_outer</object-name>
+  <object-name>r_flap_outer_3</object-name>
+  <object-name>r_flap_outer_2</object-name>
+  <object-name>r_flap_outer_1</object-name>
+  <object-name>r_spoiler_inner</object-name>
+  <object-name>r_spoiler_outer</object-name>
+  <object-name>r_flap_cover_outer</object-name>
+  <object-name>r_flap_cover_inner</object-name>
   <object-name>ailer_interc_right</object-name>
-  <object-name>r_pct_tr11</object-name>
-  <object-name>r_pct_tr12</object-name>
   <object-name>aileron_right</object-name>
   <object-name>navlight_r</object-name>
   <object-name>Lightpoint_Collision_R</object-name>
@@ -156,32 +165,32 @@
 </model>
 
 <!-- Hide gears when they are retracted. -->
-<animation>
+<!--<animation>
   <type>select</type>
-  <object-name>c_gear_M11</object-name>
-  <object-name>c_gear_Ob0</object-name>
+  <object-name>c_gear_object_2.1</object-name>
+  <object-name>c_gear_object_2.2</object-name>
   <condition>
     <property>gear/gear[0]/position-norm</property>
   </condition>
 </animation>
 <animation>
   <type>select</type>
-  <object-name>l_gear_M12</object-name>
-  <object-name>l_gear_M13</object-name>
-  <object-name>l_gear_Obj</object-name>
+  <object-name>l_gear_object_1.1</object-name>
+  <object-name>l_gear_object_1.2</object-name>
+  <object-name>l_gear_object_1.4</object-name>
   <condition>
     <property>gear/gear[1]/position-norm</property>
   </condition>
 </animation>
 <animation>
   <type>select</type>
-  <object-name>r_gear_M12</object-name>
-  <object-name>r_gear_M13</object-name>
-  <object-name>r_gear_Ob1</object-name>
+  <object-name>r_gear_object_1.2</object-name>
+  <object-name>r_gear_object_1.1</object-name>
+  <object-name>r_gear_object_1.4</object-name>
   <condition>
     <property>gear/gear[2]/position-norm</property>
   </condition>
-</animation>
+</animation>-->
 
 <!--End external-->
 
@@ -4494,7 +4503,7 @@
 <!--Covers-->
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME6</object-name>  
+  <object-name>c_gear_door_FL</object-name>  
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -4511,7 +4520,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME8</object-name>
+  <object-name>c_gear_door_FR</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -4529,7 +4538,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME7</object-name>
+  <object-name>c_gear_door_RL</object-name>
   <expression>
     <prod>
       <min>
@@ -4561,7 +4570,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME9</object-name>
+  <object-name>c_gear_door_RR</object-name>
   <expression>
     <prod>
       <min>
@@ -4595,9 +4604,8 @@
 <!--Nose strut-->
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_M10</object-name>
-  <object-name>c_gear_M11</object-name>
-  <object-name>c_gear_Ob0</object-name>
+  <object-name>visor_front_gear</object-name>
+  <object-name>c_gear_object_1</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -4619,9 +4627,9 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME3</object-name>
-  <object-name>c_gear_ME4</object-name>
-  <object-name>c_gear_ME5</object-name>
+  <object-name>c_gear_object_4.1</object-name>
+  <object-name>c_gear_object_4.2</object-name>
+  <object-name>c_gear_object_3.1</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
     <entry><ind>	0.7</ind>	<dep>	0.0</dep></entry>
@@ -4640,7 +4648,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME3</object-name>
+  <object-name>c_gear_object_4.1</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -4659,7 +4667,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME4</object-name>
+  <object-name>c_gear_object_4.2</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
     <entry><ind>	0.7</ind>	<dep>	0.0</dep></entry>
@@ -4678,7 +4686,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME2</object-name>
+  <object-name>c_gear_object_4.3</object-name>
   <property>gear/gear[0]/position-norm</property>
   <interpolation>
     <entry><ind>	0.7</ind>	<dep>	0.0</dep></entry>
@@ -4698,8 +4706,8 @@
 <!--Steering-->
 <animation>
   <type>rotate</type>
-  <object-name>c_wheel_Ob</object-name>
-  <object-name>c_wheel_ME</object-name>
+  <object-name>c_gear_object_3.4</object-name>
+  <object-name>c_gear_object_3.2</object-name>
   <property>fdm/jsbsim/gear/steer-pos-deg</property>
   <axis>
     <x1-m>-16.91626</x1-m>
@@ -4715,8 +4723,8 @@
 <!--Pressure movement-->
 <animation>
   <type>translate</type>
-  <object-name>c_gear_ME0</object-name>
-  <object-name>c_gear_Ob1</object-name>
+  <object-name>c_gear_object_5.1</object-name>
+  <object-name>c_gear_object_5.3</object-name>
   <property>gear/gear[0]/compression-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -4732,7 +4740,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_ME1</object-name>
+  <object-name>c_gear_object_5.2</object-name>
   <property>gear/gear[0]/compression-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -4752,7 +4760,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_Ob1</object-name>
+  <object-name>c_gear_object_5.3</object-name>
   <property>gear/gear[0]/compression-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -4772,7 +4780,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>c_gear_Ob2</object-name>
+  <object-name>c_gear_wheel</object-name>
   <property>gear/gear[0]/compression-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -4796,7 +4804,7 @@
 <!--Covers-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_M15</object-name>
+  <object-name>l_gear_door_RR</object-name>
   <expression>
     <prod>
       <min>
@@ -4828,7 +4836,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_M17</object-name>
+  <object-name>l_gear_door_RL</object-name>
   <expression>
     <prod>
       <min>
@@ -4860,7 +4868,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_M16</object-name>
+  <object-name>l_gear_door_FL</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -4879,7 +4887,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_M14</object-name>
+  <object-name>l_gear_door_FR</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -4901,8 +4909,8 @@
 <!--Left strut-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_M12</object-name>
-  <object-name>l_gear_Obj</object-name>
+  <object-name>l_gear_object_1.1</object-name>
+  <object-name>l_gear_object_1.4</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -4923,8 +4931,8 @@
 <!--Left gear-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob1</object-name>
-  <object-name>l_gear_ME2</object-name>
+  <object-name>l_gear_object_5.4</object-name>
+  <object-name>l_gear_object_5.1</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
@@ -4946,8 +4954,8 @@
 <!--Cylinder-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob6</object-name>
-  <object-name>l_gear_M13</object-name>
+  <object-name>l_gear_object_1.3</object-name>
+  <object-name>l_gear_object_1.2</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -4966,7 +4974,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_ME9</object-name>
+  <object-name>l_gear_object_2.3</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -4987,8 +4995,8 @@
 <!--By pressure-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob6</object-name>
-  <object-name>l_gear_M13</object-name>
+  <object-name>l_gear_object_1.3</object-name>
+  <object-name>l_gear_object_1.2</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5011,8 +5019,8 @@
 
 <animation>
   <type>translate</type>
-  <object-name>l_gear_Ob7</object-name>
-  <object-name>l_gear_M10</object-name>
+  <object-name>l_gear_object_2.3_wrap</object-name>
+  <object-name>l_gear_object_2.1</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -5037,8 +5045,8 @@
 <!--Cylinder-Stabilizer-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob2</object-name>
-  <object-name>l_gear_ME0</object-name>
+  <object-name>l_gear_object_6.2</object-name>
+  <object-name>l_gear_object_6.1</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
@@ -5058,8 +5066,8 @@
 <!--Turn cylinder-stabilizer to work position (main gear to horizont)-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob2</object-name>
-  <object-name>l_gear_ME0</object-name>
+  <object-name>l_gear_object_6.2</object-name>
+  <object-name>l_gear_object_6.1</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5080,8 +5088,8 @@
 <!--turn Cylinder-Stabilizer by pressure-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob2</object-name>
-  <object-name>l_gear_ME0</object-name>
+  <object-name>l_gear_object_6.2</object-name>
+  <object-name>l_gear_object_6.1</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	 0.0</dep></entry>
@@ -5104,8 +5112,8 @@
 <!--turn Cylinder-Stabilizer by pitch angle-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob2</object-name>
-  <object-name>l_gear_ME0</object-name>
+  <object-name>l_gear_object_6.2</object-name>
+  <object-name>l_gear_object_6.1</object-name>
   <property>tu154/gear/rotation-left-deg-s</property>
   <center>
     <x-m>2.71</x-m>
@@ -5121,7 +5129,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob3</object-name>
+  <object-name>l_gear_object_5.3</object-name>
   <property>gear/gear[1]/position-norm</property>
   <interpolation>
     <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
@@ -5141,7 +5149,7 @@
 
 <animation>
   <type>translate</type>
-  <object-name>l_gear_Ob2</object-name>
+  <object-name>l_gear_object_6.2</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5158,8 +5166,8 @@
 <!--Turn gear to horizont-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob1</object-name>
-  <object-name>l_gear_ME2</object-name>
+  <object-name>l_gear_object_5.4</object-name>
+  <object-name>l_gear_object_5.1</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5180,7 +5188,7 @@
 <!--Cyl-stab levers-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob3</object-name>
+  <object-name>l_gear_object_5.3</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5199,7 +5207,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_ME9</object-name>
+  <object-name>l_gear_object_2.3</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5219,7 +5227,7 @@
 
 <animation>
   <type>translate</type>
-  <object-name>l_gear_Ob2</object-name>
+  <object-name>l_gear_object_6.2</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5235,8 +5243,8 @@
 <!--Rotate strut by pressure-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_M12</object-name>
-  <object-name>l_gear_Obj</object-name>
+  <object-name>l_gear_object_1.1</object-name>
+  <object-name>l_gear_object_1.4</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5260,9 +5268,9 @@
 <!--Pressure movement-->
 <animation>
   <type>translate</type>
-  <object-name>l_gear_Ob0</object-name>
-  <object-name>l_gear_Ob5</object-name>
-  <!--<object-name>l_gear_ME8</object-name>-->
+  <object-name>l_gear_object_3.6</object-name>
+  <object-name>l_gear_object_3.5</object-name>
+  <!--<object-name>l_gear_object_3.3</object-name>-->
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5276,7 +5284,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob5</object-name>
+  <object-name>l_gear_object_3.5</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
@@ -5295,7 +5303,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_ME8</object-name>
+  <object-name>l_gear_object_3.3</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
@@ -5315,7 +5323,7 @@
 <!--Restore lever position-->
 <animation>
   <type>translate</type>
-  <object-name>l_gear_Ob3</object-name>
+  <object-name>l_gear_object_5.3</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5331,8 +5339,8 @@
 <!--Turn gear to gorizont-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob1</object-name>
-  <object-name>l_gear_ME2</object-name>
+  <object-name>l_gear_object_5.4</object-name>
+  <object-name>l_gear_object_5.1</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5352,8 +5360,8 @@
 <!--Turn gear to pitch angle-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_Ob1</object-name>
-  <object-name>l_gear_ME2</object-name>
+  <object-name>l_gear_object_5.4</object-name>
+  <object-name>l_gear_object_5.1</object-name>
   <property>tu154/gear/rotation-left-deg-s</property>
   <center>
     <x-m>2.5153</x-m>
@@ -5370,7 +5378,7 @@
 <!--Levers-->
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_ME6</object-name>
+  <object-name>l_gear_object_3.1</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5392,8 +5400,8 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_ME7</object-name>
-  <object-name>l_gear_Ob4</object-name>
+  <object-name>l_gear_object_3.2</object-name>
+  <object-name>l_gear_object_3.4</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5414,8 +5422,8 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_gear_ME3</object-name>
-  <object-name>l_gear_Ob3</object-name>
+  <object-name>l_gear_object_5.2</object-name>
+  <object-name>l_gear_object_5.3</object-name>
   <property>tu154/gear/compression-left-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5439,7 +5447,7 @@
 <!--++++++++++++++++++++++++++ Right Main++++++++++++++++++++++++++++++++++++ -->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M14</object-name>
+  <object-name>r_gear_door_RL</object-name>
   <expression>
     <prod>
       <min>
@@ -5471,7 +5479,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M15</object-name>
+  <object-name>r_gear_door_RR</object-name>
   <expression>
     <prod>
       <min>
@@ -5503,7 +5511,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M17</object-name>
+  <object-name>r_gear_door_FR</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5522,7 +5530,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M16</object-name>
+  <object-name>r_gear_door_FL</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5544,8 +5552,8 @@
 <!--Right strut-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M13</object-name>
-  <object-name>r_gear_Ob1</object-name>
+  <object-name>r_gear_object_1.1</object-name>
+  <object-name>r_gear_object_1.4</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -5566,8 +5574,8 @@
 <!--Right gear-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob3</object-name>
-  <object-name>r_gear_ME5</object-name>
+  <object-name>r_gear_object_5.4</object-name>
+  <object-name>r_gear_object_5.1</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
@@ -5588,8 +5596,8 @@
 <!--Cylinder-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Obj</object-name>
-  <object-name>r_gear_M12</object-name>
+  <object-name>r_gear_object_1.3</object-name>
+  <object-name>r_gear_object_1.2</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -5608,7 +5616,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_MES</object-name>
+  <object-name>r_gear_object_2.3</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -5629,8 +5637,8 @@
 <!--By pressure-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Obj</object-name>
-  <object-name>r_gear_M12</object-name>
+  <object-name>r_gear_object_1.3</object-name>
+  <object-name>r_gear_object_1.2</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5653,8 +5661,8 @@
 
 <animation>
   <type>translate</type>
-  <object-name>r_gear_Ob0</object-name>
-  <object-name>r_gear_ME0</object-name>
+  <object-name>r_gear_object_2.3_wrap</object-name>
+  <object-name>r_gear_object_2.1</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.1</ind>	<dep>	0.0</dep></entry>
@@ -5679,8 +5687,8 @@
 <!--Cylinder-Stabilizer-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob4</object-name>
-  <object-name>r_gear_ME3</object-name>
+  <object-name>r_gear_object_6.2</object-name>
+  <object-name>r_gear_object_6.1</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
@@ -5700,8 +5708,8 @@
 <!--Turn cylinder-stabilizer to work position (main gear to horizont)-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob4</object-name>
-  <object-name>r_gear_ME3</object-name>
+  <object-name>r_gear_object_6.2</object-name>
+  <object-name>r_gear_object_6.1</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5722,8 +5730,8 @@
 <!--turn Cylinder-Stabilizer by pressure-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob4</object-name>
-  <object-name>r_gear_ME3</object-name>
+  <object-name>r_gear_object_6.2</object-name>
+  <object-name>r_gear_object_6.1</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	 0.0</dep></entry>
@@ -5746,8 +5754,8 @@
 <!--turn Cylinder-Stabilizer by pitch angle-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob4</object-name>
-  <object-name>r_gear_ME3</object-name>
+  <object-name>r_gear_object_6.2</object-name>
+  <object-name>r_gear_object_6.1</object-name>
   <property>tu154/gear/rotation-right-deg-s</property>
   <center>
     <x-m>2.71</x-m>
@@ -5763,7 +5771,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob5</object-name>
+  <object-name>r_gear_object_5.3</object-name>
   <property>gear/gear[2]/position-norm</property>
   <interpolation>
     <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
@@ -5783,7 +5791,7 @@
 
 <animation>
   <type>translate</type>
-  <object-name>r_gear_Ob4</object-name>
+  <object-name>r_gear_object_6.2</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5800,8 +5808,8 @@
 <!--Turn gear to horizont-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob3</object-name>
-  <object-name>r_gear_ME5</object-name>
+  <object-name>r_gear_object_5.4</object-name>
+  <object-name>r_gear_object_5.1</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -5822,7 +5830,7 @@
 <!--Cyl-stab levers-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob5</object-name>
+  <object-name>r_gear_object_5.3</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5841,7 +5849,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_MES</object-name>
+  <object-name>r_gear_object_2.3</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5861,7 +5869,7 @@
 
 <animation>
   <type>translate</type>
-  <object-name>r_gear_Ob0</object-name>
+  <object-name>r_gear_object_6.2</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5877,8 +5885,8 @@
 <!--Rotate strut by pressure-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M13</object-name>
-  <object-name>r_gear_Ob1</object-name>
+  <object-name>r_gear_object_1.1</object-name>
+  <object-name>r_gear_object_1.4</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5903,9 +5911,9 @@
 <!--Pressure movement-->
 <animation>
   <type>translate</type>
-  <object-name>r_gear_Ob2</object-name>
-  <object-name>r_gear_Ob6</object-name>
-  <!--<object-name>r_gear_ME9</object-name>-->
+  <object-name>r_gear_object_3.6</object-name>
+  <object-name>r_gear_object_3.5</object-name>
+  <!--<object-name>r_gear_object_3.3</object-name>-->
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5919,7 +5927,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob6</object-name>
+  <object-name>r_gear_object_3.5</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
@@ -5938,7 +5946,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_ME9</object-name>
+  <object-name>r_gear_object_3.3</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
@@ -5958,7 +5966,7 @@
 <!--Restore lever position-->
 <animation>
   <type>translate</type>
-  <object-name>r_gear_Ob5</object-name>
+  <object-name>r_gear_object_5.3</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5974,8 +5982,8 @@
 <!--Turn gear to gorizont-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob3</object-name>
-  <object-name>r_gear_ME5</object-name>
+  <object-name>r_gear_object_5.4</object-name>
+  <object-name>r_gear_object_5.1</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -5995,8 +6003,8 @@
 <!--Turn gear to pitch angle-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_Ob3</object-name>
-  <object-name>r_gear_ME5</object-name>
+  <object-name>r_gear_object_5.4</object-name>
+  <object-name>r_gear_object_5.1</object-name>
   <property>tu154/gear/rotation-right-deg-s</property>
   <center>
     <x-m>2.5153</x-m>
@@ -6013,7 +6021,7 @@
 <!--Levers-->
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M11</object-name>
+  <object-name>r_gear_object_3.1</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -6035,8 +6043,8 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_M10</object-name>
-  <object-name>r_gear_Ob7</object-name>
+  <object-name>r_gear_object_3.2</object-name>
+  <object-name>r_gear_object_3.4</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -6057,8 +6065,8 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_gear_ME6</object-name>
-  <object-name>r_gear_Ob5</object-name>
+  <object-name>r_gear_object_5.2</object-name>
+  <object-name>r_gear_object_5.3</object-name>
   <property>tu154/gear/compression-right-m</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
@@ -6083,7 +6091,7 @@
 <!--Nose-->
 <animation>
   <type>spin</type>
-  <object-name>Object0037</object-name>
+  <object-name>c_gear_wheel</object-name>
   <condition>
       <property>gear/gear[0]/compression-norm</property>
   </condition>
@@ -6103,7 +6111,7 @@
 <!--Left-->
 <animation>
   <type>spin</type>
-  <object-name>Object0167</object-name>
+  <object-name>l_tire_rear</object-name>
   <condition>
     <greater-than>
       <property>tu154/gear/compression-left-m</property>
@@ -6125,7 +6133,7 @@
 </animation>
 <animation>
   <type>spin</type>
-  <object-name>Object0169</object-name>
+  <object-name>l_tire_middle</object-name>
   <condition>
     <greater-than>
       <property>tu154/gear/compression-left-m</property>
@@ -6147,7 +6155,7 @@
 </animation>
 <animation>
   <type>spin</type>
-  <object-name>Object0171</object-name>
+  <object-name>l_tire_front</object-name>
   <condition>
     <greater-than>
       <property>tu154/gear/compression-left-m</property>
@@ -6170,7 +6178,7 @@
 <!--Right-->
 <animation>
   <type>spin</type>
-  <object-name>Object0119</object-name>
+  <object-name>r_tire_rear</object-name>
   <condition>
     <greater-than>
       <property>tu154/gear/compression-right-m</property>
@@ -6192,7 +6200,7 @@
 </animation>
 <animation>
   <type>spin</type>
-  <object-name>Object0117</object-name>
+  <object-name>r_tire_middle</object-name>
   <condition>
     <greater-than>
       <property>tu154/gear/compression-right-m</property>
@@ -6214,7 +6222,7 @@
 </animation>
 <animation>
   <type>spin</type>
-  <object-name>Object0121</object-name>
+  <object-name>r_tire_front</object-name>
   <condition>
     <greater-than>
       <property>tu154/gear/compression-right-m</property>
@@ -6239,8 +6247,8 @@
 <!-- beginning: rotation of the engine fans-->
  <animation>
   <type>spin</type>
-  <object-name>engine0_M0</object-name>
-  <object-name>engine0_ME</object-name>
+  <object-name>engine1_fan_slow</object-name>
+  <!--<object-name>engine1_fan_fast</object-name>-->
   <property>engines/engine/n1</property>
   <factor>10</factor>
   <center>
@@ -6257,8 +6265,8 @@
  
   <animation>
   <type>spin</type>
-  <object-name>engine0_M1</object-name>
-  <object-name>engine0_M2</object-name>
+  <object-name>engine1_turbine_slow</object-name>
+  <!--<object-name>engine1_turbine_fast</object-name>-->
   <property>engines/engine/n1</property>
   <factor>10</factor>
   <center>
@@ -6275,8 +6283,8 @@
  
  <animation>
   <type>spin</type>
-  <object-name>engine2_M0</object-name>
-  <object-name>engine2_ME</object-name>
+  <object-name>engine3_fan_slow</object-name>
+  <!--<object-name>engine3_fan_fast</object-name>-->
   <property>engines/engine[2]/n1</property>
   <factor>10</factor>
   <center>
@@ -6293,8 +6301,8 @@
  
  <animation>
   <type>spin</type>
-  <object-name>engine2_M1</object-name>
-  <object-name>engine2_M2</object-name>
+  <object-name>engine3_turbine_slow</object-name>
+  <!--<object-name>engine3_turbine_fast</object-name>-->
   <property>engines/engine[2]/n1</property>
   <factor>10</factor>
   <center>
@@ -6311,8 +6319,8 @@
  
  <animation>
   <type>spin</type>
-  <object-name>engine1_M1</object-name>
-  <object-name>engine1_M2</object-name>
+  <!--<object-name>engine2_turbine_fast</object-name>-->
+  <object-name>engine2_turbine_slow</object-name>
   <property>engines/engine[1]/n1</property>
   <factor>10</factor>
   <center>
@@ -6329,8 +6337,8 @@
  
  <animation>
   <type>spin</type>
-  <object-name>engine1_M0</object-name>
-  <object-name>engine1_ME</object-name>
+  <object-name>engine2_fan_slow</object-name>
+  <!--<object-name>engine2_fan_fast</object-name>-->
   <property>engines/engine[1]/n1</property>
   <factor>10</factor>
   <center>
@@ -6345,7 +6353,7 @@
   </axis>
  </animation>
  
- <animation>
+ <!--<animation>
   <type>spin</type>
   <object-name>apu_fan</object-name>
   <property>engines/engine[3]/n1</property>
@@ -6360,7 +6368,7 @@
    <y>0</y>
    <z>0</z>
   </axis>
- </animation>
+ </animation>-->
 
 <!--+++++++++++++++++++++++ SURFACE ANIMATION ++++++++++++++++++++++++++++++++-->
 
@@ -6435,7 +6443,7 @@
 <!--Interceptor outer section-->
 <animation>
   <type>rotate</type>
-  <object-name>l_spoiler_</object-name>
+  <object-name>l_spoiler_outer</object-name>
   <property>surface-positions/speedbrake-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6452,7 +6460,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_spoiler0</object-name>  
+  <object-name>l_spoiler_inner</object-name>  
   <property>surface-positions/speedbrake-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6469,7 +6477,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_spoiler_</object-name>
+  <object-name>r_spoiler_outer</object-name>
   <property>surface-positions/speedbrake-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6486,7 +6494,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_spoiler0</object-name>  
+  <object-name>r_spoiler_inner</object-name>  
   <property>surface-positions/speedbrake-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6557,7 +6565,7 @@
 <!--Stabilizer-->
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tr16</object-name>
+  <object-name>stabilizer_root</object-name>
   <object-name>stabilizer</object-name>
   <object-name>elevator_left</object-name>
   <object-name>elevator_right</object-name>
@@ -6610,9 +6618,9 @@
 <!--Outer left section-->
 <animation>
   <type>translate</type>
-  <object-name>l_pct_tra6</object-name> 
-  <object-name>l_pct_tr12</object-name>  
-  <object-name>l_pct_tra9</object-name>
+  <object-name>l_flap_outer_1</object-name> 
+  <object-name>l_flap_outer_2</object-name>  
+  <object-name>l_flap_outer_3</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -6626,9 +6634,9 @@
 </animation>
 <animation>
   <type>translate</type>
-  <object-name>l_pct_tra6</object-name> 
-  <object-name>l_pct_tr12</object-name>  
-  <object-name>l_pct_tra9</object-name>
+  <object-name>l_flap_outer_1</object-name> 
+  <object-name>l_flap_outer_2</object-name>  
+  <object-name>l_flap_outer_3</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -6644,7 +6652,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tra6</object-name>  
+  <object-name>l_flap_outer_1</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6664,7 +6672,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tra6</object-name>  
+  <object-name>l_flap_outer_1</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6684,8 +6692,8 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tr12</object-name>  
-  <object-name>l_pct_tra9</object-name>  
+  <object-name>l_flap_outer_2</object-name>  
+  <object-name>l_flap_outer_3</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6704,7 +6712,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tra9</object-name>  
+  <object-name>l_flap_outer_3</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
@@ -6722,9 +6730,9 @@
 <!--Inner left section-->
 <animation>
   <type>translate</type>
-  <object-name>l_pct_tra3</object-name> 
-  <object-name>l_pct_tra4</object-name>  
-  <object-name>l_pct_tr13</object-name>
+  <object-name>l_flap_inner_3</object-name> 
+  <object-name>l_flap_inner_2</object-name>  
+  <object-name>l_flap_inner_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -6741,7 +6749,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tr13</object-name>
+  <object-name>l_flap_inner_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
@@ -6760,7 +6768,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tr13</object-name>
+  <object-name>l_flap_inner_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6780,8 +6788,8 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tra3</object-name>
-  <object-name>l_pct_tra4</object-name>
+  <object-name>l_flap_inner_3</object-name>
+  <object-name>l_flap_inner_2</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6801,7 +6809,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_tra3</object-name>
+  <object-name>l_flap_inner_3</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
@@ -6820,9 +6828,9 @@
 <!--Inner right section-->
 <animation>
   <type>translate</type>
-  <object-name>r_pct_tra1</object-name> 
-  <object-name>r_pct_tra2</object-name>  
-  <object-name>r_pct_tr10</object-name>
+  <object-name>r_flap_inner_3</object-name> 
+  <object-name>r_flap_inner_2</object-name>  
+  <object-name>r_flap_inner_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -6839,7 +6847,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tr10</object-name>
+  <object-name>r_flap_inner_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
@@ -6858,7 +6866,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tr10</object-name>
+  <object-name>r_flap_inner_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6878,8 +6886,8 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tra1</object-name>
-  <object-name>r_pct_tra2</object-name>
+  <object-name>r_flap_inner_3</object-name>
+  <object-name>r_flap_inner_2</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6899,7 +6907,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tra1</object-name>
+  <object-name>r_flap_inner_3</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
@@ -6918,9 +6926,9 @@
 <!--Outer right section-->
 <animation>
   <type>translate</type>
-  <object-name>r_pct_tra6</object-name> 
-  <object-name>r_pct_tra7</object-name>  
-  <object-name>r_pct_tra9</object-name>
+  <object-name>r_flap_outer_3</object-name> 
+  <object-name>r_flap_outer_2</object-name>  
+  <object-name>r_flap_outer_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -6934,9 +6942,9 @@
 </animation>
 <animation>
   <type>translate</type>
-  <object-name>r_pct_tra6</object-name> 
-  <object-name>r_pct_tra7</object-name>  
-  <object-name>r_pct_tra9</object-name>
+  <object-name>r_flap_outer_3</object-name> 
+  <object-name>r_flap_outer_2</object-name>  
+  <object-name>r_flap_outer_1</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -6951,7 +6959,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tra9</object-name>  
+  <object-name>r_flap_outer_1</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6971,7 +6979,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tra9</object-name>  
+  <object-name>r_flap_outer_1</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -6991,8 +6999,8 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tra7</object-name>  
-  <object-name>r_pct_tra6</object-name>  
+  <object-name>r_flap_outer_2</object-name>  
+  <object-name>r_flap_outer_3</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7011,7 +7019,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_tra6</object-name>  
+  <object-name>r_flap_outer_3</object-name>  
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.62</ind>	<dep>	0.0</dep></entry>
@@ -7030,7 +7038,7 @@
 <!--Slats left-->
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_lea3</object-name>
+  <object-name>l_slat_inner</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7047,7 +7055,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_lea0</object-name>
+  <object-name>l_slat_middle</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7064,7 +7072,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_pct_lea2</object-name>
+  <object-name>l_slat_outer</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7082,7 +7090,7 @@
 <!--Slats right-->
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_lea3</object-name>
+  <object-name>r_slat_inner</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7099,7 +7107,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_lea2</object-name>
+  <object-name>r_slat_middle</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7116,7 +7124,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_pct_lea0</object-name>
+  <object-name>r_slat_outer</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7138,8 +7146,8 @@
 <!--retract-->
 <animation>
   <type>rotate</type>
-  <object-name>visor_MES0</object-name><!--Left wing light-->
-  <object-name>visor_MESH</object-name> 
+  <object-name>visor_wing_left</object-name><!--Left wing light-->
+  <object-name>visor_wing_right</object-name> 
   <object-name>landlight_3_halo</object-name>
   <object-name>landlight_4_halo</object-name>
   <property>tu154/light/retract</property>
@@ -7161,8 +7169,8 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>visor_MES1</object-name>
-  <object-name>visor_MES2</object-name> 
+  <object-name>visor_front_right</object-name>
+  <object-name>visor_front_left</object-name> 
   <object-name>landlight_1_halo</object-name>
   <property>tu154/light/retract</property>
   <interpolation>
@@ -7184,10 +7192,10 @@
 
 <animation>
   <type>material</type>
-  <object-name>visor_MES0</object-name>
-  <object-name>visor_MESH</object-name> 
-  <object-name>visor_MES1</object-name>
-  <object-name>visor_MES2</object-name>
+  <object-name>visor_wing_left</object-name>
+  <object-name>visor_wing_right</object-name> 
+  <object-name>visor_front_right</object-name>
+  <object-name>visor_front_left</object-name>
     <condition>
       <and>
       <equals>
@@ -7212,7 +7220,7 @@
 </animation>
 <animation>
   <type>material</type>
-  <object-name>c_gear_M10</object-name>
+  <object-name>visor_front_gear</object-name>
     <condition>
       <and>
       <greater-than>
@@ -7722,7 +7730,7 @@
 
 <animation>
   <type>material</type>
-  <object-name>rear_nav</object-name>
+  <object-name>rear_nav_lamp</object-name>
   <emission>
     <red-prop>tu154/light/nav/red</red-prop>
     <green-prop>tu154/light/nav/green</green-prop>
@@ -7803,7 +7811,7 @@
 
 <animation>
   <type>material</type>
-  <object-name>MESH181</object-name>
+  <object-name>beacon_upper</object-name>
   <emission>
     <red-prop>tu154/light/strobe/strobe_1</red-prop>
   </emission>
@@ -7811,7 +7819,7 @@
 
 <animation>
   <type>material</type>
-  <object-name>MESH179</object-name>
+  <object-name>beacon_lower</object-name>
   <emission>
     <red-prop>tu154/light/strobe/strobe_2</red-prop>
   </emission>
@@ -7853,7 +7861,7 @@
 <!--
 <animation>
   <type>material</type>
-  <object-name>MESH179</object-name>
+  <object-name>beacon_lower</object-name>
   <object-name>strobe_2_halo</object-name>
   <emission>
     <red-prop>tu154/light/strobe-2/state</red-prop>
@@ -8192,28 +8200,28 @@
 
 <animation>
     <type>material</type>
-    <object-name>visor_MES0</object-name>
-    <object-name>visor_MES2</object-name>
-    <object-name>visor_MES1</object-name>
-    <object-name>visor_MESH</object-name>
-    <object-name>c_gear_M10</object-name>
+    <object-name>visor_wing_left</object-name>
+    <object-name>visor_front_left</object-name>
+    <object-name>visor_front_right</object-name>
+    <object-name>visor_wing_right</object-name>
+    <object-name>visor_front_gear</object-name>
     <object-name>MESH17external</object-name>
     <object-name>MESH178</object-name>
     <object-name>LeftWindowGlassExt</object-name>
     <object-name>RightWindowGlassExt</object-name>
     <object-name>lever_sti3</object-name>
     <object-name>lever_sti4</object-name>
-    <object-name>MESH23external</object-name>
-    <object-name>WiperLeftExt</object-name>
-    <object-name>WiperRightExt</object-name>
-    <object-name>Door_Cargo</object-name>
+    <object-name>Body_Front</object-name>
+    <!--<object-name>WiperLeftExt</object-name>
+    <object-name>WiperRightExt</object-name>-->
+    <object-name>Door_Cargo_1</object-name>
     <object-name>Door_Passe</object-name>
-    <object-name>MESH134</object-name>
-    <object-name>MESH90</object-name>
-    <object-name>c_gear_ME6</object-name>
-    <object-name>c_gear_ME7</object-name>
-    <object-name>c_gear_ME8</object-name>
-    <object-name>c_gear_ME9</object-name>
+    <object-name>l_gear_compartment</object-name>
+    <object-name>r_gear_compartment</object-name>
+    <object-name>c_gear_door_FL</object-name>
+    <object-name>c_gear_door_RL</object-name>
+    <object-name>c_gear_door_FR</object-name>
+    <object-name>c_gear_door_RR</object-name>
     <property-base>tu154/livery/maina</property-base>
     <texture-prop>texture</texture-prop>
     <texture>maina_t.png</texture>
@@ -8221,16 +8229,16 @@
 
 <animation>
     <type>material</type>
-    <object-name>l_pct_tr16</object-name>
-    <object-name>lever_cow0</object-name>
-    <object-name>lever_cowl</object-name>
+    <object-name>stabilizer_root</object-name>
+    <object-name>apu_cowl_2</object-name>
+    <object-name>apu_cowl_1</object-name>
     <object-name>MESH18</object-name>
     <object-name>LeftWindowExt</object-name>
     <object-name>RightWindowExt</object-name>
-    <object-name>MESH24</object-name>
+    <object-name>Body_Rear</object-name>
     <object-name>rudder</object-name>
-    <object-name>Door_Carg0</object-name>
-    <object-name>Door_Carg1</object-name>    
+    <object-name>Door_Cargo_2_sec</object-name>
+    <object-name>Door_Cargo_2_main</object-name>    
     <property-base>tu154/livery/mainb</property-base>
     <texture-prop>texture</texture-prop>
     <texture>mainb_t.png</texture>
@@ -8238,92 +8246,92 @@
  
 <animation>
     <type>material</type>
-    <object-name>c_tire_MES</object-name>
-    <object-name>c_gear_MES</object-name>
-    <object-name>c_gear_ME0</object-name>
-    <object-name>c_gear_ME1</object-name>
-    <object-name>c_gear_ME2</object-name>
-    <object-name>c_gear_ME3</object-name>
-    <object-name>c_gear_ME4</object-name>
-    <object-name>c_gear_ME5</object-name>
-    <object-name>c_wheel_ME</object-name>
+    <object-name>c_gear_wheel</object-name>
+    <object-name>c_gear_object_6.1</object-name>
+    <object-name>c_gear_object_5.1</object-name>
+    <object-name>c_gear_object_5.2</object-name>
+    <object-name>c_gear_object_4.3</object-name>
+    <object-name>c_gear_object_4.1</object-name>
+    <object-name>c_gear_object_4.2</object-name>
+    <object-name>c_gear_object_3.1</object-name>
+    <object-name>c_gear_object_3.2</object-name>
     <object-name>elevator_left</object-name>
     <object-name>elevator_right</object-name>
-    <object-name>engine1_ME</object-name>
-    <object-name>engine0_ME</object-name>
-    <object-name>engine0_M0</object-name>
-    <object-name>engine0_M1</object-name>
-    <object-name>engine0_M2</object-name>
-    <object-name>lever_pr10</object-name>
-    <object-name>lever_pro0</object-name>
-    <object-name>lever_pro1</object-name>
-    <object-name>lever_pro2</object-name>
-    <object-name>lever_pro3</object-name>
-    <object-name>lever_pro4</object-name>
-    <object-name>lever_pro5</object-name>
-    <object-name>lever_pro6</object-name>
-    <object-name>lever_pro7</object-name>
-    <object-name>lever_pro8</object-name>
-    <object-name>lever_pro9</object-name>
-    <object-name>lever_prop</object-name>
-    <object-name>engine2_ME</object-name>
-    <object-name>engine2_M0</object-name>
-    <object-name>engine2_M1</object-name>
-    <object-name>engine2_M2</object-name>
-    <object-name>lever_pr11</object-name>
-    <object-name>lever_pr12</object-name>
-    <object-name>lever_pr13</object-name>
-    <object-name>lever_pr14</object-name>
-    <object-name>lever_pr15</object-name>
-    <object-name>lever_pr16</object-name>
-    <object-name>lever_pr17</object-name>
-    <object-name>lever_pr18</object-name>
-    <object-name>lever_pr19</object-name>
-    <object-name>lever_pr20</object-name>
-    <object-name>lever_pr21</object-name>
-    <object-name>lever_pr22</object-name>
-    <object-name>engine1_M0</object-name>
-    <object-name>engine1_M1</object-name>
-    <object-name>engine1_M2</object-name>
-    <object-name>c_gear_M11</object-name>
+    <!--<object-name>engine2_fan_fast</object-name>-->
+    <!--<object-name>engine1_fan_fast</object-name>-->
+    <object-name>engine1_fan_slow</object-name>
+    <object-name>engine1_turbine_slow</object-name>
+    <!--<object-name>engine1_turbine_fast</object-name>-->
+    <object-name>eng1_int_flap_11</object-name>
+    <object-name>eng1_int_flap_01</object-name>
+    <object-name>eng1_int_flap_02</object-name>
+    <object-name>eng1_int_flap_03</object-name>
+    <object-name>eng1_int_flap_04</object-name>
+    <object-name>eng1_int_flap_05</object-name>
+    <object-name>eng1_int_flap_06</object-name>
+    <object-name>eng1_int_flap_07</object-name>
+    <object-name>eng1_int_flap_08</object-name>
+    <object-name>eng1_int_flap_09</object-name>
+    <object-name>eng1_int_flap_10</object-name>
+    <object-name>eng1_int_flap_12</object-name>
+    <!--<object-name>engine3_fan_fast</object-name>-->
+    <object-name>engine3_fan_slow</object-name>
+    <object-name>engine3_turbine_slow</object-name>
+    <!--<object-name>engine3_turbine_fast</object-name>-->
+    <object-name>eng3_int_flap_01</object-name>
+    <object-name>eng3_int_flap_02</object-name>
+    <object-name>eng3_int_flap_10</object-name>
+    <object-name>eng3_int_flap_12</object-name>
+    <object-name>eng3_int_flap_11</object-name>
+    <object-name>eng3_int_flap_05</object-name>
+    <object-name>eng3_int_flap_06</object-name>
+    <object-name>eng3_int_flap_07</object-name>
+    <object-name>eng3_int_flap_08</object-name>
+    <object-name>eng3_int_flap_09</object-name>
+    <object-name>eng3_int_flap_03</object-name>
+    <object-name>eng3_int_flap_04</object-name>
+    <object-name>engine2_fan_slow</object-name>
+    <!--<object-name>engine2_turbine_fast</object-name>-->
+    <object-name>engine2_turbine_slow</object-name>
+    <object-name>c_gear_object_2.1</object-name>
     <object-name>stabilizer</object-name>
-    <object-name>l_gear_MES</object-name>
-    <object-name>l_tire_MES</object-name>
-    <object-name>l_tire_ME0</object-name>
-    <object-name>l_tire_ME1</object-name>
-    <object-name>l_gear_ME0</object-name>
-    <object-name>l_gear_ME1</object-name>
-    <object-name>l_gear_ME2</object-name>
-    <object-name>l_gear_ME3</object-name>
-    <object-name>MESH138</object-name>
-    <object-name>l_gear_ME4</object-name>
-    <object-name>l_gear_ME5</object-name>
-    <object-name>l_gear_ME6</object-name>
-    <object-name>l_gear_ME7</object-name>
-    <object-name>l_gear_ME8</object-name>
-    <object-name>l_gear_ME9</object-name>
-    <object-name>l_gear_M10</object-name>
-    <object-name>l_gear_M12</object-name>
-    <object-name>l_gear_M13</object-name>
-    <object-name>r_gear_MES</object-name>
-    <object-name>r_gear_ME0</object-name>
-    <object-name>r_tire_MES</object-name>
-    <object-name>r_tire_ME0</object-name>
-    <object-name>r_tire_ME1</object-name>
-    <object-name>r_gear_ME2</object-name>
-    <object-name>r_gear_ME3</object-name>
-    <object-name>r_gear_ME4</object-name>
-    <object-name>r_gear_ME5</object-name>
-    <object-name>r_gear_ME6</object-name>
-    <object-name>MESH98</object-name>
-    <object-name>r_gear_ME7</object-name>
-    <object-name>r_gear_ME8</object-name>
-    <object-name>r_gear_M10</object-name>
-    <object-name>r_gear_M11</object-name>
-    <object-name>r_gear_ME9</object-name>
-    <object-name>r_gear_M12</object-name>
-    <object-name>r_gear_M13</object-name>
-    <object-name>MESH25external</object-name>
+    <object-name>l_gear_object_6.2</object-name>
+    <object-name>l_tire_rear</object-name>
+    <object-name>l_tire_middle</object-name>
+    <object-name>l_tire_front</object-name>
+    <object-name>l_gear_object_6.1</object-name>
+    <object-name>l_gear_object_5.3</object-name>
+    <object-name>l_gear_object_5.1</object-name>
+    <object-name>l_gear_object_5.2</object-name>
+    <object-name>l_gear_object_4.1</object-name>
+    <object-name>l_gear_object_3.4</object-name>
+    <object-name>l_gear_object_3.5</object-name>
+    <object-name>l_gear_object_3.1</object-name>
+    <object-name>l_gear_object_3.2</object-name>
+    <object-name>l_gear_object_3.3</object-name>
+    <object-name>l_gear_object_2.3</object-name>
+    <object-name>l_gear_object_2.1</object-name>
+    <object-name>l_gear_object_1.1</object-name>
+    <object-name>l_gear_object_1.2</object-name>
+    <object-name>r_gear_object_2.3</object-name>
+    <object-name>r_gear_object_2.1</object-name>
+    <object-name>r_tire_middle</object-name>
+    <object-name>r_tire_rear</object-name>
+    <object-name>r_tire_front</object-name>
+    <object-name>r_gear_object_6.2</object-name>
+    <object-name>r_gear_object_6.1</object-name>
+    <object-name>r_gear_object_5.3</object-name>
+    <object-name>r_gear_object_5.1</object-name>
+    <object-name>r_gear_object_5.2</object-name>
+    <object-name>r_gear_object_4.1</object-name>
+    <object-name>r_gear_object_3.5</object-name>
+    <object-name>r_gear_object_3.4</object-name>
+    <object-name>r_gear_object_3.2</object-name>
+    <object-name>r_gear_object_3.1</object-name>
+    <object-name>r_gear_object_3.3</object-name>
+    <object-name>r_gear_object_1.2</object-name>
+    <object-name>r_gear_object_1.1</object-name>
+    <object-name>Engines_Nacelles</object-name>
     <property-base>tu154/livery/var</property-base>
     <texture-prop>texture</texture-prop>
     <texture>var_t.png</texture>
@@ -8331,27 +8339,28 @@
  
 <animation>
     <type>material</type>
-    <object-name>MESH135</object-name>
-    <object-name>l_gear_M11</object-name>
-    <object-name>l_pct_lea0</object-name>
-    <object-name>l_pct_lea2</object-name>
-    <object-name>l_pct_tra3</object-name>
-    <object-name>l_pct_tra4</object-name>
-    <object-name>l_pct_tra6</object-name>
-    <object-name>l_pct_tr10</object-name>
-    <object-name>l_pct_tr11</object-name>
-    <object-name>l_pct_tra9</object-name>
-    <object-name>l_pct_tr12</object-name>
-    <object-name>l_gear_M14</object-name>
-    <object-name>l_gear_M15</object-name>
-    <object-name>l_gear_M16</object-name>
-    <object-name>l_gear_M17</object-name>
-    <object-name>l_pct_lea3</object-name>
-    <object-name>l_pct_tr13</object-name>
-    <object-name>l_pct_tr14</object-name>
-    <object-name>l_pct_tr15</object-name>
-    <object-name>l_spoiler0</object-name>
-    <object-name>l_spoiler_</object-name>
+    <object-name>l_console_inner</object-name>
+    <object-name>l_console_middle</object-name>
+    <object-name>l_gear_object_2.2</object-name>
+    <object-name>l_slat_middle</object-name>
+    <object-name>l_slat_outer</object-name>
+    <object-name>l_flap_inner_3</object-name>
+    <object-name>l_flap_inner_2</object-name>
+    <object-name>l_flap_outer_1</object-name>
+    <object-name>l_flap_pin_outer</object-name>
+    <object-name>l_flap_pin_inner</object-name>
+    <object-name>l_flap_outer_3</object-name>
+    <object-name>l_flap_outer_2</object-name>
+    <object-name>l_gear_door_FR</object-name>
+    <object-name>l_gear_door_RR</object-name>
+    <object-name>l_gear_door_FL</object-name>
+    <object-name>l_gear_door_RL</object-name>
+    <object-name>l_slat_inner</object-name>
+    <object-name>l_flap_inner_1</object-name>
+    <object-name>l_flap_cover_outer</object-name>
+    <object-name>l_flap_cover_inner</object-name>
+    <object-name>l_spoiler_inner</object-name>
+    <object-name>l_spoiler_outer</object-name>
     <object-name>aileron_left</object-name>
     <object-name>ailer_interc_left</object-name>
     <object-name>interceptor_left</object-name>
@@ -8362,30 +8371,31 @@
 
 <animation>
     <type>material</type>
-    <object-name>MESH91</object-name>
+    <object-name>r_console_inner</object-name>
+    <object-name>r_console_middle</object-name>
     <object-name>RefuelCover</object-name>
-    <object-name>r_gear_ME1</object-name>
-    <object-name>r_pct_tra1</object-name>
-    <object-name>r_pct_tra2</object-name>
-    <object-name>l_pct_tra0</object-name>
-    <object-name>r_pct_tra5</object-name>
-    <object-name>r_pct_tra6</object-name>
-    <object-name>r_pct_tra7</object-name>
-    <object-name>r_pct_tra9</object-name>
-    <object-name>r_pct_lea0</object-name>
-    <object-name>r_pct_lea2</object-name>
+    <object-name>r_gear_object_2.2</object-name>
+    <object-name>r_flap_inner_3</object-name>
+    <object-name>r_flap_inner_2</object-name>
+    <object-name>r_flap_pin_inner</object-name>
+    <object-name>r_flap_pin_outer</object-name>
+    <object-name>r_flap_outer_3</object-name>
+    <object-name>r_flap_outer_2</object-name>
+    <object-name>r_flap_outer_1</object-name>
+    <object-name>r_slat_outer</object-name>
+    <object-name>r_slat_middle</object-name>
     <object-name>aileron_right</object-name>
     <object-name>ailer_interc_right</object-name>
-    <object-name>r_gear_M14</object-name>
-    <object-name>r_gear_M15</object-name>
-    <object-name>r_gear_M16</object-name>
-    <object-name>r_gear_M17</object-name>
-    <object-name>r_pct_lea3</object-name>
-    <object-name>r_pct_tr10</object-name>
-    <object-name>r_pct_tr11</object-name>
-    <object-name>r_pct_tr12</object-name>
-    <object-name>r_spoiler0</object-name>
-    <object-name>r_spoiler_</object-name>
+    <object-name>r_gear_door_RL</object-name>
+    <object-name>r_gear_door_RR</object-name>
+    <object-name>r_gear_door_FL</object-name>
+    <object-name>r_gear_door_FR</object-name>
+    <object-name>r_slat_inner</object-name>
+    <object-name>r_flap_inner_1</object-name>
+    <object-name>r_flap_cover_outer</object-name>
+    <object-name>r_flap_cover_inner</object-name>
+    <object-name>r_spoiler_inner</object-name>
+    <object-name>r_spoiler_outer</object-name>
     <object-name>interceptor_right</object-name>
     <property-base>tu154/livery/wingr</property-base>
     <texture-prop>texture</texture-prop>
@@ -8729,7 +8739,7 @@
 
 <animation>
   <type>translate</type>
-  <object-name>Door_Cargo</object-name>
+  <object-name>Door_Cargo_1</object-name>
   <property>tu154/door/cargo0</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
@@ -8743,7 +8753,7 @@
 </animation>
 <animation>
   <type>translate</type>
-  <object-name>Door_Cargo</object-name>
+  <object-name>Door_Cargo_1</object-name>
   <property>tu154/door/cargo0</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
@@ -8757,7 +8767,7 @@
 </animation>
 <animation>
   <type>pick</type>
-  <object-name>Door_Cargo</object-name>
+  <object-name>Door_Cargo_1</object-name>
   <visible>true</visible>
   <action>
     <button>0</button>
@@ -8778,7 +8788,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>Door_Carg0</object-name>
+  <object-name>Door_Cargo_2_sec</object-name>
   <property>tu154/door/cargo1</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
@@ -8794,7 +8804,7 @@
 </animation>
 <animation>
   <type>translate</type>
-  <object-name>Door_Carg1</object-name>
+  <object-name>Door_Cargo_2_main</object-name>
   <property>tu154/door/cargo1</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
@@ -8808,7 +8818,7 @@
 </animation>
 <animation>
   <type>translate</type>
-  <object-name>Door_Carg1</object-name>
+  <object-name>Door_Cargo_2_main</object-name>
   <property>tu154/door/cargo1</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
@@ -8822,8 +8832,8 @@
 </animation>
 <animation>
   <type>pick</type>
-  <object-name>Door_Carg1</object-name>
-  <object-name>Door_Carg0</object-name>
+  <object-name>Door_Cargo_2_main</object-name>
+  <object-name>Door_Cargo_2_sec</object-name>
   <visible>true</visible>
   <action>
     <button>0</button>
@@ -8845,7 +8855,7 @@
 
 <animation>
   <type>rotate</type>
-  <object-name>lever_cowl</object-name>
+  <object-name>apu_cowl_1</object-name>
   <property>tu154/systems/APU/APU-damper</property>
   <factor>-15</factor>
   <axis>
@@ -8859,7 +8869,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_cow0</object-name>
+  <object-name>apu_cowl_2</object-name>
   <property>tu154/systems/APU/APU-damper</property>
   <factor>15</factor>
   <axis>
@@ -8875,7 +8885,7 @@
 <!-- Left engine additional air intake flaps. -->
 <animation>
   <type>rotate</type>
-  <object-name>lever_prop</object-name>
+  <object-name>eng1_int_flap_12</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.90387</x1-m>
@@ -8888,7 +8898,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro0</object-name>
+  <object-name>eng1_int_flap_01</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.94318</x1-m>
@@ -8901,7 +8911,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro1</object-name>
+  <object-name>eng1_int_flap_02</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.96779</x1-m>
@@ -8914,7 +8924,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro2</object-name>
+  <object-name>eng1_int_flap_03</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.97104</x1-m>
@@ -8927,7 +8937,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro3</object-name>
+  <object-name>eng1_int_flap_04</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.9516</x1-m>
@@ -8940,7 +8950,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro4</object-name>
+  <object-name>eng1_int_flap_05</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.91641</x1-m>
@@ -8953,7 +8963,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro5</object-name>
+  <object-name>eng1_int_flap_06</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.87343</x1-m>
@@ -8966,7 +8976,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro6</object-name>
+  <object-name>eng1_int_flap_07</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.83464</x1-m>
@@ -8979,7 +8989,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro7</object-name>
+  <object-name>eng1_int_flap_08</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.81024</x1-m>
@@ -8992,7 +9002,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro8</object-name>
+  <object-name>eng1_int_flap_09</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.80668</x1-m>
@@ -9005,7 +9015,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pro9</object-name>
+  <object-name>eng1_int_flap_10</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.82505</x1-m>
@@ -9018,7 +9028,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr10</object-name>
+  <object-name>eng1_int_flap_11</object-name>
   <property>engines/engine[0]/intake-flaps</property>
   <axis>
     <x1-m>5.86059</x1-m>
@@ -9033,7 +9043,7 @@
 <!-- Right engine additional air intake flaps. -->
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr11</object-name>
+  <object-name>eng3_int_flap_01</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.91374</x1-m>
@@ -9046,7 +9056,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr12</object-name>
+  <object-name>eng3_int_flap_02</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.87026</x1-m>
@@ -9059,7 +9069,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr13</object-name>
+  <object-name>eng3_int_flap_10</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.96852</x1-m>
@@ -9072,7 +9082,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr14</object-name>
+  <object-name>eng3_int_flap_12</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.95048</x1-m>
@@ -9085,7 +9095,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr15</object-name>
+  <object-name>eng3_int_flap_11</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.97050</x1-m>
@@ -9098,7 +9108,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr16</object-name>
+  <object-name>eng3_int_flap_05</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.80745</x1-m>
@@ -9111,7 +9121,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr17</object-name>
+  <object-name>eng3_int_flap_06</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.82767</x1-m>
@@ -9124,7 +9134,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr18</object-name>
+  <object-name>eng3_int_flap_07</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.86408</x1-m>
@@ -9137,7 +9147,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr19</object-name>
+  <object-name>eng3_int_flap_08</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.90705</x1-m>
@@ -9150,7 +9160,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr20</object-name>
+  <object-name>eng3_int_flap_09</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.94525</x1-m>
@@ -9163,7 +9173,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr21</object-name>
+  <object-name>eng3_int_flap_03</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.83187</x1-m>
@@ -9176,7 +9186,7 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>lever_pr22</object-name>
+  <object-name>eng3_int_flap_04</object-name>
   <property>engines/engine[2]/intake-flaps</property>
   <axis>
     <x1-m>5.80892</x1-m>
