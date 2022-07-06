@@ -10,47 +10,54 @@
 <PropertyList>
 
  <light>
-  <name>green-lightpoint</name>
-  <type>point</type>
+  <name>white-lightcone</name>
+  <type>spot</type>
   <position>
    <x-m>0.0</x-m>
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </position>
+  <direction>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </direction>
   <ambient>
-   <r>0.0098</r>
+   <r>0.1</r>
    <g>0.1</g>
-   <b>0.0098</b>
+   <b>0.1</b>
    <a>1.0</a>
   </ambient>
   <diffuse>
-   <r>0.098</r>
+   <r>1.0</r>
    <g>1.0</g>
-   <b>0.098</b>
+   <b>1.0</b>
    <a>1.0</a>
   </diffuse>
   <specular>
-   <r>0.098</r>
+   <r>1.0</r>
    <g>1.0</g>
-   <b>0.098</b>
+   <b>1.0</b>
    <a>1.0</a>
   </specular>
   <!-- 1.0, 4.5 / range, 75 / range^2 -->
   <attenuation>
-   <c>12.5</c>
-   <l>0.3</l>
-   <q>0.3</q>
+    <c>8.0</c>
+    <l>0.22</l>
+    <q>0.20</q>
   </attenuation>
+  <spot-exponent>1.3</spot-exponent>
+  <spot-cutoff>89</spot-cutoff>
   <range-m>25.0</range-m>
  </light>
 
 <animation>
   <type>select</type>
-  <object-name>green-lightpoint</object-name>
+  <object-name>white-lightcone</object-name>
   <condition>
     <or>
-    <property>tu154/light/nav/green</property>
-    <property>sim/multiplay/generic/int[1]</property>
+    <property>tu154/light/nav/blue</property>
+    <property>sim/multiplay/generic/int[0]</property>
     </or>
   </condition>
 </animation>
