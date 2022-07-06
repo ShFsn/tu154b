@@ -41,11 +41,13 @@
 </animation>
 
 <!--Wing Flexer-->
-<!--Left Wing Inner-->
+<!--Left Wing Middle+Outer-->
 <animation>
   <type>rotate</type>
   <object-name>l_console_middle</object-name>
-  <object-name>l_slat_outer</object-name>
+  <object-name>l_console_outer</object-name>
+  <object-name>l_slat_outer_1</object-name>
+  <object-name>l_slat_outer_2</object-name>
   <object-name>l_slat_middle</object-name>
   <object-name>left_nav_lamp</object-name>
   <object-name>left_nav</object-name>
@@ -63,6 +65,7 @@
   <object-name>navlight_l</object-name>
   <object-name>Lightpoint_Collision_L</object-name>
   <property>sim/systems/wingflexer/z-m</property>
+  <factor>0.3</factor>
   <center>
     <x-m>0.375</x-m>
     <y-m>-6.5</y-m>
@@ -74,12 +77,36 @@
     <z>0.0</z>
   </axis>
 </animation>
-<!--Right Wing Inner-->
+<!--Left Wing Outer-->
+<animation>
+  <type>rotate</type>
+  <object-name>l_console_outer</object-name>
+  <object-name>l_slat_outer_2</object-name>
+  <object-name>left_nav_lamp</object-name>
+  <object-name>left_nav</object-name>
+  <object-name>aileron_left</object-name>
+  <object-name>navlight_l</object-name>
+  <object-name>Lightpoint_Collision_L</object-name>
+  <property>sim/systems/wingflexer/z-m</property>
+  <center>
+    <x-m>0.2</x-m>
+    <y-m>-14.1</y-m>
+    <z-m>0.3</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<!--Right Wing Middle+Outer-->
 <animation>
   <type>rotate</type>
   <object-name>r_console_middle</object-name>
+  <object-name>r_console_outer</object-name>
   <object-name>r_slat_middle</object-name>
-  <object-name>r_slat_outer</object-name>
+  <object-name>r_slat_outer_1</object-name>
+  <object-name>r_slat_outer_2</object-name>
   <object-name>right_nav_lamp</object-name>
   <object-name>right_nav</object-name>
   <object-name>r_flap_pin_outer</object-name>
@@ -98,6 +125,7 @@
   <object-name>navlight_r</object-name>
   <object-name>Lightpoint_Collision_R</object-name>
   <property>sim/systems/wingflexer/z-m</property>
+  <factor>0.3</factor>
   <center>
     <x-m>0.375</x-m>
     <y-m>6.5</y-m>
@@ -106,6 +134,28 @@
   <axis>
     <x>1.0</x>
     <y>-0.4</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<!--Right Wing Outer-->
+<animation>
+  <type>rotate</type>
+  <object-name>r_console_outer</object-name>
+  <object-name>r_slat_outer_2</object-name>
+  <object-name>right_nav_lamp</object-name>
+  <object-name>right_nav</object-name>
+  <object-name>aileron_right</object-name>
+  <object-name>navlight_r</object-name>
+  <object-name>Lightpoint_Collision_R</object-name>
+  <property>sim/systems/wingflexer/z-m</property>
+  <center>
+    <x-m>0.2</x-m>
+    <y-m>14.1</y-m>
+    <z-m>0.3</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
     <z>0.0</z>
   </axis>
 </animation>
@@ -7072,7 +7122,8 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>l_slat_outer</object-name>
+  <object-name>l_slat_outer_1</object-name>
+  <object-name>l_slat_outer_2</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -7124,7 +7175,8 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>r_slat_outer</object-name>
+  <object-name>r_slat_outer_1</object-name>
+  <object-name>r_slat_outer_2</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -8341,9 +8393,11 @@
     <type>material</type>
     <object-name>l_console_inner</object-name>
     <object-name>l_console_middle</object-name>
+    <object-name>l_console_outer</object-name>
     <object-name>l_gear_object_2.2</object-name>
     <object-name>l_slat_middle</object-name>
-    <object-name>l_slat_outer</object-name>
+    <object-name>l_slat_outer_1</object-name>
+    <object-name>l_slat_outer_2</object-name>
     <object-name>l_flap_inner_3</object-name>
     <object-name>l_flap_inner_2</object-name>
     <object-name>l_flap_outer_1</object-name>
@@ -8373,6 +8427,7 @@
     <type>material</type>
     <object-name>r_console_inner</object-name>
     <object-name>r_console_middle</object-name>
+    <object-name>r_console_outer</object-name>
     <object-name>RefuelCover</object-name>
     <object-name>r_gear_object_2.2</object-name>
     <object-name>r_flap_inner_3</object-name>
@@ -8382,7 +8437,8 @@
     <object-name>r_flap_outer_3</object-name>
     <object-name>r_flap_outer_2</object-name>
     <object-name>r_flap_outer_1</object-name>
-    <object-name>r_slat_outer</object-name>
+    <object-name>r_slat_outer_1</object-name>
+    <object-name>r_slat_outer_2</object-name>
     <object-name>r_slat_middle</object-name>
     <object-name>aileron_right</object-name>
     <object-name>ailer_interc_right</object-name>
