@@ -45,8 +45,8 @@
      <l>0.0005</l>
      <q>0.0001</q>
    </attenuation>
-   <spot-exponent>10.0</spot-exponent>
-   <spot-cutoff>60</spot-cutoff>
+   <spot-exponent>15.0</spot-exponent>
+   <spot-cutoff>45</spot-cutoff>
    <range-m>500</range-m>
  </light>
  

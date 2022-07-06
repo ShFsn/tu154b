@@ -47,7 +47,7 @@
    </attenuation>
    <spot-exponent>7.5</spot-exponent>
    <spot-cutoff>80.0</spot-cutoff>
-   <range-m>1.0</range-m>
+   <range-m>0.2</range-m>
  </light>
 
 </PropertyList> 

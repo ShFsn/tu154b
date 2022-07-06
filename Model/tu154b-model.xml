@@ -9418,17 +9418,6 @@
  </model>
  
  <model>
-  <path>Aircraft/tu154b/Model/Lights/taxi-lightcone.xml</path>
-  <name>taxilight_c</name>
-  <offsets>
-    <x-m>-19.037</x-m>
-    <y-m>0.0</y-m>
-    <z-m>-0.55</z-m>
-   <pitch-deg>70.0</pitch-deg>
-  </offsets>
- </model>
- 
- <model>
   <path>Aircraft/tu154b/Model/Lights/landing-lightcone.xml</path>
   <name>headlight_l</name>
   <offsets>
@@ -9447,6 +9436,30 @@
    <y-m>3.81</y-m>
    <z-m>-0.1</z-m>
    <pitch-deg>80.0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taxi-lightcone.xml</path>
+  <name>taxilight_l</name>
+  <offsets>
+    <x-m>-19.037</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.55</z-m>
+    <heading-deg>15.0</heading-deg>
+    <pitch-deg>70.0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taxi-lightcone.xml</path>
+  <name>taxilight_r</name>
+  <offsets>
+    <x-m>-19.037</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.55</z-m>
+    <heading-deg>-15.0</heading-deg>
+    <pitch-deg>70.0</pitch-deg>
   </offsets>
  </model>
 
@@ -9832,7 +9845,8 @@
  
 <animation>
   <type>select</type>
-  <object-name>taxilight_c</object-name>
+  <object-name>taxilight_l</object-name>
+  <object-name>taxilight_r</object-name>
   <condition>
     <and>
     <equals>
