@@ -33,7 +33,7 @@
 <!--TEMPORARY-->
 <animation>
   <type>select</type>
-  <object-name>Interior</object-name>
+  <object-name>Interior_low</object-name>
   <object-name>Wipers</object-name>
   <condition>
     <not><property>/sim/current-view/internal</property></not>
@@ -7436,7 +7436,8 @@
   <!--<object-name>MESH23</object-name>-->
   <object-name>MESH25</object-name>
   <object-name>MESH27</object-name>
-  <object-name>pnl</object-name>
+  <object-name>pnl_1</object-name>
+  <object-name>pnl_2</object-name>
   <object-name>MESH16</object-name>
   <object-name>lever_thr4</object-name>
   <object-name>lever_thr5</object-name>

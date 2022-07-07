@@ -9,11 +9,9 @@ MATERIAL "mat_9" rgb 1.000 0.000 0.000  amb 1.000 0.000 0.000  emis 0.000 0.000 
 MATERIAL "RefuelContourExt" rgb 0.300 0.300 0.300  amb 0.300 0.300 0.300  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 80 trans 0.000
 MATERIAL "RefuelContourInt" rgb 0.836 0.555 0.000  amb 0.836 0.555 0.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 80 trans 0.000
 MATERIAL "mat_5" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 0.900
-MATERIAL "mat_2.001" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.000
-MATERIAL "mat_6" rgb 0.235 0.337 0.239  amb 0.235 0.337 0.239  emis 0.000 0.000 0.000  spec 0.235 0.337 0.239  shi 10 trans 1.000
 OBJECT world
 name "Blender_exporter_v3.3__exterior.ac"
-kids 9
+kids 2
 OBJECT group
 name "Exterior"
 kids 4
@@ -196219,13 +196217,13 @@ refs 3
 SURF 0X12
 mat 0
 refs 2
-255 0 0
-772 0 0
+268 0 0
+775 0 0
 SURF 0X12
 mat 0
 refs 2
-268 0 0
-775 0 0
+255 0 0
+772 0 0
 kids 0
 OBJECT poly
 name "r_console_outer"
@@ -214738,7 +214736,7 @@ refs 3
 75 0 0
 kids 0
 OBJECT group
-name "Interior"
+name "Interior_low"
 kids 12
 OBJECT poly
 name "CompCargoFront"
@@ -252723,244 +252721,4 @@ refs 3
 0 0.026722 0.690771
 1 0.039274 0.704598
 2 0.040939 0.705304
-kids 0
-OBJECT poly
-name "l_nav_light_halo"
-data 8
-Mesh.008
-crease 80.0
-texture "red_halo.png"
-numvert 4
--0.57594 -0.57594 -0
-0.57594 -0.57594 -0
-0.57594 0.57594 0
--0.57594 0.57594 0
-numsurf 1
-SURF 0X0
-mat 10
-refs 4
-0 0 0
-1 1 0
-2 1 1
-3 0 1
-kids 0
-OBJECT group
-name "Object0000"
-kids 1
-OBJECT group
-name "Object0001"
-kids 1
-OBJECT group
-name "c_gear_Obj"
-kids 1
-OBJECT group
-name "Object0007"
-kids 4
-OBJECT poly
-name "MESH4"
-data 8
-Mesh.025
-crease 80.0
-numvert 3
--17.2579 -0.38585 0.13432
--16.9434 -0.33604 -0.02488
--16.9434 -0.33604 0.29352
-numsurf 1
-SURF 0X10
-mat 11
-refs 3
-0 0 0
-1 1 0
-2 1 1
-kids 0
-OBJECT poly
-name "MESH5"
-data 8
-Mesh.026
-crease 80.0
-numvert 3
--17.2658 -0.33305 0.12876
--16.9513 -0.28324 -0.03044
--16.9513 -0.28324 0.28796
-numsurf 1
-SURF 0X10
-mat 11
-refs 3
-0 0 0
-1 1 0
-2 1 1
-kids 0
-OBJECT poly
-name "MESH6"
-data 8
-Mesh.027
-crease 80.0
-numvert 3
--17.2579 -0.38585 -0.13448
--16.9434 -0.33604 -0.29368
--16.9434 -0.33604 0.02472
-numsurf 1
-SURF 0X10
-mat 11
-refs 3
-0 0 0
-1 1 0
-2 1 1
-kids 0
-OBJECT poly
-name "MESH7"
-data 8
-Mesh.028
-crease 80.0
-numvert 3
--17.2658 -0.33305 -0.14004
--16.9513 -0.28324 -0.29924
--16.9513 -0.28324 0.01916
-numsurf 1
-SURF 0X10
-mat 11
-refs 3
-0 0 0
-1 1 0
-2 1 1
-kids 0
-OBJECT group
-name "Object0212.002"
-kids 1
-OBJECT group
-name "c_gear_Ob5"
-kids 1
-OBJECT group
-name "Object0218"
-kids 3
-OBJECT poly
-name "MESH188"
-data 8
-Mesh.014
-crease 80.0
-numvert 3
--16.9513 -0.28324 0.28796
--16.9513 -0.28324 -0.03044
--17.2658 -0.33305 0.12876
-numsurf 1
-SURF 0X10
-mat 11
-refs 3
-1 0 0
-0 1 0
-2 1 1
-kids 0
-OBJECT poly
-name "MESH189"
-data 8
-Mesh.015
-crease 80.0
-numvert 3
--16.9434 -0.33604 0.02472
--16.9434 -0.33604 -0.29368
--17.2579 -0.38585 -0.13448
-numsurf 1
-SURF 0X10
-mat 11
-refs 3
-1 0 0
-0 1 0
-2 1 1
-kids 0
-OBJECT poly
-name "MESH190"
-data 8
-Mesh.016
-crease 80.0
-numvert 3
--16.9513 -0.28324 0.01916
--16.9513 -0.28324 -0.29924
--17.2658 -0.33305 -0.14004
-numsurf 1
-SURF 0X10
-mat 11
-refs 3
-1 0 0
-0 1 0
-2 1 1
-kids 0
-OBJECT poly
-name "r_nav_light_halo"
-data 8
-Mesh.007
-crease 80.0
-texture "green_halo.png"
-numvert 4
--0.57594 0.57594 0
-0.57594 0.57594 0
-0.57594 -0.57594 -0
--0.57594 -0.57594 -0
-numsurf 1
-SURF 0X0
-mat 10
-refs 4
-0 0 1
-1 1 1
-2 1 0
-3 0 0
-kids 0
-OBJECT poly
-name "strobe_1_halo"
-data 8
-Mesh.005
-crease 80.0
-texture "red_halo.png"
-numvert 4
--0.57594 0.57594 0
-0.57594 0.57594 0
-0.57594 -0.57594 -0
--0.57594 -0.57594 -0
-numsurf 1
-SURF 0X0
-mat 10
-refs 4
-1 1 1
-0 0 1
-3 0 0
-2 1 0
-kids 0
-OBJECT poly
-name "strobe_2_halo"
-data 8
-Mesh.006
-crease 80.0
-texture "red_halo.png"
-numvert 4
--0.57594 -0.57594 -0
-0.57594 -0.57594 -0
-0.57594 0.57594 0
--0.57594 0.57594 0
-numsurf 1
-SURF 0X0
-mat 10
-refs 4
-0 0 0
-1 1 0
-2 1 1
-3 0 1
-kids 0
-OBJECT poly
-name "w_nav_light_halo"
-data 8
-Mesh.197
-crease 80.0
-texture "white_halo.png"
-numvert 4
-0.57594 -0.57594 -0
--0.57594 -0.57594 -0
--0.57594 0.57594 0
-0.57594 0.57594 0
-numsurf 1
-SURF 0X0
-mat 0
-refs 4
-1 1 0
-0 0 0
-3 0 1
-2 1 1
 kids 0
