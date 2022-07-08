@@ -1108,14 +1108,14 @@ var nvu_wind_adjust = func(which, sign) {
 #
 
 var wiper_timer = {};
-var wiper_func_l = func(side) {
+var wiper_func_l = func() {
     if (getprop("tu154/systems/electrical/buses/DC27-bus-L/volts") > 12) {
        interpolate("tu154/wipers/pos-left", 1, 0);  # Stop any interpolation in progress.
        setprop("tu154/wipers/pos-left", 1);  # The line above doesn't set the value.
        interpolate("tu154/wipers/pos-left", 0, 1.74);
     }
 }
-var wiper_func_r = func(side) {
+var wiper_func_r = func() {
     if (getprop("tu154/systems/electrical/buses/DC27-bus-R/volts") > 12) {
        interpolate("tu154/wipers/pos-right", 1, 0);  # Stop any interpolation in progress.
        setprop("tu154/wipers/pos-right", 1);  # The line above doesn't set the value.
@@ -1125,8 +1125,10 @@ var wiper_func_r = func(side) {
 var wiper = func(side) {
     var switch = getprop("tu154/wipers/switch-"~side);
     if (switch) {
-        if (!wiper_timer[side].isRunning)
-            wiper_func(side);
+        if (!wiper_timer["left"].isRunning and side == "left")
+            wiper_func_l();
+        if (!wiper_timer["right"].isRunning and side == "right")
+            wiper_func_r();
         wiper_timer[side].restart(switch > 0 ? 1.74 : 4);
     } else
         wiper_timer[side].stop();
