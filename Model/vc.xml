@@ -21,6 +21,15 @@
   <object-name>RightWindowGlass</object-name>
  </effect>
 
+<!--TEMPORARY-->
+ <animation>
+	<type>select</type>
+	<object-name>crew</object-name>
+        <condition>
+		<not><property>/sim/current-view/internal</property></not>
+      	</condition>
+</animation>
+
 <!-- Uncomment it if you want remove cabin glass -->
 <!--
 <animation>
@@ -336,7 +345,7 @@
     <object-name>lever_sti7</object-name>  
 </animation>
 <!--Hide VC on external views-->
-<animation>
+<!--<animation>
   <type>select</type>
   <object-name>interior</object-name>
   <object-name>virtualcockpit</object-name>
@@ -344,6 +353,14 @@
       <property>/sim/current-view/internal</property>
   </condition>
   <nopreview/>
+</animation>-->
+<!--TEMPORARY-->
+<animation>
+  <type>select</type>
+  <object-name>crew</object-name>
+  <condition>
+    <not><property>/sim/current-view/internal</property></not>
+  </condition>
 </animation>
 
 <!-- ************************ Cabin animation *****************************-->

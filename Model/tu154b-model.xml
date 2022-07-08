@@ -30,15 +30,6 @@
   </load>
  </nasal>
 
-<!--TEMPORARY-->
-<animation>
-  <type>select</type>
-  <object-name>Interior_low</object-name>
-  <object-name>Wipers</object-name>
-  <condition>
-    <not><property>/sim/current-view/internal</property></not>
-  </condition>
-</animation>
 
 <!--Wing Flexer-->
 <!--Left Wing Middle+Outer-->
@@ -257,26 +248,26 @@
     <path>Aircraft/tu154b/Model/vc.xml</path>
     <offsets>
       <x-m>-23.15</x-m>
-      <y-m>0.0</y-m>
+      <y-m>-0.006</y-m>
       <z-m>0.99</z-m>
     </offsets>
     <nopreview/>
 </model>
 
-<animation>
+<!--<animation>
 	<type>select</type>
 	<object-name>interior</object-name>
         <condition>
 		<property>/sim/current-view/internal</property>
       	</condition>
-</animation>
+</animation>-->
 
 <!--End VC section-->
 
 <!-- Glass Shader-->
  <effect>
     <inherits-from>Effects/glass</inherits-from>
-    <object-name>MESH178</object-name>
+    <object-name>WindShield</object-name>
     <object-name>LeftWindowGlassExt</object-name>
     <object-name>RightWindowGlassExt</object-name>
  </effect>
@@ -4347,9 +4338,11 @@
     <object-name>dme-2</object-name>
     <object-name>ind-busters</object-name>
     <object-name>air-cond-panel</object-name>
+    <object-name>sw-wiper-left</object-name>
+    <object-name>sw-wiper-right</object-name>
 </animation>
 <!--Hide VC on external views-->
-<animation>
+<!--<animation>
   <type>select</type>
   <object-name>interior</object-name>
   <object-name>virtualcockpit3d</object-name>
@@ -4357,10 +4350,11 @@
       <property>/sim/current-view/internal</property>
   </condition>
   <nopreview/>
-</animation>
+</animation>-->
 <!--Cabin Shake-->
   <animation>
     <type>translate</type>
+    <object-name>Exterior</object-name>
     <object-name>interior</object-name>
     <object-name>virtualcockpit3d</object-name>
     <property>systems/shake/shaking</property>
@@ -4371,6 +4365,17 @@
       <x2-m> 0.5</x2-m>
       <y2-m>-0.5</y2-m>
       <z2-m> 0.8</z2-m>
+    </axis>
+  </animation>
+  <!--TEMPORARY-->
+  <animation>
+    <type>translate</type>
+    <object-name>virtualcockpit3d</object-name>
+    <offset-m>-0.006</offset-m>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
     </axis>
   </animation>
 
@@ -8266,7 +8271,7 @@
     <object-name>visor_wing_right</object-name>
     <object-name>visor_front_gear</object-name>
     <object-name>MESH17external</object-name>
-    <object-name>MESH178</object-name>
+    <object-name>WindShield</object-name>
     <object-name>LeftWindowGlassExt</object-name>
     <object-name>RightWindowGlassExt</object-name>
     <object-name>lever_sti3</object-name>
@@ -9974,56 +9979,25 @@
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>-5</dep>
+      <dep>5</dep>
     </entry>
     <entry>
       <ind>0.5</ind>
-      <dep>47</dep>
+      <dep>-47</dep>
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>-5</dep>
+      <dep>5</dep>
     </entry>
   </interpolation>
-  <center>
-    <x-m>-23.05545</x-m>
-    <y-m>-0.55032</y-m>
-    <z-m>1.94338</z-m>
-  </center>
-  <axis>
-    <x>-0.326150037</x>
-    <y>-0.222758536</y>
-    <z>0.37999137</z>
-  </axis>
-</animation>
-<animation>
-  <type>rotate</type>
-  <object-name>WiperLeft</object-name>
-  <property>tu154/wipers/pos-left</property>
-  <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>-5</dep>
-    </entry>
-    <entry>
-      <ind>0.5</ind>
-      <dep>47</dep>
-    </entry>
-    <entry>
-      <ind>1</ind>
-      <dep>-5</dep>
-    </entry>
-  </interpolation>
-  <center>
-    <x-m>0.20545</x-m>
-    <y-m>-0.55032</y-m>
-    <z-m>0.87338</z-m>
-  </center>
-  <axis>
-    <x>-0.326150037</x>
-    <y>-0.222758536</y>
-    <z>0.37999137</z>
-  </axis>
+    <axis>
+      <x1-m> -23.0557</x1-m>
+      <y1-m> -0.549958</y1-m>
+      <z1-m> 1.94346</z1-m>
+      <x2-m> -23.0321</x2-m>
+      <y2-m> -0.52616</y2-m>
+      <z2-m> 1.8951</z2-m>
+    </axis>
 </animation>
 <animation>
   <type>rotate</type>
@@ -10032,56 +10006,25 @@
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>5</dep>
+      <dep>-5</dep>
     </entry>
     <entry>
       <ind>0.5</ind>
-      <dep>-47</dep>
+      <dep>47</dep>
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>5</dep>
+      <dep>-5</dep>
     </entry>
   </interpolation>
-  <center>
-    <x-m>-23.05545</x-m>
-    <y-m>0.55050</y-m>
-    <z-m>1.94338</z-m>
-  </center>
-  <axis>
-    <x>-0.325921264</x>
-    <y>0.222656236</y>
-    <z>0.379683264</z>
-  </axis>
-</animation>
-<animation>
-  <type>rotate</type>
-  <object-name>WiperRight</object-name>
-  <property>tu154/wipers/pos-right</property>
-  <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>5</dep>
-    </entry>
-    <entry>
-      <ind>0.5</ind>
-      <dep>-47</dep>
-    </entry>
-    <entry>
-      <ind>1</ind>
-      <dep>5</dep>
-    </entry>
-  </interpolation>
-  <center>
-    <x-m>0.20545</x-m>
-    <y-m>0.55050</y-m>
-    <z-m>0.87338</z-m>
-  </center>
-  <axis>
-    <x>-0.325921264</x>
-    <y>0.222656236</y>
-    <z>0.379683264</z>
-  </axis>
+    <axis>
+      <x1-m> -23.0557</x1-m>
+      <y1-m> 0.549958</y1-m>
+      <z1-m> 1.94346</z1-m>
+      <x2-m> -23.0321</x2-m>
+      <y2-m> 0.52616</y2-m>
+      <z2-m> 1.8951</z2-m>
+    </axis>
 </animation>
 <!-- Panel tooltips -->
 <model>
