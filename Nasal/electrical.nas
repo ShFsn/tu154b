@@ -1049,7 +1049,7 @@ ExternalClass.new = func( name ) {
             ideal_volts : 208.0,
 	    ideal_freq : 400,
             ideal_amps : 110.0 };
-    props.globals.getNode(obj.node,1).setValues({ "volts": 208.0, "frequency" : 400.0} );
+    props.globals.getNode(obj.node,1).setValues({ "volts": 0.0, "frequency" : 0.0} );
     return obj;
 }
 

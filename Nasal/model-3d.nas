@@ -156,10 +156,18 @@ deicing = func{
       if ( state > 75 and state < 76 ) { interpolate(crane, 0, 15); }
 } setlistener("/sim/model/ground-services/de-ice-pp", deicing);
 
-ext_power_autoconnect = func{
-      if ( getprop("/tu154/switches/APU-RAP-selector") == 2 ) { setprop("/sim/model/ground-services/ext-power", 1); }
-} setlistener("/tu154/switches/APU-RAP-selector", ext_power_autoconnect);
-
+#ext_power_autoconnect = func{
+#      if ( getprop("/tu154/switches/APU-RAP-selector") == 2 ) { setprop("/sim/model/ground-services/ext-power", 1); }
+#} setlistener("/tu154/switches/APU-RAP-selector", ext_power_autoconnect);
+external_power = func {
+      if ( getprop("/sim/model/ground-services/ext-power") == 1) {
+         setprop("/tu154/systems/electrical/suppliers/RAP/frequency", 400);
+         setprop("/tu154/systems/electrical/suppliers/RAP/volts", 208); 
+      } else {
+         setprop("/tu154/systems/electrical/suppliers/RAP/frequency", 0);
+         setprop("/tu154/systems/electrical/suppliers/RAP/volts", 0); 
+      }
+}setlistener("/sim/model/ground-services/ext-power", external_power);
 
 ############################################# Tu-154B-2 Rollshake ##############################################
 #
