@@ -93,7 +93,7 @@ setlistener("/sim/model/rev-flaps/rev-flaps-offset", reversers);
 
 
 ############################### Groung services implementation ######################################
-gndservs = func{
+var gndservs = func{
       chockss = getprop("/sim/model/ground-services/chockss");
       chocks = getprop("/sim/model/ground-services/chocks");
       pb = getprop("/controls/gear/brake-parking");
@@ -122,7 +122,7 @@ setlistener("/velocities/groundspeed-kt", gndservs);
 setlistener("/controls/gear/brake-left", gndservs);
 setlistener("/controls/gear/brake-right", gndservs);
 
-catering_anim = func{
+var catering_anim = func{
       state = getprop("/sim/model/ground-services/cat-up");
       if ( state == nil ) { return; }
 
@@ -141,7 +141,7 @@ catering_anim = func{
 #      setprop("/sim/model/ground-services/de-ice-pp", 0);
 #      interpolate ("/sim/model/ground-services/de-ice-pp", 90, 90);
 #} setlistener("/sim/model/ground-services/de-ice-p", deicing_anim);
-deicing = func{
+var deicing = func{
       crane = "services/deicing_truck/crane/position-norm";
       deice = "services/deicing_truck/deicing/position-norm";
       state = getprop("/sim/model/ground-services/de-ice-pp");
@@ -159,7 +159,7 @@ deicing = func{
 #ext_power_autoconnect = func{
 #      if ( getprop("/tu154/switches/APU-RAP-selector") == 2 ) { setprop("/sim/model/ground-services/ext-power", 1); }
 #} setlistener("/tu154/switches/APU-RAP-selector", ext_power_autoconnect);
-external_power = func {
+var external_power = func {
       if ( getprop("/sim/model/ground-services/ext-power") == 1) {
          setprop("/tu154/systems/electrical/suppliers/RAP/frequency", 400);
          setprop("/tu154/systems/electrical/suppliers/RAP/volts", 208); 
@@ -168,6 +168,19 @@ external_power = func {
          setprop("/tu154/systems/electrical/suppliers/RAP/volts", 0); 
       }
 }setlistener("/sim/model/ground-services/ext-power", external_power);
+
+var gnd_elev_ft = props.globals.getNode("/position/ground-elev-ft", 1);
+var rep_time_node = props.globals.getNode("/sim/replay/time", 1);
+var rep_time = getprop("/sim/replay/time");
+time = 0;
+var services_alt = func {
+      if (rep_time_node.getValue() == 0 and rep_time == 0 and getprop("/sim/model/ground-services/chockss")) {
+            setprop("/sim/model/ground-services/gnd-elev", gnd_elev_ft.getValue());
+      }
+      rep_time = rep_time_node.getValue();
+}
+var timer_services_alt = maketimer(0.0, services_alt);
+timer_services_alt.start();
 
 ############################################# Tu-154B-2 Rollshake ##############################################
 #

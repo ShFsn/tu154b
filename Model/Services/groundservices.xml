@@ -343,7 +343,7 @@
 		<offsets>
 			<x-m>-27.0</x-m>
 			<y-m>-13.0</y-m>
-			<z-m>-2.25</z-m>
+			<z-m>-2.3</z-m>
 			<heading-deg>130</heading-deg>
 		</offsets>
 	</model>
@@ -364,11 +364,44 @@
 		<offsets>
 			<x-m>-12.0</x-m>
 			<y-m>-18.0</y-m>
-			<z-m>-2.25</z-m>
+			<z-m>-2.3</z-m>
 			<heading-deg>180</heading-deg>
 		</offsets>
 	</model>
 
+	<animation>
+		<object-name>fuel-truck-l</object-name>
+		<object-name>fuel-truck-r</object-name>
+		<object-name>de-ice-truck</object-name>
+		<object-name>cater-truck</object-name>
+		<object-name>baggage-truck-front</object-name>
+		<object-name>baggage-truck-back</object-name>
+		<object-name>ext-pwr</object-name>
+		<object-name>chock_nose</object-name>
+		<object-name>chock_left</object-name>
+		<object-name>chock_right</object-name>
+		<object-name>l1</object-name>
+		<object-name>bus-1-cobus</object-name>
+		<object-name>bus-2-cobus</object-name>
+		<type>translate</type>
+		<expression>
+			<sum>
+				<prod>
+					<difference>
+						<property>sim/model/ground-services/gnd-elev</property>
+						<property>position/altitude-ft</property>
+					</difference>
+					<value>0.3048</value>
+				</prod>
+				<value>2.32</value>
+			</sum>
+		</expression>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
 
 	<animation>
 		<object-name>fuel-truck-l</object-name>
@@ -385,8 +418,26 @@
 		<object-name>bus-1-cobus</object-name>
 		<object-name>bus-2-cobus</object-name>
 		<type>rotate</type>
-		<property>orientation/pitch-deg</property>
-		<factor>-1</factor>
+		<expression>
+			<rad2deg>
+				<atan2>
+					<difference>
+						<sum>
+							<property>gear/gear[0]/compression-ft</property>
+							<value>-0.656</value>
+						</sum>
+						<product>
+							<sum>
+								<property>gear/gear[2]/compression-ft</property>
+								<property>gear/gear[1]/compression-ft</property>
+							</sum>
+							<value>0.5</value>
+						</product>
+					</difference>
+					<value>68.3</value>
+				</atan2>
+			</rad2deg>
+		</expression>
 		<center>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
@@ -414,8 +465,17 @@
 		<object-name>bus-1-cobus</object-name>
 		<object-name>bus-2-cobus</object-name>
 		<type>rotate</type>
-		<property>orientation/roll-deg</property>
-		<factor>1</factor>
+		<expression>
+			<rad2deg>
+				<atan2>
+					<difference>
+						<property>gear/gear[2]/compression-ft</property>
+						<property>gear/gear[1]/compression-ft</property>
+					</difference>
+					<value>40.65</value>
+				</atan2>
+			</rad2deg>
+		</expression>
 		<center>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
@@ -425,40 +485,6 @@
 			<x>1</x>
 			<y>0</y>
 			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<object-name>fuel-truck-l</object-name>
-		<object-name>fuel-truck-r</object-name>
-		<object-name>de-ice-truck</object-name>
-		<object-name>cater-truck</object-name>
-		<object-name>baggage-truck-front</object-name>
-		<object-name>baggage-truck-back</object-name>
-		<object-name>ext-pwr</object-name>
-		<object-name>chock_nose</object-name>
-		<object-name>chock_left</object-name>
-		<object-name>chock_right</object-name>
-		<object-name>l1</object-name>
-		<object-name>bus-1-cobus</object-name>
-		<object-name>bus-2-cobus</object-name>
-		<type>translate</type>
-		<expression>
-			<sum>
-				<prod>
-					<difference>
-						<property>position/ground-elev-ft</property>
-						<property>position/altitude-ft</property>
-					</difference>
-					<value>0.3048</value>
-				</prod>
-				<value>2.32</value>
-			</sum>
-		</expression>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
 		</axis>
 	</animation>
 

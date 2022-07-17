@@ -257,6 +257,7 @@
   <fuel-r type="bool">false</fuel-r>
   <f-connect-l type="bool">false</f-connect-l>
   <f-connect-r type="bool">false</f-connect-r>
+  <gnd-elev type="double">0.0</gnd-elev>
  </ground-services>
 
  <door>
