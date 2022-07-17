@@ -2149,8 +2149,6 @@
     <sw-main type="double">0</sw-main>
     <sw-emerg1 type="double">0</sw-emerg1>
     <sw-emerg2 type="double">0</sw-emerg2>
-    <rotation-left-deg-s type="double">1</rotation-left-deg-s>
-    <rotation-right-deg-s type="double">1</rotation-right-deg-s>
   </gear>
   <light>
     <instruments>

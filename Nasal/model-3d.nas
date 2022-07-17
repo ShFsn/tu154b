@@ -331,19 +331,42 @@ timer_wngflx.start();
 
 
 ################################################# Gear pitch #################################################
-#var ac_pitch = props.globals.getNode("orientation/pitch-deg");
-#var ac_roll = props.globals.getNode("orientation/roll-deg");
-#var ac_agl = props.globals.getNode("position/altitude-agl-ft"); #12.13, x0.7, z-2
-var l_pitch_cmd = props.globals.getNode("tu154/gear/rotation-left-deg");
-var r_pitch_cmd = props.globals.getNode("tu154/gear/rotation-right-deg");
-var l_pitch_out = props.globals.getNode("tu154/gear/rotation-left-deg-s");
-var r_pitch_out = props.globals.getNode("tu154/gear/rotation-right-deg-s");
-#var l_pitch = 0;
-#var r_pitch = 0;
-var dt_gear = 0.1;
-var Gear_Pitch = maketimer(dt_gear, func() {
-      interpolate(l_pitch_out.getPath(), l_pitch_cmd.getValue(), dt_gear);
-      interpolate(r_pitch_out.getPath(), r_pitch_cmd.getValue(), dt_gear);
-});
-Gear_Pitch.simulatedTime = 1;
-Gear_Pitch.start();
+var gear_l_f = props.globals.getNode("gear/gear[3]/compression-ft");
+var gear_l_c = props.globals.getNode("gear/gear[1]/compression-ft");
+var gear_l_r = props.globals.getNode("gear/gear[4]/compression-ft");
+var gear_r_f = props.globals.getNode("gear/gear[5]/compression-ft");
+var gear_r_c = props.globals.getNode("gear/gear[2]/compression-ft");
+var gear_r_r = props.globals.getNode("gear/gear[6]/compression-ft");
+gear_handler = func{
+      var offset = getprop("tu154/gear/offset");
+      if( offset == nil ) offset = 0.0;
+      var gain = getprop("tu154/gear/gain");
+      if( gain == nil ) gain = 1.0;
+      #Left gear
+      var pressure = getprop("gear/gear[1]/compression-norm");
+      if( pressure == nil ) return;
+      if (gear_l_f.getValue()) {
+            setprop("tu154/gear/rotation-left-deg", math.atan2(gear_l_c.getValue()-gear_l_f.getValue()+0.656, 4.3) * R2D);
+      } else {            
+            setprop("tu154/gear/rotation-left-deg", math.atan2(gear_l_r.getValue()-gear_l_c.getValue()+0.656, 4.3) * R2D);
+      }
+      #if( pressure < 0.1 )setprop("tu154/gear/rotation-left-deg", 8.5 );
+      #else setprop("tu154/gear/rotation-left-deg", rot );
+      setprop("tu154/gear/compression-left-m", pressure*gain+offset );
+      # Right gear
+      pressure = getprop("gear/gear[2]/compression-norm");
+      if( pressure == nil ) return;
+      if (gear_r_f.getValue()) {
+            setprop("tu154/gear/rotation-right-deg", math.atan2(gear_r_c.getValue()-gear_r_f.getValue()+0.656, 4.3) * R2D);
+      } else {            
+            setprop("tu154/gear/rotation-right-deg", math.atan2(gear_r_r.getValue()-gear_r_c.getValue()+0.656, 4.3) * R2D);
+      }
+      #if( pressure < 0.1 ) setprop("tu154/gear/rotation-right-deg", 8.5 );
+      #else setprop("tu154/gear/rotation-right-deg", rot );
+      setprop("tu154/gear/compression-right-m", pressure*gain+offset );
+
+}
+
+var timer_gear_handler = maketimer(0.0, gear_handler);
+gear_handler();
+timer_gear_handler.start();

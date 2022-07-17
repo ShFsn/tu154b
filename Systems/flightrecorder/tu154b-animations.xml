@@ -140,6 +140,12 @@
  <signal><property type="string">/gear/gear[2]/compression-norm</property><type>float</type></signal>
  <signal><property type="string">/gear/gear[2]/tyre-smoke</property><type>int</type></signal>
  <signal><property type="string">/gear/gear[2]/wow</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[1]/compression-ft</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[2]/compression-ft</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[3]/compression-ft</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[4]/compression-ft</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[5]/compression-ft</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[6]/compression-ft</property><type>float</type></signal>
 
  <signal><property type="string">/velocities/groundspeed-kt</property><type>float</type></signal>
 

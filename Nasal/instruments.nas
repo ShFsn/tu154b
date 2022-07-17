@@ -2320,35 +2320,6 @@ else	{
 
 update_electrical();
 
-# It's shoul be at different place...
-# Gear animation support
-# for animation only
-gear_handler = func{
-var rot = getprop("orientation/pitch-deg");
-if( rot == nil ) return;
-var offset = getprop("tu154/gear/offset");
-if( offset == nil ) offset = 0.0;
-var gain = getprop("tu154/gear/gain");
-if( gain == nil ) gain = 1.0;
-#Left gear
-var pressure = getprop("gear/gear[1]/compression-norm");
-if( pressure == nil ) return;
-if( pressure < 0.1 )setprop("tu154/gear/rotation-left-deg", 8.5 );
-else setprop("tu154/gear/rotation-left-deg", rot );
-setprop("tu154/gear/compression-left-m", pressure*gain+offset );
-# Right gear
-pressure = getprop("gear/gear[2]/compression-norm");
-if( pressure == nil ) return;
-if( pressure < 0.1 ) setprop("tu154/gear/rotation-right-deg", 8.5 );
-else setprop("tu154/gear/rotation-right-deg", rot );
-setprop("tu154/gear/compression-right-m", pressure*gain+offset );
-
-}
-
-var timer_gear_handler = maketimer(0.0, gear_handler);
-gear_handler();
-timer_gear_handler.start();
-
 # Set random gyro deviation
 setprop("instrumentation/heading-indicator[0]/offset-deg", 359.0 * rand() );
 setprop("instrumentation/heading-indicator[1]/offset-deg", 359.0 * rand() );
