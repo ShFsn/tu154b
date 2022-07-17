@@ -93,27 +93,26 @@
       <enabled type="bool">true</enabled>
 
       <item>
-        <label>Radio</label>
+        <label>About this aircraft</label>
         <binding>
           <command>dialog-show</command>
-          <dialog-name>radio</dialog-name>
+          <dialog-name>about-aircraft</dialog-name>
         </binding>
       </item>
 
       <item>
-        <label>Maintenance</label>
+        <label>Select Livery</label>
         <binding>
-          <command>dialog-show</command>
-          <dialog-name>maintenance</dialog-name>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
 
       <item>
-        <label>Pushback</label>
-        <name>pushback</name>
+        <label>Preferences</label>
         <binding>
-        <command>dialog-show</command>
-        <dialog-name>pushback</dialog-name>
+          <command>dialog-show</command>
+          <dialog-name>preferences</dialog-name>
         </binding>
       </item>
 
@@ -154,21 +153,35 @@
       <enabled type="bool">true</enabled>
 
       <item>
-        <label>Select Livery</label>
+        <label>Radio</label>
         <binding>
-          <command>nasal</command>
-          <script>aircraft.livery.dialog.toggle()</script>
+          <command>dialog-show</command>
+          <dialog-name>radio</dialog-name>
         </binding>
       </item>
 
       <item>
-        <label>Preferences</label>
+        <label>Maintenance</label>
         <binding>
           <command>dialog-show</command>
-          <dialog-name>preferences</dialog-name>
+          <dialog-name>maintenance</dialog-name>
         </binding>
       </item>
 
+      <item>
+        <label>Pushback</label>
+        <name>pushback</name>
+        <binding>
+        <command>dialog-show</command>
+        <dialog-name>pushback</dialog-name>
+        </binding>
+      </item>
+
+    </menu>
+
+    <menu n="15">
+      <label>|</label>
+      <enabled type="bool">false</enabled>
     </menu>
 
   </default>
@@ -1047,6 +1060,7 @@
   <aircraft-data>
     <path>/tu154/options/keyboard/keyboard-mode</path>
     <path>/instrumentation/GROZA/settings/tcas-blip-radius</path>
+    <path>/tu154/options/welcome/show-on-startup</path>
   </aircraft-data>
 
 </sim>
@@ -2599,6 +2613,10 @@
    <keyboard>
     <keyboard-mode type="bool">false</keyboard-mode>
    </keyboard>
+   
+    <welcome>
+      <show-on-startup type="bool">true</show-on-startup>
+    </welcome>
 
   </options>
 </tu154>

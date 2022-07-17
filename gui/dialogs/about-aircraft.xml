@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <name>about-aircraft</name>
+  <layout>vbox</layout>
+
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <halign>left</halign>
+      <label>Welcome!</label>
+    </text>
+
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend/>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+  </group>
+
+  <hrule/>
+
+
+
+  <group>
+    <stretch>true</stretch>
+    <layout>vbox</layout>
+    <halign>center</halign>
+    <valign>top</valign>
+    
+    <text>
+      <label>Welcome to the Tupolev Tu-154B-2!</label>
+      <halign>center</halign>
+    </text>
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+    <text>
+      <label>Use Tu-154B-2 menu to select livery and open settings or use buttons below.</label>
+      <halign>center</halign>
+    </text>
+    <text>
+      <label>Also see tips pressing ? or Aircraft Help in Help menu.</label>
+      <halign>center</halign>
+    </text>
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+    <text>
+      <label>See aircraft documentation in Docs/ folder (on russian and english).</label>
+      <halign>center</halign>
+    </text>
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+    <text>
+      <label>Additional liveries can be found here:</label>
+      <halign>center</halign>
+    </text>
+    <text>
+      <label>https://github.com/ShFsn/tu154b_liveries</label>
+      <halign>center</halign>
+    </text>
+
+    <hrule/>
+
+    <checkbox>
+      <halign>center</halign>
+      <label> Show this window on simulator startup</label>
+      <property>/tu154/options/welcome/show-on-startup</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+    <hrule/>
+    
+    <group>
+      <layout>hbox</layout>
+      <button>
+        <legend>Open livery select</legend>
+        <pref-width>180</pref-width>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+        <!--<binding>
+          <command>dialog-close</command>
+        </binding>-->
+      </button>
+      <button>
+        <legend>Open aircraft preferences</legend>
+        <pref-width>180</pref-width>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>preferences</dialog-name>
+        </binding>
+        <!--<binding>
+          <command>dialog-close</command>
+        </binding>-->
+      </button>
+      <button>
+        <legend>Close</legend>
+        <pref-width>180</pref-width>
+        <binding>
+          <command>dialog-close</command>
+        </binding>
+      </button>
+    </group>
+
+  </group>
+
+</PropertyList> 

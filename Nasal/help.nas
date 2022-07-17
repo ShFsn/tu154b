@@ -96,3 +96,11 @@ setlistener( "instrumentation/adf[1]/volume", adf_1_vol, 0, 0 );
 
 
 print("Help subsystem started");
+
+
+var show_welcome_dlg = func{
+  if (getprop("tu154/options/welcome/show-on-startup")) {
+    fgcommand("dialog-show", { 'dialog-name': 'about-aircraft' });
+  }
+}
+setlistener("/sim/signals/fdm-initialized", show_welcome_dlg, 0, 0 );
