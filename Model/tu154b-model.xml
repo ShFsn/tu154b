@@ -8298,8 +8298,6 @@
     <object-name>apu_cowl_2</object-name>
     <object-name>apu_cowl_1</object-name>
     <object-name>MESH18</object-name>
-    <object-name>LeftWindowExt</object-name>
-    <object-name>RightWindowExt</object-name>
     <object-name>Body_Rear</object-name>
     <object-name>rudder</object-name>
     <object-name>Door_Cargo_2_sec</object-name>
@@ -8474,7 +8472,6 @@
 <animation>
   <type>pick</type>
   <object-name>LeftWindow</object-name>
-  <object-name>LeftWindowExt</object-name>
   <visible>true</visible>
   <action>
     <button>0</button>
@@ -8553,7 +8550,6 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>LeftWindowExt</object-name>
   <object-name>LeftWindowGlassExt</object-name>
   <property>tu154/door/window-left</property>
   <interpolation>
@@ -8587,7 +8583,6 @@
   <type>translate</type>
   <object-name>LeftWindow</object-name>
   <object-name>LeftWindowGlass</object-name>
-  <object-name>LeftWindowExt</object-name>
   <object-name>LeftWindowGlassExt</object-name>
   <property>tu154/door/window-left</property>
   <interpolation>
@@ -8617,7 +8612,6 @@
 <animation>
   <type>pick</type>
   <object-name>RightWindow</object-name>
-  <object-name>RightWindowExt</object-name>
   <visible>true</visible>
   <action>
     <button>0</button>
@@ -8696,7 +8690,6 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>RightWindowExt</object-name>
   <object-name>RightWindowGlassExt</object-name>
   <property>tu154/door/window-right</property>
   <interpolation>
@@ -8730,7 +8723,6 @@
   <type>translate</type>
   <object-name>RightWindow</object-name>
   <object-name>RightWindowGlass</object-name>
-  <object-name>RightWindowExt</object-name>
   <object-name>RightWindowGlassExt</object-name>
   <property>tu154/door/window-right</property>
   <interpolation>
