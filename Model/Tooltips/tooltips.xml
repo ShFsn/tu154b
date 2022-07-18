@@ -4,9 +4,20 @@
       <name>main-panel</name>
       <path>Aircraft/tu154b/Model/Tooltips/main-panel.xml</path>
   </model>
+  <model>
+    <name>overhead-panel</name>
+    <path>Aircraft/tu154b/Model/Tooltips/overhead-panel.xml</path>
+    <offsets>
+      <x-m>-22.172</x-m>
+      <y-m>0.0</y-m>
+      <z-m>2.4</z-m>
+      <pitch-deg>69.0</pitch-deg>
+    </offsets>
+</model>
   <animation>
     <type>material</type>
     <object-name>main-panel</object-name>
+    <object-name>overhead-panel</object-name>
     <emission>
       <red>1.0</red>
       <green>1.0</green>
@@ -16,6 +27,7 @@
   <animation>
     <type>select</type>
         <object-name>main-panel</object-name>
+        <object-name>overhead-panel</object-name>
     <condition>
         <property>/sim/panel-hotspots</property>
     </condition>
