@@ -9356,7 +9356,7 @@
  
   <!-- Particules OSG -->
   <model>
-    <path>Aircraft/tu154b/Model/Effects/smoke1.xml</path>
+    <path>Aircraft/tu154b/Model/Effects/smoke1-gnd.xml</path>
     <offsets>
       <x-m> 28.290</x-m>
       <y-m>-2.550</y-m>
@@ -9366,9 +9366,8 @@
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
- 
   <model>
-    <path>Aircraft/tu154b/Model/Effects/smoke3.xml</path>
+    <path>Aircraft/tu154b/Model/Effects/smoke3-gnd.xml</path>
     <offsets>
       <x-m> 28.290</x-m>
       <y-m> 2.550</y-m>
@@ -9378,9 +9377,42 @@
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
- 
   <model>
-    <path>Aircraft/tu154b/Model/Effects/smoke2.xml</path>
+    <path>Aircraft/tu154b/Model/Effects/smoke2-gnd.xml</path>
+    <offsets>
+      <x-m> 36.290</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 2.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/smoke1-air.xml</path>
+    <offsets>
+      <x-m> 28.290</x-m>
+      <y-m>-2.550</y-m>
+      <z-m> 1.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/smoke3-air.xml</path>
+    <offsets>
+      <x-m> 28.290</x-m>
+      <y-m> 2.550</y-m>
+      <z-m> 1.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/smoke2-air.xml</path>
     <offsets>
       <x-m> 36.290</x-m>
       <y-m> 0.0</y-m>
