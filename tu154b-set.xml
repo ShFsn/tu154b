@@ -996,21 +996,6 @@
     <path>gui/Splash/exterior/5.jpg</path>
    </preview>
    <preview>
-    <type>exterior</type>
-    <splash type="bool">true</splash>
-    <path>gui/Splash/exterior/6.jpg</path>
-   </preview>
-   <preview>
-    <type>exterior</type>
-    <splash type="bool">true</splash>
-    <path>gui/Splash/exterior/7.jpg</path>
-   </preview>
-   <preview>
-    <type>exterior</type>
-    <splash type="bool">true</splash>
-    <path>gui/Splash/exterior/8.jpg</path>
-   </preview>
-   <preview>
     <type>panel</type>
     <splash type="bool">true</splash>
     <path>gui/Splash/panel/1.jpg</path>
@@ -1026,19 +1011,9 @@
     <path>gui/Splash/panel/3.jpg</path>
    </preview>
    <preview>
-    <type>panel</type>
-    <splash type="bool">true</splash>
-    <path>gui/Splash/panel/4.jpg</path>
-   </preview>
-   <preview>
     <type>art</type>
     <splash type="bool">true</splash>
     <path>gui/Splash/art/1.jpg</path>
-   </preview>
-   <preview>
-    <type>art</type>
-    <splash type="bool">true</splash>
-    <path>gui/Splash/art/2.jpg</path>
    </preview>
   </previews>
 
