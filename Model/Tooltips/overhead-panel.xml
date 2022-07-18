@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">401-AUASP(103) power </text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.435</y-m>
+      <z-m>0.41</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">402-AUASP(103) check</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.4</y-m>
+      <z-m>0.37</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">403-UVID(117) power</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.36</y-m>
+      <z-m>0.41</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">EUP(312) power </text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.325</y-m>
+      <z-m>0.37</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">404-AGR(115) power</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.29</y-m>
+      <z-m>0.41</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">405-Clears BKK error signal</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>-0.16</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">406-BKK power</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>-0.1</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">407-ABSU power</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>-0.04</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">408, 409-PKP(101) power (left, right)</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.025</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">410</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.075</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">411, 412-TKS(436) gyros power</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.12</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">413-TKS(436) heating</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.17</y-m>
+      <z-m>0.41</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">414, 415-Mag course correction switches</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.235</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">416, 417-PNP(102) (gyro/mag) course switches (left, right)</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.31</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">418-SVS power</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.38</y-m>
+      <z-m>0.39</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">419-SVS heating</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.41</y-m>
+      <z-m>0.37</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">421, 422-KURS-MP(106) power (left, right)</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>0.34</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">423-RSBN(438) power</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.12</y-m>
+      <z-m>0.34</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">424-RSBN(438) VOR/RSBN switch</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.09</y-m>
+      <z-m>0.29</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">425, 426-RV-5M(116) power</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>0.34</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">427, 428-COM(440, 441) radios power</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.07</y-m>
+      <z-m>0.34</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">429, 430-ADF(442, 443) radios power</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.15</y-m>
+      <z-m>0.34</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">431, 432-roll correction of the lateral TKS gyro </text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.23</y-m>
+      <z-m>0.34</z-m>
+      <pitch-deg>21</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">433-DISS power</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>0.27</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">434-DISS switch land/sea</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.03</y-m>
+      <z-m>0.24</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">435-DISS switch (Diss / SVS / check)</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.1</y-m>
+      <z-m>0.26</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">436-TKS panel</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.24</y-m>
+      <z-m>0.17</z-m>
+    </offsets>
+  </model>
+  <text>
+    <type type="string">literal</type>
+    <text type="string"> A                       B          C          D</text>      <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.15</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.245</y-m>
+      <z-m>0.26</z-m>
+    </offsets>
+  </text>
+  <text>
+    <type type="string">literal</type>
+    <text type="string">E          F          G                                  H                              I                   J</text>      <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.012</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.2</max-height>
+    <max-width>0.15</max-width>
+    <font-resolution>
+      <width type="int">32</width>
+      <height type="int">32</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.245</y-m>
+      <z-m>0.205</z-m>
+    </offsets>
+  </text>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">437-signs "fasten seat belts", "No smoking", "Exit"</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.4</y-m>
+      <z-m>0.18</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">438-RSBN control panel</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.21</y-m>
+      <z-m>0.15</z-m>
+    </offsets>
+  </model>  
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">440-COM1 radio</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.01</y-m>
+      <z-m>0.01</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">441-COM2 radio</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.01</y-m>
+      <z-m>-0.08</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">442-ADF1 radio</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.19</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">443-ADF2 radio</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.24</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">4**-DME 1 distance</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.01</y-m>
+      <z-m>0.16</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">4**-DME 2 distance</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.01</y-m>
+      <z-m>0.08</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">444-Pitot heat switch</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.26</y-m>
+      <z-m>0.13</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">445-KURS-MP(106) nav radio</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.2</y-m>
+      <z-m>-0.08</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">446-KURS-MP(106) nav radio</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.24</y-m>
+      <z-m>-0.08</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">447-Nosewheel steering hydraulics</text></params></overlay>
+    <offsets>
+      <x-m>-0.03</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>-0.26</z-m>
+      <pitch-deg>-45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">448-Nosewheel steering angle 10/63 deg</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>-0.28</z-m>
+      <pitch-deg>-45</pitch-deg>
+    </offsets>
+  </model>
+    <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">449- Landing lights extend-retract</text></params></overlay>
+    <offsets>
+      <x-m>-0.03</x-m>
+      <y-m>-0.175</y-m>
+      <z-m>-0.26</z-m>
+      <pitch-deg>-45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">450-lights mode (land/off/taxi)</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.175</y-m>
+      <z-m>-0.28</z-m>
+      <pitch-deg>-45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">451-Flaps</text></params></overlay>
+   <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.02</y-m>
+      <z-m>-0.3</z-m>
+      <pitch-deg>-45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">452-gears</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.3</y-m>
+      <z-m>-0.3</z-m>
+      <pitch-deg>-45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">453-Switch the USHDB(338) needles ADF/VOR</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.36</y-m>
+      <z-m>0.06</z-m>
+    </offsets>
+  </model>
+</PropertyList>
