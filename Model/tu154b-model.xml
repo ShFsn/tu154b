@@ -7387,7 +7387,7 @@
       <property>tu154/door/passe</property>
     </and>
   </condition>
-  <texture-prop>tu154/textures/capt-panel</texture-prop>
+  <!--<texture-prop>tu154/textures/capt-panel</texture-prop>-->
   <emission>
     <red-prop>tu154/door/compartment-light</red-prop>
     <green-prop>tu154/door/compartment-light</green-prop>
@@ -7403,7 +7403,7 @@
       <property>tu154/door/cargo0</property>
     </and>
   </condition>
-  <texture-prop>tu154/textures/capt-panel</texture-prop>
+  <!--<texture-prop>tu154/textures/capt-panel</texture-prop>-->
   <emission>
     <red-prop>tu154/door/compartment-light</red-prop>
     <green-prop>tu154/door/compartment-light</green-prop>
@@ -7419,7 +7419,7 @@
       <property>tu154/door/cargo1</property>
     </and>
   </condition>
-  <texture-prop>tu154/textures/capt-panel</texture-prop>
+  <!--<texture-prop>tu154/textures/capt-panel</texture-prop>-->
   <emission>
     <red-prop>tu154/door/compartment-light</red-prop>
     <green-prop>tu154/door/compartment-light</green-prop>
@@ -8471,7 +8471,7 @@
 
 <animation>
   <type>pick</type>
-  <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowHandle</object-name>
   <visible>true</visible>
   <action>
     <button>0</button>
@@ -8491,34 +8491,8 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>LeftWindowHandle</object-name>
-  <property>tu154/door/window-left</property>
-  <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>-45</dep>
-    </entry>
-    <entry>
-      <ind>1</ind>
-      <dep>0</dep>
-    </entry>
-  </interpolation>
-  <axis>
-    <x1-m>1.03910</x1-m>
-    <y1-m>-0.88881</y1-m>
-    <z1-m>1.13192</z1-m>
-    <x2-m>1.01643</x2-m>
-    <y2-m>-0.87914</y2-m>
-    <z2-m>1.13592</z2-m>
-  </axis>
-</animation>
-<animation>
-  <type>rotate</type>
   <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowHandle</object-name>
   <object-name>LeftWindowGlass</object-name>
   <property>tu154/door/window-left</property>
   <interpolation>
@@ -8582,6 +8556,7 @@
 <animation>
   <type>translate</type>
   <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowHandle</object-name>
   <object-name>LeftWindowGlass</object-name>
   <object-name>LeftWindowGlassExt</object-name>
   <property>tu154/door/window-left</property>
@@ -8608,10 +8583,37 @@
     <z2-m>0.81692</z2-m>
   </axis>
 </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LeftWindowHandle</object-name>
+  <property>tu154/door/window-left</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>-45</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>0</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>1.03910</x1-m>
+    <y1-m>-0.88881</y1-m>
+    <z1-m>1.13192</z1-m>
+    <x2-m>1.01643</x2-m>
+    <y2-m>-0.87914</y2-m>
+    <z2-m>1.13592</z2-m>
+  </axis>
+</animation>
 
 <animation>
   <type>pick</type>
-  <object-name>RightWindow</object-name>
+  <object-name>RightWindowHandle</object-name>
   <visible>true</visible>
   <action>
     <button>0</button>
@@ -8631,34 +8633,8 @@
 </animation>
 <animation>
   <type>rotate</type>
-  <object-name>RightWindowHandle</object-name>
-  <property>tu154/door/window-right</property>
-  <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.25</ind>
-      <dep>45</dep>
-    </entry>
-    <entry>
-      <ind>1</ind>
-      <dep>0</dep>
-    </entry>
-  </interpolation>
-  <axis>
-    <x1-m>1.03910</x1-m>
-    <y1-m>0.90053</y1-m>
-    <z1-m>1.13192</z1-m>
-    <x2-m>1.01676</x2-m>
-    <y2-m>0.89053</y2-m>
-    <z2-m>1.13426</z2-m>
-  </axis>
-</animation>
-<animation>
-  <type>rotate</type>
   <object-name>RightWindow</object-name>
+  <object-name>RightWindowHandle</object-name>
   <object-name>RightWindowGlass</object-name>
   <property>tu154/door/window-right</property>
   <interpolation>
@@ -8722,6 +8698,7 @@
 <animation>
   <type>translate</type>
   <object-name>RightWindow</object-name>
+  <object-name>RightWindowHandle</object-name>
   <object-name>RightWindowGlass</object-name>
   <object-name>RightWindowGlassExt</object-name>
   <property>tu154/door/window-right</property>
@@ -8746,6 +8723,33 @@
     <x2-m>1.44310</x2-m>
     <y2-m>1.17086</y2-m>
     <z2-m>0.81692</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>RightWindowHandle</object-name>
+  <property>tu154/door/window-right</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>45</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>0</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>1.03910</x1-m>
+    <y1-m>0.90053</y1-m>
+    <z1-m>1.13192</z1-m>
+    <x2-m>1.01676</x2-m>
+    <y2-m>0.89053</y2-m>
+    <z2-m>1.13426</z2-m>
   </axis>
 </animation>
 
