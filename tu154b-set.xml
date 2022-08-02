@@ -1308,6 +1308,10 @@
     <file>Aircraft/tu154b/Nasal/debug.nas</file>
   </debug>-->
 
+	<weather-debug>
+    <file>Aircraft/tu154b/Nasal/weather-debug.nas</file>
+  </weather-debug>
+
   <help>
     <file>Aircraft/tu154b/Nasal/help.nas</file>
   </help>
