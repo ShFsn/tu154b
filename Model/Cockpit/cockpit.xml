@@ -13,7 +13,9 @@
   Cabin animations
 -->
 <PropertyList>
- <path>interior.ac</path>
+ <path>cockpit.ac</path>
+
+
  <effect>
   <inherits-from>Effects/glass</inherits-from>
   <object-name>MESH199</object-name>
@@ -21,345 +23,685 @@
   <object-name>RightWindowGlass</object-name>
  </effect>
 
-<!--TEMPORARY-->
- <animation>
-	<type>select</type>
-	<object-name>crew</object-name>
-        <condition>
-		<not><property>/sim/current-view/internal</property></not>
-      	</condition>
-</animation>
 
-<!-- Uncomment it if you want remove cabin glass -->
-<!--
-<animation>
-	<type>select</type>
-	<object-name>MESH199</object-name>
-        <object-name>LeftWindowGlass</object-name>
-        <object-name>RightWindowGlass</object-name>
-        <condition>
-	<not>	<property>/sim/rendering/rembrandt/enabled</property>	</not>
-      	</condition>
-</animation>
--->
-<!--Group all in VC-->
-<animation>
-  <type>none</type>
-  <name>virtualcockpit</name>
-    <object-name>us</object-name>
-    <object-name>ias</object-name>
-    <object-name>var-30</object-name>
-    <object-name>var-75</object-name>
-    <object-name>uvid-15m</object-name>
-    <object-name>uvid-15f</object-name>
-    <object-name>pkp-capt</object-name>
-    <object-name>pnp-capt</object-name>
-    <object-name>achs-2</object-name>
-    <object-name>rv-5m</object-name>
-    <object-name>uap-12</object-name>
-    <object-name>iku-1</object-name>
-    <object-name>um-1</object-name>
-    <object-name>tnv-15</object-name>
-    <object-name>idr-1</object-name>
-    <object-name>uvo</object-name>
-    <object-name>agr</object-name>
-    <object-name>hs-1</object-name>
-    <object-name>hs-2</object-name>
-    <object-name>hs-3</object-name>
-    <object-name>hs_brk</object-name>
-    <object-name>check_lamps_1</object-name>
-    <object-name>switch_1</object-name>
-    <object-name>l-1</object-name>
-    <object-name>l-2</object-name>
-    <object-name>l-3</object-name>
-    <object-name>l-4</object-name>
-    <object-name>left-indic-1</object-name>
-    <object-name>left-indic-2</object-name>
-    <object-name>left-indic-3</object-name>
-    <object-name>left-indic-4</object-name>
-    <object-name>pkp-cp</object-name>
-    <object-name>pnp-cp</object-name>
-    <object-name>var-30-cp</object-name>
-    <object-name>uvid-15m-cp</object-name>
-    <object-name>iku-1-cp</object-name>
-    <object-name>rv-5m-cp</object-name>
-    <object-name>uvo-cp</object-name>
-    <object-name>ias-cp</object-name>
-    <object-name>us-cp</object-name>
-    <object-name>um-cp</object-name>
-    <object-name>idr-1-cp</object-name>
-    <object-name>utd4-3t-cp</object-name>
-    <object-name>check_lamps_2</object-name>
-    <object-name>copilot-indic-1</object-name>
-    <object-name>copilot-indic-2</object-name>
-    <object-name>copilot-indic-3</object-name>
-    <object-name>copilot-indic-4</object-name>
-    <object-name>sw-2</object-name>
-    <object-name>groza</object-name>
-    <object-name>ip-33</object-name>
-    <object-name>ip-32m</object-name>
-    <object-name>in-3</object-name>
-    <object-name>ushdb</object-name>
-    <object-name>ush</object-name>
-    <object-name>usvp</object-name>
-    <object-name>ppda</object-name>
-    <object-name>eup</object-name>
-    <object-name>ite_1</object-name>
-    <object-name>ite_2</object-name>
-    <object-name>ite_3</object-name>
-    <object-name>central-indic-1</object-name>
-    <object-name>central-indic-2</object-name>
-    <object-name>central-indic-3</object-name>
-    <object-name>central-indic-4</object-name>
-    <object-name>central-indic-5</object-name>
-    <object-name>central-indic-6</object-name>
-    <object-name>sw-3</object-name>
-    <object-name>pu-11</object-name>
-    <object-name>ark-15-1</object-name>
-    <object-name>ark-15-2</object-name>
-    <object-name>kurs-mp-1</object-name>
-    <object-name>kurs-mp-2</object-name>
-    <object-name>comm-1</object-name>
-    <object-name>comm-2</object-name>
-    <object-name>skawk</object-name>
-    <object-name>rsbn</object-name>
-    <object-name>ushdb-selector</object-name>
-    <object-name>sw-41</object-name>
-    <object-name>sw-42</object-name>
-    <object-name>sw-43</object-name>
-    <object-name>sw-44</object-name>
-    <object-name>sw-45</object-name>
-    <object-name>sw-46</object-name>
-    <object-name>sw-47</object-name>
-    <object-name>sw-48</object-name>
-    <object-name>sw-49</object-name>
-    <object-name>sw-50</object-name>
-    <object-name>sw-51</object-name>
-    <object-name>sw-52</object-name>
-    <object-name>sw-53</object-name>
-    <object-name>sw-54</object-name>
-    <object-name>sw-55</object-name>
-    <object-name>sw-56</object-name>
-    <object-name>sw-57</object-name>
-    <object-name>sw-58</object-name>
-    <object-name>sw-59</object-name>
-    <object-name>sw-60</object-name>
-    <object-name>sw-61</object-name>
-    <object-name>sw-62</object-name>
-    <object-name>sw-63</object-name>
-    <object-name>sw-64</object-name>
-    <object-name>sw-65</object-name>
-    <object-name>sw-66</object-name>
-    <object-name>sw-67</object-name>
-    <object-name>sw-68</object-name>
-    <object-name>sw-69</object-name>
-    <object-name>sw-70</object-name>
-    <object-name>sw-71</object-name>
-    <object-name>sw-72</object-name>
-    <object-name>sw-73</object-name>
-    <object-name>sw-74</object-name>
-    <object-name>sw-75</object-name>
-    <object-name>sw-76</object-name>
-    <object-name>sw-77</object-name>
-    <object-name>sw-78</object-name>
-    <object-name>sw-79</object-name>
-    <object-name>sw-80</object-name>
-    <object-name>sw-81</object-name>
-    <object-name>sw-82</object-name>
-    <object-name>sw-83</object-name>
-    <object-name>sw-84</object-name>
-    <object-name>sw-85</object-name>
-    <object-name>stab-manu</object-name>
-    <object-name>pu-46+pn-5</object-name>
-    <object-name>pn-6</object-name>
-    <object-name>v-51</object-name>
-    <object-name>v-140</object-name>
-    <object-name>v-52-1</object-name>
-    <object-name>v-52-2</object-name>
-    <object-name>b-8m</object-name>
-    <object-name>bano</object-name>
-    <object-name>busters</object-name>
-    <object-name>v-57</object-name>
-    <object-name>ip21_1</object-name>
-    <object-name>ip21_2</object-name>
-    <object-name>ip21_3</object-name>
-    <object-name>ite-2t_1</object-name>
-    <object-name>ite-2t_2</object-name>
-    <object-name>ite-2t_3</object-name>
-    <object-name>ut-7a_1</object-name>
-    <object-name>ut-7a_2</object-name>
-    <object-name>ut-7a_3</object-name>
-    <object-name>uiz-3_1</object-name>
-    <object-name>uiz-3_2</object-name>
-    <object-name>uiz-3_3</object-name>
-    <object-name>umrt1-21_1</object-name>
-    <object-name>umrt1-21_2</object-name>
-    <object-name>umrt1-21_3</object-name>
-    <object-name>us3t-5t</object-name>
-    <object-name>utd4-3t</object-name>
-    <object-name>uto2-5t</object-name>
-    <object-name>utd4-2t</object-name>
-    <object-name>utd4-1t</object-name>
-    <object-name>hydro-40</object-name>
-    <object-name>hydro-28</object-name>
-    <object-name>hs-1-fe</object-name>
-    <object-name>hs-2-fe</object-name>
-    <object-name>hs-3-fe</object-name>
-    <object-name>hs-brk-fe</object-name>
-    <object-name>ias-fe</object-name>
-    <object-name>uvo-fe</object-name>
-    <object-name>var-30-fe-1</object-name>
-    <object-name>var-30-fe-2</object-name>
-    <object-name>v-27</object-name>
-    <object-name>a-27-1</object-name>
-    <object-name>a-27-2</object-name>
-    <object-name>a-27-3</object-name>
-    <object-name>hz-200</object-name>
-    <object-name>v-200</object-name>
-    <object-name>a-200</object-name>
-    <object-name>achs-2-fe</object-name>
-    <object-name>tnv-15-fe</object-name>
-    <object-name>ite-apu</object-name>
-    <object-name>fe-indic-1</object-name>
-    <object-name>engine-indic-1</object-name>
-    <object-name>engine-indic-2</object-name>
-    <object-name>engine-indic-3</object-name>
-    <object-name>l-5</object-name>
-    <object-name>l-6</object-name>
-    <object-name>l-7</object-name>
-    <object-name>l-8</object-name>
-    <object-name>l-9</object-name>
-    <object-name>l-10</object-name>
-    <object-name>l-11</object-name>
-    <object-name>l-12</object-name>
-    <object-name>l-13</object-name>
-    <object-name>l-14</object-name>
-    <object-name>l-15</object-name>
-    <object-name>l-16</object-name>
-    <object-name>l-17</object-name>
-    <object-name>l-18</object-name>
-    <object-name>l-19</object-name>
-    <object-name>l-20</object-name>
-    <object-name>l-21</object-name>
-    <object-name>l-22</object-name>
-    <object-name>l-23</object-name>
-    <object-name>l-24</object-name>
-    <object-name>l-25</object-name>
-    <object-name>l-26</object-name>
-    <object-name>l-27</object-name>
-    <object-name>l-28</object-name>
-    <object-name>l-29</object-name>
-    <object-name>l-30</object-name>
-    <object-name>l-31</object-name>
-    <object-name>l-32</object-name>
-    <object-name>l-33</object-name>
-    <object-name>l-34</object-name>
-    <object-name>l-35</object-name>
-    <object-name>l-36</object-name>
-    <object-name>l-37</object-name>
-    <object-name>l-38</object-name>
-    <object-name>l-39</object-name>
-    <object-name>l-40</object-name>
-    <object-name>l-41</object-name>
-    <object-name>l-42</object-name>
-    <object-name>l-43</object-name>
-    <object-name>l-44</object-name>
-    <object-name>l-45</object-name>
-    <object-name>l-46</object-name>
-    <object-name>l-47</object-name>
-    <object-name>l-48</object-name>
-<!--    <object-name>l-49</object-name>
-    <object-name>l-50</object-name>
-    <object-name>l-51</object-name>-->
-    <object-name>h-1</object-name>
-    <object-name>h-2</object-name>
-    <object-name>h-3</object-name>
-    <object-name>h-4</object-name>
-    <object-name>h-5</object-name>
-    <object-name>sw-4</object-name>
-    <object-name>sw-5</object-name>
-    <object-name>sw-6</object-name>
-    <object-name>sw-7</object-name>
-    <object-name>sw-8</object-name>
-    <object-name>sw-9</object-name>
-    <object-name>sw-10</object-name>
-    <object-name>sw-11</object-name>
-    <object-name>sw-12</object-name>
-    <object-name>sw-13</object-name>
-    <object-name>sw-14</object-name>
-    <object-name>sw-15</object-name>
-    <object-name>sw-16</object-name>
-    <object-name>sw-17</object-name>
-    <object-name>sw-18</object-name>
-    <object-name>sw-19</object-name>
-    <object-name>sw-20</object-name>
-    <object-name>sw-21</object-name>
-    <object-name>sw-22</object-name>
-    <object-name>sw-23</object-name>
-    <object-name>sw-24</object-name>
-    <object-name>sw-25</object-name>
-    <object-name>sw-26</object-name>
-    <object-name>sw-27</object-name>
-    <object-name>sw-28</object-name>
-    <object-name>sw-29</object-name>
-    <object-name>sw-30</object-name>
-    <object-name>sw-31</object-name>
-    <object-name>sw-32</object-name>
-    <object-name>sw-33</object-name>
-    <object-name>sw-34</object-name>
-    <object-name>sw-35</object-name>
-    <object-name>sw-36</object-name>
-    <object-name>sw-37</object-name>
-    <object-name>sw-38</object-name>
-    <object-name>sw-39</object-name>
-    <object-name>sw-40</object-name>
-    <object-name>sw-86</object-name>
-    <object-name>sw-87</object-name>
-    <object-name>sw-88</object-name>
-    <object-name>sw-89</object-name>
-    <object-name>sw-90</object-name>
-    <object-name>sw-91</object-name>
-    <object-name>sw-92</object-name>
-    <object-name>sw-93</object-name>
-    <object-name>sw-94</object-name>
-    <object-name>sw-95</object-name>
-    <object-name>sw-96</object-name>
-    <object-name>check_lamps_3</object-name>
-    <object-name>check-lamps-4</object-name>
-    <object-name>check-lamps_4</object-name>
-    <object-name>bt-1</object-name>
-    <object-name>bt-2</object-name>
-    <object-name>bt-3</object-name>
-    <object-name>bt-4</object-name>
-    <object-name>bt-5</object-name>
-    <object-name>bt-6</object-name>
-    <object-name>bt-7</object-name>
-    <object-name>bt-8</object-name>
-    <object-name>km-5-2</object-name>
-    <object-name>km-5-1</object-name>
-    <object-name>startpanel</object-name>
-    <object-name>nadp4</object-name>
-    <object-name>lever_sti2</object-name>
-    <object-name>lever_sti8</object-name>
-    <object-name>lever_sti0</object-name>
-    <object-name>lever_sti7</object-name>  
-</animation>
-<!--Hide VC on external views-->
-<!--<animation>
-  <type>select</type>
-  <object-name>interior</object-name>
-  <object-name>virtualcockpit</object-name>
-  <condition>
-      <property>/sim/current-view/internal</property>
-  </condition>
-  <nopreview/>
-</animation>-->
-<!--TEMPORARY-->
 <animation>
   <type>select</type>
   <object-name>crew</object-name>
   <condition>
     <not><property>/sim/current-view/internal</property></not>
+  </condition>
+</animation>
+
+<!-- Cabin Windows -->
+<animation>
+  <type>pick</type>
+  <object-name>LeftWindowHandle</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        var pos = getprop("tu154/door/window-left-sec");
+        if (pos) {
+            interpolate("tu154/door/window-left-sec", 0, pos * 2);
+        } else {
+            interpolate("tu154/door/window-left-sec", 1, 2);
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowHandle</object-name>
+  <object-name>LeftWindowGlass</object-name>
+  <property>tu154/door/window-left</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.1</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>-5</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-3</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>0.7706</x1-m>
+    <y1-m>-0.70364</y1-m>
+    <z1-m>1.276</z1-m>
+    <x2-m>0.4761</x2-m>
+    <y2-m>-0.82664</y2-m>
+    <z2-m>0.94192</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>translate</type>
+  <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowHandle</object-name>
+  <object-name>LeftWindowGlass</object-name>
+  <property>tu154/door/window-left</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>0.4</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>0.94910</x1-m>
+    <y1-m>-0.99614</y1-m>
+    <z1-m>0.85592</z1-m>
+    <x2-m>1.44310</x2-m>
+    <y2-m>-1.15914</y2-m>
+    <z2-m>0.81692</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>LeftWindowHandle</object-name>
+  <property>tu154/door/window-left</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>-45</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>0</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>1.03910</x1-m>
+    <y1-m>-0.88881</y1-m>
+    <z1-m>1.13192</z1-m>
+    <x2-m>1.01643</x2-m>
+    <y2-m>-0.87914</y2-m>
+    <z2-m>1.13592</z2-m>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>RightWindowHandle</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>
+        var pos = getprop("tu154/door/window-right-sec");
+        if (pos) {
+            interpolate("tu154/door/window-right-sec", 0, pos * 2);
+        } else {
+            interpolate("tu154/door/window-right-sec", 1, 2);
+        }
+      </script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>RightWindow</object-name>
+  <object-name>RightWindowHandle</object-name>
+  <object-name>RightWindowGlass</object-name>
+  <property>tu154/door/window-right</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.1</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>5</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>3</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>0.7701</x1-m>
+    <y1-m>0.72564</y1-m>
+    <z1-m>1.281</z1-m>
+    <x2-m>0.4700</x2-m>
+    <y2-m>0.84086</y2-m>
+    <z2-m>0.96000</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>translate</type>
+  <object-name>RightWindow</object-name>
+  <object-name>RightWindowHandle</object-name>
+  <object-name>RightWindowGlass</object-name>
+  <property>tu154/door/window-right</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>0.4</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>0.94910</x1-m>
+    <y1-m>1.00786</y1-m>
+    <z1-m>0.85592</z1-m>
+    <x2-m>1.44310</x2-m>
+    <y2-m>1.17086</y2-m>
+    <z2-m>0.81692</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>RightWindowHandle</object-name>
+  <property>tu154/door/window-right</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>0.25</ind>
+      <dep>45</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>0</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x1-m>1.03910</x1-m>
+    <y1-m>0.90053</y1-m>
+    <z1-m>1.13192</z1-m>
+    <x2-m>1.01676</x2-m>
+    <y2-m>0.89053</y2-m>
+    <z2-m>1.13426</z2-m>
+  </axis>
+</animation>
+
+<!-- Mapcase -->
+<animation>
+  <type>material</type>
+  <object-name>mapcase</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/prib</red-prop>
+    <green-prop>sim/model/cabin-lighting/prib</green-prop>
+    <blue-prop>sim/model/cabin-lighting/prib-2</blue-prop>
+    <factor>0.5</factor>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>ndplace</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/lamps</red-prop>
+    <green-prop>sim/model/cabin-lighting/lamps</green-prop>
+    <blue-prop>sim/model/cabin-lighting/lamps</blue-prop>
+    <factor>1.5</factor>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>ndrange</object-name>
+  <object-name>ndwx</object-name>
+  <object-name>ndterr</object-name>
+  <object-name>ndtfc</object-name>
+  <object-name>ndctr</object-name>
+  <object-name>ndap</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/lamps</red-prop>
+    <green-prop>sim/model/cabin-lighting/lamps</green-prop>
+    <blue-prop>sim/model/cabin-lighting/lamps</blue-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>knob</type>
+  <object-name>mapcase_hs</object-name>
+  <visible>false</visible>
+  <increase>
+    <binding>
+      <command>nasal</command>
+      <script>mapcase.switch_page(1)</script>
+    </binding>
+  </increase>
+  <decrease>
+    <binding>
+      <command>nasal</command>
+      <script>mapcase.switch_page(-1)</script>
+    </binding>
+  </decrease>
+  <hovered>
+    <binding>
+      <command>set-tooltip</command>
+      <tooltip-id>mapcase-page</tooltip-id>
+      <label>Page %s</label>
+      <property>tu154/instrumentation/mapcase/page</property>
+      <mapping>nasal</mapping>
+      <script>
+        var page = arg[0];
+        var pages = getprop("tu154/instrumentation/mapcase/total_pages");
+        return sprintf("%d/%d", page, pages);
+      </script>
+    </binding>
+  </hovered>
+</animation>
+
+<!--************************* Nav Display ***************************-->
+<animation>
+  <type>blend</type>
+  <object-name>ndplace</object-name>
+  <object-name>ndrange</object-name>
+  <object-name>ndwx</object-name>
+  <object-name>ndterr</object-name>
+  <object-name>ndtfc</object-name>
+  <object-name>ndctr</object-name>
+  <object-name>ndap</object-name>
+  <property>sim/model/nav-display/show</property>
+  <factor>-1</factor>
+  <offset>1</offset>
+</animation>
+<!-- Traffic -->
+<animation>
+  <type>pick</type>
+  <object-name>ndtfc_h</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/instrumentation/efis/inputs/tfc</property>
+    </binding>
+  </action>
+</animation>
+<!-- Weather -->
+<animation>
+  <type>pick</type>
+  <object-name>ndwx_h</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/instrumentation/efis/inputs/wxr</property>
+    </binding>
+  </action>
+</animation>
+<!-- Terrain -->
+<animation>
+  <type>pick</type>
+  <object-name>ndterr_h</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/instrumentation/efis/inputs/terr</property>
+    </binding>
+  </action>
+</animation>
+<!-- Airports -->
+<animation>
+  <type>pick</type>
+  <object-name>ndap_h</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/instrumentation/efis/inputs/arpt</property>
+    </binding>
+  </action>
+</animation>
+<!-- Center -->
+<animation>
+  <type>pick</type>
+  <object-name>ndctr_h</object-name>
+  <visible>true</visible>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/instrumentation/efis/inputs/nd-centered</property>
+    </binding>
+  </action>
+</animation>
+<!-- Range -->
+<animation>
+  <type>pick</type>
+  <object-name>ndrange_h</object-name>
+  <condition>
+    <less-than>
+      <property>/instrumentation/efis/inputs/range-nm</property>
+      <value>640</value>
+    </less-than>
+  </condition>
+  <action>
+    <button>3</button>
+    <!--  scroll down -->
+    <repeatable>false</repeatable>   
+    <binding>
+      <command>property-cycle</command>
+      <property>/instrumentation/efis/inputs/range-nm</property>
+      <value>10</value>
+      <value>20</value>
+      <value>40</value>
+      <value>80</value>
+      <value>160</value>
+      <value>320</value>
+      <value>640</value>
+    </binding>   
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ndrange_h</object-name>
+  <condition>
+    <greater-than>
+      <property>/instrumentation/efis/inputs/range-nm</property>
+      <value>10</value>
+    </greater-than>
+  </condition>
+  <action>
+    <button>4</button>
+    <!--  scroll up -->
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-cycle</command>
+      <property>/instrumentation/efis/inputs/range-nm</property>
+      <value>640</value>
+      <value>320</value>
+      <value>160</value>
+      <value>80</value>
+      <value>40</value>
+      <value>20</value>
+      <value>10</value>              
+    </binding>   
+  </action>
+</animation>
+<!--************************* END Nav Display ***************************-->
+
+<!-- Engineer doors panel -->
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_Unused</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+      </and>
+    </not>
+  </condition>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_CargoFront</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+          <property>tu154/door/cargo0</property>
+        </or>
+      </and>
+    </not>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>DoorsPanel_CargoFront</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>view.forceView(12)</script>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-interpolate</command>
+      <property>tu154/door/cargo0</property>
+      <value>0</value>
+      <time>1</time>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_CargoMiddle</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+          <property>tu154/door/cargo1</property>
+        </or>
+      </and>
+    </not>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>DoorsPanel_CargoMiddle</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>view.forceView(13)</script>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-interpolate</command>
+      <property>tu154/door/cargo1</property>
+      <value>0</value>
+      <time>1</time>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_TechHatch2</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+          <property>tu154/door/refuel</property>
+        </or>
+      </and>
+    </not>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>DoorsPanel_TechHatch2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>view.forceView(10)</script>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_PassRearLock</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+          <greater-than>
+            <property>tu154/door/passe</property>
+            <value>0.33</value>
+          </greater-than>
+        </or>
+      </and>
+    </not>
+  </condition>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_PassRearLatch</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+          <property>tu154/door/passe</property>
+        </or>
+      </and>
+    </not>
+  </condition>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>DoorsPanel_PassRearLock</object-name>
+  <object-name>DoorsPanel_PassRearLatch</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>view.forceView(11)</script>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-interpolate</command>
+      <property>tu154/door/passe</property>
+      <value>0</value>
+      <time>1.5</time>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_SteerDisabled</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+          <not><property>fdm/jsbsim/gear/nose-wheel-steering</property></not>
+          <not><property>fdm/jsbsim/hs/hs2-busters-ok</property></not>
+        </or>
+      </and>
+    </not>
+  </condition>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>DoorsPanel_Steer63</object-name>
+  <emission>
+    <red>0</red>
+    <green>0</green>
+    <blue>0</blue>
+  </emission>
+  <texture>doors_panel_off.png</texture>
+  <condition>
+    <not>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/systems/electrical/checking-lamps/doors-panel</property>
+          <not><property>tu154/switches/steering-limit</property></not>
+        </or>
+      </and>
+    </not>
   </condition>
 </animation>
 
@@ -1342,9 +1684,112 @@
 
 <!--******************************* End cabin animations ************************************-->
 
-<!-- Rembrandt light -->
- 
 
+
+<!-- **************** Old Panels light ***************** -->
+
+<animation>
+  <type>material</type>
+  <object-name>capt_panel</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
+  <texture-prop>tu154/textures/capt-panel</texture-prop>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh-2</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh-2</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh-2</blue-prop>
+  </emission>
+  
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>MESH22</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh-2</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh-2</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh-2</blue-prop>
+  </emission>
+  <texture-prop>tu154/textures/copilot-panel</texture-prop>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>MESH26</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh-2</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh-2</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh-2</blue-prop>
+  </emission>
+  <texture-prop>tu154/textures/overhead-panel</texture-prop>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>MESH28</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh-2</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh-2</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh-2</blue-prop>
+  </emission>
+  <texture-prop>tu154/textures/fe-panel</texture-prop>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>MESH17</object-name>
+  <object-name>LeftWindow</object-name>
+  <object-name>LeftWindowHandle</object-name>
+  <object-name>RightWindow</object-name>
+  <object-name>RightWindowHandle</object-name>
+  <object-name>LeftWindowGlass</object-name>
+  <object-name>RightWindowGlass</object-name>
+  <object-name>WiperLeft</object-name>
+  <object-name>WiperRight</object-name>
+  <!--<object-name>MESH23</object-name>-->
+  <object-name>MESH25</object-name>
+  <object-name>MESH27</object-name>
+  <object-name>pnl_1</object-name>
+  <object-name>pnl_2</object-name>
+  <object-name>MESH16</object-name>
+  <object-name>lever_thr4</object-name>
+  <object-name>lever_thr5</object-name>
+  <object-name>lever_thr6</object-name>
+  <object-name>lever_mix0</object-name>
+  <object-name>lever_mix3</object-name>
+  <object-name>lever_mix6</object-name>
+  <object-name>lever_mix8</object-name>
+  <object-name>lever_mix9</object-name>
+  <object-name>lever_mi10</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/compositor-on</property>
+    </not>
+  </condition>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh-2</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh-2</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh-2</blue-prop>
+  </emission>
+</animation>
 
 
 </PropertyList>

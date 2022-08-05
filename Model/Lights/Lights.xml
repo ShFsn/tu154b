@@ -1,0 +1,643 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ 
+ 
+ <!--**************************** Compositor Cabin lights ***********************************-->
+ <!--<model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
+  <name>capt_light</name>
+  <offsets>   
+    <x-m>-22.454</x-m>
+    <y-m>-0.242</y-m>
+    <z-m>2.1</z-m>
+    <pitch-deg>27.0</pitch-deg>
+    <roll-deg>-35.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
+  <name>copilot_light</name>
+  <offsets>   
+    <x-m>-22.454</x-m>
+    <y-m>0.242</y-m>
+    <z-m>2.1</z-m>
+    <pitch-deg>27.0</pitch-deg>
+    <roll-deg>35.0</roll-deg>
+  </offsets>
+ </model>-->
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-lightcone.xml</path>
+  <name>panel_light_1</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>-0.67</y-m>
+    <z-m>1.97</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-lightcone.xml</path>
+  <name>panel_light_2</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>-0.25</y-m>
+    <z-m>2.05</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-lightcone.xml</path>
+  <name>panel_light_3</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>0.25</y-m>
+    <z-m>2.05</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-lightcone.xml</path>
+  <name>panel_light_4</name>
+  <offsets>   
+    <x-m>-22.55</x-m>
+    <y-m>0.67</y-m>
+    <z-m>1.97</z-m>
+    <pitch-deg>20.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-lightcone-1.xml</path>
+  <name>overhead_light_up_1</name>
+  <offsets>
+    <x-m>-21.5</x-m>
+    <y-m>-0.3</y-m>
+    <z-m>2.2</z-m>
+    <pitch-deg>125.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-lightcone-1.xml</path>
+  <name>overhead_light_up_2</name>
+  <offsets>
+    <x-m>-21.5</x-m>
+    <y-m>0.0</y-m>
+    <z-m>2.2</z-m>
+    <pitch-deg>125.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-lightcone-1.xml</path>
+  <name>overhead_light_up_3</name>
+  <offsets>
+    <x-m>-21.5</x-m>
+    <y-m>0.3</y-m>
+    <z-m>2.2</z-m>
+    <pitch-deg>125.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-lightcone-2.xml</path>
+  <name>overhead_light_dn_1</name>
+  <offsets>
+    <x-m>-22.25</x-m>
+    <y-m>-0.2</y-m>
+    <z-m>2.25</z-m>
+    <pitch-deg>120.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-lightcone-2.xml</path>
+  <name>overhead_light_dn_2</name>
+  <offsets>
+    <x-m>-22.3</x-m>
+    <y-m>0.0</y-m>
+    <z-m>2.2</z-m>
+    <pitch-deg>140.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/overhead-lightcone-2.xml</path>
+  <name>overhead_light_dn_3</name>
+  <offsets>
+    <x-m>-22.25</x-m>
+    <y-m>0.2</y-m>
+    <z-m>2.25</z-m>
+    <pitch-deg>120.0</pitch-deg>
+    <roll-deg>0.0</roll-deg>
+  </offsets>
+ </model>
+
+  <!--<model>
+  <path>Aircraft/tu154b/Model/Lights/cabin-light.xml</path>
+  <name>fe_light</name>
+  <offsets>
+    <x-m>-21.6</x-m>
+    <y-m>0.42</y-m>
+    <z-m>2.415</z-m>
+    <pitch-deg>-60.0</pitch-deg>
+    <roll-deg>45.0</roll-deg>
+  </offsets>
+ </model>-->
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>side_light_l_1</name>
+  <offsets>
+    <x-m>-21.85</x-m>
+    <y-m>-1.1</y-m>
+    <z-m>1.775</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>side_light_l_2</name>
+  <offsets>
+    <x-m>-22.125</x-m>
+    <y-m>-1.0</y-m>
+    <z-m>1.8</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>side_light_l_3</name>
+  <offsets>
+    <x-m>-22.4</x-m>
+    <y-m>-0.9</y-m>
+    <z-m>1.825</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>90.0</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>side_light_r_1</name>
+  <offsets>
+    <x-m>-21.85</x-m>
+    <y-m>1.1</y-m>
+    <z-m>1.775</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>side_light_r_2</name>
+  <offsets>
+    <x-m>-22.125</x-m>
+    <y-m>1.0</y-m>
+    <z-m>1.8</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>side_light_r_3</name>
+  <offsets>
+    <x-m>-22.4</x-m>
+    <y-m>0.9</y-m>
+    <z-m>1.825</z-m>
+    <pitch-deg>30.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/engpanel-lightcone.xml</path>
+  <name>engpanel_light_1</name>
+  <offsets>
+    <x-m>-20.95</x-m>
+    <y-m>0.6</y-m>
+    <z-m>2.5</z-m>
+    <pitch-deg>50.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/engpanel-lightcone.xml</path>
+  <name>engpanel_light_2</name>
+  <offsets>
+    <x-m>-20.5</x-m>
+    <y-m>0.6</y-m>
+    <z-m>2.5</z-m>
+    <pitch-deg>50.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/engpanel-lightcone.xml</path>
+  <name>engpanel_light_3</name>
+  <offsets>
+    <x-m>-20.05</x-m>
+    <y-m>0.6</y-m>
+    <z-m>2.5</z-m>
+    <pitch-deg>50.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>-
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>engpanel_light_4</name>
+  <offsets>
+    <x-m>-20.725</x-m>
+    <y-m>0.625</y-m>
+    <z-m>2.4</z-m>
+    <pitch-deg>80.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/side-lightcone.xml</path>
+  <name>engpanel_light_5</name>
+  <offsets>
+    <x-m>-20.225</x-m>
+    <y-m>0.625</y-m>
+    <z-m>2.4</z-m>
+    <pitch-deg>80.0</pitch-deg>
+    <heading-deg>-90.0</heading-deg>
+  </offsets>
+ </model>
+
+<animation>
+  <type>select</type>
+  <object-name>panel_light_1</object-name>
+  <object-name>panel_light_2</object-name>
+  <object-name>panel_light_3</object-name>
+  <object-name>panel_light_4</object-name>
+  <object-name>overhead_light_up_1</object-name>
+  <object-name>overhead_light_up_2</object-name>
+  <object-name>overhead_light_up_3</object-name>
+  <object-name>overhead_light_dn_1</object-name>
+  <object-name>overhead_light_dn_2</object-name>
+  <object-name>overhead_light_dn_3</object-name>
+  <object-name>side_light_l_1</object-name>
+  <object-name>side_light_l_2</object-name>
+  <object-name>side_light_l_3</object-name>
+  <object-name>side_light_r_1</object-name>
+  <object-name>side_light_r_2</object-name>
+  <object-name>side_light_r_3</object-name>
+  <object-name>engpanel_light_1</object-name>
+  <object-name>engpanel_light_2</object-name>
+  <object-name>engpanel_light_3</object-name>
+  <object-name>engpanel_light_4</object-name>
+  <object-name>engpanel_light_5</object-name>
+  <condition>
+    <greater-than>
+      <property>tu154/light/instruments/int-red</property>
+      <value>0.1</value>
+    </greater-than>
+    <!--<property>sim/current-view/internal</property>-->
+  </condition>
+</animation>
+ <!--**************************** End Compositor Cabin lights ***********************************-->
+
+
+
+ <!--********************** Compositor lights *************************-->
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/landing-lightcone.xml</path>
+  <name>headlight_c</name>
+  <offsets>
+    <x-m>-19.037</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.55</z-m>
+   <pitch-deg>80.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/landing-lightcone.xml</path>
+  <name>headlight_l</name>
+  <offsets>
+   <x-m>-3.71</x-m>
+   <y-m>-3.81</y-m>
+   <z-m>-0.1</z-m>
+   <pitch-deg>80.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/landing-lightcone.xml</path>
+  <name>headlight_r</name>
+  <offsets>
+   <x-m>-3.71</x-m>
+   <y-m>3.81</y-m>
+   <z-m>-0.1</z-m>
+   <pitch-deg>80.0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taxi-lightcone.xml</path>
+  <name>taxilight_l</name>
+  <offsets>
+    <x-m>-19.037</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.55</z-m>
+    <heading-deg>15.0</heading-deg>
+    <pitch-deg>70.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taxi-lightcone.xml</path>
+  <name>taxilight_r</name>
+  <offsets>
+    <x-m>-19.037</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.55</z-m>
+    <heading-deg>-15.0</heading-deg>
+    <pitch-deg>70.0</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight-lightcone.xml</path>
+  <name>taillight_l</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>-2.267</y-m>
+    <z-m>1.965</z-m>
+    <!--<roll-deg>135.0</roll-deg>-->
+    <heading-deg>55.0</heading-deg>
+    <pitch-deg>-140.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight-lightcone.xml</path>
+  <name>taillight_r</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>2.267</y-m>
+    <z-m>1.965</z-m>
+    <!--<roll-deg>-135.0</roll-deg>-->
+    <heading-deg>-55.0</heading-deg>
+    <pitch-deg>-140.0</pitch-deg>
+  </offsets>
+ </model>
+
+<model>
+  <name>Lightcone_Collision_L</name>
+  <path>Aircraft/tu154b/Model/Lights/red-lightcone.xml</path>
+     <offsets>
+      <x-m>6.8417</x-m>
+      <y-m>-18.772</y-m>
+      <z-m>0.1192</z-m>
+      <pitch-deg>90.0</pitch-deg>
+      <heading-deg>70.0</heading-deg>
+     </offsets>
+</model>
+<model>
+  <name>Lightcone_Collision_R</name>
+  <path>Aircraft/tu154b/Model/Lights/green-lightcone.xml</path>
+     <offsets>
+      <x-m>6.8417</x-m>
+      <y-m>18.772</y-m>
+      <z-m>0.1192</z-m>
+      <pitch-deg>90.0</pitch-deg>
+      <heading-deg>-70.0</heading-deg>
+     </offsets>
+</model>
+<model>
+  <path>Aircraft/tu154b/Model/Lights/white-lightcone.xml</path>
+     <offsets>
+      <x-m>16.4956</x-m>
+      <y-m>0</y-m>
+      <z-m>1.57</z-m>
+      <pitch-deg>-90.0</pitch-deg>
+     </offsets>
+</model>
+
+<model>
+  <path>Aircraft/tu154b/Model/Lights/strobe-lightpoint.xml</path>
+     <offsets>
+      <x-m>15.2915</x-m>
+      <y-m>0</y-m>
+      <z-m>9.0603</z-m>
+     </offsets>
+</model>
+<model>
+  <path>Aircraft/tu154b/Model/Lights/strobe2-lightpoint.xml</path>
+     <offsets>
+      <x-m>9.8856</x-m>
+      <y-m>0</y-m>
+      <z-m>0.1689</z-m>
+     </offsets>
+</model>
+ <!--********************** End Compositor lights *************************-->
+
+ <!--********************** Lights Sprites *************************-->
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight.xml</path>
+  <name>taillight_point_l</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>-2.267</y-m>
+    <z-m>1.965</z-m>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight.xml</path>
+  <name>taillight_point_r</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>2.267</y-m>
+    <z-m>1.965</z-m>
+  </offsets>
+ </model>
+
+<model>
+  <name>navlight_l</name>
+  <path>Aircraft/tu154b/Model/Lights/red.xml</path>
+     <offsets>
+      <x-m>6.8417</x-m> 
+      <y-m>-18.772</y-m> 
+      <z-m>0.1192</z-m>       
+     </offsets>
+</model>
+<model>
+  <name>navlight_r</name>
+  <path>Aircraft/tu154b/Model/Lights/green.xml</path>
+     <offsets>
+      <x-m>6.8417</x-m> 
+      <y-m>18.772</y-m> 
+      <z-m>0.1192</z-m>       
+     </offsets>
+</model>
+<model>
+  <path>Aircraft/tu154b/Model/Lights/white.xml</path>
+     <offsets>
+      <x-m>16.4956</x-m>
+      <y-m>0</y-m>
+      <z-m>1.57</z-m>
+     </offsets>
+</model>
+
+<model>
+  <path>Aircraft/tu154b/Model/Lights/strobe.xml</path>
+     <offsets>
+      <x-m>15.2915</x-m>
+      <y-m>0</y-m>
+      <z-m>9.0603</z-m>
+     </offsets>
+</model>
+<model>
+  <path>Aircraft/tu154b/Model/Lights/strobe2.xml</path>
+     <offsets>
+      <x-m>9.8856</x-m>
+      <y-m>0</y-m>
+      <z-m>0.1689</z-m>
+     </offsets>
+</model>
+
+<!--Nosewheel Lights-->
+<model>
+  <path>Aircraft/tu154b/Model/Lights/taxiw.xml</path>
+     <offsets>
+      <x-m>-18.05</x-m>
+      <y-m>-0.19</y-m>
+      <z-m>-1.15</z-m>
+     </offsets>
+</model>
+<model>
+  <path>Aircraft/tu154b/Model/Lights/taxiw.xml</path>
+     <offsets>
+      <x-m>-18.05</x-m>
+      <y-m>0.07</y-m>
+      <z-m>-1.15</z-m>
+     </offsets>
+</model>
+<!--Nose Lights-->
+<model>
+  <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
+     <offsets>
+      <x-m>-19.1</x-m>
+      <y-m>-0.32</y-m>
+      <z-m>-0.7</z-m>
+     </offsets>
+</model>
+<model>
+  <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
+     <offsets>
+      <x-m>-19.1</x-m>
+      <y-m>0.08</y-m>
+      <z-m>-0.7</z-m>
+     </offsets>
+</model>
+<!--Right Wing Lights-->
+<model>
+  <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
+     <offsets>
+        <x-m>-4.1</x-m>
+        <y-m>3.75</y-m>
+        <z-m>-0.27</z-m>
+     </offsets>
+</model>
+<!--Left Wing Lights-->
+<model>
+  <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
+     <offsets>
+        <x-m>-4.1</x-m>
+        <y-m>-3.85</y-m>
+        <z-m>-0.27</z-m>
+     </offsets>
+</model>
+ <!--********************** End Lights Sprites *************************-->
+ 
+
+
+<!-- Wingflex -->
+<!--Left Wing Middle+Outer-->
+<animation>
+  <type>rotate</type>
+  <object-name>navlight_l</object-name>
+  <object-name>Lightcone_Collision_L</object-name>
+  <property>sim/systems/wingflexer/z-m</property>
+  <factor>0.6</factor>
+  <center>
+    <x-m>0.375</x-m>
+    <y-m>-6.5</y-m>
+    <z-m>0.3</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>-0.4</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<!--Left Wing Outer-->
+<animation>
+  <type>rotate</type>
+  <object-name>navlight_l</object-name>
+  <object-name>Lightcone_Collision_L</object-name>
+  <property>sim/systems/wingflexer/z-m</property>
+  <factor>1.5</factor>
+  <center>
+    <x-m>0.2</x-m>
+    <y-m>-14.1</y-m>
+    <z-m>0.3</z-m>
+  </center>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<!--Right Wing Middle+Outer-->
+<animation>
+  <type>rotate</type>
+  <object-name>navlight_r</object-name>
+  <object-name>Lightcone_Collision_R</object-name>
+  <property>sim/systems/wingflexer/z-m</property>
+  <factor>0.6</factor>
+  <center>
+    <x-m>0.375</x-m>
+    <y-m>6.5</y-m>
+    <z-m>0.3</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>-0.4</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<!--Right Wing Outer-->
+<animation>
+  <type>rotate</type>
+  <object-name>navlight_r</object-name>
+  <object-name>Lightcone_Collision_R</object-name>
+  <property>sim/systems/wingflexer/z-m</property>
+  <factor>1.5</factor>
+  <center>
+    <x-m>0.2</x-m>
+    <y-m>14.1</y-m>
+    <z-m>0.3</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- ########### End wingflex ############ -->
+ 
+</PropertyList>
