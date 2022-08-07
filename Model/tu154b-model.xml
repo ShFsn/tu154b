@@ -32,7 +32,7 @@
 </model>
 <!-- Extreior -->
 <model>
-    <name>cockpit</name>
+    <name>exterior</name>
     <path>Aircraft/tu154b/Model/exterior.xml</path>
 </model>
 <!-- Lights -->
@@ -40,4 +40,22 @@
     <name>lights</name>
     <path>Aircraft/tu154b/Model/Lights/Lights.xml</path>
 </model>
+
+
+<!-- Rollshake -->
+  <animation>
+    <type>translate</type>
+    <object-name>exterior</object-name>
+    <object-name>cockpit</object-name>
+    <object-name>lights</object-name>
+    <property>systems/shake/shaking</property>
+    <axis>
+      <x1-m> 0.0</x1-m>
+      <y1-m> 0.0</y1-m>
+      <z1-m> 0.0</z1-m>
+      <x2-m> 0.5</x2-m>
+      <y2-m>-0.5</y2-m>
+      <z2-m> 0.8</z2-m>
+    </axis>
+  </animation>
 </PropertyList>
