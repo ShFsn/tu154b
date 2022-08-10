@@ -583,16 +583,6 @@
 
 <!--Indicators-->
 <model>
-  <name>left-indic-1</name>
-  <path>Aircraft/tu154b/Instruments-3d/indicators/ind_1.xml</path>
-  <offsets>
-    <x-m>-22.524</x-m>
-    <y-m>-0.582</y-m>
-    <z-m>1.987</z-m>
-    <roll-deg>16.5</roll-deg>  
-  </offsets>
-</model>
-<model>
   <name>left-indic-2</name>
   <path>Aircraft/tu154b/Instruments-3d/indicators/ind_2.xml</path>
   <offsets>
@@ -835,16 +825,6 @@
     <x-m>-22.612</x-m>
     <y-m>0.509</y-m>
     <z-m>1.926</z-m>
-  </offsets>
-</model>
-<model>
-  <name>copilot-indic-4</name>
-  <path>Aircraft/tu154b/Instruments-3d/indicators/ind_12.xml</path>
-  <offsets>
-    <x-m>-22.524</x-m>
-    <y-m>0.591</y-m>
-    <z-m>1.986</z-m>
-    <roll-deg>-16.5</roll-deg>  
   </offsets>
 </model>
 <model>
@@ -1724,16 +1704,6 @@
     <y-m>-0.152</y-m>
     <z-m>2.307</z-m>
     <pitch-deg>26.5</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>stab-manu</name>
-  <path>Aircraft/tu154b/Instruments-3d/switches/azs4-6.xml</path>
-  <offsets>
-    <x-m>-22.47</x-m>
-    <y-m>-0.119</y-m>
-    <z-m>2.109</z-m>
-    <pitch-deg>-50.0</pitch-deg>
   </offsets>
 </model>
 
@@ -4012,7 +3982,6 @@
     <object-name>l-2</object-name>
     <object-name>l-3</object-name>
     <object-name>l-4</object-name>
-    <object-name>left-indic-1</object-name>
     <object-name>left-indic-2</object-name>
     <object-name>left-indic-3</object-name>
     <object-name>left-indic-4</object-name>
@@ -4032,7 +4001,6 @@
     <object-name>copilot-indic-1</object-name>
     <object-name>copilot-indic-2</object-name>
     <object-name>copilot-indic-3</object-name>
-    <object-name>copilot-indic-4</object-name>
     <object-name>sw-2</object-name>
     <object-name>groza</object-name>
     <object-name>ip-33</object-name>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<PropertyList include="LampsBasic.xml">
+  <emission>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+  </emission>
+</PropertyList>

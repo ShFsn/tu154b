@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<PropertyList include="LampsBasic.xml">
+  <emission>
+    <red>0.5</red>
+    <green>0.5</green>
+    <blue>0.5</blue>
+    <factor-prop>sim/model/cabin-lighting/vnesh-2</factor-prop>
+  </emission>
+</PropertyList>
