@@ -513,7 +513,7 @@
   <path>Aircraft/tu154b/Model/Lights/taxiw.xml</path>
      <offsets>
       <x-m>-18.05</x-m>
-      <y-m>-0.19</y-m>
+      <y-m>-0.13</y-m>
       <z-m>-1.15</z-m>
      </offsets>
 </model>
@@ -521,7 +521,7 @@
   <path>Aircraft/tu154b/Model/Lights/taxiw.xml</path>
      <offsets>
       <x-m>-18.05</x-m>
-      <y-m>0.07</y-m>
+      <y-m>0.13</y-m>
       <z-m>-1.15</z-m>
      </offsets>
 </model>
@@ -530,7 +530,7 @@
   <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
      <offsets>
       <x-m>-19.1</x-m>
-      <y-m>-0.32</y-m>
+      <y-m>-0.2</y-m>
       <z-m>-0.7</z-m>
      </offsets>
 </model>
@@ -538,7 +538,7 @@
   <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
      <offsets>
       <x-m>-19.1</x-m>
-      <y-m>0.08</y-m>
+      <y-m>0.2</y-m>
       <z-m>-0.7</z-m>
      </offsets>
 </model>
@@ -547,7 +547,7 @@
   <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
      <offsets>
         <x-m>-4.1</x-m>
-        <y-m>3.75</y-m>
+        <y-m>3.8</y-m>
         <z-m>-0.27</z-m>
      </offsets>
 </model>
@@ -556,7 +556,7 @@
   <path>Aircraft/tu154b/Model/Lights/landing.xml</path>
      <offsets>
         <x-m>-4.1</x-m>
-        <y-m>-3.85</y-m>
+        <y-m>-3.8</y-m>
         <z-m>-0.27</z-m>
      </offsets>
 </model>
