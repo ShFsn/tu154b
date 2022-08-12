@@ -78,7 +78,7 @@
         var pos = getprop("tu154/switches/stab-manu-cover");
         if( pos == nil ) pos = 0.0;
         if( pos == 0.0 ) pos = 1.0; else pos = 0.0;
-        interpolate("tu154/switches/stab-manu-cover", pos, 0.1 );
+        setprop("tu154/switches/stab-manu-cover", pos);
         setprop("fdm/jsbsim/fcs/stab-manu-switch", pos);
         pos = getprop("fdm/jsbsim/fcs/stabilizer-auto-pos");
         if( pos == nil ) pos = 0.0;
@@ -123,7 +123,7 @@
         if( pos == nil ) pos = 0.0;
         pos = pos + 1.0;
         if( pos == 3.0 ) pos = 2.0;
-        interpolate("tu154/switches/stab-auto-handle", pos, 0.2 );
+        setprop("tu154/switches/stab-auto-handle", pos);
         if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
         	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
         else if( pos > getprop("fdm/jsbsim/fcs/stab-auto-cmd") ) 
@@ -141,7 +141,7 @@
         if( pos == nil ) pos = 0.0;
         pos = pos - 1.0;
         if( 0.0 > pos ) pos = 0.0;
-        interpolate("tu154/switches/stab-auto-handle", pos, 0.2 );
+        setprop("tu154/switches/stab-auto-handle", pos);
         if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
         	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
       </script>
@@ -157,7 +157,7 @@
         if( pos == nil ) pos = 0.0;
         pos = pos + 1.0;
         if( pos == 3.0 ) pos = 2.0;
-        interpolate("tu154/switches/stab-auto-handle", pos, 0.2 );
+        setprop("tu154/switches/stab-auto-handle", pos);
         if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
 	        setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
         else if( pos > getprop("fdm/jsbsim/fcs/stab-auto-cmd") ) 
@@ -175,7 +175,7 @@
         if( pos == nil ) pos = 0.0;
         pos = pos - 1.0;
         if( 0.0 > pos ) pos = 0.0;
-        interpolate("tu154/switches/stab-auto-handle", pos, 0.2 );
+        setprop("tu154/switches/stab-auto-handle", pos);
         if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
         	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
       </script>
@@ -217,7 +217,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("tu154/switches/stab-manu-selector", 2.0, 0.1 );
+        setprop("tu154/switches/stab-manu-selector", 2.0);
         if( 1.0 > getprop("fdm/jsbsim/fcs/stab-manu-cmd") ) controls.slewProp("fdm/jsbsim/fcs/stab-manu-cmd",0.1);
       </script>
     </binding>
@@ -225,7 +225,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("tu154/switches/stab-manu-selector", 1.0, 0.1 );
+        setprop("tu154/switches/stab-manu-selector", 1.0);
       </script>
     </binding>
   </mod-up>
@@ -241,7 +241,7 @@
     <binding>
       <command>nasal</command>
       <script>
-        interpolate("tu154/switches/stab-manu-selector", 0.0, 0.1 );
+        setprop("tu154/switches/stab-manu-selector", 0.0);
         if( getprop("fdm/jsbsim/fcs/stab-manu-cmd") > 0.0 ) controls.slewProp("fdm/jsbsim/fcs/stab-manu-cmd",-0.1);
       </script>
     </binding>
@@ -249,7 +249,7 @@
       <binding>
         <command>nasal</command>
         <script>
-          interpolate("tu154/switches/stab-manu-selector", 1.0, 0.1 );
+          setprop("tu154/switches/stab-manu-selector", 1.0);
         </script>
       </binding>
     </mod-up>
