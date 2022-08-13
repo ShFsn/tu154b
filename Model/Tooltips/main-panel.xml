@@ -264,7 +264,7 @@
     <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
     <overlay><params><text type="string">155-164 - indicators. Read more at /Docs</text></params></overlay>
     <offsets>
-      <x-m>-22.52</x-m>
+      <x-m>-22.5</x-m>
       <y-m>-0.58</y-m>
       <z-m>1.99</z-m>
     </offsets>

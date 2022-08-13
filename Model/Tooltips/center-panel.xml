@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">301-Manual stabilizer control</text></params></overlay>
+    <offsets>
+      <x-m>-22.44</x-m>
+      <y-m>-0.13</y-m>
+      <z-m>2.07</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">302-Auto stabilizer preset</text></params></overlay>
+    <offsets>
+      <x-m>-22.43</x-m>
+      <y-m>0</y-m>
+      <z-m>2.07</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">303-305-Engine failure lamps </text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>1.96</z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">306-Engine N2 RPM indicators</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.2</y-m>
+      <z-m>1.95</z-m>
+    </offsets>
+  </model>
+   <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">307-Engine N2 RPM indicators</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.12</y-m>
+      <z-m>1.95</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">308-Engine N2 RPM indicators</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.035</y-m>
+      <z-m>1.95</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">309- Elevator/ stabilizer indication</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>0.05</y-m>
+      <z-m>1.95</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">310-Flaps position indication</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>0.14</y-m>
+      <z-m>1.95</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">311-Gears position indication</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>0.24</y-m>
+      <z-m>1.97</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">312-Turn coordinator EUP</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.22</y-m>
+      <z-m>1.84</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">344-Indicator "Slats extended"</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>0.24</y-m>
+      <z-m>1.925</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">313-319 - Indicators. Read more at /Docs</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>0.2</y-m>
+      <z-m>1.89</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">320- Groundspeed indicator USVPK</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>0.15</y-m>
+      <z-m>1.83</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">321-321 - Range-azimuth indicator RSBN</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>0.24</y-m>
+      <z-m>1.82</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">322-Captain/copilot heading bug switch</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.2</y-m>
+      <z-m>1.76</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">323-327 - Indicators. Read more at /Docs</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.26</y-m>
+      <z-m>1.72</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">329-336 - Indicators. Read more at /Docs</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.1</y-m>
+      <z-m>1.63</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">328-Status of RA-56 hydraulic flight control actuators.</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.25</y-m>
+      <z-m>1.56</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">337-USh navigator instrument</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.15</y-m>
+      <z-m>1.55</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">338-UShDB indicator</text></params></overlay>
+    <offsets>
+      <x-m>-22.603</x-m>
+      <y-m>-0.0</y-m>
+      <z-m>1.55</z-m>
+    </offsets>
+  </model>
+</PropertyList>
