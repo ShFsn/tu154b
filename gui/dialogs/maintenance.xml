@@ -262,4 +262,6 @@
       <binding><command>dialog-apply</command></binding>
     </checkbox>
     
-  </group> </PropertyList> 
+  </group>
+
+</PropertyList> 

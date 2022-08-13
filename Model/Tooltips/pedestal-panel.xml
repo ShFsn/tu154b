@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">339-Flight control booster switches</text></params></overlay>
+    <offsets>
+      <x-m>0.1</x-m>
+      <y-m>-0.14</y-m>
+      <z-m>-0.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">340-NVU "Map angle" selector</text></params></overlay>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>-0.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">341-Nav lights</text></params></overlay>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>0.07</y-m>
+      <z-m>0.02</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">342-Beacon light</text></params></overlay>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>0.12</y-m>
+      <z-m>0.03</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">343-Instrument lights</text></params></overlay>
+    <offsets>
+      <x-m>0.08</x-m>
+      <y-m>0.18</y-m>
+      <z-m>0.03</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">345-Autopilot HSI heading mode</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>-0.14</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">346-PNP VOR selector</text></params></overlay>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>-0.22</y-m>
+      <z-m>-0.14</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">347-Reset</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>-0.17</y-m>
+      <z-m>-0.14</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">348-Set course mode to NVU</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>-0.19</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">349-Set course mode to Kurs-MP1</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>-0.22</y-m>
+      <z-m>-0.19</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">350-Set course mode to Kurs-MP2</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>-0.17</y-m>
+      <z-m>-0.19</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">351-Nav computer</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.26</y-m>
+      <z-m>-0.25</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">352-Landing computer</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>-0.19</y-m>
+      <z-m>-0.25</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">353-Couples the autopilot bank to the ILS</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>-0.31</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">354-Flight director needles</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.22</y-m>
+      <z-m>-0.31</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">355-Couples the autopilot pitch to the glideslope</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.17</y-m>
+      <z-m>-0.31</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">356-Autopilot bank indicator</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>-0.36</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">357-gyros alignment</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>-0.22</y-m>
+      <z-m>-0.36</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">358-Autopilot pitch indicator</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.17</y-m>
+      <z-m>-0.36я</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">359-Mach on pitch mode</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.27</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">360-Speed on pitch mode</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.22</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">361-Alt hold</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.17</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+
+    <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">362-Bank selector</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.25</y-m>
+      <z-m>-0.47</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">363-stabilisation mode</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.205</y-m>
+      <z-m>-0.44</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">364-pitch selector</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>-0.17</y-m>
+      <z-m>-0.47</z-m>
+    </offsets>
+  </model>
+
+    <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">365-AP Bank channel</text></params></overlay>
+    <offsets>
+      <x-m>-0.02</x-m>
+      <y-m>-0.25</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">366-Turbulence switch</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.22</y-m>
+      <z-m>-0.52</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">367-AP Pitch channel</text></params></overlay>
+    <offsets>
+      <x-m>-0.02</x-m>
+      <y-m>-0.18</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">368-Feed the autopilot from the left or the right HSI</text></params></overlay>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>0.17</y-m>
+      <z-m>-0.14</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">369-Indicators "computers ready"</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>0.09</y-m>
+      <z-m>-0.15</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">370-Indicators "AT ready"</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.09</y-m>
+      <z-m>-0.24</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">371-AT check</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>0.09</y-m>
+      <z-m>-0.3</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">372-Speed hold</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.13</y-m>
+      <z-m>-0.21</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">373-AT power</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>0.13</y-m>
+      <z-m>-0.26</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">374-AT armed</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>0.165</y-m>
+      <z-m>-0.27</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">375-AT speed control wheel</text></params></overlay>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>0.19</y-m>
+      <z-m>-0.21</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">376-AT speed control bug L/R airspeed indicator</text></params></overlay>
+    <offsets>
+      <x-m>0.025</x-m>
+      <y-m>0.21</y-m>
+      <z-m>-0.26</z-m>
+    </offsets>
+    
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">377-379- declutch throttle levers from the autothrottle.</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.14</y-m>
+      <z-m>-0.32</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">380</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">A-Cross-track deviation from the track(Z)</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.07</y-m>
+      <z-m>-0.37</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">C-Cross-track deviation from the track(Z)</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.08</y-m>
+      <z-m>-0.42</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">B-Distance to waypoint</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.01</y-m>
+      <z-m>-0.37</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">D-Distance to waypoint</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.01</y-m>
+      <z-m>-0.42</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">E</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.39</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">F</text></params></overlay>
+    <offsets>
+      <x-m>0.00</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.425</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">G</text></params></overlay>
+    <offsets>
+      <x-m>0.00</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.435</z-m>
+    </offsets>
+  </model>
+
+
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">381</text></params></overlay>
+    <offsets>
+      <x-m>-0.01</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.52</z-m>
+    </offsets>
+  </model>
+
+    <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">A-Cross-track deviation from the track(Z)</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.07</y-m>
+      <z-m>-0.49</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">C-Cross-track deviation from the track(Z)</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.08</y-m>
+      <z-m>-0.54</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">B-Distance to waypoint</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.01</y-m>
+      <z-m>-0.49</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">D-Distance to waypoint</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.01</y-m>
+      <z-m>-0.54</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">E</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.51</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">F</text></params></overlay>
+    <offsets>
+      <x-m>0.00</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.55</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">G</text></params></overlay>
+    <offsets>
+      <x-m>0.00</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.56</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">382</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.14</y-m>
+      <z-m>-0.36</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">H-ZPU-1</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.19</y-m>
+      <z-m>-0.39</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">L-ZPU-2</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.19</y-m>
+      <z-m>-0.44</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">I   J   K course</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.145</y-m>
+      <z-m>-0.415</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">I   J   K course</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.145</y-m>
+      <z-m>-0.455</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">383</text></params></overlay>
+    <offsets>
+      <x-m>-0.01</x-m>
+      <y-m>0.14</y-m>
+      <z-m>-0.47</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">M- select the destination for distance entries</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.11</y-m>
+      <z-m>-0.49</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">N-LUR (turn anticipation distance)</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.17</y-m>
+      <z-m>-0.5</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">O- "NVU ready"</text></params></overlay>
+    <offsets>
+      <x-m>-0.01</x-m>
+      <y-m>0.09</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">P- "NVU updating"</text></params></overlay>
+    <offsets>
+      <x-m>-0.01</x-m>
+      <y-m>0.12</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">Q-power</text></params></overlay>
+    <offsets>
+      <x-m>-0.01</x-m>
+      <y-m>0.145</y-m>
+      <z-m>-0.52</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">R-computation</text></params></overlay>
+    <offsets>
+      <x-m>-0.01</x-m>
+      <y-m>0.167</y-m>
+      <z-m>-0.54</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">S-correction</text></params></overlay>
+    <offsets>
+      <x-m>-0.01</x-m>
+      <y-m>0.19</y-m>
+      <z-m>-0.52</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">T   U   V distance</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.14</y-m>
+      <z-m>-0.565</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">384</text></params></overlay>
+    <offsets>
+      <x-m>-0.1</x-m>
+      <y-m>-0.03</y-m>
+      <z-m>-0.73</z-m>
+    </offsets>
+  </model>
+</PropertyList>
