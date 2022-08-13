@@ -1036,6 +1036,9 @@
     <path>/tu154/options/keyboard/keyboard-mode</path>
     <path>/instrumentation/GROZA/settings/tcas-blip-radius</path>
     <path>/tu154/options/welcome/show-on-startup</path>
+    <path>tu154/options/tooltips-color/r</path>
+    <path>tu154/options/tooltips-color/g</path>
+    <path>tu154/options/tooltips-color/b</path>
   </aircraft-data>
 
 </sim>

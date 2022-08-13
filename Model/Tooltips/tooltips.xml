@@ -34,10 +34,16 @@
     <object-name>overhead-panel</object-name>
     <object-name>center-panel</object-name>
     <object-name>pedestal-panel</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>1.0</green>
+    <diffuse>
+      <red>0.0</red>
+      <green>0.0</green>
       <blue>0.0</blue>
+    </diffuse>
+    
+    <emission>
+      <red-prop>tu154/options/tooltips-color/r</red-prop>
+      <green-prop>tu154/options/tooltips-color/g</green-prop>
+      <blue-prop>tu154/options/tooltips-color/b</blue-prop>
     </emission>
 </animation>
   <animation>
