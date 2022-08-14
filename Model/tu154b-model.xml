@@ -14,6 +14,16 @@
   <name>groundservices</name>
   <path>Aircraft/tu154b/Model/Services/groundservices.xml</path>
 </model>
+<!-- Auto Pushback -->
+<model>
+  <name>goldhofert</name>
+  <path>Aircraft/tu154b/Model/Autopush/Goldhofert.xml</path>
+  <offsets>
+    <x-m>-17.89</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-2.68</z-m>
+  </offsets>
+</model>
 <!-- Panel tooltips -->
 <model>
   <name>tooltips</name>

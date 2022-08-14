@@ -974,6 +974,13 @@
             <default value="gear/steering-free-cmd-norm"/>
           </switch>
 
+          <switch name="gear/steering-cmd-norm">
+            <test value="hydraulics/tiller/autopush-cmd">
+              external_reactions/tractor/connected == 1
+            </test>
+            <default value="gear/steering-cmd-norm"/>
+          </switch>
+
           <kinematic name="gear/steer-pos-deg">
             <input>gear/steering-cmd-norm</input>
             <traverse>
@@ -1022,7 +1029,6 @@
     <system file="hydrosystems"/>
     <system file="instrumentation"/>
     <system file="nvu"/>
-    <system file="pushback"/>
     <autopilot file="Systems/absu154"/>
 
     
@@ -1595,11 +1601,11 @@
     </aerodynamics>
     
     <external_reactions>
-      <force name="pushback" frame="BODY">
+      <force name="tractor" frame="BODY">
 	<location unit="IN">
-	<x>  -139 </x>
+	<x>  -700 </x>
 	<y>    0.0 </y>
-	<z>  -71.0 </z>
+	<z>  -61.0 </z>
 	</location>
 	<direction>
 	<x>1</x>

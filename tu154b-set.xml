@@ -170,10 +170,10 @@
 
       <item>
         <label>Pushback</label>
-        <name>pushback</name>
+        <name>autopush</name>
         <binding>
         <command>dialog-show</command>
-        <dialog-name>pushback</dialog-name>
+        <dialog-name>autopush</dialog-name>
         </binding>
       </item>
 
@@ -208,6 +208,8 @@
 </gui>
 
 <model>
+	<autopush include="Systems/autopush-config.xml"/>
+
  <path>Aircraft/tu154b/Model/tu154b-model.xml</path>
  <livery>
   <file type="string">85363-AFL</file>
@@ -216,13 +218,6 @@
  <constants>
   <one type="float">1</one>
  </constants>
-
- <pushback>
-  <kp type="double">2000</kp>
-  <ki type="double">500</ki>
-  <kd type="double">250</kd>
-  <position-norm type="double">0</position-norm>
- </pushback>
 
  <map>
   <default_exit>
@@ -1339,10 +1334,32 @@
     <file>Aircraft/tu154b/Instruments-3d/GROZA/GROZA.nas</file>
   </GROZA>
 
+  <!-- Autopush -->
+  <autopush>
+    <file>Aircraft/tu154b/Nasal/Autopush/autopush.nas</file>
+  </autopush>
+  <autopush_driver>
+    <file>Aircraft/tu154b/Nasal/Autopush/driver.nas</file>
+  </autopush_driver>
+  <dynarr>
+    <file>Aircraft/tu154b/Nasal/Autopush/dynarr.nas</file>
+  </dynarr>
+  <autopush_route>
+    <file>Aircraft/tu154b/Nasal/Autopush/route.nas</file>
+  </autopush_route>
+
 </nasal>
 
 <fdm>
   <jsbsim>
+    <external_reactions n="0">
+      <tractor>
+        <connected alias="/sim/model/autopush/connected"/>
+        <magnitude alias="/sim/model/autopush/force-lbf"/>
+        <x alias="/sim/model/autopush/force-x"/>
+        <y alias="/sim/model/autopush/force-y"/>
+      </tractor>
+    </external_reactions>
     <instrumentation>
       <pu11-latitude>55.0</pu11-latitude>
       <tks-consumers>0</tks-consumers>
