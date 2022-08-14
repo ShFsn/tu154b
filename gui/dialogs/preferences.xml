@@ -31,223 +31,260 @@
   <hrule/>
 
 
-
   <group>
-    <stretch>true</stretch>
-    <layout>vbox</layout>
-    <halign>center</halign>
-    <valign>top</valign>
-
-
-
-    <!--<group><layout>hbox</layout>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-      <text><label>APU Exhaust</label></text>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-    </group>
-    <checkbox>
-      <halign>left</halign>
-      <label>Like on original Tu-154</label>
-      <property>/sim/model/apu-style/apu-type</property>
-      <live>true</live>
-      <binding><command>dialog-apply</command></binding>
-    </checkbox>-->
-
-
-
-    <!--<group><layout>hbox</layout>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-      <text><label>External Sounds</label></text>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-    </group>
-    <checkbox>
-      <halign>left</halign>
-      <label>Loud External Sounds Volume</label>
-      <property>/sim/sound/loud-ext</property>
-      <live>true</live>
-      <binding><command>dialog-apply</command></binding>
-    </checkbox>-->
-
-
-
-    <group><layout>hbox</layout>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-      <text><label>Replay</label></text>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-    </group>
-    <checkbox>
-      <halign>left</halign>
-      <label>Save state after replay</label>
-      <property>/tu154/options/replay-fix/save_state</property>
-      <live>true</live>
-      <binding><command>dialog-apply</command></binding>
-    </checkbox>
-
+    <layout>hbox</layout>
+      
     <text><label> </label></text>
 
-    <group><layout>hbox</layout>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-      <text><label>Keyboard</label></text>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-    </group>
-    <checkbox>
-      <halign>left</halign>
-      <label>Keyboard Mode</label>
-      <property>/tu154/options/keyboard/keyboard-mode</property>
-      <live>true</live>
-      <binding><command>dialog-apply</command></binding>
-    </checkbox>
+    <group>
+      <stretch>true</stretch>
+      <layout>vbox</layout>
+      <halign>center</halign>
+      <valign>top</valign>
 
-    <text><label>1-9 buttons works as stated in Common Aircraft Keys, see aircraft help</label></text>
 
-    <text><label> </label></text>
 
-    <group><layout>hbox</layout>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-      <text><label>Air Conditioning</label></text>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-    </group>
-    <checkbox>
-      <halign>left</halign>
-      <label>Synchronize zero-height cabin pressure with main altimeters pressure</label>
-      <property>/tu154/air-cond/pressure-sync</property>
-      <live>true</live>
-      <!--<binding><command>dialog-apply</command></binding>-->
-    </checkbox>
-
-    <text><label> </label></text>
-
-    <group><layout>hbox</layout>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-      <text><label>"Groza" terrain and weather radar</label></text>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-    </group>
-    <group><layout>hbox</layout>
-      <!--<checkbox>
+      <!--<group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>APU Exhaust</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
         <halign>left</halign>
-        <label>TCAS, </label>
-        <property>sim/model/with-tcas</property>
+        <label>Like on original Tu-154</label>
+        <property>/sim/model/apu-style/apu-type</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>-->
+
+
+
+      <!--<group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>External Sounds</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
+        <halign>left</halign>
+        <label>Loud External Sounds Volume</label>
+        <property>/sim/sound/loud-ext</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>-->
+
+
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Replay</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
+        <halign>left</halign>
+        <label>Save state after replay</label>
+        <property>/tu154/options/replay-fix/save_state</property>
+        <live>true</live>
         <binding><command>dialog-apply</command></binding>
       </checkbox>
-      <empty><stretch>true</stretch></empty>-->
-      <text>
+
+      <text><label> </label></text>
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Keyboard</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
         <halign>left</halign>
-        <label>TCAS radar marks radius, lines (default: 0, off):</label>
-        <!--<enable><property>sim/model/with-tcas</property></enable>-->
-      </text>
-      <slider>
-        <halign>left</halign>
-        <min>0</min>
-        <max>8</max>
-        <step>1</step>
-        <property>instrumentation/GROZA/settings/tcas-blip-radius</property>
+        <label>Keyboard Mode</label>
+        <property>/tu154/options/keyboard/keyboard-mode</property>
         <live>true</live>
         <binding><command>dialog-apply</command></binding>
-        <!--<enable><property>sim/model/with-tcas</property></enable>-->
-      </slider>
-      <text>
+      </checkbox>
+
+      <text><label>1-9 buttons works as stated in Common Aircraft Keys, see aircraft help</label></text>
+
+      <text><label> </label></text>
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Air Conditioning</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
         <halign>left</halign>
-        <pref-width>16</pref-width>
-        <property>instrumentation/GROZA/settings/tcas-blip-radius</property>
+        <label>Synchronize zero-height cabin pressure with main altimeters pressure</label>
+        <property>/tu154/air-cond/pressure-sync</property>
         <live>true</live>
+        <!--<binding><command>dialog-apply</command></binding>-->
+      </checkbox>
+
+      <text><label> </label></text>
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>"Groza" terrain and weather radar</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <group><layout>hbox</layout>
+        <!--<checkbox>
+          <halign>left</halign>
+          <label>TCAS, </label>
+          <property>sim/model/with-tcas</property>
+          <binding><command>dialog-apply</command></binding>
+        </checkbox>
+        <empty><stretch>true</stretch></empty>-->
+        <text>
+          <halign>left</halign>
+          <label>TCAS radar marks radius, lines (default: 0, off):</label>
+          <!--<enable><property>sim/model/with-tcas</property></enable>-->
+        </text>
+        <slider>
+          <halign>left</halign>
+          <min>0</min>
+          <max>8</max>
+          <step>1</step>
+          <property>instrumentation/GROZA/settings/tcas-blip-radius</property>
+          <live>true</live>
+          <binding><command>dialog-apply</command></binding>
+          <!--<enable><property>sim/model/with-tcas</property></enable>-->
+        </slider>
+        <text>
+          <halign>left</halign>
+          <pref-width>16</pref-width>
+          <property>instrumentation/GROZA/settings/tcas-blip-radius</property>
+          <live>true</live>
+          <!--<enable><property>sim/model/with-tcas</property></enable>-->
+        </text>
+      </group>
+      <text>
+        <label>Radar shows ALL replies, not only mode C or TCAS threats; historically inaccurate.</label>
+        <halign>left</halign>
         <!--<enable><property>sim/model/with-tcas</property></enable>-->
       </text>
+      
+      <text><label> </label></text>
+
+      <group>
+        <layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Tooltips color</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+
+      <group>
+        <layout>table</layout>
+        <halign>left</halign>
+
+        <text>
+          <halign>left</halign>
+          <row>0</row>
+          <col>0</col>
+          <label>Red channel</label>
+        </text>
+        <slider>
+          <row>0</row>
+          <col>1</col>
+          <min>0.0</min>
+          <max>1.0</max>
+          <step>0.05</step>
+          <property>tu154/options/tooltips-color/r</property>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+        </slider>
+        <text>
+          <row>0</row>
+          <col>2</col>
+          <label>12345678</label>
+          <live>true</live>
+          <property>tu154/options/tooltips-color/r</property>
+        </text>
+
+        <text>
+          <halign>left</halign>
+          <row>1</row>
+          <col>0</col>
+          <label>Green channel</label>
+        </text>
+        <slider>
+          <row>1</row>
+          <col>1</col>
+          <min>0.0</min>
+          <max>1.0</max>
+          <step>0.05</step>
+          <property>tu154/options/tooltips-color/g</property>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+        </slider>
+        <text>
+          <row>1</row>
+          <col>2</col>
+          <label>12345678</label>
+          <live>true</live>
+          <property>tu154/options/tooltips-color/g</property>
+        </text>
+
+        <text>
+          <halign>left</halign>
+          <row>2</row>
+          <col>0</col>
+          <label>Blue channel</label>
+        </text>
+        <slider>
+          <row>2</row>
+          <col>1</col>
+          <min>0.0</min>
+          <max>1.0</max>
+          <step>0.05</step>
+          <property>tu154/options/tooltips-color/b</property>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+        </slider>
+        <text>
+          <row>2</row>
+          <col>2</col>
+          <label>12345678</label>
+          <live>true</live>
+          <property>tu154/options/tooltips-color/b</property>
+        </text>
+
+      </group>
+      
     </group>
-    <text>
-      <label>Radar shows ALL replies, not only mode C or TCAS threats; historically inaccurate.</label>
-      <halign>left</halign>
-      <!--<enable><property>sim/model/with-tcas</property></enable>-->
-    </text>
-  <group>
-    <layout>hbox</layout>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-      <text><label>Tooltips color</label></text>
-      <hrule>
-        <stretch type="bool">true</stretch>
-      </hrule>
-    </group>
+      
+    <text><label> </label></text>
+
   </group>
 
-  <group>
-    <layout>hbox</layout>
-    <text><label>red channel</label></text>
-    <empty><stretch>true</stretch></empty>
-    <slider>
-      <min>0.0</min>
-      <max>1.0</max>
-      <property>tu154/options/tooltips-color/r</property>
-      <binding>
-        <command>dialog-apply</command>
-      </binding>
-    </slider>
-    <text>
-      <label>12345678</label>
-      <live>true</live>
-      <property>tu154/options/tooltips-color/r</property>
-    </text>
-  </group>
-
-  <group>
-    <layout>hbox</layout>
-    <text><label>green channel</label></text>
-    <empty><stretch>true</stretch></empty>
-    <slider>
-      <min>0.0</min>
-      <max>1.0</max>
-      <property>tu154/options/tooltips-color/g</property>
-      <binding>
-        <command>dialog-apply</command>
-      </binding>
-    </slider>
-    <text>
-      <label>12345678</label>
-      <live>true</live>
-      <property>tu154/options/tooltips-color/g</property>
-    </text>
-  </group>
-
-  <group>
-    <layout>hbox</layout>
-    <text><label>blue channel</label></text>
-    <empty><stretch>true</stretch></empty>
-    <slider>
-      <min>0.0</min>
-      <max>1.0</max>
-      <property>tu154/options/tooltips-color/b</property>
-      <binding>
-        <command>dialog-apply</command>
-      </binding>
-    </slider>
-    <text>
-      <label>12345678</label>
-      <live>true</live>
-      <property>tu154/options/tooltips-color/b</property>
-    </text>
-  </group>
 </PropertyList> 

@@ -2408,6 +2408,10 @@
       <Zpm-2-smooth type="double">0</Zpm-2-smooth>
       <wind-fork type="double">0</wind-fork>
     </nvu>
+    <nvu-calc>
+      <td-dist type="double">275.0</td-dist>
+      <td-text type="string"></td-text>
+    </nvu-calc>
     <warning>
       <deploy-flaps type="double" >0.0</deploy-flaps>
       <alarm>

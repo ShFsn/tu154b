@@ -113,26 +113,13 @@
               list.getChild("value", i - 1, 1).setValue(descr);
 
               var dist_n = dist_total - wp1.distance_along_route * 1.852;
-              if (dist > 300 and 300 >= dist_n) {
-                descr = sprintf(" 300 km on leg:  % 3d: %s - %s (%.1f - %.1f km),"
+              var td_dist = getprop("tu154/systems/nvu-calc/td-dist");
+              if (dist > td_dist and td_dist >= dist_n) {
+                descr = sprintf(" %.0f km on leg:  % 3d: %s - %s (%.1f - %.1f km),"
                                   ~" S: %+.1f km;   at S: %+.1f km",
-                                  i, leg.from, leg.to, dist, dist_n, leg.S,
-                                  dist_n - 300);
-                setprop("/tu154/systems/nvu-calc/td-300", descr);
-              }
-              if (dist > 275 and 275 >= dist_n) {
-                descr = sprintf(" 275 km on leg:  % 3d: %s - %s (%.1f - %.1f km),"
-                                  ~" S: %+.1f km;   at S: %+.1f km",
-                                  i, leg.from, leg.to, dist, dist_n, leg.S,
-                                  dist_n - 275);
-                setprop("/tu154/systems/nvu-calc/td-275", descr);
-              }
-              if (dist > 250 and 250 >= dist_n) {
-                descr = sprintf(" 250 km on leg:  % 3d: %s - %s (%.1f - %.1f km),"
-                                  ~" S: %+.1f km;   at S: %+.1f km",
-                                  i, leg.from, leg.to, dist, dist_n, leg.S,
-                                  dist_n - 250);
-                setprop("/tu154/systems/nvu-calc/td-250", descr);
+                                  td_dist, i, leg.from, leg.to, dist, dist_n, leg.S,
+                                  dist_n - td_dist);
+                setprop("/tu154/systems/nvu-calc/td-text", descr);
               }
 
               var faz = wp1.courseAndDistanceFrom(wpB.lat, wpB.lon)[0];
@@ -420,15 +407,7 @@
     <layout>hbox</layout>
 
     <text>
-      <label> Top of Descend approximate calculation:</label>
-    </text>
-
-    <empty><stretch>1</stretch></empty>
-    <empty><stretch>1</stretch></empty>
-    <empty><stretch>1</stretch></empty>
-
-    <text>
-     <label>Total Route Distance: </label>
+      <label> Total Route Distance: </label>
     </text>
 
     <text>
@@ -439,31 +418,95 @@
     </text>
 
     <text>
-      <label> km.</label>
+      <label> km. </label>
     </text>
 
-    <empty><stretch>1</stretch></empty>
+    <empty><stretch>true</stretch></empty>
+
+    <vrule/>
+
+    <group>
+      <layout>vbox</layout>
+      <button>
+        <legend>Update route (recalculate)</legend>
+        <binding>
+          <command>nasal</command>
+          <script>calculate()</script>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <hrule/>
+    </group>
   </group>
+
+    <text>
+      <halign>left</halign>
+      <label> Top of Descend:</label>
+    </text>
+
 
   <!--<hrule/>-->
 
-  <text>
+  <group>
+    <layout>hbox</layout>
     <halign>left</halign>
-    <property>tu154/systems/nvu-calc/td-300</property>
-    <format>%s</format>
-    <live>true</live>
-  </text>
-  <text>
-    <halign>left</halign>
-    <property>tu154/systems/nvu-calc/td-275</property>
-    <format>%s</format>
-    <live>true</live>
-  </text>
-  <text>
-    <halign>left</halign>
-    <property>tu154/systems/nvu-calc/td-250</property>
-    <format>%s</format>
-    <live>true</live>
-  </text>
+
+    <text><label> </label></text>
+
+    <text>
+     <pref-width>32</pref-width>
+     <property>tu154/systems/nvu-calc/td-dist</property>
+     <format> %.0f</format>
+     <live>true</live>
+    </text>
+
+    <text><label> </label></text>
+    
+    <slider>
+      <min>225.0</min>
+      <max>325.0</max>
+      <step>5</step>
+      <property>tu154/systems/nvu-calc/td-dist</property>
+      <live>true</live>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>calculate()</script>
+      </binding>
+      <binding><command>dialog-apply</command></binding>
+      <!--<enable><property>sim/model/with-tcas</property></enable>-->
+    </slider>
+    
+    <text><label> </label></text>
+
+    <button>
+      <legend>275</legend>
+      <pref-width>60</pref-width>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/systems/nvu-calc/td-dist</property>
+        <value>275.0</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>calculate()</script>
+      </binding>
+    </button>
+
+    <text>
+      <label> km.</label>
+    </text>
+
+    <text>
+      <property>tu154/systems/nvu-calc/td-text</property>
+      <format>%s</format>
+      <live>true</live>
+    </text>
+
+  </group>
 
 </PropertyList>
