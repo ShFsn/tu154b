@@ -131,6 +131,14 @@
       </item>
 
       <item>
+        <label>Airports Summary</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>airports-summary</dialog-name>
+        </binding>
+      </item>
+
+      <item>
         <label>Route manager</label>
         <binding>
           <command>dialog-show</command>

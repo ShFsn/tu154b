@@ -1,0 +1,1090 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <nasal>
+    <open>
+      var ac_pos = geo.Coord.new();
+      var ap_1_pos = geo.Coord.new();
+      var ap_2_pos = geo.Coord.new();
+      var ap_3_pos = geo.Coord.new();
+
+      var update_ap = func(ap_num) {
+        var fp = flightplan();
+        var rwys_s = "";
+        var comms_s = "";
+        var ap_num_s = sprintf("%d", ap_num);
+        if (fp.departure != nil) {setprop("/sim/gui/dialogs/airports-summary/id-1", fp.departure.id);}
+        else {setprop("/sim/gui/dialogs/airports-summary/id-1", "");}
+        if (fp.destination != nil) {setprop("/sim/gui/dialogs/airports-summary/id-2", fp.destination.id);}
+        else {setprop("/sim/gui/dialogs/airports-summary/id-2", "");}
+        if(getprop("/sim/gui/dialogs/airports-summary/id-" ~ ap_num_s) == nil) {setprop("/sim/gui/dialogs/airports-summary/id-" ~ ap_num_s, "");}
+        var ap = airportinfo(getprop("/sim/gui/dialogs/airports-summary/id-" ~ ap_num_s));
+
+        if(ap == nil){
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/name", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/id", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/latlon1", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/latlon2", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/elev", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/magvar", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/metar_avail", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/rwys", "-");
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/comms", "-");
+
+        return;
+        }
+
+        if(ap_num == 1) {ap_1_pos.set_latlon(ap.lat, ap.lon);}
+        if(ap_num == 2) {ap_2_pos.set_latlon(ap.lat, ap.lon);}
+        if(ap_num == 3) {ap_3_pos.set_latlon(ap.lat, ap.lon);}
+
+        rwys = ap.runways;
+        if(rwys != nil){
+        foreach(var i; keys(rwys)){
+          var id = rwys[i].id;
+          var l = sprintf("%.0f", rwys[i].length);
+          var w = sprintf("%.0f", rwys[i].width);
+          var surf = rwys[i].surface;
+          # BEGIN COPYPASTA: FlightGear src/Airports/runwaybase.cxx
+          if(surf == 1){
+          surf = "asphalt";
+          }else if(surf == 2){
+          surf = "concrete";
+          }else if(surf == 3){
+          surf = "turf";
+          }else if(surf == 4){
+          surf = "dirt";
+          }else if(surf == 5){
+          surf = "gravel";
+          }else if(surf == 6){
+          surf = "asphalt helipad";
+          }else if(surf == 7){
+          surf = "concrete helipad";
+          }else if(surf == 8){
+          surf = "turf helipad";
+          }else if(surf == 9){
+          surf = "dirt helipad";
+          }else if(surf == 12){
+          surf = "lakebed";
+          }else{
+          surf = "unknown";
+          }
+          # END COPYPASTA
+          var psi_t = sprintf("%d", math.round(rwys[i].heading));
+          var psi_m = sprintf("%d", math.round(rwys[i].heading - magvar(ap.lat, ap.lon)));
+          var ils = "";
+          if(rwys[i].ils != nil){
+          ils = sprintf("%s %.2f MHz", rwys[i].ils.type, rwys[i].ils_frequency_mhz);
+          }
+          rwys_s = rwys_s ~ id ~ "   " ~ l ~ "x" ~ w ~ " m  " ~ surf ~ "   " ~ psi_t ~ " true / " ~ psi_m ~ " mag   " ~ ils ~ "\n";
+        }
+        }else{
+        out = out ~ "No runways\n";
+        }
+
+        if (size(ap.comms()) > 0) {
+          # Airport has one or more frequencies assigned to it.
+          var freqs = {};
+          var comms = ap.comms();
+
+          foreach (var c; comms) {
+            var f = sprintf("%.3f MHz", c.frequency);
+            if (freqs[c.ident] == nil) {
+              freqs[c.ident] = f;
+            } else {
+              freqs[c.ident] = freqs[c.ident] ~ "  " ~ f;
+            }
+          }
+
+          foreach (var c; sort(keys(freqs), string.icmp)) {
+            comms_s = comms_s ~ c ~ "   " ~ freqs[c] ~ "\n";
+          }
+        }
+
+        var metar_avail = "Yes";
+        if(!ap.has_metar){
+         metar_avail = "No";
+        }
+        
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/name", ap.name);
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/id", ap.id);
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/latlon1", sprintf("%.4f / %.4f", ap.lat, ap.lon));
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/latlon2", sprintf("%d*%d'%.1f'' / %d*%d'%.1f''", int(ap.lat), math.abs(int(ap.lat * 60 - int(ap.lat) * 60)), math.abs(ap.lat * 3600 - int(ap.lat * 60) * 60), int(ap.lon), math.abs(int(ap.lon * 60 - int(ap.lon) * 60)), math.abs(ap.lon * 3600 - int(ap.lon * 60) * 60)));
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/elev", sprintf("%.0f m", ap.elevation));
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/elev_raw", ap.elevation);
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/magvar", sprintf("%.2f deg", magvar(ap.lat, ap.lon)));
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/metar_avail", metar_avail);
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/rwys", rwys_s);
+        setprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/comms", comms_s);
+      }
+
+
+      var CDloop = func() {
+        ac_pos = geo.aircraft_position();
+
+        if (getprop("/sim/gui/dialogs/airports-summary/ap_1/id") != "-") {
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/dist", sprintf("%.1f km", ac_pos.distance_to(ap_1_pos) / 1000));
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_1_pos), ac_pos.course_to(ap_1_pos) - magvar(ac_pos.lat(), ac_pos.lon())));
+        } else {
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/dist", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/crs", "-");
+        }
+
+        if (getprop("/sim/gui/dialogs/airports-summary/ap_2/id") != "-") {
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/dist", sprintf("%.1f km", ac_pos.distance_to(ap_2_pos) / 1000));
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_2_pos), ac_pos.course_to(ap_2_pos) - magvar(ac_pos.lat(), ac_pos.lon())));
+        } else {
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/dist", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/crs", "-");
+        }
+
+        if (getprop("/sim/gui/dialogs/airports-summary/ap_3/id") != "-") {
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/dist", sprintf("%.1f km", ac_pos.distance_to(ap_3_pos) / 1000));
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_3_pos), ac_pos.course_to(ap_3_pos) - magvar(ac_pos.lat(), ac_pos.lon())));
+        } else {
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/dist", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/crs", "-");
+        }
+      }
+      var timer_CDloop = maketimer(1.0, CDloop);
+      timer_CDloop.start();
+
+      
+      var req_metar = func (ap_num) {
+        var ap_num_s = sprintf("%d", ap_num);
+        var airport_id = getprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/id");
+
+        if (airport_id != "-" and getprop("/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/metar_avail") == "Yes") {
+          # Retrieve an updated METAR, and indicate that we've not got one currently.
+          fgcommand("request-metar", var n = props.Node.new({ "path": "/sim/gui/dialogs/airports-summary/ap_" ~ ap_num_s ~ "/metar",
+                                                        "station": airport_id}));
+        }
+      }
+
+
+      var METARloop = func() {
+        
+        if (getprop("/sim/gui/dialogs/airports-summary/ap_1/id") != "-" and getprop("/sim/gui/dialogs/airports-summary/ap_1/metar_avail") == "Yes" and getprop("/sim/gui/dialogs/airports-summary/ap_1/metar/data") != nil and airportinfo(getprop("/sim/gui/dialogs/airports-summary/ap_1/metar/station-latitude-deg"), getprop("/sim/gui/dialogs/airports-summary/ap_1/metar/station-longitude-deg")).id == getprop("/sim/gui/dialogs/airports-summary/ap_1/id")) {
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/metar_s", getprop("/sim/gui/dialogs/airports-summary/ap_1/metar/data"));
+          var press_qnh = getprop("/sim/gui/dialogs/airports-summary/ap_1/metar/pressure-sea-level-inhg");
+          var press_qfe = press_qnh - getprop("/sim/gui/dialogs/airports-summary/ap_1/elev_raw") * M2FT / 1000 * 1.06;
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/qnh", sprintf("%d / %d / %.2f", math.round(press_qnh / 29.92 * 760), math.round(press_qnh / 29.92 * 1013), math.round(press_qnh, 0.01)));
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/qfe", sprintf("%d / %d / %.2f", math.round(press_qfe / 29.92 * 760), math.round(press_qfe / 29.92 * 1013), math.round(press_qfe, 0.01)));
+        } else {
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/metar_s", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/qnh", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/qfe", "-");
+        }
+        
+        if (getprop("/sim/gui/dialogs/airports-summary/ap_2/id") != "-" and getprop("/sim/gui/dialogs/airports-summary/ap_2/metar_avail") == "Yes" and getprop("/sim/gui/dialogs/airports-summary/ap_2/metar/data") != nil and airportinfo(getprop("/sim/gui/dialogs/airports-summary/ap_2/metar/station-latitude-deg"), getprop("/sim/gui/dialogs/airports-summary/ap_2/metar/station-longitude-deg")).id == getprop("/sim/gui/dialogs/airports-summary/ap_2/id")) {
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/metar_s", getprop("/sim/gui/dialogs/airports-summary/ap_2/metar/data"));
+          var press_qnh = getprop("/sim/gui/dialogs/airports-summary/ap_2/metar/pressure-sea-level-inhg");
+          var press_qfe = press_qnh - getprop("/sim/gui/dialogs/airports-summary/ap_2/elev_raw") * M2FT / 1000 * 1.06;
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/qnh", sprintf("%d / %d / %.2f", math.round(press_qnh / 29.92 * 760), math.round(press_qnh / 29.92 * 1013), math.round(press_qnh, 0.01)));
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/qfe", sprintf("%d / %d / %.2f", math.round(press_qfe / 29.92 * 760), math.round(press_qfe / 29.92 * 1013), math.round(press_qfe, 0.01)));
+        } else {
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/metar_s", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/qnh", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/qfe", "-");
+        }
+        
+        if (getprop("/sim/gui/dialogs/airports-summary/ap_3/id") != "-" and getprop("/sim/gui/dialogs/airports-summary/ap_3/metar_avail") == "Yes" and getprop("/sim/gui/dialogs/airports-summary/ap_3/metar/data") != nil and airportinfo(getprop("/sim/gui/dialogs/airports-summary/ap_3/metar/station-latitude-deg"), getprop("/sim/gui/dialogs/airports-summary/ap_3/metar/station-longitude-deg")).id == getprop("/sim/gui/dialogs/airports-summary/ap_3/id")) {
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/metar_s", getprop("/sim/gui/dialogs/airports-summary/ap_3/metar/data"));
+          var press_qnh = getprop("/sim/gui/dialogs/airports-summary/ap_3/metar/pressure-sea-level-inhg");
+          var press_qfe = press_qnh - getprop("/sim/gui/dialogs/airports-summary/ap_3/elev_raw") * M2FT / 1000 * 1.06;
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/qnh", sprintf("%d / %d / %.2f", math.round(press_qnh / 29.92 * 760), math.round(press_qnh / 29.92 * 1013), math.round(press_qnh, 0.01)));
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/qfe", sprintf("%d / %d / %.2f", math.round(press_qfe / 29.92 * 760), math.round(press_qfe / 29.92 * 1013), math.round(press_qfe, 0.01)));
+        } else {
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/metar_s", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/qnh", "-");
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/qfe", "-");
+        }
+
+      }
+      var timer_METARloop = maketimer(0.1, METARloop);
+      timer_METARloop.start();
+
+
+      update_ap(1);
+      update_ap(2);
+      update_ap(3);
+      CDloop();
+      req_metar(1);
+      req_metar(2);
+      req_metar(3);
+      METARloop();
+    </open>
+    <close>
+      timer_CDloop.stop();
+      timer_METARloop.stop();
+    </close>
+  </nasal>
+
+
+ <name>airports-summary</name>
+ <layout>vbox</layout>
+ <group>
+  <layout>hbox</layout>
+  <text>
+   <label>Airports Summary</label>
+  </text>
+  <empty>
+   <stretch>true</stretch>
+  </empty>
+  <button>
+   <legend/>
+   <pref-width>16</pref-width>
+   <pref-height>16</pref-height>
+   <border>2</border>
+   <binding>
+    <command>dialog-close</command>
+   </binding>
+   <key>Esc</key>
+  </button>
+ </group>
+ <hrule/>
+
+  <group><layout>hbox</layout>
+
+    <group><layout>vbox</layout>
+
+      <group><layout>hbox</layout><pref-width>400</pref-width><pref-height>40</pref-height>
+        <text>
+          <label>  Departure:</label>
+        </text>
+        <empty><stretch>true</stretch></empty>
+      </group>
+
+      <hrule/>
+
+      <group>
+        <layout>hbox</layout>
+        <halign>left</halign>
+
+        <text><label>  </label></text>
+
+        <group>
+          <layout>table</layout>
+          <halign>left</halign>
+          <default-padding>2</default-padding>
+
+          <text>
+            <row>0</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Name: </label>
+          </text>
+          <text>
+            <row>0</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/name</property>
+          </text>
+
+          <text>
+            <row>1</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>ICAO: </label>
+          </text>
+          <text>
+            <row>1</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/id</property>
+          </text>
+
+          <text>
+            <row>2</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Lat / Lon: </label>
+          </text>
+          <text>
+            <row>2</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/latlon1</property>
+          </text>
+
+          <text>
+            <row>3</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label> </label>
+          </text>
+          <text>
+            <row>3</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/latlon2</property>
+          </text>
+
+          <text>
+            <row>4</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Elevation: </label>
+          </text>
+          <text>
+            <row>4</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/elev</property>
+          </text>
+
+          <text>
+            <row>5</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Magnetic variation: </label>
+          </text>
+          <text>
+            <row>5</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/magvar</property>
+          </text>
+
+          <text>
+            <row>6</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Has METAR: </label>
+          </text>
+          <text>
+            <row>6</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/metar_avail</property>
+          </text>
+
+          <text>
+            <row>7</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Distance: </label>
+          </text>
+          <text>
+            <row>7</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/dist</property>
+          </text>
+
+          <text>
+            <row>8</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Course: </label>
+          </text>
+          <text>
+            <row>8</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_1/crs</property>
+          </text>
+
+        </group>
+      </group>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  Runways:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>150</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_1/rwys</property>
+        <live>true</live>
+      </textbox>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  Communications Frequencies:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>150</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_1/comms</property>
+        <live>true</live>
+      </textbox>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  METAR:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>75</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_1/metar_s</property>
+        <live>true</live>
+      </textbox>
+
+      <group><layout>table</layout>
+        <text>
+          <row>0</row>
+          <col>0</col>
+          <halign>left</halign>
+          <label>  QNH:</label>
+        </text>
+        <text>
+          <row>0</row>
+          <col>1</col>
+          <halign>left</halign>
+          <live>true</live>
+          <label>ACTIVATE LIGHTS</label>
+          <property>/sim/gui/dialogs/airports-summary/ap_1/qnh</property>
+        </text>
+        <text>
+          <row>0</row>
+          <col>2</col>
+          <halign>left</halign>
+          <label>  QFE:</label>
+        </text>
+        <text>
+          <row>0</row>
+          <col>3</col>
+          <halign>left</halign>
+          <live>true</live>
+          <label>ACTIVATE LIGHTS</label>
+          <property>/sim/gui/dialogs/airports-summary/ap_1/qfe</property>
+        </text>
+      </group>
+
+    </group>
+
+    <vrule/>
+
+    <group><layout>vbox</layout>
+
+      <group><layout>hbox</layout><pref-width>400</pref-width><pref-height>40</pref-height>
+        <text>
+          <label>  Arrival:</label>
+        </text>
+        <empty><stretch>true</stretch></empty>
+      </group>
+
+      <hrule/>
+
+      <group>
+        <layout>hbox</layout>
+        <halign>left</halign>
+
+        <text><label>  </label></text>
+
+        <group>
+          <layout>table</layout>
+          <halign>left</halign>
+          <default-padding>2</default-padding>
+
+          <text>
+            <row>0</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Name: </label>
+          </text>
+          <text>
+            <row>0</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/name</property>
+          </text>
+
+          <text>
+            <row>1</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>ICAO: </label>
+          </text>
+          <text>
+            <row>1</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/id</property>
+          </text>
+
+          <text>
+            <row>2</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Lat / Lon: </label>
+          </text>
+          <text>
+            <row>2</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/latlon1</property>
+          </text>
+
+          <text>
+            <row>3</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label> </label>
+          </text>
+          <text>
+            <row>3</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/latlon2</property>
+          </text>
+
+          <text>
+            <row>4</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Elevation: </label>
+          </text>
+          <text>
+            <row>4</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/elev</property>
+          </text>
+
+          <text>
+            <row>5</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Magnetic variation: </label>
+          </text>
+          <text>
+            <row>5</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/magvar</property>
+          </text>
+
+          <text>
+            <row>6</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Has METAR: </label>
+          </text>
+          <text>
+            <row>6</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/metar_avail</property>
+          </text>
+
+          <text>
+            <row>7</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Distance: </label>
+          </text>
+          <text>
+            <row>7</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/dist</property>
+          </text>
+
+          <text>
+            <row>8</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Course: </label>
+          </text>
+          <text>
+            <row>8</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_2/crs</property>
+          </text>
+
+        </group>
+      </group>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  Runways:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>150</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_2/rwys</property>
+        <live>true</live>
+      </textbox>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  Communications Frequencies:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>150</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_2/comms</property>
+        <live>true</live>
+      </textbox>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  METAR:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>75</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_2/metar_s</property>
+        <live>true</live>
+      </textbox>
+
+      <group><layout>table</layout>
+        <text>
+          <row>0</row>
+          <col>0</col>
+          <halign>left</halign>
+          <label>  QNH:</label>
+        </text>
+        <text>
+          <row>0</row>
+          <col>1</col>
+          <halign>left</halign>
+          <live>true</live>
+          <label>ACTIVATE LIGHTS</label>
+          <property>/sim/gui/dialogs/airports-summary/ap_2/qnh</property>
+        </text>
+        <text>
+          <row>0</row>
+          <col>2</col>
+          <halign>left</halign>
+          <label>  QFE:</label>
+        </text>
+        <text>
+          <row>0</row>
+          <col>3</col>
+          <halign>left</halign>
+          <live>true</live>
+          <label>ACTIVATE LIGHTS</label>
+          <property>/sim/gui/dialogs/airports-summary/ap_2/qfe</property>
+        </text>
+      </group>
+
+    </group>
+
+    <vrule/>
+
+    <group><layout>vbox</layout>
+
+      <group><layout>hbox</layout><pref-width>400</pref-width><pref-height>40</pref-height>
+        <text>
+        <label>  Alternate:</label>
+        </text>
+        <input>
+        <halign>fill</halign>
+        <stretch>true</stretch>
+        <property>/sim/gui/dialogs/airports-summary/id-3</property>
+        </input>
+        <button>
+        <legend>Show</legend>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>update_ap(3);CDloop();req_metar(3);</script>
+        </binding>
+        </button>
+        <!-- gap -->
+        <text>
+        <label> </label>
+        </text>
+      </group>
+
+      <hrule/>
+
+      <group>
+        <layout>hbox</layout>
+        <halign>left</halign>
+
+        <text><label>  </label></text>
+
+        <group>
+          <layout>table</layout>
+          <halign>left</halign>
+          <default-padding>2</default-padding>
+
+          <text>
+            <row>0</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Name: </label>
+          </text>
+          <text>
+            <row>0</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/name</property>
+          </text>
+
+          <text>
+            <row>1</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>ICAO: </label>
+          </text>
+          <text>
+            <row>1</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/id</property>
+          </text>
+
+          <text>
+            <row>2</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Lat / Lon: </label>
+          </text>
+          <text>
+            <row>2</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/latlon1</property>
+          </text>
+
+          <text>
+            <row>3</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label> </label>
+          </text>
+          <text>
+            <row>3</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/latlon2</property>
+          </text>
+
+          <text>
+            <row>4</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Elevation: </label>
+          </text>
+          <text>
+            <row>4</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/elev</property>
+          </text>
+
+          <text>
+            <row>5</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Magnetic variation: </label>
+          </text>
+          <text>
+            <row>5</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/magvar</property>
+          </text>
+
+          <text>
+            <row>6</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Has METAR: </label>
+          </text>
+          <text>
+            <row>6</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/metar_avail</property>
+          </text>
+
+          <text>
+            <row>7</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Distance: </label>
+          </text>
+          <text>
+            <row>7</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/dist</property>
+          </text>
+
+          <text>
+            <row>8</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Course: </label>
+          </text>
+          <text>
+            <row>8</row>
+            <col>1</col>
+            <halign>left</halign>
+            <live>true</live>
+            <label>ACTIVATE LIGHTS</label>
+            <property>/sim/gui/dialogs/airports-summary/ap_3/crs</property>
+          </text>
+
+        </group>
+      </group>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  Runways:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>150</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_3/rwys</property>
+        <live>true</live>
+      </textbox>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  Communications Frequencies:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>150</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_3/comms</property>
+        <live>true</live>
+      </textbox>
+
+      <hrule/>
+
+      <text>
+        <halign>left</halign>
+        <label>  METAR:</label>
+      </text>
+
+      <textbox>
+        <name>editfield</name>
+        <halign>fill</halign>
+        <valign>fill</valign>
+        <stretch>true</stretch>
+        <pref-width>400</pref-width>
+        <pref-height>75</pref-height>
+        <padding>6</padding>
+        <slider>20</slider>
+        <editable>false</editable>
+        <wrap>true</wrap>
+        <property>/sim/gui/dialogs/airports-summary/ap_3/metar_s</property>
+        <live>true</live>
+      </textbox>
+
+      <group><layout>table</layout>
+        <text>
+          <row>0</row>
+          <col>0</col>
+          <halign>left</halign>
+          <label>  QNH:</label>
+        </text>
+        <text>
+          <row>0</row>
+          <col>1</col>
+          <halign>left</halign>
+          <live>true</live>
+          <label>ACTIVATE LIGHTS</label>
+          <property>/sim/gui/dialogs/airports-summary/ap_3/qnh</property>
+        </text>
+        <text>
+          <row>0</row>
+          <col>2</col>
+          <halign>left</halign>
+          <label>  QFE:</label>
+        </text>
+        <text>
+          <row>0</row>
+          <col>3</col>
+          <halign>left</halign>
+          <live>true</live>
+          <label>ACTIVATE LIGHTS</label>
+          <property>/sim/gui/dialogs/airports-summary/ap_3/qfe</property>
+        </text>
+      </group>
+
+    </group>
+
+  </group>
+
+  <hrule/>
+
+  <group><layout>hbox</layout>
+  
+    <button>
+      <legend>Update airports</legend>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>update_ap(1);update_ap(2);update_ap(3);CDloop();</script>
+      </binding>
+    </button>
+        
+    <button>
+      <legend>Update METARs</legend>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>req_metar(1);req_metar(2);req_metar(3);</script>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <default>true</default>
+      <legend>Close</legend>
+      <pref-width>60</pref-width>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+
+  </group>
+
+</PropertyList>
