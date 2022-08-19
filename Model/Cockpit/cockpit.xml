@@ -740,15 +740,15 @@
   <object-name>lever_sti2</object-name>
   <property>/controls/flight/aileron</property>
   <factor>120.0</factor>
-  <offset-deg>120.0</offset-deg>
+  <offset-deg>124.75</offset-deg>
   <axis>
     <x1-m>0.717</x1-m>
-    <y1-m>-0.561</y1-m>
-    <z1-m>0.76</z1-m>
+    <y1-m>-0.5635</y1-m>
+    <z1-m>0.75875</z1-m>
     
     <x2-m>0.415</x2-m>
-    <y2-m>-0.561</y2-m>
-    <z2-m>0.715</z2-m>    
+    <y2-m>-0.5635</y2-m>
+    <z2-m>0.71375</z2-m>    
   </axis>
 </animation>
 
@@ -757,7 +757,7 @@
   <object-name>lever_sti0</object-name>
   <property>/controls/flight/aileron</property>
   <factor>120.0</factor>
-  <offset-deg>120.0</offset-deg>
+  <offset-deg>124.75</offset-deg>
   <axis>
     <x1-m>0.717</x1-m>
     <y1-m>0.575</y1-m>
