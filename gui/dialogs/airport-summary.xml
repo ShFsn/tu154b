@@ -71,7 +71,7 @@
           }
           # END COPYPASTA
           var psi_t = sprintf("%d", math.round(rwys[i].heading));
-          var psi_m = sprintf("%d", math.round(rwys[i].heading - magvar(ap.lat, ap.lon)));
+          var psi_m = sprintf("%d", math.round(geo.normdeg(rwys[i].heading - magvar(ap.lat, ap.lon))));
           var ils = "";
           if(rwys[i].ils != nil){
           ils = sprintf("%s %.2f MHz", rwys[i].ils.type, rwys[i].ils_frequency_mhz);
@@ -124,7 +124,7 @@
 
         if (getprop("/sim/gui/dialogs/airports-summary/ap_1/id") != "-") {
           setprop("/sim/gui/dialogs/airports-summary/ap_1/dist", sprintf("%.1f km", ac_pos.distance_to(ap_1_pos) / 1000));
-          setprop("/sim/gui/dialogs/airports-summary/ap_1/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_1_pos), ac_pos.course_to(ap_1_pos) - magvar(ac_pos.lat(), ac_pos.lon())));
+          setprop("/sim/gui/dialogs/airports-summary/ap_1/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_1_pos), geo.normdeg(ac_pos.course_to(ap_1_pos) - magvar(ac_pos.lat(), ac_pos.lon()))));
         } else {
           setprop("/sim/gui/dialogs/airports-summary/ap_1/dist", "-");
           setprop("/sim/gui/dialogs/airports-summary/ap_1/crs", "-");
@@ -132,7 +132,7 @@
 
         if (getprop("/sim/gui/dialogs/airports-summary/ap_2/id") != "-") {
           setprop("/sim/gui/dialogs/airports-summary/ap_2/dist", sprintf("%.1f km", ac_pos.distance_to(ap_2_pos) / 1000));
-          setprop("/sim/gui/dialogs/airports-summary/ap_2/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_2_pos), ac_pos.course_to(ap_2_pos) - magvar(ac_pos.lat(), ac_pos.lon())));
+          setprop("/sim/gui/dialogs/airports-summary/ap_2/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_2_pos), geo.normdeg(ac_pos.course_to(ap_2_pos) - magvar(ac_pos.lat(), ac_pos.lon()))));
         } else {
           setprop("/sim/gui/dialogs/airports-summary/ap_2/dist", "-");
           setprop("/sim/gui/dialogs/airports-summary/ap_2/crs", "-");
@@ -140,7 +140,7 @@
 
         if (getprop("/sim/gui/dialogs/airports-summary/ap_3/id") != "-") {
           setprop("/sim/gui/dialogs/airports-summary/ap_3/dist", sprintf("%.1f km", ac_pos.distance_to(ap_3_pos) / 1000));
-          setprop("/sim/gui/dialogs/airports-summary/ap_3/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_3_pos), ac_pos.course_to(ap_3_pos) - magvar(ac_pos.lat(), ac_pos.lon())));
+          setprop("/sim/gui/dialogs/airports-summary/ap_3/crs", sprintf("%.0f deg true / %.0f deg mag", ac_pos.course_to(ap_3_pos), geo.normdeg(ac_pos.course_to(ap_3_pos) - magvar(ac_pos.lat(), ac_pos.lon()))));
         } else {
           setprop("/sim/gui/dialogs/airports-summary/ap_3/dist", "-");
           setprop("/sim/gui/dialogs/airports-summary/ap_3/crs", "-");
