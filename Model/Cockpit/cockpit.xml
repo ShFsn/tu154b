@@ -1660,4 +1660,15 @@
 </animation>
 
 
+<!-- Yoke textures -->
+
+<animation>
+  <type>material</type>
+  <object-name>lever_sti0</object-name>
+  <object-name>lever_sti2</object-name>
+  <texture-prop>tu154/textures/yokes</texture-prop>
+</animation>
+
+
+
 </PropertyList>

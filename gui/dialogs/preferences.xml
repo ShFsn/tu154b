@@ -280,6 +280,30 @@
         </text>
 
       </group>
+
+      <text><label> </label></text>
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Other</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
+        <halign>left</halign>
+        <label>Insulating tape on yokes</label>
+        <property>/tu154/options/textures/yokes</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+      <text>
+        <label>Used by some pilots in real life for better grip. Gives +100 to aircraft reliability :)</label>
+        <halign>left</halign>
+        <!--<enable><property>sim/model/with-tcas</property></enable>-->
+      </text>
       
     </group>
       

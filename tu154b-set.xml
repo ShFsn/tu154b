@@ -1042,6 +1042,7 @@
     <path>/tu154/options/tooltips-color/r</path>
     <path>/tu154/options/tooltips-color/g</path>
     <path>/tu154/options/tooltips-color/b</path>
+    <path>/tu154/options/textures/yokes</path>
   </aircraft-data>
 
 </sim>
@@ -1298,9 +1299,9 @@
     <file>Aircraft/tu154b/Nasal/hydrosystems.nas</file>
   </hydrosystems>
 
-  <liveries>
-    <file>Aircraft/tu154b/Nasal/liveries.nas</file>
-  </liveries>
+  <liveries_textures>
+    <file>Aircraft/tu154b/Nasal/liveries_textures.nas</file>
+  </liveries_textures>
 
 	<tyresmoke>
 	  <file>Aircraft/tu154b/Nasal/tyresmoke.nas</file>
@@ -2195,6 +2196,7 @@
     <copilot-panel>vc02_t.png</copilot-panel>
     <overhead-panel>vc06_t.png</overhead-panel>
     <fe-panel>vc08_t.png</fe-panel>
+    <yokes>vc_yokes.png</yokes>
   </textures>
 
   <instrumentation>
@@ -2630,6 +2632,10 @@
     <g type="double">1.0</g>
     <b type="double">0.0</b>
     </tooltips-color>
+
+    <textures>
+      <yokes type="bool">false</yokes>
+    </textures>
 
   </options>
 </tu154>
