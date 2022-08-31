@@ -63,7 +63,7 @@
         </pointmass>
 
 	<pointmass name="Pax1">
-            <weight unit="KG">4000</weight>
+            <weight unit="KG">4160</weight>
             <location unit="M">
                 <x>12.0</x>
                 <y>0</y>
@@ -83,7 +83,7 @@
         </pointmass>
 
         <pointmass name="Pax3">
-            <weight unit="KG">4000</weight>
+            <weight unit="KG">3840</weight>
             <location unit="M">
                 <x>30.0</x>
                 <y>0</y>
@@ -110,7 +110,7 @@
             </location>
         </pointmass>       
         <pointmass name="Luggage_3">
-            <weight unit="KG">200</weight>
+            <weight unit="KG">300</weight>
             <location unit="M">
                 <x>16.022</x>
                 <y>0</y>
@@ -118,7 +118,7 @@
             </location>
         </pointmass>       
         <pointmass name="Luggage_4">
-            <weight unit="KG">200</weight>
+            <weight unit="KG">300</weight>
             <location unit="M">
                 <x>19.022</x>
                 <y>0</y>
@@ -126,7 +126,7 @@
             </location>
         </pointmass>       
         <pointmass name="Luggage_5">
-            <weight unit="KG">300</weight>
+            <weight unit="KG">1900</weight>
             <location unit="M">
                 <x>27.272</x>
                 <y>0</y>
@@ -134,7 +134,7 @@
             </location>
         </pointmass>       
         <pointmass name="Luggage_6">
-            <weight unit="KG">300</weight>
+            <weight unit="KG">0</weight>
             <location unit="M">
                 <x>29.772</x>
                 <y>0</y>
@@ -486,7 +486,7 @@
                 <z> 0 </z>
             </location>
             <capacity unit="KG">6600</capacity>
-            <contents unit="KG">500</contents>
+            <contents unit="KG">1000</contents>
         </tank>
     </propulsion>
 
