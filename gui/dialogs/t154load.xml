@@ -1,0 +1,1420 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <nasal>
+    <open>
+      var gw = props.globals.getNode("sim/gui/dialogs/load154/gw", 1);
+      var gw_ext = props.globals.getNode("fdm/jsbsim/inertia/weight-lbs", 1);
+      var zfw = props.globals.getNode("sim/gui/dialogs/load154/zfw", 1);
+      var ew = props.globals.getNode("sim/gui/dialogs/load154/ew", 1);
+      var ew_ext = props.globals.getNode("fdm/jsbsim/inertia/empty-weight-lbs", 1);
+      var cg = props.globals.getNode("sim/gui/dialogs/load154/cg", 1);
+      var cg_ext = props.globals.getNode("fdm/jsbsim/inertia/cg-x-in", 1);
+
+      var tank_1 = props.globals.getNode("fdm/jsbsim/fuel/level-1-kg", 1);
+      var tank_2L = props.globals.getNode("fdm/jsbsim/fuel/level-2L-kg", 1);
+      var tank_2R = props.globals.getNode("fdm/jsbsim/fuel/level-2R-kg", 1);
+      var tank_3L = props.globals.getNode("fdm/jsbsim/fuel/level-3L-kg", 1);
+      var tank_3R = props.globals.getNode("fdm/jsbsim/fuel/level-3R-kg", 1);
+      var tank_4 = props.globals.getNode("fdm/jsbsim/fuel/level-4-kg", 1);
+      var tank_1_int = props.globals.getNode("sim/gui/dialogs/load154/tank_1_int", 1);
+      var tank_2L_int = props.globals.getNode("sim/gui/dialogs/load154/tank_2L_int", 1);
+      var tank_2R_int = props.globals.getNode("sim/gui/dialogs/load154/tank_2R_int", 1);
+      var tank_3L_int = props.globals.getNode("sim/gui/dialogs/load154/tank_3L_int", 1);
+      var tank_3R_int = props.globals.getNode("sim/gui/dialogs/load154/tank_3R_int", 1);
+      var tank_4_int = props.globals.getNode("sim/gui/dialogs/load154/tank_4_int", 1);
+      var tanks_int = props.globals.getNode("sim/gui/dialogs/load154/tanks_int", 1);
+
+      if (tank_1_int.getValue() == nil) {
+        tank_1_int.setValue(tank_1.getValue());
+        tank_2L_int.setValue(tank_2L.getValue());
+        tank_2R_int.setValue(tank_2R.getValue());
+        tank_3L_int.setValue(tank_3L.getValue());
+        tank_3R_int.setValue(tank_3R.getValue());
+        tank_4_int.setValue(tank_4.getValue());
+      }
+
+      var pax_f = props.globals.getNode("sim/gui/dialogs/load154/pax_f", 1);
+      var pax_f_c = props.globals.getNode("sim/gui/dialogs/load154/pax_f_c", 1);
+      var pax_f_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[1]", 1);
+      var pax_m = props.globals.getNode("sim/gui/dialogs/load154/pax_m", 1);
+      var pax_m_c = props.globals.getNode("sim/gui/dialogs/load154/pax_m_c", 1);
+      var pax_m_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[2]", 1);
+      var pax_r = props.globals.getNode("sim/gui/dialogs/load154/pax_r", 1);
+      var pax_r_c = props.globals.getNode("sim/gui/dialogs/load154/pax_r_c", 1);
+      var pax_r_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[3]", 1);
+      var pax_w_int = props.globals.getNode("sim/gui/dialogs/load154/pax_w_int", 1);
+      var pax_c_int = props.globals.getNode("sim/gui/dialogs/load154/pax_c_int", 1);
+      var pax_w = props.globals.getNode("sim/gui/dialogs/load154/pax_w", 1);
+      var pax_c = props.globals.getNode("sim/gui/dialogs/load154/pax_c", 1);
+        
+      if (pax_f.getValue() == nil) {
+        pax_f.setValue(pax_f_ext.getValue() * LB2KG);
+        pax_m.setValue(pax_m_ext.getValue() * LB2KG);
+        pax_r.setValue(pax_r_ext.getValue() * LB2KG);
+      }
+      
+      var lug_f_1 = props.globals.getNode("sim/gui/dialogs/load154/lug_f_1", 1);
+      var lug_f_1_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[4]", 1);
+      var lug_f_2 = props.globals.getNode("sim/gui/dialogs/load154/lug_f_2", 1);
+      var lug_f_2_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[5]", 1);
+      var lug_f_3 = props.globals.getNode("sim/gui/dialogs/load154/lug_f_3", 1);
+      var lug_f_3_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[6]", 1);
+      var lug_f_4 = props.globals.getNode("sim/gui/dialogs/load154/lug_f_4", 1);
+      var lug_f_4_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[7]", 1);
+      var lug_r_1 = props.globals.getNode("sim/gui/dialogs/load154/lug_r_1", 1);
+      var lug_r_1_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[8]", 1);
+      var lug_r_2 = props.globals.getNode("sim/gui/dialogs/load154/lug_r_2", 1);
+      var lug_r_2_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[9]", 1);
+      var lug_r_3 = props.globals.getNode("sim/gui/dialogs/load154/lug_r_3", 1);
+      var lug_r_3_ext = props.globals.getNode("fdm/jsbsim/inertia/pointmass-weight-lbs[10]", 1);
+      var lug_w_int = props.globals.getNode("sim/gui/dialogs/load154/lug_w_int", 1);
+      var lug_w = props.globals.getNode("sim/gui/dialogs/load154/lug_w", 1);
+
+      if (lug_f_1.getValue() == nil) {
+        lug_f_1.setValue(lug_f_1_ext.getValue() * LB2KG);
+        lug_f_2.setValue(lug_f_2_ext.getValue() * LB2KG);
+        lug_f_3.setValue(lug_f_3_ext.getValue() * LB2KG);
+        lug_f_4.setValue(lug_f_4_ext.getValue() * LB2KG);
+        lug_r_1.setValue(lug_r_1_ext.getValue() * LB2KG);
+        lug_r_2.setValue(lug_r_2_ext.getValue() * LB2KG);
+        lug_r_3.setValue(lug_r_3_ext.getValue() * LB2KG);
+      }
+
+      var update = func() {
+        gw.setValue(gw_ext.getValue() * LB2KG);
+        zfw.setValue(gw.getValue() - (tank_1.getValue() + tank_2L.getValue() + tank_2R.getValue() + tank_3L.getValue() + tank_3R.getValue() + tank_4.getValue()));
+        ew.setValue(ew_ext.getValue() * LB2KG);
+        cg.setValue((cg_ext.getValue() * 0.0254 - 24.04) * (100/5.285));
+      
+        tanks_int.setValue(tank_1_int.getValue() + tank_2L_int.getValue() + tank_2R_int.getValue() + tank_3L_int.getValue() + tank_3R_int.getValue() + tank_4_int.getValue());
+        
+        pax_f_c.setValue(pax_f.getValue() / 80);
+        pax_m_c.setValue(pax_m.getValue() / 80);
+        pax_r_c.setValue(pax_r.getValue() / 80);
+        pax_w_int.setValue(pax_f.getValue() + pax_m.getValue() + pax_r.getValue());
+        pax_c_int.setValue(pax_w_int.getValue() / 80);
+        pax_w.setValue((pax_f_ext.getValue() + pax_m_ext.getValue() + pax_r_ext.getValue()) * LB2KG);
+        pax_c.setValue(pax_w.getValue() / 80);
+        
+        lug_w_int.setValue(lug_f_1.getValue() + lug_f_2.getValue() + lug_f_3.getValue() + lug_f_4.getValue() + lug_r_1.getValue() + lug_r_2.getValue() + lug_r_3.getValue());
+        lug_w.setValue((lug_f_1_ext.getValue() + lug_f_2_ext.getValue() + lug_f_3_ext.getValue() + lug_f_4_ext.getValue() + lug_r_1_ext.getValue() + lug_r_2_ext.getValue() + lug_r_3_ext.getValue()) * LB2KG);
+      }
+
+      var timer = maketimer(0.1, update);
+      timer.start();
+    </open>
+    <close>
+      timer.stop();
+    </close>
+  </nasal>
+
+  <name>t154load</name>
+  <layout>vbox</layout>
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <halign>left</halign>
+      <label>Tu-154B-2 Payload and Fuel</label>
+    </text>
+
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend/>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+  </group>
+
+  <hrule/>
+
+
+  <group><layout>vbox</layout>
+
+    <group>
+      <layout>hbox</layout>
+        
+      <text><label> </label></text>
+
+      <group>
+        <stretch>true</stretch>
+        <layout>vbox</layout>
+        <halign>center</halign>
+        <valign>top</valign>
+
+        <group><layout>hbox</layout>
+          <group><layout>vbox</layout>
+            <group>
+              <stretch>true</stretch>
+              <layout>hbox</layout>
+              <hrule><stretch>true</stretch></hrule>
+              <text><label>Passengers</label></text>
+              <hrule><stretch>true</stretch></hrule>
+            </group>
+
+            <group><layout>hbox</layout>
+              <empty><stretch>true</stretch></empty>
+              <group><layout>table</layout>
+
+                <text>
+                  <row>0</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Front Cabin</label>
+                </text>
+                <text>
+                  <row>0</row>
+                  <col>1</col>
+                  <halign>left</halign>
+                  <label>(Rows 1 - 15)</label>
+                </text>
+                <slider>
+                  <row>0</row>
+                  <col>2</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>5760.0</max>
+                  <step>80</step>
+                  <property>sim/gui/dialogs/load154/pax_f</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding>
+                    <command>nasal</command>
+                    <script>
+                      pax_f_c.setValue(pax_f.getValue() / 80);
+                    </script>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <text>
+                  <row>0</row>
+                  <col>3</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/pax_f_c</property>
+                  <format> %.0f / 72 pax</format>
+                  <live>true</live>
+                </text>
+
+                <text>
+                  <row>2</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Middle Cabin</label>
+                </text>
+                <text>
+                  <row>2</row>
+                  <col>1</col>
+                  <halign>left</halign>
+                  <label>(Rows 16 - 25)</label>
+                </text>
+                <slider>
+                  <row>2</row>
+                  <col>2</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>4800.0</max>
+                  <step>80</step>
+                  <property>sim/gui/dialogs/load154/pax_m</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding>
+                    <command>nasal</command>
+                    <script>
+                      pax_m_c.setValue(pax_m.getValue() / 80);
+                    </script>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <text>
+                  <row>2</row>
+                  <col>3</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/pax_m_c</property>
+                  <format> %.0f / 60 pax</format>
+                  <live>true</live>
+                </text>
+
+                <text>
+                  <row>4</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Rear Cabin</label>
+                </text>
+                <text>
+                  <row>4</row>
+                  <col>1</col>
+                  <halign>left</halign>
+                  <label>(Rows 26 - 33)</label>
+                </text>
+                <slider>
+                  <row>4</row>
+                  <col>2</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>3840.0</max>
+                  <step>80</step>
+                  <property>sim/gui/dialogs/load154/pax_r</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding>
+                    <command>nasal</command>
+                    <script>
+                      pax_r_c.setValue(pax_r.getValue() / 80);
+                    </script>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <text>
+                  <row>4</row>
+                  <col>3</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/pax_r_c</property>
+                  <format> %.0f / 48 pax</format>
+                  <live>true</live>
+                </text>
+                
+                <text>
+                  <row>0</row>
+                  <col>4</col>
+                  <halign>center</halign>
+                  <label>/\</label>
+                </text>
+                <text>
+                  <row>1</row>
+                  <col>4</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>2</row>
+                  <col>4</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>3</row>
+                  <col>4</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>4</row>
+                  <col>4</col>
+                  <halign>center</halign>
+                  <label>\/</label>
+                </text>
+                <text>
+                  <row>0</row>
+                  <col>5</col>
+                  <halign>left</halign>
+                  <label>Front</label>
+                </text>
+                <text>
+                  <row>4</row>
+                  <col>5</col>
+                  <halign>left</halign>
+                  <label>Rear</label>
+                </text>
+                
+                <text>
+                  <row>5</row>
+                  <col>3</col>
+                  <pref-width>100</pref-width>
+                  <label> </label>
+                </text>
+                <text>
+                  <row>6</row>
+                  <col>3</col>
+                  <label> </label>
+                </text>
+
+              </group>
+              <empty><stretch>true</stretch></empty>
+            </group>
+
+            <group><layout>hbox</layout>
+              <empty><stretch>true</stretch></empty>
+              <group><layout>table</layout>
+                
+                <text>
+                  <row>0</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Passengers Count:</label>
+                </text>
+                <text>
+                  <row>0</row>
+                  <col>1</col>
+                  <pref-width>120</pref-width>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/pax_c_int</property>
+                  <format> %.0f / 180 pax</format>
+                  <live>true</live>
+                </text>
+                
+                <text>
+                  <row>1</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Passengers Weight:</label>
+                </text>
+                <text>
+                  <row>1</row>
+                  <col>1</col>
+                  <pref-width>120</pref-width>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/pax_w_int</property>
+                  <format> %.0f KG</format>
+                  <live>true</live>
+                </text>
+                
+                <text>
+                  <row>2</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Current Passengers Count:</label>
+                </text>
+                <text>
+                  <row>2</row>
+                  <col>1</col>
+                  <pref-width>120</pref-width>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/pax_c</property>
+                  <format> %.0f / 180 pax</format>
+                  <live>true</live>
+                </text>
+                
+                <text>
+                  <row>3</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Current Passengers Weight:</label>
+                </text>
+                <text>
+                  <row>3</row>
+                  <col>1</col>
+                  <pref-width>120</pref-width>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/pax_w</property>
+                  <format> %.0f KG</format>
+                  <live>true</live>
+                </text>
+
+              </group>
+            </group>
+
+            <group><layout>hbox</layout><halign>right</halign>
+              <button>
+                <legend>60 pax</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    pax_f.setValue(54 * 80.0);
+                    pax_m.setValue(6 * 80.0);
+                    pax_r.setValue(0 * 80.0);
+                  </script>
+                </binding>
+              </button>
+              <button>
+                <legend>100 pax</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    pax_f.setValue(51 * 80.0);
+                    pax_m.setValue(30 * 80.0);
+                    pax_r.setValue(19 * 80.0);
+                  </script>
+                </binding>
+              </button>
+              <button>
+                <legend>150 pax (Default)</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    pax_f.setValue(52 * 80.0);
+                    pax_m.setValue(50 * 80.0);
+                    pax_r.setValue(48 * 80.0);
+                  </script>
+                </binding>
+              </button>
+            </group>
+
+            <group><layout>hbox</layout><halign>right</halign>
+              <button>
+                <legend>Board</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    pax_f_ext.setValue(pax_f.getValue() * KG2LB);
+                    pax_m_ext.setValue(pax_m.getValue() * KG2LB);
+                    pax_r_ext.setValue(pax_r.getValue() * KG2LB);
+                  </script>
+                </binding>
+              </button>
+            </group>
+          </group>
+
+          <vrule/>
+
+          <group><layout>vbox</layout>
+            <group>
+              <stretch>true</stretch>
+              <layout>hbox</layout>
+              <hrule><stretch>true</stretch></hrule>
+              <text><label>Cargo</label></text>
+              <hrule><stretch>true</stretch></hrule>
+            </group>
+
+            <group><layout>hbox</layout>
+              <empty><stretch>true</stretch></empty>
+              <group><layout>table</layout>
+
+                <text>
+                  <row>0</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Front Cargo</label>
+                </text>
+                <text>
+                  <row>1</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Compartment</label>
+                </text>
+                <text>
+                  <row>2</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>3</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>|</label>
+                </text>
+                <slider>
+                  <row>0</row>
+                  <col>1</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>2200.0</max>
+                  <step>50</step>
+                  <property>sim/gui/dialogs/load154/lug_f_1</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <slider>
+                  <row>1</row>
+                  <col>1</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>1700.0</max>
+                  <step>50</step>
+                  <property>sim/gui/dialogs/load154/lug_f_2</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <slider>
+                  <row>2</row>
+                  <col>1</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>4500.0</max>
+                  <step>100</step>
+                  <property>sim/gui/dialogs/load154/lug_f_3</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <slider>
+                  <row>3</row>
+                  <col>1</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>4500.0</max>
+                  <step>100</step>
+                  <property>sim/gui/dialogs/load154/lug_f_4</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <text>
+                  <row>0</row>
+                  <col>2</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_f_1</property>
+                  <format> %.0f / 2200 KG</format>
+                  <live>true</live>
+                </text>
+                <text>
+                  <row>1</row>
+                  <col>2</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_f_2</property>
+                  <format> %.0f / 1700 KG</format>
+                  <live>true</live>
+                </text>
+                <text>
+                  <row>2</row>
+                  <col>2</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_f_3</property>
+                  <format> %.0f / 4500 KG</format>
+                  <live>true</live>
+                </text>
+                <text>
+                  <row>3</row>
+                  <col>2</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_f_4</property>
+                  <format> %.0f / 4500 KG</format>
+                  <live>true</live>
+                </text>
+
+                <text>
+                  <row>5</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Rear Cargo</label>
+                </text>
+                <text>
+                  <row>6</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Compartment</label>
+                </text>
+                <text>
+                  <row>7</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>|</label>
+                </text>
+                <slider>
+                  <row>5</row>
+                  <col>1</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>5200.0</max>
+                  <step>100</step>
+                  <property>sim/gui/dialogs/load154/lug_r_1</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <slider>
+                  <row>6</row>
+                  <col>1</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>1700.0</max>
+                  <step>50</step>
+                  <property>sim/gui/dialogs/load154/lug_r_2</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <slider>
+                  <row>7</row>
+                  <col>1</col>
+                  <halign>right</halign>
+                  <min>0.0</min>
+                  <max>3500.0</max>
+                  <step>100</step>
+                  <property>sim/gui/dialogs/load154/lug_r_3</property>
+                  <live>true</live>
+                  <binding>
+                    <command>dialog-apply</command>
+                  </binding>
+                  <binding><command>dialog-apply</command></binding>
+                </slider>
+                <text>
+                  <row>5</row>
+                  <col>2</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_r_1</property>
+                  <format> %.0f / 5200 KG</format>
+                  <live>true</live>
+                </text>
+                <text>
+                  <row>6</row>
+                  <col>2</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_r_2</property>
+                  <format> %.0f / 1700 KG</format>
+                  <live>true</live>
+                </text>
+                <text>
+                  <row>7</row>
+                  <col>2</col>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_r_3</property>
+                  <format> %.0f / 3500 KG</format>
+                  <live>true</live>
+                </text>
+                
+                <text>
+                  <row>0</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>/\</label>
+                </text>
+                <text>
+                  <row>1</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>2</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>3</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>4</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>5</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>6</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>|</label>
+                </text>
+                <text>
+                  <row>7</row>
+                  <col>3</col>
+                  <halign>center</halign>
+                  <label>\/</label>
+                </text>
+                <text>
+                  <row>0</row>
+                  <col>4</col>
+                  <halign>left</halign>
+                  <label>Front</label>
+                </text>
+                <text>
+                  <row>7</row>
+                  <col>4</col>
+                  <halign>left</halign>
+                  <label>Rear</label>
+                </text>
+                
+                <text>
+                  <row>8</row>
+                  <col>2</col>
+                  <pref-width>130</pref-width>
+                  <label> </label>
+                </text>
+
+              </group>
+              <empty><stretch>true</stretch></empty>
+            </group>
+
+            <group><layout>hbox</layout>
+              <empty><stretch>true</stretch></empty>
+              <group><layout>table</layout>
+                
+                <text>
+                  <row>0</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Cargo Weight:</label>
+                </text>
+                <text>
+                  <row>0</row>
+                  <col>1</col>
+                  <pref-width>150</pref-width>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_w_int</property>
+                  <format> %.0f / 23300 KG</format>
+                  <live>true</live>
+                </text>
+                
+                <text>
+                  <row>1</row>
+                  <col>0</col>
+                  <halign>right</halign>
+                  <label>Current Cargo Weight:</label>
+                </text>
+                <text>
+                  <row>1</row>
+                  <col>1</col>
+                  <pref-width>150</pref-width>
+                  <halign>left</halign>
+                  <property>sim/gui/dialogs/load154/lug_w</property>
+                  <format> %.0f / 23300 KG</format>
+                  <live>true</live>
+                </text>
+
+              </group>
+            </group>
+
+            <group><layout>hbox</layout><halign>right</halign>
+              <button>
+                <legend>1000 KG</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    lug_f_1.setValue(0.0);
+                    lug_f_2.setValue(0.0);
+                    lug_f_3.setValue(200.0);
+                    lug_f_4.setValue(200.0);
+                    lug_r_1.setValue(300.0);
+                    lug_r_2.setValue(300.0);
+                    lug_r_3.setValue(0.0);
+                  </script>
+                </binding>
+              </button>
+              <button>
+                <legend>2500 KG (Default)</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    lug_f_1.setValue(0.0);
+                    lug_f_2.setValue(0.0);
+                    lug_f_3.setValue(300.0);
+                    lug_f_4.setValue(300.0);
+                    lug_r_1.setValue(1900.0);
+                    lug_r_2.setValue(0.0);
+                    lug_r_3.setValue(0.0);
+                  </script>
+                </binding>
+              </button>
+              <button>
+                <legend>10000 KG</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    lug_f_1.setValue(0.0);
+                    lug_f_2.setValue(0.0);
+                    lug_f_3.setValue(1600.0);
+                    lug_f_4.setValue(2000.0);
+                    lug_r_1.setValue(3000.0);
+                    lug_r_2.setValue(0.0);
+                    lug_r_3.setValue(3400.0);
+                  </script>
+                </binding>
+              </button>
+            </group>
+
+            <group><layout>hbox</layout><halign>right</halign>
+              <button>
+                <legend>Load</legend>
+                <binding>
+                  <command>nasal</command>
+                  <script>
+                    lug_f_1_ext.setValue(lug_f_1.getValue() * KG2LB);
+                    lug_f_2_ext.setValue(lug_f_2.getValue() * KG2LB);
+                    lug_f_3_ext.setValue(lug_f_3.getValue() * KG2LB);
+                    lug_f_4_ext.setValue(lug_f_4.getValue() * KG2LB);
+                    lug_r_1_ext.setValue(lug_r_1.getValue() * KG2LB);
+                    lug_r_2_ext.setValue(lug_r_2.getValue() * KG2LB);
+                    lug_r_3_ext.setValue(lug_r_3.getValue() * KG2LB);
+                  </script>
+                </binding>
+              </button>
+            </group>
+          </group>
+
+        </group>
+
+        <hrule/>
+
+        <group>
+          <stretch>true</stretch>
+          <layout>hbox</layout>
+          <hrule><stretch>true</stretch></hrule>
+          <text><label>Fuel</label></text>
+          <hrule><stretch>true</stretch></hrule>
+        </group>
+
+        <group><layout>hbox</layout>
+          <empty><stretch>true</stretch></empty>
+          <group><layout>table</layout>
+            <text>
+              <row>0</row>
+              <col>2</col>
+              <halign>center</halign>
+              <label>Tank 4</label>
+            </text>
+            <text>
+              <row>1</row>
+              <col>2</col>
+              <halign>center</halign>
+              <label>(Ballast)</label>
+            </text>
+            <text>
+              <row>2</row>
+              <col>2</col>
+              <pref-width>100</pref-width>
+              <halign>left</halign>
+              <property>sim/gui/dialogs/load154/tank_4_int</property>
+              <format>%.0f / 6600 KG</format>
+              <live>true</live>
+            </text>
+            <slider>
+              <row>3</row>
+              <col>2</col>
+              <min>0.0</min>
+              <max>6600.0</max>
+              <step>50</step>
+              <property>sim/gui/dialogs/load154/tank_4_int</property>
+              <live>true</live>
+              <binding>
+                <command>dialog-apply</command>
+              </binding>
+              <binding><command>dialog-apply</command></binding>
+            </slider>
+            
+            <text>
+              <row>6</row>
+              <col>2</col>
+              <halign>center</halign>
+              <label>Tank 1</label>
+            </text>
+            <text>
+              <row>7</row>
+              <col>2</col>
+              <halign>center</halign>
+              <label>(Feed tank)</label>
+            </text>
+            <text>
+              <row>5</row>
+              <col>2</col>
+              <pref-width>100</pref-width>
+              <halign>left</halign>
+              <property>sim/gui/dialogs/load154/tank_1_int</property>
+              <format>%.0f / 3300 KG</format>
+              <live>true</live>
+            </text>
+            <slider>
+              <row>4</row>
+              <col>2</col>
+              <min>0.0</min>
+              <max>3300.0</max>
+              <step>50</step>
+              <property>sim/gui/dialogs/load154/tank_1_int</property>
+              <live>true</live>
+              <binding>
+                <command>dialog-apply</command>
+              </binding>
+              <binding><command>dialog-apply</command></binding>
+            </slider>
+            
+            <text>
+              <row>3</row>
+              <col>1</col>
+              <halign>center</halign>
+              <label>Tank 2L</label>
+            </text>
+            <text>
+              <row>5</row>
+              <col>1</col>
+              <pref-width>100</pref-width>
+              <halign>left</halign>
+              <property>sim/gui/dialogs/load154/tank_2L_int</property>
+              <format>%.0f / 9500 KG</format>
+              <live>true</live>
+            </text>
+            <slider>
+              <row>4</row>
+              <col>1</col>
+              <min>0.0</min>
+              <max>9500.0</max>
+              <step>100</step>
+              <property>sim/gui/dialogs/load154/tank_2L_int</property>
+              <live>true</live>
+              <binding>
+                <command>dialog-apply</command>
+              </binding>
+              <binding><command>dialog-apply</command></binding>
+            </slider>
+            
+            <text>
+              <row>3</row>
+              <col>3</col>
+              <halign>center</halign>
+              <label>Tank 2R</label>
+            </text>
+            <text>
+              <row>5</row>
+              <col>3</col>
+              <pref-width>100</pref-width>
+              <halign>left</halign>
+              <property>sim/gui/dialogs/load154/tank_2R_int</property>
+              <format>%.0f / 9500 KG</format>
+              <live>true</live>
+            </text>
+            <slider>
+              <row>4</row>
+              <col>3</col>
+              <min>0.0</min>
+              <max>9500.0</max>
+              <step>100</step>
+              <property>sim/gui/dialogs/load154/tank_2R_int</property>
+              <live>true</live>
+              <binding>
+                <command>dialog-apply</command>
+              </binding>
+              <binding><command>dialog-apply</command></binding>
+            </slider>
+            
+            <text>
+              <row>4</row>
+              <col>0</col>
+              <halign>center</halign>
+              <label>Tank 3L</label>
+            </text>
+            <text>
+              <row>6</row>
+              <col>0</col>
+              <pref-width>100</pref-width>
+              <halign>left</halign>
+              <property>sim/gui/dialogs/load154/tank_3L_int</property>
+              <format>%.0f / 5425 KG</format>
+              <live>true</live>
+            </text>
+            <slider>
+              <row>5</row>
+              <col>0</col>
+              <min>0.0</min>
+              <max>5425.0</max>
+              <step>100</step>
+              <property>sim/gui/dialogs/load154/tank_3L_int</property>
+              <live>true</live>
+              <binding>
+                <command>dialog-apply</command>
+              </binding>
+              <binding><command>dialog-apply</command></binding>
+            </slider>
+            
+            <text>
+              <row>4</row>
+              <col>4</col>
+              <halign>center</halign>
+              <label>Tank 3R</label>
+            </text>
+            <text>
+              <row>6</row>
+              <col>4</col>
+              <pref-width>100</pref-width>
+              <halign>left</halign>
+              <property>sim/gui/dialogs/load154/tank_3R_int</property>
+              <format>%.0f / 5425 KG</format>
+              <live>true</live>
+            </text>
+            <slider>
+              <row>5</row>
+              <col>4</col>
+              <min>0.0</min>
+              <max>5425.0</max>
+              <step>100</step>
+              <property>sim/gui/dialogs/load154/tank_3R_int</property>
+              <live>true</live>
+              <binding>
+                <command>dialog-apply</command>
+              </binding>
+              <binding><command>dialog-apply</command></binding>
+            </slider>
+
+            <text>
+              <row>1</row>
+              <col>6</col>
+              <label>-+-</label>
+            </text>
+            <text>
+              <row>0</row>
+              <col>6</col>
+              <label>Front</label>
+            </text>
+            <text>
+              <row>2</row>
+              <col>6</col>
+              <label>Rear</label>
+            </text>
+            <text>
+              <row>1</row>
+              <col>5</col>
+              <label>Left</label>
+            </text>
+            <text>
+              <row>1</row>
+              <col>7</col>
+              <label>Right</label>
+            </text>
+          </group>
+          <empty><stretch>true</stretch></empty>
+        </group>
+
+        <group><layout>hbox</layout>
+          <empty><stretch>true</stretch></empty>
+          <group><layout>table</layout>
+          
+            <text>
+              <row>0</row>
+              <col>0</col>
+              <halign>right</halign>
+              <label>Fuel Weight:</label>
+            </text>
+            <text>
+              <row>0</row>
+              <col>1</col>
+              <pref-width>150</pref-width>
+              <halign>left</halign>
+              <property>sim/gui/dialogs/load154/tanks_int</property>
+              <format> %.0f / 39750 KG</format>
+              <live>true</live>
+            </text>
+
+          </group>
+        </group>
+
+        <group><layout>hbox</layout><halign>right</halign>
+          <button>
+            <legend>12750+1000 KG (Default)</legend>
+            <binding>
+              <command>nasal</command>
+              <script>
+                tank_1_int.setValue(3300.0);
+                tank_2L_int.setValue(1500.0);
+                tank_2R_int.setValue(1500.0);
+                tank_3L_int.setValue(3225.0);
+                tank_3R_int.setValue(3225.0);
+                tank_4_int.setValue(1000.0);
+              </script>
+            </binding>
+          </button>
+          <button>
+            <legend>15000+1000 KG</legend>
+            <binding>
+              <command>nasal</command>
+              <script>
+                tank_1_int.setValue(3300.0);
+                tank_2L_int.setValue(2062.5);
+                tank_2R_int.setValue(2062.5);
+                tank_3L_int.setValue(3787.5);
+                tank_3R_int.setValue(3787.5);
+                tank_4_int.setValue(1000.0);
+              </script>
+            </binding>
+          </button>
+          <button>
+            <legend>20000+1000 KG</legend>
+            <binding>
+              <command>nasal</command>
+              <script>
+                tank_1_int.setValue(3300.0);
+                tank_2L_int.setValue(3312.5);
+                tank_2R_int.setValue(3312.5);
+                tank_3L_int.setValue(5037.5);
+                tank_3R_int.setValue(5037.5);
+                tank_4_int.setValue(1000.0);
+              </script>
+            </binding>
+          </button>
+          <button>
+            <legend>25000+1000 KG</legend>
+            <binding>
+              <command>nasal</command>
+              <script>
+                tank_1_int.setValue(3300.0);
+                tank_2L_int.setValue(5425.0);
+                tank_2R_int.setValue(5425.0);
+                tank_3L_int.setValue(5425.0);
+                tank_3R_int.setValue(5425.0);
+                tank_4_int.setValue(1000.0);
+              </script>
+            </binding>
+          </button>
+        </group>
+
+        <group><layout>hbox</layout>
+          <text>
+            <label>It is recommended to refuel the aircraft using refueling panel (fuel system must be turned on): </label>
+          </text>
+          <button>
+            <legend>Go to</legend>
+            <binding>
+              <command>nasal</command>
+              <script>view.forceView(10)</script>
+            </binding>
+          </button>
+          <empty><stretch>true</stretch></empty>
+          <button>
+            <legend>Balance</legend>
+            <binding>
+              <command>nasal</command>
+              <script>
+                var tanks_2 = (tank_2L_int.getValue() + tank_2R_int.getValue()) * 0.5;
+                var tanks_3 = (tank_3L_int.getValue() + tank_3R_int.getValue()) * 0.5;
+                tank_2L_int.setValue(tanks_2);
+                tank_2R_int.setValue(tanks_2);
+                tank_3L_int.setValue(tanks_3);
+                tank_3R_int.setValue(tanks_3);
+              </script>
+            </binding>
+          </button>
+          <button>
+            <legend>Refuel</legend>
+            <binding>
+              <command>nasal</command>
+              <script>
+                tank_1.setValue(tank_1_int.getValue());
+                tank_2L.setValue(tank_2L_int.getValue());
+                tank_2R.setValue(tank_2R_int.getValue());
+                tank_3L.setValue(tank_3L_int.getValue());
+                tank_3R.setValue(tank_3R_int.getValue());
+                tank_4.setValue(tank_4_int.getValue());
+              </script>
+            </binding>
+          </button>
+        </group>
+        
+      </group>
+
+      <vrule/>
+
+      <group>
+        <stretch>true</stretch>
+        <layout>vbox</layout>
+        <halign>center</halign>
+        <valign>top</valign>
+
+        <group>
+          <stretch>true</stretch>
+          <layout>hbox</layout>
+          <hrule><stretch>true</stretch></hrule>
+          <text><label>Aircraft</label></text>
+          <hrule><stretch>true</stretch></hrule>
+        </group>
+
+        <group>
+          <stretch>true</stretch>
+          <layout>table</layout>
+
+          <text>
+            <row>0</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Gross Weight:</label>
+          </text>
+          <text>
+            <row>0</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/gw</property>
+            <format> %.0f KG</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>1</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Max Takeoff Weight:</label>
+          </text>
+          <text>
+            <row>1</row>
+            <col>1</col>
+            <halign>left</halign>
+            <label> 98500 KG</label>
+          </text>
+
+          <text>
+            <row>2</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Max Landing Weight:</label>
+          </text>
+          <text>
+            <row>2</row>
+            <col>1</col>
+            <halign>left</halign>
+            <label> 78000 KG</label>
+          </text>
+
+          <text>
+            <row>3</row>
+            <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>4</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Zero Fuel Weight:</label>
+          </text>
+          <text>
+            <row>4</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/zfw</property>
+            <format> %.0f KG</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>5</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Empty Weight:</label>
+          </text>
+          <text>
+            <row>5</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/ew</property>
+            <format> %.0f KG</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>6</row>
+            <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>7</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Center of Gravity (CG):</label>
+          </text>
+          <text>
+            <row>7</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/cg</property>
+            <format> %.1f%%</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>8</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Min Takeoff CG:</label>
+          </text>
+          <text>
+            <row>8</row>
+            <col>1</col>
+            <halign>left</halign>
+            <label> 21%</label>
+          </text>
+
+          <text>
+            <row>9</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Min Landing CG:</label>
+          </text>
+          <text>
+            <row>9</row>
+            <col>1</col>
+            <halign>left</halign>
+            <label> 18%</label>
+          </text>
+
+          <text>
+            <row>10</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Max CG:</label>
+          </text>
+          <text>
+            <row>10</row>
+            <col>1</col>
+            <halign>left</halign>
+            <label> 32%</label>
+          </text>
+
+          <text>
+            <row>11</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>CG Witout Autopilot:</label>
+          </text>
+          <text>
+            <row>11</row>
+            <col>1</col>
+            <halign>left</halign>
+            <label> up to 40%</label>
+          </text>
+
+        </group>
+        
+      </group>
+      
+      <text><label> </label></text>
+
+    </group>
+
+    <hrule/>
+    
+    <group>
+      <stretch>true</stretch>
+      <layout>vbox</layout>
+      <halign>right</halign>
+      <valign>bottom</valign>
+
+      <button>
+        <legend>Close</legend>
+        <binding>
+          <command>dialog-close</command>
+        </binding>
+        <key>Esc</key>
+      </button>
+    </group>
+  </group>
+
+</PropertyList> 

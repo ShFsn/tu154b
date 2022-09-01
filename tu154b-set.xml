@@ -177,6 +177,14 @@
       </item>
 
       <item>
+        <label>Payload and Fuel</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>t154load</dialog-name>
+        </binding>
+      </item>
+
+      <item>
         <label>Pushback</label>
         <name>autopush</name>
         <binding>
