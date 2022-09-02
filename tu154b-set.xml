@@ -11,11 +11,117 @@
 <PropertyList include="Aircraft/tu154b/Systems/walker-include.xml">
 
  <sim>
-	 <description>Tupolev Tu-154B-2 airliner</description>
-	 <author>Yurik V. Nikiforoff aka Yurik_nsk; modded by ShFsn</author>
+    <description>Tupolev Tu-154B-2 airliner</description>
+    <long-description>The Tupolev Tu-154 (Russian: Tyполев Ту-154; NATO : Careless) is a three-engine, medium-range, 
+    narrow-body airliner designed in the mid-1960s. First flown in 1968, 918 airliners built, the last one in 2013.  
+    It is one of the fastest airliners, with cruising speed of 900 km/h (485 kt). 
+    Capable of operating from unpaved and gravel airfields with only basic facilities.</long-description>
+
+    <author>Yurik V. Nikiforoff aka Yurik_nsk, Ivan Strebkov aka ShFsn</author>
+		
+    <authors>
+      <author>
+        <name>Yurik V. Nikiforoff</name>
+        <description>FDM, 2D and 3D instruments, animations, systems and over</description>
+        <nick>Yurik_nsk</nick>
+      </author>
+      <author>
+        <name>Francisco Jerez</name>
+        <description>Bugfixes</description>
+      </author>
+      <author>
+        <name>Tomash Brechko</name>
+        <description>Testing, programming</description>
+      </author>
+      <author>
+        <description>Textures, animations, testing</description>
+        <nick>Alfated</nick>
+      </author>
+      <author>
+        <description>Splash-screen, GPL liveries</description>
+        <nick>Vitaliy.May and Co</nick>
+      </author>
+      <author>
+        <description>Testing and help</description>
+        <nick>Soitanen.Michael</nick>
+      </author>
+      <author>
+        <name>Ruslan Gnatovsky</name>
+        <description>Nasal electrical system</description>
+        <nick>Gnat</nick>
+      </author>
+      <author>
+        <description>Friction coefficient module</description>
+        <nick>Specter</nick>
+      </author>
+      <author>
+        <description>Picture for old splash-screen</description>
+        <nick>Stalker198033</nick>
+      </author>
+      <author>
+        <name>Don Lavelle</name>
+        <description>Original english textures pack</description>
+        <nick>Karla</nick>
+      </author>
+      <author>
+        <name>Ivan Strebkov</name>
+        <description>Various model support and impovement since 2021</description>
+        <nick>ShFsn</nick>
+      </author>
+      <author>
+        <name>Egor Chistov</name>
+        <description>Cockpit tooltips</description>
+        <nick>rdinit</nick>
+      </author>
+      <author>
+        <name>Russian FlightGear community:</name>
+        <description>beta-testing</description>
+        <nick>BOG, Magic, VaLeo, AlexTochka, RealMike, AirAlex, Schneider, vlad32768, CAXAP, DimkaS</nick>
+      </author>
+      <author>
+        <name>Roman Skoryh (Project Tupolev)</name>
+        <description>visual model, permission for GPL</description>
+      </author>
+      <author>
+        <name>Stepan Gritsevsky (Project Tupolev)</name>
+        <description>NVU and instruments guru</description>
+      </author>
+      <author>
+        <name>Dmitry Kolesnik (Project Tupolev)</name>
+        <description>consulting and support</description>
+        <nick>TenderCat</nick>
+      </author>
+    </authors>
 
 
 	 <status>advanced production</status>
+   
+    <tags>
+      <tag>passenger</tag>
+      <tag>tupolev</tag>
+      <tag>1970s</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag>
+      <tag>ifr</tag>
+      <tag>low-wing</tag>
+      <tag>t-tail</tag>
+      <tag>retractable-gear</tag>
+      <tag>tricycle</tag>
+      <tag>pressurised</tag>
+      <tag>jet</tag>
+      <tag>three-engine</tag>
+      <tag>3-engine</tag>
+    </tags>
+		
+    <urls>
+      <home-page>https://github.com/ShFsn/tu154b</home-page>
+      <support>https://github.com/ShFsn/tu154b/issues</support>
+      <wikipedia>https://en.wikipedia.org/wiki/Tupolev_Tu-154</wikipedia>
+      <code-repository>https://github.com/ShFsn/tu154b</code-repository>
+    </urls>
+
 	 <rating>
 	  <FDM type="int">5</FDM>
 	  <systems type="int">5</systems>
