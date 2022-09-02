@@ -1,11 +1,24 @@
-
-1 Анимировать поток реверса 									Под вопросом
-2 Анимировать выпуск спойлеров при полной механизации						Сделано
-3 Сделать кликабельной ручку спойлеров									
-4 Новые БАНО и фары для Рембрандта								Сделано
-5 Смена ночных текстур панелей в зависимости от времени суток и/или освещения			Сделано
-6 Починить индикацию ламп для Рембрандта							Сделано
-7 Передать по мультиплееру свет для Рембрандта	
-8 Добавить вращения contrails
-9 Передать через MP свет фар
-10 Передать через MP положение тележек шасси AI модели
+1 Animate reversers airflow 									Questionable
+2 Make spoilers handle clickable                                
+3 Make contrails spinning                                       Questionable
+4 Fix global animations be applied on high-res model over MP    
+5 Transmit over MP for high-res model:
+    - Bogeys tilt
+    - Gear compression (main gear)
+    - Spinning wheels
+    - Front gear rotation
+    - Lights (incl. Compositor ?)
+    - Ground services and pushback
+    - Engines sound                                             Questionable
+6 Implement Dual Control
+7 Update english textures and make on-flight language change     
+8 Implement TAF downloading and interpeting                     Questionable
+9 Update cockpit with new truly 3d instruments
+10 Make close-to-reality navigation tablet simulation
+11 Make and implement EFB                                       Questionable
+12 Implement side drift measuring for Groza radar               Questionable
+13 Improve rain vector calculation
+14 Add frosting windows shader
+15 Add static and dynamic tooltips in the cockpit
+16 Make more detailed engines exausts and reversers
+17 Make gear handle behavior more realistic
