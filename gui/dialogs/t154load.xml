@@ -4,12 +4,15 @@
   <nasal>
     <open>
       var gw = props.globals.getNode("sim/gui/dialogs/load154/gw", 1);
+      var gw_int = props.globals.getNode("sim/gui/dialogs/load154/gw_int", 1);
       var gw_ext = props.globals.getNode("fdm/jsbsim/inertia/weight-lbs", 1);
-      var zfw = props.globals.getNode("sim/gui/dialogs/load154/zfw", 1);
-      var ew = props.globals.getNode("sim/gui/dialogs/load154/ew", 1);
-      var ew_ext = props.globals.getNode("fdm/jsbsim/inertia/empty-weight-lbs", 1);
+      var zfw_int = props.globals.getNode("sim/gui/dialogs/load154/zfw_int", 1);
       var cg = props.globals.getNode("sim/gui/dialogs/load154/cg", 1);
+      var cg_int = props.globals.getNode("sim/gui/dialogs/load154/cg_int", 1);
+      var zfcg_int = props.globals.getNode("sim/gui/dialogs/load154/zfcg_int", 1);
       var cg_ext = props.globals.getNode("fdm/jsbsim/inertia/cg-x-in", 1);
+
+      var gear_mass_pos = props.globals.getNode("fdm/jsbsim/inertia/pointmass-location-X-inches[11]", 1);
 
       var tank_1 = props.globals.getNode("fdm/jsbsim/fuel/level-1-kg", 1);
       var tank_2L = props.globals.getNode("fdm/jsbsim/fuel/level-2L-kg", 1);
@@ -81,12 +84,7 @@
         lug_r_3.setValue(lug_r_3_ext.getValue() * LB2KG);
       }
 
-      var update = func() {
-        gw.setValue(gw_ext.getValue() * LB2KG);
-        zfw.setValue(gw.getValue() - (tank_1.getValue() + tank_2L.getValue() + tank_2R.getValue() + tank_3L.getValue() + tank_3R.getValue() + tank_4.getValue()));
-        ew.setValue(ew_ext.getValue() * LB2KG);
-        cg.setValue((cg_ext.getValue() * 0.0254 - 24.04) * (100/5.285));
-      
+      var update = func() {      
         tanks_int.setValue(tank_1_int.getValue() + tank_2L_int.getValue() + tank_2R_int.getValue() + tank_3L_int.getValue() + tank_3R_int.getValue() + tank_4_int.getValue());
         
         pax_f_c.setValue(pax_f.getValue() / 80);
@@ -99,6 +97,13 @@
         
         lug_w_int.setValue(lug_f_1.getValue() + lug_f_2.getValue() + lug_f_3.getValue() + lug_f_4.getValue() + lug_r_1.getValue() + lug_r_2.getValue() + lug_r_3.getValue());
         lug_w.setValue((lug_f_1_ext.getValue() + lug_f_2_ext.getValue() + lug_f_3_ext.getValue() + lug_f_4_ext.getValue() + lug_r_1_ext.getValue() + lug_r_2_ext.getValue() + lug_r_3_ext.getValue()) * LB2KG);
+        
+        gw.setValue(gw_ext.getValue() * LB2KG);
+        gw_int.setValue(54320.0 + pax_w_int.getValue() + lug_w_int.getValue() + tanks_int.getValue());
+        zfw_int.setValue(54320.0 + pax_w_int.getValue() + lug_w_int.getValue());
+        cg.setValue((cg_ext.getValue() * 0.0254 - 24.04) * (100/5.285));
+        cg_int.setValue(((53000*26.68 + 320*3.847 + pax_f.getValue()*12.0 + pax_m.getValue()*20.0 + pax_r.getValue()*30.0 + lug_f_1.getValue()*13.022 + lug_f_2.getValue()*14.022 + lug_f_3.getValue()*16.022 + lug_f_4.getValue()*19.022 + lug_r_1.getValue()*27.272 + lug_r_2.getValue()*29.772 + lug_r_3.getValue()*31.772 + 1000*gear_mass_pos.getValue()*IN2M + tank_1_int.getValue()*25.0 + tank_2L_int.getValue()*24.0 + tank_2R_int.getValue()*24.0 + tank_3L_int.getValue()*27.5 + tank_3R_int.getValue()*27.5 + tank_4_int.getValue()*21.0) / gw_int.getValue() - 24.04) * (100/5.285));
+        zfcg_int.setValue(((53000*26.68 + 320*3.847 + pax_f.getValue()*12.0 + pax_m.getValue()*20.0 + pax_r.getValue()*30.0 + lug_f_1.getValue()*13.022 + lug_f_2.getValue()*14.022 + lug_f_3.getValue()*16.022 + lug_f_4.getValue()*19.022 + lug_r_1.getValue()*27.272 + lug_r_2.getValue()*29.772 + lug_r_3.getValue()*31.772 + 1000*gear_mass_pos.getValue()*IN2M) / zfw_int.getValue() - 24.04) * (100/5.285));
       }
 
       var timer = maketimer(0.1, update);
@@ -455,7 +460,11 @@
               </button>
             </group>
 
-            <group><layout>hbox</layout><halign>right</halign>
+            <group><layout>hbox</layout>
+              <text>
+                <label>Crew: 4 members, 320 KG</label>
+              </text>
+              <empty><stretch>true</stretch></empty>
               <button>
                 <legend>Board</legend>
                 <binding>
@@ -1065,7 +1074,7 @@
             <text>
               <row>1</row>
               <col>6</col>
-              <label>-+-</label>
+              <label>--|--</label>
             </text>
             <text>
               <row>0</row>
@@ -1248,7 +1257,7 @@
             <col>1</col>
             <pref-width>80</pref-width>
             <halign>left</halign>
-            <property>sim/gui/dialogs/load154/gw</property>
+            <property>sim/gui/dialogs/load154/gw_int</property>
             <format> %.0f KG</format>
             <live>true</live>
           </text>
@@ -1257,48 +1266,48 @@
             <row>1</row>
             <col>0</col>
             <halign>right</halign>
-            <label>Max Takeoff Weight:</label>
+            <label>Zero Fuel Weight:</label>
           </text>
           <text>
             <row>1</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/zfw_int</property>
+            <format> %.0f KG</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>2</row>
+            <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>3</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Max Takeoff Weight:</label>
+          </text>
+          <text>
+            <row>3</row>
             <col>1</col>
             <halign>left</halign>
             <label> 98500 KG</label>
           </text>
 
           <text>
-            <row>2</row>
+            <row>4</row>
             <col>0</col>
             <halign>right</halign>
             <label>Max Landing Weight:</label>
           </text>
           <text>
-            <row>2</row>
+            <row>4</row>
             <col>1</col>
             <halign>left</halign>
             <label> 78000 KG</label>
-          </text>
-
-          <text>
-            <row>3</row>
-            <col>0</col>
-            <label> </label>
-          </text>
-
-          <text>
-            <row>4</row>
-            <col>0</col>
-            <halign>right</halign>
-            <label>Zero Fuel Weight:</label>
-          </text>
-          <text>
-            <row>4</row>
-            <col>1</col>
-            <pref-width>80</pref-width>
-            <halign>left</halign>
-            <property>sim/gui/dialogs/load154/zfw</property>
-            <format> %.0f KG</format>
-            <live>true</live>
           </text>
 
           <text>
@@ -1312,9 +1321,7 @@
             <col>1</col>
             <pref-width>80</pref-width>
             <halign>left</halign>
-            <property>sim/gui/dialogs/load154/ew</property>
-            <format> %.0f KG</format>
-            <live>true</live>
+            <label> 54000 KG</label>
           </text>
 
           <text>
@@ -1326,69 +1333,153 @@
           <text>
             <row>7</row>
             <col>0</col>
-            <halign>right</halign>
-            <label>Center of Gravity (CG):</label>
-          </text>
-          <text>
-            <row>7</row>
-            <col>1</col>
-            <pref-width>80</pref-width>
-            <halign>left</halign>
-            <property>sim/gui/dialogs/load154/cg</property>
-            <format> %.1f%%</format>
-            <live>true</live>
+            <label> </label>
           </text>
 
           <text>
             <row>8</row>
             <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>9</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Center of Gravity (CG):</label>
+          </text>
+          <text>
+            <row>9</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/cg_int</property>
+            <format> %.1f%%</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>10</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Zero Fuel CG:</label>
+          </text>
+          <text>
+            <row>10</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/zfcg_int</property>
+            <format> %.1f%%</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>11</row>
+            <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>12</row>
+            <col>0</col>
             <halign>right</halign>
             <label>Min Takeoff CG:</label>
           </text>
           <text>
-            <row>8</row>
+            <row>12</row>
             <col>1</col>
             <halign>left</halign>
             <label> 21%</label>
           </text>
 
           <text>
-            <row>9</row>
+            <row>13</row>
             <col>0</col>
             <halign>right</halign>
             <label>Min Landing CG:</label>
           </text>
           <text>
-            <row>9</row>
+            <row>13</row>
             <col>1</col>
             <halign>left</halign>
             <label> 18%</label>
           </text>
 
           <text>
-            <row>10</row>
+            <row>14</row>
             <col>0</col>
             <halign>right</halign>
             <label>Max CG:</label>
           </text>
           <text>
-            <row>10</row>
+            <row>14</row>
             <col>1</col>
             <halign>left</halign>
             <label> 32%</label>
           </text>
 
           <text>
-            <row>11</row>
+            <row>15</row>
             <col>0</col>
             <halign>right</halign>
             <label>CG Witout Autopilot:</label>
           </text>
           <text>
-            <row>11</row>
+            <row>15</row>
             <col>1</col>
             <halign>left</halign>
             <label> up to 40%</label>
+          </text>
+
+          <text>
+            <row>16</row>
+            <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>17</row>
+            <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>18</row>
+            <col>0</col>
+            <label> </label>
+          </text>
+
+          <text>
+            <row>19</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Current Gross Weight:</label>
+          </text>
+          <text>
+            <row>19</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/gw</property>
+            <format> %.0f KG</format>
+            <live>true</live>
+          </text>
+
+          <text>
+            <row>20</row>
+            <col>0</col>
+            <halign>right</halign>
+            <label>Current CG:</label>
+          </text>
+          <text>
+            <row>20</row>
+            <col>1</col>
+            <pref-width>80</pref-width>
+            <halign>left</halign>
+            <property>sim/gui/dialogs/load154/cg</property>
+            <format> %.1f%%</format>
+            <live>true</live>
           </text>
 
         </group>
