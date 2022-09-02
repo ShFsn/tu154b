@@ -1,8 +1,23 @@
-********************** Tu-154b v.3.1 *******************************************
+________________________
+\ ________ __ __ ______/
+ \\      // // //
+  \\    // // //
+   \\  // // // // //
+    \\// // // //_//
+     \/ // // /__ /
+                //
+        _____  //
+        \ __/ //
+         \\  //
+          \\//
+           \/
+
+
+******************************** Tu-154b v.3.1 **********************************
 
 Welcome to world of Russian Aviation!
 
-Before use of model, you MUST read documentation: Docs/tu154eng.pdf - in English, Docs/tu154rus.pdf - in Russian. 
+Before use of model, you MUST read documentation: Docs/tu154eng.pdf - in English, Docs/tu154rus.pdf - in Russian.
 There are Project Tupolev docs in Docs/PT_Docs for SVN version of model. If you want to get more information about plane and PT model for MSFS sim,
 you should read it.
 
@@ -13,70 +28,70 @@ This is a very complex model, and it's not intended for beginners.
 Unpack archive into $FGROOT/Aircraft/tu154b folder; under UNIX, you can place model into your home dir and create
 symlink.
 
-Prepare AI model; for it, copy (or create symlink) AI/Aircraft/tu154b into $FGROOT/AI/Aircraft/tu154b. 
-If you skip this step, model will work yet, but when you go to multiplay mode, and another player will use Tu-154b
-model, your computer will stall for long time (from 20 s to 2 min) and drop fps. To avoid this, low-poly model was created for AI/MP mode.
-There are liveries support for AI models, so you will see planes of another players with right liveries (if you install theese 
-liveries before).
+Install additional liveries: See tu154/Model/Liveries/README.txt.
 
-This model intend for FlightGear version 3.0 and devel. It does not support old FlightGear version (1.9.1, 2.0 or late), and 
-you would not replace FDM file. If you want use older FG version, you may download appropriate version from 
+Prepare AI model. When you go to multiplay mode, and another player will use Tu-154b model, your computer will stall for long time
+(from 20 s to 2 min) and drop fps. To avoid this, low-poly model was created for AI/MP mode. It is included in FlightGear distributable.
+There are liveries support for AI models, so you will see planes of another players with right liveries. For low-poly model to work with it,
+install (or create symlink) your additional liveries into $FGROOT/AI/Aircraft/tu154b just as for regular model.
+
+This model intend for FlightGear version 3.0 and devel. It does not support old FlightGear version (1.9.1, 2.0 or late), and
+you would not replace FDM file. If you want use older FG version, you may download appropriate version from
 http://yurik.flightgear.ru/tu154b-release/.
+Last stable FlightGear version tested: 2020.3.13.
 
-For our foreign friends, Don Lavelle has create set of textures. It translate most of signes in cabin to English, take care about right terminology. 
+For our foreign friends, Don Lavelle has create set of textures. It translate most of signes in cabin to English, take care about right terminology.
 Unpack english_pack.tar.gz and copy and replase all files to model directory.
 
 ********************************** !!! *******************************************
-Under UNIX, be carefull with register of directory name. After changing main SVN server at Feb 16 2011, name of model 
+Under UNIX, be carefull with register of directory name. After changing main SVN server at Feb 16 2011, name of model
 directory (TU154B) has changed to (tu154b).
 ********************************** !!! *******************************************
 
 ********************************** LICENSE ***************************************
 
 Roman Skoryh, author of original visual model of Tu-154B for Project Tupolev, gave permission for distribution of this model under GPL license.
-Since version 3.0, released at jule 2013, Tu-154b for FlightGear is distributed under GPL.
+Since version 3.0, released at jule 2013, Tu-154b for FlightGear is distributed under GPL v.3.
 
 ********************************** Authors ***************************************
 
-Yurik V. Nikiforoff aka Yurik_nsk - FDM, 2d & 3d instruments, animations, systems and over.
+Yurik V. Nikiforoff aka Yurik_nsk - FDM, 2D and 3D instruments, animations, systems and over
 
-Francisco Jerez - bugfixes,
+Francisco Jerez - Bugfixes
 
-Tomash Brechko  - testing, programming.
+Tomash Brechko  - Testing, programming
 
-Alfated - textures, animations, testing.
+Alfated - Textures, animations, testing
 
-Vitaliy.May and Co - new splash-screen, GPL liveries.
+Vitaliy.May and Co - Splash-screen, GPL liveries
 
-Soitanen.Michael - testing and help.
+Soitanen.Michael - Testing and help
 
-Ruslan Gnatovsky aka Gnat - nasal electrical system.
+Ruslan Gnatovsky aka Gnat - Nasal electrical system
 
-Specter - friction coefficient module
+Specter - Friction coefficient module
+
+Stalker198033 - Picture for old splash-screen
+
+Don Lavelle aka Karla (www.flightgear.org) - Original english textures pack
+
+Ivan Strebkov aka ShFsn - Various model support and impovement since 2021
+
+Egor Chistov aka rdinit - Cockpit tooltips
 
 Russian FlightGear community: BOG, Magic, VaLeo, AlexTochka, RealMike, AirAlex, Schneider, vlad32768,
-CAXAP, DimkaS - beta-testing.
-
-Stalker198033 - picture for old splash-screen.
-
-English pack - Don Lavelle aka Karla (www.flightgear.org)
+CAXAP, DimkaS - beta-testing
 
 Project Tupolev staff:
 
-Roman Skoryh - visual model, permission for GPL.
-Stepan Gritsevsky - NVU and instruments guru.
-Big thanks to Dmitry Kolesnik aka TenderCat - for consulting and support.
+Roman Skoryh - visual model, permission for GPL
+Stepan Gritsevsky - NVU and instruments guru
+Big thanks to Dmitry Kolesnik aka TenderCat - for consulting and support
 
-Welcome to http://flightgear.ru/forum !
-
-Yurik_NSK, your humble author.
-yurik.nsk@gmail.com
-
-June 2015
-
-
+Welcome to http://flightgear.ru/forum ! (The site is unuavailable since 2022)
 Also welcome to discord server: https://discord.gg/YC2EYGK5Xf
 
-Ivan Strebkov, aka ShFsn
+Yurik_NSK, your humble author, yurik.nsk@gmail.com;
+ShFsn, successor.
 
-May 2022
+September 2022
