@@ -34,16 +34,12 @@
         <description>Testing, programming</description>
       </author>
       <author>
+        <name>Alfated</name>
         <description>Textures, animations, testing</description>
-        <nick>Alfated</nick>
       </author>
       <author>
-        <description>Splash-screen, GPL liveries</description>
-        <nick>Vitaliy.May and Co</nick>
-      </author>
-      <author>
-        <description>Testing and help</description>
-        <nick>Soitanen.Michael</nick>
+        <name>Vitaliy.May and Co</name>
+        <description>GPL liveries</description>
       </author>
       <author>
         <name>Ruslan Gnatovsky</name>
@@ -51,17 +47,8 @@
         <nick>Gnat</nick>
       </author>
       <author>
+        <name>Specter</name>
         <description>Friction coefficient module</description>
-        <nick>Specter</nick>
-      </author>
-      <author>
-        <description>Picture for old splash-screen</description>
-        <nick>Stalker198033</nick>
-      </author>
-      <author>
-        <name>Don Lavelle</name>
-        <description>Original english textures pack</description>
-        <nick>Karla</nick>
       </author>
       <author>
         <name>Ivan Strebkov</name>
@@ -72,24 +59,6 @@
         <name>Egor Chistov</name>
         <description>Cockpit tooltips</description>
         <nick>rdinit</nick>
-      </author>
-      <author>
-        <name>Russian FlightGear community:</name>
-        <description>beta-testing</description>
-        <nick>BOG, Magic, VaLeo, AlexTochka, RealMike, AirAlex, Schneider, vlad32768, CAXAP, DimkaS</nick>
-      </author>
-      <author>
-        <name>Roman Skoryh (Project Tupolev)</name>
-        <description>visual model, permission for GPL</description>
-      </author>
-      <author>
-        <name>Stepan Gritsevsky (Project Tupolev)</name>
-        <description>NVU and instruments guru</description>
-      </author>
-      <author>
-        <name>Dmitry Kolesnik (Project Tupolev)</name>
-        <description>consulting and support</description>
-        <nick>TenderCat</nick>
       </author>
     </authors>
 
