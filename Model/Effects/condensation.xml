@@ -45,7 +45,7 @@
 
     <counter>
       <particles-per-sec>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>1</factor>
         <offset>5</offset>
       </particles-per-sec>

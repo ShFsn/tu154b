@@ -57,15 +57,15 @@
     <condition>
       <and>
       <equals>
-        <property>/tu154/light/retract</property>
+        <property>tu154/light/retract</property>
         <value>1.0</value>
       </equals>
       <greater-than>
-        <property>/tu154/light/headlight-selector</property>
+        <property>tu154/light/headlight-selector</property>
         <value>0.95</value>
       </greater-than>
       <greater-than>
-        <property>/tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
         <value>0</value>
       </greater-than>
       </and>

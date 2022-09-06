@@ -35,19 +35,19 @@
       <and>
       <!--<property>/tu154/light/retract</property>-->
       <greater-than>
-        <property>/tu154/light/headlight-selector</property>
+        <property>tu154/light/headlight-selector</property>
         <value>0.75</value>
       </greater-than>
       <less-than>
-        <property>/tu154/light/headlight-selector</property>
+        <property>tu154/light/headlight-selector</property>
         <value>0.85</value>
       </less-than>
       <equals>
-        <property>/gear/gear/position-norm</property>
+        <property>gear/gear/position-norm</property>
         <value>1</value>
       </equals>
       <greater-than>
-        <property>/tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+        <property>tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
         <value>0</value>
       </greater-than>
       </and>

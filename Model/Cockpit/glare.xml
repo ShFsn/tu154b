@@ -265,7 +265,7 @@
   <object-name>ind_notready_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/warning/not-ready/state</property>
@@ -277,7 +277,7 @@
   <object-name>ind_notready_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/warning/not-ready/state</property>
@@ -299,7 +299,7 @@
   <object-name>ind_falsetrim_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/wrong-trim</property>
@@ -311,7 +311,7 @@
   <object-name>ind_falsetrim_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/wrong-trim</property>
@@ -333,7 +333,7 @@
   <object-name>ind_bank_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/bank</property>
@@ -345,7 +345,7 @@
   <object-name>ind_bank_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/bank</property>
@@ -367,7 +367,7 @@
   <object-name>ind_pitch_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/pitch</property>
@@ -379,7 +379,7 @@
   <object-name>ind_pitch_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/pitch</property>
@@ -401,7 +401,7 @@
   <object-name>ind_ap_fail_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/autopilot</property>
@@ -413,7 +413,7 @@
   <object-name>ind_ap_fail_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/autopilot</property>
@@ -435,7 +435,7 @@
   <object-name>ind_atfail_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/at-failure</property>
@@ -447,7 +447,7 @@
   <object-name>ind_atfail_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/at-failure</property>
@@ -469,7 +469,7 @@
   <object-name>ind_app_h_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/wrong-approach-h</property>
@@ -481,7 +481,7 @@
   <object-name>ind_app_h_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/wrong-approach-h</property>
@@ -503,7 +503,7 @@
   <object-name>ind_app_v_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/wrong-approach-v</property>
@@ -515,7 +515,7 @@
   <object-name>ind_app_v_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/wrong-approach-v</property>
@@ -537,7 +537,7 @@
   <object-name>ind_fire_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/fire</property>
@@ -549,7 +549,7 @@
   <object-name>ind_fire_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/electrical/indicators/fire</property>
@@ -571,7 +571,7 @@
   <object-name>ind_danger_1_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/warning/iso/state</property>
@@ -583,7 +583,7 @@
   <object-name>ind_danger_1_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
         <property>tu154/systems/warning/iso/state</property>
@@ -605,7 +605,7 @@
   <object-name>ind_danger_2_light</object-name>
   <condition>
     <and>
-      <not><property>/tu154/light/compositor-on</property></not>
+      <not><property>tu154/light/compositor-on</property></not>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
       <property>tu154/systems/warning/iso/state</property>
@@ -618,7 +618,7 @@
   <object-name>ind_danger_2_light</object-name>
   <condition>
     <and>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
       <not><or>
         <property>tu154/systems/electrical/checking-lamps/main-panel</property>
       <property>tu154/systems/warning/iso/state</property>

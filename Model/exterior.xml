@@ -6945,7 +6945,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rev_flap_lu</object-name>
-  <property>/sim/model/rev-flaps/rev-flaps1</property>
+  <property>sim/model/rev-flaps/rev-flaps1</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.29</x-m>
@@ -6961,7 +6961,7 @@
 <animation>
   <type>rotate</type>
   <object-name>rev_flap_ld</object-name>
-  <property>/sim/model/rev-flaps/rev-flaps1</property>
+  <property>sim/model/rev-flaps/rev-flaps1</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.3</x-m>
@@ -6976,7 +6976,7 @@
 </animation><animation>
   <type>rotate</type>
   <object-name>rev_flap_ru</object-name>
-  <property>/sim/model/rev-flaps/rev-flaps3</property>
+  <property>sim/model/rev-flaps/rev-flaps3</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.29</x-m>
@@ -6992,7 +6992,7 @@
 <animation>
   <type>rotate</type>
   <object-name>rev_flap_rd</object-name>
-  <property>/sim/model/rev-flaps/rev-flaps3</property>
+  <property>sim/model/rev-flaps/rev-flaps3</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.3</x-m>
@@ -8226,15 +8226,15 @@
     <condition>
       <and>
       <equals>
-        <property>/tu154/light/retract</property>
+        <property>tu154/light/retract</property>
         <value>1.0</value>
       </equals>
       <greater-than>
-        <property>/tu154/light/headlight-selector</property>
+        <property>tu154/light/headlight-selector</property>
         <value>0.95</value>
       </greater-than>
       <greater-than>
-        <property>/tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
         <value>0</value>
       </greater-than>
       </and>
@@ -8251,19 +8251,19 @@
     <condition>
       <and>
       <greater-than>
-        <property>/tu154/light/headlight-selector</property>
+        <property>tu154/light/headlight-selector</property>
         <value>0.75</value>
       </greater-than>
       <less-than>
-        <property>/tu154/light/headlight-selector</property>
+        <property>tu154/light/headlight-selector</property>
         <value>0.85</value>
       </less-than>
       <equals>
-        <property>/gear/gear/position-norm</property>
+        <property>gear/gear/position-norm</property>
         <value>1</value>
       </equals>
       <greater-than>
-        <property>/tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
         <value>0</value>
       </greater-than>
       </and>

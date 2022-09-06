@@ -34,7 +34,7 @@
   <type>select</type>
   <object-name>crew</object-name>
   <condition>
-    <not><property>/sim/current-view/internal</property></not>
+    <not><property>sim/current-view/internal</property></not>
   </condition>
 </animation>
 
@@ -350,7 +350,7 @@
     <button>0</button>
     <binding>
       <command>property-toggle</command>
-      <property>/instrumentation/efis/inputs/tfc</property>
+      <property>instrumentation/efis/inputs/tfc</property>
     </binding>
   </action>
 </animation>
@@ -363,7 +363,7 @@
     <button>0</button>
     <binding>
       <command>property-toggle</command>
-      <property>/instrumentation/efis/inputs/wxr</property>
+      <property>instrumentation/efis/inputs/wxr</property>
     </binding>
   </action>
 </animation>
@@ -376,7 +376,7 @@
     <button>0</button>
     <binding>
       <command>property-toggle</command>
-      <property>/instrumentation/efis/inputs/terr</property>
+      <property>instrumentation/efis/inputs/terr</property>
     </binding>
   </action>
 </animation>
@@ -389,7 +389,7 @@
     <button>0</button>
     <binding>
       <command>property-toggle</command>
-      <property>/instrumentation/efis/inputs/arpt</property>
+      <property>instrumentation/efis/inputs/arpt</property>
     </binding>
   </action>
 </animation>
@@ -402,7 +402,7 @@
     <button>0</button>
     <binding>
       <command>property-toggle</command>
-      <property>/instrumentation/efis/inputs/nd-centered</property>
+      <property>instrumentation/efis/inputs/nd-centered</property>
     </binding>
   </action>
 </animation>
@@ -412,7 +412,7 @@
   <object-name>ndrange_h</object-name>
   <condition>
     <less-than>
-      <property>/instrumentation/efis/inputs/range-nm</property>
+      <property>instrumentation/efis/inputs/range-nm</property>
       <value>640</value>
     </less-than>
   </condition>
@@ -422,7 +422,7 @@
     <repeatable>false</repeatable>   
     <binding>
       <command>property-cycle</command>
-      <property>/instrumentation/efis/inputs/range-nm</property>
+      <property>instrumentation/efis/inputs/range-nm</property>
       <value>10</value>
       <value>20</value>
       <value>40</value>
@@ -438,7 +438,7 @@
   <object-name>ndrange_h</object-name>
   <condition>
     <greater-than>
-      <property>/instrumentation/efis/inputs/range-nm</property>
+      <property>instrumentation/efis/inputs/range-nm</property>
       <value>10</value>
     </greater-than>
   </condition>
@@ -448,7 +448,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-cycle</command>
-      <property>/instrumentation/efis/inputs/range-nm</property>
+      <property>instrumentation/efis/inputs/range-nm</property>
       <value>640</value>
       <value>320</value>
       <value>160</value>
@@ -720,7 +720,7 @@
   <object-name>lever_sti8</object-name>
   <object-name>lever_sti0</object-name>
   <object-name>lever_sti7</object-name>  
-  <property>/fdm/jsbsim/fcs/pitch-trim-sum</property>
+  <property>fdm/jsbsim/fcs/pitch-trim-sum</property>
   <factor>-10.0</factor>
   <offset-deg>10.0</offset-deg>
   <center>
@@ -738,7 +738,7 @@
 <animation>
   <type>rotate</type>
   <object-name>lever_sti2</object-name>
-  <property>/controls/flight/aileron</property>
+  <property>controls/flight/aileron</property>
   <factor>120.0</factor>
   <offset-deg>124.75</offset-deg>
   <axis>
@@ -755,7 +755,7 @@
 <animation>
   <type>rotate</type>
   <object-name>lever_sti0</object-name>
-  <property>/controls/flight/aileron</property>
+  <property>controls/flight/aileron</property>
   <factor>120.0</factor>
   <offset-deg>124.75</offset-deg>
   <axis>
@@ -780,7 +780,7 @@
      <not>
       <property>tu154/mod-views/mod</property>
       <equals>
-       <property>/sim/current-view/view-number</property>
+       <property>sim/current-view/view-number</property>
        <value>0</value>
       </equals>
      </not>
@@ -795,7 +795,7 @@
   <condition>
      <not>
       <property>tu154/mod-views/mod</property>
-      <property>/tu154/mod-views/copilot-view</property>
+      <property>tu154/mod-views/copilot-view</property>
      </not>
   </condition>
 </animation>
@@ -807,7 +807,7 @@
   <condition>
      <not>
       <equals>
-       <property>/sim/current-view/view-number</property>
+       <property>sim/current-view/view-number</property>
        <value>0</value>
       </equals>
      </not>
@@ -886,7 +886,7 @@
   <property>controls/flight/rudder</property>
   <factor>50</factor>
   <condition>
-    <not><property>/tu154/switches/steering-limit</property></not>
+    <not><property>tu154/switches/steering-limit</property></not>
   </condition>
   <axis>
     <x1-m>0.723</x1-m>
@@ -1191,7 +1191,7 @@
   <object-name>lever_speedbrake</object-name>
   <condition>
    <not>
-     <property>/tu154/mod-views/nav-view</property>
+     <property>tu154/mod-views/nav-view</property>
   </not>
  </condition>
 </animation>
@@ -1561,7 +1561,7 @@
   <object-name>capt_panel</object-name>
   <condition>
     <not>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
     </not>
   </condition>
   <texture-prop>tu154/textures/capt-panel</texture-prop>
@@ -1578,7 +1578,7 @@
   <object-name>MESH22</object-name>
   <condition>
     <not>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
@@ -1594,7 +1594,7 @@
   <object-name>MESH26</object-name>
   <condition>
     <not>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
@@ -1610,7 +1610,7 @@
   <object-name>MESH28</object-name>
   <condition>
     <not>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
@@ -1649,7 +1649,7 @@
   <object-name>lever_mi10</object-name>
   <condition>
     <not>
-      <property>/tu154/light/compositor-on</property>
+      <property>tu154/light/compositor-on</property>
     </not>
   </condition>
   <emission>
