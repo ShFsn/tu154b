@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <default>
+
+    <menu n="10">
+      <label>|</label>
+      <enabled type="bool">false</enabled>
+    </menu>
+
+    <menu n="11">
+      <label>Tu-154B-2</label>
+      <enabled type="bool">true</enabled>
+
+      <item>
+        <label>About this aircraft</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>about-aircraft</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+
+      <item>
+        <label>Preferences</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>preferences</dialog-name>
+        </binding>
+      </item>
+
+    </menu>
+
+    <menu n="12">
+      <label>Navigation</label>
+      <enabled type="bool">true</enabled>
+
+      <item>
+        <label>Airport Charts</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>airports</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Airports Summary</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>airports-summary</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Route manager</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>route-manager</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>NVU Calculator</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>nav</dialog-name>
+        </binding>
+      </item>
+
+    </menu>
+
+    <menu n="14">
+      <label>Other</label>
+      <enabled type="bool">true</enabled>
+
+      <item>
+        <label>Radio</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>radio</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Maintenance</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>maintenance</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Payload and Fuel</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>t154load</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Pushback</label>
+        <name>autopush</name>
+        <binding>
+        <command>dialog-show</command>
+        <dialog-name>autopush</dialog-name>
+        </binding>
+      </item>
+
+    </menu>
+
+    <menu n="15">
+      <label>|</label>
+      <enabled type="bool">false</enabled>
+    </menu>
+
+  </default>
+
+</PropertyList>

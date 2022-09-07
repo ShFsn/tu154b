@@ -23,7 +23,7 @@
 	<object-name>cover-under</object-name>
 	<object-name>cover-rods</object-name>
 	<condition>
-		<property>/sim/model/ground-services/st-cover</property>
+		<property>services/stairways/cover</property>
 	</condition>
 </animation>
 		

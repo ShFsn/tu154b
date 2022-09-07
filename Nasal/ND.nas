@@ -1,3 +1,6 @@
+var efis_prop = props.globals.getNode("systems/electrical/outputs/efis", 1);
+efis_prop.setBoolValue(0);
+
 ##
 # storage container for all ND instances
 var placement = "ndplace";
@@ -90,12 +93,12 @@ var showNav = func() {
     if ( page == nil or el_l == nil or el_r == nil ) return;
     if ( el_l > 0 or el_r > 0) {
     if ( page == 24 ) { 
-    setprop("sim/model/nav-display/show", 1);
+    setprop("instrumentation/ND/show", 1);
     #setprop("systems/electrical/outputs/efis", 1);
     }
-    else { setprop("sim/model/nav-display/show", 0); }
+    else { setprop("instrumentation/ND/show", 0); }
     }
-    else { setprop("sim/model/nav-display/show", 0); }
+    else { setprop("instrumentation/ND/show", 0); }
 }
 
 setlistener("tu154/instrumentation/mapcase/page", showNav);

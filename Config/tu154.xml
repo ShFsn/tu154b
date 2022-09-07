@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!--<x>-20.944</x>
+
+  <y>0.817</y>
+
+  <z>2.419</z>-->
+  <constants><one type="float">1</one></constants>
+  <test>0.0</test>
+  <on_yoke>0.0</on_yoke>
+  <ena-adj>0.0</ena-adj>
+  <cp-gauge-scale-10>1.1</cp-gauge-scale-10><!--10%increase size-->
+  <cp-gauge-scale-20>1.2</cp-gauge-scale-20><!--20%increase size-->
+  <gear>
+    <offset type="double" >0.15</offset>
+    <gain type="double" >0.3048</gain>
+    <sw-main type="double">0</sw-main>
+    <sw-emerg1 type="double">0</sw-emerg1>
+    <sw-emerg2 type="double">0</sw-emerg2>
+  </gear>
+  <light>
+    <instruments>
+      <int-red-def type="double" >0.2</int-red-def>
+      <int-green-def type="double" >0.2</int-green-def>
+      <int-blue-def type="double" >0.1</int-blue-def>
+    </instruments>
+    <cabin>
+      <red type="double" >0.3</red>
+      <green type="double" >0.3</green>
+      <blue type="double" >0.3</blue>
+    </cabin>
+    <panel>
+      <ext-red-def type="double" >0.0</ext-red-def>
+      <ext-green-def type="double" >0.0</ext-green-def>
+      <ext-blue-def type="double" >0.0</ext-blue-def>
+      <amb-red-def type="double" >0.0</amb-red-def>
+      <amb-green-def type="double" >0.0</amb-green-def>
+      <amb-blue-def type="double" >0.0</amb-blue-def>
+    </panel>
+    <!--<window-alpha type="double" >0.3</window-alpha>      -->
+  </light>
+
+  <textures>
+    <capt-panel>vc01_t.png</capt-panel>
+    <copilot-panel>vc02_t.png</copilot-panel>
+    <overhead-panel>vc06_t.png</overhead-panel>
+    <fe-panel>vc08_t.png</fe-panel>
+    <yokes>vc_yokes.png</yokes>
+  </textures>
+
+  <instrumentation>
+    <distance-to-pnp type="bool">true</distance-to-pnp>
+    <altimeters-sync-inhg type="bool">true</altimeters-sync-inhg>
+    <altimeter n="0">
+      <inhgX100 type="int">2992</inhgX100>
+    </altimeter>
+    <altimeter n="1">
+      <inhgX100 type="int">2992</inhgX100>
+    </altimeter>
+    <ark-15 n="0">
+      <powered type="bool">false</powered>
+      <volume type="double">0</volume>
+    </ark-15>
+    <ark-15 n="1">
+      <powered type="bool" >false</powered>
+      <volume type="double">0</volume>
+    </ark-15>
+    <dme>
+      <distance type="double">0</distance>
+    </dme>
+    <dme>
+      <distance type="double">0</distance>
+    </dme>
+    <dme>
+      <distance type="double">0</distance>
+    </dme>
+    <pn-5>
+      <heading-state type="double" >0.0</heading-state>
+      <pitch-state type="double" >0.0</pitch-state>
+    </pn-5>
+    <pn-6>
+      <serviceable type="bool" >true</serviceable>
+      <at-kt type="double" >0.0</at-kt>
+      <stab type="double" >0.0</stab>
+      <mode type="double" >0.0</mode>
+    </pn-6>
+    <rv-5m n="0">
+      <altitude type="double">0.0</altitude>
+      <dialed type="double">200.0</dialed>
+    </rv-5m>
+    <rv-5m n="1">
+      <altitude type="double">0.0</altitude>
+      <dialed type="double">0.0</dialed>
+    </rv-5m>
+    <idr-1>
+      <distance type="double">0</distance>
+    </idr-1>
+    <idr-1>
+      <distance type="double">0</distance>
+    </idr-1>
+    <uap-12>
+      <warn type="bool" >false</warn>
+      <accelerate-max type="double" >-2.0</accelerate-max>
+      <accelerate-min type="double" >0.8</accelerate-min>
+      <alpha-limit-deg type="double" >11.5</alpha-limit-deg>
+    </uap-12>
+    <pnp>
+      <plane-dialed>252.0</plane-dialed>
+      <distance type="double">0</distance>
+      <!--<heading-deg>161.0</heading-deg>
+      <heading-deg-delayed>161.0</heading-deg-delayed>-->
+    </pnp>
+    <pnp>
+      <plane-dialed>252.0</plane-dialed>
+      <distance type="double">0</distance>
+      <!--<heading-deg>161.0</heading-deg>
+      <heading-deg-delayed>161.0</heading-deg-delayed>-->
+    </pnp>
+    <pu-46>
+      <stab type="double" >0.0</stab>
+    </pu-46>
+    <iku-1>
+      <heading-1 type="double">270</heading-1>
+      <heading-2 type="double">270</heading-2>
+      <mode-1 type="int">0</mode-1>
+      <mode-2 type="int">0</mode-2>
+      <trans-1 type="double">0</trans-1>
+      <trans-2 type="double">0</trans-2>
+    </iku-1>
+    <iku-1>
+      <heading-1 type="double">270</heading-1>
+      <heading-2 type="double">270</heading-2>
+      <mode-1 type="int">0</mode-1>
+      <mode-2 type="int">0</mode-2>
+      <trans-1 type="double">0</trans-1>
+      <trans-2 type="double">0</trans-2>
+    </iku-1>
+    <diss>
+      <powered type="bool" >false</powered>
+      <drift-angle-deg type="double" >0.0</drift-angle-deg>
+    </diss>
+    <bkk>
+      <serviceable type="bool" >true</serviceable>
+      <mgv-1-failure type="bool" >true</mgv-1-failure>
+      <mgv-2-failure type="bool" >true</mgv-2-failure>
+      <mgv-contr-failure type="bool" >true</mgv-contr-failure>
+      <delta-deg type="double" >1.0</delta-deg>
+      <!--<roll-limit type="double" >15.0</roll-limit>-->
+    </bkk>
+    <v-57>
+      <speed-adjust-step type="double">0.25</speed-adjust-step>
+      <azimuth-adjust-step type="double">0.25</azimuth-adjust-step>
+    </v-57>
+    <rsbn>
+      <handle-1 type="double" >0.0</handle-1>
+      <handle-2 type="double" >0.0</handle-2>
+      <mode type="bool" >false</mode>
+      <serviceable type="bool" >false</serviceable>
+      <distance type="double" >0</distance>
+      <radial type="double" >0</radial>
+      <twist type="double" >0</twist>
+      <volume type="double">0.2</volume>
+    </rsbn>
+    <b-8m>
+      <outer type="int">0</outer>
+      <inner type="int">0</inner>
+    </b-8m>
+
+    <uap-12>
+      <accelerate-max type="double" >-1.0</accelerate-max>
+      <accelerate-min type="double" >-1.0</accelerate-min>
+    </uap-12>
+
+    <v-140>
+      <adjust-step-1 type="double">0.1</adjust-step-1>
+      <adjust-step-2 type="double">0.1</adjust-step-2>
+    </v-140>
+    <v-51>
+      <adjust-speed type="int">1000</adjust-speed>
+      <scale type="int">1</scale>
+    </v-51>
+
+    <comm>
+      <freq type="double">0</freq>
+      <volume type="double">0.6</volume>
+    </comm>
+    <comm>
+      <freq type="double">0</freq>
+      <volume type="double">0.6</volume>
+    </comm>
+
+    <nav>
+      <volume type="double">0.2</volume>
+    </nav>
+    <nav>
+      <volume type="double">0.2</volume>
+    </nav>
+
+    <spu-7>
+      <source type="double">0</source>
+      <source-sec type="double">0</source-sec>
+      <power-sec type="bool">0</power-sec>
+      <ind-1 type="bool">1</ind-1>
+      <ind-2 type="bool">0</ind-2>
+      <volume type="double">1</volume>
+    </spu-7>
+
+  </instrumentation>
+
+
+  <systems>
+    <APU>
+      <!--<rpm type="double" >0.0</rpm>-->
+      <APU-damper type="double" >0.0</APU-damper>
+      <APU-bleed type="double" >0.0</APU-bleed>
+      <APU-ready type="double" >0.0</APU-ready>
+    </APU>
+    <electrical>
+      <checking-lamps>
+        <lamps-power type="double" >0.3</lamps-power>
+        <main-panel type="double" >0.0</main-panel>
+      </checking-lamps>
+      <indicators>
+        <fuel-2500>0.0</fuel-2500>
+        <signal-danger>0.0</signal-danger>
+        <alpha>0.0</alpha>
+        <signal-radio>0.0</signal-radio>
+        <acceleration>0.0</acceleration>
+        <speed-limit>0.0</speed-limit>
+        <wrong-trim>0.0</wrong-trim>
+        <bank>0.0</bank>
+        <pitch>0.0</pitch>
+        <wrong-approach-h>0.0</wrong-approach-h>
+        <wrong-approach-v>0.0</wrong-approach-v>
+      </indicators>
+    </electrical>
+    <absu>
+      <serviceable type="bool" >1</serviceable>
+      <!--Hydro system state-->
+      <pitch_ok type="bool" >1</pitch_ok>
+      <roll_ok type="bool" >1</roll_ok>
+      <yaw_ok type="bool" >1</yaw_ok>
+    </absu>
+    <mgv>
+      <one type="double" >0.0</one>
+      <two type="double" >0.0</two>
+      <contr type="double" >0.0</contr>
+      <agr type="double" >6.0</agr>
+    </mgv>
+    <tks>
+      <ga3-1 type="double" >6.0</ga3-1>
+      <ga3-2 type="double" >6.0</ga3-2>
+    </tks>
+    <nvu>
+      <powered type="double">0</powered>
+      <leg type="int">0</leg>
+      <leg-next type="int">1</leg-next>
+      <wind-speed type="double">0</wind-speed>
+      <wind-azimuth type="double">0</wind-azimuth>
+      <S-1-smooth type="double">0</S-1-smooth>
+      <Z-1-smooth type="double">0</Z-1-smooth>
+      <Spm-1-smooth type="double">0</Spm-1-smooth>
+      <Zpm-1-smooth type="double">0</Zpm-1-smooth>
+      <S-2-smooth type="double">0</S-2-smooth>
+      <Z-2-smooth type="double">0</Z-2-smooth>
+      <Spm-2-smooth type="double">0</Spm-2-smooth>
+      <Zpm-2-smooth type="double">0</Zpm-2-smooth>
+      <wind-fork type="double">0</wind-fork>
+    </nvu>
+    <nvu-calc>
+      <td-dist type="double">275.0</td-dist>
+      <td-text type="string"></td-text>
+    </nvu-calc>
+    <warning>
+      <deploy-flaps type="double" >0.0</deploy-flaps>
+      <alarm>
+        <absu_warn type="double" >0.0</absu_warn>
+      </alarm>
+    </warning>
+  </systems>
+  <switches>
+    <adf-1-selector type="double" >0.0</adf-1-selector>
+    <adf-2-selector type="double" >0.0</adf-2-selector>
+    <pu-46-kren type="double" >0.0</pu-46-kren>
+    <pu-46-tang type="double" >0.0</pu-46-tang>
+    <pn-5-strelki type="double" >0.0</pn-5-strelki>
+    <pn-5-navigac type="double" >0.0</pn-5-navigac>
+    <pn-5-posadk type="double" >0.0</pn-5-posadk>
+    <pn-5-pnp-selector type="double" >0.0</pn-5-pnp-selector>
+    <pu-11-consumers type="double" >1.0</pu-11-consumers>
+    <pu-11-gpk type="double" >0.0</pu-11-gpk>
+    <pu-11-corr type="double" >0.0</pu-11-corr>
+    <pn-6-cover-1 type="double" >0.0</pn-6-cover-1>
+    <pn-6-cover-2 type="double" >0.0</pn-6-cover-2>
+    <pu-46-cover-1 type="double" >0.0</pu-46-cover-1>
+    <pu-46-cover-2 type="double" >0.0</pu-46-cover-2>
+    <usvp-selector type="double" >0.0</usvp-selector>
+    <v-51-selector-1 type="double" >0</v-51-selector-1>
+    <v-51-selector-2 type="double" >0</v-51-selector-2>
+    <stab-manu-selector type="double" >1.0</stab-manu-selector>
+    <stab-auto-handle type="double" >1.0</stab-auto-handle>
+    <busters-cover type="double" >1.0</busters-cover>
+    <startpanel-cover type="double" >0.0</startpanel-cover>
+    <startpanel-cold type="double" >0.0</startpanel-cold>
+    <RSBN-power type="double" >0.0</RSBN-power>
+    <RSBN-opozn type="double" >0.0</RSBN-opozn>
+    <APU-bleed type="double" >1.0</APU-bleed>
+  </switches>
+  <mod-views>
+    <mod-view>
+      <x-offset-m >-0.55</x-offset-m>
+      <y-offset-m >2.3</y-offset-m>
+      <z-offset-m >-21.75</z-offset-m>
+      <field-of-view >27.0</field-of-view>
+      <heading-offset-deg type="double">0.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-32.5</pitch-offset-deg>
+      <roll-offset-deg type="double">0.0</roll-offset-deg>
+    </mod-view>
+    <mod-view>
+      <x-offset-m >0.47</x-offset-m>
+      <y-offset-m >2.25</y-offset-m>
+      <z-offset-m >-21.75</z-offset-m>
+      <field-of-view >31.0</field-of-view>
+      <heading-offset-deg type="double">0.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-30.0</pitch-offset-deg>
+      <roll-offset-deg type="double">0.0</roll-offset-deg>
+    </mod-view>
+    <mod-view>
+      <x-offset-m >0.0</x-offset-m>
+      <y-offset-m >2.1</y-offset-m>
+      <z-offset-m >-21.75</z-offset-m>
+      <field-of-view >40.0</field-of-view>
+      <heading-offset-deg type="double">0.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-24.75</pitch-offset-deg>
+      <roll-offset-deg type="double">0.0</roll-offset-deg>
+    </mod-view>
+    <mod-view>
+      <x-offset-m >0.1</x-offset-m>
+      <y-offset-m >2.0</y-offset-m>
+      <z-offset-m >-21.75</z-offset-m>
+      <field-of-view >50.0</field-of-view>
+      <heading-offset-deg type="double">350.0</heading-offset-deg>
+      <pitch-offset-deg type="double">55.0</pitch-offset-deg>
+      <roll-offset-deg type="double">10.0</roll-offset-deg>
+    </mod-view>
+    <mod-view>
+      <x-offset-m >-0.1</x-offset-m>
+      <y-offset-m >2.25</y-offset-m>
+      <z-offset-m >-20.9</z-offset-m>
+      <field-of-view >47.0</field-of-view>
+      <heading-offset-deg type="double">270.0</heading-offset-deg>
+      <pitch-offset-deg type="double">-16.0</pitch-offset-deg>
+      <roll-offset-deg type="double">0.0</roll-offset-deg>
+    </mod-view>
+  </mod-views>
+
+  <door>
+    <passe type="double">0</passe>
+    <cargo0 type="double">0</cargo0>
+    <cargo1 type="double">0</cargo1>
+    <window-left type="double">0</window-left>
+    <window-right type="double">0</window-right>
+    <window-left-sec type="double">0</window-left-sec>
+    <window-right-sec type="double">0</window-right-sec>
+    <refuel type="double">0</refuel>
+    <compartment-light>0.4</compartment-light>
+  </door>
+
+  <wipers>
+    <pos-left type="double">0</pos-left>
+    <pos-right type="double">0</pos-right>
+    <switch-left type="double">0</switch-left>
+    <switch-right type="double">0</switch-right>
+  </wipers>
+
+  <rev-flaps>
+    <rev-flaps1 type ="float">0</rev-flaps1>
+    <rev-flaps3 type ="float">0</rev-flaps3>
+    <rev-flaps-offset type ="float">0</rev-flaps-offset>
+  </rev-flaps>
+
+  <refuel>
+    <btn-check type="int">0</btn-check>
+  </refuel>
+
+  <air-cond>
+    <l-ovheat type="float">0</l-ovheat>
+    <l-press-left type="float">0</l-press-left>
+    <l-press-right type="float">0</l-press-right>
+    <l-cargo-ovheat type="float">0</l-cargo-ovheat>
+    <btn-check type="float">0</btn-check>
+    <pressure-sync type="bool">1</pressure-sync>
+    <sw>
+      <sw-sal-12 type="double">1</sw-sal-12>
+      <sw-eng-1 type="double">0</sw-eng-1>
+      <sw-eng-2 type="double">0</sw-eng-2>
+      <sw-eng-3 type="double">0</sw-eng-3>
+      <sw-art type="double">0</sw-art>
+      <sw-cargo type="double">0</sw-cargo>
+      <sw-srd type="double">0</sw-srd>
+      <sw-srd-cover type="double">0</sw-srd-cover>
+      <sw-psvp-l type="double">0</sw-psvp-l>
+      <sw-psvp-l-cover type="double">0</sw-psvp-l-cover>
+      <sw-psvp-r type="double">0</sw-psvp-r>
+      <sw-psvp-r-cover type="double">0</sw-psvp-r-cover>
+      <sw-sbros type="double">0</sw-sbros>
+      <sw-sbros-cover type="double">0</sw-sbros-cover>
+      <sw-ard type="double">0</sw-ard>
+      <sw-ard-cover type="double">0</sw-ard-cover>
+      <sw-nadduv type="double">0</sw-nadduv>
+    </sw>
+    <swt>
+      <swt-cabin-aut type="double">0</swt-cabin-aut>
+      <swt-cabin-hol type="double">0</swt-cabin-hol>
+      <swt-cabin-gor type="double">0</swt-cabin-gor>
+      <swt-sal-1-aut type="double">0</swt-sal-1-aut>
+      <swt-sal-1-hol type="double">0</swt-sal-1-hol>
+      <swt-sal-1-gor type="double">0</swt-sal-1-gor>
+      <swt-sal-2-aut type="double">0</swt-sal-2-aut>
+      <swt-sal-2-hol type="double">0</swt-sal-2-hol>
+      <swt-sal-2-gor type="double">0</swt-sal-2-gor>
+      <swt-th-left-aut type="double">0</swt-th-left-aut>
+      <swt-th-left-hol type="double">0</swt-th-left-hol>
+      <swt-th-left-gor type="double">0</swt-th-left-gor>
+      <swt-vvr-left-aut type="double">0</swt-vvr-left-aut>
+      <swt-vvr-left-hol type="double">0</swt-vvr-left-hol>
+      <swt-vvr-left-gor type="double">0</swt-vvr-left-gor>
+      <swt-th-right-aut type="double">0</swt-th-right-aut>
+      <swt-th-right-hol type="double">0</swt-th-right-hol>
+      <swt-th-right-gor type="double">0</swt-th-right-gor>
+      <swt-vvr-right-aut type="double">0</swt-vvr-right-aut>
+      <swt-vvr-right-hol type="double">0</swt-vvr-right-hol>
+      <swt-vvr-right-gor type="double">0</swt-vvr-right-gor>
+    </swt>
+    <sel>
+      <sel-cabin type="double">15</sel-cabin>
+      <sel-sal-1 type="double">15</sel-sal-1>
+      <sel-sal-2 type="double">15</sel-sal-2>
+      <sel-mag-left type="double">15</sel-mag-left>
+      <sel-mag-right type="double">15</sel-mag-right>
+      <sel-trub type="double">1</sel-trub>
+    </sel>
+    <prib>
+      <alt-m type="double">0</alt-m>
+      <delta-alt type="double">0</delta-alt>
+      <d-p type="double">0</d-p>
+      <t-cab type="double">0</t-cab>
+      <t-sal type="double">0</t-sal>
+      <t-trub type="double">0</t-trub>
+      <p-left type="double">0</p-left>
+      <p-right type="double">0</p-right>
+    </prib>
+    <variables>
+      <vs type="double">0</vs>
+      <d-p type="double">0</d-p>
+      <alt-m type="double">0</alt-m>
+      <t-cab type="double">0</t-cab>
+      <t-sal-1 type="double">0</t-sal-1>
+      <t-sal-2 type="double">0</t-sal-2>
+      <tt-dver type="double">0</tt-dver>
+      <tt-ekip type="double">0</tt-ekip>
+      <tt-sal-1 type="double">0</tt-sal-1>
+      <tt-sal-2 type="double">0</tt-sal-2>
+      <tt-mag-left type="double">0</tt-mag-left>
+      <tt-mag-right type="double">0</tt-mag-right>
+      <air-cons-l type="double">0</air-cons-l>
+      <air-cons-r type="double">0</air-cons-r>
+    </variables>
+  </air-cond>
+
+  <options>
+
+    <replay-fix>
+      <save_state type="bool">true</save_state>
+    </replay-fix>
+
+    <keyboard>
+      <keyboard-mode type="bool">false</keyboard-mode>
+    </keyboard>
+  
+    <welcome>
+      <show-on-startup type="bool">true</show-on-startup>
+    </welcome>
+    
+    <tooltips-color>
+    <r type="double">1.0</r>
+    <g type="double">1.0</g>
+    <b type="double">0.0</b>
+    </tooltips-color>
+
+    <textures>
+      <yokes type="bool">false</yokes>
+    </textures>
+
+  </options>
+
+</PropertyList>

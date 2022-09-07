@@ -2,11 +2,8 @@
 <PropertyList>
 
 
- <signal><property type="string">/sim/model/eng-doors/rotate1</property><type>float</type></signal>
- <signal><property type="string">/sim/model/eng-doors/rotate3</property><type>float</type></signal>
-
- <signal><property type="string">/sim/model/rev-flaps/rev-flaps1</property><type>float</type></signal>
- <signal><property type="string">/sim/model/rev-flaps/rev-flaps3</property><type>float</type></signal>
+ <signal><property type="string">tu154/rev-flaps/rev-flaps1</property><type>float</type></signal>
+ <signal><property type="string">tu154/rev-flaps/rev-flaps3</property><type>float</type></signal>
 
  <signal><property type="string">/sim/model/cabin-lighting/vnesh</property><type>double</type></signal>
  <signal><property type="string">/sim/model/cabin-lighting/vnesh-2</property><type>double</type></signal>
@@ -15,27 +12,25 @@
  <signal><property type="string">/sim/model/cabin-lighting/prib</property><type>double</type></signal>
  <signal><property type="string">/sim/model/cabin-lighting/prib-2</property><type>double</type></signal>
 
- <signal><property type="string">/sim/model/nav-display/show</property><type>bool</type></signal>
+ <signal><property type="string">instrumentation/ND/show</property><type>bool</type></signal>
 
- <signal><property type="string">/sim/model/ground-services/stairs</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/st-cover</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/bus1</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/bus2</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/f-buggage</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/r-buggage</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/chocks</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/chockss</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/de-ice</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/de-ice-p</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/catering</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/cat-up</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/ext-power</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/ep-connect</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/fuel-l</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/fuel-r</property><type>bool</type></signal>
- <signal><property type="string">/sim/model/ground-services/f-connect-r</property><type>bool</type></signal>
+ <signal><property type="string">services/stairways/enable</property><type>bool</type></signal>
+ <signal><property type="string">services/stairways/cover</property><type>bool</type></signal>
+ <signal><property type="string">services/buses/enable-1</property><type>bool</type></signal>
+ <signal><property type="string">services/buses/enable-2</property><type>bool</type></signal>
+ <signal><property type="string">services/buggage/enable-f</property><type>bool</type></signal>
+ <signal><property type="string">services/buggage/enable-r</property><type>bool</type></signal>
+ <signal><property type="string">services/chocks/enable</property><type>bool</type></signal>
+ <signal><property type="string">services/chocks/request</property><type>bool</type></signal>
+ <signal><property type="string">services/deicing_truck/enable</property><type>bool</type></signal>
+ <signal><property type="string">services/deicing_truck/de-ice-pp</property><type>bool</type></signal>
+ <signal><property type="string">services/catering/enable</property><type>bool</type></signal>
+ <signal><property type="string">services/catering/connect</property><type>bool</type></signal>
+ <signal><property type="string">services/ext-power/enable</property><type>bool</type></signal>
+ <signal><property type="string">services/fuel-truck/enable</property><type>bool</type></signal>
+ <signal><property type="string">services/fuel-truck/connect</property><type>bool</type></signal>
 
- <signal><property type="string">/sim/model/ground-services/gnd-elev</property><type>double</type></signal>
+ <signal><property type="string">services/gnd-elev</property><type>double</type></signal>
 
  <signal><property type="string">/engines/engine[0]/starter</property><type>bool</type></signal>
  <signal><property type="string">/engines/engine[0]/running</property><type>bool</type></signal>

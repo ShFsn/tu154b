@@ -337,7 +337,7 @@
   <object-name>ndtfc</object-name>
   <object-name>ndctr</object-name>
   <object-name>ndap</object-name>
-  <property>sim/model/nav-display/show</property>
+  <property>instrumentation/ND/show</property>
   <factor>-1</factor>
   <offset>1</offset>
 </animation>
@@ -995,7 +995,7 @@
 <animation>
   <type>translate</type>
   <object-name>flaps_handle</object-name>
-  <property>sim/model/constants/one</property>
+  <property>tu154/constants/one</property>
   <factor>0.01</factor>
   <axis>
     <x>-1</x>

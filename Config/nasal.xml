@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <!-- Nasal files/scripts -->
+
+  <instruments>
+    <file>Aircraft/tu154b/Nasal/instruments.nas</file>
+  </instruments>
+
+  <mapcase>
+    <file>Aircraft/tu154b/Nasal/mapcase.nas</file>
+    <file>Aircraft/tu154b/Nasal/ND.nas</file>
+  </mapcase>
+
+  <electrical>
+    <file>Aircraft/tu154b/Nasal/electrical.nas</file>
+  </electrical>
+
+  <engines>
+    <file>Aircraft/tu154b/Nasal/engines.nas</file>
+  </engines>
+
+  <warning>
+    <file>Aircraft/tu154b/Nasal/warn.nas</file>
+  </warning>
+
+  <absu>
+    <file>Aircraft/tu154b/Nasal/absu.nas</file>
+  </absu>
+
+  <view>
+    <file>Aircraft/tu154b/Nasal/view.nas</file>
+  </view>
+
+  <controls>
+    <file>Aircraft/tu154b/Nasal/controls.nas</file>
+  </controls>
+
+  <hydrosystems>
+    <file>Aircraft/tu154b/Nasal/hydrosystems.nas</file>
+  </hydrosystems>
+
+  <liveries_textures>
+    <file>Aircraft/tu154b/Nasal/liveries_textures.nas</file>
+  </liveries_textures>
+
+  <tyresmoke>
+    <file>Aircraft/tu154b/Nasal/tyresmoke.nas</file>
+  </tyresmoke>
+
+  <friction>
+    <file>Aircraft/tu154b/Nasal/friction.nas</file>
+  </friction>
+
+  <!--<debug>
+    <file>Aircraft/tu154b/Nasal/debug.nas</file>
+  </debug>-->
+
+  <help>
+    <file>Aircraft/tu154b/Nasal/help.nas</file>
+  </help>
+
+  <contrail>
+    <file>Aircraft/tu154b/Nasal/contrail.nas</file>
+  </contrail>
+
+  <lights>
+    <file>Aircraft/tu154b/Nasal/lights.nas</file>
+  </lights>
+
+  <model-3d>
+    <file>Aircraft/tu154b/Nasal/model-3d.nas</file>
+  </model-3d>
+
+  <replay-fix>
+    <file>Aircraft/tu154b/Nasal/replay-fix.nas</file>
+  </replay-fix>
+
+  <air-conditioning>
+    <file>Aircraft/tu154b/Nasal/air-conditioning.nas</file>
+  </air-conditioning>
+
+  <GROZA>
+    <file>Aircraft/tu154b/Instruments-3d/GROZA/GROZA.nas</file>
+  </GROZA>
+
+  <!-- Autopush -->
+  <autopush>
+    <file>Aircraft/tu154b/Nasal/Autopush/autopush.nas</file>
+  </autopush>
+  <autopush_driver>
+    <file>Aircraft/tu154b/Nasal/Autopush/driver.nas</file>
+  </autopush_driver>
+  <dynarr>
+    <file>Aircraft/tu154b/Nasal/Autopush/dynarr.nas</file>
+  </dynarr>
+  <autopush_route>
+    <file>Aircraft/tu154b/Nasal/Autopush/route.nas</file>
+  </autopush_route>
+
+</PropertyList>

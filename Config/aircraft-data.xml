@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>/instrumentation/GROZA/settings/tcas-blip-radius</path>
+
+  <path>/tu154/options/keyboard/keyboard-mode</path>
+  <path>/tu154/options/welcome/show-on-startup</path>
+  <path>/tu154/options/tooltips-color/r</path>
+  <path>/tu154/options/tooltips-color/g</path>
+  <path>/tu154/options/tooltips-color/b</path>
+  <path>/tu154/options/textures/yokes</path>
+
+</PropertyList>

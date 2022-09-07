@@ -7,7 +7,7 @@
         <object-name>Cobus_2700s</object-name>
         <object-name>Cobus_2700s_Light</object-name>
 		<condition>
-            <property>sim/model/ground-services/bus1</property>
+            <property>services/buses/enable-1</property>
 		</condition>
 	</animation>
 	

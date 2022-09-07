@@ -4,34 +4,13 @@
 	<name>groundservices</name>
 	
 	<!-- Fuel Truck -->
-	
-	<model>
-		<name>fuel-truck-l</name>
-		<path>Aircraft/tu154b/Model/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
-		<condition>
-			<and>
-				<property>sim/model/ground-services/fuel-l</property>
-				<property>sim/model/ground-services/chocks</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
-		</condition>
-		<offsets>
-			<x-m>-14.0</x-m>
-			<y-m>-28.0</y-m>
-			<z-m>2.8</z-m>
-			<heading-deg>105</heading-deg>
-		</offsets>
-	</model>
 	<model>
 		<name>fuel-truck-r</name>
 		<path>Aircraft/tu154b/Model/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/fuel-r</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/fuel-truck/enable</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -51,8 +30,8 @@
 		<object-name>fuel_pipe</object-name>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/f-connect-r</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/fuel-truck/connect</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -66,8 +45,8 @@
 		<object-name>fuel_pipe_disconnected</object-name>
 		<condition>
 			<and>
-				<not><property>sim/model/ground-services/f-connect-r</property></not>
-				<property>sim/model/ground-services/chocks</property>
+				<not><property>services/fuel-truck/connect</property></not>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -83,8 +62,8 @@
 		<path>Aircraft/tu154b/Model/Services/De-Icing/volvo_deicing_truck.xml</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/de-ice</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/deicing_truck/enable</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -106,8 +85,8 @@
 		<path>Aircraft/tu154b/Model/Services/Catering/L_T_VolvoFM-4_5m-set.xml</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/catering</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/catering/enable</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -129,8 +108,8 @@
 		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.ac</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/f-buggage</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/buggage/enable-f</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -148,8 +127,8 @@
 		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.ac</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/r-buggage</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/buggage/enable-r</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -171,8 +150,8 @@
 		<path>Aircraft/tu154b/Model/Services/External-Power/ext-pwr-box.ac</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/ext-power</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/ext-power/enable</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -194,7 +173,7 @@
 		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -213,7 +192,7 @@
 		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -232,7 +211,7 @@
 		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -259,8 +238,8 @@
 		</offsets>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/stairs</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/stairways/enable</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -332,8 +311,8 @@
 		<path>Aircraft/tu154b/Model/Services/Bus/Cobus_2700s.xml</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/bus1</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/buses/enable-1</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -353,8 +332,8 @@
 		<path>Aircraft/tu154b/Model/Services/Bus/Cobus_3000.xml</path>
 		<condition>
 			<and>
-				<property>sim/model/ground-services/bus2</property>
-				<property>sim/model/ground-services/chocks</property>
+				<property>services/buses/enable-2</property>
+				<property>services/chocks/enable</property>
 				<less-than>
 					<property>velocities/groundspeed-kt</property>
 					<value>1</value>
@@ -388,7 +367,7 @@
 			<sum>
 				<prod>
 					<difference>
-						<property>sim/model/ground-services/gnd-elev</property>
+						<property>services/gnd-elev</property>
 						<property>position/altitude-ft</property>
 					</difference>
 					<value>0.3048</value>

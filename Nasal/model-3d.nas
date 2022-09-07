@@ -65,9 +65,9 @@ var eng1_n1 = 0.0;
 var eng3_n1 = 0.0;
 var reverser1_node = props.globals.getNode("fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad");
 var reverser3_node = props.globals.getNode("fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad");
-var flap1_node = props.globals.getNode("/sim/model/rev-flaps/rev-flaps1");
-var flap3_node = props.globals.getNode("/sim/model/rev-flaps/rev-flaps3");
-var offset_node = props.globals.getNode("/sim/model/rev-flaps/rev-flaps-offset");
+var flap1_node = props.globals.getNode("tu154/rev-flaps/rev-flaps1");
+var flap3_node = props.globals.getNode("tu154/rev-flaps/rev-flaps3");
+var offset_node = props.globals.getNode("tu154/rev-flaps/rev-flaps-offset");
 
 reversers = func{
       if( eng1_n1_node.getValue() == nil ) { return; }
@@ -94,8 +94,8 @@ setlistener("/sim/model/rev-flaps/rev-flaps-offset", reversers);
 
 ############################### Groung services implementation ######################################
 var gndservs = func{
-      chockss = getprop("/sim/model/ground-services/chockss");
-      chocks = getprop("/sim/model/ground-services/chocks");
+      chockss = getprop("services/chocks/request");
+      chocks = getprop("services/chocks/enable");
       pb = getprop("/controls/gear/brake-parking");
       gs = getprop("/velocities/groundspeed-kt");
       if( chockss == nil ) { return; }
@@ -105,25 +105,25 @@ var gndservs = func{
 
       print ( gs );
 
-      if ( gs > 1 ) { chockss = 0; chocks = 0; setprop("/sim/model/ground-services/chockss", chockss); setprop("/sim/model/ground-services/chocks", chocks); }
+      if ( gs > 1 ) { chockss = 0; chocks = 0; setprop("services/chocks/request", chockss); setprop("services/chocks/enable", chocks); }
       if ( chockss == 1 and chocks == 0 and pb == 0 ) { chockss = 0; }
       if ( chockss == 1 and chocks == 0 and pb == 1 ) { chocks = 1; }
       if ( chockss == 1 and chocks == 1 and pb == 0 ) { pb = 1; }
       if ( chockss == 1 and chocks == 1 and pb == 1 ) { setprop("/controls/gear/brake-left", pb); setprop("/controls/gear/brake-right", pb); }
       if ( chockss == 0 ) { chocks = 0; }
 
-      setprop("/sim/model/ground-services/chockss", chockss);
-      setprop("/sim/model/ground-services/chocks", chocks);
+      setprop("services/chocks/request", chockss);
+      setprop("services/chocks/enable", chocks);
       setprop("/controls/gear/brake-parking", pb);
 }
-setlistener("/sim/model/ground-services/chockss", gndservs);
+setlistener("services/chocks/request", gndservs);
 setlistener("/controls/gear/brake-parking", gndservs);
 setlistener("/velocities/groundspeed-kt", gndservs);
 setlistener("/controls/gear/brake-left", gndservs);
 setlistener("/controls/gear/brake-right", gndservs);
 
 var catering_anim = func{
-      state = getprop("/sim/model/ground-services/cat-up");
+      state = getprop("services/catering/connect");
       if ( state == nil ) { return; }
 
       if ( state == 1 ) {
@@ -134,7 +134,7 @@ var catering_anim = func{
             time = 5 / 0.62 * getprop("/services/catering/position-norm");
             interpolate ("/services/catering/position-norm", 0, time);
       }
-} setlistener("/sim/model/ground-services/cat-up", catering_anim);
+} setlistener("services/catering/connect", catering_anim);
 
 #deicing_anim = func{
 #      setprop("/sim/model/ground-services/de-ice-p", 0);
@@ -144,7 +144,7 @@ var catering_anim = func{
 var deicing = func{
       crane = "services/deicing_truck/crane/position-norm";
       deice = "services/deicing_truck/deicing/position-norm";
-      state = getprop("/sim/model/ground-services/de-ice-pp");
+      state = getprop("services/deicing_truck/de-ice-pp");
       if ( state > 0 and state < 1) { interpolate(crane, 1, 14.9); }
       if ( state > 15 and state < 16 ) { 
       interpolate(deice, 1, 15);
@@ -154,28 +154,25 @@ var deicing = func{
       if ( state > 45 and state < 46 ) { interpolate(deice, 1, 15); }
       if ( state > 60 and state < 61 ) { interpolate(deice, 0, 15); }
       if ( state > 75 and state < 76 ) { interpolate(crane, 0, 15); }
-} setlistener("/sim/model/ground-services/de-ice-pp", deicing);
+} setlistener("services/deicing_truck/de-ice-pp", deicing);
 
-#ext_power_autoconnect = func{
-#      if ( getprop("/tu154/switches/APU-RAP-selector") == 2 ) { setprop("/sim/model/ground-services/ext-power", 1); }
-#} setlistener("/tu154/switches/APU-RAP-selector", ext_power_autoconnect);
 var external_power = func {
-      if ( getprop("/sim/model/ground-services/ext-power") == 1) {
+      if ( getprop("services/ext-power/enable") == 1) {
          setprop("/tu154/systems/electrical/suppliers/RAP/frequency", 400);
          setprop("/tu154/systems/electrical/suppliers/RAP/volts", 208); 
       } else {
          setprop("/tu154/systems/electrical/suppliers/RAP/frequency", 0);
          setprop("/tu154/systems/electrical/suppliers/RAP/volts", 0); 
       }
-}setlistener("/sim/model/ground-services/ext-power", external_power);
+}setlistener("services/ext-power/enable", external_power);
 
 var gnd_elev_ft = props.globals.getNode("/position/ground-elev-ft", 1);
 var rep_time_node = props.globals.getNode("/sim/replay/time", 1);
 var rep_time = getprop("/sim/replay/time");
 time = 0;
 var services_alt = func {
-      if (rep_time_node.getValue() == 0 and rep_time == 0 and getprop("/sim/model/ground-services/chockss")) {
-            setprop("/sim/model/ground-services/gnd-elev", gnd_elev_ft.getValue());
+      if (rep_time_node.getValue() == 0 and rep_time == 0 and getprop("services/chocks/request")) {
+            setprop("services/gnd-elev", gnd_elev_ft.getValue());
       }
       rep_time = rep_time_node.getValue();
 }

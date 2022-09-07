@@ -360,6 +360,12 @@ setlistener("/tu154/light/nav/blue", func (node) {
 
 
 ############################################# Model lights ############################################
+var vnesh = props.globals.getNode("sim/model/cabin-lighting/vnesh", 1);
+var vnesh_2 = props.globals.getNode("sim/model/cabin-lighting/vnesh-2", 1);
+var lamps = props.globals.getNode("sim/model/cabin-lighting/lamps", 1);
+var lamps_2 = props.globals.getNode("sim/model/cabin-lighting/lamps-2", 1);
+var prib = props.globals.getNode("sim/model/cabin-lighting/prib", 1);
+var prib_2 = props.globals.getNode("sim/model/cabin-lighting/prib-2", 1);
 light_rework = func{
       blue = getprop("tu154/light/panel/amb-blue");
       green = getprop("tu154/light/panel/amb-green");
@@ -383,3 +389,4 @@ light_rework = func{
 setlistener("tu154/light/panel/amb-blue", light_rework);
 setlistener("tu154/light/panel/amb-green", light_rework);
 setlistener("tu154/light/panel/amb-red", light_rework);
+light_rework();

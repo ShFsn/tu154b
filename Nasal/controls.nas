@@ -290,7 +290,7 @@ var autostart_helper_2 = func{
         interpolate("tu154/door/window-right", 0, 2);
 
 		# Remove gear chocks
-		setprop("/sim/model/ground-services/chockss", 0);
+		setprop("services/chocks/request", 0);
 
 	help.messenger("Autostart done");
 }

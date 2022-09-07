@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <adf n="0">
+    <!--Set instrumental error in deg here if you want-->
+    <error-deg type="double" >0.0</error-deg>
+    <mode type="string" >adf</mode>
+    <volume-norm type="double" >0.2</volume-norm>
+    <serviceable type="bool">false</serviceable>
+  </adf>
+  <adf n="1">
+    <error-deg type="double" >0.0</error-deg>
+    <mode type="string" >adf</mode>
+    <volume-norm type="double" >0.2</volume-norm>
+    <serviceable type="bool">false</serviceable>
+  </adf>
+  <altimeter n="0">
+    <serviceable type="bool" >true</serviceable>
+  </altimeter>
+  <altimeter n="1">
+    <serviceable type="bool" >true</serviceable>
+  </altimeter>
+  <nav n="0">
+    <volume type="double" >0.2</volume>
+  </nav>
+  <nav n="1">
+    <volume type="double" >0.2</volume>
+  </nav>
+  <nav n="2">
+    <frequencies>
+      <selected-mhz type="double">108.0</selected-mhz>
+      <standby-mhz type="double">111.70</standby-mhz>
+    </frequencies>
+    <radials>
+      <selected-deg type="double">0.0</selected-deg>
+    </radials>
+    <serviceable>true</serviceable>
+    <cdi>
+      <serviceable>true</serviceable>
+    </cdi>
+    <gs>
+      <serviceable>true</serviceable>
+    </gs>
+    <to-from>
+      <serviceable>true</serviceable>
+    </to-from>
+    <slaved-to-gps type="bool">false</slaved-to-gps>
+    <powered type="bool" >false</powered>
+    <volume type="double" >0.2</volume>
+  </nav>
+
+  <dme n="0">
+    <serviceable type="bool">false</serviceable>
+    <frequencies>
+      <selected-mhz type="double">115.8</selected-mhz>
+      <source>/instrumentation/dme[0]/frequencies/selected-mhz</source>
+    </frequencies>
+  </dme>
+  <dme n="1">
+    <serviceable type="bool">false</serviceable>
+    <frequencies>
+      <selected-mhz type="double">116.8</selected-mhz>
+      <source>/instrumentation/dme[1]/frequencies/selected-mhz</source>
+    </frequencies>
+  </dme>
+  <dme n="2">
+    <serviceable type="bool">false</serviceable>
+    <frequencies>
+      <source>/instrumentation/nav[2]/frequencies/selected-mhz</source>
+    </frequencies>
+  </dme>
+
+  <marker-beacon>
+    <serviceable type="bool" >false</serviceable>
+    <power-btn type="bool" >false</power-btn>
+    <audio-btn type="bool" >false</audio-btn>
+    <volume type="double" >0.0</volume>
+  </marker-beacon>
+
+  <turn-indicator>
+    <serviceable type="bool">false</serviceable>
+  </turn-indicator>
+
+  <tcas>                                <!-- http://wiki.flightgear.org/index.php/TCAS -->
+    <serviceable type="bool">true</serviceable>
+                                        <!-- TCAS ENABLE -->
+    <inputs>
+        <mode type="int">1</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+    </inputs>
+    <!--<voice>
+        <file-prefix type="string">Aircraft/MyAircraft/Sounds/tcas/</file-prefix>
+    </voice>-->
+    <speaker>                           <!-- Speaker Configuration -->
+      <max-dist> 2 </max-dist>          <!-- Max. distance where speaker is heard -->
+      <reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+      <volume> 1.0 </volume>            <!-- Volume at reference distance -->
+    </speaker>
+  </tcas>
+
+  <ND>
+    <show type="bool">true</show>
+  </ND>
+
+</PropertyList>

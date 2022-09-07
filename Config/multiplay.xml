@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <generic>
+    <int n="0" alias="/tu154/light/nav/blue"/>
+    <int n="1" alias="/tu154/light/nav/green"/>
+    <int n="2" alias="/tu154/light/nav/red"/>
+    <int n="3" alias="/gear/gear[0]/tyre-smoke"/>
+    <int n="4" alias="/gear/gear[1]/tyre-smoke"/>
+    <int n="5" alias="/gear/gear[2]/tyre-smoke"/>
+    <int n="6" alias="/tu154/light/strobe/strobe_1"/>
+    <int n="7" alias="/tu154/light/strobe/strobe_2"/>
+    <int n="8" alias="/tu154/contrail/smoke1"/>
+    <int n="9" alias="/tu154/contrail/smoke2"/>
+    <int n="10" alias="/tu154/contrail/smoke3"/>
+    <int n="11" alias="/tu154/contrail/contrail1"/>
+    <int n="12" alias="/tu154/contrail/contrail2"/>
+    <int n="13" alias="/tu154/contrail/contrail3"/>
+    <int n="14" alias="/tu154/contrail/condensation"/>
+  </generic>
+
+</PropertyList>

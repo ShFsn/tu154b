@@ -6945,7 +6945,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rev_flap_lu</object-name>
-  <property>sim/model/rev-flaps/rev-flaps1</property>
+  <property>tu154/rev-flaps/rev-flaps1</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.29</x-m>
@@ -6961,7 +6961,7 @@
 <animation>
   <type>rotate</type>
   <object-name>rev_flap_ld</object-name>
-  <property>sim/model/rev-flaps/rev-flaps1</property>
+  <property>tu154/rev-flaps/rev-flaps1</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.3</x-m>
@@ -6976,7 +6976,7 @@
 </animation><animation>
   <type>rotate</type>
   <object-name>rev_flap_ru</object-name>
-  <property>sim/model/rev-flaps/rev-flaps3</property>
+  <property>tu154/rev-flaps/rev-flaps3</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.29</x-m>
@@ -6992,7 +6992,7 @@
 <animation>
   <type>rotate</type>
   <object-name>rev_flap_rd</object-name>
-  <property>sim/model/rev-flaps/rev-flaps3</property>
+  <property>tu154/rev-flaps/rev-flaps3</property>
   <factor>28.65</factor>
   <center>
     <x-m>11.3</x-m>

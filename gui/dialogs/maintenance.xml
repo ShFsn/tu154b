@@ -7,9 +7,9 @@
   <nasal>
     <open>
       deicing_anim = func{
-        setprop("/sim/model/ground-services/de-ice-p", 0);
-        setprop("/sim/model/ground-services/de-ice-pp", 0);
-        interpolate ("/sim/model/ground-services/de-ice-pp", 90, 90);
+        setprop("services/deicing_truck/de-ice-p", 0);
+        setprop("services/deicing_truck/de-ice-pp", 0);
+        interpolate ("services/deicing_truck/de-ice-pp", 90, 90);
       }
     </open>
 
@@ -67,7 +67,7 @@
     <checkbox>
       <halign>left</halign>
       <label>Gear Chocks</label>
-      <property>/sim/model/ground-services/chockss</property>
+      <property>services/chocks/request</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
@@ -91,14 +91,14 @@
     <checkbox>
       <halign>left</halign>
       <label>Stairway 2L</label>
-      <property>/sim/model/ground-services/stairs</property>
+      <property>services/stairways/enable</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
     <checkbox>
       <halign>left</halign>
       <label>Stairway Cover</label>
-      <property>/sim/model/ground-services/st-cover</property>
+      <property>services/stairways/cover</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
@@ -107,14 +107,14 @@
     <checkbox>
       <halign>left</halign>
       <label>Bus Middle</label>
-      <property>/sim/model/ground-services/bus2</property>
+      <property>services/buses/enable-2</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
     <checkbox>
       <halign>left</halign>
       <label>Bus Front</label>
-      <property>/sim/model/ground-services/bus1</property>
+      <property>services/buses/enable-1</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
@@ -134,14 +134,14 @@
     <checkbox>
       <halign>left</halign>
       <label>Front Baggage Ramp</label>
-      <property>/sim/model/ground-services/f-buggage</property>
+      <property>services/buggage/enable-f</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
     <checkbox>
       <halign>left</halign>
       <label>Rear Baggage Ramp</label>
-      <property>/sim/model/ground-services/r-buggage</property>
+      <property>services/buggage/enable-r</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
@@ -161,14 +161,14 @@
     <checkbox>
       <halign>left</halign>
       <label>Catering Truck</label>
-      <property>/sim/model/ground-services/catering</property>
+      <property>services/catering/enable</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
     <checkbox>
       <halign>left</halign>
       <label>Connect Catering</label>
-      <property>/sim/model/ground-services/cat-up</property>
+      <property>services/catering/connect</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
@@ -188,7 +188,7 @@
     <checkbox>
       <halign>left</halign>
       <label>De-Icing Truck</label>
-      <property>/sim/model/ground-services/de-ice</property>
+      <property>services/deicing_truck/enable</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
@@ -216,7 +216,7 @@
     <checkbox>
       <halign>left</halign>
       <label>External Power Unit (RAP)</label>
-      <property>/sim/model/ground-services/ext-power</property>
+      <property>services/ext-power/enable</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
@@ -250,14 +250,14 @@
     <checkbox>
       <halign>left</halign>
       <label>Fuel Truck</label>
-      <property>/sim/model/ground-services/fuel-r</property>
+      <property>services/fuel-truck/enable</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>
     <checkbox>
       <halign>left</halign>
       <label>Fuel Truck Connect</label>
-      <property>/sim/model/ground-services/f-connect-r</property>
+      <property>services/fuel-truck/connect</property>
       <live>true</live>
       <binding><command>dialog-apply</command></binding>
     </checkbox>

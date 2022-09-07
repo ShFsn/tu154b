@@ -10,7 +10,7 @@
   <object-name>clickspot_up</object-name>
   <object-name>clickspot_down</object-name>
   <condition>
-    <not><property>/sim/model/constants/one</property></not>
+    <not><property>tu154/constants/one</property></not>
   </condition>
 </animation>
 

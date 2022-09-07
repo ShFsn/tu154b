@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <chocks>
+    <enable type="bool">true</enable>
+    <request type="bool">true</request>
+  </chocks>
+
+  <stairways>
+    <enable type="bool">false</enable>
+    <cover type="bool">false</cover>
+  </stairways>
+
+  <buses>
+    <enable-1 type="bool">false</enable-1>
+    <enable-2 type="bool">false</enable-2>
+  </buses>
+
+  <baggage>
+    <enable-f type="bool">false</enable-f>
+    <enable-r type="bool">false</enable-r>
+  </baggage>
+
+  <catering>
+    <enable type="bool">false</enable>
+    <connect type="bool">false</connect>
+    <position-norm type="double">0</position-norm>
+  </catering>
+
+  <deicing_truck>
+    <enable type="bool">false</enable>
+    <de-ice-p type="bool">false</de-ice-p>
+    <de-ice-pp type="double">0</de-ice-pp>
+    <crane>
+      <position-norm type="double">0</position-norm>
+    </crane>
+    <deicing>
+      <position-norm type="double">0</position-norm>
+    </deicing>
+    <truck>
+      <position-norm type="double">0</position-norm>
+    </truck>
+  </deicing_truck>
+
+  <ext-power>
+    <enable type="bool">false</enable>
+  </ext-power>
+
+  <fuel-truck>
+    <enable type="bool">false</enable>
+    <connect type="bool">false</connect>
+  </fuel-truck>
+  
+  <gnd-elev type="double">0.0</gnd-elev>
+
+</PropertyList>
