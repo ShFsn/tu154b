@@ -390,3 +390,44 @@ setlistener("tu154/light/panel/amb-blue", light_rework);
 setlistener("tu154/light/panel/amb-green", light_rework);
 setlistener("tu154/light/panel/amb-red", light_rework);
 light_rework();
+
+
+
+
+
+#################################### Cabin indicators and lamps ######################################
+lampsDT = 0.1;
+
+# Not ready for TO
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_notready", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/warning/not-ready/state")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/warning/not-ready/state", func(){interpolate("tu154/lamps_lm/ind_notready", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/warning/not-ready/state")), lampsDT);}, 0, 0);
+# False trim
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_falsetrim", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/wrong-trim")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/wrong-trim", func(){interpolate("tu154/lamps_lm/ind_falsetrim", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/wrong-trim")), lampsDT);}, 0, 0);
+# Bank
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_bank", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/bank")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/bank", func(){interpolate("tu154/lamps_lm/ind_bank", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/bank")), lampsDT);}, 0, 0);
+# Pitch
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_pitch", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/pitch")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/pitch", func(){interpolate("tu154/lamps_lm/ind_pitch", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/pitch")), lampsDT);}, 0, 0);
+# Autopilot fail
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_ap_fail", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/autopilot")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/autopilot", func(){interpolate("tu154/lamps_lm/ind_ap_fail", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/autopilot")), lampsDT);}, 0, 0);
+# Autothrottle fail
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_atfail", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/at-failure")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/at-failure", func(){interpolate("tu154/lamps_lm/ind_atfail", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/at-failure")), lampsDT);}, 0, 0);
+# Approach horizontal
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_app_h", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/wrong-approach-h")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/wrong-approach-h", func(){interpolate("tu154/lamps_lm/ind_app_h", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/wrong-approach-h")), lampsDT);}, 0, 0);
+# Approach vertical
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_app_v", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/wrong-approach-v")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/wrong-approach-v", func(){interpolate("tu154/lamps_lm/ind_app_v", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/wrong-approach-v")), lampsDT);}, 0, 0);
+# Fire
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_fire", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/fire")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/electrical/indicators/fire", func(){interpolate("tu154/lamps_lm/ind_fire", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/electrical/indicators/fire")), lampsDT);}, 0, 0);
+# Danger 1
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_danger_1", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/warning/iso/state")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/warning/iso/state", func(){interpolate("tu154/lamps_lm/ind_danger_1", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/warning/iso/state")), lampsDT);}, 0, 0);
+# Danger 2
+setlistener("tu154/systems/electrical/checking-lamps/main-panel", func(){interpolate("tu154/lamps_lm/ind_danger_2", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/warning/iso/state")), lampsDT);}, 0, 0);
+setlistener("tu154/systems/warning/iso/state", func(){interpolate("tu154/lamps_lm/ind_danger_2", math.max(getprop("tu154/systems/electrical/checking-lamps/main-panel"), getprop("tu154/systems/warning/iso/state")), lampsDT);}, 0, 0);

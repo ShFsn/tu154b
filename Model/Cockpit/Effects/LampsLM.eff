@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+ <inherits-from>Effects/model-combined-deferred</inherits-from>
+ <parameters>
+  <reflection-enabled type="int">1</reflection-enabled>
+  <reflect-map-enabled type="int">0</reflect-map-enabled>
+  <reflection-dynamic type="int">0</reflection-dynamic>
+  <reflection-fresnel type="float">0.5</reflection-fresnel>
+  <reflection-rainbow type="float">0.3</reflection-rainbow>
+  <reflection-correction type="float">0.0</reflection-correction>
+  <lightmap-enabled type="int">1</lightmap-enabled>
+  <lightmap-multi type="int">0</lightmap-multi>
+  <lightmap-color type="vec3d" n="0">4.0 4.0 4.0</lightmap-color>
+  <texture n="3">
+   <image>Effects/indicators_lamps_lm.png</image>
+  </texture>
+ </parameters>
+</PropertyList>
