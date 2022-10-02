@@ -551,8 +551,23 @@
                 <min>-0.506</min>
                 <max>0.28</max>
               </range>
-              <output>fcs/elevator-pos-rad</output>
+              <output>fcs/elevator-pos-raw</output>
             </aerosurface_scale>
+
+            <kinematic name="Elevator filter">
+             <input>fcs/elevator-pos-raw</input>
+              <traverse>
+                <setting>
+                  <position>-1</position>
+                  <time>0</time>
+                </setting>
+                <setting>
+                  <position>1</position>
+                  <time>0.5</time>
+                </setting>
+              </traverse>
+              <output>fcs/elevator-pos-rad</output>
+            </kinematic>
             
             <aerosurface_scale name="Elevator Normalizer">
               <input>fcs/elevator-pos-rad</input>
@@ -609,7 +624,7 @@
                 <min>-0.35</min>
                 <max>0.35</max>
               </range>
-              <output>fcs/left-aileron-pos-rad</output>
+              <output>fcs/left-aileron-pos-raw</output>
             </aerosurface_scale>
 
             <aerosurface_scale name="Right Aileron Control">
@@ -620,6 +635,21 @@
               </range>
               <output>fcs/right-aileron-pos-rad</output>
             </aerosurface_scale>
+
+            <kinematic name="Aileron filter">
+             <input>fcs/left-aileron-pos-raw</input>
+              <traverse>
+                <setting>
+                  <position>-1</position>
+                  <time>0</time>
+                </setting>
+                <setting>
+                  <position>1</position>
+                  <time>0.5</time>
+                </setting>
+              </traverse>
+              <output>fcs/left-aileron-pos-rad</output>
+            </kinematic>
             
             <aerosurface_scale name="Aileron Normalizer">
               <input>fcs/left-aileron-pos-rad</input>
@@ -668,8 +698,23 @@
                 <min>-0.4363</min>
                 <max>0.4363</max>
               </range>
-              <output>fcs/rudder-pos-rad</output>
+              <output>fcs/rudder-pos-raw</output>
             </aerosurface_scale>
+
+            <kinematic name="Rudder filter">
+             <input>fcs/rudder-pos-raw</input>
+              <traverse>
+                <setting>
+                  <position>-1</position>
+                  <time>0</time>
+                </setting>
+                <setting>
+                  <position>1</position>
+                  <time>0.5</time>
+                </setting>
+              </traverse>
+              <output>fcs/rudder-pos-rad</output>
+            </kinematic>
             
             <aerosurface_scale name="Rudder Normalizer">
               <input>fcs/rudder-pos-rad</input>
