@@ -212,6 +212,16 @@
     <object-name>RightWindowGlassExt</object-name>
  </effect>
 
+ <!-- Model shaders -->
+ <effect include="exterior_combined.xml">
+    <inherits-from>Effects/model-combined</inherits-from>
+ </effect>
+
+ <!-- Interior Model shaders TEMPORARY -->
+ <effect include="interior_combined.xml">
+    <inherits-from>Effects/model-combined</inherits-from>
+ </effect>
+
 <!-- 
 
   Load all 3D models of instruments.
