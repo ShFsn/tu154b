@@ -221,12 +221,12 @@
   </nasal>
 
 
- <name>airports-summary</name>
+ <name>t154-aerodromes-summary</name>
  <layout>vbox</layout>
  <group>
   <layout>hbox</layout>
   <text>
-   <label>Airports Summary</label>
+   <label>Aerodromes Summary</label>
   </text>
   <empty>
    <stretch>true</stretch>

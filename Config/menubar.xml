@@ -52,10 +52,10 @@
       </item>
 
       <item>
-        <label>Airports Summary</label>
+        <label>Aerodromes Summary</label>
         <binding>
           <command>dialog-show</command>
-          <dialog-name>airports-summary</dialog-name>
+          <dialog-name>t154-aerodromes-summary</dialog-name>
         </binding>
       </item>
 
