@@ -51,7 +51,7 @@
 <animation>
   <type>rotate</type>
   <object-name>stab_manu_cover</object-name>  
-  <property>tu154/switches/stab-manu-cover</property>
+  <property>controls/cockpit/glare/animations/stab-manu-cover</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
@@ -73,17 +73,13 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        var pos = getprop("tu154/switches/stab-manu-cover");
-        if( pos == nil ) pos = 0.0;
-        if( pos == 0.0 ) pos = 1.0; else pos = 0.0;
-        setprop("tu154/switches/stab-manu-cover", pos);
-        setprop("fdm/jsbsim/fcs/stab-manu-switch", pos);
-        pos = getprop("fdm/jsbsim/fcs/stabilizer-auto-pos");
-        if( pos == nil ) pos = 0.0;
-        setprop("fdm/jsbsim/fcs/stab-manu-cmd", pos);
-      </script>
+      <command>property-toggle</command>
+      <property>fdm/jsbsim/fcs/stab-manu-switch</property>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>fdm/jsbsim/fcs/stab-manu-cmd</property>
+      <property>fdm/jsbsim/fcs/stabilizer-auto-pos</property>
     </binding>
   </action>
 </animation>
@@ -92,7 +88,7 @@
 <animation>
   <type>rotate</type>
   <object-name>stab_auto_handle</object-name>
-  <property>tu154/switches/stab-auto-handle</property>
+  <property>controls/cockpit/glare/animations/stab-auto-handle</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-30.0</dep></entry>
     <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
@@ -110,78 +106,18 @@
   </axis>
 </animation>
 <animation>
-  <type>pick</type>
-  <object-name>stab_auto_handle</object-name>  
-  <visible>true</visible>
+  <type>knob</type>
+  <object-name>stab_auto_handle</object-name>
   <action>
-    <button>1</button>
-    <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        var pos = getprop("tu154/switches/stab-auto-handle");
-        if( pos == nil ) pos = 0.0;
-        pos = pos + 1.0;
-        if( pos == 3.0 ) pos = 2.0;
-        setprop("tu154/switches/stab-auto-handle", pos);
-        if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
-        	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
-        else if( pos > getprop("fdm/jsbsim/fcs/stab-auto-cmd") ) 
-        	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
-      </script>
+      <command>property-cycle</command>
+      <property>fdm/jsbsim/fcs/stab-auto-cmd</property>
+      <value>2.0</value>
+      <value>1.0</value>
+      <value>0.0</value>
+      <wrap>false</wrap>
     </binding>
   </action>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        var pos = getprop("tu154/switches/stab-auto-handle");
-        if( pos == nil ) pos = 0.0;
-        pos = pos - 1.0;
-        if( 0.0 > pos ) pos = 0.0;
-        setprop("tu154/switches/stab-auto-handle", pos);
-        if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
-        	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
-      </script>
-    </binding>
-  </action>
-  <action>
-    <button>4</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        var pos = getprop("tu154/switches/stab-auto-handle");
-        if( pos == nil ) pos = 0.0;
-        pos = pos + 1.0;
-        if( pos == 3.0 ) pos = 2.0;
-        setprop("tu154/switches/stab-auto-handle", pos);
-        if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
-	        setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
-        else if( pos > getprop("fdm/jsbsim/fcs/stab-auto-cmd") ) 
-        	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
-      </script>
-    </binding>
-  </action>
-  <action>
-    <button>3</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>nasal</command>
-      <script>
-        var pos = getprop("tu154/switches/stab-auto-handle");
-        if( pos == nil ) pos = 0.0;
-        pos = pos - 1.0;
-        if( 0.0 > pos ) pos = 0.0;
-        setprop("tu154/switches/stab-auto-handle", pos);
-        if( getprop("fdm/jsbsim/fcs/flap-cmd-norm") == 0.0 ) 
-        	setprop("fdm/jsbsim/fcs/stab-auto-cmd", pos);
-      </script>
-    </binding>
-  </action>
-
 </animation>
 
 
@@ -189,7 +125,7 @@
 <animation>
   <type>rotate</type>
   <object-name>stab_manu_lever</object-name>
-  <property>tu154/switches/stab-manu-selector</property>  
+  <property>controls/cockpit/glare/animations/stab-manu-selector</property>  
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-20.0</dep></entry>
     <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
@@ -215,20 +151,17 @@
     <button>0</button>
     <repeatable>true</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        setprop("tu154/switches/stab-manu-selector", 2.0);
-        if( 1.0 > getprop("fdm/jsbsim/fcs/stab-manu-cmd") ) controls.slewProp("fdm/jsbsim/fcs/stab-manu-cmd",0.1);
-      </script>
+      <command>property-assign</command>
+      <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+      <value>2.0</value>
     </binding>
-  <mod-up>
-    <binding>
-      <command>nasal</command>
-      <script>
-        setprop("tu154/switches/stab-manu-selector", 1.0);
-      </script>
-    </binding>
-  </mod-up>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+        <value>1.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 <animation>
@@ -239,18 +172,15 @@
     <button>0</button>
     <repeatable>true</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        setprop("tu154/switches/stab-manu-selector", 0.0);
-        if( getprop("fdm/jsbsim/fcs/stab-manu-cmd") > 0.0 ) controls.slewProp("fdm/jsbsim/fcs/stab-manu-cmd",-0.1);
-      </script>
+      <command>property-assign</command>
+      <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+      <value>0.0</value>
     </binding>
     <mod-up>
       <binding>
-        <command>nasal</command>
-        <script>
-          setprop("tu154/switches/stab-manu-selector", 1.0);
-        </script>
+        <command>property-assign</command>
+        <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+        <value>1.0</value>
       </binding>
     </mod-up>
   </action>
@@ -261,535 +191,191 @@
 
 <!--*************************** Indicators ***************************-->
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_notready_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/warning/not-ready/state</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_notready</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_notready_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/warning/not-ready/state</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_notready_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/warning/not-ready/state</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_notready_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_notready</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_notready</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_falsetrim_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/wrong-trim</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_falsetrim</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_falsetrim_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/wrong-trim</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_falsetrim_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/wrong-trim</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_falsetrim_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_falsetrim</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_falsetrim</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_bank_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/bank</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_bank</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_bank_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/bank</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_bank_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/bank</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_bank_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_bank</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_bank</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_pitch_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/pitch</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_pitch</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_pitch_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/pitch</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_pitch_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/pitch</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_pitch_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_pitch</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_pitch</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_ap_fail_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/autopilot</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_ap_fail</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_ap_fail_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/autopilot</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_ap_fail_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/autopilot</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_ap_fail_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_ap_fail</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_ap_fail</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_atfail_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/at-failure</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_atfail</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_atfail_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/at-failure</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_atfail_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/at-failure</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_atfail_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_atfail</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_atfail</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_app_h_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/wrong-approach-h</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_app_h</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_app_h_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/wrong-approach-h</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_app_h_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/wrong-approach-h</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_app_h_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_app_h</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_app_h</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_app_v_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/wrong-approach-v</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_app_v</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_app_v_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/wrong-approach-v</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_app_v_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/wrong-approach-v</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_app_v_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_app_v</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_app_v</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_fire_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/fire</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_fire</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_fire_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/electrical/indicators/fire</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_fire_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/electrical/indicators/fire</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_fire_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_fire</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_fire</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_danger_1_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/warning/iso/state</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_danger_1</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_danger_1_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/warning/iso/state</property>
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_danger_1_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/warning/iso/state</property>
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_danger_1_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_danger_1</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_danger_1</use></lightmap-factor></parameters>
 </effect>
 
-<animation include="Effects/LampsOff.xml">
+<animation include="Effects/LampsEmis.xml">
   <object-name>ind_danger_2_light</object-name>
-  <condition>
-    <and>
-      <not><property>tu154/light/compositor-on</property></not>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/warning/iso/state</property>
-          <!--<property>tu154/systems/electrical/indicators/danger</property>-->
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
+  <condition><not><property>sim/rendering/shaders/model</property></not></condition>
+  <emission>
+    <factor-prop>tu154/lamps/ind_danger_2</factor-prop>
+  </emission>
 </animation>
-<animation include="Effects/LampsBasic.xml">
+<animation include="Effects/Lamps.xml">
   <object-name>ind_danger_2_light</object-name>
-  <condition>
-    <and>
-      <property>tu154/light/compositor-on</property>
-      <or>
-        <not><or>
-          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-          <property>tu154/systems/warning/iso/state</property>
-          <!--<property>tu154/systems/electrical/indicators/danger</property>-->
-        </or></not>
-        <property>sim/rendering/shaders/model</property>
-      </or>
-    </and>
-  </condition>
-</animation>
-<animation include="Effects/LampsOn.xml">
-  <object-name>ind_danger_2_light</object-name>
-  <condition>
-    <and>
-      <not><property>sim/rendering/shaders/model</property></not>
-      <or>
-        <property>tu154/systems/electrical/checking-lamps/main-panel</property>
-        <property>tu154/systems/warning/iso/state</property>
-        <!--<property>tu154/systems/electrical/indicators/danger</property>-->
-      </or>
-    </and>
-  </condition>
+  <condition><property>sim/rendering/shaders/model</property></condition>
 </animation>
 <effect>
   <object-name>ind_danger_2_light</object-name>
   <inherits-from>Effects/LampsLM</inherits-from>
-  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps_lm/ind_danger_2</use></lightmap-factor></parameters>
+  <parameters><lightmap-factor type="float" n="0"><use>tu154/lamps/ind_danger_2</use></lightmap-factor></parameters>
 </effect>
 
 </PropertyList>

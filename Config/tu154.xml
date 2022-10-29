@@ -299,8 +299,6 @@
     <usvp-selector type="double" >0.0</usvp-selector>
     <v-51-selector-1 type="double" >0</v-51-selector-1>
     <v-51-selector-2 type="double" >0</v-51-selector-2>
-    <stab-manu-selector type="double" >1.0</stab-manu-selector>
-    <stab-auto-handle type="double" >1.0</stab-auto-handle>
     <busters-cover type="double" >1.0</busters-cover>
     <startpanel-cover type="double" >0.0</startpanel-cover>
     <startpanel-cold type="double" >0.0</startpanel-cold>

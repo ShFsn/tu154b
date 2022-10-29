@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<PropertyList include="LampsBasic.xml">
+<PropertyList include="Lamps.xml">
+  <type>material</type>
   <emission>
     <red>1.0</red>
     <green>1.0</green>

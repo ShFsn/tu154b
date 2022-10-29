@@ -16,6 +16,7 @@
   <nasal include="Aircraft/tu154b/Config/nasal.xml"/>                             <!--Enabled Nasal Modules-->
   <instrumentation include="Aircraft/tu154b/Config/instrumentation-global.xml"/>  <!--Main instrumentation prop tree config-->
   <services include="Aircraft/tu154b/Config/services.xml"/>                       <!--Ground services prop tree config-->
+  <controls include="Aircraft/tu154b/Config/controls.xml"/>                       <!--Controls prop tree config-->
 
 
 
@@ -267,6 +268,10 @@
       <property-rule>
         <path>Aircraft/tu154b/Systems/property-rules.xml</path>
       </property-rule>
+      
+      <autopilot>
+        <path>Aircraft/tu154b/Systems/Animations/property-rules.xml</path>
+      </autopilot>
 
       <wingflexer include="Systems/wingflexer-params.xml">
         <!--<property-rule n="100">
@@ -408,13 +413,6 @@
     </fuel>
   </consumables>
 
-  <controls>
-    <gear>
-      <steering>63.0</steering>
-      <nose-wheel-steering type="bool">false</nose-wheel-steering>
-    </gear>
-  </controls>
-
   <fdm>
     <jsbsim>
       <external_reactions n="0">
@@ -461,9 +459,10 @@
         <gear-cmd-static type="double">1.0</gear-cmd-static>
       </gear>
       <fcs>
-        <stabilizer-cmd-norm>0.0</stabilizer-cmd-norm>
-        <stab-manu-cmd>0.0</stab-manu-cmd>
-        <stab-auto-cmd>1.0</stab-auto-cmd>
+        <stabilizer-cmd-norm type="double">0.0</stabilizer-cmd-norm>
+        <stab-manu-cmd type="double">0.0</stab-manu-cmd>
+        <stab-auto-cmd type="double">1.0</stab-auto-cmd>
+        <stab-manu-switch type="double">0.0</stab-manu-switch>
 
         <revers-by-joy type="double">0.0</revers-by-joy>
         <revers-1-limit type="double">0.1</revers-1-limit>

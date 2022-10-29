@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <inputs>
+    <stab-manu-selector type="double">1.0</stab-manu-selector>
+  </inputs>
+
+  <!--<animations>
+  </animations>-->
+
+</PropertyList>

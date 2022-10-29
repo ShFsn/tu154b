@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Aircraft/tu154b/Systems/Animations/glare.xml">
+
+  <!--
+    This file is used for further chain-like modules uncluding.
+    The current chain is:
+    [here] <- [glare]
+  -->
+
+</PropertyList>

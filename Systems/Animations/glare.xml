@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <filter>
+    <name>Manual stab control cover</name>
+    <type>moving-average</type>
+    <samples>15</samples>
+    <input>fdm/jsbsim/fcs/stab-manu-switch</input>
+    <output>controls/cockpit/glare/animations/stab-manu-cover</output>
+  </filter>
+
+  <filter>
+    <name>Auto stab control handle</name>
+    <type>moving-average</type>
+    <samples>15</samples>
+    <input>fdm/jsbsim/fcs/stab-auto-cmd</input>
+    <output>controls/cockpit/glare/animations/stab-auto-handle</output>
+  </filter>
+
+  <filter>
+    <name>Auto stab control handle</name>
+    <type>moving-average</type>
+    <samples>5</samples>
+    <input>controls/cockpit/glare/inputs/stab-manu-selector</input>
+    <output>controls/cockpit/glare/animations/stab-manu-selector</output>
+  </filter>
+
+  <filter>
+    <name>Manual stab property slew</name>
+    <type>gain</type>
+    <gain>1.0</gain>
+    <input>
+      <expression>
+        <max>
+          <min>
+            <sum>
+              <property>fdm/jsbsim/fcs/stab-manu-cmd</property>
+              <product>
+                <difference>
+                  <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+                  <value>1.0</value>
+                </difference>
+                <value>0.0004</value>
+              </product>
+            </sum>
+            <value>1.0</value>
+          </min>
+          <value>0.0</value>
+        </max>
+      </expression>
+    </input>
+    <output>fdm/jsbsim/fcs/stab-manu-cmd</output>
+  </filter>
+
+
+  <filter>
+    <name>Not ready for TO</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/warning/not-ready/state</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_notready</output>
+  </filter>
+
+  <filter>
+    <name>False trim</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/wrong-trim</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_falsetrim</output>
+  </filter>
+
+  <filter>
+    <name>Bank</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/bank</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_bank</output>
+  </filter>
+
+  <filter>
+    <name>Pitch</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/pitch</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_pitch</output>
+  </filter>
+
+  <filter>
+    <name>Autopilot fail</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/autopilot</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_ap_fail</output>
+  </filter>
+
+  <filter>
+    <name>Autothrottle fail</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/at-failure</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_atfail</output>
+  </filter>
+
+  <filter>
+    <name>Approach horizontal</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/wrong-approach-h</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_app_h</output>
+  </filter>
+
+  <filter>
+    <name>Approach vertical</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/wrong-approach-v</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_app_v</output>
+  </filter>
+
+  <filter>
+    <name>Fire</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/electrical/indicators/fire</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_fire</output>
+  </filter>
+
+  <filter>
+    <name>Danger 1</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/warning/iso/state</property>
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_danger_1</output>
+  </filter>
+
+  <filter>
+    <name>Danger 2</name>
+    <type>moving-average</type>
+    <samples>12</samples>
+    <input>
+      <expression>
+        <max>
+          <property>tu154/systems/electrical/checking-lamps/main-panel</property>
+          <property>tu154/systems/warning/iso/state</property>
+          <!--<property>tu154/systems/electrical/indicators/danger</property>-->
+          <product>
+            <difference>
+              <value>1.0</value>
+              <property>sim/rendering/shaders/model</property>
+            </difference>
+            <value>0.5</value>
+            <property>sim/model/cabin-lighting/vnesh-2</property>
+          </product>
+        </max>
+      </expression>
+    </input>
+    <output>tu154/lamps/ind_danger_2</output>
+  </filter>
+
+</PropertyList>
