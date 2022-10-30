@@ -900,7 +900,32 @@
               <min>0.0</min>
               <max>1.0</max>
             </clipto>
-          </scheduled_gain>     
+          </scheduled_gain>
+          
+          <switch name="fcs/stab-manu-tgt">
+            <default value="fcs/stabilizer-control-raw"/>
+            <test value="1.0">
+              fcs/stab-manu-selector eq 2.0
+            </test>
+            <test value="0.0">
+              fcs/stab-manu-selector eq 0.0
+            </test>
+          </switch>
+
+          <kinematic name="fcs/stab-manu-cmd">
+	    <input>fcs/stab-manu-tgt</input>
+<!--<input>fcs/stabilizer-cmd-norm</input>-->
+              <traverse>
+                <setting>
+                  <position>0.0</position>
+                  <time>0</time>
+                </setting>
+                <setting>
+                  <position>1.0</position>
+                  <time>15</time>
+                </setting>
+              </traverse>
+          </kinematic>
           
           <switch name="Stabilizer Cmd">
             <default value="fcs/stabilizer-auto-pos"/>
@@ -909,7 +934,7 @@
             </test>
           </switch>
           
-            <kinematic name="Stabilizer Control">
+            <kinematic name="Stabilizer Control Raw">
 	    <input>fcs/stabilizer-cmd</input>
 <!--<input>fcs/stabilizer-cmd-norm</input>-->
               <traverse>
@@ -918,11 +943,16 @@
                   <time>0</time>
                 </setting>
                 <setting>
-                  <position>0.09602</position>
+                  <position>1.0</position>
                   <time>15</time>
                 </setting>
               </traverse>
             </kinematic>
+          
+            <pure_gain name="Stabilizer Control">
+	            <input>fcs/stabilizer-control-raw</input>
+              <gain>0.09602</gain>
+            </pure_gain>
             
             <summer name="Stabilizer rad">
               <bias>0.02618</bias>

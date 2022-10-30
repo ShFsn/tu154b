@@ -4,60 +4,33 @@
 
   <filter>
     <name>Manual stab control cover</name>
-    <type>moving-average</type>
-    <samples>15</samples>
+    <type>noise-spike</type>
+    <max-rate-of-change>8.0</max-rate-of-change>
     <input>fdm/jsbsim/fcs/stab-manu-switch</input>
     <output>controls/cockpit/glare/animations/stab-manu-cover</output>
   </filter>
 
   <filter>
     <name>Auto stab control handle</name>
-    <type>moving-average</type>
-    <samples>15</samples>
+    <type>noise-spike</type>
+    <max-rate-of-change>8.0</max-rate-of-change>
     <input>fdm/jsbsim/fcs/stab-auto-cmd</input>
     <output>controls/cockpit/glare/animations/stab-auto-handle</output>
   </filter>
 
   <filter>
-    <name>Auto stab control handle</name>
-    <type>moving-average</type>
-    <samples>5</samples>
-    <input>controls/cockpit/glare/inputs/stab-manu-selector</input>
+    <name>Manual stab switch</name>
+    <type>noise-spike</type>
+    <max-rate-of-change>24.0</max-rate-of-change>
+    <input>fdm/jsbsim/fcs/stab-manu-selector</input>
     <output>controls/cockpit/glare/animations/stab-manu-selector</output>
-  </filter>
-
-  <filter>
-    <name>Manual stab property slew</name>
-    <type>gain</type>
-    <gain>1.0</gain>
-    <input>
-      <expression>
-        <max>
-          <min>
-            <sum>
-              <property>fdm/jsbsim/fcs/stab-manu-cmd</property>
-              <product>
-                <difference>
-                  <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
-                  <value>1.0</value>
-                </difference>
-                <value>0.0004</value>
-              </product>
-            </sum>
-            <value>1.0</value>
-          </min>
-          <value>0.0</value>
-        </max>
-      </expression>
-    </input>
-    <output>fdm/jsbsim/fcs/stab-manu-cmd</output>
   </filter>
 
 
   <filter>
     <name>Not ready for TO</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -79,8 +52,8 @@
 
   <filter>
     <name>False trim</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -102,8 +75,8 @@
 
   <filter>
     <name>Bank</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -125,8 +98,8 @@
 
   <filter>
     <name>Pitch</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -148,8 +121,8 @@
 
   <filter>
     <name>Autopilot fail</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -171,8 +144,8 @@
 
   <filter>
     <name>Autothrottle fail</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -194,8 +167,8 @@
 
   <filter>
     <name>Approach horizontal</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -217,8 +190,8 @@
 
   <filter>
     <name>Approach vertical</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -240,8 +213,8 @@
 
   <filter>
     <name>Fire</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -263,8 +236,8 @@
 
   <filter>
     <name>Danger 1</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>
@@ -286,8 +259,8 @@
 
   <filter>
     <name>Danger 2</name>
-    <type>moving-average</type>
-    <samples>12</samples>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
     <input>
       <expression>
         <max>

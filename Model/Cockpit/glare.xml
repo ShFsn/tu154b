@@ -149,16 +149,16 @@
   <visible>false</visible>
   <action>
     <button>0</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-assign</command>
-      <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+      <property>fdm/jsbsim/fcs/stab-manu-selector</property>
       <value>2.0</value>
     </binding>
     <mod-up>
       <binding>
         <command>property-assign</command>
-        <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+        <property>fdm/jsbsim/fcs/stab-manu-selector</property>
         <value>1.0</value>
       </binding>
     </mod-up>
@@ -170,16 +170,16 @@
   <visible>false</visible>
   <action>
     <button>0</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-assign</command>
-      <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+      <property>fdm/jsbsim/fcs/stab-manu-selector</property>
       <value>0.0</value>
     </binding>
     <mod-up>
       <binding>
         <command>property-assign</command>
-        <property>controls/cockpit/glare/inputs/stab-manu-selector</property>
+        <property>fdm/jsbsim/fcs/stab-manu-selector</property>
         <value>1.0</value>
       </binding>
     </mod-up>

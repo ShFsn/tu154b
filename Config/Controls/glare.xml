@@ -2,11 +2,10 @@
 
 <PropertyList>
 
-  <inputs>
-    <stab-manu-selector type="double">1.0</stab-manu-selector>
+  <!--<inputs>
   </inputs>
 
-  <!--<animations>
+  <animations>
   </animations>-->
 
 </PropertyList>
