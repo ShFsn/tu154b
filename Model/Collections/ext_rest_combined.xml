@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <!--Fuselage-->
+  <object-name>beacon_lower</object-name>
+  <object-name>beacon_upper</object-name>
+  <object-name>rear_nav_lamp</object-name>
+  <!--Left wing-->
+  <object-name>left_nav</object-name>
+  <object-name>left_nav_lamp</object-name>
+  <!--Right wing-->
+  <object-name>right_nav</object-name>
+  <object-name>right_nav_lamp</object-name>
+  <object-name>RefuelContourExt</object-name>
+  <object-name>RefuelContourInt</object-name>
+</PropertyList>

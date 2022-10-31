@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Aircraft/tu154b/Systems/Animations/glare.xml">
+
+  <logic>
+    <name>Landing Light</name>
+    <inverted>false</inverted>
+    <input>
+      <and>
+        <equals>
+          <property>tu154/light/retract</property>
+          <value>1.0</value>
+        </equals>
+        <greater-than>
+          <property>tu154/light/headlight-selector</property>
+          <value>0.95</value>
+        </greater-than>
+        <greater-than>
+          <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+          <value>0</value>
+        </greater-than>
+      </and>
+    </input>
+    <output>tu154/light/exterior/ldg</output>
+  </logic>
+
+  <logic>
+    <name>Taxi Light</name>
+    <inverted>false</inverted>
+    <input>
+      <and>
+        <greater-than>
+          <property>tu154/light/headlight-selector</property>
+          <value>0.75</value>
+        </greater-than>
+        <less-than>
+          <property>tu154/light/headlight-selector</property>
+          <value>0.85</value>
+        </less-than>
+        <equals>
+          <property>gear/gear/position-norm</property>
+          <value>1</value>
+        </equals>
+        <greater-than>
+          <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+          <value>0</value>
+        </greater-than>
+      </and>
+    </input>
+    <output>tu154/light/exterior/taxi</output>
+  </logic>
+
+  <logic>
+    <name>Logo Light</name>
+    <inverted>false</inverted>
+    <input>
+      <property>tu154/light/headlight-selector</property>
+      <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
+    </input>
+    <output>tu154/light/exterior/logo</output>
+  </logic>
+
+  <logic>
+    <name>Upper Beacon Light</name>
+    <inverted>false</inverted>
+    <input>
+      <or>
+        <property>tu154/light/strobe/strobe_1</property>
+        <property>sim/multiplay/generic/int[6]</property>
+      </or>
+    </input>
+    <output>tu154/light/exterior/beac-up</output>
+  </logic>
+
+  <logic>
+    <name>Lower Beacon Light</name>
+    <inverted>false</inverted>
+    <input>
+      <or>
+        <property>tu154/light/strobe/strobe_2</property>
+        <property>sim/multiplay/generic/int[7]</property>
+      </or>
+    </input>
+    <output>tu154/light/exterior/beac-dn</output>
+  </logic>
+
+</PropertyList>

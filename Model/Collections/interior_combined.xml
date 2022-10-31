@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <!--Fuselage-->
+  <object-name>CompPassengerRear</object-name>
+  <object-name>CompCargoFront</object-name>
+  <object-name>CompCargoMiddle</object-name>
+</PropertyList>

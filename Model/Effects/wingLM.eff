@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+ <inherits-from>Effects/model-combined</inherits-from>
+ <parameters>
+  <lightmap-enabled type="int">1</lightmap-enabled>
+  <lightmap-multi type="int">1</lightmap-multi>
+  <lightmap-factor type="float" n="0"><use>tu154/light/exterior/ldg</use></lightmap-factor>
+  <lightmap-color type="vec3d" n="0">0.75 0.75 0.75</lightmap-color>
+  <lightmap-factor type="float" n="1"><use>tu154/light/exterior/beac-up</use></lightmap-factor>
+  <lightmap-color type="vec3d" n="1">10.0 0.0 0.0</lightmap-color>
+  <lightmap-factor type="float" n="2"><use>tu154/light/exterior/beac-dn</use></lightmap-factor>
+  <lightmap-color type="vec3d" n="2">1.25 0.0 0.0</lightmap-color>
+  <lightmap-factor type="float" n="3">0.0</lightmap-factor>
+  <lightmap-color type="vec3d" n="3">1.0 1.0 1.0 </lightmap-color>
+  <texture n="3">
+   <image>Effects/wing_lm.png</image>
+  </texture>
+ </parameters>
+</PropertyList>

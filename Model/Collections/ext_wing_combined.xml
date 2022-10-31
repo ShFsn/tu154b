@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <!--Left gear-->
+  <object-name>l_gear_object_2.2</object-name>
+  <object-name>l_gear_door_FL</object-name>
+  <object-name>l_gear_door_FR</object-name>
+  <object-name>l_gear_door_RL</object-name>
+  <object-name>l_gear_door_RR</object-name>
+  <!--Right gear-->
+  <object-name>r_gear_object_2.2</object-name>
+  <object-name>r_gear_door_FL</object-name>
+  <object-name>r_gear_door_FR</object-name>
+  <object-name>r_gear_door_RL</object-name>
+  <object-name>r_gear_door_RR</object-name>
+  <!--Left wing-->
+  <object-name>l_console_inner</object-name>
+  <object-name>l_console_middle</object-name>
+  <object-name>l_console_outer</object-name>
+  <object-name>ailer_interc_left</object-name>
+  <object-name>aileron_left</object-name>
+  <object-name>interceptor_left</object-name>
+  <object-name>l_spoiler_inner</object-name>
+  <object-name>l_spoiler_outer</object-name>
+  <object-name>l_flap_cover_inner</object-name>
+  <object-name>l_flap_cover_outer</object-name>
+  <object-name>l_flap_inner_1</object-name>
+  <object-name>l_flap_inner_2</object-name>
+  <object-name>l_flap_inner_3</object-name>
+  <object-name>l_flap_outer_1</object-name>
+  <object-name>l_flap_outer_2</object-name>
+  <object-name>l_flap_outer_3</object-name>
+  <object-name>l_flap_pin_inner</object-name>
+  <object-name>l_flap_pin_outer</object-name>
+  <object-name>l_slat_inner</object-name>
+  <object-name>l_slat_middle</object-name>
+  <object-name>l_slat_outer_1</object-name>
+  <object-name>l_slat_outer_2</object-name>
+  <!--Right wing-->
+  <object-name>r_console_inner</object-name>
+  <object-name>r_console_middle</object-name>
+  <object-name>r_console_outer</object-name>
+  <object-name>ailer_interc_right</object-name>
+  <object-name>aileron_right</object-name>
+  <object-name>interceptor_right</object-name>
+  <object-name>r_spoiler_inner</object-name>
+  <object-name>r_spoiler_outer</object-name>
+  <object-name>r_flap_cover_inner</object-name>
+  <object-name>r_flap_cover_outer</object-name>
+  <object-name>r_flap_inner_1</object-name>
+  <object-name>r_flap_inner_2</object-name>
+  <object-name>r_flap_inner_3</object-name>
+  <object-name>r_flap_outer_1</object-name>
+  <object-name>r_flap_outer_2</object-name>
+  <object-name>r_flap_outer_3</object-name>
+  <object-name>r_flap_pin_inner</object-name>
+  <object-name>r_flap_pin_outer</object-name>
+  <object-name>r_slat_inner</object-name>
+  <object-name>r_slat_middle</object-name>
+  <object-name>r_slat_outer_1</object-name>
+  <object-name>r_slat_outer_2</object-name>
+  <object-name>RefuelCover</object-name>
+</PropertyList>

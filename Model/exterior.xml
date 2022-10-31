@@ -213,12 +213,21 @@
  </effect>
 
  <!-- Model shaders -->
- <effect include="exterior_combined.xml">
-    <inherits-from>Effects/model-combined</inherits-from>
+ <effect include="Collections/ext_maina_combined.xml">
+    <inherits-from>Effects/mainaLM</inherits-from>
+ </effect>
+ <effect include="Collections/ext_mainb_combined.xml">
+    <inherits-from>Effects/mainbLM</inherits-from>
+ </effect>
+ <effect include="Collections/ext_var_combined.xml">
+    <inherits-from>Effects/varLM</inherits-from>
+ </effect>
+ <effect include="Collections/ext_wing_combined.xml">
+    <inherits-from>Effects/wingLM</inherits-from>
  </effect>
 
  <!-- Interior Model shaders TEMPORARY -->
- <effect include="interior_combined.xml">
+ <effect include="Collections/interior_combined.xml">
     <inherits-from>Effects/model-combined</inherits-from>
  </effect>
 

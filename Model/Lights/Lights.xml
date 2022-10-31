@@ -369,31 +369,6 @@
   </offsets>
  </model>
 
- <model>
-  <path>Aircraft/tu154b/Model/Lights/taillight-lightcone.xml</path>
-  <name>taillight_l</name>
-  <offsets>
-    <x-m>12.35</x-m>
-    <y-m>-2.267</y-m>
-    <z-m>1.965</z-m>
-    <!--<roll-deg>135.0</roll-deg>-->
-    <heading-deg>55.0</heading-deg>
-    <pitch-deg>-140.0</pitch-deg>
-  </offsets>
- </model>
- <model>
-  <path>Aircraft/tu154b/Model/Lights/taillight-lightcone.xml</path>
-  <name>taillight_r</name>
-  <offsets>
-    <x-m>12.35</x-m>
-    <y-m>2.267</y-m>
-    <z-m>1.965</z-m>
-    <!--<roll-deg>-135.0</roll-deg>-->
-    <heading-deg>-55.0</heading-deg>
-    <pitch-deg>-140.0</pitch-deg>
-  </offsets>
- </model>
-
 <model>
   <name>Lightcone_Collision_L</name>
   <path>Aircraft/tu154b/Model/Lights/red-lightcone.xml</path>
@@ -427,19 +402,12 @@
 </model>
 
 <model>
-  <path>Aircraft/tu154b/Model/Lights/strobe-lightpoint.xml</path>
-     <offsets>
-      <x-m>15.2915</x-m>
-      <y-m>0</y-m>
-      <z-m>9.0603</z-m>
-     </offsets>
-</model>
-<model>
-  <path>Aircraft/tu154b/Model/Lights/strobe2-lightpoint.xml</path>
+  <path>Aircraft/tu154b/Model/Lights/strobe2-lightcone.xml</path>
      <offsets>
       <x-m>9.8856</x-m>
       <y-m>0</y-m>
       <z-m>0.1689</z-m>
+      <pitch-deg>-7.0</pitch-deg>
      </offsets>
 </model>
  <!--********************** End Compositor lights *************************-->

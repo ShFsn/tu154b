@@ -40,6 +40,13 @@
       <amb-blue-def type="double" >0.0</amb-blue-def>
     </panel>
     <!--<window-alpha type="double" >0.3</window-alpha>      -->
+    <exterior>
+      <ldg type="bool">false</ldg>
+      <taxi type="bool">false</taxi>
+      <logo type="bool">false</logo>
+      <beac-dn type="bool">false</beac-dn>
+      <beac-up type="bool">false</beac-up>
+    </exterior>
   </light>
 
   <textures>

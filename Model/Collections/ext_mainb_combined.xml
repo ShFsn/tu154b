@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <!--Fuselage-->
+  <object-name>Body_Rear</object-name>
+  <object-name>apu_cowl_1</object-name>
+  <object-name>apu_cowl_2</object-name>
+  <object-name>Door_Cargo_2_main</object-name>
+  <object-name>Door_Cargo_2_sec</object-name>
+  <object-name>rear_nav</object-name>
+  <object-name>rudder</object-name>
+  <object-name>stabilizer_root</object-name>
+</PropertyList>
