@@ -149,6 +149,11 @@
         <path>gui/Splash/exterior/5.jpg</path>
       </preview>
       <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>gui/Splash/exterior/6.jpg</path>
+      </preview>
+      <preview>
         <type>panel</type>
         <splash type="bool">true</splash>
         <path>gui/Splash/panel/1.jpg</path>
