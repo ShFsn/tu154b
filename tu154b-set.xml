@@ -18,6 +18,8 @@
   <services include="Aircraft/tu154b/Config/services.xml"/>                       <!--Ground services prop tree config-->
   <controls include="Aircraft/tu154b/Config/controls.xml"/>                       <!--Controls prop tree config-->
 
+  <rotors include="Aircraft/tu154b/Config/rotors-mult.xml"/>                      <!--FG MP short float transmisiion config-->
+
 
 
   <!--******************************* SIMULATOR CONFIG ********************************-->
@@ -270,12 +272,21 @@
     </realism>
 
     <systems>
-      <property-rule>
+      <property-rule n="100">
         <path>Aircraft/tu154b/Systems/property-rules.xml</path>
       </property-rule>
       
-      <property-rule>
-        <path>Aircraft/tu154b/Systems/Animations/property-rules.xml</path>
+      <property-rule n="101">
+        <path>Aircraft/tu154b/Systems/Animations/exterior.xml</path>
+      </property-rule>
+      <property-rule n="102">
+        <path>Aircraft/tu154b/Systems/Animations/gnd_services.xml</path>
+      </property-rule>
+      <property-rule n="103">
+        <path>Aircraft/tu154b/Systems/Animations/particles.xml</path>
+      </property-rule>
+      <property-rule n="104">
+        <path>Aircraft/tu154b/Systems/Animations/glare.xml</path>
       </property-rule>
 
       <wingflexer include="Systems/wingflexer-params.xml">
@@ -376,19 +387,19 @@
 
   <gear>
     <gear n="0">
-      <tyre-smoke type="int">0</tyre-smoke>
+      <tyre-smoke type="bool">false</tyre-smoke>
       <sprayspeed-ms type="double">0</sprayspeed-ms>
       <spray-density type="double">0</spray-density>
       <zsink-in type="double">25</zsink-in>
     </gear>
     <gear n="1">
-      <tyre-smoke type="int">0</tyre-smoke>
+      <tyre-smoke type="bool">false</tyre-smoke>
       <sprayspeed-ms type="double">0</sprayspeed-ms>
       <spray-density type="double">0</spray-density>
       <zsink-in type="double">25</zsink-in>
     </gear>
     <gear n="2">
-      <tyre-smoke type="int">0</tyre-smoke>
+      <tyre-smoke type="bool">false</tyre-smoke>
       <sprayspeed-ms type="double">0</sprayspeed-ms>
       <spray-density type="double">0</spray-density>
       <zsink-in type="double">25</zsink-in>

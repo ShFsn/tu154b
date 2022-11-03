@@ -32,10 +32,7 @@
     <type>select</type>
     <object-name>white</object-name>
     <condition>
-      <or>
-      <property>tu154/light/nav/blue</property>
-      <property>sim/multiplay/generic/int[0]</property>
-      </or>
+      <property>sim/multiplay/generic/bool[0]</property>
     </condition>
   </animation>
 

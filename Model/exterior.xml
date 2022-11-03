@@ -27,6 +27,10 @@
    model.getNode("door[0]/position-y-m", 1).setValue(-1.742);
    model.getNode("door[0]/position-z-m", 1).setValue(1.015);
    model.getNode("door[0]/jetway-hood-deg", 1).setValue(12.0);
+   model.getNode("door[1]/position-x-m", 1).setValue(-7.697);
+   model.getNode("door[1]/position-y-m", 1).setValue(-1.87);
+   model.getNode("door[1]/position-z-m", 1).setValue(1.015);
+   model.getNode("door[1]/jetway-hood-deg", 1).setValue(11.0);
   </load>
  </nasal>
 
@@ -4365,7 +4369,7 @@
             <dif>
               <min>
                 <property>gear/gear[0]/position-norm</property>
-                <property>fdm/jsbsim/tu154/gear/door-limit</property>
+                <property>rotors/main/blade[0]/flap-deg</property>
               </min>
               <value>0.5</value>
             </dif>
@@ -4397,7 +4401,7 @@
             <dif>
               <min>
                 <property>gear/gear[0]/position-norm</property>
-                <property>fdm/jsbsim/tu154/gear/door-limit</property>
+                <property>rotors/main/blade[0]/flap-deg</property>
               </min>
               <value>0.5</value>
             </dif>
@@ -4525,7 +4529,7 @@
   <type>rotate</type>
   <object-name>c_gear_object_3.4</object-name>
   <object-name>c_gear_object_3.2</object-name>
-  <property>fdm/jsbsim/gear/steer-pos-deg</property>
+  <property>sim/multiplay/generic/float[10]</property>
   <axis>
     <x1-m>-16.91626</x1-m>
     <y1-m>0.0</y1-m>
@@ -4631,7 +4635,7 @@
             <dif>
               <min>
                 <property>gear/gear[1]/position-norm</property>
-                <property>fdm/jsbsim/tu154/gear/door-limit</property>
+                <property>rotors/main/blade[0]/flap-deg</property>
               </min>
               <value>0.5</value>
             </dif>
@@ -4663,7 +4667,7 @@
             <dif>
               <min>
                 <property>gear/gear[1]/position-norm</property>
-                <property>fdm/jsbsim/tu154/gear/door-limit</property>
+                <property>rotors/main/blade[0]/flap-deg</property>
               </min>
               <value>0.5</value>
             </dif>
@@ -4814,7 +4818,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_1.3</object-name>
   <object-name>l_gear_object_1.2</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.218</ind>	<dep>	-0.8</dep></entry>
@@ -4885,7 +4889,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_6.2</object-name>
   <object-name>l_gear_object_6.1</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.15</ind>	<dep>	-10.0</dep></entry>
@@ -4907,7 +4911,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_6.2</object-name>
   <object-name>l_gear_object_6.1</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	 0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	-6.0</dep></entry>
@@ -4931,7 +4935,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_6.2</object-name>
   <object-name>l_gear_object_6.1</object-name>
-  <property>tu154/gear/rotation-left-deg</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <center>
     <x-m>2.71</x-m>
     <y-m>0.0</y-m>
@@ -4967,7 +4971,7 @@
 <animation>
   <type>translate</type>
   <object-name>l_gear_object_6.2</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.15</ind>	<dep>	0.03</dep></entry>
@@ -4985,7 +4989,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_5.4</object-name>
   <object-name>l_gear_object_5.1</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.15</ind>	<dep>	8.5</dep></entry>
@@ -5006,7 +5010,7 @@
 <animation>
   <type>rotate</type>
   <object-name>l_gear_object_5.3</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	-20.0</dep></entry>
@@ -5025,7 +5029,7 @@
 <animation>
   <type>rotate</type>
   <object-name>l_gear_object_2.3</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	-20.0</dep></entry>
@@ -5045,7 +5049,7 @@
 <animation>
   <type>translate</type>
   <object-name>l_gear_object_6.2</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	0.08</dep></entry>
@@ -5062,7 +5066,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_1.1</object-name>
   <object-name>l_gear_object_1.4</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	-3.0</dep></entry>
@@ -5088,7 +5092,7 @@
   <object-name>l_gear_object_3.6</object-name>
   <object-name>l_gear_object_3.5</object-name>
   <!--<object-name>l_gear_object_3.3</object-name>-->
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	-0.34</dep></entry>
@@ -5102,7 +5106,7 @@
 <animation>
   <type>rotate</type>
   <object-name>l_gear_object_3.5</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
     <entry><ind>  0.49</ind>  <dep> 30</dep></entry>
@@ -5121,7 +5125,7 @@
 <animation>
   <type>rotate</type>
   <object-name>l_gear_object_3.3</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
     <entry><ind>  0.49</ind>  <dep> 30</dep></entry>
@@ -5141,7 +5145,7 @@
 <animation>
   <type>translate</type>
   <object-name>l_gear_object_5.3</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	0.034</dep></entry>
@@ -5158,7 +5162,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_5.4</object-name>
   <object-name>l_gear_object_5.1</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	11.5</dep></entry>
@@ -5179,7 +5183,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_5.4</object-name>
   <object-name>l_gear_object_5.1</object-name>
-  <property>tu154/gear/rotation-left-deg</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <center>
     <x-m>2.5153</x-m>
     <y-m>0.0</y-m>
@@ -5196,7 +5200,7 @@
 <animation>
   <type>rotate</type>
   <object-name>l_gear_object_3.1</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	12.0</dep></entry>
@@ -5219,7 +5223,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_3.2</object-name>
   <object-name>l_gear_object_3.4</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.303</ind>	<dep>	10.0</dep></entry>
@@ -5241,7 +5245,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_5.2</object-name>
   <object-name>l_gear_object_5.3</object-name>
-  <property>tu154/gear/compression-left-m</property>
+  <property>sim/multiplay/generic/float[3]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	-7.0</dep></entry>
@@ -5274,7 +5278,7 @@
             <dif>
               <min>
                 <property>gear/gear[2]/position-norm</property>
-                <property>fdm/jsbsim/tu154/gear/door-limit</property>
+                <property>rotors/main/blade[0]/flap-deg</property>
               </min>
               <value>0.5</value>
             </dif>
@@ -5306,7 +5310,7 @@
             <dif>
               <min>
                 <property>gear/gear[2]/position-norm</property>
-                <property>fdm/jsbsim/tu154/gear/door-limit</property>
+                <property>rotors/main/blade[0]/flap-deg</property>
               </min>
               <value>0.5</value>
             </dif>
@@ -5456,7 +5460,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_1.3</object-name>
   <object-name>r_gear_object_1.2</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.218</ind>	<dep>	-0.8</dep></entry>
@@ -5527,7 +5531,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_6.2</object-name>
   <object-name>r_gear_object_6.1</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[6]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.15</ind>	<dep>	-10.0</dep></entry>
@@ -5549,7 +5553,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_6.2</object-name>
   <object-name>r_gear_object_6.1</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	 0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	-6.0</dep></entry>
@@ -5573,7 +5577,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_6.2</object-name>
   <object-name>r_gear_object_6.1</object-name>
-  <property>tu154/gear/rotation-right-deg</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <center>
     <x-m>2.71</x-m>
     <y-m>0.0</y-m>
@@ -5609,7 +5613,7 @@
 <animation>
   <type>translate</type>
   <object-name>r_gear_object_6.2</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.15</ind>	<dep>	0.03</dep></entry>
@@ -5627,7 +5631,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_5.4</object-name>
   <object-name>r_gear_object_5.1</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[6]</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.15</ind>	<dep>	8.5</dep></entry>
@@ -5648,7 +5652,7 @@
 <animation>
   <type>rotate</type>
   <object-name>r_gear_object_5.3</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	-20.0</dep></entry>
@@ -5667,7 +5671,7 @@
 <animation>
   <type>rotate</type>
   <object-name>r_gear_object_2.3</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	-20.0</dep></entry>
@@ -5687,7 +5691,7 @@
 <animation>
   <type>translate</type>
   <object-name>r_gear_object_6.2</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	0.08</dep></entry>
@@ -5704,7 +5708,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_1.1</object-name>
   <object-name>r_gear_object_1.4</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	-3.0</dep></entry>
@@ -5731,7 +5735,7 @@
   <object-name>r_gear_object_3.6</object-name>
   <object-name>r_gear_object_3.5</object-name>
   <!--<object-name>r_gear_object_3.3</object-name>-->
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	-0.34</dep></entry>
@@ -5745,7 +5749,7 @@
 <animation>
   <type>rotate</type>
   <object-name>r_gear_object_3.5</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
     <entry><ind>  0.49</ind>  <dep> 30</dep></entry>
@@ -5764,7 +5768,7 @@
 <animation>
   <type>rotate</type>
   <object-name>r_gear_object_3.3</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>  0.15</ind>  <dep> 0.0</dep></entry>
     <entry><ind>  0.49</ind>  <dep> 30</dep></entry>
@@ -5784,7 +5788,7 @@
 <animation>
   <type>translate</type>
   <object-name>r_gear_object_5.3</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	0.034</dep></entry>
@@ -5801,7 +5805,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_5.4</object-name>
   <object-name>r_gear_object_5.1</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.49</ind>	<dep>	11.5</dep></entry>
@@ -5822,7 +5826,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_5.4</object-name>
   <object-name>r_gear_object_5.1</object-name>
-  <property>tu154/gear/rotation-right-deg</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <center>
     <x-m>2.5153</x-m>
     <y-m>0.0</y-m>
@@ -5839,7 +5843,7 @@
 <animation>
   <type>rotate</type>
   <object-name>r_gear_object_3.1</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	12.0</dep></entry>
@@ -5862,7 +5866,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_3.2</object-name>
   <object-name>r_gear_object_3.4</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.303</ind>	<dep>	10.0</dep></entry>
@@ -5884,7 +5888,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_5.2</object-name>
   <object-name>r_gear_object_5.3</object-name>
-  <property>tu154/gear/compression-right-m</property>
+  <property>sim/multiplay/generic/float[4]</property>
   <interpolation>
     <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.235</ind>	<dep>	-7.0</dep></entry>
@@ -5912,7 +5916,7 @@
   <condition>
       <property>gear/gear[0]/compression-norm</property>
   </condition>
-  <property>gear/gear[0]/rollspeed-ms</property>
+  <property>sim/multiplay/generic/float[7]</property>
   <factor>25.4</factor>
   <center>
     <x-m>-16.0096</x-m>
@@ -5931,11 +5935,11 @@
   <object-name>l_tire_rear</object-name>
   <condition>
     <greater-than>
-      <property>tu154/gear/compression-left-m</property>
+      <property>sim/multiplay/generic/float[3]</property>
       <value>0.15</value>
     </greater-than>
   </condition>
-  <property>gear/gear[1]/rollspeed-ms</property>
+  <property>sim/multiplay/generic/float[8]</property>
   <factor>21.23</factor>
   <center>
     <x-m>3.5377</x-m>
@@ -5953,11 +5957,11 @@
   <object-name>l_tire_middle</object-name>
   <condition>
     <greater-than>
-      <property>tu154/gear/compression-left-m</property>
+      <property>sim/multiplay/generic/float[3]</property>
       <value>0.2</value>
     </greater-than>
   </condition>
-  <property>gear/gear[1]/rollspeed-ms</property>
+  <property>sim/multiplay/generic/float[8]</property>
   <factor>21.23</factor>
   <center>
     <x-m>2.5151</x-m>
@@ -5975,11 +5979,11 @@
   <object-name>l_tire_front</object-name>
   <condition>
     <greater-than>
-      <property>tu154/gear/compression-left-m</property>
+      <property>sim/multiplay/generic/float[3]</property>
       <value>0.21</value>
     </greater-than>
   </condition>
-  <property>gear/gear[1]/rollspeed-ms</property>
+  <property>sim/multiplay/generic/float[8]</property>
   <factor>21.23</factor>
   <center>
     <x-m>1.5421</x-m>
@@ -5998,11 +6002,11 @@
   <object-name>r_tire_rear</object-name>
   <condition>
     <greater-than>
-      <property>tu154/gear/compression-right-m</property>
+      <property>sim/multiplay/generic/float[4]</property>
       <value>0.15</value>
     </greater-than>
   </condition>
-  <property>gear/gear[2]/rollspeed-ms</property>
+  <property>sim/multiplay/generic/float[9]</property>
   <factor>21.23</factor>
   <center>
     <x-m>3.5377</x-m>
@@ -6020,11 +6024,11 @@
   <object-name>r_tire_middle</object-name>
   <condition>
     <greater-than>
-      <property>tu154/gear/compression-right-m</property>
+      <property>sim/multiplay/generic/float[4]</property>
       <value>0.2</value>
     </greater-than>
   </condition>
-  <property>gear/gear[2]/rollspeed-ms</property>
+  <property>sim/multiplay/generic/float[9]</property>
   <factor>21.23</factor>
   <center>
     <x-m>2.5151</x-m>
@@ -6042,11 +6046,11 @@
   <object-name>r_tire_front</object-name>
   <condition>
     <greater-than>
-      <property>tu154/gear/compression-right-m</property>
+      <property>sim/multiplay/generic/float[4]</property>
       <value>0.21</value>
     </greater-than>
   </condition>
-  <property>gear/gear[2]/rollspeed-ms</property>
+  <property>sim/multiplay/generic/float[9]</property>
   <factor>21.23</factor>
   <center>
     <x-m>1.5421</x-m>
@@ -7364,7 +7368,7 @@
 <animation>
   <type>translate</type>
   <object-name>Door_Passe</object-name>
-  <property>tu154/door/passe</property>
+  <property>rotors/main/blade[0]/position-deg</property>
   <interpolation>
     <entry> <ind>0.38</ind> <dep>0</dep> </entry>
     <entry> <ind>1</ind> <dep>0.95</dep> </entry>
@@ -7378,7 +7382,7 @@
 <animation>
   <type>translate</type>
   <object-name>Door_Passe</object-name>
-  <property>tu154/door/passe</property>
+  <property>rotors/main/blade[0]/position-deg</property>
   <interpolation>
     <entry> <ind>0.33</ind> <dep>0</dep> </entry>
     <entry> <ind>0.43</ind> <dep>0.16</dep> </entry>
@@ -7397,6 +7401,7 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+      <condition><property>tu154/constants/one</property></condition>
       <command>nasal</command>
       <script>
         if (getprop("tu154/door/passe")) {
@@ -7413,7 +7418,7 @@
 <animation>
   <type>translate</type>
   <object-name>Door_Cargo_1</object-name>
-  <property>tu154/door/cargo0</property>
+  <property>rotors/main/blade[1]/position-deg</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
     <entry> <ind>1</ind> <dep>1.3</dep> </entry>
@@ -7427,7 +7432,7 @@
 <animation>
   <type>translate</type>
   <object-name>Door_Cargo_1</object-name>
-  <property>tu154/door/cargo0</property>
+  <property>rotors/main/blade[1]/position-deg</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
     <entry> <ind>0.1</ind> <dep>0.1</dep> </entry>
@@ -7446,6 +7451,7 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+      <condition><property>tu154/constants/one</property></condition>
       <command>nasal</command>
       <script>
         if (getprop("tu154/door/cargo0")) {
@@ -7462,7 +7468,7 @@
 <animation>
   <type>rotate</type>
   <object-name>Door_Cargo_2_sec</object-name>
-  <property>tu154/door/cargo1</property>
+  <property>rotors/main/blade[2]/position-deg</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
     <entry> <ind>1</ind> <dep>100</dep> </entry>
@@ -7478,7 +7484,7 @@
 <animation>
   <type>translate</type>
   <object-name>Door_Cargo_2_main</object-name>
-  <property>tu154/door/cargo1</property>
+  <property>rotors/main/blade[2]/position-deg</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
     <entry> <ind>1</ind> <dep>1.3</dep> </entry>
@@ -7492,7 +7498,7 @@
 <animation>
   <type>translate</type>
   <object-name>Door_Cargo_2_main</object-name>
-  <property>tu154/door/cargo1</property>
+  <property>rotors/main/blade[2]/position-deg</property>
   <interpolation>
     <entry> <ind>0</ind> <dep>0</dep> </entry>
     <entry> <ind>0.1</ind> <dep>0.1</dep> </entry>
@@ -7512,6 +7518,7 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+      <condition><property>tu154/constants/one</property></condition>
       <command>nasal</command>
       <script>
         if (getprop("tu154/door/cargo1")) {
@@ -7559,7 +7566,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_12</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.90387</x1-m>
     <y1-m>-3.04216</y1-m>
@@ -7572,7 +7579,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_01</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.94318</x1-m>
     <y1-m>-3.44121</y1-m>
@@ -7585,7 +7592,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_02</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.96779</x1-m>
     <y1-m>-3.79855</y1-m>
@@ -7598,7 +7605,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_03</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.97104</x1-m>
     <y1-m>-4.01707</y1-m>
@@ -7611,7 +7618,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_04</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.9516</x1-m>
     <y1-m>-4.03842</y1-m>
@@ -7624,7 +7631,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_05</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.91641</x1-m>
     <y1-m>-3.85852</y1-m>
@@ -7637,7 +7644,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_06</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.87343</x1-m>
     <y1-m>-3.52692</y1-m>
@@ -7650,7 +7657,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_07</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.83464</x1-m>
     <y1-m>-3.13226</y1-m>
@@ -7663,7 +7670,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_08</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.81024</x1-m>
     <y1-m>-2.77868</y1-m>
@@ -7676,7 +7683,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_09</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.80668</x1-m>
     <y1-m>-2.55955</y1-m>
@@ -7689,7 +7696,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_10</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.82505</x1-m>
     <y1-m>-2.53380</y1-m>
@@ -7702,7 +7709,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng1_int_flap_11</object-name>
-  <property>engines/engine[0]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <axis>
     <x1-m>5.86059</x1-m>
     <y1-m>-2.70993</y1-m>
@@ -7717,7 +7724,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_01</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.91374</x1-m>
     <y1-m>3.13244</y1-m>
@@ -7730,7 +7737,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_02</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.87026</x1-m>
     <y1-m>2.77508</y1-m>
@@ -7743,7 +7750,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_10</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.96852</x1-m>
     <y1-m>4.03983</y1-m>
@@ -7756,7 +7763,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_12</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.95048</x1-m>
     <y1-m>3.53148</y1-m>
@@ -7769,7 +7776,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_11</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.97050</x1-m>
     <y1-m>3.86369</y1-m>
@@ -7782,7 +7789,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_05</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.80745</x1-m>
     <y1-m>2.71513</y1-m>
@@ -7795,7 +7802,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_06</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.82767</x1-m>
     <y1-m>3.04673</y1-m>
@@ -7808,7 +7815,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_07</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.86408</x1-m>
     <y1-m>3.44139</y1-m>
@@ -7821,7 +7828,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_08</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.90705</x1-m>
     <y1-m>3.79496</y1-m>
@@ -7834,7 +7841,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_09</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.94525</x1-m>
     <y1-m>4.01409</y1-m>
@@ -7847,7 +7854,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_03</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.83187</x1-m>
     <y1-m>2.55657</y1-m>
@@ -7860,7 +7867,7 @@
 <animation>
   <type>rotate</type>
   <object-name>eng3_int_flap_04</object-name>
-  <property>engines/engine[2]/intake-flaps</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <axis>
     <x1-m>5.80892</x1-m>
     <y1-m>2.53520</y1-m>
@@ -7898,6 +7905,7 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
+      <condition><property>tu154/constants/one</property></condition>
       <command>nasal</command>
       <script>
         if (getprop("tu154/door/refuel")) {
@@ -8114,7 +8122,7 @@
   <type>rotate</type>
   <object-name>headlight_l</object-name>
   <object-name>headlight_r</object-name>  
-  <property>tu154/light/retract</property>
+  <property>rotors/main/blade[1]/flap-deg</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-70.0</dep></entry>
     <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
@@ -8133,7 +8141,7 @@
 <animation>
   <type>rotate</type>
   <object-name>headlight_c</object-name>
-  <property>tu154/light/retract</property>
+  <property>rotors/main/blade[1]/flap-deg</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	-70.0</dep></entry>
     <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
@@ -8155,23 +8163,30 @@
   <type>material</type>
   <object-name>left_nav</object-name>
   <emission>
-    <red-prop>tu154/light/nav/red</red-prop>
+    <red>1.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+    <factor-prop>sim/multiplay/generic/bool[0]</factor-prop>
   </emission>
 </animation>
 <animation>
   <type>material</type>
   <object-name>right_nav</object-name>
   <emission>
-    <green-prop>tu154/light/nav/green</green-prop>
+    <red>0.0</red>
+    <green>1.0</green>
+    <blue>0.0</blue>
+    <factor-prop>sim/multiplay/generic/bool[0]</factor-prop>
   </emission>
 </animation>
 <animation>
   <type>material</type>
   <object-name>rear_nav_lamp</object-name>
   <emission>
-    <red-prop>tu154/light/nav/red</red-prop>
-    <green-prop>tu154/light/nav/green</green-prop>
-    <blue-prop>tu154/light/nav/red</blue-prop>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>sim/multiplay/generic/bool[0]</factor-prop>
   </emission>
 </animation>
 
@@ -8180,14 +8195,20 @@
   <type>material</type>
   <object-name>beacon_upper</object-name>
   <emission>
-    <red-prop>tu154/light/strobe/strobe_1</red-prop>
+    <red>1.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+    <factor-prop>sim/multiplay/generic/bool[4]</factor-prop>
   </emission>
 </animation>
 <animation>
   <type>material</type>
   <object-name>beacon_lower</object-name>
   <emission>
-    <red-prop>tu154/light/strobe/strobe_2</red-prop>
+    <red>1.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+    <factor-prop>sim/multiplay/generic/bool[5]</factor-prop>
   </emission>
 </animation>
 
@@ -8197,7 +8218,7 @@
   <type>rotate</type>
   <object-name>visor_wing_left</object-name><!--Left wing light-->
   <object-name>visor_wing_right</object-name> 
-  <property>tu154/light/retract</property>
+  <property>rotors/main/blade[1]/flap-deg</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.1</ind>	<dep>	90.0</dep></entry>
@@ -8218,7 +8239,7 @@
   <type>rotate</type>
   <object-name>visor_front_right</object-name>
   <object-name>visor_front_left</object-name> 
-  <property>tu154/light/retract</property>
+  <property>rotors/main/blade[1]/flap-deg</property>
   <interpolation>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
     <entry><ind>	0.1</ind>	<dep>	90.0</dep></entry>
@@ -8242,104 +8263,55 @@
   <object-name>visor_wing_right</object-name> 
   <object-name>visor_front_right</object-name>
   <object-name>visor_front_left</object-name>
-    <condition>
-      <and>
-      <equals>
-        <property>tu154/light/retract</property>
-        <value>1.0</value>
-      </equals>
-      <greater-than>
-        <property>tu154/light/headlight-selector</property>
-        <value>0.95</value>
-      </greater-than>
-      <greater-than>
-        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
-        <value>0</value>
-      </greater-than>
-      </and>
-    </condition>
   <emission>
-    <red-prop>tu154/light/headlight</red-prop>
-    <green-prop>tu154/light/headlight</green-prop>
-    <blue-prop>tu154/light/headlight</blue-prop>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>sim/multiplay/generic/bool[1]</factor-prop>
   </emission>
 </animation>
 <animation>
   <type>material</type>
   <object-name>visor_front_gear</object-name>
-    <condition>
-      <and>
-      <greater-than>
-        <property>tu154/light/headlight-selector</property>
-        <value>0.75</value>
-      </greater-than>
-      <less-than>
-        <property>tu154/light/headlight-selector</property>
-        <value>0.85</value>
-      </less-than>
-      <equals>
-        <property>gear/gear/position-norm</property>
-        <value>1</value>
-      </equals>
-      <greater-than>
-        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
-        <value>0</value>
-      </greater-than>
-      </and>
-    </condition>
   <emission>
-    <red-prop>tu154/light/headlight</red-prop>
-    <green-prop>tu154/light/headlight</green-prop>
-    <blue-prop>tu154/light/headlight</blue-prop>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>sim/multiplay/generic/bool[2]</factor-prop>
   </emission>
 </animation>
 
 <animation>
   <type>material</type>
   <object-name>CompPassengerRear</object-name>
-  <condition>
-    <and>
-      <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
-      <property>tu154/door/passe</property>
-    </and>
-  </condition>
   <!--<texture-prop>tu154/textures/capt-panel</texture-prop>-->
   <emission>
-    <red-prop>tu154/door/compartment-light</red-prop>
-    <green-prop>tu154/door/compartment-light</green-prop>
-    <blue-prop>tu154/door/compartment-light</blue-prop>
+    <red>0.4</red>
+    <green>0.4</green>
+    <blue>0.4</blue>
+    <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
   </emission>
 </animation>
 <animation>
   <type>material</type>
   <object-name>CompCargoFront</object-name>
-  <condition>
-    <and>
-      <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
-      <property>tu154/door/cargo0</property>
-    </and>
-  </condition>
   <!--<texture-prop>tu154/textures/capt-panel</texture-prop>-->
   <emission>
-    <red-prop>tu154/door/compartment-light</red-prop>
-    <green-prop>tu154/door/compartment-light</green-prop>
-    <blue-prop>tu154/door/compartment-light</blue-prop>
+    <red>0.4</red>
+    <green>0.4</green>
+    <blue>0.4</blue>
+    <factor-prop>sim/multiplay/generic/float[1]</factor-prop>
   </emission>
 </animation>
 <animation>
   <type>material</type>
   <object-name>CompCargoMiddle</object-name>
-  <condition>
-    <and>
-      <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
-      <property>tu154/door/cargo1</property>
-    </and>
-  </condition>
   <!--<texture-prop>tu154/textures/capt-panel</texture-prop>-->
   <emission>
-    <red-prop>tu154/door/compartment-light</red-prop>
-    <green-prop>tu154/door/compartment-light</green-prop>
-    <blue-prop>tu154/door/compartment-light</blue-prop>
+    <red>0.4</red>
+    <green>0.4</green>
+    <blue>0.4</blue>
+    <factor-prop>sim/multiplay/generic/float[1]</factor-prop>
   </emission>
 </animation>
 
@@ -8348,9 +8320,10 @@
   <type>material</type>
   <object-name>night_windows</object-name>
   <emission>
-    <red-prop>tu154/light/cabin/red</red-prop>
-    <green-prop>tu154/light/cabin/green</green-prop>
-    <blue-prop>tu154/light/cabin/blue</blue-prop>
+    <red>0.3</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+    <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
   </emission>
 </animation>
 
@@ -8358,10 +8331,7 @@
   <type>select</type>
   <object-name>night_windows</object-name>
   <condition>
-    <greater-than>
-    <property>tu154/light/instruments/int-green</property>
-    <value>0.1</value>
-  </greater-than>
+    <property>sim/multiplay/generic/float[0]</property>
   </condition>
 </animation>
 <!--End pax cabin windows-->

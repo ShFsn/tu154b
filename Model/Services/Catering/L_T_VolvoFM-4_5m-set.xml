@@ -5,15 +5,6 @@
 <PropertyList>
 
 	<path>Catering_Loader_Truck_VolvoFM-stowed.ac</path>
-	
-	<animation>
-		<type>translate</type>
-		<property>aircraft/nose-compression</property>
-		<factor>0.3125</factor> <!-- 3.2 ft = 1 m -->
-		<axis>
-			<z>1</z>
-		</axis>
-	</animation>
 
 	<animation>
 		<name>cargo_box_all</name>
@@ -50,7 +41,7 @@
 		<type>translate</type>
 		<object-name>pistons_left</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>services/catering/position-norm</property>
+		<property>rotors/main/blade[3]/position-deg</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -71,7 +62,7 @@
 		<type>translate</type>
 		<object-name>pistons_right</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>services/catering/position-norm</property>
+		<property>rotors/main/blade[3]/position-deg</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -93,7 +84,7 @@
 		<object-name>piston_02_left</object-name>
 		<object-name>piston_02_right</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>services/catering/position-norm</property>
+		<property>rotors/main/blade[3]/position-deg</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -116,7 +107,7 @@
 		<type>translate</type>
 		<object-name>cargo_box_all</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>services/catering/position-norm</property>
+		<property>rotors/main/blade[3]/position-deg</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -137,7 +128,7 @@
 		<type>translate</type>
 		<object-name>platform</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>services/catering/position-norm</property>
+		<property>rotors/main/blade[3]/position-deg</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.00 </ind><dep> 0.00 </dep></entry>
@@ -159,7 +150,7 @@
 		<type>rotate</type>
 		<object-name>arm_top</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>services/catering/position-norm</property>
+		<property>rotors/main/blade[3]/position-deg</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
@@ -180,7 +171,7 @@
 		<type>rotate</type>
 		<object-name>arm_bottom</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>services/catering/position-norm</property>
+		<property>rotors/main/blade[3]/position-deg</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.00 </ind><dep>   0.00 </dep></entry>
@@ -203,11 +194,11 @@
 			<condition>
 				<or>
 					<greater-than>
-						<property>sim/time/sun-angle-rad</property>
+						<property>/sim/time/sun-angle-rad</property>
 						<value>1.45</value>
 					</greater-than>
 					<less-than>
-						<property>environment/visibility-m</property>
+						<property>/environment/visibility-m</property>
 						<value>4500.00</value>
 					</less-than>
 				</or>
@@ -227,11 +218,11 @@
 		<condition>
 				<or>
 					<greater-than>
-						<property>sim/time/sun-angle-rad</property>
+						<property>/sim/time/sun-angle-rad</property>
 						<value>1.45</value>
 					</greater-than>
 					<less-than>
-						<property>environment/visibility-m</property>
+						<property>/environment/visibility-m</property>
 						<value>4500.00</value>
 					</less-than>
 				</or>
@@ -244,7 +235,7 @@
 	<path>warning-light.xml</path>
 		<condition>
 			<greater-than>
-				<property>services/catering/position-norm</property>
+				<property>rotors/main/blade[3]/position-deg</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -261,7 +252,7 @@
 		<object-name>warning_light_glass</object-name>
 			<condition>
 			<greater-than>
-				<property>services/catering/position-norm</property>
+				<property>rotors/main/blade[3]/position-deg</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>

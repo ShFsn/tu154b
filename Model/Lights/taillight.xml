@@ -26,8 +26,7 @@
     <type>select</type>
     <object-name>white</object-name>
     <condition>
-      <property>tu154/light/headlight-selector</property>
-      <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
+        <property>sim/multiplay/generic/bool[3]</property>
     </condition>
   </animation>
 

@@ -54,24 +54,7 @@
 	  <type>select</type>
     <object-name>taxi-lightcone</object-name>
     <condition>
-      <and>
-      <greater-than>
-        <property>tu154/light/headlight-selector</property>
-        <value>0.75</value>
-      </greater-than>
-      <less-than>
-        <property>tu154/light/headlight-selector</property>
-        <value>0.85</value>
-      </less-than>
-      <equals>
-        <property>gear/gear/position-norm</property>
-        <value>1</value>
-      </equals>
-      <greater-than>
-        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
-        <value>0</value>
-      </greater-than>
-      </and>
+      <property>sim/multiplay/generic/bool[2]</property>
     </condition>
   </animation> 
 

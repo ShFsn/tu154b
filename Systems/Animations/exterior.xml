@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<PropertyList include="Aircraft/tu154b/Systems/Animations/glare.xml">
+<PropertyList>
 
   <logic>
     <name>Landing Light</name>
@@ -21,7 +21,7 @@
         </greater-than>
       </and>
     </input>
-    <output>tu154/light/exterior/ldg</output>
+    <output>sim/multiplay/generic/bool[1]</output>
   </logic>
 
   <logic>
@@ -47,7 +47,7 @@
         </greater-than>
       </and>
     </input>
-    <output>tu154/light/exterior/taxi</output>
+    <output>sim/multiplay/generic/bool[2]</output>
   </logic>
 
   <logic>
@@ -57,31 +57,50 @@
       <property>tu154/light/headlight-selector</property>
       <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property> 
     </input>
-    <output>tu154/light/exterior/logo</output>
+    <output>sim/multiplay/generic/bool[3]</output>
   </logic>
 
   <logic>
     <name>Upper Beacon Light</name>
     <inverted>false</inverted>
     <input>
-      <or>
-        <property>tu154/light/strobe/strobe_1</property>
-        <property>sim/multiplay/generic/int[6]</property>
-      </or>
+      <property>tu154/light/strobe/strobe_1</property>
     </input>
-    <output>tu154/light/exterior/beac-up</output>
+    <output>sim/multiplay/generic/bool[4]</output>
   </logic>
 
   <logic>
     <name>Lower Beacon Light</name>
     <inverted>false</inverted>
     <input>
-      <or>
-        <property>tu154/light/strobe/strobe_2</property>
-        <property>sim/multiplay/generic/int[7]</property>
-      </or>
+      <property>tu154/light/strobe/strobe_2</property>
     </input>
-    <output>tu154/light/exterior/beac-dn</output>
+    <output>sim/multiplay/generic/bool[5]</output>
+  </logic>
+
+  <logic>
+    <name>Passenger Cabin Light</name>
+    <input>
+      <greater-than>
+        <property>tu154/light/instruments/int-green</property>
+        <value>0.1</value>
+      </greater-than>
+    </input>
+    <output>sim/multiplay/generic/float[0]</output>
+  </logic>
+
+  <logic>
+    <name>Cargo Compartment Light</name>
+    <input>
+      <and>
+        <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
+        <or>
+          <property>tu154/door/cargo0</property>
+          <property>tu154/door/cargo1</property>
+        </or>
+      </and>
+    </input>
+    <output>sim/multiplay/generic/float[1]</output>
   </logic>
 
 </PropertyList>

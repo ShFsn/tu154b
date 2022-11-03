@@ -1,35 +1,7 @@
 <PropertyList>
   <particlesystem include="smoke-air.xml">
     <condition>
-      <and>
-        <!--<or>
-          <property>sim/multiplay/generic/int[10]</property>-->
-          <and>
-            <greater-than>
-              <property>engines/engine[2]/rpm</property>
-              <value>6200</value>
-            </greater-than>
-            <less-than>
-              <property>position/altitude-agl-ft</property>
-              <value>1678</value>
-            </less-than>
-          </and>
-        <!--</or>-->
-        <or>
-          <less-than-equals>
-            <property>gear/gear[0]/compression-norm</property>
-            <value>0.0</value>
-          </less-than-equals>
-          <less-than-equals>
-            <property>gear/gear[1]/compression-norm</property>
-            <value>0.0</value>
-          </less-than-equals>
-          <less-than-equals>
-            <property>gear/gear[2]/compression-norm</property>
-            <value>0.0</value>
-          </less-than-equals>
-        </or>
-      </and>
+      <property>sim/multiplay/generic/bool[11]</property>
     </condition>
   </particlesystem>
 </PropertyList> 

@@ -3,21 +3,60 @@
 <PropertyList>
 
   <generic>
-    <int n="0" alias="/tu154/light/nav/blue"/>
-    <int n="1" alias="/tu154/light/nav/green"/>
-    <int n="2" alias="/tu154/light/nav/red"/>
-    <int n="3" alias="/gear/gear[0]/tyre-smoke"/>
-    <int n="4" alias="/gear/gear[1]/tyre-smoke"/>
-    <int n="5" alias="/gear/gear[2]/tyre-smoke"/>
-    <int n="6" alias="/tu154/light/strobe/strobe_1"/>
-    <int n="7" alias="/tu154/light/strobe/strobe_2"/>
-    <int n="8" alias="/tu154/contrail/smoke1"/>
-    <int n="9" alias="/tu154/contrail/smoke2"/>
-    <int n="10" alias="/tu154/contrail/smoke3"/>
-    <int n="11" alias="/tu154/contrail/contrail1"/>
-    <int n="12" alias="/tu154/contrail/contrail2"/>
-    <int n="13" alias="/tu154/contrail/contrail3"/>
-    <int n="14" alias="/tu154/contrail/condensation"/>
+    <bool n="0" alias="/tu154/light/nav/blue"/>
+    <bool n="1" type="bool">false</bool><!--LDG-->
+    <bool n="2" type="bool">false</bool><!--TAXI-->
+    <bool n="3" type="bool">false</bool><!--LOGO-->
+    <bool n="4" type="bool">false</bool><!--BEAC UP-->
+    <bool n="5" type="bool">false</bool><!--BEAC DN-->
+    <bool n="6" alias="/gear/gear[0]/tyre-smoke"/><!--N-->
+    <bool n="7" alias="/gear/gear[1]/tyre-smoke"/><!--L-->
+    <bool n="8" alias="/gear/gear[2]/tyre-smoke"/><!--R-->
+    <bool n="9" alias="/tu154/contrail/smoke1"/><!--E1-->
+    <bool n="10" alias="/tu154/contrail/smoke2"/><!--E2-->
+    <bool n="11" alias="/tu154/contrail/smoke3"/><!--E3-->
+    <bool n="12" alias="/tu154/contrail/contrail1"/><!--E1-->
+    <bool n="13" alias="/tu154/contrail/contrail2"/><!--E2-->
+    <bool n="14" alias="/tu154/contrail/contrail3"/><!--E3-->
+    <bool n="15" alias="/tu154/contrail/condensation"/>
+    <bool n="16" alias="/tu154/contrail/smoke1-gnd"/><!--E1-->
+    <bool n="17" alias="/tu154/contrail/smoke2-gnd"/><!--E2-->
+    <bool n="18" alias="/tu154/contrail/smoke3-gnd"/><!--E3-->
+    <bool n="19" type="bool">false</bool><!--Fuel Truck-->
+    <bool n="20" type="bool">false</bool><!--Fuel Pipe Connect-->
+    <bool n="21" type="bool">false</bool><!--Fuel Pipe Disconnect-->
+    <bool n="22" type="bool">false</bool><!--De-Icing Truck-->
+    <bool n="23" type="bool">false</bool><!--Catering Truck-->
+    <bool n="24" type="bool">false</bool><!--Baggage Truck Front-->
+    <bool n="25" type="bool">false</bool><!--Baggage Truck Rear-->
+    <bool n="26" type="bool">false</bool><!--External Power Box-->
+    <bool n="27" type="bool">false</bool><!--Gear Chocks-->
+    <bool n="28" type="bool">false</bool><!--Stairs-->
+    <bool n="29" type="bool">false</bool><!--Cobus 2700s-->
+    <bool n="30" type="bool">false</bool><!--Cobus 3000-->
+    <bool n="31" alias="/services/stairways/cover"/><!--Stairs Cover-->
+    <float n="0" type="double">0.0</float><!--PASS CABIN LT-->
+    <float n="1" type="double">0.0</float><!--CARGO COMP LT-->
+    <float n="2" alias="/tu154/light/instruments/int-red"/><!--Dome Light--><!--[0,0.2]-->
+    <float n="3" alias="/tu154/gear/compression-left-m"/>
+    <float n="4" alias="/tu154/gear/compression-right-m"/>
+    <float n="5" alias="/tu154/gear/rotation-left-deg"/><!--[0,9]-->
+    <float n="6" alias="/tu154/gear/rotation-right-deg"/><!--[0,9]-->
+    <float n="7" alias="/gear/gear[0]/rollspeed-ms"/>
+    <float n="8" alias="/gear/gear[1]/rollspeed-ms"/>
+    <float n="9" alias="/gear/gear[2]/rollspeed-ms"/>
+    <float n="10" alias="/fdm/jsbsim/gear/steer-pos-deg"/><!--[-63,63]-->
+    <float n="11" alias="/engines/engine[0]/intake-flaps"/><!--[0,20]-->
+    <float n="12" alias="/engines/engine[2]/intake-flaps"/><!--[0,20]-->
+    <!--<float n="" alias="/tu154/door/passe"/>--><!--[0,1]--><!--Moved to rotors-->
+    <!--<float n="" alias="/tu154/door/cargo0"/>--><!--[0,1]--><!--Moved to rotors-->
+    <!--<float n="" alias="/tu154/door/cargo1"/>--><!--[0,1]--><!--Moved to rotors-->
+    <!--<float n="" alias="/fdm/jsbsim/tu154/gear/door-limit"/>--><!--Emergency Gear Extension--><!--[0.9,1.0]--><!--Moved to rotors-->
+    <!--<float n="" alias="/tu154/light/retract"/>--><!--[0,1]--><!--Moved to rotors-->
+    <!--<float n="" alias="/services/serv-elev"/>--><!--Moved to rotors-->
+    <!--<float n="" alias="/services/catering/position-norm"/>--><!--[0,0.62]--><!--Moved to rotors-->
+    <!--<float n="" alias="/services/deicing_truck/crane/position-norm"/>--><!--[0,1]--><!--Moved to rotors-->
+    <!--<float n="" alias="/services/deicing_truck/deicing/position-norm"/>--><!--[0,1]--><!--Moved to rotors-->
   </generic>
 
 </PropertyList>

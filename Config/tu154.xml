@@ -21,16 +21,12 @@
     <sw-emerg2 type="double">0</sw-emerg2>
   </gear>
   <light>
+    <retract type="double">0.0</retract>
     <instruments>
       <int-red-def type="double" >0.2</int-red-def>
       <int-green-def type="double" >0.2</int-green-def>
       <int-blue-def type="double" >0.1</int-blue-def>
     </instruments>
-    <cabin>
-      <red type="double" >0.3</red>
-      <green type="double" >0.3</green>
-      <blue type="double" >0.3</blue>
-    </cabin>
     <panel>
       <ext-red-def type="double" >0.0</ext-red-def>
       <ext-green-def type="double" >0.0</ext-green-def>
@@ -40,14 +36,25 @@
       <amb-blue-def type="double" >0.0</amb-blue-def>
     </panel>
     <!--<window-alpha type="double" >0.3</window-alpha>      -->
-    <exterior>
-      <ldg type="bool">false</ldg>
-      <taxi type="bool">false</taxi>
-      <logo type="bool">false</logo>
-      <beac-dn type="bool">false</beac-dn>
-      <beac-up type="bool">false</beac-up>
-    </exterior>
+    <nav>
+      <red type="bool">false</red>
+      <green type="bool">false</green>
+      <blue type="bool">false</blue>
+    </nav>
   </light>
+
+  <contrail>
+    <smoke1 type="bool">false</smoke1>
+    <smoke2 type="bool">false</smoke2>
+    <smoke3 type="bool">false</smoke3>
+    <smoke1-gnd type="bool">false</smoke1-gnd>
+    <smoke2-gnd type="bool">false</smoke2-gnd>
+    <smoke3-gnd type="bool">false</smoke3-gnd>
+    <contrail1 type="bool">false</contrail1>
+    <contrail2 type="bool">false</contrail2>
+    <contrail3 type="bool">false</contrail3>
+    <condensation type="bool">false</condensation>
+  </contrail>
 
   <textures>
     <capt-panel>vc01_t.png</capt-panel>
@@ -370,7 +377,6 @@
     <window-left-sec type="double">0</window-left-sec>
     <window-right-sec type="double">0</window-right-sec>
     <refuel type="double">0</refuel>
-    <compartment-light>0.4</compartment-light>
   </door>
 
   <wipers>

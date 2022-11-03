@@ -15,16 +15,7 @@
         </offsets>
 
         <condition>
-		<and> 
-		<greater-than>
-			<property>orientation/pitch-deg</property>
-			<value>-0.5</value>
-		</greater-than>
-                <equals>
-		<property>sim/multiplay/generic/int[3]</property>
-		<value>1</value>
-		</equals>
-		</and>
+			<property>sim/multiplay/generic/bool[6]</property>
 		</condition>
 
         <attach>world</attach>

@@ -89,7 +89,7 @@ setlistener("/engines/engine/n1", reversers);
 setlistener("/engines/engine[2]/n1", reversers);
 setlistener("fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad", reversers);
 setlistener("fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad", reversers);
-setlistener("/sim/model/rev-flaps/rev-flaps-offset", reversers);
+setlistener("tu154/rev-flaps/rev-flaps-offset", reversers);
 
 
 ############################### Groung services implementation ######################################

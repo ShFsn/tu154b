@@ -51,15 +51,12 @@
   <range-m>25.0</range-m>
  </light>
 
-<animation>
-  <type>select</type>
-  <object-name>red-lightcone</object-name>
-  <condition>
-    <or>
-    <property>tu154/light/nav/red</property>
-    <property>sim/multiplay/generic/int[2]</property>
-    </or>
-  </condition>
-</animation>
+  <animation>
+    <type>select</type>
+    <object-name>red-lightcone</object-name>
+    <condition>
+      <property>sim/multiplay/generic/bool[0]</property>
+    </condition>
+  </animation>
 
 </PropertyList> 

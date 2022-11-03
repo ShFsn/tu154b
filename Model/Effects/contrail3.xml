@@ -8,19 +8,7 @@
    <lighting type="bool">false</lighting>
 
    <condition>
-     <or>
-      <property>sim/multiplay/generic/int[13]</property>
-     <and>
-        <greater-than>
-	  <property>engines/engine[2]/rpm</property>
-		<value>6200</value>
-	</greater-than>
-       <greater-than>
-         <property>position/altitude-ft</property>
-         <value>21450</value>
-       </greater-than>
-     </and>
-   </or>
+      <property>sim/multiplay/generic/bool[14]</property>
    </condition>
 
    <attach>world</attach>

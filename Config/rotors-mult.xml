@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <main>
+    <blade n="0"> 
+      <position-deg alias="/tu154/door/passe"/><!--TT_SHORT_FLOAT_3-->
+      <flap-deg alias="/fdm/jsbsim/tu154/gear/door-limit"/><!--TT_SHORT_FLOAT_3-->
+    </blade>
+    <blade n="1"> 
+      <position-deg alias="/tu154/door/cargo0"/><!--TT_SHORT_FLOAT_3-->
+      <flap-deg alias="/tu154/light/retract"/><!--TT_SHORT_FLOAT_3-->
+    </blade>
+    <blade n="2"> 
+      <position-deg alias="/tu154/door/cargo1"/><!--TT_SHORT_FLOAT_3-->
+      <!--<flap-deg/>--><!--TT_SHORT_FLOAT_3-->
+    </blade>
+    <blade n="3"> 
+      <position-deg alias="/services/catering/position-norm"/><!--TT_SHORT_FLOAT_3-->
+      <!--<flap-deg/>--><!--TT_SHORT_FLOAT_3-->
+    </blade>
+    <!--<rpm/>--><!--TT_SHORT_FLOAT_1-->
+  </main>
+
+  <tail>
+    <blade n="0"><position-deg alias="/services/deicing_truck/crane/position-norm"/></blade><!--TT_SHORT_FLOAT_3-->
+    <blade n="1"><position-deg alias="/services/deicing_truck/deicing/position-norm"/></blade><!--TT_SHORT_FLOAT_3-->
+    <rpm alias="/services/serv-elev"/><!--TT_SHORT_FLOAT_1-->
+  </tail>
+
+</PropertyList>

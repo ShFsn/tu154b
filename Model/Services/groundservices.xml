@@ -8,14 +8,7 @@
 		<name>fuel-truck-r</name>
 		<path>Aircraft/tu154b/Model/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
 		<condition>
-			<and>
-				<property>services/fuel-truck/enable</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[19]</property>
 		</condition>
 		<offsets>
 			<x-m>8.5</x-m>
@@ -29,14 +22,7 @@
 		<type>select</type>
 		<object-name>fuel_pipe</object-name>
 		<condition>
-			<and>
-				<property>services/fuel-truck/connect</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[20]</property>
 		</condition>
 	</animation>
 	
@@ -44,14 +30,7 @@
 		<type>select</type>
 		<object-name>fuel_pipe_disconnected</object-name>
 		<condition>
-			<and>
-				<not><property>services/fuel-truck/connect</property></not>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[21]</property>
 		</condition>
 	</animation>
 	
@@ -61,14 +40,7 @@
 		<name>de-ice-truck</name>
 		<path>Aircraft/tu154b/Model/Services/De-Icing/volvo_deicing_truck.xml</path>
 		<condition>
-			<and>
-				<property>services/deicing_truck/enable</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[22]</property>
 		</condition>
 		<offsets>
 			<x-m>33</x-m>
@@ -84,14 +56,7 @@
 		<name>cater-truck</name>
 		<path>Aircraft/tu154b/Model/Services/Catering/L_T_VolvoFM-4_5m-set.xml</path>
 		<condition>
-			<and>
-				<property>services/catering/enable</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[23]</property>
 		</condition>
 		<offsets>
 			<x-m>-8.75</x-m>
@@ -107,14 +72,7 @@
 		<name>baggage-truck-front</name>
 		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.ac</path>
 		<condition>
-			<and>
-				<property>services/buggage/enable-f</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[24]</property>
 		</condition>
 		<offsets>
 			<x-m>-27.6</x-m>
@@ -126,14 +84,7 @@
 		<name>baggage-truck-back</name>
 		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.ac</path>
 		<condition>
-			<and>
-				<property>services/buggage/enable-r</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[25]</property>
 		</condition>
 		<offsets>
 			<x-m>1.6</x-m>
@@ -149,14 +100,7 @@
 		<name>ext-pwr</name>
 		<path>Aircraft/tu154b/Model/Services/External-Power/ext-pwr-box.ac</path>
 		<condition>
-			<and>
-				<property>services/ext-power/enable</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[26]</property>
 		</condition>
 		<offsets>
 			<x-m>-16.55</x-m>
@@ -172,13 +116,7 @@
 		<name>chock_nose</name>
 		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
 		<condition>
-			<and>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>
 		<offsets>
 			<x-m>-1.8</x-m>
@@ -191,13 +129,7 @@
 		<name>chock_left</name>
 		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
 		<condition>
-			<and>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>
 		<offsets>
 			<x-m>15.85</x-m>
@@ -210,13 +142,7 @@
 		<name>chock_right</name>
 		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
 		<condition>
-			<and>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>
 		<offsets>
 			<x-m>15.85</x-m>
@@ -237,87 +163,15 @@
 			<heading-deg>0.0</heading-deg>
 		</offsets>
 		<condition>
-			<and>
-				<property>services/stairways/enable</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[28]</property>
 		</condition>
 	</model>
-
-	<!--<model>
-		<path>Aircraft/A320-family/Models/Services/Stairs/stairs.xml</path>
-		<name>l4</name>
-		<offsets>
-			<x-m>31.68355</x-m>
-			<y-m>0.04962</y-m>
-			<z-m>-0.6</z-m>
-			<heading-deg>6.705</heading-deg>
-		</offsets>
-		<condition>
-			<property>services/stairs/l4</property>
-		</condition>
-	</model>-->
-	
-	<!-- Buses -->
-	
-	<!--<model>
-		<name>bus-1</name>
-		<path>Aircraft/tu154b/Model/Services/Bus/Bus1.xml</path>
-		<condition>
-			<and>
-				<property>sim/model/ground-services/bus1</property>
-				<property>sim/model/ground-services/chocks</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
-		</condition>
-		<offsets>
-			<x-m>-2.5</x-m>
-			<y-m>15.0</y-m>
-			<z-m>3.0</z-m>
-			<heading-deg>270</heading-deg>
-		</offsets>
-	</model>
-
-	<model>
-		<name>bus-2</name>
-		<path>Aircraft/tu154b/Model/Services/Bus/Bus2.xml</path>
-		<condition>
-			<and>
-				<property>sim/model/ground-services/bus2</property>
-				<property>sim/model/ground-services/chocks</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
-		</condition>
-		<offsets>
-			<x-m>7.0</x-m>
-			<y-m>15.0</y-m>
-			<z-m>3.0</z-m>
-			<heading-deg>0</heading-deg>
-		</offsets>
-	</model>-->
 
 	<model>
 		<name>bus-1-cobus</name>
 		<path>Aircraft/tu154b/Model/Services/Bus/Cobus_2700s.xml</path>
 		<condition>
-			<and>
-				<property>services/buses/enable-1</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[29]</property>
 		</condition>
 		<offsets>
 			<x-m>-27.0</x-m>
@@ -331,14 +185,7 @@
 		<name>bus-2-cobus</name>
 		<path>Aircraft/tu154b/Model/Services/Bus/Cobus_3000.xml</path>
 		<condition>
-			<and>
-				<property>services/buses/enable-2</property>
-				<property>services/chocks/enable</property>
-				<less-than>
-					<property>velocities/groundspeed-kt</property>
-					<value>1</value>
-				</less-than>
-			</and>
+			<property>sim/multiplay/generic/bool[30]</property>
 		</condition>
 		<offsets>
 			<x-m>-12.0</x-m>
@@ -363,18 +210,8 @@
 		<object-name>bus-1-cobus</object-name>
 		<object-name>bus-2-cobus</object-name>
 		<type>translate</type>
-		<expression>
-			<sum>
-				<prod>
-					<difference>
-						<property>services/gnd-elev</property>
-						<property>position/altitude-ft</property>
-					</difference>
-					<value>0.3048</value>
-				</prod>
-				<value>2.32</value>
-			</sum>
-		</expression>
+		<property>rotors/tail/rpm</property>
+		<factor>1.0</factor>
 		<axis>
 			<x>0</x>
 			<y>0</y>
@@ -402,13 +239,13 @@
 				<atan2>
 					<difference>
 						<sum>
-							<property>gear/gear[0]/compression-ft</property>
+							<property>gear/gear[0]/compression-norm</property>
 							<value>-0.656</value>
 						</sum>
 						<product>
 							<sum>
-								<property>gear/gear[2]/compression-ft</property>
-								<property>gear/gear[1]/compression-ft</property>
+								<property>gear/gear[2]/compression-norm</property>
+								<property>gear/gear[1]/compression-norm</property>
 							</sum>
 							<value>0.5</value>
 						</product>
@@ -448,8 +285,8 @@
 			<rad2deg>
 				<atan2>
 					<difference>
-						<property>gear/gear[2]/compression-ft</property>
-						<property>gear/gear[1]/compression-ft</property>
+						<property>gear/gear[2]/compression-norm</property>
+						<property>gear/gear[1]/compression-norm</property>
 					</difference>
 					<value>40.65</value>
 				</atan2>

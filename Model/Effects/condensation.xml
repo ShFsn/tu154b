@@ -11,23 +11,7 @@
     <pass>true</pass>
 
     <condition>
-      <or>
-      <property>sim/multiplay/generic/int[14]</property>
-      <and>
-        <greater-than>
-          <property>environment/relative-humidity</property>
-          <value>95</value>
-        </greater-than>
-        <greater-than>
-          <property>environment/temperature-degc</property>
-          <value>0</value>
-        </greater-than>
-        <greater-than>
-          <property>velocities/airspeed-kt</property>
-          <value>180</value>
-        </greater-than>
-      </and>
-    </or>
+      <property>sim/multiplay/generic/bool[15]</property>
     </condition>
 
     <attach>world</attach> <!-- world / local-->

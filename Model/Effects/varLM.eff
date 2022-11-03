@@ -4,11 +4,11 @@
  <parameters>
   <lightmap-enabled type="int">1</lightmap-enabled>
   <lightmap-multi type="int">1</lightmap-multi>
-  <lightmap-factor type="float" n="0"><use>tu154/light/exterior/logo</use></lightmap-factor>
+  <lightmap-factor type="float" n="0"><use>sim/multiplay/generic/bool[3]</use></lightmap-factor><!--LOGO-->
   <lightmap-color type="vec3d" n="0">0.85 0.85 0.85</lightmap-color>
-  <lightmap-factor type="float" n="1"><use>tu154/light/exterior/beac-up</use></lightmap-factor>
+  <lightmap-factor type="float" n="1"><use>sim/multiplay/generic/bool[4]</use></lightmap-factor><!--BEAC UP-->
   <lightmap-color type="vec3d" n="1">1.0 0.0 0.0</lightmap-color>
-  <lightmap-factor type="float" n="2"><use>tu154/light/exterior/beac-dn</use></lightmap-factor>
+  <lightmap-factor type="float" n="2"><use>sim/multiplay/generic/bool[5]</use></lightmap-factor><!--BEAC DN-->
   <lightmap-color type="vec3d" n="2">1.5 0.0 0.0</lightmap-color>
   <lightmap-factor type="float" n="3">0.0</lightmap-factor>
   <lightmap-color type="vec3d" n="3">1.0 1.0 1.0 </lightmap-color>

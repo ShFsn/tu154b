@@ -32,10 +32,7 @@
     <type>select</type>
     <object-name>red</object-name>
     <condition>
-      <or>
-      <property>tu154/light/strobe/strobe_1</property>
-      <property>sim/multiplay/generic/int[6]</property>
-      </or>
+        <property>sim/multiplay/generic/bool[4]</property>
     </condition>
   </animation>
 

@@ -304,7 +304,7 @@
   <object-name>engpanel_light_5</object-name>
   <condition>
     <greater-than>
-      <property>tu154/light/instruments/int-red</property>
+      <property>sim/multiplay/generic/float[2]</property>
       <value>0.1</value>
     </greater-than>
     <!--<property>sim/current-view/internal</property>-->

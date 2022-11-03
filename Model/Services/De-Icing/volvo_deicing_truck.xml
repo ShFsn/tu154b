@@ -143,7 +143,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>lift_arm_all_01</object-name>
-		<property>services/deicing_truck/crane/position-norm</property>
+		<property>rotors/tail/blade[0]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -163,7 +163,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>lift_arm_all_02</object-name>
-		<property>services/deicing_truck/crane/position-norm</property>
+		<property>rotors/tail/blade[0]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -184,7 +184,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>lift_all</object-name>
-		<property>services/deicing_truck/crane/position-norm</property>
+		<property>rotors/tail/blade[0]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -200,7 +200,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lift_all_01</object-name>
-		<property>services/deicing_truck/crane/position-norm</property>
+		<property>rotors/tail/blade[0]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -219,7 +219,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lift_cabin_all</object-name>
-		<property>services/deicing_truck/crane/position-norm</property>
+		<property>rotors/tail/blade[0]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -238,7 +238,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lift_cabin_turn</object-name>
-		<property>services/deicing_truck/crane/position-norm</property>
+		<property>rotors/tail/blade[0]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -261,7 +261,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lift_nozle</object-name>
-		<property>services/deicing_truck/deicing/position-norm</property>
+		<property>rotors/tail/blade[1]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -290,7 +290,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lift_cabin_turn</object-name>
-		<property>services/deicing_truck/deicing/position-norm</property>
+		<property>rotors/tail/blade[1]/position-deg</property>
 		<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>   0.00 </dep></entry>
@@ -326,7 +326,7 @@
 
 	<condition>
 		<equals>
-			<property>services/deicing_truck/crane/position-norm</property>
+			<property>rotors/tail/blade[0]/position-deg</property>
 			<value>1.00</value>
 		</equals>
 	</condition>
@@ -414,7 +414,7 @@
 	<object-name>Lights_all</object-name>
 	<condition>		
 		<greater-than>		
-			<property>sim/time/sun-angle-rad</property>
+			<property>/sim/time/sun-angle-rad</property>
 			<value>1.45</value>
 		</greater-than>
 	</condition>
@@ -432,11 +432,11 @@
 	<condition>
 		<and>
 		<greater-than>		
-			<property>sim/time/sun-angle-rad</property>
+			<property>/sim/time/sun-angle-rad</property>
 			<value>1.57</value>
 		</greater-than>
 		<greater-than>		
-			<property>services/deicing_truck/crane/position-norm</property>
+			<property>rotors/tail/blade[0]/position-deg</property>
 			<value>0.30</value>
 		</greater-than>
 		</and>
@@ -455,7 +455,7 @@
 		<condition>
 			<or>
 			<greater-than>		
-				<property>services/deicing_truck/crane/position-norm</property>
+				<property>rotors/tail/blade[0]/position-deg</property>
 				<value>0.1</value>
 			</greater-than>
 			<greater-than>		
@@ -478,7 +478,7 @@
 	<object-name>Lights_deicing</object-name>
 	<condition>		
 		<greater-than>		
-			<property>sim/time/sun-angle-rad</property>
+			<property>/sim/time/sun-angle-rad</property>
 			<value>1.45</value>
 		</greater-than>
 	</condition>
@@ -491,10 +491,10 @@
 		<mode>in-transit</mode>
 		<path>Sounds/gear.wav</path>
 		
-			<property>services/deicing_truck/crane/position-norm</property>
+			<property>rotors/tail/blade[0]/position-deg</property>
 		
 		<volume>
-			<property>services/deicing_truck/crane/position-norm</property>
+			<property>rotors/tail/blade[0]/position-deg</property>
 			<factor>1.5</factor>
 		</volume>
 		<reference-dist>100</reference-dist>

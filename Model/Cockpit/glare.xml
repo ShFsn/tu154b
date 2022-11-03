@@ -39,9 +39,10 @@
     </not>
   </condition>
   <emission>
-    <red-prop>sim/model/cabin-lighting/vnesh-2</red-prop>
-    <green-prop>sim/model/cabin-lighting/vnesh-2</green-prop>
-    <blue-prop>sim/model/cabin-lighting/vnesh-2</blue-prop>
+    <red>0.067</red>
+    <green>0.067</green>
+    <blue>0.067</blue>
+    <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
   </emission>
   <!--<texture-prop>tu154/textures/copilot-panel</texture-prop>-->
 </animation>

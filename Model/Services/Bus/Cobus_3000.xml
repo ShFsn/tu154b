@@ -1,7 +1,7 @@
 <PropertyList>
 	<path>Cobus_3000.ac</path>
     
-	<animation>
+	<!--<animation>
 		<type>select</type>
         <object-name>blah</object-name>
         <object-name>Cobus_3000</object-name>
@@ -9,7 +9,7 @@
 		<condition>
             <property>services/buses/enable-2</property>
 		</condition>
-	</animation>
+	</animation>-->
 
  <effect>
     <inherits-from>Effects/model-transparent</inherits-from>

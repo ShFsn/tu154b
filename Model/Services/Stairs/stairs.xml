@@ -23,7 +23,7 @@
 	<object-name>cover-under</object-name>
 	<object-name>cover-rods</object-name>
 	<condition>
-		<property>services/stairways/cover</property>
+		<property>sim/multiplay/generic/bool[31]</property>
 	</condition>
 </animation>
 		

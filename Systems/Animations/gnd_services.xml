@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <logic>
+    <name>Fuel Truck</name>
+    <input>
+			<and>
+				<property>services/fuel-truck/enable</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[19]</output>
+  </logic>
+  <logic>
+    <name>Fuel Pipe Connect</name>
+    <input>
+			<and>
+				<property>services/fuel-truck/connect</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[20]</output>
+  </logic>
+  <logic>
+    <name>Fuel Pipe Disconnect</name>
+    <input>
+			<and>
+				<not><property>services/fuel-truck/connect</property></not>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[21]</output>
+  </logic>
+  
+  <logic>
+    <name>De-Icing Truck</name>
+    <input>
+			<and>
+				<property>services/deicing_truck/enable</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[22]</output>
+  </logic>
+  
+  <logic>
+    <name>Catering Truck</name>
+    <input>
+			<and>
+				<property>services/catering/enable</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[23]</output>
+  </logic>
+  
+  <logic>
+    <name>Baggage Truck Front</name>
+    <input>
+			<and>
+				<property>services/buggage/enable-f</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[24]</output>
+  </logic>
+  <logic>
+    <name>Baggage Truck Rear</name>
+    <input>
+			<and>
+				<property>services/buggage/enable-r</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[25]</output>
+  </logic>
+  
+  <logic>
+    <name>External Power Box</name>
+    <input>
+			<and>
+				<property>services/ext-power/enable</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[26]</output>
+  </logic>
+  
+  <logic>
+    <name>Gear Chocks</name>
+    <input>
+			<and>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[27]</output>
+  </logic>
+  
+  <logic>
+    <name>Stairs</name>
+    <input>
+			<and>
+				<property>services/stairways/enable</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[28]</output>
+  </logic>
+  
+  <logic>
+    <name>Cobus 2700s</name>
+    <input>
+			<and>
+				<property>services/buses/enable-1</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[29]</output>
+  </logic>
+  <logic>
+    <name>Cobus 3000</name>
+    <input>
+			<and>
+				<property>services/buses/enable-2</property>
+				<property>services/chocks/enable</property>
+				<less-than>
+					<property>velocities/groundspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</and>
+    </input>
+    <output>sim/multiplay/generic/bool[30]</output>
+  </logic>
+
+  <filter>
+	<type>gain</type>
+	<gain>1.0</gain>
+	<input>
+		<expression>
+			<sum>
+				<prod>
+					<difference>
+						<property>services/gnd-elev</property>
+						<property>position/altitude-ft</property>
+					</difference>
+					<value>0.3048</value>
+				</prod>
+				<value>2.32</value>
+			</sum>
+		</expression>
+	</input>
+	<output>services/serv-elev</output>
+  </filter>
+
+</PropertyList>
