@@ -10,5 +10,6 @@
   <path>/tu154/options/tooltips-color/g</path>
   <path>/tu154/options/tooltips-color/b</path>
   <path>/tu154/options/textures/yokes</path>
+  <path>/tu154/options/rendering/dynamic-lighting/disable-multiplay</path>
 
 </PropertyList>

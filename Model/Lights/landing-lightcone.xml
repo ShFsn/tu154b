@@ -56,6 +56,10 @@
     <object-name>landing-lightcone</object-name>
     <condition>
       <property>sim/multiplay/generic/bool[1]</property>
+      <or>
+        <property>tu154/constants/one</property>
+        <not><property>/tu154/options/rendering/dynamic-lighting/disable-multiplay</property></not>
+      </or>
     </condition>
   </animation>
 

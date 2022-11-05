@@ -505,6 +505,12 @@
       <yokes type="bool">false</yokes>
     </textures>
 
+    <rendering>
+      <dynamic-lighting>
+        <disable-multiplay type="bool">false</disable-multiplay>
+      </dynamic-lighting>
+    </rendering>
+
   </options>
 
 </PropertyList>
