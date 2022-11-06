@@ -11,6 +11,13 @@
 		</condition>
 	</animation>-->
 	
+	<effect>
+		<inherits-from>busLM</inherits-from>
+		<object-name>blah</object-name>
+		<object-name>Cobus_2700s</object-name>
+		<parameters><texture n="3"><image>Cobus_2700s_lm.png</image></texture></parameters>
+	</effect>
+	
  <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Cobus_2700s_Light</object-name>

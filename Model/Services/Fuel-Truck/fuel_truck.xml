@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Fuel_Truck_Short_VolvoFM.ac</path>
+
+	
+	<effect>
+		<inherits-from>Effects/model-combined</inherits-from>
+		<object-name>fuel_pipe</object-name>
+		<object-name>fuel_pipe_disconnected</object-name>
+		<object-name>fuel_truck</object-name>
+		<object-name>handle</object-name>
+	</effect>
+	
+	<!--<animation>
+		<name>Lights_all</name>
+		<object-name></object-name>
+	</animation>-->
+
+	<!-- Lights night illumination -->
+	<!--<animation>
+		<type>material</type> 
+		<object-name>Lights_all</object-name>
+		<condition>		
+			<greater-than>		
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.45</value>
+			</greater-than>
+		</condition>
+		<emission>	
+			<red>0.7</red>	
+			<green>0.7</green>	
+			<blue>0.5</blue>
+		</emission>
+	</animation>-->
+
+</PropertyList>

@@ -10,6 +10,13 @@
             <property>services/buses/enable-2</property>
 		</condition>
 	</animation>-->
+	
+	<effect>
+		<inherits-from>Aircrafts/tu154/Model/Services/Bus/busLM</inherits-from>
+		<object-name>blah</object-name>
+		<object-name>Cobus_3000</object-name>
+		<parameters><texture n="3"><image>Aircrafts/tu154/Model/Services/Bus/Cobus_3000_lm.png</image></texture></parameters>
+	</effect>
 
  <effect>
     <inherits-from>Effects/model-transparent</inherits-from>

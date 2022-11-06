@@ -11,6 +11,8 @@
 	
 	<!-- Modified for Boeing 787-8 by Omega95 -->
 
+	<!-- Modified for Tu-154B-2 by ShFsn-->
+
 	<path>volvo_deicing_truck.ac</path>
 		
 	<nasal>
@@ -42,6 +44,10 @@
 				} -->
 	</nasal>
 
+	<effect>
+		<inherits-from>Effects/model-combined</inherits-from>
+		<object-name>DI_truck</object-name>
+	</effect>
 	
 	<animation>
 		<name>Lights_all</name>

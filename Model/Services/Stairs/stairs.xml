@@ -6,6 +6,11 @@
 
 	<name>Mobile Stairs</name>
 	<path>stairs.ac</path>
+	
+	<effect>
+		<inherits-from>Effects/model-combined</inherits-from>
+		<object-name>Stairs</object-name>
+	</effect>
 
 <!-- LIVERY SELECT -->
 	<!-- Animation -->

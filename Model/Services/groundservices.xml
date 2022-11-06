@@ -6,7 +6,7 @@
 	<!-- Fuel Truck -->
 	<model>
 		<name>fuel-truck-r</name>
-		<path>Aircraft/tu154b/Model/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
+		<path>Aircraft/tu154b/Model/Services/Fuel-Truck/fuel_truck.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[19]</property>
 		</condition>
@@ -70,7 +70,7 @@
 	
 	<model>
 		<name>baggage-truck-front</name>
-		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.ac</path>
+		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[24]</property>
 		</condition>
@@ -82,7 +82,7 @@
 	</model>
 	<model>
 		<name>baggage-truck-back</name>
-		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.ac</path>
+		<path>Aircraft/tu154b/Model/Services/Baggage/cargo_ramp.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[25]</property>
 		</condition>
@@ -98,7 +98,7 @@
 	
 	<model>
 		<name>ext-pwr</name>
-		<path>Aircraft/tu154b/Model/Services/External-Power/ext-pwr-box.ac</path>
+		<path>Aircraft/tu154b/Model/Services/External-Power/ext-pwr-box.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[26]</property>
 		</condition>
@@ -114,7 +114,7 @@
 	
 	<model>
 		<name>chock_nose</name>
-		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
+		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>
@@ -127,7 +127,7 @@
 	
 	<model>
 		<name>chock_left</name>
-		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
+		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>
@@ -140,7 +140,7 @@
 	
 	<model>
 		<name>chock_right</name>
-		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.ac</path>
+		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>

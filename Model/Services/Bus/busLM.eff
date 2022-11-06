@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+ <inherits-from>Effects/model-combined-deferred</inherits-from>
+ <parameters>
+    <lightmap-enabled type="int">
+        <use>/environment/lightmap-factor</use>
+    </lightmap-enabled>
+  <lightmap-multi type="int">0</lightmap-multi>
+  <lightmap-factor type="float">0.8</lightmap-factor>
+  <lightmap-color type="vec3d">1.0 0.95 0.75</lightmap-color>
+ </parameters>
+</PropertyList>
