@@ -5183,7 +5183,7 @@
   <type>rotate</type>
   <object-name>l_gear_object_5.4</object-name>
   <object-name>l_gear_object_5.1</object-name>
-  <property>sim/multiplay/generic/float[3]</property>
+  <property>sim/multiplay/generic/float[5]</property>
   <center>
     <x-m>2.5153</x-m>
     <y-m>0.0</y-m>
@@ -5826,7 +5826,7 @@
   <type>rotate</type>
   <object-name>r_gear_object_5.4</object-name>
   <object-name>r_gear_object_5.1</object-name>
-  <property>sim/multiplay/generic/float[4]</property>
+  <property>sim/multiplay/generic/float[6]</property>
   <center>
     <x-m>2.5153</x-m>
     <y-m>0.0</y-m>
