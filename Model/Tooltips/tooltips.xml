@@ -28,12 +28,24 @@
       <pitch-deg>69.0</pitch-deg>
     </offsets>
 </model>
+  <model>
+      <name>engineer-panel</name>
+      <path>Aircraft/tu154b/Model/Tooltips/engineer-panel.xml</path>
+      <offsets>
+        <x-m>-21.1</x-m>
+        <y-m>0.91</y-m>
+        <z-m>2.26</z-m>
+        <pitch-deg>0</pitch-deg>
+        <heading-deg>-90</heading-deg>
+      </offsets>
+  </model>
   <animation>
     <type>material</type>
     <object-name>main-panel</object-name>
     <object-name>overhead-panel</object-name>
     <object-name>center-panel</object-name>
     <object-name>pedestal-panel</object-name>
+    <object-name>engineer-panel</object-name>
     <diffuse>
       <red>0.0</red>
       <green>0.0</green>
@@ -52,6 +64,7 @@
     <object-name>overhead-panel</object-name>
     <object-name>center-panel</object-name>
     <object-name>pedestal-panel</object-name>
+    <object-name>engineer-panel</object-name>
     <condition>
         <property>/sim/panel-hotspots</property>
     </condition>

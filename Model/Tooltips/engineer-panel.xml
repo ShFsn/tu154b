@@ -1,0 +1,985 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">501-AC freq</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">502-AC voltage</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.075</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">503-AC ammeter</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.15</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">504-27V DC bus voltage</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.23</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">505-DC ammeter</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.075</y-m>
+      <z-m>-0.23</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">506-DC ammeter</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.15</y-m>
+      <z-m>-0.23</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">507-DC ammeter</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.225</y-m>
+      <z-m>-0.23</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">508-APU RPM</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.23</y-m>
+      <z-m>-0.44</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">509-Engine 1 throttle lever position</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.33</y-m>
+      <z-m>-0.17</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">510-Engine 2 throttle lever position</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.435</y-m>
+      <z-m>-0.17</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">511-Engine 3 throttle lever position</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.54</y-m>
+      <z-m>-0.17</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">512-Engine 1 N1, N2 RPM</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.33</y-m>
+      <z-m>-0.26</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">513-Engine 2 N1, N2 RPM</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.435</y-m>
+      <z-m>-0.26</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">514-Engine 3 N1, N2 RPM</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.54</y-m>
+      <z-m>-0.26</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">515-Engine 1 EGT temperature</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.33</y-m>
+      <z-m>-0.34</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">516-Engine 2 EGT temperature</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.435</y-m>
+      <z-m>-0.34</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">517-Engine 3 EGT temperature</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.54</y-m>
+      <z-m>-0.34</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">518-Engine 1 fuel and oil pressure</text></params></overlay>
+    <offsets>
+      <x-m>0.016</x-m>
+      <y-m>0.33</y-m>
+      <z-m>-0.44</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">519-Engine 2 fuel and oil pressure</text></params></overlay>
+    <offsets>
+      <x-m>0.016</x-m>
+      <y-m>0.435</y-m>
+      <z-m>-0.44</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">520-Engine 3 fuel and oil pressure</text></params></overlay>
+    <offsets>
+      <x-m>0.016</x-m>
+      <y-m>0.54</y-m>
+      <z-m>-0.44</z-m>
+    </offsets>
+  </model>
+    <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">521-Engine 1 fuel flow</text></params></overlay>
+    <offsets>
+      <x-m>0.034</x-m>
+      <y-m>0.33</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">522-Engine 2 fuel flow</text></params></overlay>
+    <offsets>
+      <x-m>0.034</x-m>
+      <y-m>0.435</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">523-Engine 3 fuel flow</text></params></overlay>
+    <offsets>
+      <x-m>0.034</x-m>
+      <y-m>0.54</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">524-Airspeed indicator</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.67</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">525-Altimeter</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.76</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">526-Verticall velolcity</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.87</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">527-Fuel in tank 2</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.74</y-m>
+      <z-m>-0.13</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">528-Fuel in tank 3</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.86</y-m>
+      <z-m>-0.13</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">529-Fuel in tank 4</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.87</y-m>
+      <z-m>-0.23</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">530-Total fuel</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.87</y-m>
+      <z-m>-0.33</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">531-Fuel in tank 1 and total fuel</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.75</y-m>
+      <z-m>-0.33</z-m>
+    </offsets>
+  </model>
+    <text>
+      <type type="string">literal</type>
+      <text type="string">532-534 - Hydraulic systems 1-3 pressure</text>
+      <draw-text type="bool">true</draw-text>
+      <font>Helvetica.txf</font>
+      <character-size type="double">0.012</character-size>
+      <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+      <axis-alignment>yz-plane</axis-alignment>
+      <max-height>0.2</max-height>
+      <max-width>0.2</max-width>
+      <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+      </font-resolution>
+      <alignment>center-center</alignment>
+          <offsets>
+            <x-m>0.02</x-m>
+            <y-m>0.72</y-m>
+            <z-m>-0.46</z-m>
+          </offsets>
+    </text>
+
+  <text>
+      <type type="string">literal</type>
+      <text type="string">5021-5023 - Hydraulic systems 1-3 low pressure warning lights</text>
+      <draw-text type="bool">true</draw-text>
+      <font>Helvetica.txf</font>
+      <character-size type="double">0.012</character-size>
+      <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+      <axis-alignment>yz-plane</axis-alignment>
+      <max-height>0.2</max-height>
+      <max-width>0.2</max-width>
+      <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+      </font-resolution>
+      <alignment>center-center</alignment>
+        <offsets>
+          <x-m>0.025</x-m>
+          <y-m>0.75</y-m>
+          <z-m>-0.5</z-m>
+        </offsets>
+    </text>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">535-pressure of the emergency brake system</text></params></overlay>
+    <offsets>
+      <x-m>0.023</x-m>
+      <y-m>0.87</y-m>
+      <z-m>-0.48</z-m>
+    </offsets>
+  </model>
+    <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5024-emergency brake system low pressure warning</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.92</y-m>
+      <z-m>-0.49</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">536,537-hydraulics oil level</text></params></overlay>
+    <offsets>
+      <x-m>0.04</x-m>
+      <y-m>0.72</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">538-ACHS-2 clock</text></params></overlay>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>1.2</y-m>
+      <z-m>-0.03</z-m>
+      <heading-deg>-30</heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">539-Outside air temperature</text></params></overlay>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>1.2</y-m>
+      <z-m>-0.12</z-m>
+      <heading-deg>-30</heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">540-542 - RA-56 hydraulic actuator switches in yaw</text></params></overlay>
+    <offsets>
+      <x-m>0.11</x-m>
+      <y-m>0.2</y-m>
+      <z-m>0.15</z-m>
+      <pitch-deg>45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">543-545 - RA-56 hydraulic actuator switches in bank</text></params></overlay>
+    <offsets>
+      <x-m>0.07</x-m>
+      <y-m>0.2</y-m>
+      <z-m>0.11</z-m>
+      <pitch-deg>45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">546-548 - RA-56 hydraulic actuator switches in pitch</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.2</y-m>
+      <z-m>0.07</z-m>
+      <pitch-deg>45</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">549 - Hydraulic actuator crossfeed (not impl)</text></params></overlay>
+    <offsets>
+      <x-m>0.09</x-m>
+      <y-m>0.28</y-m>
+      <z-m>0.13</z-m>
+      <pitch-deg>45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">550 - Stability augmentation in pitch switch</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.28</y-m>
+      <z-m>0.09</z-m>
+      <pitch-deg>45</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">551 - Avionics power lights. 27V</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.2</y-m>
+      <z-m>-0.03</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">552 - AC source (GPU/APU/non)</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.25</y-m>
+      <z-m>0.01</z-m>
+    </offsets>
+  </model>
+  <text>
+      <type type="string">literal</type>
+      <text type="string">553,554, 555, 556, 564 - AC and DC indicator source (generators, bus from the APU/GPU, batteries)</text>
+      <draw-text type="bool">true</draw-text>
+      <font>Helvetica.txf</font>
+      <character-size type="double">0.012</character-size>
+      <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+      <axis-alignment>yz-plane</axis-alignment>
+      <max-height>0.2</max-height>
+      <max-width>0.26</max-width>
+      <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+      </font-resolution>
+      <alignment>center-center</alignment>
+        <offsets>
+          <x-m>0.02</x-m>
+          <y-m>0.12</y-m>
+          <z-m>-0.08</z-m>
+        </offsets>
+  </text>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">557 - Emergency inverter (not impl)</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.02</y-m>
+      <z-m>-0.15</z-m>
+    </offsets>
+  </model>
+  <text>
+      <type type="string">literal</type>
+      <text type="string">558-560 - Generator failure lamps</text>
+      <draw-text type="bool">true</draw-text>
+      <font>Helvetica.txf</font>
+      <character-size type="double">0.012</character-size>
+      <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+      <axis-alignment>yz-plane</axis-alignment>
+      <max-height>0.2</max-height>
+      <max-width>0.26</max-width>
+      <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+      </font-resolution>
+      <alignment>center-center</alignment>
+        <offsets>
+          <x-m>0.01</x-m>
+          <y-m>0.16</y-m>
+          <z-m>-0.12</z-m>
+      </offsets>
+  </text>
+  <text>
+      <type type="string">literal</type>
+      <text type="string">561-563 - Generator switches</text>
+      <draw-text type="bool">true</draw-text>
+      <font>Helvetica.txf</font>
+      <character-size type="double">0.012</character-size>
+      <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+      <axis-alignment>yz-plane</axis-alignment>
+      <max-height>0.2</max-height>
+      <max-width>0.26</max-width>
+      <font-resolution>
+        <width type="int">32</width>
+        <height type="int">32</height>
+      </font-resolution>
+      <alignment>center-center</alignment>
+        <offsets>
+          <x-m>0.01</x-m>
+          <y-m>0.16</y-m>
+          <z-m>-0.16</z-m>
+      </offsets>
+  </text>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">564 - AC and DC indicator source batteries</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.05</y-m>
+      <z-m>-0.3</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">565 - AC\DC inverters</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.13</y-m>
+      <z-m>-0.3</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">566 - Standby inverter lamp.</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.19</y-m>
+      <z-m>-0.28</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">567 - AC\DC inverters</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.26</y-m>
+      <z-m>-0.3</z-m>
+    </offsets>
+  </model>
+   <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">568 - Lamp "DC Bus on battery"</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.12</y-m>
+      <z-m>-0.35</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">569 - Battery master switch</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.23</y-m>
+      <z-m>-0.35</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">570 - APU master switch</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>-0.01</y-m>
+      <z-m>-0.43</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">571 - "Dry-run/Start" APU switch</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.05</y-m>
+      <z-m>-0.43</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">572 - APU fuel pump</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>-0.01</y-m>
+      <z-m>-0.5</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">573 - Air bleed valve from the APU</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.05</y-m>
+      <z-m>-0.5</z-m>
+    </offsets>
+  </model>
+   <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">574 - Start APU button</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.07</y-m>
+      <z-m>-0.56</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">575 - Stop APU button</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.16</y-m>
+      <z-m>-0.56</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">576 - Warnig test button</text></params></overlay>
+    <offsets>
+      <x-m>0.05</x-m>
+      <y-m>0.23</y-m>
+      <z-m>-0.56</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">577 -APU warnings</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>0.11</y-m>
+      <z-m>-0.48</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">579 - Engine warnings</text></params></overlay>
+    <offsets>
+      <x-m>0.0</x-m>
+      <y-m>0.42</y-m>
+      <z-m>-0.04</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">580,581 - pumps Tank 2 L/R</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.08</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small-wide.xml</path>
+    <overlay><params><text type="string">581,582 - balancing indicator Tank 2 L/R</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.12</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small-wide.xml</path>
+    <overlay><params><text type="string">584   585   586   587</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.145</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small-wide.xml</path>
+    <overlay><params><text type="string">588   589   590   591</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.175</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small-wide.xml</path>
+    <overlay><params><text type="string">592   593   594   595</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.195</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">596   5001</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.79</y-m>
+      <z-m>-0.2</z-m>
+    </offsets>
+  </model>
+
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">597   5002</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.79</y-m>
+      <z-m>-0.23</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">598   5003</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.79</y-m>
+      <z-m>-0.255</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">599   5004</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.79</y-m>
+      <z-m>-0.28</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5005 - Transfer valve 3 -> 2 switch</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.74</y-m>
+      <z-m>-0.21</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5006 - Transfer valve 4 -> 2 switch</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.74</y-m>
+      <z-m>-0.24</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">5007,5008 - pumps Tank 3 L/R</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.225</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">5009 - Tank 4 pump switch and indicator</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.27</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small-wide.xml</path>
+    <overlay><params><text type="string">5011 - Tank 1 pumps indicators (engine feed)</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.31</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small-wide.xml</path>
+    <overlay><params><text type="string">5012 - Tank 1 pumps switches (engine feed)</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.34</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small-wide.xml</path>
+    <overlay><params><text type="string">5013 - “Fuel shutoff valves open” indicators</text></params></overlay>
+    <offsets>
+      <x-m>0.01</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.37</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">5014 - Fuel shutoff valve switches</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.66</y-m>
+      <z-m>-0.41</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5015 - fuelmeter power switch</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.72</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5016 - automatic balance</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.765</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5017 - automatic balance indicator</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.79</y-m>
+      <z-m>-0.41</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5018 - automatic fuel selector</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.82</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5019 - fuel source selector “auto/manual”</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.85</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5020 - fuel flow meter switch</text></params></overlay>
+    <offsets>
+      <x-m>0.02</x-m>
+      <y-m>0.88</y-m>
+      <z-m>-0.4</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5025 - hydraulics oil level (not impl)</text></params></overlay>
+    <offsets>
+      <x-m>0.07</x-m>
+      <y-m>0.72</y-m>
+      <z-m>-0.56</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5026 - Emergency brake system valve</text></params></overlay>
+    <offsets>
+      <x-m>0.07</x-m>
+      <y-m>0.83</y-m>
+      <z-m>-0.56</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5027 - 1 and 2 hydraulic systems crossfeed</text></params></overlay>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>0.85</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5028, 5029 - pumps for systems 2 and 3 </text></params></overlay>
+    <offsets>
+      <x-m>0.06</x-m>
+      <y-m>0.89</y-m>
+      <z-m>-0.53</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5030 - EGT temperature meter switch</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.38</y-m>
+      <z-m>-0.32</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5031 - EGT temperature meter switch</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.49</y-m>
+      <z-m>-0.32</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5032 - EGT temperature meter switch</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.595</y-m>
+      <z-m>-0.32</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5033 - EGT temperature test</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.38</y-m>
+      <z-m>-0.37</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5034 - EGT temperature test</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.49</y-m>
+      <z-m>-0.37</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5035 - EGT temperature test</text></params></overlay>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0.595</y-m>
+      <z-m>-0.37</z-m>
+    </offsets>
+  </model>
+
+ <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5036 - "Starter RPM too high" warning</text></params></overlay>
+    <offsets>
+      <x-m>0.07</x-m>
+      <y-m>0.4</y-m>
+      <z-m>-0.55</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-small.xml</path>
+    <overlay><params><text type="string">5037 - Warning lights test button</text></params></overlay>
+    <offsets>
+      <x-m>0.07</x-m>
+      <y-m>0.5</y-m>
+      <z-m>-0.55</z-m>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltip-default.xml</path>
+    <overlay><params><text type="string">5038 - Engines start panel</text></params></overlay>
+    <offsets>
+      <x-m>0.03</x-m>
+      <y-m>1.2</y-m>
+      <z-m>-0.23</z-m>
+    </offsets>
+  </model>
+</PropertyList>
