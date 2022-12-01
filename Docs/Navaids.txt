@@ -1,0 +1,25 @@
+*********************************** RSBN **************************************
+While flying over the Soviet Union territories you may encounter the lack of VOR(-DME) beacons.
+In that case you may want to install an additional set of RSBN beacons.
+
+RSBN stands for Radio System for Short-Range Navigation, and while technically it has lots of
+defferencies with VOR-DME, from the pilot's perspective it works pretty much the same way.
+
+Here, in Tu-154B-2, RSBN can be used for manual beacon navigations or for automatic NVU (INS)
+coordinates correction when flying mid-range and long routes.
+
+RSBN can be also used for similar purposes in other projects, for example in Tu-144D supersonic
+airliner.
+
+******************************** Installation *********************************
+Go to tu154/Navaids/ folder and copy rsbn_dat/ folder somewhere else (just in case you will move
+delete the aircraft).
+
+After that open the FG launcher, go to Addons menu and add your rsbn_dat folder as a scenery addon,
+then restart the launcher.
+
+Done.
+
+Now, new "vortacs" should appear over the territories of th Soviet Union, with names like
+"[name] RSBN Ch[number]", where [number] is the channel number you that will enter into your RSBN
+receiver.
