@@ -4,6 +4,82 @@
 
   <keyboard>
 
+    <!--************************* Autopilot section ************************-->
+    <key n="1">
+      <name>Ctrl-A</name>
+      <desc>AP altitupe lock</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>
+    <!-- Already used for gear -->
+    <!--<key n="7">
+      <name>Ctrl-G</name>
+      <desc>AP glige slope lock</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>-->
+    <key n="8">
+      <name>Ctrl-H</name>
+      <desc>AP heading lock</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>
+    <!-- Already used for throttle control -->
+    <!--<key n="14">
+      <name>Ctrl-N</name>
+      <desc>AP NAV1 lock</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>-->
+    <key n="16">
+      <name>Ctrl-P</name>
+      <desc>AP pitch hold</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>
+    <key n="19">
+      <name>Ctrl-S</name>
+      <desc>AP auto-throttle</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>
+    <key n="20">
+      <name>Ctrl-T</name>
+      <desc>AP terrain lock</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>
+    <key n="23">
+      <name>Ctrl-W</name>
+      <desc>AP wing leveler</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>
+    <key n="262">
+      <name>F6</name>
+      <desc>AP altitupe lock</desc>
+      <binding>
+        <command>nasal</command>
+        <script>print("Generic AP engagement prevented.")</script>
+      </binding>
+    </key>
+
     <!--It developer code. It should be commented for release-->
     <!--
     <key n="357">
