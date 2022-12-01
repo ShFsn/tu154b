@@ -35,6 +35,8 @@ Prepare AI model. When you go to multiplay mode, and another player will use Tu-
 There are liveries support for AI models, so you will see planes of another players with right liveries. For low-poly model to work with it,
 install (or create symlink) your additional liveries into $FGROOT/AI/Aircraft/tu154b just as for regular model.
 
+Install additional navaids: See tu154/Docs/Navaids.txt.
+
 This model intend for FlightGear version 3.0 and devel. It does not support old FlightGear version (1.9.1, 2.0 or late), and
 you would not replace FDM file. If you want use older FG version, you may download appropriate version from
 http://yurik.flightgear.ru/tu154b-release/.
