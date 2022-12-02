@@ -513,6 +513,8 @@
         <sw-apu alias="/tu154/switches/APU-starter-switch"/>
       </fuel>
 
+      <wingflexer include="Systems/wingflexer-params.xml"/>
+
     </jsbsim>
   </fdm>
 

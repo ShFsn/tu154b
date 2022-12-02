@@ -15,5 +15,14 @@
         <!-- DEVELOP -->
         <z-fac type="double">10</z-fac>
     </params>
+    <d type="double">0</d>
+    <f-lift-N type="double">0</f-lift-N>
+    <k type="double">0</k>
+    <m-wing-kg type="double">0</m-wing-kg>
+    <z type="double">0</z>
+    <z-1 type="double">0</z-1>
+    <z-2 type="double">0</z-2>
+    <z-lin type="double">0</z-lin>
+    <z-sqrt type="double">0</z-sqrt>
     <z-m type="double">0</z-m>
 </PropertyList>

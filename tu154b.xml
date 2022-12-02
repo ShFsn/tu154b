@@ -1719,5 +1719,7 @@
     </output>-->
     
     <system file="tu154b-misc"/>
+    
+    <system file="tu154b-wingflex"/>
 
   </fdm_config>

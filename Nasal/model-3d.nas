@@ -263,6 +263,9 @@ timer_shake_0_1.simulatedTime = 1;
 
 ################################################# Wingflex #################################################
 var replay_time = props.globals.getNode("/sim/replay/time", 1);
+var z_m = props.globals.getNode("/sim/systems/wingflexer/z-m", 1);
+var z_m_jsb = props.globals.getNode("/fdm/jsbsim/wingflexer/z-m", 1);
+
 var norm_accel = props.globals.getNode("/accelerations/n-z-cg-fps_sec", 1);
 var par_K = props.globals.getNode("/sim/systems/wingflexer/params/K", 1);
 var par_D = props.globals.getNode("/sim/systems/wingflexer/params/D", 1);
@@ -275,7 +278,6 @@ var fuel_node_2_kg = props.globals.getNode("/sim/systems/wingflexer/params/fuel-
 var fuel_node_3_kg = props.globals.getNode("/sim/systems/wingflexer/params/fuel-node-3-kg", 1);
 var fuel_node_4_kg = props.globals.getNode("/sim/systems/wingflexer/params/fuel-node-4-kg", 1);
 var z_fac = props.globals.getNode("/sim/systems/wingflexer/params/z-fac");
-var z_m = props.globals.getNode("/sim/systems/wingflexer/z-m");
 
 var z1 = getprop("/sim/systems/wingflexer/z-m");
 var z2 = getprop("/sim/systems/wingflexer/z-m");
@@ -334,6 +336,9 @@ var wngflx = func {
 
           z_m.setValue(z);
     }
+    print(m_wing_kg - getprop("fdm/jsbsim/wingflexer/m-wing-kg"));
+    print(z1 - getprop("fdm/jsbsim/wingflexer/z-1"));
+    print(z - getprop("fdm/jsbsim/wingflexer/z-m"));
 }
 var timer_wngflx = maketimer(dt, wngflx);
 timer_wngflx.simulatedTime = 1;

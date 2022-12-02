@@ -1,0 +1,171 @@
+<!-- Airbus A320 Misc Systems -->
+
+<!-- Copyright (c) 2020 Jonathan Redpath -->
+
+<system name="Tu-154B-2: WINGFLEXER">
+
+	<channel name="Wingflex" execrate="3">
+		
+		<!--compute k and d-->
+		<fcs_function name="wingflexer/k">
+			<function>
+				<product>
+					<property>wingflexer/params/K</property>
+					<property>wingflexer/params/m-wing-dry-kg</property>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="wingflexer/d">
+			<function>
+				<product>
+					<property>wingflexer/params/D</property>
+					<property>wingflexer/params/m-wing-dry-kg</property>
+				</product>
+			</function>
+		</fcs_function>
+
+		<!--lift force. Convert to N and use 1/2 (one wing only)-->
+		<fcs_function name="wingflexer/f-lift-N">
+			<function>
+				<product>
+					<property>wingflexer/params/lift-node-lbs</property>
+					<property>wingflexer/params/grav-accel-mps2</property>
+					<value>0.226796</value>
+				</product>
+			</function>
+		</fcs_function>
+
+		<!--compute total mass of one wing, using the average fuel mass in all wing tanks.
+		The weighting factor should be lumped into fuel_frac.
+		mass = mass_dry_kg + fuel_frac * sum_i (fuel_node_i_kg)-->
+		<fcs_function name="wingflexer/m-wing-kg">
+			<function>
+				<sum>
+					<property>wingflexer/params/m-wing-dry-kg</property>
+					<product>
+						<property>wingflexer/params/fuel-frac</property>
+						<sum>
+							<property>wingflexer/params/fuel-node-1-kg</property>
+							<property>wingflexer/params/fuel-node-2-kg</property>
+							<property>wingflexer/params/fuel-node-3-kg</property>
+							<property>wingflexer/params/fuel-node-4-kg</property>
+						</sum>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+
+		<!--integrate discretised equation of motion-->
+		<!--reverse sign of F_l because z in JSBsim body coordinate system points down-->
+		<!--z = (2 * z1 - z2 + dt * ((d * z1 + dt * (-f_lift_N - k * z1)) / m_wing_kg + dt * accel)) / (1 + d * dt / m_wing_kg)-->
+		<fcs_function name="wingflexer/z">
+			<function>
+				<quotient>
+					<sum>
+						<difference>
+							<product>
+								<value>2</value>
+								<property>wingflexer/z-1</property>
+							</product>
+							<property>wingflexer/z-2</property>
+						</difference>
+						<product>
+							<value>0.025</value>
+							<sum>
+								<quotient>
+									<sum>
+										<product>
+											<property>wingflexer/d</property>
+											<property>wingflexer/z-1</property>
+										</product>
+										<product>
+											<value>0.025</value>
+											<difference>
+												<property>-wingflexer/f-lift-N</property>
+												<product>
+													<property>wingflexer/k</property>
+													<property>wingflexer/z-1</property>
+												</product>
+											</difference>
+										</product>
+									</sum>
+									<property>wingflexer/m-wing-kg</property>
+								</quotient>
+								<product>
+									<value>0.025</value>
+									<property>wingflexer/params/norm-accel</property>
+									<value>0.226796</value>
+								</product>
+							</sum>
+						</product>
+					</sum>
+					<sum>
+						<value>1.0</value>
+						<product>
+							<value>0.025</value>
+							<quotient>
+								<property>wingflexer/d</property>
+								<property>wingflexer/m-wing-kg</property>
+							</quotient>
+						</product>
+					</sum>
+				</quotient>
+			</function>
+		</fcs_function>
+		<pure_gain name="wingflexer/z-2">
+			<input>wingflexer/z-1</input>
+			<gain>1.0</gain>
+		</pure_gain>
+		<pure_gain name="wingflexer/z-1">
+			<input>wingflexer/z</input>
+			<gain>1.0</gain>
+		</pure_gain>
+
+		<!--transform z to final output-->
+		<fcs_function name="wingflexer/z-lin">
+			<function>
+				<sum>
+					<product>
+						<property>wingflexer/z</property>
+						<property>wingflexer/params/z-fac</property>
+					</product>
+					<product>
+						<value>0.037925</value>
+						<property>wingflexer/params/z-fac</property>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="wingflexer/z-sqrt">
+			<function>
+				<product>
+					<quotient>
+						<abs>
+							<property>wingflexer/z-lin</property>
+						</abs>
+						<property>wingflexer/z-lin</property>
+					</quotient>
+					<pow>
+						<difference>
+							<abs>
+								<property>wingflexer/z-lin</property>
+							</abs>
+							<value>0.555</value>
+						</difference>
+						<value>0.5</value>
+					</pow>
+					<value>1.5</value>
+				</product>
+			</function>
+		</fcs_function>
+		<switch name="wingflexer/z-m">
+			<default value="wingflexer/z-lin"/>
+			<test logic="OR" value="wingflexer/z-sqrt">
+				wingflexer/z-lin gt 1.0
+				wingflexer/z-lin lt -1.0
+			</test>
+		</switch>
+		
+	</channel>
+	
+</system>
