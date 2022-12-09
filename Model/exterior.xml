@@ -218,16 +218,16 @@
 
  <!-- Model shaders -->
  <effect include="Collections/ext_maina_combined.xml">
-    <inherits-from>Effects/mainaLM</inherits-from>
+    <inherits-from>Effects/mainaEFF</inherits-from>
  </effect>
  <effect include="Collections/ext_mainb_combined.xml">
-    <inherits-from>Effects/mainbLM</inherits-from>
+    <inherits-from>Effects/mainbEFF</inherits-from>
  </effect>
  <effect include="Collections/ext_var_combined.xml">
-    <inherits-from>Effects/varLM</inherits-from>
+    <inherits-from>Effects/varEFF</inherits-from>
  </effect>
  <effect include="Collections/ext_wing_combined.xml">
-    <inherits-from>Effects/wingLM</inherits-from>
+    <inherits-from>Effects/wingEFF</inherits-from>
  </effect>
 
  <!-- Interior Model shaders TEMPORARY -->
