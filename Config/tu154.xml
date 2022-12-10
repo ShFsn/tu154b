@@ -509,6 +509,10 @@
       <dynamic-lighting>
         <disable-multiplay type="bool">false</disable-multiplay>
       </dynamic-lighting>
+
+      <normal-maps>
+        <enable type="bool">true</enable>
+      </normal-maps>
     </rendering>
 
   </options>

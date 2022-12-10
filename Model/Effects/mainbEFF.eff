@@ -3,7 +3,7 @@
  <inherits-from>Effects/model-combined</inherits-from>
  <parameters>
 
-  <normalmap-enabled type="int">1</normalmap-enabled>
+  <normalmap-enabled type="int"><use>tu154/options/rendering/normal-maps/enable</use></normalmap-enabled>
   <normalmap-dds type="int">0</normalmap-dds>
   <texture n="2">
    <image>Effects/mainb_norm.png</image>

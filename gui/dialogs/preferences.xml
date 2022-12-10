@@ -328,6 +328,21 @@
         <!--<enable><property>sim/model/with-tcas</property></enable>-->
       </text>
       
+      <text><label> </label></text>
+      
+      <checkbox>
+        <halign>left</halign>
+        <label>Relief details on the fuselage</label>
+        <property>/tu154/options/rendering/normal-maps/enable</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+      <text>
+        <label>Some liveries may not fully match with unified relief map, so you can turn it off.</label>
+        <halign>left</halign>
+        <!--<enable><property>sim/model/with-tcas</property></enable>-->
+      </text>
+      
     </group>
       
     <text><label> </label></text>
