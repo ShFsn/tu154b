@@ -9,50 +9,71 @@
 ############################################################################		  
 -->
 <PropertyList>
-<!-- Ground Services -->
-<model>
-  <name>groundservices</name>
-  <path>Aircraft/tu154b/Model/Services/groundservices.xml</path>
-</model>
-<!-- Auto Pushback -->
-<model>
-  <name>goldhofert</name>
-  <path>Aircraft/tu154b/Model/Autopush/Goldhofert.xml</path>
-  <offsets>
-    <x-m>-17.89</x-m>
-    <y-m>0.0</y-m>
-    <z-m>-2.68</z-m>
-  </offsets>
-</model>
-<!-- Panel tooltips -->
-<model>
-  <name>tooltips</name>
-  <path>Aircraft/tu154b/Model/Tooltips/tooltips.xml</path>
-</model>
-<!-- Cockpit -->
-<model>
-    <name>cockpit</name>
-    <path>Aircraft/tu154b/Model/Cockpit/cockpit.xml</path>
+  <!-- Ground Services -->
+  <model>
+    <name>groundservices</name>
+    <path>Aircraft/tu154b/Model/Services/groundservices.xml</path>
+  </model>
+  <!-- Auto Pushback -->
+  <model>
+    <name>goldhofert</name>
+    <path>Aircraft/tu154b/Model/Autopush/Goldhofert.xml</path>
     <offsets>
-      <x-m>-23.15</x-m>
-      <y-m>-0.006</y-m>
-      <z-m>0.99</z-m>
+      <x-m>-17.89</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-2.68</z-m>
     </offsets>
-    <nopreview/>
-</model>
-<!-- Extreior -->
-<model>
-    <name>exterior</name>
-    <path>Aircraft/tu154b/Model/exterior.xml</path>
-</model>
-<!-- Lights -->
-<model>
-    <name>lights</name>
-    <path>Aircraft/tu154b/Model/Lights/Lights.xml</path>
-</model>
+  </model>
+  <!-- Panel tooltips -->
+  <model>
+    <name>tooltips</name>
+    <path>Aircraft/tu154b/Model/Tooltips/tooltips.xml</path>
+  </model>
+  <!-- Cockpit -->
+  <model>
+      <name>cockpit</name>
+      <path>Aircraft/tu154b/Model/Cockpit/cockpit.xml</path>
+      <offsets>
+        <x-m>-23.15</x-m>
+        <y-m>-0.006</y-m>
+        <z-m>0.99</z-m>
+      </offsets>
+      <nopreview/>
+  </model>
+  <!-- Extreior -->
+  <model>
+      <name>exterior</name>
+      <path>Aircraft/tu154b/Model/exterior.xml</path>
+  </model>
+  <model>
+      <name>exterior-mp</name>
+      <path>Aircraft/tu154b/Model/exterior-MP.xml</path>
+  </model>
+  <!-- Lights -->
+  <model>
+      <name>lights</name>
+      <path>Aircraft/tu154b/Model/Lights/Lights.xml</path>
+  </model>
+  <model>
+      <name>lights-mp</name>
+      <path>Aircraft/tu154b/Model/Lights/Lights-MP.xml</path>
+  </model>
 
+  <!-- Switch for Local / AI/MP -->
+  <animation>
+    <type>select</type>
+    <object-name>exterior</object-name>
+    <object-name>lights</object-name>
+    <condition><property>tu154/constants/one</property></condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>exterior-mp</object-name>
+    <object-name>lights-mp</object-name>
+    <condition><not><property>tu154/constants/one</property></not></condition>
+  </animation>
 
-<!-- Rollshake -->
+  <!-- Rollshake -->
   <animation>
     <type>translate</type>
     <object-name>exterior</object-name>

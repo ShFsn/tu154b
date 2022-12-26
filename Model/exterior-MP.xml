@@ -10,7 +10,7 @@
 -->
 <!--
 ############################################################################
-#   MUST be synced with exterior-MP.xml except effects.
+#   MUST be synced with exterior.xml except effects.
 ############################################################################
 -->
 <PropertyList>
@@ -28,16 +28,16 @@
 
   <!-- Model shaders -->
   <effect include="Collections/ext_maina_combined.xml">
-      <inherits-from>Effects/mainaEFF</inherits-from>
+      <inherits-from>Effects/mainaEFF_MP</inherits-from>
   </effect>
   <effect include="Collections/ext_mainb_combined.xml">
-      <inherits-from>Effects/mainbEFF</inherits-from>
+      <inherits-from>Effects/mainbEFF_MP</inherits-from>
   </effect>
   <effect include="Collections/ext_var_combined.xml">
-      <inherits-from>Effects/varEFF</inherits-from>
+      <inherits-from>Effects/varEFF_MP</inherits-from>
   </effect>
   <effect include="Collections/ext_wing_combined.xml">
-      <inherits-from>Effects/wingEFF</inherits-from>
+      <inherits-from>Effects/wingEFF_MP</inherits-from>
   </effect>
 
   <!-- Interior Model shaders TEMPORARY -->

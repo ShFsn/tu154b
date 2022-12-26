@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Aircraft/tu154b/Model/Lights/Lights.xml">
+ 
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight-lightcone.xml</path>
+  <name>taillight_l</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>-2.267</y-m>
+    <z-m>1.965</z-m>
+    <!--<roll-deg>135.0</roll-deg>-->
+    <heading-deg>55.0</heading-deg>
+    <pitch-deg>-140.0</pitch-deg>
+  </offsets>
+ </model>
+ <model>
+  <path>Aircraft/tu154b/Model/Lights/taillight-lightcone.xml</path>
+  <name>taillight_r</name>
+  <offsets>
+    <x-m>12.35</x-m>
+    <y-m>2.267</y-m>
+    <z-m>1.965</z-m>
+    <!--<roll-deg>-135.0</roll-deg>-->
+    <heading-deg>-55.0</heading-deg>
+    <pitch-deg>-140.0</pitch-deg>
+  </offsets>
+ </model>
+ 
+</PropertyList>
