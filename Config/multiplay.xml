@@ -7,8 +7,8 @@
     <bool n="1" type="bool">false</bool><!--LDG-->
     <bool n="2" type="bool">false</bool><!--TAXI-->
     <bool n="3" type="bool">false</bool><!--LOGO-->
-    <bool n="4" type="bool">false</bool><!--BEAC UP-->
-    <bool n="5" type="bool">false</bool><!--BEAC DN-->
+    <bool n="4" type="bool">false</bool><!--BEACONS-->
+    <!--<bool n="5" type="bool">false</bool>-->
     <bool n="6" alias="/gear/gear[0]/tyre-smoke"/><!--N-->
     <bool n="7" alias="/gear/gear[1]/tyre-smoke"/><!--L-->
     <bool n="8" alias="/gear/gear[2]/tyre-smoke"/><!--R-->

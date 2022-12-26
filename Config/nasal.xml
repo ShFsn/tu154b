@@ -68,6 +68,10 @@
     <file>Aircraft/tu154b/Nasal/model-3d.nas</file>
   </model-3d>
 
+  <model-embed>
+    <file>Aircraft/tu154b/Nasal/model-embed.nas</file>
+  </model-embed>
+
   <replay-fix>
     <file>Aircraft/tu154b/Nasal/replay-fix.nas</file>
   </replay-fix>

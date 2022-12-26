@@ -61,21 +61,12 @@
   </logic>
 
   <logic>
-    <name>Upper Beacon Light</name>
+    <name>Beacon Light</name>
     <inverted>false</inverted>
     <input>
-      <property>tu154/light/strobe/strobe_1</property>
+      <property>tu154/light/strobe/enabled</property>
     </input>
     <output>sim/multiplay/generic/bool[4]</output>
-  </logic>
-
-  <logic>
-    <name>Lower Beacon Light</name>
-    <inverted>false</inverted>
-    <input>
-      <property>tu154/light/strobe/strobe_2</property>
-    </input>
-    <output>sim/multiplay/generic/bool[5]</output>
   </logic>
 
   <logic>

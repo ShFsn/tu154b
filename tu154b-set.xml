@@ -224,7 +224,7 @@
       </map>
 
       <!--Animated jetways points-->
-      <door>
+      <!--<door>
         <position-x-m type="float">-18.66</position-x-m>
         <position-y-m type="float">-1.742</position-y-m>
         <position-z-m type="float">1.015</position-z-m>
@@ -235,7 +235,7 @@
         <position-y-m type="float">-1.87</position-y-m>
         <position-z-m type="float">1.015</position-z-m>
         <jetway-hood-deg type="float">11.0</jetway-hood-deg>
-      </door>
+      </door>--><!--Moved to embedded nasal-->
 
     </model>
 

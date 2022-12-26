@@ -160,21 +160,21 @@ else {
 
 }
 
-var strobe_selector = func{
+#var strobe_selector = func{
+#
+#  var state = getprop("tu154/light/strobe/state" );
+#  var selector = getprop("tu154/light/strobe/strobe_selector" );
+#  if( selector ) setprop( "tu154/light/strobe/strobe_1", state );
+#  else setprop( "tu154/light/strobe/strobe_2", state );
+#  if( state ) return;	# listener invoked by ether variation of flag, so we divide events by 2
+##print("Strobe!");
+#  if( selector )
+#	setprop("tu154/light/strobe/strobe_selector", 0.0 );
+#  else
+#	setprop("tu154/light/strobe/strobe_selector", 1.0 )
+#}
 
-  var state = getprop("tu154/light/strobe/state" );
-  var selector = getprop("tu154/light/strobe/strobe_selector" );
-  if( selector ) setprop( "tu154/light/strobe/strobe_1", state );
-  else setprop( "tu154/light/strobe/strobe_2", state );
-  if( state ) return;	# listener invoked by ether variation of flag, so we divide events by 2
-#print("Strobe!");
-  if( selector )
-	setprop("tu154/light/strobe/strobe_selector", 0.0 );
-  else
-	setprop("tu154/light/strobe/strobe_selector", 1.0 )
-}
-
-setlistener( "tu154/light/strobe/state", strobe_selector, 1, 0 );
+#setlistener( "tu154/light/strobe/state", strobe_selector, 1, 0 );
 
 var panel_lighting = func{
 if( arg[0] ) {
