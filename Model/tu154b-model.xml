@@ -9,6 +9,11 @@
 ############################################################################		  
 -->
 <PropertyList>
+
+
+  <!--
+  # GROUND SERVICES AND PUSHBACK
+  -->
   <!-- Ground Services -->
   <model>
     <name>groundservices</name>
@@ -24,6 +29,11 @@
       <z-m>-2.68</z-m>
     </offsets>
   </model>
+
+
+  <!--
+  # VIRTUAL COCKPIT
+  -->
   <!-- Panel tooltips -->
   <model>
     <name>tooltips</name>
@@ -40,6 +50,15 @@
       </offsets>
       <nopreview/>
   </model>
+
+
+  <!--
+  # EXTERIOR MODEL
+  -->
+  <!-- FGBUG: Model effects are shared between models for some reason so lightmaps on MP models are copying player's model.
+              "Separate" model with "different" effects without lightmaps is used as a workaround.
+              Thanks to the inheritance conception, there's no two copies of the same model and effects though,
+              so the codebases of Local and AI/MP models are being automatically syncronized. -->
   <!-- Extreior -->
   <model>
       <name>exterior</name>
@@ -73,6 +92,10 @@
     <condition><not><property>tu154/constants/one</property></not></condition>
   </animation>
 
+
+  <!--
+  # SHARED ANIMATIONS
+  -->
   <!-- Rollshake -->
   <animation>
     <type>translate</type>
@@ -90,6 +113,10 @@
     </axis>
   </animation>
 
+
+  <!--
+  # EMBEDDED NASAL FOR MP MODEL
+  -->
   <nasal>
     <load><![CDATA[
 var model = cmdarg(); # AI/MP model property subtree
