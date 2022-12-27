@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Aircraft/tu154b/Model/Effects/Tyre_Smoke/tyre-smoke.xml">
+    <particlesystem>
+        <condition>
+			<property>sim/multiplay/generic/bool[7]</property>
+		</condition>
+    </particlesystem>
+</PropertyList>

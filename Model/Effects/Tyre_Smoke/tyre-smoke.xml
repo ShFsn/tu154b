@@ -3,7 +3,7 @@
 <PropertyList>
 
     <particlesystem>
-        <name>tyre-smoke-l</name>
+        <name>tyre-smoke</name>
         <texture>tyresmoke.png</texture>
         <emissive>false</emissive>
         <lighting>false</lighting>
@@ -13,10 +13,6 @@
             <y-m>-2</y-m>
             <z-m>0</z-m>
         </offsets>
-
-        <condition>
-			<property>sim/multiplay/generic/bool[7]</property>
-		</condition>
 
         <attach>world</attach>
 

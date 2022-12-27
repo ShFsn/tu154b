@@ -130,19 +130,19 @@
   <!-- ########### End of wings and wingflex ############ -->
 
   <!--Passengers shake-->
-    <animation>
-      <type>translate</type>
-      <object-name>Exterior</object-name>
-      <property>systems/shake/shakingext</property>
-      <axis>
-        <x1-m> 0.0</x1-m>
-        <y1-m> 0.0</y1-m>
-        <z1-m> 0.0</z1-m>
-        <x2-m> 0.5</x2-m>
-        <y2-m> 0.0</y2-m>
-        <z2-m> 0.8</z2-m>
-      </axis>
-    </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>Exterior</object-name>
+    <property>systems/shake/shakingext</property>
+    <axis>
+      <x1-m> 0.0</x1-m>
+      <y1-m> 0.0</y1-m>
+      <z1-m> 0.0</z1-m>
+      <x2-m> 0.5</x2-m>
+      <y2-m> 0.0</y2-m>
+      <z2-m> 0.8</z2-m>
+    </axis>
+  </animation>
 
   <!-- Hide gears when they are retracted. -->
   <!--<animation>
@@ -3929,311 +3929,311 @@
   <animation>
     <type>none</type>
     <name>virtualcockpit3d</name>
-      <object-name>us</object-name>
-      <object-name>ias</object-name>
-      <object-name>var-30</object-name>
-      <object-name>var-75</object-name>
-      <object-name>uvid-15m</object-name>
-      <object-name>uvid-15f</object-name>
-      <object-name>pkp-capt</object-name>
-      <object-name>pnp-capt</object-name>
-      <object-name>achs-2</object-name>
-      <object-name>rv-5m</object-name>
-      <object-name>uap-12</object-name>
-      <object-name>iku-1</object-name>
-      <object-name>um-1</object-name>
-      <object-name>tnv-15</object-name>
-      <object-name>idr-1</object-name>
-      <object-name>uvo</object-name>
-      <object-name>agr</object-name>
-      <object-name>hs-1</object-name>
-      <object-name>hs-2</object-name>
-      <object-name>hs-3</object-name>
-      <object-name>hs_brk</object-name>
-      <object-name>check_lamps_1</object-name>
-      <object-name>switch_1</object-name>
-      <object-name>l-1</object-name>
-      <object-name>l-2</object-name>
-      <object-name>l-3</object-name>
-      <object-name>l-4</object-name>
-      <object-name>left-indic-2</object-name>
-      <object-name>left-indic-3</object-name>
-      <object-name>left-indic-4</object-name>
-      <object-name>pkp-cp</object-name>
-      <object-name>pnp-cp</object-name>
-      <object-name>var-30-cp</object-name>
-      <object-name>uvid-15m-cp</object-name>
-      <object-name>iku-1-cp</object-name>
-      <object-name>rv-5m-cp</object-name>
-      <object-name>uvo-cp</object-name>
-      <object-name>ias-cp</object-name>
-      <object-name>us-cp</object-name>
-      <object-name>um-cp</object-name>
-      <object-name>idr-1-cp</object-name>
-      <object-name>utd4-3t-cp</object-name>
-      <object-name>check_lamps_2</object-name>
-      <object-name>copilot-indic-1</object-name>
-      <object-name>copilot-indic-2</object-name>
-      <object-name>copilot-indic-3</object-name>
-      <object-name>sw-2</object-name>
-      <object-name>groza</object-name>
-      <object-name>ip-33</object-name>
-      <object-name>ip-32m</object-name>
-      <object-name>in-3</object-name>
-      <object-name>ushdb</object-name>
-      <object-name>ush</object-name>
-      <object-name>usvp</object-name>
-      <object-name>ppda</object-name>
-      <object-name>eup</object-name>
-      <object-name>ite_1</object-name>
-      <object-name>ite_2</object-name>
-      <object-name>ite_3</object-name>
-      <object-name>central-indic-1</object-name>
-      <object-name>central-indic-2</object-name>
-      <object-name>central-indic-3</object-name>
-      <object-name>central-indic-4</object-name>
-      <object-name>central-indic-5</object-name>
-      <object-name>central-indic-6</object-name>
-      <object-name>sw-3</object-name>
-      <object-name>pu-11</object-name>
-      <object-name>ark-15-1</object-name>
-      <object-name>ark-15-2</object-name>
-      <object-name>kurs-mp-1</object-name>
-      <object-name>kurs-mp-2</object-name>
-      <object-name>comm-1</object-name>
-      <object-name>comm-2</object-name>
-      <object-name>skawk</object-name>
-      <object-name>rsbn</object-name>
-      <object-name>spu-7-cpt</object-name>
-      <object-name>spu-7-fo</object-name>
-      <object-name>spu-7-nav</object-name>
-      <object-name>spu-7-eng</object-name>
-      <object-name>ushdb-selector</object-name>
-      <object-name>sw-41</object-name>
-      <object-name>sw-42</object-name>
-      <object-name>sw-43</object-name>
-      <object-name>sw-44</object-name>
-      <object-name>sw-45</object-name>
-      <object-name>sw-46</object-name>
-      <object-name>sw-47</object-name>
-      <object-name>sw-48</object-name>
-      <object-name>sw-49</object-name>
-      <object-name>sw-50</object-name>
-      <object-name>sw-51</object-name>
-      <object-name>sw-52</object-name>
-      <object-name>sw-53</object-name>
-      <object-name>sw-54</object-name>
-      <object-name>sw-55</object-name>
-      <object-name>sw-56</object-name>
-      <object-name>sw-57</object-name>
-      <object-name>sw-58</object-name>
-      <object-name>sw-59</object-name>
-      <object-name>sw-60</object-name>
-      <object-name>sw-61</object-name>
-      <object-name>sw-62</object-name>
-      <object-name>sw-63</object-name>
-      <object-name>sw-64</object-name>
-      <object-name>sw-65</object-name>
-      <object-name>sw-66</object-name>
-      <object-name>sw-67</object-name>
-      <object-name>sw-68</object-name>
-      <object-name>sw-69</object-name>
-      <object-name>sw-70</object-name>
-      <object-name>sw-71</object-name>
-      <object-name>sw-72</object-name>
-      <object-name>sw-73</object-name>
-      <object-name>sw-74</object-name>
-      <object-name>sw-75</object-name>
-      <object-name>sw-76</object-name>
-      <object-name>sw-77</object-name>
-      <object-name>sw-78</object-name>
-      <object-name>sw-79</object-name>
-      <object-name>sw-80</object-name>
-      <object-name>sw-81</object-name>
-      <object-name>sw-82</object-name>
-      <object-name>sw-83</object-name>
-      <object-name>sw-84</object-name>
-      <object-name>sw-85</object-name>
-      <object-name>stab-manu</object-name>
-      <object-name>pu-46+pn-5</object-name>
-      <object-name>pn-6</object-name>
-      <object-name>v-51</object-name>
-      <object-name>v-140</object-name>
-      <object-name>v-52-1</object-name>
-      <object-name>v-52-2</object-name>
-      <object-name>b-8m</object-name>
-      <object-name>bano</object-name>
-      <object-name>busters</object-name>
-      <object-name>v-57</object-name>
-      <object-name>ip21_1</object-name>
-      <object-name>ip21_2</object-name>
-      <object-name>ip21_3</object-name>
-      <object-name>ite-2t_1</object-name>
-      <object-name>ite-2t_2</object-name>
-      <object-name>ite-2t_3</object-name>
-      <object-name>ut-7a_1</object-name>
-      <object-name>ut-7a_2</object-name>
-      <object-name>ut-7a_3</object-name>
-      <object-name>uiz-3_1</object-name>
-      <object-name>uiz-3_2</object-name>
-      <object-name>uiz-3_3</object-name>
-      <object-name>umrt1-21_1</object-name>
-      <object-name>umrt1-21_2</object-name>
-      <object-name>umrt1-21_3</object-name>
-      <object-name>us3t-5t</object-name>
-      <object-name>utd4-3t</object-name>
-      <object-name>uto2-5t</object-name>
-      <object-name>utd4-2t</object-name>
-      <object-name>utd4-1t</object-name>
-      <object-name>hydro-40</object-name>
-      <object-name>hydro-28</object-name>
-      <object-name>hs-1-fe</object-name>
-      <object-name>hs-2-fe</object-name>
-      <object-name>hs-3-fe</object-name>
-      <object-name>hs-brk-fe</object-name>
-      <object-name>ias-fe</object-name>
-      <object-name>uvo-fe</object-name>
-      <object-name>var-30-fe-1</object-name>
-      <object-name>var-30-fe-2</object-name>
-      <object-name>v-27</object-name>
-      <object-name>a-27-1</object-name>
-      <object-name>a-27-2</object-name>
-      <object-name>a-27-3</object-name>
-      <object-name>hz-200</object-name>
-      <object-name>v-200</object-name>
-      <object-name>a-200</object-name>
-      <object-name>achs-2-fe</object-name>
-      <object-name>tnv-15-fe</object-name>
-      <object-name>ite-apu</object-name>
-      <object-name>fe-indic-1</object-name>
-      <object-name>engine-indic-1</object-name>
-      <object-name>engine-indic-2</object-name>
-      <object-name>engine-indic-3</object-name>
-      <object-name>l-5</object-name>
-      <object-name>l-6</object-name>
-      <object-name>l-7</object-name>
-      <object-name>l-8</object-name>
-      <object-name>l-9</object-name>
-      <object-name>l-10</object-name>
-      <object-name>l-11</object-name>
-      <object-name>l-12</object-name>
-      <object-name>l-13</object-name>
-      <object-name>l-14</object-name>
-      <object-name>l-15</object-name>
-      <object-name>l-16</object-name>
-      <object-name>l-17</object-name>
-      <object-name>l-18</object-name>
-      <object-name>l-19</object-name>
-      <object-name>l-20</object-name>
-      <object-name>l-21</object-name>
-      <object-name>l-22</object-name>
-      <object-name>l-23</object-name>
-      <object-name>l-24</object-name>
-      <object-name>l-25</object-name>
-      <object-name>l-26</object-name>
-      <object-name>l-27</object-name>
-      <object-name>l-28</object-name>
-      <object-name>l-29</object-name>
-      <object-name>l-30</object-name>
-      <object-name>l-31</object-name>
-      <object-name>l-32</object-name>
-      <object-name>l-33</object-name>
-      <object-name>l-34</object-name>
-      <object-name>l-35</object-name>
-      <object-name>l-36</object-name>
-      <object-name>l-37</object-name>
-      <object-name>l-38</object-name>
-      <object-name>l-39</object-name>
-      <object-name>l-40</object-name>
-      <object-name>l-41</object-name>
-      <object-name>l-42</object-name>
-      <object-name>l-43</object-name>
-      <object-name>l-44</object-name>
-      <object-name>l-45</object-name>
-      <object-name>l-46</object-name>
-      <object-name>l-47</object-name>
-      <object-name>l-48</object-name>
-  <!--    <object-name>l-49</object-name>
-      <object-name>l-50</object-name>
-      <object-name>l-51</object-name>-->
-      <object-name>h-1</object-name>
-      <object-name>h-2</object-name>
-      <object-name>h-3</object-name>
-      <object-name>h-4</object-name>
-      <object-name>h-5</object-name>
-      <object-name>sw-4</object-name>
-      <object-name>sw-5</object-name>
-      <object-name>sw-6</object-name>
-      <object-name>sw-7</object-name>
-      <object-name>sw-8</object-name>
-      <object-name>sw-9</object-name>
-      <object-name>sw-10</object-name>
-      <object-name>sw-11</object-name>
-      <object-name>sw-12</object-name>
-      <object-name>sw-13</object-name>
-      <object-name>sw-14</object-name>
-      <object-name>sw-15</object-name>
-      <object-name>sw-16</object-name>
-      <object-name>sw-17</object-name>
-      <object-name>sw-18</object-name>
-      <object-name>sw-19</object-name>
-      <object-name>sw-20</object-name>
-      <object-name>sw-21</object-name>
-      <object-name>sw-22</object-name>
-      <object-name>sw-23</object-name>
-      <object-name>sw-24</object-name>
-      <object-name>sw-25</object-name>
-      <object-name>sw-26</object-name>
-      <object-name>sw-27</object-name>
-      <object-name>sw-28</object-name>
-      <object-name>sw-29</object-name>
-      <object-name>sw-30</object-name>
-      <object-name>sw-31</object-name>
-      <object-name>sw-32</object-name>
-      <object-name>sw-33</object-name>
-      <object-name>sw-34</object-name>
-      <object-name>sw-35</object-name>
-      <object-name>sw-36</object-name>
-      <object-name>sw-37</object-name>
-      <object-name>sw-38</object-name>
-      <object-name>sw-39</object-name>
-      <object-name>sw-40</object-name>
-      <object-name>sw-86</object-name>
-      <object-name>sw-87</object-name>
-      <object-name>sw-88</object-name>
-      <object-name>sw-89</object-name>
-      <object-name>sw-90</object-name>
-      <object-name>sw-91</object-name>
-      <object-name>sw-92</object-name>
-      <object-name>sw-93</object-name>
-      <object-name>sw-94</object-name>
-      <object-name>sw-95</object-name>
-      <object-name>sw-96</object-name>
-      <object-name>check_lamps_3</object-name>
-      <object-name>check-lamps-4</object-name>
-      <object-name>check-lamps_4</object-name>
-      <object-name>bt-1</object-name>
-      <object-name>bt-2</object-name>
-      <object-name>bt-3</object-name>
-      <object-name>bt-4</object-name>
-      <object-name>bt-5</object-name>
-      <object-name>bt-6</object-name>
-      <object-name>bt-7</object-name>
-      <object-name>bt-8</object-name>
-      <object-name>km-5-2</object-name>
-      <object-name>km-5-1</object-name>
-      <object-name>startpanel</object-name>
-      <object-name>nadp4</object-name>
-      <!--<object-name>lever_sti2</object-name>
-      <object-name>lever_sti8</object-name>
-      <object-name>lever_sti0</object-name>
-      <object-name>lever_sti7</object-name>  -->
-      <object-name>dme-1</object-name>
-      <object-name>dme-2</object-name>
-      <object-name>ind-busters</object-name>
-      <object-name>air-cond-panel</object-name>
-      <object-name>sw-wiper-left</object-name>
-      <object-name>sw-wiper-right</object-name>
+    <object-name>us</object-name>
+    <object-name>ias</object-name>
+    <object-name>var-30</object-name>
+    <object-name>var-75</object-name>
+    <object-name>uvid-15m</object-name>
+    <object-name>uvid-15f</object-name>
+    <object-name>pkp-capt</object-name>
+    <object-name>pnp-capt</object-name>
+    <object-name>achs-2</object-name>
+    <object-name>rv-5m</object-name>
+    <object-name>uap-12</object-name>
+    <object-name>iku-1</object-name>
+    <object-name>um-1</object-name>
+    <object-name>tnv-15</object-name>
+    <object-name>idr-1</object-name>
+    <object-name>uvo</object-name>
+    <object-name>agr</object-name>
+    <object-name>hs-1</object-name>
+    <object-name>hs-2</object-name>
+    <object-name>hs-3</object-name>
+    <object-name>hs_brk</object-name>
+    <object-name>check_lamps_1</object-name>
+    <object-name>switch_1</object-name>
+    <object-name>l-1</object-name>
+    <object-name>l-2</object-name>
+    <object-name>l-3</object-name>
+    <object-name>l-4</object-name>
+    <object-name>left-indic-2</object-name>
+    <object-name>left-indic-3</object-name>
+    <object-name>left-indic-4</object-name>
+    <object-name>pkp-cp</object-name>
+    <object-name>pnp-cp</object-name>
+    <object-name>var-30-cp</object-name>
+    <object-name>uvid-15m-cp</object-name>
+    <object-name>iku-1-cp</object-name>
+    <object-name>rv-5m-cp</object-name>
+    <object-name>uvo-cp</object-name>
+    <object-name>ias-cp</object-name>
+    <object-name>us-cp</object-name>
+    <object-name>um-cp</object-name>
+    <object-name>idr-1-cp</object-name>
+    <object-name>utd4-3t-cp</object-name>
+    <object-name>check_lamps_2</object-name>
+    <object-name>copilot-indic-1</object-name>
+    <object-name>copilot-indic-2</object-name>
+    <object-name>copilot-indic-3</object-name>
+    <object-name>sw-2</object-name>
+    <object-name>groza</object-name>
+    <object-name>ip-33</object-name>
+    <object-name>ip-32m</object-name>
+    <object-name>in-3</object-name>
+    <object-name>ushdb</object-name>
+    <object-name>ush</object-name>
+    <object-name>usvp</object-name>
+    <object-name>ppda</object-name>
+    <object-name>eup</object-name>
+    <object-name>ite_1</object-name>
+    <object-name>ite_2</object-name>
+    <object-name>ite_3</object-name>
+    <object-name>central-indic-1</object-name>
+    <object-name>central-indic-2</object-name>
+    <object-name>central-indic-3</object-name>
+    <object-name>central-indic-4</object-name>
+    <object-name>central-indic-5</object-name>
+    <object-name>central-indic-6</object-name>
+    <object-name>sw-3</object-name>
+    <object-name>pu-11</object-name>
+    <object-name>ark-15-1</object-name>
+    <object-name>ark-15-2</object-name>
+    <object-name>kurs-mp-1</object-name>
+    <object-name>kurs-mp-2</object-name>
+    <object-name>comm-1</object-name>
+    <object-name>comm-2</object-name>
+    <object-name>skawk</object-name>
+    <object-name>rsbn</object-name>
+    <object-name>spu-7-cpt</object-name>
+    <object-name>spu-7-fo</object-name>
+    <object-name>spu-7-nav</object-name>
+    <object-name>spu-7-eng</object-name>
+    <object-name>ushdb-selector</object-name>
+    <object-name>sw-41</object-name>
+    <object-name>sw-42</object-name>
+    <object-name>sw-43</object-name>
+    <object-name>sw-44</object-name>
+    <object-name>sw-45</object-name>
+    <object-name>sw-46</object-name>
+    <object-name>sw-47</object-name>
+    <object-name>sw-48</object-name>
+    <object-name>sw-49</object-name>
+    <object-name>sw-50</object-name>
+    <object-name>sw-51</object-name>
+    <object-name>sw-52</object-name>
+    <object-name>sw-53</object-name>
+    <object-name>sw-54</object-name>
+    <object-name>sw-55</object-name>
+    <object-name>sw-56</object-name>
+    <object-name>sw-57</object-name>
+    <object-name>sw-58</object-name>
+    <object-name>sw-59</object-name>
+    <object-name>sw-60</object-name>
+    <object-name>sw-61</object-name>
+    <object-name>sw-62</object-name>
+    <object-name>sw-63</object-name>
+    <object-name>sw-64</object-name>
+    <object-name>sw-65</object-name>
+    <object-name>sw-66</object-name>
+    <object-name>sw-67</object-name>
+    <object-name>sw-68</object-name>
+    <object-name>sw-69</object-name>
+    <object-name>sw-70</object-name>
+    <object-name>sw-71</object-name>
+    <object-name>sw-72</object-name>
+    <object-name>sw-73</object-name>
+    <object-name>sw-74</object-name>
+    <object-name>sw-75</object-name>
+    <object-name>sw-76</object-name>
+    <object-name>sw-77</object-name>
+    <object-name>sw-78</object-name>
+    <object-name>sw-79</object-name>
+    <object-name>sw-80</object-name>
+    <object-name>sw-81</object-name>
+    <object-name>sw-82</object-name>
+    <object-name>sw-83</object-name>
+    <object-name>sw-84</object-name>
+    <object-name>sw-85</object-name>
+    <object-name>stab-manu</object-name>
+    <object-name>pu-46+pn-5</object-name>
+    <object-name>pn-6</object-name>
+    <object-name>v-51</object-name>
+    <object-name>v-140</object-name>
+    <object-name>v-52-1</object-name>
+    <object-name>v-52-2</object-name>
+    <object-name>b-8m</object-name>
+    <object-name>bano</object-name>
+    <object-name>busters</object-name>
+    <object-name>v-57</object-name>
+    <object-name>ip21_1</object-name>
+    <object-name>ip21_2</object-name>
+    <object-name>ip21_3</object-name>
+    <object-name>ite-2t_1</object-name>
+    <object-name>ite-2t_2</object-name>
+    <object-name>ite-2t_3</object-name>
+    <object-name>ut-7a_1</object-name>
+    <object-name>ut-7a_2</object-name>
+    <object-name>ut-7a_3</object-name>
+    <object-name>uiz-3_1</object-name>
+    <object-name>uiz-3_2</object-name>
+    <object-name>uiz-3_3</object-name>
+    <object-name>umrt1-21_1</object-name>
+    <object-name>umrt1-21_2</object-name>
+    <object-name>umrt1-21_3</object-name>
+    <object-name>us3t-5t</object-name>
+    <object-name>utd4-3t</object-name>
+    <object-name>uto2-5t</object-name>
+    <object-name>utd4-2t</object-name>
+    <object-name>utd4-1t</object-name>
+    <object-name>hydro-40</object-name>
+    <object-name>hydro-28</object-name>
+    <object-name>hs-1-fe</object-name>
+    <object-name>hs-2-fe</object-name>
+    <object-name>hs-3-fe</object-name>
+    <object-name>hs-brk-fe</object-name>
+    <object-name>ias-fe</object-name>
+    <object-name>uvo-fe</object-name>
+    <object-name>var-30-fe-1</object-name>
+    <object-name>var-30-fe-2</object-name>
+    <object-name>v-27</object-name>
+    <object-name>a-27-1</object-name>
+    <object-name>a-27-2</object-name>
+    <object-name>a-27-3</object-name>
+    <object-name>hz-200</object-name>
+    <object-name>v-200</object-name>
+    <object-name>a-200</object-name>
+    <object-name>achs-2-fe</object-name>
+    <object-name>tnv-15-fe</object-name>
+    <object-name>ite-apu</object-name>
+    <object-name>fe-indic-1</object-name>
+    <object-name>engine-indic-1</object-name>
+    <object-name>engine-indic-2</object-name>
+    <object-name>engine-indic-3</object-name>
+    <object-name>l-5</object-name>
+    <object-name>l-6</object-name>
+    <object-name>l-7</object-name>
+    <object-name>l-8</object-name>
+    <object-name>l-9</object-name>
+    <object-name>l-10</object-name>
+    <object-name>l-11</object-name>
+    <object-name>l-12</object-name>
+    <object-name>l-13</object-name>
+    <object-name>l-14</object-name>
+    <object-name>l-15</object-name>
+    <object-name>l-16</object-name>
+    <object-name>l-17</object-name>
+    <object-name>l-18</object-name>
+    <object-name>l-19</object-name>
+    <object-name>l-20</object-name>
+    <object-name>l-21</object-name>
+    <object-name>l-22</object-name>
+    <object-name>l-23</object-name>
+    <object-name>l-24</object-name>
+    <object-name>l-25</object-name>
+    <object-name>l-26</object-name>
+    <object-name>l-27</object-name>
+    <object-name>l-28</object-name>
+    <object-name>l-29</object-name>
+    <object-name>l-30</object-name>
+    <object-name>l-31</object-name>
+    <object-name>l-32</object-name>
+    <object-name>l-33</object-name>
+    <object-name>l-34</object-name>
+    <object-name>l-35</object-name>
+    <object-name>l-36</object-name>
+    <object-name>l-37</object-name>
+    <object-name>l-38</object-name>
+    <object-name>l-39</object-name>
+    <object-name>l-40</object-name>
+    <object-name>l-41</object-name>
+    <object-name>l-42</object-name>
+    <object-name>l-43</object-name>
+    <object-name>l-44</object-name>
+    <object-name>l-45</object-name>
+    <object-name>l-46</object-name>
+    <object-name>l-47</object-name>
+    <object-name>l-48</object-name>
+<!--    <object-name>l-49</object-name>
+    <object-name>l-50</object-name>
+    <object-name>l-51</object-name>-->
+    <object-name>h-1</object-name>
+    <object-name>h-2</object-name>
+    <object-name>h-3</object-name>
+    <object-name>h-4</object-name>
+    <object-name>h-5</object-name>
+    <object-name>sw-4</object-name>
+    <object-name>sw-5</object-name>
+    <object-name>sw-6</object-name>
+    <object-name>sw-7</object-name>
+    <object-name>sw-8</object-name>
+    <object-name>sw-9</object-name>
+    <object-name>sw-10</object-name>
+    <object-name>sw-11</object-name>
+    <object-name>sw-12</object-name>
+    <object-name>sw-13</object-name>
+    <object-name>sw-14</object-name>
+    <object-name>sw-15</object-name>
+    <object-name>sw-16</object-name>
+    <object-name>sw-17</object-name>
+    <object-name>sw-18</object-name>
+    <object-name>sw-19</object-name>
+    <object-name>sw-20</object-name>
+    <object-name>sw-21</object-name>
+    <object-name>sw-22</object-name>
+    <object-name>sw-23</object-name>
+    <object-name>sw-24</object-name>
+    <object-name>sw-25</object-name>
+    <object-name>sw-26</object-name>
+    <object-name>sw-27</object-name>
+    <object-name>sw-28</object-name>
+    <object-name>sw-29</object-name>
+    <object-name>sw-30</object-name>
+    <object-name>sw-31</object-name>
+    <object-name>sw-32</object-name>
+    <object-name>sw-33</object-name>
+    <object-name>sw-34</object-name>
+    <object-name>sw-35</object-name>
+    <object-name>sw-36</object-name>
+    <object-name>sw-37</object-name>
+    <object-name>sw-38</object-name>
+    <object-name>sw-39</object-name>
+    <object-name>sw-40</object-name>
+    <object-name>sw-86</object-name>
+    <object-name>sw-87</object-name>
+    <object-name>sw-88</object-name>
+    <object-name>sw-89</object-name>
+    <object-name>sw-90</object-name>
+    <object-name>sw-91</object-name>
+    <object-name>sw-92</object-name>
+    <object-name>sw-93</object-name>
+    <object-name>sw-94</object-name>
+    <object-name>sw-95</object-name>
+    <object-name>sw-96</object-name>
+    <object-name>check_lamps_3</object-name>
+    <object-name>check-lamps-4</object-name>
+    <object-name>check-lamps_4</object-name>
+    <object-name>bt-1</object-name>
+    <object-name>bt-2</object-name>
+    <object-name>bt-3</object-name>
+    <object-name>bt-4</object-name>
+    <object-name>bt-5</object-name>
+    <object-name>bt-6</object-name>
+    <object-name>bt-7</object-name>
+    <object-name>bt-8</object-name>
+    <object-name>km-5-2</object-name>
+    <object-name>km-5-1</object-name>
+    <object-name>startpanel</object-name>
+    <object-name>nadp4</object-name>
+    <!--<object-name>lever_sti2</object-name>
+    <object-name>lever_sti8</object-name>
+    <object-name>lever_sti0</object-name>
+    <object-name>lever_sti7</object-name>  -->
+    <object-name>dme-1</object-name>
+    <object-name>dme-2</object-name>
+    <object-name>ind-busters</object-name>
+    <object-name>air-cond-panel</object-name>
+    <object-name>sw-wiper-left</object-name>
+    <object-name>sw-wiper-right</object-name>
   </animation>
   <!--Hide VC on external views-->
   <!--<animation>
@@ -4245,17 +4245,17 @@
     </condition>
     <nopreview/>
   </animation>-->
-    <!--TEMPORARY-->
-    <animation>
-      <type>translate</type>
-      <object-name>virtualcockpit3d</object-name>
-      <offset-m>-0.006</offset-m>
-      <axis>
-        <x>0.0</x>
-        <y>1.0</y>
-        <z>0.0</z>
-      </axis>
-    </animation>
+  <!--TEMPORARY-->
+  <animation>
+    <type>translate</type>
+    <object-name>virtualcockpit3d</object-name>
+    <offset-m>-0.006</offset-m>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
   <!--*************************** END PANELS ****************************-->
 
@@ -6981,209 +6981,209 @@
   </animation>
 
   <animation>
-      <type>material</type>
-      <object-name>visor_wing_left</object-name>
-      <object-name>visor_front_left</object-name>
-      <object-name>visor_front_right</object-name>
-      <object-name>visor_wing_right</object-name>
-      <object-name>visor_front_gear</object-name>
-      <object-name>MESH17external</object-name>
-      <object-name>WindShield</object-name>
-      <object-name>LeftWindowGlassExt</object-name>
-      <object-name>RightWindowGlassExt</object-name>
-      <object-name>lever_sti3</object-name>
-      <object-name>lever_sti4</object-name>
-      <object-name>Body_Front</object-name>
-      <!--<object-name>WiperLeftExt</object-name>
-      <object-name>WiperRightExt</object-name>-->
-      <object-name>Door_Cargo_1</object-name>
-      <object-name>Door_Passe</object-name>
-      <object-name>l_gear_compartment</object-name>
-      <object-name>r_gear_compartment</object-name>
-      <object-name>c_gear_door_FL</object-name>
-      <object-name>c_gear_door_RL</object-name>
-      <object-name>c_gear_door_FR</object-name>
-      <object-name>c_gear_door_RR</object-name>
-      <property-base>tu154/livery/maina</property-base>
-      <texture-prop>texture</texture-prop>
-      <texture>maina_t.png</texture>
+    <type>material</type>
+    <object-name>visor_wing_left</object-name>
+    <object-name>visor_front_left</object-name>
+    <object-name>visor_front_right</object-name>
+    <object-name>visor_wing_right</object-name>
+    <object-name>visor_front_gear</object-name>
+    <object-name>MESH17external</object-name>
+    <object-name>WindShield</object-name>
+    <object-name>LeftWindowGlassExt</object-name>
+    <object-name>RightWindowGlassExt</object-name>
+    <object-name>lever_sti3</object-name>
+    <object-name>lever_sti4</object-name>
+    <object-name>Body_Front</object-name>
+    <!--<object-name>WiperLeftExt</object-name>
+    <object-name>WiperRightExt</object-name>-->
+    <object-name>Door_Cargo_1</object-name>
+    <object-name>Door_Passe</object-name>
+    <object-name>l_gear_compartment</object-name>
+    <object-name>r_gear_compartment</object-name>
+    <object-name>c_gear_door_FL</object-name>
+    <object-name>c_gear_door_RL</object-name>
+    <object-name>c_gear_door_FR</object-name>
+    <object-name>c_gear_door_RR</object-name>
+    <property-base>tu154/livery/maina</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>maina_t.png</texture>
   </animation>
 
   <animation>
-      <type>material</type>
-      <object-name>stabilizer_root</object-name>
-      <object-name>apu_cowl_2</object-name>
-      <object-name>apu_cowl_1</object-name>
-      <object-name>MESH18</object-name>
-      <object-name>Body_Rear</object-name>
-      <object-name>rudder</object-name>
-      <object-name>Door_Cargo_2_sec</object-name>
-      <object-name>Door_Cargo_2_main</object-name>    
-      <property-base>tu154/livery/mainb</property-base>
-      <texture-prop>texture</texture-prop>
-      <texture>mainb_t.png</texture>
+    <type>material</type>
+    <object-name>stabilizer_root</object-name>
+    <object-name>apu_cowl_2</object-name>
+    <object-name>apu_cowl_1</object-name>
+    <object-name>MESH18</object-name>
+    <object-name>Body_Rear</object-name>
+    <object-name>rudder</object-name>
+    <object-name>Door_Cargo_2_sec</object-name>
+    <object-name>Door_Cargo_2_main</object-name>    
+    <property-base>tu154/livery/mainb</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>mainb_t.png</texture>
   </animation>
   
   <animation>
-      <type>material</type>
-      <object-name>c_gear_wheel</object-name>
-      <object-name>c_gear_object_6.1</object-name>
-      <object-name>c_gear_object_5.1</object-name>
-      <object-name>c_gear_object_5.2</object-name>
-      <object-name>c_gear_object_4.3</object-name>
-      <object-name>c_gear_object_4.1</object-name>
-      <object-name>c_gear_object_4.2</object-name>
-      <object-name>c_gear_object_3.1</object-name>
-      <object-name>c_gear_object_3.2</object-name>
-      <object-name>elevator_left</object-name>
-      <object-name>elevator_right</object-name>
-      <!--<object-name>engine2_fan_fast</object-name>-->
-      <!--<object-name>engine1_fan_fast</object-name>-->
-      <object-name>engine1_fan_slow</object-name>
-      <object-name>engine1_turbine_slow</object-name>
-      <!--<object-name>engine1_turbine_fast</object-name>-->
-      <object-name>eng1_int_flap_11</object-name>
-      <object-name>eng1_int_flap_01</object-name>
-      <object-name>eng1_int_flap_02</object-name>
-      <object-name>eng1_int_flap_03</object-name>
-      <object-name>eng1_int_flap_04</object-name>
-      <object-name>eng1_int_flap_05</object-name>
-      <object-name>eng1_int_flap_06</object-name>
-      <object-name>eng1_int_flap_07</object-name>
-      <object-name>eng1_int_flap_08</object-name>
-      <object-name>eng1_int_flap_09</object-name>
-      <object-name>eng1_int_flap_10</object-name>
-      <object-name>eng1_int_flap_12</object-name>
-      <!--<object-name>engine3_fan_fast</object-name>-->
-      <object-name>engine3_fan_slow</object-name>
-      <object-name>engine3_turbine_slow</object-name>
-      <!--<object-name>engine3_turbine_fast</object-name>-->
-      <object-name>eng3_int_flap_01</object-name>
-      <object-name>eng3_int_flap_02</object-name>
-      <object-name>eng3_int_flap_10</object-name>
-      <object-name>eng3_int_flap_12</object-name>
-      <object-name>eng3_int_flap_11</object-name>
-      <object-name>eng3_int_flap_05</object-name>
-      <object-name>eng3_int_flap_06</object-name>
-      <object-name>eng3_int_flap_07</object-name>
-      <object-name>eng3_int_flap_08</object-name>
-      <object-name>eng3_int_flap_09</object-name>
-      <object-name>eng3_int_flap_03</object-name>
-      <object-name>eng3_int_flap_04</object-name>
-      <object-name>engine2_fan_slow</object-name>
-      <!--<object-name>engine2_turbine_fast</object-name>-->
-      <object-name>engine2_turbine_slow</object-name>
-      <object-name>c_gear_object_2.1</object-name>
-      <object-name>stabilizer</object-name>
-      <object-name>l_gear_object_6.2</object-name>
-      <object-name>l_tire_rear</object-name>
-      <object-name>l_tire_middle</object-name>
-      <object-name>l_tire_front</object-name>
-      <object-name>l_gear_object_6.1</object-name>
-      <object-name>l_gear_object_5.3</object-name>
-      <object-name>l_gear_object_5.1</object-name>
-      <object-name>l_gear_object_5.2</object-name>
-      <object-name>l_gear_object_4.1</object-name>
-      <object-name>l_gear_object_3.4</object-name>
-      <object-name>l_gear_object_3.5</object-name>
-      <object-name>l_gear_object_3.1</object-name>
-      <object-name>l_gear_object_3.2</object-name>
-      <object-name>l_gear_object_3.3</object-name>
-      <object-name>l_gear_object_2.3</object-name>
-      <object-name>l_gear_object_2.1</object-name>
-      <object-name>l_gear_object_1.1</object-name>
-      <object-name>l_gear_object_1.2</object-name>
-      <object-name>r_gear_object_2.3</object-name>
-      <object-name>r_gear_object_2.1</object-name>
-      <object-name>r_tire_middle</object-name>
-      <object-name>r_tire_rear</object-name>
-      <object-name>r_tire_front</object-name>
-      <object-name>r_gear_object_6.2</object-name>
-      <object-name>r_gear_object_6.1</object-name>
-      <object-name>r_gear_object_5.3</object-name>
-      <object-name>r_gear_object_5.1</object-name>
-      <object-name>r_gear_object_5.2</object-name>
-      <object-name>r_gear_object_4.1</object-name>
-      <object-name>r_gear_object_3.5</object-name>
-      <object-name>r_gear_object_3.4</object-name>
-      <object-name>r_gear_object_3.2</object-name>
-      <object-name>r_gear_object_3.1</object-name>
-      <object-name>r_gear_object_3.3</object-name>
-      <object-name>r_gear_object_1.2</object-name>
-      <object-name>r_gear_object_1.1</object-name>
-      <object-name>Engines_Nacelles</object-name>
-      <property-base>tu154/livery/var</property-base>
-      <texture-prop>texture</texture-prop>
-      <texture>var_t.png</texture>
+    <type>material</type>
+    <object-name>c_gear_wheel</object-name>
+    <object-name>c_gear_object_6.1</object-name>
+    <object-name>c_gear_object_5.1</object-name>
+    <object-name>c_gear_object_5.2</object-name>
+    <object-name>c_gear_object_4.3</object-name>
+    <object-name>c_gear_object_4.1</object-name>
+    <object-name>c_gear_object_4.2</object-name>
+    <object-name>c_gear_object_3.1</object-name>
+    <object-name>c_gear_object_3.2</object-name>
+    <object-name>elevator_left</object-name>
+    <object-name>elevator_right</object-name>
+    <!--<object-name>engine2_fan_fast</object-name>-->
+    <!--<object-name>engine1_fan_fast</object-name>-->
+    <object-name>engine1_fan_slow</object-name>
+    <object-name>engine1_turbine_slow</object-name>
+    <!--<object-name>engine1_turbine_fast</object-name>-->
+    <object-name>eng1_int_flap_11</object-name>
+    <object-name>eng1_int_flap_01</object-name>
+    <object-name>eng1_int_flap_02</object-name>
+    <object-name>eng1_int_flap_03</object-name>
+    <object-name>eng1_int_flap_04</object-name>
+    <object-name>eng1_int_flap_05</object-name>
+    <object-name>eng1_int_flap_06</object-name>
+    <object-name>eng1_int_flap_07</object-name>
+    <object-name>eng1_int_flap_08</object-name>
+    <object-name>eng1_int_flap_09</object-name>
+    <object-name>eng1_int_flap_10</object-name>
+    <object-name>eng1_int_flap_12</object-name>
+    <!--<object-name>engine3_fan_fast</object-name>-->
+    <object-name>engine3_fan_slow</object-name>
+    <object-name>engine3_turbine_slow</object-name>
+    <!--<object-name>engine3_turbine_fast</object-name>-->
+    <object-name>eng3_int_flap_01</object-name>
+    <object-name>eng3_int_flap_02</object-name>
+    <object-name>eng3_int_flap_10</object-name>
+    <object-name>eng3_int_flap_12</object-name>
+    <object-name>eng3_int_flap_11</object-name>
+    <object-name>eng3_int_flap_05</object-name>
+    <object-name>eng3_int_flap_06</object-name>
+    <object-name>eng3_int_flap_07</object-name>
+    <object-name>eng3_int_flap_08</object-name>
+    <object-name>eng3_int_flap_09</object-name>
+    <object-name>eng3_int_flap_03</object-name>
+    <object-name>eng3_int_flap_04</object-name>
+    <object-name>engine2_fan_slow</object-name>
+    <!--<object-name>engine2_turbine_fast</object-name>-->
+    <object-name>engine2_turbine_slow</object-name>
+    <object-name>c_gear_object_2.1</object-name>
+    <object-name>stabilizer</object-name>
+    <object-name>l_gear_object_6.2</object-name>
+    <object-name>l_tire_rear</object-name>
+    <object-name>l_tire_middle</object-name>
+    <object-name>l_tire_front</object-name>
+    <object-name>l_gear_object_6.1</object-name>
+    <object-name>l_gear_object_5.3</object-name>
+    <object-name>l_gear_object_5.1</object-name>
+    <object-name>l_gear_object_5.2</object-name>
+    <object-name>l_gear_object_4.1</object-name>
+    <object-name>l_gear_object_3.4</object-name>
+    <object-name>l_gear_object_3.5</object-name>
+    <object-name>l_gear_object_3.1</object-name>
+    <object-name>l_gear_object_3.2</object-name>
+    <object-name>l_gear_object_3.3</object-name>
+    <object-name>l_gear_object_2.3</object-name>
+    <object-name>l_gear_object_2.1</object-name>
+    <object-name>l_gear_object_1.1</object-name>
+    <object-name>l_gear_object_1.2</object-name>
+    <object-name>r_gear_object_2.3</object-name>
+    <object-name>r_gear_object_2.1</object-name>
+    <object-name>r_tire_middle</object-name>
+    <object-name>r_tire_rear</object-name>
+    <object-name>r_tire_front</object-name>
+    <object-name>r_gear_object_6.2</object-name>
+    <object-name>r_gear_object_6.1</object-name>
+    <object-name>r_gear_object_5.3</object-name>
+    <object-name>r_gear_object_5.1</object-name>
+    <object-name>r_gear_object_5.2</object-name>
+    <object-name>r_gear_object_4.1</object-name>
+    <object-name>r_gear_object_3.5</object-name>
+    <object-name>r_gear_object_3.4</object-name>
+    <object-name>r_gear_object_3.2</object-name>
+    <object-name>r_gear_object_3.1</object-name>
+    <object-name>r_gear_object_3.3</object-name>
+    <object-name>r_gear_object_1.2</object-name>
+    <object-name>r_gear_object_1.1</object-name>
+    <object-name>Engines_Nacelles</object-name>
+    <property-base>tu154/livery/var</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>var_t.png</texture>
   </animation>
   
   <animation>
-      <type>material</type>
-      <object-name>l_console_inner</object-name>
-      <object-name>l_console_middle</object-name>
-      <object-name>l_console_outer</object-name>
-      <object-name>l_gear_object_2.2</object-name>
-      <object-name>l_slat_middle</object-name>
-      <object-name>l_slat_outer_1</object-name>
-      <object-name>l_slat_outer_2</object-name>
-      <object-name>l_flap_inner_3</object-name>
-      <object-name>l_flap_inner_2</object-name>
-      <object-name>l_flap_outer_1</object-name>
-      <object-name>l_flap_pin_outer</object-name>
-      <object-name>l_flap_pin_inner</object-name>
-      <object-name>l_flap_outer_3</object-name>
-      <object-name>l_flap_outer_2</object-name>
-      <object-name>l_gear_door_FR</object-name>
-      <object-name>l_gear_door_RR</object-name>
-      <object-name>l_gear_door_FL</object-name>
-      <object-name>l_gear_door_RL</object-name>
-      <object-name>l_slat_inner</object-name>
-      <object-name>l_flap_inner_1</object-name>
-      <object-name>l_flap_cover_outer</object-name>
-      <object-name>l_flap_cover_inner</object-name>
-      <object-name>l_spoiler_inner</object-name>
-      <object-name>l_spoiler_outer</object-name>
-      <object-name>aileron_left</object-name>
-      <object-name>ailer_interc_left</object-name>
-      <object-name>interceptor_left</object-name>
-      <property-base>tu154/livery/wingl</property-base>
-      <texture-prop>texture</texture-prop>
-      <texture>wingl_t.png</texture>
+    <type>material</type>
+    <object-name>l_console_inner</object-name>
+    <object-name>l_console_middle</object-name>
+    <object-name>l_console_outer</object-name>
+    <object-name>l_gear_object_2.2</object-name>
+    <object-name>l_slat_middle</object-name>
+    <object-name>l_slat_outer_1</object-name>
+    <object-name>l_slat_outer_2</object-name>
+    <object-name>l_flap_inner_3</object-name>
+    <object-name>l_flap_inner_2</object-name>
+    <object-name>l_flap_outer_1</object-name>
+    <object-name>l_flap_pin_outer</object-name>
+    <object-name>l_flap_pin_inner</object-name>
+    <object-name>l_flap_outer_3</object-name>
+    <object-name>l_flap_outer_2</object-name>
+    <object-name>l_gear_door_FR</object-name>
+    <object-name>l_gear_door_RR</object-name>
+    <object-name>l_gear_door_FL</object-name>
+    <object-name>l_gear_door_RL</object-name>
+    <object-name>l_slat_inner</object-name>
+    <object-name>l_flap_inner_1</object-name>
+    <object-name>l_flap_cover_outer</object-name>
+    <object-name>l_flap_cover_inner</object-name>
+    <object-name>l_spoiler_inner</object-name>
+    <object-name>l_spoiler_outer</object-name>
+    <object-name>aileron_left</object-name>
+    <object-name>ailer_interc_left</object-name>
+    <object-name>interceptor_left</object-name>
+    <property-base>tu154/livery/wingl</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>wingl_t.png</texture>
   </animation>
 
   <animation>
-      <type>material</type>
-      <object-name>r_console_inner</object-name>
-      <object-name>r_console_middle</object-name>
-      <object-name>r_console_outer</object-name>
-      <object-name>RefuelCover</object-name>
-      <object-name>r_gear_object_2.2</object-name>
-      <object-name>r_flap_inner_3</object-name>
-      <object-name>r_flap_inner_2</object-name>
-      <object-name>r_flap_pin_inner</object-name>
-      <object-name>r_flap_pin_outer</object-name>
-      <object-name>r_flap_outer_3</object-name>
-      <object-name>r_flap_outer_2</object-name>
-      <object-name>r_flap_outer_1</object-name>
-      <object-name>r_slat_outer_1</object-name>
-      <object-name>r_slat_outer_2</object-name>
-      <object-name>r_slat_middle</object-name>
-      <object-name>aileron_right</object-name>
-      <object-name>ailer_interc_right</object-name>
-      <object-name>r_gear_door_RL</object-name>
-      <object-name>r_gear_door_RR</object-name>
-      <object-name>r_gear_door_FL</object-name>
-      <object-name>r_gear_door_FR</object-name>
-      <object-name>r_slat_inner</object-name>
-      <object-name>r_flap_inner_1</object-name>
-      <object-name>r_flap_cover_outer</object-name>
-      <object-name>r_flap_cover_inner</object-name>
-      <object-name>r_spoiler_inner</object-name>
-      <object-name>r_spoiler_outer</object-name>
-      <object-name>interceptor_right</object-name>
-      <property-base>tu154/livery/wingr</property-base>
-      <texture-prop>texture</texture-prop>
-      <texture>wingr_t.png</texture>
+    <type>material</type>
+    <object-name>r_console_inner</object-name>
+    <object-name>r_console_middle</object-name>
+    <object-name>r_console_outer</object-name>
+    <object-name>RefuelCover</object-name>
+    <object-name>r_gear_object_2.2</object-name>
+    <object-name>r_flap_inner_3</object-name>
+    <object-name>r_flap_inner_2</object-name>
+    <object-name>r_flap_pin_inner</object-name>
+    <object-name>r_flap_pin_outer</object-name>
+    <object-name>r_flap_outer_3</object-name>
+    <object-name>r_flap_outer_2</object-name>
+    <object-name>r_flap_outer_1</object-name>
+    <object-name>r_slat_outer_1</object-name>
+    <object-name>r_slat_outer_2</object-name>
+    <object-name>r_slat_middle</object-name>
+    <object-name>aileron_right</object-name>
+    <object-name>ailer_interc_right</object-name>
+    <object-name>r_gear_door_RL</object-name>
+    <object-name>r_gear_door_RR</object-name>
+    <object-name>r_gear_door_FL</object-name>
+    <object-name>r_gear_door_FR</object-name>
+    <object-name>r_slat_inner</object-name>
+    <object-name>r_flap_inner_1</object-name>
+    <object-name>r_flap_cover_outer</object-name>
+    <object-name>r_flap_cover_inner</object-name>
+    <object-name>r_spoiler_inner</object-name>
+    <object-name>r_spoiler_outer</object-name>
+    <object-name>interceptor_right</object-name>
+    <property-base>tu154/livery/wingr</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>wingr_t.png</texture>
   </animation>
 
   <!-- Cabin Windows -->
@@ -7873,160 +7873,154 @@
   </animation>
 
 
-  <!-- CONTRAIL -->
-  
-    <!-- Particules OSG -->
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/contrail1.xml</path>
-      <offsets>
-        <x-m> 50.290</x-m>
-        <y-m>-2.550</y-m>
-        <z-m> 1.4</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-  
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/contrail3.xml</path>
-      <offsets>
-        <x-m> 50.290</x-m>
-        <y-m> 2.550</y-m>
-        <z-m> 1.4</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-  
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/contrail2.xml</path>
-      <offsets>
-        <x-m>58.290</x-m>
-        <y-m>0.0</y-m>
-        <z-m>2</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-  
-  <!-- SMOKE -->
-  
-    <!-- Particules OSG -->
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/smoke1-gnd.xml</path>
-      <offsets>
-        <x-m> 28.290</x-m>
-        <y-m>-2.550</y-m>
-        <z-m> 1.5</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/smoke3-gnd.xml</path>
-      <offsets>
-        <x-m> 28.290</x-m>
-        <y-m> 2.550</y-m>
-        <z-m> 1.5</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/smoke2-gnd.xml</path>
-      <offsets>
-        <x-m> 36.290</x-m>
-        <y-m> 0.0</y-m>
-        <z-m> 2.5</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-    
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/smoke1-air.xml</path>
-      <offsets>
-        <x-m> 28.290</x-m>
-        <y-m>-2.550</y-m>
-        <z-m> 1.5</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/smoke3-air.xml</path>
-      <offsets>
-        <x-m> 28.290</x-m>
-        <y-m> 2.550</y-m>
-        <z-m> 1.5</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/smoke2-air.xml</path>
-      <offsets>
-        <x-m> 36.290</x-m>
-        <y-m> 0.0</y-m>
-        <z-m> 2.5</z-m> 
-        <roll-deg>    0 </roll-deg>
-        <pitch-deg>   0 </pitch-deg>
-        <heading-deg> 0 </heading-deg>
-      </offsets>
-    </model>
-    
-    
+  <!-- CONTRAILS -->
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Contrails/contrail1.xml</path>
+    <offsets>
+      <x-m> 50.290</x-m>
+      <y-m>-2.550</y-m>
+      <z-m> 1.4</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
 
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/condensation.xml</path>
-      <offsets>
-        <x-m>   8.716 </x-m>
-        <y-m> -18.742 </y-m>
-        <z-m>  0.14 </z-m>
-      </offsets>
-    </model>11
-    
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/condensation.xml</path>
-      <offsets>
-        <x-m>  8.716 </x-m>
-        <y-m> 18.782 </y-m>
-        <z-m> 0.14 </z-m>
-      </offsets>
-    </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Contrails/contrail3.xml</path>
+    <offsets>
+      <x-m> 50.290</x-m>
+      <y-m> 2.550</y-m>
+      <z-m> 1.4</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
 
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Contrails/contrail2.xml</path>
+    <offsets>
+      <x-m>58.290</x-m>
+      <y-m>0.0</y-m>
+      <z-m>2</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+
+  <!-- ENGINES SMOKE -->
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Eng_Smoke/smoke1-gnd.xml</path>
+    <offsets>
+      <x-m> 28.290</x-m>
+      <y-m>-2.550</y-m>
+      <z-m> 1.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Eng_Smoke/smoke3-gnd.xml</path>
+    <offsets>
+      <x-m> 28.290</x-m>
+      <y-m> 2.550</y-m>
+      <z-m> 1.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Eng_Smoke/smoke2-gnd.xml</path>
+    <offsets>
+      <x-m> 36.290</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 2.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
     
   <model>
-      <path>Aircraft/tu154b/Model/Effects/stream_failure.xml</path>
-      <offsets>
-        <x-m>   6.916 </x-m>
-        <y-m> -18.742 </y-m>
-        <z-m>  0.25 </z-m>
-      </offsets>
-    </model>11
+    <path>Aircraft/tu154b/Model/Effects/Eng_Smoke/smoke1-air.xml</path>
+    <offsets>
+      <x-m> 28.290</x-m>
+      <y-m>-2.550</y-m>
+      <z-m> 1.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Eng_Smoke/smoke3-air.xml</path>
+    <offsets>
+      <x-m> 28.290</x-m>
+      <y-m> 2.550</y-m>
+      <z-m> 1.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Eng_Smoke/smoke2-air.xml</path>
+    <offsets>
+      <x-m> 36.290</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 2.5</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
     
-    <model>
-      <path>Aircraft/tu154b/Model/Effects/stream_failure.xml</path>
-      <offsets>
-        <x-m>  6.916 </x-m>
-        <y-m> 18.782 </y-m>
-        <z-m> 0.25 </z-m>
-      </offsets>
-    </model>
+    
+
+  <!-- WING HUMIDITY EFFECTS -->
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Wing_Eff/condensation.xml</path>
+    <offsets>
+      <x-m>   8.716 </x-m>
+      <y-m> -18.742 </y-m>
+      <z-m>  0.14 </z-m>
+    </offsets>
+  </model>11    
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Wing_Eff/condensation.xml</path>
+    <offsets>
+      <x-m>  8.716 </x-m>
+      <y-m> 18.782 </y-m>
+      <z-m> 0.14 </z-m>
+    </offsets>
+  </model>
+
+<model>
+    <path>Aircraft/tu154b/Model/Effects/Wing_Eff/stream_failure.xml</path>
+    <offsets>
+      <x-m>   6.916 </x-m>
+      <y-m> -18.742 </y-m>
+      <z-m>  0.25 </z-m>
+    </offsets>
+  </model>11
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Wing_Eff/stream_failure.xml</path>
+    <offsets>
+      <x-m>  6.916 </x-m>
+      <y-m> 18.782 </y-m>
+      <z-m> 0.25 </z-m>
+    </offsets>
+  </model>
     
     
-    <!--generic tyre smoke-->
-    
-    <model>
-    <path>Aircraft/tu154b/Model/Effects/tyre-smoke-nose.xml</path>
+  <!-- TYRE SMOKE -->
+  <model>
+    <path>Aircraft/tu154b/Model/Effects/Tyre_Smoke/tyre-smoke-nose.xml</path>
     <name>tyre-smoke-n</name>
     <offsets>
     <x-m>-15.669</x-m>
@@ -8034,9 +8028,8 @@
     <z-m>-2.584</z-m>
     </offsets>
   </model>
-  
   <model>
-    <path>Aircraft/tu154b/Model/Effects/tyre-smoke-left.xml</path>
+    <path>Aircraft/tu154b/Model/Effects/Tyre_Smoke/tyre-smoke-left.xml</path>
     <name>tyre-smoke-l</name>
     <offsets>
     <x-m>7.962</x-m>
@@ -8044,9 +8037,8 @@
     <z-m>-2.584</z-m>
     </offsets>
   </model>
-  
   <model>
-    <path>Aircraft/tu154b/Model/Effects/tyre-smoke-right.xml</path>
+    <path>Aircraft/tu154b/Model/Effects/Tyre_Smoke/tyre-smoke-right.xml</path>
     <name>tyre-smoke-r</name>
     <offsets>
     <x-m>7.962</x-m>

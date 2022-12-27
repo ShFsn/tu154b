@@ -1,0 +1,9 @@
+<PropertyList include="Aircraft/tu154b/Model/Effects/Contrails/contrail.xml">
+
+  <particlesystem>
+    <condition>
+      <property>sim/multiplay/generic/bool[13]</property>
+    </condition>
+  </particlesystem>
+
+</PropertyList>
