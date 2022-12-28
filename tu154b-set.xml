@@ -203,7 +203,7 @@
     </replay>
 
     <rendering>
-      <refl_correction type="double">0.0</refl_correction>
+      <refl_correction type="double">-0.5</refl_correction>
     </rendering>
 
     <model>
