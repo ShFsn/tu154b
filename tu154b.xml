@@ -563,7 +563,7 @@
                 </setting>
                 <setting>
                   <position>1</position>
-                  <time>0.5</time>
+                  <time>2.0</time>
                 </setting>
               </traverse>
               <output>fcs/elevator-pos-rad</output>
@@ -645,7 +645,7 @@
                 </setting>
                 <setting>
                   <position>1</position>
-                  <time>0.5</time>
+                  <time>2.0</time>
                 </setting>
               </traverse>
               <output>fcs/left-aileron-pos-rad</output>
@@ -710,7 +710,7 @@
                 </setting>
                 <setting>
                   <position>1</position>
-                  <time>0.5</time>
+                  <time>2.0</time>
                 </setting>
               </traverse>
               <output>fcs/rudder-pos-rad</output>
@@ -876,7 +876,7 @@
                 </setting>
                 <setting>
                   <position>1</position>
-                  <time>0.5</time>
+                  <time>1.0</time>
                 </setting>
               </traverse>
               <output>fcs/speedbrake-pos-norm</output>
