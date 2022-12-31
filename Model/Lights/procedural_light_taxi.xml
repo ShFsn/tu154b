@@ -25,9 +25,9 @@
 
     <animation>
         <type>scale</type>
-        <x-offset>1.5</x-offset>
-        <y-offset>1.5</y-offset>
-        <z-offset>1.5</z-offset>
+        <x-offset>1.2</x-offset>
+        <y-offset>1.2</y-offset>
+        <z-offset>1.2</z-offset>
     </animation>
 
     <animation>

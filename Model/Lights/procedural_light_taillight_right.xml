@@ -50,6 +50,10 @@
                 <ind>300</ind>
                 <dep>4</dep>
             </entry>
+            <entry>
+                <ind>1500</ind>
+                <dep>8</dep>
+            </entry>
         </interpolation>
     </animation>
 
