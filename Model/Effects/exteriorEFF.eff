@@ -13,7 +13,7 @@
 
     <reflection-enabled type="int">1</reflection-enabled>
     <reflect-map-enabled type="int">1</reflect-map-enabled>
-    <reflection-correction type="float"><use>/sim/rendering/refl_correction</use></reflection-correction>
+    <reflection-correction type="float">-0.5</reflection-correction>
     <reflection-dynamic type="int">1</reflection-dynamic>
     <texture n="4">
       <filter>linear-mipmap-linear</filter>

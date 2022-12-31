@@ -202,9 +202,9 @@
       </buffer>
     </replay>
 
-    <rendering>
+    <!--<rendering>
       <refl_correction type="double">-0.5</refl_correction>
-    </rendering>
+    </rendering>-->
 
     <model>
       <autopush include="Systems/autopush-config.xml"/>
