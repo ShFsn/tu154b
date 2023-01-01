@@ -250,11 +250,19 @@ var theShakeEffect = func {
             timer_shake_0_2.start();
       }         
 }
-setlistener("/systems/shake/effect", func {
-      if (shakeEffect.getBoolValue()) {
-            theShakeEffect();
-      }
-}, 0, 0);
+
+if (props.globals.getNode("sim/rendering/headshake/groundshake/result-g").getValue() == nil) {
+      setlistener("/systems/shake/effect", func {
+            if (shakeEffect.getBoolValue()) {
+                  theShakeEffect();
+            }
+      }, 0, 0);
+}
+else {
+      props.globals.getNode("systems/shake/shaking", 1).alias("sim/rendering/headshake/groundshake/result-g");
+      props.globals.getNode("systems/shake/shakingext", 1).alias("sim/rendering/headshake/groundshake/result-g");
+      setprop("sim/rendering/headshake/groundshake/default-scaler-max-knots", 80.0);
+}
 
 var timer_shake_0_1 = maketimer(0.09, theShakeEffect);
 timer_shake_0_1.singleShot = 1;
