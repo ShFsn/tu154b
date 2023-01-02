@@ -21,6 +21,51 @@
   <rotors include="Aircraft/tu154b/Config/rotors-mult.xml"/>                      <!--FG MP short float transmisiion config-->
 
 
+  <!-- Aircraft characteristics -->  
+  <aircraft>
+    <icao>
+      <type type="string">T154</type>
+      <wake-turbulence-category>M</wake-turbulence-category>
+      <equipment type="string">SDFHI</equipment>
+      <surveillance type="string">C</surveillance>
+    </icao>
+    <performance>
+      <minimum>
+        <!-- 2300 m -->
+        <takeoff-length-ft type="int">7545.93177</takeoff-length-ft>
+        <!-- 2200 m -->
+        <landing-length-ft type="int">7217.84778</landing-length-ft>
+      </minimum>
+      <cruise>
+        <!-- 900 km/h TAS (M 0.85) -->
+        <airspeed-knots type="int">486</airspeed-knots>
+        <!-- 11100 m -->
+        <altitude-ft type="int">36417.32289</altitude-ft>
+      </cruise>
+      <approach>
+        <!-- 255 km/h -->
+        <airspeed-knots type="int">137.7</airspeed-knots>
+      </approach>
+      <maximum>
+        <!-- 12100 m -->
+        <altitude-ft type="int">39698.16279</altitude-ft>
+        <!-- 975 km/h TAS (M 0.88) -->
+        <mach type="double">0.88</mach>
+        <!-- 575 km/h IAS -->
+        <airspeed-knots type="int">310.5</airspeed-knots>
+      </maximum>
+    </performance>
+    <!-- Legacy jetways -->
+    <jetway-pos>
+      <!-- Hand-tuned. Only the 2nd door because it goes insane trying to reach the 1st one. -->
+      <x-tra>8.0</x-tra>
+      <y-rot>-2.0</y-rot>
+      <z-rot>14.5</z-rot>
+      <hood-rot>11.0</hood-rot>
+    </jetway-pos>
+  </aircraft>
+
+
 
   <!--******************************* SIMULATOR CONFIG ********************************-->
 
