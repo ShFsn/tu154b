@@ -25,28 +25,18 @@
 
     <animation>
         <type>scale</type>
-        <x-offset>1.2</x-offset>
-        <y-offset>1.2</y-offset>
-        <z-offset>1.2</z-offset>
+        <object-name>procedural_light</object-name>
+        <x-offset>15</x-offset>
+        <y-offset>15</y-offset>
+        <z-offset>15</z-offset>
     </animation>
 
     <animation>
         <type>dist-scale</type>
         <object-name>procedural_light</object-name>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>1</dep>
-            </entry>
-            <entry>
-                <ind>300</ind>
-                <dep>4</dep>
-            </entry>
-            <entry>
-                <ind>1500</ind>
-                <dep>8</dep>
-            </entry>
-        </interpolation>
+        <factor>0.007</factor>
+        <offset>0.0</offset>
+        <min>0.1</min>
     </animation>
 
 </PropertyList>
