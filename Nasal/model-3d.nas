@@ -166,13 +166,16 @@ var external_power = func {
       }
 }setlistener("services/ext-power/enable", external_power);
 
-var gnd_elev_ft = props.globals.getNode("/position/ground-elev-ft", 1);
+var gnd_elev_ft_node = props.globals.getNode("/position/ground-elev-ft", 1);
+var gnd_elev_ft = 0.0;
 var rep_time_node = props.globals.getNode("/sim/replay/time", 1);
 var rep_time = getprop("/sim/replay/time");
 time = 0;
 var services_alt = func {
       if (rep_time_node.getValue() == 0 and rep_time == 0 and getprop("services/chocks/request")) {
-            setprop("services/gnd-elev", gnd_elev_ft.getValue());
+            gnd_elev_ft = gnd_elev_ft_node.getValue();
+            gnd_elev_ft = gnd_elev_ft == nil ? 0.0 : gnd_elev_ft;
+            setprop("services/gnd-elev", gnd_elev_ft);
       }
       rep_time = rep_time_node.getValue();
 }
@@ -251,7 +254,7 @@ var theShakeEffect = func {
       }         
 }
 
-if (props.globals.getNode("sim/rendering/headshake/groundshake/result-g").getValue() == nil) {
+if (props.globals.getNode("sim/rendering/headshake/groundshake/result-g", 1).getValue() == nil) {
       setlistener("/systems/shake/effect", func {
             if (shakeEffect.getBoolValue()) {
                   theShakeEffect();
