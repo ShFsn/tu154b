@@ -57,6 +57,7 @@ var ver_calc = func () {
     if ( version_req != 1 ) return 0;
     else return 1;
 }
+var sim_next = ver_calc(); # Check if there's an availability to change view using number-raw
 
 var forceView = func{
 	if( modview_active ) return;	# Deny view modification if ~ pressed (sub view active)
@@ -68,17 +69,16 @@ var forceView = func{
 	if( n == 1 ) setprop("tu154/mod-views/copilot-view", 1);
 	else setprop("tu154/mod-views/copilot-view", 0);
 
-	var offset = getprop("tu154/mod-views/view-offset") + ver_calc();
-	if( n > 0 ) n = n + offset;
-	setprop("sim/current-view/view-number", n);
+	if( n > 0 ) n = sim_next == 1 ? n + 100 : n + getprop("tu154/mod-views/view-offset");
+	if (sim_next) setprop("sim/current-view/view-number-raw", n);
+	else setprop("sim/current-view/view-number", n);
 	#gui.popupTip(views[n].getNode("name").getValue());
 };
 
 var modView  = func{
-	var n = getprop("sim/current-view/view-number");
-	var offset = getprop("tu154/mod-views/view-offset");
+	var n = getprop("sim/current-view/view-number-raw");
 	if( n == nil ) n = 0;
-	if( n > 0 ) n = n - offset - ver_calc();
+	if( n > 0 ) n = n - 100;
 	if( n < 0 ) return;
 	var mode = arg[0];
 	if( mode == nil ) mode = 0;
