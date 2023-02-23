@@ -5,15 +5,15 @@
 
 <!DOCTYPE PropertyList [
  <!-- Property defining whether the pushback is connected. -->
- <!ENTITY CONNECTED-PROP "sim/model/autopush/connected">
+ <!ENTITY CONNECTED-PROP "sim/multiplay/generic/bool[32]">
  <!-- Property for aircraft's front wheel rollspeed in m/s. -->
- <!ENTITY ROLLSPEED-PROP "gear/gear[0]/rollspeed-ms">
+ <!ENTITY ROLLSPEED-PROP "sim/multiplay/generic/float[7]">
  <!-- Property for front wheel steering. -->
- <!ENTITY YAW-PROP "sim/model/autopush/yaw">
+ <!ENTITY YAW-PROP "sim/multiplay/generic/float[10]">
  <!-- Scaling factor for the steering property, must be equal to /sim/model/autopush/yaw-mult. -->
  <!ENTITY YAW-MULT "1.0">
  <!-- Property for gear compression in ft. -->
- <!ENTITY COMPRESSION-PROP "gear/gear[0]/compression-ft">
+ <!ENTITY COMPRESSION-PROP "gear/gear[0]/compression-norm">
  <!-- Property for aircraft pitch in degrees, or pushback's pitch if it is variable. -->
  <!ENTITY PITCH-PROP "orientation/pitch-deg">
  <!-- Scaling factor for the pitch property. -->
@@ -39,6 +39,22 @@ Distribute under the terms of GPLv2.
 
 <PropertyList>
   <path>Models/Airport/Pushback/Goldhofert.ac</path>
+	
+	<effect>
+		<inherits-from>Effects/model-combined</inherits-from>
+		<object-name>Mesh.003</object-name>
+		<object-name>Mesh.004</object-name>
+		<object-name>Mesh.005</object-name>
+		<object-name>Mesh.006</object-name>
+		<object-name>wheelfl</object-name>
+		<object-name>wheelfr</object-name>
+		<object-name>wheelrl</object-name>
+		<object-name>wheelrr</object-name>
+	</effect>
+  <!--<effect>
+    <inherits-from>Effects/glass</inherits-from>
+		<object-name>windows</object-name>
+  </effect>-->
 
   <!-- Trucks models and artworks courtesy of XPGoodWay Team
 (http://www.xpgoodwayteam.org/site_xpushback/) -->
@@ -125,7 +141,8 @@ Distribute under the terms of GPLv2.
  <animation>
    <type>translate</type>
    <property>&COMPRESSION-PROP;</property>
-   <factor>0.3048</factor>
+   <offset-m>0.1</offset-m>
+   <factor>0.2800</factor>
    <axis>
      <x>0</x>
      <y>0</y>
@@ -143,13 +160,13 @@ Distribute under the terms of GPLv2.
 				<atan2>
 					<difference>
 						<sum>
-							<property>gear/gear[0]/compression-ft</property>
+							<property>gear/gear[0]/compression-norm</property>
 							<value>-0.656</value>
 						</sum>
 						<product>
 							<sum>
-								<property>gear/gear[2]/compression-ft</property>
-								<property>gear/gear[1]/compression-ft</property>
+								<property>gear/gear[2]/compression-norm</property>
+								<property>gear/gear[1]/compression-norm</property>
 							</sum>
 							<value>0.5</value>
 						</product>
@@ -168,7 +185,7 @@ Distribute under the terms of GPLv2.
      <y>1</y>
      <z>0</z>
    </axis>
- </animation>>
+ </animation>
 
 	<animation>
 		<type>rotate</type>
@@ -176,8 +193,8 @@ Distribute under the terms of GPLv2.
 			<rad2deg>
 				<atan2>
 					<difference>
-						<property>gear/gear[2]/compression-ft</property>
-						<property>gear/gear[1]/compression-ft</property>
+						<property>gear/gear[2]/compression-norm</property>
+						<property>gear/gear[1]/compression-norm</property>
 					</difference>
 					<value>40.65</value>
 				</atan2>

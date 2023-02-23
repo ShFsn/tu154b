@@ -108,8 +108,8 @@ var _start = func() {
 	_time = getprop("/sim/time/elapsed-sec");
 	setprop("/sim/model/autopush/connected", 1);
 	if (!_timer.isRunning) {
-		if (getprop("/sim/model/autopush/chocks")) {
-			setprop("/sim/model/autopush/chocks", 0);
+		if (getprop("services/chocks/request")) {
+			setprop("services/chocks/request", 0);
 			screen.log.write("(pushback): Pushback connected, chocks removed. Please release brakes.");
 		} else {
 			screen.log.write("(pushback): Pushback connected, please release brakes.");

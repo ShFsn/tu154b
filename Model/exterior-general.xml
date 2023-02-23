@@ -4262,7 +4262,7 @@
   <!--*************************** PUSHBACK ****************************-->
   <model>
   <name>Pushback</name>
-  <path>Models/Airport/Pushback/Goldhofert.xml</path>
+  <path>Aircraft/tu154b/Model/Autopush/Truck.xml</path>
   <offsets>
     <x-m>-17.85</x-m>
     <y-m>0</y-m>
