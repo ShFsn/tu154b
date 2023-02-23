@@ -20,6 +20,9 @@
   <effect include="Collections/ext_var_combined.xml">
       <inherits-from>Effects/varEFF_MP</inherits-from>
   </effect>
+  <effect include="Collections/ext_gear_combined.xml">
+      <inherits-from>Effects/gearEFF_MP</inherits-from>
+  </effect>
   <effect include="Collections/ext_wing_combined.xml">
       <inherits-from>Effects/wingEFF_MP</inherits-from>
   </effect>

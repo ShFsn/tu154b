@@ -3,14 +3,14 @@
   <inherits-from>Effects/exteriorEFF</inherits-from>
   <parameters>
 
-    <normalmap-enabled type="int"><use>tu154/options/rendering/normal-maps/enable</use></normalmap-enabled>
+    <normalmap-enabled type="int">0</normalmap-enabled>
     
     <texture n="2">
-      <image>Effects/mainb_norm.png</image>
+      <image>Effects/var_norm.png</image>
     </texture>
 
     <texture n="4">
-      <image>Effects/mainb_spec.png</image>
+      <image>Effects/var_spec.png</image>
     </texture>
 
   </parameters> 

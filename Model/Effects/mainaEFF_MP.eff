@@ -3,6 +3,8 @@
   <inherits-from>Effects/exteriorEFF</inherits-from>
   <parameters>
 
+    <normalmap-enabled type="int"><use>tu154/options/rendering/normal-maps/enable</use></normalmap-enabled>
+    
     <texture n="2">
       <image>Effects/maina_norm.png</image>
     </texture>
