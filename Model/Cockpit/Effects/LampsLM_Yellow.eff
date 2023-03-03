@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+  <inherits-from>Effects/LampsLM</inherits-from>
+  <parameters>
+    <lightmap-color type="vec3d" n="2">3.16 3.08 0.0</lightmap-color>
+  </parameters>
+</PropertyList>

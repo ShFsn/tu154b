@@ -36,14 +36,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/warning/not-ready/state</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -59,14 +51,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/wrong-trim</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -82,14 +66,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/bank</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -105,14 +81,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/pitch</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -128,14 +96,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/autopilot</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -151,14 +111,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/at-failure</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -174,14 +126,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/wrong-approach-h</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -197,14 +141,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/wrong-approach-v</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -220,14 +156,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/electrical/indicators/fire</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -243,14 +171,6 @@
         <max>
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/warning/iso/state</property>
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
@@ -267,14 +187,6 @@
           <property>tu154/systems/electrical/checking-lamps/main-panel</property>
           <property>tu154/systems/warning/iso/state</property>
           <!--<property>tu154/systems/electrical/indicators/danger</property>-->
-          <product>
-            <difference>
-              <value>1.0</value>
-              <property>sim/rendering/shaders/model</property>
-            </difference>
-            <value>0.5</value>
-            <property>sim/model/cabin-lighting/vnesh-2</property>
-          </product>
         </max>
       </expression>
     </input>
