@@ -30,6 +30,39 @@
       </item>
 
       <item>
+        <label>Radio</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>radio</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Maintenance</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>maintenance</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Payload and Fuel</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>t154load</dialog-name>
+        </binding>
+      </item>
+
+      <item>
+        <label>Pushback</label>
+        <name>autopush</name>
+        <binding>
+        <command>dialog-show</command>
+        <dialog-name>autopush</dialog-name>
+        </binding>
+      </item>
+
+      <item>
         <label>Preferences</label>
         <binding>
           <command>dialog-show</command>
@@ -78,45 +111,6 @@
     </menu>
 
     <menu n="14">
-      <label>Other</label>
-      <enabled type="bool">true</enabled>
-
-      <item>
-        <label>Radio</label>
-        <binding>
-          <command>dialog-show</command>
-          <dialog-name>radio</dialog-name>
-        </binding>
-      </item>
-
-      <item>
-        <label>Maintenance</label>
-        <binding>
-          <command>dialog-show</command>
-          <dialog-name>maintenance</dialog-name>
-        </binding>
-      </item>
-
-      <item>
-        <label>Payload and Fuel</label>
-        <binding>
-          <command>dialog-show</command>
-          <dialog-name>t154load</dialog-name>
-        </binding>
-      </item>
-
-      <item>
-        <label>Pushback</label>
-        <name>autopush</name>
-        <binding>
-        <command>dialog-show</command>
-        <dialog-name>autopush</dialog-name>
-        </binding>
-      </item>
-
-    </menu>
-
-    <menu n="15">
       <label>|</label>
       <enabled type="bool">false</enabled>
     </menu>

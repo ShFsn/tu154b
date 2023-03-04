@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <name>t154-gfx-warn</name>
+  <layout>vbox</layout>
+
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <halign>left</halign>
+      <label>WARNING!</label>
+    </text>
+
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend/>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <border>2</border>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/options/gfx-warn/opened</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+  </group>
+
+  <hrule/>
+
+
+
+  <group>
+    <stretch>true</stretch>
+    <layout>vbox</layout>
+    <halign>center</halign>
+    <valign>top</valign>
+    
+    <text>
+      <label>YOUR GRAPHICS SETTINGS ARE TOO LOW!</label>
+    </text>
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+    <text>
+      <label>NECESSARY:</label>
+    </text>
+    <text>
+      <label>Your MODEL shader must be enabled. Otherwise, cockpit lights and light indicators won't work at all.</label>
+    </text>
+    <group>
+      <layout>hbox</layout>
+      <empty><stretch>true</stretch></empty>
+      <text>
+        <label>MODEL shader:   OFF </label>
+      </text>
+      <slider>
+        <min>0</min>
+        <max>3</max>
+        <step>3</step>
+        <property>sim/rendering/shaders/model</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </slider>
+      <text>
+        <label> ON</label>
+      </text>
+      <empty><stretch>true</stretch></empty>
+    </group>
+    <text><label> </label></text>
+    <text>
+      <label>[POSSIBLY] UNNECESSARY:</label>
+    </text>
+    <text>
+      <label>On some FG versions turning on ALS may also be required for correct aircraft work.</label>
+    </text>
+    <group>
+      <layout>hbox</layout>
+      <empty><stretch>true</stretch></empty>
+      <text>
+        <label>ALS shaders:   OFF </label>
+      </text>
+      <slider>
+        <min>0</min>
+        <max>1</max>
+        <step>1</step>
+        <property>sim/rendering/shaders/skydome</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </slider>
+      <text>
+        <label> ON</label>
+      </text>
+      <empty><stretch>true</stretch></empty>
+    </group>
+
+    <hrule/>
+
+    <checkbox>
+      <halign>center</halign>
+      <label> Don't this window on unnecessary cases [PLEASE THINK TWICE!]</label>
+      <property>/tu154/options/gfx-warn/ignore-unnecessary</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+    <hrule/>
+    
+    <group>
+      <layout>hbox</layout>
+      <halign>right</halign>
+      <empty>
+        <stretch>true</stretch>
+      </empty>
+      <button>
+        <legend>Close</legend>
+        <pref-width>180</pref-width>
+        <binding>
+          <command>property-assign</command>
+          <property>tu154/options/gfx-warn/opened</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>dialog-close</command>
+        </binding>
+      </button>
+    </group>
+
+  </group>
+
+</PropertyList> 

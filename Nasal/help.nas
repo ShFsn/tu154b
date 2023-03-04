@@ -103,4 +103,17 @@ var show_welcome_dlg = func{
     fgcommand("dialog-show", { 'dialog-name': 'about-aircraft' });
   }
 }
-setlistener("/sim/signals/fdm-initialized", show_welcome_dlg, 0, 0 );
+var show_gfx_warn_dlg = func{
+  if ((!getprop("/sim/rendering/shaders/model")
+      or (!getprop("/sim/rendering/shaders/skydome") and !getprop("tu154/options/gfx-warn/ignore-unnecessary")))
+      and !getprop("tu154/options/gfx-warn/opened")) {
+    setprop("tu154/options/gfx-warn/opened", 1);
+    fgcommand("dialog-show", { 'dialog-name': 't154-gfx-warn' });
+  }
+}
+setlistener("/sim/signals/fdm-initialized", func{
+  show_welcome_dlg();
+  show_gfx_warn_dlg();
+  setlistener("/sim/rendering/shaders/model", show_gfx_warn_dlg, 0, 0 );
+  setlistener("/sim/rendering/shaders/skydome", show_gfx_warn_dlg, 0, 0 );
+  }, 0, 0 );

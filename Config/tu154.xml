@@ -494,11 +494,16 @@
     <welcome>
       <show-on-startup type="bool">true</show-on-startup>
     </welcome>
+
+    <gfx-warn>
+      <ignore-unnecessary type="bool">false</ignore-unnecessary>
+      <opened type="bool">false</opened>
+    </gfx-warn>
     
     <tooltips-color>
-    <r type="double">1.0</r>
-    <g type="double">1.0</g>
-    <b type="double">0.0</b>
+      <r type="double">1.0</r>
+      <g type="double">1.0</g>
+      <b type="double">0.0</b>
     </tooltips-color>
 
     <textures>
