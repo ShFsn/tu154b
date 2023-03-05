@@ -45,6 +45,18 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/nvu/tex_base_v-51</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/nvu/tex_text_v-51</texture-prop>
+</animation>
+
 <animation>
   <type>material</type>
   <object-name>lamp_1_on</object-name>

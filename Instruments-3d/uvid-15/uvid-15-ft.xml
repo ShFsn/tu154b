@@ -30,6 +30,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/uvid-15/tex_uvid-15f</texture-prop>
+</animation>
+
 <!--Warning lamp-->
 <animation>
   <type>material</type>

@@ -48,6 +48,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/rv-5m/tex_digit</texture-prop>
+</animation>
+
 
 <!--Blank-->
 <animation>

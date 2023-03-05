@@ -28,6 +28,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/uvid-15/tex_uvid-15m</texture-prop>
+</animation>
+
 <!--Needles-->
 <animation>
     <type>rotate</type>

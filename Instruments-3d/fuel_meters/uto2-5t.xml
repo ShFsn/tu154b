@@ -38,6 +38,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/fuel_meters/tex_uto2-5t</texture-prop>
+</animation>
+
   
 <!--Needles-->
 <animation>

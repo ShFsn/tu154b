@@ -56,6 +56,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_54</texture-prop>
+</animation>
+
 <!--Check lamps procedure-->
 <animation>
   <type>material</type>

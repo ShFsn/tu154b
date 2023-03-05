@@ -65,6 +65,18 @@
     </emission>
   </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>ag_flag</object-name>
+  <texture-prop>tu154/textures/instruments-3d/pkp/tex_sym</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>test_t</object-name>
+  <texture-prop>tu154/textures/instruments-3d/pkp/tex_sym</texture-prop>
+</animation>
+
 <!--Attitude-->
 <animation>
     <type>rotate</type>

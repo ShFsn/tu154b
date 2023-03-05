@@ -43,27 +43,30 @@
       <label>Welcome to the Tupolev Tu-154B-2!</label>
       <halign>center</halign>
     </text>
-    <empty>
-      <stretch>true</stretch>
-    </empty>
+    <text><label> </label></text>
     <text>
-      <label>Use Tu-154B-2 menu to select livery and open settings or use buttons below.</label>
+      <label>Use Tu-154B-2 menu to select livery and open preferences or use buttons below.</label>
       <halign>center</halign>
     </text>
+    <text><label> </label></text>
     <text>
       <label>Also see tips pressing ? or Aircraft Help in Help menu.</label>
       <halign>center</halign>
     </text>
-    <empty>
-      <stretch>true</stretch>
-    </empty>
+    <text>
+      <label>Press Ctrl+C to see mouse zones and floating tooltips.</label>
+      <halign>center</halign>
+    </text>
+    <text>
+      <label>English textures for the cockpit can be enabled in preferences.</label>
+      <halign>center</halign>
+    </text>
+    <text><label> </label></text>
     <text>
       <label>See aircraft documentation in Docs/ folder (on russian and english).</label>
       <halign>center</halign>
     </text>
-    <empty>
-      <stretch>true</stretch>
-    </empty>
+    <text><label> </label></text>
     <text>
       <label>Additional liveries can be found here:</label>
       <halign>center</halign>

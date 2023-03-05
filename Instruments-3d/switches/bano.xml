@@ -33,6 +33,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base_4</object-name>
+  <texture-prop>tu154/textures/instruments-3d/switches/tex_bano</texture-prop>
+</animation>
+
   
 <animation>
   <type>rotate</type>

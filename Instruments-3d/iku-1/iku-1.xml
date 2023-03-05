@@ -55,6 +55,14 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>l_src</object-name>
+  <object-name>r_src</object-name>
+  <texture-prop>tu154/textures/instruments-3d/iku-1/tex_src</texture-prop>
+</animation>
+
 <!-- Compass -->
 <animation>
   <type>rotate</type>

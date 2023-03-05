@@ -56,6 +56,88 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_base_pn-5</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_text_pn-5</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>v</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_v</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>m</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_m</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>h</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_h</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>zahod</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_zahod</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>gliss</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_gliss</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>sbros</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_sbros</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>zk</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_zk</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>nvu</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_nvu</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>az-1</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_az-1</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>az-2</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_az-2</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>otkl_heading</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_otkl</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>otkl_pitch</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_otkl</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>auto_heading</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_auto</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>auto_pitch</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_auto</texture-prop>
+</animation>
+
 <!--Indicators-->
 <!--Heading-->
 <animation>

@@ -39,6 +39,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/um-1/tex_text</texture-prop>
+</animation>
+
 
 
 

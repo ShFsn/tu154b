@@ -40,10 +40,10 @@ Install additional navaids: See tu154/Docs/Navaids.txt.
 This model intend for FlightGear version 3.0 and devel. It does not support old FlightGear version (1.9.1, 2.0 or late), and
 you would not replace FDM file. If you want use older FG version, you may download appropriate version from
 http://yurik.flightgear.ru/tu154b-release/.
-Last stable FlightGear version tested: 2020.3.13.
+Last stable FlightGear version tested: 2020.3.17.
 
-For our foreign friends, Don Lavelle has create set of textures. It translate most of signes in cabin to English, take care about right terminology.
-Unpack english_pack.tar.gz and copy and replase all files to model directory.
+For our foreign friends, Don Lavelle has create set of textures. It translate most of signes in cabin to English, taking care about right terminology.
+To enable it see "Preferences" in "Tu-154B-2" menu after simulator startup.
 
 ********************************** !!! *******************************************
 Under UNIX, be carefull with register of directory name. After changing main SVN server at Feb 16 2011, name of model

@@ -65,6 +65,19 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/pu-11/tex_text</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>otkaz_o_2</object-name>
+  <object-name>otkaz_k_2</object-name>
+  <texture-prop>tu154/textures/instruments-3d/pu-11/tex_otkaz</texture-prop>
+</animation>
+
 
 
 <!--Failure lamps-->

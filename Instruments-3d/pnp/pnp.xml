@@ -104,6 +104,23 @@
 	  </emission>
   </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>cover</object-name>
+  <texture-prop>tu154/textures/instruments-3d/pnp/tex_base</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>blanker_ks</object-name>
+  <object-name>sp_on</object-name>
+  <object-name>vor_on</object-name>
+  <object-name>nv_on</object-name>
+  <object-name>rsbn_on</object-name>
+  <object-name>dkm</object-name>
+  <texture-prop>tu154/textures/instruments-3d/pnp/tex_sym</texture-prop>
+</animation>
+
 <!--mode selector-->
 <animation>
 	<type>material</type>

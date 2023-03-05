@@ -26,7 +26,7 @@
     <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
     <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
   </emission>
-</animation>-->
+</animation>
 <animation>
   <type>material</type>
   <object-name>_c_1</object-name>
@@ -42,7 +42,19 @@
     <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
     <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
   </emission>
-</animation>-->
+</animation>
+
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/buttons/tex_startpanel1</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>cover</object-name>
+  <texture-prop>tu154/textures/instruments-3d/buttons/tex_startpanel2</texture-prop>
+</animation>
 
 <!-- "PDA working" green lamp -->
 <!--Brightness-->

@@ -248,4 +248,29 @@
   <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_2</use></lightmap-factor></parameters>
 </effect>
 
+
+<!-- Texture switch -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>ind_notready_light</object-name>
+  <object-name>ind_falsetrim_light</object-name>
+  <object-name>ind_atfail_light</object-name>
+  <object-name>ind_fire_light</object-name>
+  <property>tu154/options/textures/english</property>
+  <factor>0.5</factor>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+  </axis>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>stab_manu_cover</object-name>
+  <object-name>stab_auto_handle</object-name>
+  <object-name>central_panel</object-name>
+  <texture-prop>tu154/textures/lang/vc04_t</texture-prop>
+</animation>
+
 </PropertyList>

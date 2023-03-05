@@ -63,6 +63,39 @@
     <factor-prop>tu154/instrumentation/pn-6/serviceable</factor-prop>
   </emission>
 </animation>
+
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_text_pn-6</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_base_pn-6</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_text_pn-6</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>g1</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_g1</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>g2</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_g2</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>g3</object-name>
+  <texture-prop>tu154/textures/instruments-3d/absu/tex_g3</texture-prop>
+</animation>
+
 <!--AT selector-->
 <animation>
   <type>rotate</type>

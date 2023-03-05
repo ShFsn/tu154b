@@ -40,6 +40,33 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base_1</object-name>
+  <texture-prop>tu154/textures/instruments-3d/kurs-mp/tex_base_1</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>base_2</object-name>
+  <texture-prop>tu154/textures/instruments-3d/kurs-mp/tex_base_2</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>mhz</object-name>
+  <texture-prop>tu154/textures/instruments-3d/kurs-mp/tex_mgz</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>na</object-name>
+  <texture-prop>tu154/textures/instruments-3d/kurs-mp/tex_na</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>ot</object-name>
+  <texture-prop>tu154/textures/instruments-3d/kurs-mp/tex_ot</texture-prop>
+</animation>
+
 
 
 <!--Selector lamps-->

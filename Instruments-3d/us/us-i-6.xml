@@ -41,6 +41,13 @@
     <blue-prop>/tu154/light/instruments/ext-blue</blue-prop>
   </emission>
 </animation>-->
+
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/us/tex_us-i-6</texture-prop>
+</animation>
   
 <!--Needles-->
 <animation>

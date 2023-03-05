@@ -43,6 +43,18 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_gear</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_1</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_69</texture-prop>
+</animation>
+
 <!--Indicators-->
 <animation>
   <type>material</type>

@@ -49,6 +49,38 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text_1</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_26</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_2</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_29</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_3</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_27</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_4</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_30</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_5</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_28</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_6</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_31</texture-prop>
+</animation>
+
 
 <!--Indicators-->
 <animation>

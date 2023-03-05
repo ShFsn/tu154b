@@ -44,6 +44,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>cover</object-name>
+  <texture-prop>tu154/textures/instruments-3d/uiz/tex_cover</texture-prop>
+</animation>
+
   
 <!--Needles-->
 <animation>

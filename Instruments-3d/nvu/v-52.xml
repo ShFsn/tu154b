@@ -48,6 +48,29 @@
     <blue-prop>sim/model/cabin-lighting/lamps-2</blue-prop>
   </emission>
 </animation>
+
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text_b</object-name>
+  <texture-prop>tu154/textures/instruments-3d/nvu/tex_text_v-52_b</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>aircraft</object-name>
+  <texture-prop>tu154/textures/instruments-3d/nvu/tex_aircraft</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>point</object-name>
+  <texture-prop>tu154/textures/instruments-3d/nvu/tex_point</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>beacon</object-name>
+  <texture-prop>tu154/textures/instruments-3d/nvu/tex_beacon</texture-prop>
+</animation>
+
 <!--Indicators-->
 <animation>
   <type>material</type>

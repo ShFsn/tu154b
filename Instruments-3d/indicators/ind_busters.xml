@@ -26,6 +26,19 @@
     <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
   </emission>
 </animation>
+
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_busters</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_back</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_busters</texture-prop>
+</animation>
+
 <!--Indicators-->
 <animation>
   <type>select</type>

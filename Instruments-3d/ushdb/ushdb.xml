@@ -29,6 +29,15 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>txt1</object-name>
+  <object-name>txt2</object-name>
+  <object-name>txt3</object-name>
+  <texture-prop>tu154/textures/instruments-3d/ushdb/tex_text</texture-prop>
+</animation>
+
 <!--Compass-->
 <animation>
   <type>rotate</type>

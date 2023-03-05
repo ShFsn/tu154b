@@ -56,14 +56,6 @@
     <condensation type="bool">false</condensation>
   </contrail>
 
-  <textures>
-    <capt-panel>vc01_t.png</capt-panel>
-    <copilot-panel>vc02_t.png</copilot-panel>
-    <overhead-panel>vc06_t.png</overhead-panel>
-    <fe-panel>vc08_t.png</fe-panel>
-    <yokes>vc_yokes.png</yokes>
-  </textures>
-
   <instrumentation>
     <distance-to-pnp type="bool">true</distance-to-pnp>
     <altimeters-sync-inhg type="bool">true</altimeters-sync-inhg>
@@ -508,6 +500,7 @@
 
     <textures>
       <yokes type="bool">false</yokes>
+      <english type="bool">false</english>
     </textures>
 
     <rendering>
@@ -521,5 +514,225 @@
     </rendering>
 
   </options>
+
+  <textures>
+    <yokes>vc_yokes.png</yokes>
+
+    <lang>
+      <vc01_t type="string">vc01_t.png</vc01_t>
+      <vc02_t type="string">vc02_t.png</vc02_t>
+      <vc04_t type="string">vc04_t.png</vc04_t>
+      <vc05_t type="string">vc05_t.png</vc05_t>
+      <vc06_t type="string">vc06_t.png</vc06_t>
+      <vc08_t type="string">vc08_t.png</vc08_t>
+    </lang>
+
+    <!-- TEMPORARY UNTIL THE COCKPIT IS REDONE-->
+    <instruments-3d>
+      <absu>
+        <tex_auto type="string">auto.png</tex_auto>
+        <tex_az-1 type="string">az-1.png</tex_az-1>
+        <tex_az-2 type="string">az-2.png</tex_az-2>
+        <tex_base_pn-5 type="string">base_pn-5.png</tex_base_pn-5>
+        <tex_base_pn-6 type="string">base_pn-6.png</tex_base_pn-6>
+        <tex_g1 type="string">g1.png</tex_g1>
+        <tex_g2 type="string">g2.png</tex_g2>
+        <tex_g3 type="string">g3.png</tex_g3>
+        <tex_gliss type="string">gliss.png</tex_gliss>
+        <tex_h type="string">h.png</tex_h>
+        <tex_m type="string">m.png</tex_m>
+        <tex_nvu type="string">nvu.png</tex_nvu>
+        <tex_otkl type="string">otkl.png</tex_otkl>
+        <tex_sbros type="string">sbros.png</tex_sbros>
+        <tex_text_pn-5 type="string">text_pn-5.png</tex_text_pn-5>
+        <tex_text_pn-6 type="string">text_pn-6.png</tex_text_pn-6>
+        <tex_v type="string">v.png</tex_v>
+        <tex_zahod type="string">zahod.png</tex_zahod>
+        <tex_zk type="string">zk.png</tex_zk>
+      </absu>
+      <agr>
+        <tex_blanker type="string">blanker.png</tex_blanker>
+      </agr>
+      <buttons>
+        <tex_startpanel1 type="string">startpanel1.png</tex_startpanel1>
+        <tex_startpanel2 type="string">startpanel2.png</tex_startpanel2>
+      </buttons>
+      <fuel_meters>
+        <tex_us3t-5t type="string">us3t-5t.png</tex_us3t-5t>
+        <tex_utd4-1t type="string">utd4-1t.png</tex_utd4-1t>
+        <tex_utd4-2t type="string">utd4-2t.png</tex_utd4-2t>
+        <tex_utd4-3t type="string">utd4-3t.png</tex_utd4-3t>
+        <tex_uto2-5t type="string">uto2-5t.png</tex_uto2-5t>
+      </fuel_meters>
+      <iku-1>
+        <tex_src type="string">src.png</tex_src>
+      </iku-1>
+      <indicators>
+        <tex_11 type="string">11.png</tex_11>
+        <tex_12 type="string">12.png</tex_12>
+        <tex_13 type="string">13.png</tex_13>
+        <tex_14 type="string">14.png</tex_14>
+        <tex_16 type="string">16.png</tex_16>
+        <tex_17 type="string">17.png</tex_17>
+        <tex_18 type="string">18.png</tex_18>
+        <tex_19 type="string">19.png</tex_19>
+        <tex_21 type="string">21.png</tex_21>
+        <tex_22 type="string">22.png</tex_22>
+        <tex_23 type="string">23.png</tex_23>
+        <tex_24 type="string">24.png</tex_24>
+        <tex_25 type="string">25.png</tex_25>
+        <tex_26 type="string">26.png</tex_26>
+        <tex_27 type="string">27.png</tex_27>
+        <tex_28 type="string">28.png</tex_28>
+        <tex_29 type="string">29.png</tex_29>
+        <tex_30 type="string">30.png</tex_30>
+        <tex_31 type="string">31.png</tex_31>
+        <tex_32 type="string">32.png</tex_32>
+        <tex_33 type="string">33.png</tex_33>
+        <tex_35 type="string">35.png</tex_35>
+        <tex_36 type="string">36.png</tex_36>
+        <tex_37 type="string">37.png</tex_37>
+        <tex_38 type="string">38.png</tex_38>
+        <tex_39 type="string">39.png</tex_39>
+        <tex_40 type="string">40.png</tex_40>
+        <tex_41 type="string">41.png</tex_41>
+        <tex_42 type="string">42.png</tex_42>
+        <tex_43 type="string">43.png</tex_43>
+        <tex_44 type="string">44.png</tex_44>
+        <tex_45 type="string">45.png</tex_45>
+        <tex_46 type="string">46.png</tex_46>
+        <tex_47 type="string">47.png</tex_47>
+        <tex_48 type="string">48.png</tex_48>
+        <tex_49 type="string">49.png</tex_49>
+        <tex_50 type="string">50.png</tex_50>
+        <tex_51 type="string">51.png</tex_51>
+        <tex_52 type="string">52.png</tex_52>
+        <tex_53 type="string">53.png</tex_53>
+        <tex_54 type="string">54.png</tex_54>
+        <tex_55 type="string">55.png</tex_55>
+        <tex_56 type="string">56.png</tex_56>
+        <tex_57 type="string">57.png</tex_57>
+        <tex_58 type="string">58.png</tex_58>
+        <tex_59 type="string">59.png</tex_59>
+        <tex_60 type="string">60.png</tex_60>
+        <tex_61 type="string">61.png</tex_61>
+        <tex_62 type="string">62.png</tex_62>
+        <tex_63 type="string">63.png</tex_63>
+        <tex_64 type="string">64.png</tex_64>
+        <tex_65 type="string">65.png</tex_65>
+        <tex_66 type="string">66.png</tex_66>
+        <tex_69 type="string">67.png</tex_69>
+        <tex_70 type="string">70.png</tex_70>
+        <tex_71 type="string">71.png</tex_71>
+        <tex_72 type="string">72.png</tex_72>
+        <tex_73 type="string">73.png</tex_73>
+        <tex_74 type="string">74.png</tex_74>
+        <tex_75 type="string">75.png</tex_75>
+        <tex_76 type="string">76.png</tex_76>
+        <tex_77 type="string">77.png</tex_77>
+        <tex_78 type="string">78.png</tex_78>
+        <tex_79 type="string">79.png</tex_79>
+        <tex_80 type="string">80.png</tex_80>
+        <tex_81 type="string">81.png</tex_81>
+        <tex_82 type="string">82.png</tex_82>
+        <tex_83 type="string">83.png</tex_83>
+        <tex_84 type="string">84.png</tex_84>
+        <tex_85 type="string">85.png</tex_85>
+        <tex_busters type="string">busters.png</tex_busters>
+        <tex_gear type="string">gear.png</tex_gear>
+      </indicators>
+      <ip-32m>
+        <tex_base type="string">base.png</tex_base>
+      </ip-32m>
+      <ip-33>
+        <tex_base type="string">base.png</tex_base>
+      </ip-33>
+      <ite>
+        <tex_base type="string">base.png</tex_base>
+      </ite>
+      <kurs-mp>
+        <tex_base_1 type="string">base_1.png</tex_base_1>
+        <tex_base_2 type="string">base_2.png</tex_base_2>
+        <tex_mgz type="string">mgz.png</tex_mgz>
+        <tex_na type="string">na.png</tex_na>
+        <tex_ot type="string">ot.png</tex_ot>
+      </kurs-mp>
+      <manometer>
+        <tex_front type="string">front.png</tex_front>
+      </manometer>
+      <nvu>
+        <tex_aircraft type="string">aircraft.png</tex_aircraft>
+        <tex_base_v-51 type="string">base_v-51.png</tex_base_v-51>
+        <tex_base_v-140 type="string">base_v-140.png</tex_base_v-140>
+        <tex_beacon type="string">beacon.png</tex_beacon>
+        <tex_point type="string">point.png</tex_point>
+        <tex_text_v-51 type="string">text_v-51.png</tex_text_v-51>
+        <tex_text_v-52_b type="string">text_v-52_b.png</tex_text_v-52_b>
+        <tex_text_v-57 type="string">text_v-57.png</tex_text_v-57>
+        <tex_text_v-140 type="string">text_v-140.png</tex_text_v-140>
+        <tex_text3_b-8m type="string">text3_b-8m.png</tex_text3_b-8m>
+      </nvu>
+      <pkp>
+        <tex_sym type="string">sym.png</tex_sym>
+      </pkp>
+      <pnp>
+        <tex_base type="string">base.png</tex_base>
+        <tex_sym type="string">sym.png</tex_sym>
+      </pnp>
+      <pu-11>
+        <tex_otkaz type="string">otkaz.png</tex_otkaz>
+        <tex_text type="string">text.png</tex_text>
+      </pu-11>
+      <rsbn>
+        <tex_text type="string">text.png</tex_text>
+      </rsbn>
+      <rv-5m>
+        <tex_digit type="string">digit.png</tex_digit>
+      </rv-5m>
+      <switches>
+        <tex_bano type="string">bano.png</tex_bano>
+        <tex_busters type="string">busters.png</tex_busters>
+      </switches>
+      <uap-12>
+        <tex_a_text type="string">a_text.png</tex_a_text>
+        <tex_n_text type="string">n_text.png</tex_n_text>
+      </uap-12>
+      <uiz>
+        <tex_cover type="string">cover.png</tex_cover>
+      </uiz>
+      <um-1>
+        <tex_cover type="string">cover.png</tex_cover>
+        <tex_text type="string">text.png</tex_text>
+      </um-1>
+      <umrt>
+        <tex_base type="string">base.png</tex_base>
+      </umrt>
+      <us>
+        <tex_ias type="string">ias.png</tex_ias>
+        <tex_us-i-6 type="string">us-i-6.png</tex_us-i-6>
+      </us>
+      <ush>
+        <tex_txt type="string">txt.png</tex_txt>
+      </ush>
+      <ushdb>
+        <tex_text type="string">text.png</tex_text>
+      </ushdb>
+      <usvp>
+        <tex_handle type="string">handle.png</tex_handle>
+        <tex_txt type="string">txt.png</tex_txt>
+      </usvp>
+      <uvid-15>
+        <tex_uvid-15f type="string">uvid-15f.png</tex_uvid-15f>
+        <tex_uvid-15m type="string">uvid-15m.png</tex_uvid-15m>
+      </uvid-15>
+      <uvo>
+        <tex_uvo_eng_bck type="string">uvo_eng_bck.png</tex_uvo_eng_bck>
+      </uvo>
+      <var>
+        <tex_var-30 type="string">var-30.png</tex_var-30>
+        <tex_var-75 type="string">var-75.png</tex_var-75>
+      </var>
+    </instruments-3d>
+  </textures>
 
 </PropertyList>

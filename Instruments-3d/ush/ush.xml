@@ -41,6 +41,15 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>mk</object-name>
+  <object-name>gpk</object-name>
+  <object-name>ak</object-name>
+  <texture-prop>tu154/textures/instruments-3d/ush/tex_txt</texture-prop>
+</animation>
+
   
 <!--Needles-->
 <animation>

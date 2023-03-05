@@ -1570,7 +1570,6 @@
     <blue>0.067</blue>
     <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
   </emission>
-  <texture-prop>tu154/textures/capt-panel</texture-prop>
 </animation>
 
 <animation>
@@ -1587,7 +1586,6 @@
     <blue>0.067</blue>
     <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
   </emission>
-  <texture-prop>tu154/textures/copilot-panel</texture-prop>
 </animation>
 
 <animation>
@@ -1604,7 +1602,6 @@
     <blue>0.067</blue>
     <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
   </emission>
-  <texture-prop>tu154/textures/overhead-panel</texture-prop>
 </animation>
 
 <animation>
@@ -1621,7 +1618,6 @@
     <blue>0.067</blue>
     <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
   </emission>
-  <texture-prop>tu154/textures/fe-panel</texture-prop>
 </animation>
 
 <animation>
@@ -1664,13 +1660,52 @@
 </animation>
 
 
-<!-- Yoke textures -->
+<!-- Texture switch -->
 
 <animation>
   <type>material</type>
   <object-name>lever_sti0</object-name>
   <object-name>lever_sti2</object-name>
   <texture-prop>tu154/textures/yokes</texture-prop>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>capt_panel</object-name>
+  <object-name>lever_thr1</object-name>
+  <object-name>lever_thr2</object-name>
+  <object-name>lever_thr3</object-name>
+  <object-name>thrust_re0</object-name>
+  <object-name>thrust_re2</object-name>
+  <object-name>emergency_brake_handl</object-name>
+  <texture-prop>tu154/textures/lang/vc01_t</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>MESH22</object-name>
+  <texture-prop>tu154/textures/lang/vc02_t</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>wall_left</object-name>
+  <object-name>wall_right</object-name>
+  <texture-prop>tu154/textures/lang/vc04_t</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>MESH25</object-name>
+  <texture-prop>tu154/textures/lang/vc05_t</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>MESH26</object-name>
+  <object-name>flaps_handle</object-name>
+  <texture-prop>tu154/textures/lang/vc06_t</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>MESH28</object-name>
+  <texture-prop>tu154/textures/lang/vc08_t</texture-prop>
 </animation>
 
 

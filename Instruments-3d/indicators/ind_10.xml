@@ -64,6 +64,83 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>text_1</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_18</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_2</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_11</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_3</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_19</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_4</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_12</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_5</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_20</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_6</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_13</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_7</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_21</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_8</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_14</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_9</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_22</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_10</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_15</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_11</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_23</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_12</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_16</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_13</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_24</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_14</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_17</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text_15</object-name>
+  <texture-prop>tu154/textures/instruments-3d/indicators/tex_25</texture-prop>
+</animation>
+
 
 <!--Indicators-->
 <animation>

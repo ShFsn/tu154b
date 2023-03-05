@@ -118,7 +118,10 @@
         <binding><command>dialog-apply</command></binding>
       </checkbox>
 
-      <text><label>1-9 buttons works as stated in Common Aircraft Keys, see aircraft help</label></text>
+      <text>
+        <label>1-9 buttons works as stated in Common Aircraft Keys, see aircraft help</label>
+        <halign>left</halign>
+      </text>
 
       <text><label> </label></text>
 
@@ -194,11 +197,16 @@
         <hrule>
           <stretch type="bool">true</stretch>
         </hrule>
-        <text><label>Tooltips color</label></text>
+        <text><label>Model Accessibility</label></text>
         <hrule>
           <stretch type="bool">true</stretch>
         </hrule>
       </group>
+
+      <text>
+        <label>Floating tooltips color:</label>
+        <halign>left</halign>
+      </text>
 
       <group>
         <layout>table</layout>
@@ -280,6 +288,20 @@
         </text>
 
       </group>
+
+      <text><label> </label></text>
+      
+      <checkbox>
+        <halign>left</halign>
+        <label>Non-russian cockpit</label>
+        <property>/tu154/options/textures/english</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+      <text>
+        <label>Replaces almost all cockpit texts with english ones or another language if installed.</label>
+        <halign>left</halign>
+      </text>
 
       <text><label> </label></text>
 

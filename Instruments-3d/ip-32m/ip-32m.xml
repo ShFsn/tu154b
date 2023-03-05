@@ -39,6 +39,13 @@
     <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
   </emission>
 </animation>
+
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <texture-prop>tu154/textures/instruments-3d/ip-32m/tex_base</texture-prop>
+</animation>
   
 <!--Needles-->
 <animation>

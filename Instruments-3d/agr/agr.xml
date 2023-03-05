@@ -34,6 +34,13 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>blanker</object-name>
+  <texture-prop>tu154/textures/instruments-3d/agr/tex_blanker</texture-prop>
+</animation>
+
 <!--Attitude-->
 <animation>
   <type>rotate</type>

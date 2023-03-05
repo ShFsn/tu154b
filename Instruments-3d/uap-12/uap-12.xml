@@ -46,6 +46,18 @@
   </emission>
 </animation>
 
+<!-- Texture switch -->
+<animation>
+  <type>material</type>
+  <object-name>a_txt</object-name>
+  <texture-prop>tu154/textures/instruments-3d/uap-12/tex_a_text</texture-prop>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>n_txt</object-name>
+  <texture-prop>tu154/textures/instruments-3d/uap-12/tex_n_text</texture-prop>
+</animation>
+
 
 <!--Warning lamp-->
 <animation>
