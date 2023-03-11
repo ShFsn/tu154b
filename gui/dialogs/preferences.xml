@@ -202,6 +202,24 @@
           <stretch type="bool">true</stretch>
         </hrule>
       </group>
+      
+      <checkbox>
+        <halign>left</halign>
+        <label>Non-russian cockpit</label>
+        <property>/tu154/options/textures/english</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+      <text>
+        <label>Replaces almost all cockpit texts with english ones or another language if installed.</label>
+        <halign>left</halign>
+      </text>
+      <text>
+        <label>Also: use Ctrl+C for floating tooltips (additional descriptions) for the instruments</label>
+        <halign>left</halign>
+      </text>
+
+      <text><label> </label></text>
 
       <text>
         <label>Floating tooltips color:</label>
@@ -288,20 +306,6 @@
         </text>
 
       </group>
-
-      <text><label> </label></text>
-      
-      <checkbox>
-        <halign>left</halign>
-        <label>Non-russian cockpit</label>
-        <property>/tu154/options/textures/english</property>
-        <live>true</live>
-        <binding><command>dialog-apply</command></binding>
-      </checkbox>
-      <text>
-        <label>Replaces almost all cockpit texts with english ones or another language if installed.</label>
-        <halign>left</halign>
-      </text>
 
       <text><label> </label></text>
 

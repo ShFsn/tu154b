@@ -8,6 +8,10 @@
     <desc>Autostart (aUtostart)</desc>
   </key>
   <key>
+    <name>Ctrl+C</name>
+    <desc>Floating tooltips (additional descriptions) and mouse zones</desc>
+  </key>
+  <key>
     <name>F/Shift+F/Ctrl+F</name>
     <desc>AP On/Autothrottle On/AP-AT Off (F - autoFlight)</desc>
   </key>
