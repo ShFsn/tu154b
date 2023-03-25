@@ -62,11 +62,26 @@
           setprop("tu154/systems/nvu-calc/magvar-dest",
                   sprintf("%+.1f", deg_norm(magvar_dest, -180, 180)));
 
-          var faz = wpE.courseAndDistanceFrom(wpB.lat, wpB.lon)[0];
-          var baz = wpB.courseAndDistanceFrom(wpE.lat, wpE.lon)[0];
+          var ZPU_list = [0.0];
+          var wp0 = wpB;
+          var wp00 = wpB;
+          for (var i = 1; fp_size > i; i += 1) {
+              var wp1 = fp.getWP(i);
+              var curr_ZPU = 0.0;
+              if (i == 1) {
+                  curr_ZPU = wp1.courseAndDistanceFrom(wp0.lat, wp0.lon)[0] - magvar_dep;
+              } else {
+                  curr_ZPU = ZPU_list[i - 1] - (wp00.courseAndDistanceFrom(wp0.lat, wp0.lon)[0] + 180) + wp1.courseAndDistanceFrom(wp0.lat, wp0.lon)[0];
+              }
+              curr_ZPU = deg_norm(curr_ZPU, 0, 360);
+              append(ZPU_list, curr_ZPU);
+              wp00 = wp0;
+              wp0 = wp1;
+          }
 
+          var wpEE = fp.getWP(fp_size - 2);
           var fork_applied = getprop("tu154/systems/nvu-calc/fork-applied");
-          var fork = magvar_dep - magvar_dest - (faz - (baz - 180));
+          var fork = wpEE.courseAndDistanceFrom(wpE.lat, wpE.lon)[0] - 180 - magvar_dest - ZPU_list[fp_size - 1];
           var fork_norm = deg_norm(fork, -180, 180);
           setprop("tu154/systems/nvu-calc/fork", fork_norm);
           setprop("tu154/systems/nvu-calc/fork-str",
@@ -77,12 +92,11 @@
           var dist_total = wpE.distance_along_route * 1.852;
           setprop("/tu154/systems/nvu-calc/dist-total", dist_total);
           var wp0 = wpB;
-          var az_corr = 0;
           for (var i = 1; fp_size > i; i += 1) {
               var wp1 = fp.getWP(i);
               var S = -wp1.leg_distance * 1.852;
               if (i == 1 and fp.departure_runway != nil) { S -= fp.departure_runway.length / 1000; }    # Correcting first leg length due to runway length
-              var ZPU = wp1.leg_bearing - magvar_dep + az_corr;
+              var ZPU = ZPU_list[i];
               if (fork_applied)
                   ZPU += fork;
               ZPU = deg_norm(ZPU, 0, 360);
@@ -122,9 +136,6 @@
                 setprop("/tu154/systems/nvu-calc/td-text", descr);
               }
 
-              var faz = wp1.courseAndDistanceFrom(wpB.lat, wpB.lon)[0];
-              var baz = wpB.courseAndDistanceFrom(wp1.lat, wp1.lon)[0];
-              az_corr = faz - (baz - 180);
               wp0 = wp1;
           }
       }
