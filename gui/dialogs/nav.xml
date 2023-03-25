@@ -152,10 +152,11 @@
           var vors = navinfo(wp1.lat, wp1.lon, "vor", ident);
           if (!size(vors))
               return;
-
           var vor = vors[0];
+
           var (b, d) = wp1.courseAndDistanceFrom(vor.lat, vor.lon);
-          b = (wp1.leg_bearing - b) / 57.2958;
+          var uk = wp1.courseAndDistanceFrom(wp0.lat, wp0.lon)[0];
+          b = (uk - b) / 57.2958;
           d *= 1.852;
           var S = -d * math.cos(b);
           var Z = d * math.sin(b);
@@ -166,7 +167,7 @@
               freq: vor.frequency / 100,
               S: S,
               Z: Z,
-              UK: deg_norm(wp1.leg_bearing, 0, 360),
+              UK: uk,
           });
       }
 
