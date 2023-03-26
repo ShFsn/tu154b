@@ -89,17 +89,27 @@
 
           route.removeChildren("leg");
           list.removeChildren("value");
-          var dist_total = wpE.distance_along_route * 1.852;
+          var dist_total = 0.0;
+          var dist_curr = 0.0;
+          var _dist_curr = 0.0;
+          var wp0 = wpB;
+          for (var i = 1; fp_size > i; i += 1) {
+              var wp1 = fp.getWP(i);
+              dist_total += wp1.courseAndDistanceFrom(wp0.lat, wp0.lon)[1] * 1.852;
+              wp0 = wp1;
+          }
           setprop("/tu154/systems/nvu-calc/dist-total", dist_total);
           var wp0 = wpB;
           for (var i = 1; fp_size > i; i += 1) {
               var wp1 = fp.getWP(i);
-              var S = -wp1.leg_distance * 1.852;
-              if (i == 1 and fp.departure_runway != nil) { S -= fp.departure_runway.length / 1000; }    # Correcting first leg length due to runway length
+              var S = -wp1.courseAndDistanceFrom(wp0.lat, wp0.lon)[1] * 1.852;
+              #if (i == 1 and fp.departure_runway != nil) { S -= fp.departure_runway.length / 1000; }    # Correcting first leg length due to runway length
               var ZPU = ZPU_list[i];
               if (fork_applied)
                   ZPU += fork;
               ZPU = deg_norm(ZPU, 0, 360);
+
+              dist_curr += wp1.courseAndDistanceFrom(wp0.lat, wp0.lon)[1] * 1.852;
 
               var leg = {
                   from: wp0.wp_name,
@@ -108,7 +118,7 @@
                   ZPU: ZPU,
               };
               route.getChild("leg", i - 1, 1).setValues(leg);
-              var dist = dist_total - wp0.distance_along_route * 1.852;
+              var dist = dist_total - _dist_curr;
               var descr = sprintf("% 3d: %s - %s (%.1f km),"
                                   ~" S: %+.1f km, ZPU: %06.2f'",
                                   i, leg.from, leg.to, dist, leg.S,
@@ -126,7 +136,7 @@
               }
               list.getChild("value", i - 1, 1).setValue(descr);
 
-              var dist_n = dist_total - wp1.distance_along_route * 1.852;
+              var dist_n = dist_total - dist_curr;
               var td_dist = getprop("tu154/systems/nvu-calc/td-dist");
               if (dist > td_dist and td_dist >= dist_n) {
                 descr = sprintf(" %.0f km on leg:  % 3d: %s - %s (%.1f - %.1f km),"
@@ -136,6 +146,7 @@
                 setprop("/tu154/systems/nvu-calc/td-text", descr);
               }
 
+              _dist_curr = dist_curr;
               wp0 = wp1;
           }
       }
