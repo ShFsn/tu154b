@@ -257,10 +257,18 @@
 		<menubar n="0">
 			<default n="0">
 				<menu n="13">
-					<label>Walker</label>
+					<label>Pilot</label>
 						<enabled type="bool">true</enabled>
 					<item>
-						<label>Walker animation dialog  [Tab]</label>
+						<label>Toggle flashlight</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/rendering/als-secondary-lights/use-searchlight</property>
+						</binding>
+					</item>
+
+					<item>
+						<label>Animation dialog</label>
 						<binding>
 							<command>nasal</command>
 							<script>walker.sequence.showDialog()</script>
@@ -282,7 +290,7 @@
               </binding>
 					</item>
 					<item>
-						<label>Toggle Walker outside</label>
+						<label>Toggle Pilot outside</label>
 						<binding>
 							<command>property-toggle</command>
 							<property>sim/walker/key-triggers/outside-toggle</property>
