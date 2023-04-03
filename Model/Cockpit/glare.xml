@@ -88,12 +88,13 @@
 <!--Stab auto selector-->
 <animation>
   <type>rotate</type>
-  <object-name>stab_auto_handle</object-name>
+  <object-name>stab_auto</object-name>
   <property>controls/cockpit/glare/animations/stab-auto-handle</property>
   <interpolation>
-    <entry><ind>	0.0</ind>	<dep>	-30.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	2.0</ind>	<dep>	30.0</dep></entry>
+    <entry><ind>	0.15</ind>	<dep>	-70.0</dep></entry>
+    <entry><ind>	0.85</ind>	<dep>	-40.0</dep></entry>
+    <entry><ind>	1.15</ind>	<dep>	-40.0</dep></entry>
+    <entry><ind>	1.85</ind>	<dep>	-10.0</dep></entry>
   </interpolation>
   <center>
     <x-m>0.664766</x-m>
@@ -108,7 +109,7 @@
 </animation>
 <animation>
   <type>knob</type>
-  <object-name>stab_auto_handle</object-name>
+  <object-name>stab_auto</object-name>
   <action>
     <binding>
       <command>property-cycle</command>
@@ -120,6 +121,25 @@
     </binding>
   </action>
 </animation>
+<animation>
+  <type>translate</type>
+  <object-name>stab_auto_handle</object-name>
+  <property>controls/cockpit/glare/animations/stab-auto-handle</property>
+  <interpolation>
+    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	0.15</ind>	<dep>	0.003</dep></entry>
+    <entry><ind>	0.85</ind>	<dep>	0.003</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	1.15</ind>	<dep>	0.003</dep></entry>
+    <entry><ind>	1.85</ind>	<dep>	0.003</dep></entry>
+    <entry><ind>	2.0</ind>	<dep>	0.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
 
 
 <!-- Manual stabilizer selector -->
@@ -128,9 +148,9 @@
   <object-name>stab_manu_lever</object-name>
   <property>controls/cockpit/glare/animations/stab-manu-selector</property>  
   <interpolation>
-    <entry><ind>	0.0</ind>	<dep>	-20.0</dep></entry>
+    <entry><ind>	0.0</ind>	<dep>	-25.0</dep></entry>
     <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	2.0</ind>	<dep>	20.0</dep></entry>
+    <entry><ind>	2.0</ind>	<dep>	25.0</dep></entry>
   </interpolation>
   <center>
     <x-m>0.672295</x-m>
@@ -265,12 +285,16 @@
   </axis>
 </animation>
 
+<!--<animation>
+  <type>material</type>
+  <object-name>central_panel</object-name>
+  <texture-prop>tu154/textures/lang/glare</texture-prop>
+</animation>
 <animation>
   <type>material</type>
   <object-name>stab_manu_cover</object-name>
   <object-name>stab_auto_handle</object-name>
-  <object-name>central_panel</object-name>
-  <texture-prop>tu154/textures/lang/vc04_t</texture-prop>
-</animation>
+  <texture-prop>tu154/textures/lang/glare_misc</texture-prop>
+</animation>-->
 
 </PropertyList>

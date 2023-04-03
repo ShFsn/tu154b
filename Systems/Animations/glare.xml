@@ -4,16 +4,16 @@
 
   <filter>
     <name>Manual stab control cover</name>
-    <type>noise-spike</type>
-    <max-rate-of-change>8.0</max-rate-of-change>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
     <input>fdm/jsbsim/fcs/stab-manu-switch</input>
     <output>controls/cockpit/glare/animations/stab-manu-cover</output>
   </filter>
 
   <filter>
     <name>Auto stab control handle</name>
-    <type>noise-spike</type>
-    <max-rate-of-change>8.0</max-rate-of-change>
+    <type>exponential</type>
+    <filter-time>0.1</filter-time>
     <input>fdm/jsbsim/fcs/stab-auto-cmd</input>
     <output>controls/cockpit/glare/animations/stab-auto-handle</output>
   </filter>
