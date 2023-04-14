@@ -129,21 +129,6 @@
 
   <!-- ########### End of wings and wingflex ############ -->
 
-  <!--Passengers shake-->
-  <animation>
-    <type>translate</type>
-    <object-name>Exterior</object-name>
-    <property>systems/shake/shakingext</property>
-    <axis>
-      <x1-m> 0.0</x1-m>
-      <y1-m> 0.0</y1-m>
-      <z1-m> 0.0</z1-m>
-      <x2-m> 0.5</x2-m>
-      <y2-m> 0.0</y2-m>
-      <z2-m> 0.8</z2-m>
-    </axis>
-  </animation>
-
   <!-- Hide gears when they are retracted. -->
   <!--<animation>
     <type>select</type>
@@ -4209,6 +4194,7 @@
     <object-name>sw-94</object-name>
     <object-name>sw-95</object-name>
     <object-name>sw-96</object-name>
+    <object-name>gear-sw-emerg2</object-name>
     <object-name>check_lamps_3</object-name>
     <object-name>check-lamps-4</object-name>
     <object-name>check-lamps_4</object-name>
@@ -4255,6 +4241,14 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
+  </animation>
+
+  <!-- TEMPORARY -->
+  <!--*********************** MP details deselect ************************-->
+  <animation>
+    <type>select</type>
+    <object-name>virtualcockpit3d</object-name>
+    <condition><property>tu154/constants/one</property></condition>
   </animation>
 
   <!--*************************** END PANELS ****************************-->

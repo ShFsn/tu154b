@@ -83,6 +83,7 @@
     <type>select</type>
     <object-name>exterior</object-name>
     <object-name>lights</object-name>
+    <object-name>tooltips</object-name>
     <condition><property>tu154/constants/one</property></condition>
   </animation>
   <animation>
