@@ -13,288 +13,315 @@
   Cabin animations
 -->
 <PropertyList>
- <path>glare.ac</path>
+  <path>glare.ac</path>
 
-<!--*************************** Old lighting ***************************-->
-<animation>
-  <type>material</type>
-  <object-name>cover_1</object-name>
-  <object-name>cover_2</object-name>
-  <object-name>central_panel</object-name>
-  <object-name>sw_base</object-name>
-  <object-name>spr_load_base</object-name>
-  <object-name>spr_load_cover</object-name>
-  <object-name>spr_load_lever</object-name>
-  <object-name>stab_auto_handle</object-name>
-  <object-name>stab_manu_cover</object-name>
-  <object-name>stab_manu_lever</object-name>
-  <object-name>trim_roll_lever</object-name>
-  <object-name>trim_yaw_lever</object-name>
-  <object-name>ind_frame</object-name>
-  <object-name>ind_danger_1_frame</object-name>
-  <object-name>ind_danger_2_frame</object-name>
-  <condition>
-    <not>
-      <property>/tu154/light/compositor-on</property>
-    </not>
-  </condition>
-  <emission>
-    <red>0.067</red>
-    <green>0.067</green>
-    <blue>0.067</blue>
-    <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
-  </emission>
-  <!--<texture-prop>tu154/textures/copilot-panel</texture-prop>-->
-</animation>
+  <!--*********************** MP details deselect ************************-->
+  <animation>
+    <type>select</type>
+    <object-name>sw_base</object-name>
+    <object-name>spr_load_base</object-name>
+    <object-name>spr_load_cover</object-name>
+    <object-name>spr_load_lever</object-name>
+    <object-name>stab_auto_handle</object-name>
+    <object-name>stab_auto_sw</object-name>
+    <object-name>stab_manu_cover</object-name>
+    <object-name>stab_manu_lever</object-name>
+    <object-name>trim_roll_lever</object-name>
+    <object-name>trim_yaw_lever</object-name>
+    <object-name>ind_danger_1_frame</object-name>
+    <object-name>ind_danger_2_frame</object-name>
+    <object-name>ind_notready_light</object-name>
+    <object-name>ind_falsetrim_light</object-name>
+    <object-name>ind_bank_light</object-name>
+    <object-name>ind_pitch_light</object-name>
+    <object-name>ind_ap_fail_light</object-name>
+    <object-name>ind_atfail_light</object-name>
+    <object-name>ind_app_h_light</object-name>
+    <object-name>ind_app_v_light</object-name>
+    <object-name>ind_fire_light</object-name>
+    <object-name>ind_danger_1_light</object-name>
+    <object-name>ind_danger_2_light</object-name>
+    <condition><property>tu154/constants/one</property></condition>
+  </animation>
 
-<!--Stabilizer-->
-<!--Manu cover-->
-<animation>
-  <type>rotate</type>
-  <object-name>stab_manu_cover</object-name>  
-  <property>controls/cockpit/glare/animations/stab-manu-cover</property>
-  <interpolation>
-    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
-  </interpolation>
-  <axis>
-    <x1-m>0.618</x1-m>
-    <y1-m>-0.1694</y1-m>
-    <z1-m>1.2203</z1-m>
-    <x2-m>0.7644</x2-m>
-    <y2-m>-0.1694</y2-m>
-    <z2-m>1.0304</z2-m>
-  </axis>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>stab_manu_cover</object-name>  
-  <visible>true</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-toggle</command>
-      <property>fdm/jsbsim/fcs/stab-manu-switch</property>
-    </binding>
-    <binding>
-      <command>property-assign</command>
-      <property>fdm/jsbsim/fcs/stab-manu-cmd</property>
-      <property>fdm/jsbsim/fcs/stabilizer-auto-pos</property>
-    </binding>
-  </action>
-</animation>
+  <!--*************************** Old lighting ***************************-->
+  <animation>
+    <type>material</type>
+    <object-name>central_panel</object-name>
+    <object-name>sw_base</object-name>
+    <object-name>spr_load_base</object-name>
+    <object-name>spr_load_cover</object-name>
+    <object-name>spr_load_lever</object-name>
+    <object-name>stab_auto_handle</object-name>
+    <object-name>stab_auto_sw</object-name>
+    <object-name>stab_manu_cover</object-name>
+    <object-name>stab_manu_lever</object-name>
+    <object-name>trim_roll_lever</object-name>
+    <object-name>trim_yaw_lever</object-name>
+    <object-name>ind_danger_1_frame</object-name>
+    <object-name>ind_danger_2_frame</object-name>
+    <condition>
+      <not>
+        <property>/tu154/light/compositor-on</property>
+      </not>
+    </condition>
+    <emission>
+      <red>0.067</red>
+      <green>0.067</green>
+      <blue>0.067</blue>
+      <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+    </emission>
+    <!--<texture-prop>tu154/textures/copilot-panel</texture-prop>-->
+  </animation>
 
-<!--Stab auto selector-->
-<animation>
-  <type>rotate</type>
-  <object-name>stab_auto</object-name>
-  <property>controls/cockpit/glare/animations/stab-auto-handle</property>
-  <interpolation>
-    <entry><ind>	0.15</ind>	<dep>	-70.0</dep></entry>
-    <entry><ind>	0.85</ind>	<dep>	-40.0</dep></entry>
-    <entry><ind>	1.15</ind>	<dep>	-40.0</dep></entry>
-    <entry><ind>	1.85</ind>	<dep>	-10.0</dep></entry>
-  </interpolation>
-  <center>
-    <x-m>0.664766</x-m>
-    <y-m>0.0</y-m>
-    <z-m>1.13053</z-m>
-  </center>
-  <axis>
-    <x>0.0</x>
-    <y>1.0</y>
-    <z>0.0</z>
-  </axis>
-</animation>
-<animation>
-  <type>knob</type>
-  <object-name>stab_auto</object-name>
-  <action>
-    <binding>
-      <command>property-cycle</command>
-      <property>fdm/jsbsim/fcs/stab-auto-cmd</property>
-      <value>2.0</value>
-      <value>1.0</value>
-      <value>0.0</value>
-      <wrap>false</wrap>
-    </binding>
-  </action>
-</animation>
-<animation>
-  <type>translate</type>
-  <object-name>stab_auto_handle</object-name>
-  <property>controls/cockpit/glare/animations/stab-auto-handle</property>
-  <interpolation>
-    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	0.15</ind>	<dep>	0.003</dep></entry>
-    <entry><ind>	0.85</ind>	<dep>	0.003</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	1.15</ind>	<dep>	0.003</dep></entry>
-    <entry><ind>	1.85</ind>	<dep>	0.003</dep></entry>
-    <entry><ind>	2.0</ind>	<dep>	0.0</dep></entry>
-  </interpolation>
-  <axis>
-    <x>1.0</x>
-    <y>0.0</y>
-    <z>0.0</z>
-  </axis>
-</animation>
+  <!--Stabilizer-->
+  <!--Manu cover-->
+  <animation>
+    <type>rotate</type>
+    <object-name>stab_manu_cover</object-name>  
+    <property>controls/cockpit/glare/animations/stab-manu-cover</property>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>0.618</x1-m>
+      <y1-m>-0.1694</y1-m>
+      <z1-m>1.2203</z1-m>
+      <x2-m>0.7644</x2-m>
+      <y2-m>-0.1694</y2-m>
+      <z2-m>1.0304</z2-m>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>stab_manu_cover</object-name>  
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>fdm/jsbsim/fcs/stab-manu-switch</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>fdm/jsbsim/fcs/stab-manu-cmd</property>
+        <property>fdm/jsbsim/fcs/stabilizer-auto-pos</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!--Stab auto selector-->
+  <animation>
+    <type>rotate</type>
+    <object-name>stab_auto</object-name>
+    <property>controls/cockpit/glare/animations/stab-auto-handle</property>
+    <interpolation>
+      <entry><ind>	0.15</ind>	<dep>	-70.0</dep></entry>
+      <entry><ind>	0.85</ind>	<dep>	-40.0</dep></entry>
+      <entry><ind>	1.15</ind>	<dep>	-40.0</dep></entry>
+      <entry><ind>	1.85</ind>	<dep>	-10.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0.664766</x-m>
+      <y-m>0.0</y-m>
+      <z-m>1.13053</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>knob</type>
+    <object-name>stab_auto</object-name>
+    <action>
+      <binding>
+        <command>property-cycle</command>
+        <property>fdm/jsbsim/fcs/stab-auto-cmd</property>
+        <value>2.0</value>
+        <value>1.0</value>
+        <value>0.0</value>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>translate</type>
+    <object-name>stab_auto_handle</object-name>
+    <property>controls/cockpit/glare/animations/stab-auto-handle</property>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	0.15</ind>	<dep>	0.003</dep></entry>
+      <entry><ind>	0.85</ind>	<dep>	0.003</dep></entry>
+      <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	1.15</ind>	<dep>	0.003</dep></entry>
+      <entry><ind>	1.85</ind>	<dep>	0.003</dep></entry>
+      <entry><ind>	2.0</ind>	<dep>	0.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
 
-<!-- Manual stabilizer selector -->
-<animation>
-  <type>rotate</type>
-  <object-name>stab_manu_lever</object-name>
-  <property>controls/cockpit/glare/animations/stab-manu-selector</property>  
-  <interpolation>
-    <entry><ind>	0.0</ind>	<dep>	-25.0</dep></entry>
-    <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
-    <entry><ind>	2.0</ind>	<dep>	25.0</dep></entry>
-  </interpolation>
-  <center>
-    <x-m>0.672295</x-m>
-    <y-m>-0.119033</y-m>
-    <z-m>1.11767</z-m>
-  </center>
-  <axis>
-    <x>0.0</x>
-    <y>1.0</y>
-    <z>0.0</z>
-  </axis>
-</animation>
-<!--Control-->
-<animation>
-  <type>pick</type>
-  <object-name>stab_manu_down</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-assign</command>
-      <property>fdm/jsbsim/fcs/stab-manu-selector</property>
-      <value>2.0</value>
-    </binding>
-    <mod-up>
+  <!-- Manual stabilizer selector -->
+  <animation>
+    <type>rotate</type>
+    <object-name>stab_manu_lever</object-name>
+    <property>controls/cockpit/glare/animations/stab-manu-selector</property>  
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-25.0</dep></entry>
+      <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	2.0</ind>	<dep>	25.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0.672295</x-m>
+      <y-m>-0.119033</y-m>
+      <z-m>1.11767</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <!--Control-->
+  <animation>
+    <type>pick</type>
+    <object-name>stab_manu_down</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
-        <value>1.0</value>
+        <value>2.0</value>
       </binding>
-    </mod-up>
-  </action>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>stab_manu_up</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-assign</command>
-      <property>fdm/jsbsim/fcs/stab-manu-selector</property>
-      <value>0.0</value>
-    </binding>
-    <mod-up>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>fdm/jsbsim/fcs/stab-manu-selector</property>
+          <value>1.0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>stab_manu_up</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
-        <value>1.0</value>
+        <value>0.0</value>
       </binding>
-    </mod-up>
-  </action>
-</animation>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>fdm/jsbsim/fcs/stab-manu-selector</property>
+          <value>1.0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
 
 
 
 
-<!--*************************** Indicators ***************************-->
+  <!--*************************** Indicators ***************************-->
 
-<effect>
-  <object-name>ind_notready_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_notready</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_falsetrim_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_falsetrim</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_bank_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_bank</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_pitch_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_pitch</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_ap_fail_light</object-name>
-  <inherits-from>Effects/LampsLM_Yellow</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_ap_fail</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_atfail_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_atfail</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_app_h_light</object-name>
-  <inherits-from>Effects/LampsLM_Yellow</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_h</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_app_v_light</object-name>
-  <inherits-from>Effects/LampsLM_Yellow</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_v</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_fire_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_fire</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_danger_1_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_1</use></lightmap-factor></parameters>
-</effect>
-<effect>
-  <object-name>ind_danger_2_light</object-name>
-  <inherits-from>Effects/LampsLM_Red</inherits-from>
-  <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_2</use></lightmap-factor></parameters>
-</effect>
+  <effect>
+    <object-name>ind_notready_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_notready</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_falsetrim_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_falsetrim</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_bank_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_bank</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_pitch_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_pitch</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_ap_fail_light</object-name>
+    <inherits-from>Effects/LampsLM_Yellow</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_ap_fail</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_atfail_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_atfail</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_app_h_light</object-name>
+    <inherits-from>Effects/LampsLM_Yellow</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_h</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_app_v_light</object-name>
+    <inherits-from>Effects/LampsLM_Yellow</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_v</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_fire_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_fire</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_danger_1_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_1</use></lightmap-factor></parameters>
+  </effect>
+  <effect>
+    <object-name>ind_danger_2_light</object-name>
+    <inherits-from>Effects/LampsLM_Red</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_2</use></lightmap-factor></parameters>
+  </effect>
 
 
-<!-- Texture switch -->
+  <!-- Texture switch -->
 
-<animation>
-  <type>textranslate</type>
-  <object-name>ind_notready_light</object-name>
-  <object-name>ind_falsetrim_light</object-name>
-  <object-name>ind_atfail_light</object-name>
-  <object-name>ind_fire_light</object-name>
-  <property>tu154/options/textures/english</property>
-  <factor>0.5</factor>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-  </axis>
-</animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>ind_notready_light</object-name>
+    <object-name>ind_falsetrim_light</object-name>
+    <object-name>ind_atfail_light</object-name>
+    <object-name>ind_fire_light</object-name>
+    <property>tu154/options/textures/english</property>
+    <factor>0.5</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+    </axis>
+  </animation>
 
-<!--<animation>
-  <type>material</type>
-  <object-name>central_panel</object-name>
-  <texture-prop>tu154/textures/lang/glare</texture-prop>
-</animation>
-<animation>
-  <type>material</type>
-  <object-name>stab_manu_cover</object-name>
-  <object-name>stab_auto_handle</object-name>
-  <texture-prop>tu154/textures/lang/glare_misc</texture-prop>
-</animation>-->
+  <!--<animation>
+    <type>material</type>
+    <object-name>central_panel</object-name>
+    <texture-prop>tu154/textures/lang/glare</texture-prop>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>stab_manu_cover</object-name>
+    <object-name>stab_auto_handle</object-name>
+    <texture-prop>tu154/textures/lang/glare_misc</texture-prop>
+  </animation>-->
 
 </PropertyList>
