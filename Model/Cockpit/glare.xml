@@ -15,6 +15,24 @@
 <PropertyList>
   <path>glare.ac</path>
 
+  <!--**************************** Shaders *******************************-->
+  <effect>
+    <inherits-from>Effects/model-combined</inherits-from>
+    <object-name>central_panel</object-name>
+    <object-name>sw_base</object-name>
+    <object-name>spr_load_base</object-name>
+    <object-name>spr_load_cover</object-name>
+    <object-name>spr_load_lever</object-name>
+    <object-name>stab_auto_handle</object-name>
+    <object-name>stab_auto_sw</object-name>
+    <object-name>stab_manu_cover</object-name>
+    <object-name>stab_manu_lever</object-name>
+    <object-name>trim_roll_lever</object-name>
+    <object-name>trim_yaw_lever</object-name>
+    <object-name>ind_danger_1_frame</object-name>
+    <object-name>ind_danger_2_frame</object-name>
+  </effect>
+
   <!--*********************** MP details deselect ************************-->
   <animation>
     <type>select</type>
