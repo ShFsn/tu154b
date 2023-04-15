@@ -1105,6 +1105,10 @@
     <system file="instrumentation"/>
     <system file="nvu"/>
     <autopilot file="Systems/absu154"/>
+    
+    <system file="tu154b-rollshake"/>
+
+    <!--<system file="Calc/tu154b-rollshake"/>-->
 
     
     <aerodynamics>
@@ -1717,7 +1721,5 @@
 	<property>debug/wp-hdg-corrected</property>
 	<property>debug/wp-distance</property>
     </output>-->
-    
-    <system file="tu154b-misc"/>
 
   </fdm_config>

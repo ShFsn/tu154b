@@ -1,8 +1,4 @@
-<!-- Airbus A320 Misc Systems -->
-
-<!-- Copyright (c) 2020 Jonathan Redpath -->
-
-<system name="Tu-154B-2: MISC">
+<system name="Tu-154B-2: Rollshake">
 
 	<channel name="Shake" execrate="8">
 		
