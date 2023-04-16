@@ -288,21 +288,6 @@
       </alarm>
     </warning>
   </systems>
-  <buttons>
-    <pn-5-sbros type="double" >0.0</pn-5-sbros>
-    <pn-5-zk type="double" >0.0</pn-5-zk>
-    <pn-5-nvu type="double" >0.0</pn-5-nvu>
-    <pn-5-az-1 type="double" >0.0</pn-5-az-1>
-    <pn-5-az-2 type="double" >0.0</pn-5-az-2>
-    <pn-5-approach type="double" >0.0</pn-5-approach>
-    <pn-5-glideslope type="double" >0.0</pn-5-glideslope>
-    <pu-46-h type="double" >0.0</pu-46-h>
-    <pu-46-m type="double" >0.0</pu-46-m>
-    <pu-46-v type="double" >0.0</pu-46-v>
-    <pu-46-stab type="double" >0.0</pu-46-stab>
-    <pn-6-stab type="double">0.0</pn-6-stab>
-    <yoke-disc type="double" >0.0</yoke-disc>
-  </buttons>
   <switches>
     <adf-1-selector type="double" >0.0</adf-1-selector>
     <adf-2-selector type="double" >0.0</adf-2-selector>
