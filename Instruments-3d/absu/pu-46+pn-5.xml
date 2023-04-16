@@ -587,9 +587,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_zk()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pn-5-zk</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pn-5-zk</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -602,9 +610,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_reset()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pn-5-sbros</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pn-5-sbros</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -617,9 +633,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_nvu()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pn-5-nvu</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pn-5-nvu</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -633,9 +657,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_az1()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pn-5-az-1</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pn-5-az-1</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 <animation>
@@ -646,9 +678,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_az2()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pn-5-az-2</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pn-5-az-2</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 <animation>
@@ -659,9 +699,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_glideslope()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pn-5-glideslope</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pn-5-glideslope</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -673,9 +721,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_approach()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pn-5-approach</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pn-5-approach</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -687,9 +743,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_m()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pu46-m</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pu-46-m</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -701,9 +765,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_v()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pu-46-v</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pu-46-v</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -715,9 +787,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_h()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pu-46-h</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pu-46-h</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 <animation>
@@ -728,9 +808,17 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>absu.absu_stab_toggle()</script>
+      <command>property-assign</command>
+      <property>tu154/buttons/pu-46-stab</property>
+      <value>1.0</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>tu154/buttons/pu-46-stab</property>
+        <value>0.0</value>
+      </binding>
+    </mod-up>
   </action>
 </animation>
 
@@ -817,11 +905,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-      	interpolate("tu154/switches/pu-46-kren", 1.0, 0.1 );
-        absu.absu_stab_kren(1);
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pu-46-kren</property>
+      <value>1.0</value>
     </binding>
   </action>
 </animation>
@@ -833,11 +919,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-      	interpolate("tu154/switches/pu-46-kren", 0.0, 0.1 );
-        absu.absu_stab_kren(0);
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pu-46-kren</property>
+      <value>0.0</value>
     </binding>
   </action>
 </animation>
@@ -850,11 +934,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-      	interpolate("tu154/switches/pu-46-tang", 1.0, 0.1 );
-        absu.absu_stab_tang(1);
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pu-46-tang</property>
+      <value>1.0</value>
     </binding>
   </action>
 </animation>
@@ -866,11 +948,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-      	interpolate("tu154/switches/pu-46-tang", 0.0, 0.1 );
-        absu.absu_stab_tang(0);
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pu-46-tang</property>
+      <value>0.0</value>
     </binding>
   </action>
 </animation>
@@ -883,10 +963,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("tu154/switches/pn-5-navigac", 1.0, 0.1 );
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pn-5-navigac</property>
+      <value>1.0</value>
     </binding>
   </action>
 </animation>
@@ -898,10 +977,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("tu154/switches/pn-5-navigac", 0.0, 0.1 );
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pn-5-navigac</property>
+      <value>0.0</value>
     </binding>
   </action>
 </animation>
@@ -914,10 +992,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("tu154/switches/pn-5-posadk", 1.0, 0.1 );
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pn-5-posadk</property>
+      <value>1.0</value>
     </binding>
   </action>
 </animation>
@@ -929,10 +1006,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("tu154/switches/pn-5-posadk", 0.0, 0.1 );
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pn-5-posadk</property>
+      <value>0.0</value>
     </binding>
   </action>
 </animation>
@@ -945,10 +1021,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("tu154/switches/pn-5-strelki", 1.0, 0.1 );
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pn-5-strelki</property>
+      <value>1.0</value>
     </binding>
     <binding>
       <command>property-assign</command>
@@ -965,10 +1040,9 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>
-        interpolate("tu154/switches/pn-5-strelki", 0.0, 0.1 );
-      </script>
+      <command>property-assign</command>
+      <property>tu154/switches/pn-5-strelki</property>
+      <value>0.0</value>
     </binding>
     <binding>
       <command>property-assign</command>
@@ -1006,7 +1080,7 @@
 <!--+++++++++++++++++ pitch ++++++++++++++++++-->
 
 <!--Modified by Yurik dec 2013 for new AP code-->
-<animation>
+<!--<animation>
   <type>pick</type>
   <object-name>pitch_wheel</object-name>
   <visible>true</visible>
@@ -1021,13 +1095,9 @@
       <command>property-assign</command>
       <property>tu154/switches/pu-46-pitch-wheel</property>
       <value>0.0</value>
-    </binding>    
-    <binding>
-      <command>nasal</command>
-      <script>absu.absu_drop_mvh()</script>
     </binding>
   </action>
-</animation>
+</animation>-->
 
 <!--Mouse wheel-->
 
@@ -1050,10 +1120,6 @@
       <step>-0.0085</step>
       <min>-0.3</min>
     </binding>
-    <binding>
-      <command>nasal</command>
-      <script>absu.absu_drop_mvh()</script>
-    </binding>
   </action>
 </animation>
 <animation>
@@ -1074,10 +1140,6 @@
       <property>fdm/jsbsim/ap/stab-input-pitch-rad</property>
       <step>0.0085</step>
       <max>0.3</max>
-    </binding>
-    <binding>
-      <command>nasal</command>
-      <script>absu.absu_drop_mvh()</script>
     </binding>
   </action>
 </animation>
@@ -1157,10 +1219,10 @@
       <property>fdm/jsbsim/ap/stab-input-roll-rad</property>
       <value>0.0</value>
     </binding>
-    <binding>
+    <!--<binding>
       <command>nasal</command>
       <script>absu.absu_reset()</script>
-    </binding>
+    </binding>-->
   </action>
 </animation>
 <!--Mouse wheel-->

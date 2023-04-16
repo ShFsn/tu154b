@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <jsbsim>
+
+    <external_reactions n="0">
+      <tractor>
+        <connected alias="/sim/model/autopush/connected"/>
+        <magnitude alias="/sim/model/autopush/force-lbf"/>
+        <x alias="/sim/model/autopush/force-x"/>
+        <y alias="/sim/model/autopush/force-y"/>
+      </tractor>
+    </external_reactions>
+
+    <instrumentation>
+      <pu11-latitude>55.0</pu11-latitude>
+      <tks-consumers>0</tks-consumers>
+      <tks-latitude-auto>0</tks-latitude-auto>
+      <pnp-left-selector>0</pnp-left-selector>
+      <bgmk-offset-1>50</bgmk-offset-1>
+      <bgmk-offset-2>250</bgmk-offset-2>
+      <indicated-altitude-m>0</indicated-altitude-m>
+
+      <nvu>
+        <stopped type="int">1</stopped>
+        <Spm-active type="double">0</Spm-active>
+        <Zpm-active type="double">0</Zpm-active>
+      </nvu>
+    </instrumentation>
+
+    <ap>
+      <!--<gs-gain>8.0</gs-gain>-->
+      <gs-lock>0.0</gs-lock>
+      <!--<gs-gain-pos>1.0</gs-gain-pos>-->
+      <!--<yaw-gain>8.0</yaw-gain>-->
+      <!--<vor-p-gain>0.2</vor-p-gain>
+      <vor-d-gain>5.0</vor-d-gain>-->
+      <!--<input-pitch-rad>0.15</input-pitch-rad>
+
+      <input-altitude>3000</input-altitude>
+      <input-heading-pnp>90</input-heading-pnp>
+      <roll-hold>1</roll-hold>
+      <roll-selector>1</roll-selector>
+      <pitch-selector>0</pitch-selector>-->
+      
+		  <!-- Delivery magnetic heading to TKS compass system -->
+      <input-magnetic-heading alias="/orientation/heading-magnetic-deg"/>
+
+      <roll-hold>0.0</roll-hold>
+      <pitch-hold>0.0</pitch-hold>
+    </ap>
+
+    <gear>
+      <gear-cmd-static type="double">1.0</gear-cmd-static>
+
+      <!-- Delivery brakes -->
+      <brake-left alias="/controls/gear/brake-left"/>
+      <brake-right alias="/controls/gear/brake-right"/>
+      <brake-parking alias="/controls/gear/brake-parking"/>
+
+      <!-- Delivery steering parameters -->
+      <steering alias="/controls/gear/steering"/>
+      <nose-wheel-steering alias="/controls/gear/nose-wheel-steering"/>
+    </gear>
+    
+    <fcs>
+      <stabilizer-cmd-norm type="double">0.0</stabilizer-cmd-norm>
+      <stab-manu-cmd type="double">0.0</stab-manu-cmd>
+      <stab-auto-cmd type="double">1.0</stab-auto-cmd>
+      <stab-manu-switch type="double">0.0</stab-manu-switch>
+      <stab-manu-selector type="double">1.0</stab-manu-selector>
+
+      <revers-by-joy type="double">0.0</revers-by-joy>
+      <revers-1-limit type="double">0.1</revers-1-limit>
+      <revers-2-limit type="double">0.05</revers-2-limit><!-- Set here value about 0.03-0.06  if you want reverser control by joystick. Set revers-by-joy to 1 -->
+
+    </fcs>
+
+    <!--<metrics>
+    <stabilizer-factor>-0.48</stabilizer-factor>
+    </metrics>-->
+
+    <hs>
+      <max-pressure>210.0</max-pressure>
+      <ra56-pitch-1>0.0</ra56-pitch-1>
+      <ra56-pitch-2>0.0</ra56-pitch-2>
+      <ra56-pitch-3>0.0</ra56-pitch-3>
+      <ra56-roll-1>0.0</ra56-roll-1>
+      <ra56-roll-2>0.0</ra56-roll-2>
+      <ra56-roll-3>0.0</ra56-roll-3>
+      <ra56-yaw-1>0.0</ra56-yaw-1>
+      <ra56-yaw-2>0.0</ra56-yaw-2>
+      <ra56-yaw-3>0.0</ra56-yaw-3>
+
+    </hs>
+
+    <tu154>
+      <gear>
+        <sw-main alias="/tu154/gear/sw-main"/>
+        <sw-emerg1 alias="/tu154/gear/sw-emerg1"/>
+        <sw-emerg2 alias="/tu154/gear/sw-emerg2"/>
+      </gear>
+    </tu154>
+
+    <fuel>
+      <power-dc27-L
+          alias="/tu154/systems/electrical/buses/DC27-bus-L/volts"/>
+      <power-ac200-1L
+          alias="/tu154/systems/electrical/buses/AC3x200-bus-1L/volts"/>
+      <power-ac200-2
+          alias="/tu154/systems/electrical/buses/AC3x200-bus-2/volts"/>
+      <power-ac200-3L
+          alias="/tu154/systems/electrical/buses/AC3x200-bus-3L/volts"/>
+      <level-1-kg alias="/consumables/fuel/tank[0]/level-kg"/>
+      <level-2L-kg alias="/consumables/fuel/tank[1]/level-kg"/>
+      <level-2R-kg alias="/consumables/fuel/tank[2]/level-kg"/>
+      <level-3L-kg alias="/consumables/fuel/tank[3]/level-kg"/>
+      <level-3R-kg alias="/consumables/fuel/tank[4]/level-kg"/>
+      <level-4-kg alias="/consumables/fuel/tank[5]/level-kg"/>
+      <sw-apu alias="/tu154/switches/APU-starter-switch"/>
+    </fuel>
+
+  </jsbsim>
+
+</PropertyList>

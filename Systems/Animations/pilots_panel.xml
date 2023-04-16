@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- PKP shared -->
+  <filter>
+    <name>Director Pitch</name>
+    <type>exponential</type>
+    <filter-time>0.2</filter-time>
+    <input>tu154/instrumentation/pkp[0]/pitch-director</input>
+    <output>tu154/instrumentation/pkp[0]/pitch-director/anim</output>
+  </filter>
+  <filter>
+    <name>Director Roll</name>
+    <type>exponential</type>
+    <filter-time>0.2</filter-time>
+    <input>tu154/instrumentation/pkp[0]/roll-director</input>
+    <output>tu154/instrumentation/pkp[0]/roll-director/anim</output>
+  </filter>
+
+</PropertyList>

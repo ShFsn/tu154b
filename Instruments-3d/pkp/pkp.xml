@@ -171,7 +171,7 @@
 <animation>
   <type>rotate</type>
   <object-name>kurs_director</object-name>
-  <property>tu154/instrumentation/pkp[0]/roll-director</property>  
+  <property>tu154/instrumentation/pkp[0]/roll-director/anim</property>  
   <factor>57.3</factor>
   <max-deg>30.0</max-deg>
   <min-deg>-30.0</min-deg>
@@ -191,7 +191,7 @@
 <animation>
   <type>rotate</type>
   <object-name>gliss_director</object-name>
-  <property>tu154/instrumentation/pkp[0]/pitch-director</property>  
+  <property>tu154/instrumentation/pkp[0]/pitch-director/anim</property>  
   <factor>114.6</factor>
   <max-deg>30.0</max-deg>
   <min-deg>-30.0</min-deg>

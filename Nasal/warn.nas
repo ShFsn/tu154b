@@ -679,7 +679,7 @@ else iso.switch(0);
 
 # AT
 param = 0.0;
-if( absu.absu_powered() == 1 )
+if( getprop( "tu154/systems/absu/serviceable" ) == 1 )
 	if( getprop( "tu154/instrumentation/pn-6/serviceable" ) == 0 )
      		param = param + 1.0;
 

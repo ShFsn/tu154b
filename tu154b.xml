@@ -1108,7 +1108,8 @@
     
     <system file="tu154b-rollshake"/>
 
-    <!--<system file="Calc/tu154b-rollshake"/>-->
+    <!-- Calculations repalcing nasal -->
+    <system file="Calc/absu"/>
 
     
     <aerodynamics>
