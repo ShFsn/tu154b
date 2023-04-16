@@ -12,157 +12,8 @@
 var PITCH_YOKE_LIMIT = 0.5;
 var BANK_YOKE_LIMIT = 0.5;
 
-var absu_property_update = func {	# <-   handler begin here
-
-var param=0.0;
-
-# pn-5 selected mode
-#var az1 = getprop("tu154/instrumentation/pn-5/az-1");
-#if( az1 == nil ) az1 = 0.0;
-var az2 = getprop("tu154/instrumentation/pn-5/az-2");
-if( az2 == nil ) az2 = 0.0;
-
-
-
-
-
-# VOR support
-if( az2 )
-        {
-        var radial_actual = "instrumentation/nav[1]/radials/actual-deg";
-        var radial_reciprocal = "instrumentation/nav[1]/radials/reciprocal-radial-deg";
-        var radial_selected = "instrumentation/nav[1]/radials/selected-deg";
-        var to_flag_prop = "instrumentation/nav[1]/to-flag";
-        }
-else	{
-	var radial_actual = "instrumentation/nav[0]/radials/actual-deg";
-	var radial_reciprocal = "instrumentation/nav[0]/radials/reciprocal-radial-deg";
-	var radial_selected = "instrumentation/nav[0]/radials/selected-deg";
-	var to_flag_prop = "instrumentation/nav[0]/to-flag";
-	}
-var to_flag = getprop( to_flag_prop );
-if( to_flag == nil ) to_flag = 0.0;
-if( to_flag ) param = getprop(radial_reciprocal);
-else param = getprop(radial_actual);
-if( param == nil ) param = 0.0;
-var param2 = getprop(radial_selected);
-if( param2 == nil ) param2 = 0.0;
-param = param - param2;
-if( param < -180.0 ) param = 360.0 + param;
-if( param > 180.0 ) param = 360.0 - param;
-if( to_flag ) param = -param;
-setprop("fdm/jsbsim/ap/input-heading-delta", param);
-
-#Delivery gyro heading to TKS compass system
-param = getprop("orientation/heading-deg")+
-	getprop("instrumentation/heading-indicator[0]/offset-deg");
-if( param < 0.0 ) param = param + 360.0;
-if( param > 360.0 ) param = param - 360.0;
-setprop("fdm/jsbsim/ap/input-heading-gyro-1", param);
-
-param = getprop("orientation/heading-deg")+
-	getprop("instrumentation/heading-indicator[1]/offset-deg");
-if( param < 0.0 ) param = param + 360.0;
-if( param > 360.0 ) param = param - 360.0;
-setprop("fdm/jsbsim/ap/input-heading-gyro-2", param);
-
-#Delivery magnetic heading to TKS compass system
-
-param = getprop("orientation/heading-magnetic-deg");
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/ap/input-magnetic-heading", param);
-
-#Delivery brakes
-param = getprop("controls/gear/brake-left");
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/gear/brake-left", param);
-param = getprop("controls/gear/brake-right");
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/gear/brake-right", param);
-param = getprop("controls/gear/brake-parking");
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/gear/brake-parking", param);
-# delivery steering parameters
-param = getprop("controls/gear/steering");
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/gear/steering", param);
-param = getprop("controls/gear/nose-wheel-steering");
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/gear/nose-wheel-steering", param);
-
-
-# PNP
-
-
-# "Plane" handle
-var src_plane = "tu154/instrumentation/pnp[0]/plane-deg";
-param = getprop("tu154/switches/pn-5-pnp-selector");
-if( param == nil ) param = 0.0;
-if( param ) src_plane = "tu154/instrumentation/pnp[1]/plane-deg";
-param = getprop(src_plane);
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/ap/input-heading-pnp", param);
-
-# ZK handle
-param = getprop("tu154/switches/zk-selector");
-if( param == nil ) param = 0.0;
-
-if( param ) src_plane = "tu154/instrumentation/pnp[1]/heading-deg";
-else src_plane = "tu154/instrumentation/pnp[0]/heading-deg";
-
-param = getprop(src_plane);
-if( param == nil ) param = 0.0;
-setprop("fdm/jsbsim/ap/input-heading-zk", param);
-
-
-var needles = getprop("tu154/switches/pn-5-strelki" );
-if( needles == nil )  needles = 0.0;
-if( needles != 0.0 )
-	{
-	# Directors
-	param = getprop("fdm/jsbsim/ap/pitch/gs-needle");	# Modified by Yurik nov 2103 for new ABSU version
-
-	if( param == nil )  param = 0.0;
-	if( getprop("fdm/jsbsim/ap/pitch-selector") != 5.0 ) param = 0.0;
-	setprop("tu154/instrumentation/pkp[0]/pitch-director", param );
-
-	param = getprop("fdm/jsbsim/ap/ils-out");	# Modified by Yurik nov 2103 for new ABSU version
-
-	if( param == nil )  param = 0.0;
-	if( getprop("fdm/jsbsim/ap/roll-selector") != 5.0 ) param = 0.0;
-	setprop("tu154/instrumentation/pkp[0]/roll-director", param );
-	}
-else{
-	interpolate("tu154/instrumentation/pkp[0]/pitch-director", 0.3, 1.0 );
-	interpolate("tu154/instrumentation/pkp[0]/roll-director", 0.3, 1.0 );
-	}
-
-# Modified by Yurik dec 2103 for new ABSU version
-# Glideslope auto switch
-if( getprop("fdm/jsbsim/fcs/flap-pos-deg") > 40.0 )
-   if( getprop("fdm/jsbsim/ap/roll-selector") == 5.0 )
-    if( getprop("fdm/jsbsim/ap/pitch-selector") != 5.0 )
-      if( getprop("instrumentation/nav[0]/gs-needle-deflection") < 0.2 )
-       if( getprop("instrumentation/nav[0]/gs-needle-deflection") > 0.0 )
-	absu_glideslope();
-
-# Go around procedure
-if( getprop("fdm/jsbsim/ap/pitch-selector") == 5.0 )
-    if( getprop("fdm/jsbsim/fcs/throttle-cmd-norm[0]") > 0.9 )
-      if( getprop("instrumentation/nav[0]/gs-in-range") )
-    		absu_start_go_around();
-
-
-}
-
-
 
 # ABSU control
-
-var absu_stab_toggle = func {
-	if( getprop("fdm/jsbsim/ap/pitch-hold") and getprop("fdm/jsbsim/ap/roll-hold") ) absu_stab_b_off();
-	else absu_stab_on();
-}
 
 var absu_stab_on = func {
 if( absu_powered() == 0 ) return;
@@ -208,40 +59,6 @@ var absu_stab_off = func {
 # Blue lamp on PU-46
 	setprop("tu154/instrumentation/pu-46/stab", 0.0 );
 # stop go around
-	setprop("fdm/jsbsim/ap/go-around", 0.0);
-        clr_pitch_lamp();
-        clr_heading_lamp();
-	
-	if( absu_powered() == 1 )
-	{
-# PN-5 indicators
-	setprop( "tu154/instrumentation/pn-5/pitch-state", 1 );
-	setprop( "tu154/instrumentation/pn-5/heading-state", 1 );
-	setprop("tu154/instrumentation/pn-5/sbros", 1.0 );
-	}
-	else{
-	setprop( "tu154/instrumentation/pn-5/pitch-state", 0 );
-	setprop( "tu154/instrumentation/pn-5/heading-state", 0 );
-	}
-}
-
-var absu_stab_b_off = func {
-# Autopilot state
-# Clear audio warning if interpolation of is stale
-	setprop("tu154/systems/warning/alarm/absu_warn", 0.0 );
-	var state = 0;
-	if( getprop("fdm/jsbsim/ap/pitch-hold") ) state = 1;
-	if( getprop("fdm/jsbsim/ap/roll-hold") ) state = state + 1;
-	if( getprop("tu154/instrumentation/pu-46/stab") ) state = state + 1;
-	if( state ) absu_alarm();
-	
-	#setprop("fdm/jsbsim/ap/roll-selector", 0.0 );
-	#setprop("fdm/jsbsim/ap/pitch-selector", 0.0 );
-	setprop("fdm/jsbsim/ap/pitch-hold", 0.0 );
-	setprop("fdm/jsbsim/ap/roll-hold", 0.0 );
-# Blue lamp on PU-46
-	setprop("tu154/instrumentation/pu-46/stab", 0.0 );
-# stop go around 	
 	setprop("fdm/jsbsim/ap/go-around", 0.0);
         clr_pitch_lamp();
         clr_heading_lamp();
@@ -493,6 +310,7 @@ if( getprop("tu154/switches/pu-46-tang" ) == 1.0 )
 	if( getprop("tu154/instrumentation/pu-46/stab" ) == 1.0 )
 		setprop("tu154/systems/electrical/indicators/glideslope", 1.0 );
 }
+setlistener("fdm/jsbsim/calc/absu/absu_glideslope/trigger", absu_glideslope, 0, 0);
 
 # --------------- Heading modes ------------------------------
 
@@ -610,10 +428,6 @@ setlistener("tu154/systems/absu/serviceable", absu_shutdown, 0, 0 );
 setlistener("tu154/systems/absu/serviceable", absu_alarm, 0, 0 );
 setlistener("tu154/systems/warning/alarm/absu_warn", absu_alarm_watchdog, 0, 0 );
 
-var timer_absu_property_update = maketimer(0.0, absu_property_update);
-absu_property_update();
-timer_absu_property_update.start();
-
 # ********************** Go around procedure ********************************
 
 var absu_start_go_around = func{
@@ -642,6 +456,7 @@ var absu_start_go_around = func{
        	setprop("tu154/systems/electrical/indicators/reject", 1.0 );
 	setprop("tu154/systems/electrical/indicators/stab-heading", 1.0 );
 }
+setlistener("fdm/jsbsim/calc/absu/absu_start_ga/trigger", absu_start_go_around, 0, 0);
 
 # ========================== yoke ap off =============================
 var check_yoke_pitch = func{
@@ -764,12 +579,6 @@ if( getprop("tu154/instrumentation/pn-6/mode") > 2.0 )
 # 	setprop("tu154/instrumentation/pn-6/check-lamp", state );
 	}
 
-}
-
-#Switch AT mode on button "C"
-var absu_at_toggle = func{
-	if( getprop("tu154/instrumentation/pn-6/stab" ) ) absu_at_stop();
-	else absu_at_start();
 }
 
 # Start stabilize speed

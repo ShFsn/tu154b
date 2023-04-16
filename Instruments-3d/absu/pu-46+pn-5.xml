@@ -729,7 +729,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>nasal</command>
-      <script>absu.absu_stab_toggle()</script>
+      <script>absu.absu_stab_on()</script>
     </binding>
   </action>
 </animation>
