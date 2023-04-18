@@ -180,5 +180,129 @@
 		</switch>
 
 	</channel>
+
+	<channel name="autothrottle_smooth" execrate="3">
+
+		<fcs_function name="calc/absu/autothrottle_smooth/e1_head">
+			<function>
+				<sum>
+					<p>fcs/at-throttle-cmd-norm[0]</p>
+					<product>
+						<min>
+							<v>0.005</v>
+							<abs>
+								<difference>
+									<p>fcs/xat-throttle-cmd-norm[0]</p>
+									<p>calc/absu/autothrottle_smooth/e1_head</p>
+								</difference>
+							</abs>
+						</min>
+						<quotient>
+							<difference>
+								<p>fcs/xat-throttle-cmd-norm[0]</p>
+								<p>fcs/at-throttle-cmd-norm[0]</p>
+							</difference>
+							<max>
+								<abs>
+									<difference>
+										<p>fcs/xat-throttle-cmd-norm[0]</p>
+										<p>fcs/at-throttle-cmd-norm[0]</p>
+									</difference>
+								</abs>
+								<v>0.00001</v>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="fcs/at-throttle-cmd-norm[0]">
+			<default value="fcs/xat-throttle-cmd-norm[0]"/>
+			<test logic="AND" value="calc/absu/autothrottle_smooth/e1_head">
+				ap/at-hold-0 eq 1
+			</test>
+		</switch>
+
+		<fcs_function name="calc/absu/autothrottle_smooth/e2_head">
+			<function>
+				<sum>
+					<p>fcs/at-throttle-cmd-norm[1]</p>
+					<product>
+						<min>
+							<v>0.005</v>
+							<abs>
+								<difference>
+									<p>fcs/xat-throttle-cmd-norm[1]</p>
+									<p>calc/absu/autothrottle_smooth/e2_head</p>
+								</difference>
+							</abs>
+						</min>
+						<quotient>
+							<difference>
+								<p>fcs/xat-throttle-cmd-norm[1]</p>
+								<p>fcs/at-throttle-cmd-norm[1]</p>
+							</difference>
+							<max>
+								<abs>
+									<difference>
+										<p>fcs/xat-throttle-cmd-norm[1]</p>
+										<p>fcs/at-throttle-cmd-norm[1]</p>
+									</difference>
+								</abs>
+								<v>0.00001</v>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="fcs/at-throttle-cmd-norm[1]">
+			<default value="fcs/xat-throttle-cmd-norm[1]"/>
+			<test logic="AND" value="calc/absu/autothrottle_smooth/e2_head">
+				ap/at-hold-1 eq 1
+			</test>
+		</switch>
+
+		<fcs_function name="calc/absu/autothrottle_smooth/e3_head">
+			<function>
+				<sum>
+					<p>fcs/at-throttle-cmd-norm[2]</p>
+					<product>
+						<min>
+							<v>0.005</v>
+							<abs>
+								<difference>
+									<p>fcs/xat-throttle-cmd-norm[2]</p>
+									<p>calc/absu/autothrottle_smooth/e3_head</p>
+								</difference>
+							</abs>
+						</min>
+						<quotient>
+							<difference>
+								<p>fcs/xat-throttle-cmd-norm[2]</p>
+								<p>fcs/at-throttle-cmd-norm[2]</p>
+							</difference>
+							<max>
+								<abs>
+									<difference>
+										<p>fcs/xat-throttle-cmd-norm[2]</p>
+										<p>fcs/at-throttle-cmd-norm[2]</p>
+									</difference>
+								</abs>
+								<v>0.00001</v>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="fcs/at-throttle-cmd-norm[2]">
+			<default value="fcs/xat-throttle-cmd-norm[2]"/>
+			<test logic="AND" value="calc/absu/autothrottle_smooth/e3_head">
+				ap/at-hold-2 eq 1
+			</test>
+		</switch>
+
+	</channel>
 	
 </system>
