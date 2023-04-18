@@ -336,9 +336,12 @@
         <path>Aircraft/tu154b/Systems/Animations/particles.xml</path>
       </property-rule>
       <property-rule n="104">
-        <path>Aircraft/tu154b/Systems/Animations/glare.xml</path>
+        <path>Aircraft/tu154b/Systems/Animations/cockpit.xml</path>
       </property-rule>
       <property-rule n="105">
+        <path>Aircraft/tu154b/Systems/Animations/glare.xml</path>
+      </property-rule>
+      <property-rule n="106">
         <path>Aircraft/tu154b/Systems/Animations/pilots_panel.xml</path>
       </property-rule>
 

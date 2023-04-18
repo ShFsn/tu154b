@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Yokes -->
+  <filter>
+    <name>Yokes pitch</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>fdm/jsbsim/fcs/pitch-trim-sum</input>
+    <output>fdm/jsbsim/fcs/pitch-trim-sum/anim</output>
+  </filter>
+  <filter>
+    <name>Yokes roll</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>controls/flight/aileron</input>
+    <output>controls/flight/aileron/anim</output>
+  </filter>
+
+  <!-- Pedals -->
+  <filter>
+    <name>Pedals rudder</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>controls/flight/rudder</input>
+    <output>controls/flight/rudder/anim</output>
+  </filter>
+  <filter>
+    <name>Pedals brakes left</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>controls/gear/brake-left</input>
+    <output>controls/gear/brake-left/anim</output>
+  </filter>
+  <filter>
+    <name>Pedals brakes right</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>controls/gear/brake-right</input>
+    <output>controls/gear/brake-right/anim</output>
+  </filter>
+
+  <!-- Tiller -->
+  <filter>
+    <name>Tiller steering</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>controls/flight/rudder</input>
+    <output>controls/flight/rudder/anim</output>
+  </filter>
+
+  <!-- Thrust levers -->
+  <filter>
+    <name>Engine 1 thrust</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]</input>
+    <output>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]/anim</output>
+  </filter>
+  <filter>
+    <name>Engine 2 thrust</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>fdm/jsbsim/fcs/at-throttle-cmd-norm[1]</input>
+    <output>fdm/jsbsim/fcs/at-throttle-cmd-norm[1]/anim</output>
+  </filter>
+  <filter>
+    <name>Engine 3 thrust</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>fdm/jsbsim/fcs/at-throttle-cmd-norm[2]</input>
+    <output>fdm/jsbsim/fcs/at-throttle-cmd-norm[2]/anim</output>
+  </filter>
+
+  <!-- Reverse levers -->
+  <filter>
+    <name>Engine 1 reverse</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</input>
+    <output>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad/anim</output>
+  </filter>
+  <filter>
+    <name>Engine 3 reverse</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</input>
+    <output>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad/anim</output>
+  </filter>
+
+  <!-- Engines cutoff levers -->
+  <filter>
+    <name>Engine 1 cutoff</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>tu154/switches/cutoff-lever-1</input>
+    <output>tu154/switches/cutoff-lever-1/anim</output>
+  </filter>
+  <filter>
+    <name>Engine 2 cutoff</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>tu154/switches/cutoff-lever-2</input>
+    <output>tu154/switches/cutoff-lever-2/anim</output>
+  </filter>
+  <filter>
+    <name>Engine 3 cutoff</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>tu154/switches/cutoff-lever-3</input>
+    <output>tu154/switches/cutoff-lever-3/anim</output>
+  </filter>
+
+  <!-- Speedbrake lever -->
+  <filter>
+    <name>Speedbrake lever</name>
+    <type>exponential</type>
+    <filter-time>0.05</filter-time>
+    <input>surface-positions/speedbrake-pos-norm</input>
+    <output>surface-positions/speedbrake-pos-norm/anim</output>
+  </filter>
+
+</PropertyList>

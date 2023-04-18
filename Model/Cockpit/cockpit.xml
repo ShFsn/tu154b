@@ -792,7 +792,7 @@
     <object-name>lever_sti8</object-name>
     <object-name>lever_sti0</object-name>
     <object-name>lever_sti7</object-name>  
-    <property>fdm/jsbsim/fcs/pitch-trim-sum</property>
+    <property>fdm/jsbsim/fcs/pitch-trim-sum/anim</property>
     <factor>-10.0</factor>
     <offset-deg>10.0</offset-deg>
     <center>
@@ -810,7 +810,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lever_sti2</object-name>
-    <property>controls/flight/aileron</property>
+    <property>controls/flight/aileron/anim</property>
     <factor>120.0</factor>
     <offset-deg>124.75</offset-deg>
     <axis>
@@ -827,7 +827,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lever_sti0</object-name>
-    <property>controls/flight/aileron</property>
+    <property>controls/flight/aileron/anim</property>
     <factor>120.0</factor>
     <offset-deg>124.75</offset-deg>
     <axis>
@@ -893,7 +893,7 @@
     <type>translate</type>
     <object-name>MESH82</object-name>
     <object-name>MESH84</object-name>
-    <property>controls/flight/rudder</property>
+    <property>controls/flight/rudder/anim</property>
     <factor>-0.0565</factor>
     <offset-m>-0.0565</offset-m>
     <axis>
@@ -906,7 +906,7 @@
     <type>translate</type>
     <object-name>MESH83</object-name>
     <object-name>MESH85</object-name>
-    <property>controls/flight/rudder</property>
+    <property>controls/flight/rudder/anim</property>
     <factor>-0.0565</factor>
     <offset-m>-0.0565</offset-m>
     <axis>
@@ -919,7 +919,7 @@
     <type>rotate</type>
     <object-name>MESH82</object-name>
     <object-name>MESH84</object-name>
-    <property>controls/gear/brake-left</property>
+    <property>controls/gear/brake-left/anim</property>
     <factor>-45</factor>
     <center>
       <x-m>0.4600</x-m>
@@ -936,7 +936,7 @@
     <type>rotate</type>
     <object-name>MESH83</object-name>
     <object-name>MESH85</object-name>
-    <property>controls/gear/brake-right</property>
+    <property>controls/gear/brake-right/anim</property>
     <factor>-45</factor>
     <center>
       <x-m>0.5730</x-m>
@@ -955,7 +955,7 @@
   <animation>
     <type>rotate</type>
     <object-name>taxi_handle</object-name>
-    <property>controls/flight/rudder</property>
+    <property>controls/flight/rudder/anim</property>
     <factor>50</factor>
     <condition>
       <not><property>tu154/switches/steering-limit</property></not>
@@ -1141,7 +1141,7 @@
     <type>rotate</type>
     <object-name>lever_thr3</object-name>
     <object-name>thrust_re2</object-name>
-    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]</property>
+    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]/anim</property>
     <factor>-65.0</factor>
     <offset-deg>65.0</offset-deg>
     <center>
@@ -1159,7 +1159,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lever_thr2</object-name>
-    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[1]</property>
+    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[1]/anim</property>
     <factor>-65.0</factor>
     <offset-deg>65.0</offset-deg>
     <center>
@@ -1178,7 +1178,7 @@
     <type>rotate</type>
     <object-name>lever_thr1</object-name>
     <object-name>thrust_re0</object-name>
-    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[2]</property>
+    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[2]/anim</property>
     <factor>-65.0</factor>
     <offset-deg>65.0</offset-deg>
     <center>
@@ -1196,7 +1196,7 @@
   <animation>
     <type>rotate</type>
     <object-name>thrust_re0</object-name>
-    <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+    <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad/anim</property>
     <factor>28.65</factor>
     <center>
       <x-m>0.71229</x-m>
@@ -1213,7 +1213,7 @@
   <animation>
     <type>rotate</type>
     <object-name>thrust_re2</object-name>
-    <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property>
+    <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad/anim</property>
     <factor>28.65</factor>
     <center>
       <x-m>0.71229</x-m>
@@ -1234,7 +1234,7 @@
     <condition>
       <not><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property></not>
     </condition>
-    <property>surface-positions/speedbrake-pos-norm</property>
+    <property>surface-positions/speedbrake-pos-norm/anim</property>
     <interpolation>
       <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
       <entry><ind>	0.4</ind>	<dep>	50.0</dep></entry>
@@ -1273,7 +1273,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lever_thr6</object-name>
-    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]</property>
+    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]/anim</property>
     <factor>-65.0</factor>
     <offset-deg>65.0</offset-deg>
     <center>
@@ -1290,7 +1290,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lever_thr5</object-name>
-    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[1]</property>
+    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[1]/anim</property>
     <factor>-65.0</factor>
     <offset-deg>65.0</offset-deg>
     <center>
@@ -1307,7 +1307,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lever_thr4</object-name>  
-    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[2]</property>
+    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[2]/anim</property>
     <factor>-65.0</factor>
     <offset-deg>65.0</offset-deg>
     <center>
@@ -1325,7 +1325,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MESH16</object-name>
-    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]</property>
+    <property>fdm/jsbsim/fcs/at-throttle-cmd-norm[0]/anim</property>
     <interpolation>
       <entry><ind>	0.85</ind>	<dep>	10.0</dep></entry>
       <entry><ind>	1.0</ind>	<dep>	-30.0</dep></entry>
@@ -1351,7 +1351,7 @@
     <object-name>lever_mix8</object-name>
     <!--<object-name>l-49</object-name>-->
     <object-name>lever_lamp_1</object-name>
-    <property>tu154/switches/cutoff-lever-1</property>
+    <property>tu154/switches/cutoff-lever-1/anim</property>
     <factor>-40.0</factor>
     <offset-deg>40.0</offset-deg>
     <center>
@@ -1373,7 +1373,7 @@
     <object-name>lever_mix9</object-name>
     <!--<object-name>l-50</object-name>-->
     <object-name>lever_lamp_2</object-name>
-    <property>tu154/switches/cutoff-lever-2</property>
+    <property>tu154/switches/cutoff-lever-2/anim</property>
     <factor>-40.0</factor>
     <offset-deg>40.0</offset-deg>
     <center>
@@ -1394,7 +1394,7 @@
     <object-name>lever_mi10</object-name>
     <object-name>lever_lamp_3</object-name>
     <!--<object-name>l-51</object-name>-->
-    <property>tu154/switches/cutoff-lever-3</property>
+    <property>tu154/switches/cutoff-lever-3/anim</property>
     <factor>-40.0</factor>
     <offset-deg>40.0</offset-deg>
     <center>
