@@ -42,7 +42,7 @@
       <and>
         <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
         <or>
-          <property>tu154/air-cond/btn-check</property>
+          <property>tu154/systems/air-cond/btn-check</property>
           <property alias="../../../../../params/lamp"/>
         </or>
       </and>

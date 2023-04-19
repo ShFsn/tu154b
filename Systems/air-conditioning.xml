@@ -1,0 +1,400 @@
+<system name="Tu-154B-2: Rollshake">
+
+	<!--***************************** Indicators *******************************-->
+	<channel name="indicators_func" execrate="4">
+		
+		<!-- Cabin vertical speed -->
+		<switch name="/tu154/systems/air-cond/prib/delta-alt">
+			<default value="/tu154/systems/air-cond/prib/vs/anim"/>
+		</switch>
+		<!-- Delta pressure -->
+		<switch name="/tu154/systems/air-cond/prib/d-p">
+			<default value="/tu154/systems/air-cond/variables/d-p"/>
+			<test logic="AND" value="0">
+				/tu154/systems/electrical/buses/DC27-bus-L/volts eq 0
+			</test>
+		</switch>
+		<!-- Cabin height -->
+		<switch name="/tu154/systems/air-cond/prib/alt-m">
+			<default value="/tu154/systems/air-cond/variables/alt-m"/>
+			<test logic="AND" value="0">
+				/tu154/systems/electrical/buses/DC27-bus-L/volts eq 0
+			</test>
+		</switch>
+		<!-- Cockpit temp -->
+		<switch name="/tu154/systems/air-cond/prib/t-cab">
+			<default value="/tu154/systems/air-cond/variables/t-cab"/>
+			<test logic="AND" value="0">
+				/tu154/systems/electrical/buses/DC27-bus-L/volts eq 0
+			</test>
+		</switch>
+		<!-- Pax cabin temp -->
+		<switch name="/tu154/systems/air-cond/prib/t-sal">
+			<default value="0"/>
+			<test logic="AND" value="0">
+				/tu154/systems/electrical/buses/DC27-bus-L/volts eq 0
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/t-sal-1">
+				/tu154/systems/air-cond/sw/sw-sal-12 eq 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/t-sal-2">
+				/tu154/systems/air-cond/sw/sw-sal-12 eq 0
+			</test>
+		</switch>
+		<!-- Air pipeline temp -->
+		<switch name="/tu154/systems/air-cond/prib/t-trub">
+			<default value="0"/>
+			<test logic="AND" value="0">
+				/tu154/systems/electrical/buses/DC27-bus-L/volts eq 0
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/tt-dver">
+				/tu154/systems/air-cond/sel/sel-trub eq 0
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/tt-ekip">
+				/tu154/systems/air-cond/sel/sel-trub eq 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/tt-sal-1">
+				/tu154/systems/air-cond/sel/sel-trub eq 2
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/tt-sal-2">
+				/tu154/systems/air-cond/sel/sel-trub eq 3
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/tt-mag-left">
+				/tu154/systems/air-cond/sel/sel-trub eq 4
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/tt-mag-right">
+				/tu154/systems/air-cond/sel/sel-trub eq 5
+			</test>
+		</switch>
+		<!-- Air consumption -->
+		<switch name="/tu154/systems/air-cond/prib/p-left">
+			<default value="/tu154/systems/air-cond/variables/air-cons-l"/>
+			<test logic="AND" value="0">
+				/tu154/systems/electrical/buses/DC27-bus-L/volts eq 0
+			</test>
+		</switch>
+		<switch name="/tu154/systems/air-cond/prib/p-right">
+			<default value="/tu154/systems/air-cond/variables/air-cons-r"/>
+			<test logic="AND" value="0">
+				/tu154/systems/electrical/buses/DC27-bus-L/volts eq 0
+			</test>
+		</switch>
+		
+	</channel>
+
+
+	<!--*************************** Air consumption ****************************-->
+	<channel name="air_consumption" execrate="6">
+
+		<!-- Air pressure from APU and engines -->
+		<switch name="/tu154/systems/air-cond/variables/cons-avail">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/engines/engine[3]/running eq 1
+				/tu154/systems/APU/APU-bleed eq 5
+				/tu154/switches/startpanel-start ne 1
+			</test>
+			<test logic="AND" value="1">
+				/engines/engine[0]/running eq 1
+				/tu154/systems/air-cond/sw/sw-eng-1 eq 1
+				/engines/engine[1]/running eq 1
+				/tu154/systems/air-cond/sw/sw-eng-2 eq 1
+			</test>
+			<test logic="AND" value="1">
+				/engines/engine[1]/running eq 1
+				/tu154/systems/air-cond/sw/sw-eng-2 eq 1
+				/engines/engine[2]/running eq 1
+				/tu154/systems/air-cond/sw/sw-eng-3 eq 1
+			</test>
+			<test logic="AND" value="1">
+				/engines/engine[0]/running eq 1
+				/tu154/systems/air-cond/sw/sw-eng-1 eq 1
+				/engines/engine[2]/running eq 1
+				/tu154/systems/air-cond/sw/sw-eng-3 eq 1
+			</test>
+		</switch>
+
+		<!-- Air bleed action -->
+		<switch name="/tu154/systems/air-cond/variables/nadduv-l">
+			<default value="0"/>
+			<test logic="OR" value="-1">
+				/tu154/systems/air-cond/variables/cons-avail eq 0
+				/tu154/systems/air-cond/sw/sw-nadduv eq -1
+				/tu154/systems/air-cond/sw/sw-sbros eq 1
+				/tu154/systems/air-cond/sw/sw-psvp-l eq 0
+			</test>
+			<test logic="AND" value="1">
+				/tu154/systems/air-cond/variables/cons-avail eq 1
+				/tu154/systems/air-cond/sw/sw-nadduv eq 1
+			</test>
+		</switch>
+		<switch name="/tu154/systems/air-cond/variables/nadduv-r">
+			<default value="0"/>
+			<test logic="OR" value="-1">
+				/tu154/systems/air-cond/variables/cons-avail eq 0
+				/tu154/systems/air-cond/sw/sw-nadduv eq -1
+				/tu154/systems/air-cond/sw/sw-sbros eq 1
+				/tu154/systems/air-cond/sw/sw-psvp-r eq 0
+			</test>
+			<test logic="AND" value="1">
+				/tu154/systems/air-cond/variables/cons-avail eq 1
+				/tu154/systems/air-cond/sw/sw-nadduv eq 1
+			</test>
+		</switch>
+
+		<!-- Air consumption change -->
+		<fcs_function name="/tu154/systems/air-cond/variables/air-cons-l">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/air-cons-l</p>
+					<max>
+						<v>0.0</v>
+						<product>
+							<v>0.025</v>
+							<p>/tu154/systems/air-cond/variables/nadduv-l</p>
+						</product>
+					</max>
+					<min>
+						<v>0.0</v>
+						<product>
+							<v>0.273</v>
+							<p>/tu154/systems/air-cond/variables/nadduv-l</p>
+						</product>
+					</min>
+				</sum>
+			</function>
+			<clipto>
+				<min>0.0</min>
+				<max>5.46</max>
+			</clipto>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/air-cons-r">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/air-cons-r</p>
+					<max>
+						<v>0.0</v>
+						<product>
+							<v>0.025</v>
+							<p>/tu154/systems/air-cond/variables/nadduv-r</p>
+						</product>
+					</max>
+					<min>
+						<v>0.0</v>
+						<product>
+							<v>0.273</v>
+							<p>/tu154/systems/air-cond/variables/nadduv-r</p>
+						</product>
+					</min>
+				</sum>
+			</function>
+			<clipto>
+				<min>0.0</min>
+				<max>5.46</max>
+			</clipto>
+		</fcs_function>
+
+	</channel>
+
+
+	<!--*********************** Cabin pressure ************************-->
+	<channel name="cabin_pressure" execrate="6">
+
+		<!-- Convert outside pressure to mm hg -->
+		<pure_gain name="/tu154/systems/air-cond/variables/outside_mmhg">
+			<input>/environment/pressure-inhg</input>
+			<gain>25.401</gain><!-- / 29.92 * 760 -->
+		</pure_gain>
+
+		<!-- Get goal pressure based on maximum pressure diff inside and outside -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal_press">
+			<function>
+				<min>
+					<p>/tu154/instrumentation/altimeter[0]/mmhg</p>
+					<sum>
+						<p>/tu154/systems/air-cond/variables/outside_mmhg</p>
+						<v>460.0</v> <!-- max pressure difference -->
+					</sum>
+				</min>
+			</function>
+		</fcs_function>
+
+		<!-- Cabin pressure based on cabin effective altitude -->
+		<fcs_function name="/tu154/systems/air-cond/variables/cabin_press">
+			<function>
+				<difference>
+					<p>/tu154/instrumentation/altimeter[0]/mmhg</p>
+					<product>
+						<v>0.08</v> <!-- / 2000 * 160 -->
+						<p>/tu154/systems/air-cond/variables/alt-m</p>
+					</product>
+				</difference>
+			</function>
+		</fcs_function>
+
+		<!-- Maximum possible sealed pressure change up -->
+		<fcs_function name="/tu154/systems/air-cond/variables/max_d_p_iter">
+			<function>
+				<product>
+					<v>0.0533</v> <!-- / 3000 * 160 -->
+					<sum>
+						<v>-2.0</v>
+						<product>
+							<v>0.5</v>
+							<sum>
+								<p>/tu154/systems/air-cond/variables/air-cons-l</p>
+								<p>/tu154/systems/air-cond/variables/air-cons-r</p>
+							</sum>
+						</product>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+		<!-- Check if unsealed -->
+		<switch name="/tu154/systems/air-cond/variables/unsealed">
+			<default value="0"/>
+			<test logic="OR" value="1">
+				/tu154/door/passe gt 0
+				/tu154/door/cargo0 gt 0
+				/tu154/door/cargo1 gt 0
+				/tu154/door/window-left gt 0
+				/tu154/door/window-right gt 0
+			</test>
+		</switch>
+		<switch name="/tu154/systems/air-cond/variables/max_d_p_iter">
+			<default value="/tu154/systems/air-cond/variables/max_d_p_iter"/>
+			<test logic="AND" value="-4">
+				/tu154/systems/air-cond/variables/unsealed eq 1
+				/tu154/systems/air-cond/variables/outside_mmhg lt /tu154/systems/air-cond/variables/cabin_press
+			</test>
+			<test logic="AND" value="4">
+				/tu154/systems/air-cond/variables/unsealed eq 1
+				/tu154/systems/air-cond/variables/outside_mmhg gt /tu154/systems/air-cond/variables/cabin_press
+			</test>
+		</switch>
+		<!-- Clip to goal pressure -->
+		<fcs_function name="/tu154/systems/air-cond/variables/diff_to_goal">
+			<function>
+				<difference>
+					<p>/tu154/systems/air-cond/variables/goal_press</p>
+					<p>/tu154/systems/air-cond/variables/cabin_press</p>
+				</difference>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/diff_to_outside">
+			<function>
+				<difference>
+					<p>/tu154/systems/air-cond/variables/outside_mmhg</p>
+					<p>/tu154/systems/air-cond/variables/cabin_press</p>
+				</difference>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/d_p_iter">
+			<default value="/tu154/systems/air-cond/variables/max_d_p_iter"/>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/diff_to_goal">
+				/tu154/systems/air-cond/variables/max_d_p_iter gt 0
+				/tu154/systems/air-cond/variables/diff_to_goal lt /tu154/systems/air-cond/variables/max_d_p_iter
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/diff_to_outside">
+				/tu154/systems/air-cond/variables/max_d_p_iter lt 0
+				/tu154/systems/air-cond/variables/diff_to_outside gt /tu154/systems/air-cond/variables/max_d_p_iter
+			</test>
+		</switch>
+
+		<!-- Iter cabin pressure -->
+		<summer name="/tu154/systems/air-cond/variables/cabin_press">
+			<input>/tu154/systems/air-cond/variables/cabin_press</input>
+			<input>/tu154/systems/air-cond/variables/d_p_iter</input>
+		</summer>
+
+		<!-- Set new variables -->
+		<fcs_function name="/tu154/systems/air-cond/variables/vs">
+			<function>
+				<product>
+					<v>-250</v> <!-- / 160 * 2000 * 20 -->
+					<p>/tu154/systems/air-cond/variables/d_p_iter</p>
+					<p>/tu154/systems/air-cond/run</p>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/d-p">
+			<function>
+				<product>
+					<v>0.00132</v> <!-- / 760 -->
+					<difference>
+						<p>/tu154/systems/air-cond/variables/cabin_press</p>
+						<p>/tu154/systems/air-cond/variables/outside_mmhg</p>
+					</difference>
+					<p>/tu154/systems/air-cond/run</p>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/alt-m">
+			<function>
+				<product>
+					<v>12.5</v> <!-- / 160 * 2000 -->
+					<difference>
+						<p>/tu154/instrumentation/altimeter[0]/mmhg</p>
+						<p>/tu154/systems/air-cond/variables/cabin_press</p>
+					</difference>
+					<p>/tu154/systems/air-cond/run</p>
+				</product>
+			</function>
+		</fcs_function>
+
+	</channel>
+
+
+	<!--*********************** VS smoothing ************************-->
+	<channel name="vs_smoothing" execrate="6">
+
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n20"><input>/tu154/systems/air-cond/prib/vs/n19</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n19"><input>/tu154/systems/air-cond/prib/vs/n18</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n18"><input>/tu154/systems/air-cond/prib/vs/n17</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n17"><input>/tu154/systems/air-cond/prib/vs/n16</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n16"><input>/tu154/systems/air-cond/prib/vs/n15</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n15"><input>/tu154/systems/air-cond/prib/vs/n14</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n14"><input>/tu154/systems/air-cond/prib/vs/n13</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n13"><input>/tu154/systems/air-cond/prib/vs/n12</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n12"><input>/tu154/systems/air-cond/prib/vs/n11</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n11"><input>/tu154/systems/air-cond/prib/vs/n10</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n10"><input>/tu154/systems/air-cond/prib/vs/n9</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n9"><input>/tu154/systems/air-cond/prib/vs/n8</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n8"><input>/tu154/systems/air-cond/prib/vs/n7</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n7"><input>/tu154/systems/air-cond/prib/vs/n6</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n6"><input>/tu154/systems/air-cond/prib/vs/n5</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n5"><input>/tu154/systems/air-cond/prib/vs/n4</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n4"><input>/tu154/systems/air-cond/prib/vs/n3</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n3"><input>/tu154/systems/air-cond/prib/vs/n2</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n2"><input>/tu154/systems/air-cond/prib/vs/n1</input><gain>1.0</gain></pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/prib/vs/n1"><input>/tu154/systems/air-cond/variables/vs</input><gain>1.0</gain></pure_gain>
+		<fcs_function name="/tu154/systems/air-cond/prib/vs/avg">
+			<function>
+				<avg>
+					<p>/tu154/systems/air-cond/prib/vs/n1</p>
+					<p>/tu154/systems/air-cond/prib/vs/n2</p>
+					<p>/tu154/systems/air-cond/prib/vs/n3</p>
+					<p>/tu154/systems/air-cond/prib/vs/n4</p>
+					<p>/tu154/systems/air-cond/prib/vs/n5</p>
+					<p>/tu154/systems/air-cond/prib/vs/n6</p>
+					<p>/tu154/systems/air-cond/prib/vs/n7</p>
+					<p>/tu154/systems/air-cond/prib/vs/n8</p>
+					<p>/tu154/systems/air-cond/prib/vs/n9</p>
+					<p>/tu154/systems/air-cond/prib/vs/n10</p>
+					<p>/tu154/systems/air-cond/prib/vs/n11</p>
+					<p>/tu154/systems/air-cond/prib/vs/n12</p>
+					<p>/tu154/systems/air-cond/prib/vs/n13</p>
+					<p>/tu154/systems/air-cond/prib/vs/n14</p>
+					<p>/tu154/systems/air-cond/prib/vs/n15</p>
+					<p>/tu154/systems/air-cond/prib/vs/n16</p>
+					<p>/tu154/systems/air-cond/prib/vs/n17</p>
+					<p>/tu154/systems/air-cond/prib/vs/n18</p>
+					<p>/tu154/systems/air-cond/prib/vs/n19</p>
+					<p>/tu154/systems/air-cond/prib/vs/n20</p>
+				</avg>
+			</function>
+		</fcs_function>
+
+	</channel>
+	
+</system>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- PKP shared -->
+  <filter>
+    <name>Cabin VS</name>
+    <type>double-exponential</type>
+    <filter-time>1.0</filter-time>
+    <input>tu154/systems/air-cond/prib/vs/avg</input>
+    <output>tu154/systems/air-cond/prib/vs/anim</output>
+  </filter>
+
+</PropertyList>

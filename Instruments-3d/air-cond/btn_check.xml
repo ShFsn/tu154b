@@ -20,7 +20,7 @@
   <animation>
     <type>translate</type>
     <object-name>button</object-name>
-    <property>tu154/air-cond/btn-check</property>  
+    <property>tu154/systems/air-cond/btn-check</property>  
     <factor>0.002</factor>
     <axis>
       <x>-1.0</x>
@@ -38,13 +38,13 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-assign</command>
-        <property>tu154/air-cond/btn-check</property>
+        <property>tu154/systems/air-cond/btn-check</property>
         <value>1</value>
       </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>tu154/air-cond/btn-check</property>
+          <property>tu154/systems/air-cond/btn-check</property>
           <value>0</value>
         </binding>
       </mod-up>

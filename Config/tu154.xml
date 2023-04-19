@@ -287,6 +287,91 @@
         <absu_warn type="double" >0.0</absu_warn>
       </alarm>
     </warning>
+    <air-cond>
+      <l-ovheat type="float">0</l-ovheat>
+      <l-press-left type="float">0</l-press-left>
+      <l-press-right type="float">0</l-press-right>
+      <l-cargo-ovheat type="float">0</l-cargo-ovheat>
+      <btn-check type="float">0</btn-check>
+      <pressure-sync type="bool">1</pressure-sync>
+      <sw>
+        <sw-sal-12 type="double">1</sw-sal-12>
+        <sw-eng-1 type="double">0</sw-eng-1>
+        <sw-eng-2 type="double">0</sw-eng-2>
+        <sw-eng-3 type="double">0</sw-eng-3>
+        <sw-art type="double">0</sw-art>
+        <sw-cargo type="double">0</sw-cargo>
+        <sw-srd type="double">0</sw-srd>
+        <sw-srd-cover type="double">0</sw-srd-cover>
+        <sw-psvp-l type="double">0</sw-psvp-l>
+        <sw-psvp-l-cover type="double">0</sw-psvp-l-cover>
+        <sw-psvp-r type="double">0</sw-psvp-r>
+        <sw-psvp-r-cover type="double">0</sw-psvp-r-cover>
+        <sw-sbros type="double">0</sw-sbros>
+        <sw-sbros-cover type="double">0</sw-sbros-cover>
+        <sw-ard type="double">0</sw-ard>
+        <sw-ard-cover type="double">0</sw-ard-cover>
+        <sw-nadduv type="double">0</sw-nadduv>
+      </sw>
+      <swt>
+        <swt-cabin-aut type="double">0</swt-cabin-aut>
+        <swt-cabin-hol type="double">0</swt-cabin-hol>
+        <swt-cabin-gor type="double">0</swt-cabin-gor>
+        <swt-sal-1-aut type="double">0</swt-sal-1-aut>
+        <swt-sal-1-hol type="double">0</swt-sal-1-hol>
+        <swt-sal-1-gor type="double">0</swt-sal-1-gor>
+        <swt-sal-2-aut type="double">0</swt-sal-2-aut>
+        <swt-sal-2-hol type="double">0</swt-sal-2-hol>
+        <swt-sal-2-gor type="double">0</swt-sal-2-gor>
+        <swt-th-left-aut type="double">0</swt-th-left-aut>
+        <swt-th-left-hol type="double">0</swt-th-left-hol>
+        <swt-th-left-gor type="double">0</swt-th-left-gor>
+        <swt-vvr-left-aut type="double">0</swt-vvr-left-aut>
+        <swt-vvr-left-hol type="double">0</swt-vvr-left-hol>
+        <swt-vvr-left-gor type="double">0</swt-vvr-left-gor>
+        <swt-th-right-aut type="double">0</swt-th-right-aut>
+        <swt-th-right-hol type="double">0</swt-th-right-hol>
+        <swt-th-right-gor type="double">0</swt-th-right-gor>
+        <swt-vvr-right-aut type="double">0</swt-vvr-right-aut>
+        <swt-vvr-right-hol type="double">0</swt-vvr-right-hol>
+        <swt-vvr-right-gor type="double">0</swt-vvr-right-gor>
+      </swt>
+      <sel>
+        <sel-cabin type="double">15</sel-cabin>
+        <sel-sal-1 type="double">15</sel-sal-1>
+        <sel-sal-2 type="double">15</sel-sal-2>
+        <sel-mag-left type="double">15</sel-mag-left>
+        <sel-mag-right type="double">15</sel-mag-right>
+        <sel-trub type="double">1</sel-trub>
+      </sel>
+      <prib>
+        <alt-m type="double">0</alt-m>
+        <delta-alt type="double">0</delta-alt>
+        <d-p type="double">0</d-p>
+        <t-cab type="double">0</t-cab>
+        <t-sal type="double">0</t-sal>
+        <t-trub type="double">0</t-trub>
+        <p-left type="double">0</p-left>
+        <p-right type="double">0</p-right>
+      </prib>
+      <variables>
+        <vs type="double">0</vs>
+        <d-p type="double">0</d-p>
+        <alt-m type="double">0</alt-m>
+        <t-cab type="double">0</t-cab>
+        <t-sal-1 type="double">0</t-sal-1>
+        <t-sal-2 type="double">0</t-sal-2>
+        <tt-dver type="double">0</tt-dver>
+        <tt-ekip type="double">0</tt-ekip>
+        <tt-sal-1 type="double">0</tt-sal-1>
+        <tt-sal-2 type="double">0</tt-sal-2>
+        <tt-mag-left type="double">0</tt-mag-left>
+        <tt-mag-right type="double">0</tt-mag-right>
+        <air-cons-l type="double">0</air-cons-l>
+        <air-cons-r type="double">0</air-cons-r>
+      </variables>
+      <run type="double">0.0</run>
+    </air-cond>
   </systems>
   <switches>
     <adf-1-selector type="double" >0.0</adf-1-selector>
@@ -389,91 +474,6 @@
   <refuel>
     <btn-check type="int">0</btn-check>
   </refuel>
-
-  <air-cond>
-    <l-ovheat type="float">0</l-ovheat>
-    <l-press-left type="float">0</l-press-left>
-    <l-press-right type="float">0</l-press-right>
-    <l-cargo-ovheat type="float">0</l-cargo-ovheat>
-    <btn-check type="float">0</btn-check>
-    <pressure-sync type="bool">1</pressure-sync>
-    <sw>
-      <sw-sal-12 type="double">1</sw-sal-12>
-      <sw-eng-1 type="double">0</sw-eng-1>
-      <sw-eng-2 type="double">0</sw-eng-2>
-      <sw-eng-3 type="double">0</sw-eng-3>
-      <sw-art type="double">0</sw-art>
-      <sw-cargo type="double">0</sw-cargo>
-      <sw-srd type="double">0</sw-srd>
-      <sw-srd-cover type="double">0</sw-srd-cover>
-      <sw-psvp-l type="double">0</sw-psvp-l>
-      <sw-psvp-l-cover type="double">0</sw-psvp-l-cover>
-      <sw-psvp-r type="double">0</sw-psvp-r>
-      <sw-psvp-r-cover type="double">0</sw-psvp-r-cover>
-      <sw-sbros type="double">0</sw-sbros>
-      <sw-sbros-cover type="double">0</sw-sbros-cover>
-      <sw-ard type="double">0</sw-ard>
-      <sw-ard-cover type="double">0</sw-ard-cover>
-      <sw-nadduv type="double">0</sw-nadduv>
-    </sw>
-    <swt>
-      <swt-cabin-aut type="double">0</swt-cabin-aut>
-      <swt-cabin-hol type="double">0</swt-cabin-hol>
-      <swt-cabin-gor type="double">0</swt-cabin-gor>
-      <swt-sal-1-aut type="double">0</swt-sal-1-aut>
-      <swt-sal-1-hol type="double">0</swt-sal-1-hol>
-      <swt-sal-1-gor type="double">0</swt-sal-1-gor>
-      <swt-sal-2-aut type="double">0</swt-sal-2-aut>
-      <swt-sal-2-hol type="double">0</swt-sal-2-hol>
-      <swt-sal-2-gor type="double">0</swt-sal-2-gor>
-      <swt-th-left-aut type="double">0</swt-th-left-aut>
-      <swt-th-left-hol type="double">0</swt-th-left-hol>
-      <swt-th-left-gor type="double">0</swt-th-left-gor>
-      <swt-vvr-left-aut type="double">0</swt-vvr-left-aut>
-      <swt-vvr-left-hol type="double">0</swt-vvr-left-hol>
-      <swt-vvr-left-gor type="double">0</swt-vvr-left-gor>
-      <swt-th-right-aut type="double">0</swt-th-right-aut>
-      <swt-th-right-hol type="double">0</swt-th-right-hol>
-      <swt-th-right-gor type="double">0</swt-th-right-gor>
-      <swt-vvr-right-aut type="double">0</swt-vvr-right-aut>
-      <swt-vvr-right-hol type="double">0</swt-vvr-right-hol>
-      <swt-vvr-right-gor type="double">0</swt-vvr-right-gor>
-    </swt>
-    <sel>
-      <sel-cabin type="double">15</sel-cabin>
-      <sel-sal-1 type="double">15</sel-sal-1>
-      <sel-sal-2 type="double">15</sel-sal-2>
-      <sel-mag-left type="double">15</sel-mag-left>
-      <sel-mag-right type="double">15</sel-mag-right>
-      <sel-trub type="double">1</sel-trub>
-    </sel>
-    <prib>
-      <alt-m type="double">0</alt-m>
-      <delta-alt type="double">0</delta-alt>
-      <d-p type="double">0</d-p>
-      <t-cab type="double">0</t-cab>
-      <t-sal type="double">0</t-sal>
-      <t-trub type="double">0</t-trub>
-      <p-left type="double">0</p-left>
-      <p-right type="double">0</p-right>
-    </prib>
-    <variables>
-      <vs type="double">0</vs>
-      <d-p type="double">0</d-p>
-      <alt-m type="double">0</alt-m>
-      <t-cab type="double">0</t-cab>
-      <t-sal-1 type="double">0</t-sal-1>
-      <t-sal-2 type="double">0</t-sal-2>
-      <tt-dver type="double">0</tt-dver>
-      <tt-ekip type="double">0</tt-ekip>
-      <tt-sal-1 type="double">0</tt-sal-1>
-      <tt-sal-2 type="double">0</tt-sal-2>
-      <tt-mag-left type="double">0</tt-mag-left>
-      <tt-mag-right type="double">0</tt-mag-right>
-      <air-cons-l type="double">0</air-cons-l>
-      <air-cons-r type="double">0</air-cons-r>
-    </variables>
-  </air-cond>
 
   <options>
 

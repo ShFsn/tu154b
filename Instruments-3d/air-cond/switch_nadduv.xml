@@ -32,7 +32,7 @@
 <animation>
   <type>rotate</type>
   <object-name>handle1</object-name>
-  <property>tu154/air-cond/sw/sw-nadduv</property>  
+  <property>tu154/systems/air-cond/sw/sw-nadduv</property>  
   <interpolation>
     <entry><ind>	-1.0</ind>	<dep>	-60.0</dep></entry>
     <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
@@ -47,7 +47,7 @@
 <animation>
   <type>rotate</type>
   <object-name>handle2</object-name>
-  <property>tu154/air-cond/sw/sw-nadduv</property>  
+  <property>tu154/systems/air-cond/sw/sw-nadduv</property>  
   <interpolation>
     <entry><ind>  -1.0</ind>  <dep> -60.0</dep></entry>
     <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
@@ -70,14 +70,14 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-interpolate</command>
-      <property>tu154/air-cond/sw/sw-nadduv</property>
+      <property>tu154/systems/air-cond/sw/sw-nadduv</property>
       <value>1</value>
       <time>0.1</time>
     </binding>
     <mod-up>
       <binding>
         <command>property-interpolate</command>
-        <property>tu154/air-cond/sw/sw-nadduv</property>
+        <property>tu154/systems/air-cond/sw/sw-nadduv</property>
         <value>0</value>
         <time>0.1</time>
       </binding>
@@ -93,14 +93,14 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-interpolate</command>
-      <property>tu154/air-cond/sw/sw-nadduv</property>
+      <property>tu154/systems/air-cond/sw/sw-nadduv</property>
       <value>0</value>
       <time>0.1</time>
     </binding>
     <!--<mod-up>
       <binding>
         <command>property-interpolate</command>
-        <property>tu154/air-cond/sw/sw-nadduv</property>
+        <property>tu154/systems/air-cond/sw/sw-nadduv</property>
         <value>0</value>
         <time>0.1</time>
       </binding>
@@ -116,14 +116,14 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-interpolate</command>
-      <property>tu154/air-cond/sw/sw-nadduv</property>
+      <property>tu154/systems/air-cond/sw/sw-nadduv</property>
       <value>-1</value>
       <time>0.1</time>
     </binding>
     <!--<mod-up>
       <binding>
         <command>property-interpolate</command>
-        <property>tu154/air-cond/sw/sw-nadduv</property>
+        <property>tu154/systems/air-cond/sw/sw-nadduv</property>
         <value>0</value>
         <time>0.1</time>
       </binding>

@@ -1104,6 +1104,7 @@
     <system file="hydrosystems"/>
     <system file="instrumentation"/>
     <system file="nvu"/>
+    <system file="air-conditioning"/>
     <autopilot file="Systems/absu154"/>
     
     <system file="tu154b-rollshake"/>

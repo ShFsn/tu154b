@@ -31,7 +31,7 @@
 <animation>
   <type>knob</type>
   <object-name>handle</object-name>
-  <!--<property>/tu154/air-cond/sel-trub</property>-->
+  <!--<property>/tu154/systems/air-cond/sel-trub</property>-->
   <property alias="../../params/handle"/>
   <!--<interpolation>
     <entry><ind>  0.0</ind> <dep> -135.0</dep></entry>
@@ -53,7 +53,7 @@
   <action>
     <binding>
       <command>property-adjust</command>
-      <!--<property>/tu154/air-cond/sel-trub</property>-->
+      <!--<property>/tu154/systems/air-cond/sel-trub</property>-->
       <property alias="../../../../params/handle"/>
       <factor>1</factor>
       <min>0</min>
@@ -65,7 +65,7 @@
 <animation>
   <type>rotate</type>
   <object-name>handle</object-name>
-  <!--<property>/tu154/air-cond/sel-trub</property>-->
+  <!--<property>/tu154/systems/air-cond/sel-trub</property>-->
   <property alias="../../params/handle"/>
   <interpolation>
     <entry><ind>  0.0</ind> <dep> -135.0</dep></entry>

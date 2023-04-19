@@ -7,7 +7,7 @@
     <path>lamp.xml</path>
     <overlay>
       <params>
-        <lamp>/tu154/air-cond/l-ovheat</lamp>
+        <lamp>tu154/systems/air-cond/l-ovheat</lamp>
       </params>
     </overlay>
     <offsets>
@@ -23,7 +23,7 @@
     <path>lamp.xml</path>
     <overlay>
       <params>
-        <lamp>/tu154/air-cond/l-press-left</lamp>
+        <lamp>tu154/systems/air-cond/l-press-left</lamp>
         <model>lamp_red.ac</model>
       </params>
     </overlay>
@@ -40,7 +40,7 @@
     <path>lamp.xml</path>
     <overlay>
       <params>
-        <lamp>/tu154/air-cond/l-press-right</lamp>
+        <lamp>tu154/systems/air-cond/l-press-right</lamp>
         <model>lamp_red.ac</model>
       </params>
     </overlay>
@@ -57,7 +57,7 @@
     <path>lamp.xml</path>
     <overlay>
       <params>
-        <lamp>/tu154/air-cond/l-cargo-ovheat</lamp>
+        <lamp>tu154/systems/air-cond/l-cargo-ovheat</lamp>
       </params>
     </overlay>
     <offsets>
@@ -87,7 +87,7 @@
     <path>switch.xml</path>
     <overlay>
       <params>
-        <switch>tu154/air-cond/sw/sw-sal-12</switch>
+        <switch>tu154/systems/air-cond/sw/sw-sal-12</switch>
       </params>
     </overlay>
     <offsets>
@@ -102,7 +102,7 @@
     <path>switch.xml</path>
     <overlay>
       <params>
-        <switch>tu154/air-cond/sw/sw-eng-1</switch>
+        <switch>tu154/systems/air-cond/sw/sw-eng-1</switch>
       </params>
     </overlay>
     <offsets>
@@ -118,7 +118,7 @@
     <path>switch.xml</path>
     <overlay>
       <params>
-        <switch>tu154/air-cond/sw/sw-eng-2</switch>
+        <switch>tu154/systems/air-cond/sw/sw-eng-2</switch>
       </params>
     </overlay>
     <offsets>
@@ -134,7 +134,7 @@
     <path>switch.xml</path>
     <overlay>
       <params>
-        <switch>tu154/air-cond/sw/sw-eng-3</switch>
+        <switch>tu154/systems/air-cond/sw/sw-eng-3</switch>
       </params>
     </overlay>
     <offsets>
@@ -150,7 +150,7 @@
     <path>switch.xml</path>
     <overlay>
       <params>
-        <switch>tu154/air-cond/sw/sw-art</switch>
+        <switch>tu154/systems/air-cond/sw/sw-art</switch>
       </params>
     </overlay>
     <offsets>
@@ -166,7 +166,7 @@
     <path>switch.xml</path>
     <overlay>
       <params>
-        <switch>tu154/air-cond/sw/sw-cargo</switch>
+        <switch>tu154/systems/air-cond/sw/sw-cargo</switch>
       </params>
     </overlay>
     <offsets>
@@ -182,8 +182,8 @@
     <path>switch_cov.xml</path>
     <overlay>
       <params>
-        <switch>/tu154/air-cond/sw/sw-srd</switch>
-        <cover>/tu154/air-cond/sw/sw-srd-cover</cover>
+        <switch>tu154/systems/air-cond/sw/sw-srd</switch>
+        <cover>tu154/systems/air-cond/sw/sw-srd-cover</cover>
         <model>switch_doubler.ac</model>
       </params>
     </overlay>
@@ -200,8 +200,8 @@
     <path>switch_cov.xml</path>
     <overlay>
       <params>
-        <switch>/tu154/air-cond/sw/sw-psvp-l</switch>
-        <cover>/tu154/air-cond/sw/sw-psvp-l-cover</cover>
+        <switch>tu154/systems/air-cond/sw/sw-psvp-l</switch>
+        <cover>tu154/systems/air-cond/sw/sw-psvp-l-cover</cover>
         <model>switch_psvp.ac</model>
       </params>
     </overlay>
@@ -218,8 +218,8 @@
     <path>switch_cov.xml</path>
     <overlay>
       <params>
-        <switch>/tu154/air-cond/sw/sw-psvp-r</switch>
-        <cover>/tu154/air-cond/sw/sw-psvp-r-cover</cover>
+        <switch>tu154/systems/air-cond/sw/sw-psvp-r</switch>
+        <cover>tu154/systems/air-cond/sw/sw-psvp-r-cover</cover>
         <model>switch_psvp.ac</model>
       </params>
     </overlay>
@@ -236,8 +236,8 @@
     <path>switch_cov.xml</path>
     <overlay>
       <params>
-        <switch>/tu154/air-cond/sw/sw-sbros</switch>
-        <cover>/tu154/air-cond/sw/sw-sbros-cover</cover>
+        <switch>tu154/systems/air-cond/sw/sw-sbros</switch>
+        <cover>tu154/systems/air-cond/sw/sw-sbros-cover</cover>
         <model>switch_sbros.ac</model>
       </params>
     </overlay>
@@ -254,8 +254,8 @@
     <path>switch_cov.xml</path>
     <overlay>
       <params>
-        <switch>/tu154/air-cond/sw/sw-ard</switch>
-        <cover>/tu154/air-cond/sw/sw-ard-cover</cover>
+        <switch>tu154/systems/air-cond/sw/sw-ard</switch>
+        <cover>tu154/systems/air-cond/sw/sw-ard-cover</cover>
         <model>switch_doubler.ac</model>
       </params>
     </overlay>
@@ -285,9 +285,9 @@
     <path>switch-triple.xml</path>
     <overlay>
       <params>
-        <switch-aut>/tu154/air-cond/swt/swt-cabin-aut</switch-aut>
-        <switch-hol>/tu154/air-cond/swt/swt-cabin-hol</switch-hol>
-        <switch-gor>/tu154/air-cond/swt/swt-cabin-gor</switch-gor>
+        <switch-aut>tu154/systems/air-cond/swt/swt-cabin-aut</switch-aut>
+        <switch-hol>tu154/systems/air-cond/swt/swt-cabin-hol</switch-hol>
+        <switch-gor>tu154/systems/air-cond/swt/swt-cabin-gor</switch-gor>
       </params>
     </overlay>
     <offsets>
@@ -302,9 +302,9 @@
     <path>switch-triple.xml</path>
     <overlay>
       <params>
-        <switch-aut>/tu154/air-cond/swt/swt-sal-1-aut</switch-aut>
-        <switch-hol>/tu154/air-cond/swt/swt-sal-1-hol</switch-hol>
-        <switch-gor>/tu154/air-cond/swt/swt-sal-1-gor</switch-gor>
+        <switch-aut>tu154/systems/air-cond/swt/swt-sal-1-aut</switch-aut>
+        <switch-hol>tu154/systems/air-cond/swt/swt-sal-1-hol</switch-hol>
+        <switch-gor>tu154/systems/air-cond/swt/swt-sal-1-gor</switch-gor>
       </params>
     </overlay>
     <offsets>
@@ -319,9 +319,9 @@
     <path>switch-triple.xml</path>
     <overlay>
       <params>
-        <switch-aut>/tu154/air-cond/swt/swt-sal-2-aut</switch-aut>
-        <switch-hol>/tu154/air-cond/swt/swt-sal-2-hol</switch-hol>
-        <switch-gor>/tu154/air-cond/swt/swt-sal-2-gor</switch-gor>
+        <switch-aut>tu154/systems/air-cond/swt/swt-sal-2-aut</switch-aut>
+        <switch-hol>tu154/systems/air-cond/swt/swt-sal-2-hol</switch-hol>
+        <switch-gor>tu154/systems/air-cond/swt/swt-sal-2-gor</switch-gor>
       </params>
     </overlay>
     <offsets>
@@ -336,9 +336,9 @@
     <path>switch-triple.xml</path>
     <overlay>
       <params>
-        <switch-aut>/tu154/air-cond/swt/swt-th-left-aut</switch-aut>
-        <switch-hol>/tu154/air-cond/swt/swt-th-left-hol</switch-hol>
-        <switch-gor>/tu154/air-cond/swt/swt-th-left-gor</switch-gor>
+        <switch-aut>tu154/systems/air-cond/swt/swt-th-left-aut</switch-aut>
+        <switch-hol>tu154/systems/air-cond/swt/swt-th-left-hol</switch-hol>
+        <switch-gor>tu154/systems/air-cond/swt/swt-th-left-gor</switch-gor>
       </params>
     </overlay>
     <offsets>
@@ -353,9 +353,9 @@
     <path>switch-triple.xml</path>
     <overlay>
       <params>
-        <switch-aut>/tu154/air-cond/swt/swt-vvr-left-aut</switch-aut>
-        <switch-hol>/tu154/air-cond/swt/swt-vvr-left-hol</switch-hol>
-        <switch-gor>/tu154/air-cond/swt/swt-vvr-left-gor</switch-gor>
+        <switch-aut>tu154/systems/air-cond/swt/swt-vvr-left-aut</switch-aut>
+        <switch-hol>tu154/systems/air-cond/swt/swt-vvr-left-hol</switch-hol>
+        <switch-gor>tu154/systems/air-cond/swt/swt-vvr-left-gor</switch-gor>
       </params>
     </overlay>
     <offsets>
@@ -370,9 +370,9 @@
     <path>switch-triple.xml</path>
     <overlay>
       <params>
-        <switch-aut>/tu154/air-cond/swt/swt-th-right-aut</switch-aut>
-        <switch-hol>/tu154/air-cond/swt/swt-th-right-hol</switch-hol>
-        <switch-gor>/tu154/air-cond/swt/swt-th-right-gor</switch-gor>
+        <switch-aut>tu154/systems/air-cond/swt/swt-th-right-aut</switch-aut>
+        <switch-hol>tu154/systems/air-cond/swt/swt-th-right-hol</switch-hol>
+        <switch-gor>tu154/systems/air-cond/swt/swt-th-right-gor</switch-gor>
       </params>
     </overlay>
     <offsets>
@@ -387,9 +387,9 @@
     <path>switch-triple.xml</path>
     <overlay>
       <params>
-        <switch-aut>/tu154/air-cond/swt/swt-vvr-right-aut</switch-aut>
-        <switch-hol>/tu154/air-cond/swt/swt-vvr-right-hol</switch-hol>
-        <switch-gor>/tu154/air-cond/swt/swt-vvr-right-gor</switch-gor>
+        <switch-aut>tu154/systems/air-cond/swt/swt-vvr-right-aut</switch-aut>
+        <switch-hol>tu154/systems/air-cond/swt/swt-vvr-right-hol</switch-hol>
+        <switch-gor>tu154/systems/air-cond/swt/swt-vvr-right-gor</switch-gor>
       </params>
     </overlay>
     <offsets>
@@ -406,7 +406,7 @@
     <path>hand1.xml</path>
     <overlay>
       <params>
-        <handle>/tu154/air-cond/sel/sel-cabin</handle>
+        <handle>tu154/systems/air-cond/sel/sel-cabin</handle>
       </params>
     </overlay>
     <offsets>
@@ -421,7 +421,7 @@
     <path>hand1.xml</path>
     <overlay>
       <params>
-        <handle>/tu154/air-cond/sel/sel-sal-1</handle>
+        <handle>tu154/systems/air-cond/sel/sel-sal-1</handle>
       </params>
     </overlay>
     <offsets>
@@ -436,7 +436,7 @@
     <path>hand1.xml</path>
     <overlay>
       <params>
-        <handle>/tu154/air-cond/sel/sel-sal-2</handle>
+        <handle>tu154/systems/air-cond/sel/sel-sal-2</handle>
       </params>
     </overlay>
     <offsets>
@@ -451,7 +451,7 @@
     <path>hand1.xml</path>
     <overlay>
       <params>
-        <handle>/tu154/air-cond/sel/sel-mag-left</handle>
+        <handle>tu154/systems/air-cond/sel/sel-mag-left</handle>
       </params>
     </overlay>
     <offsets>
@@ -466,7 +466,7 @@
     <path>hand1.xml</path>
     <overlay>
       <params>
-        <handle>/tu154/air-cond/sel/sel-mag-right</handle>
+        <handle>tu154/systems/air-cond/sel/sel-mag-right</handle>
       </params>
     </overlay>
     <offsets>
@@ -481,7 +481,7 @@
     <path>hand2.xml</path>
     <overlay>
       <params>
-        <handle>/tu154/air-cond/sel/sel-trub</handle>
+        <handle>tu154/systems/air-cond/sel/sel-trub</handle>
       </params>
     </overlay>
     <offsets>
@@ -498,8 +498,8 @@
     <path>Aircraft/tu154b/Instruments-3d/air-cond/uv-cond/uv-cond.xml</path>
     <overlay>
       <params>
-        <param1>/tu154/air-cond/prib/alt-m</param1>
-        <param2>/tu154/air-cond/prib/d-p</param2>
+        <param1>tu154/systems/air-cond/prib/alt-m</param1>
+        <param2>tu154/systems/air-cond/prib/d-p</param2>
       </params>
     </overlay>
     <offsets>
@@ -514,7 +514,7 @@
     <path>Aircraft/tu154b/Instruments-3d/air-cond/var/var-30mk.xml</path>
     <overlay>
       <params>
-        <param>/tu154/air-cond/prib/delta-alt</param>
+        <param>tu154/systems/air-cond/prib/delta-alt</param>
       </params>
     </overlay>
     <offsets>
@@ -529,7 +529,7 @@
     <path>Aircraft/tu154b/Instruments-3d/air-cond/tnv-15-cond/tnv-15.xml</path>
     <overlay>
       <params>
-        <param>/tu154/air-cond/prib/t-cab</param>
+        <param>tu154/systems/air-cond/prib/t-cab</param>
       </params>
     </overlay>
     <offsets>
@@ -544,7 +544,7 @@
     <path>Aircraft/tu154b/Instruments-3d/air-cond/tnv-15-cond/tnv-15.xml</path>
     <overlay>
       <params>
-        <param>/tu154/air-cond/prib/t-sal</param>
+        <param>tu154/systems/air-cond/prib/t-sal</param>
       </params>
     </overlay>
     <offsets>
@@ -559,7 +559,7 @@
     <path>Aircraft/tu154b/Instruments-3d/air-cond/t-trub-cond/t-trub.xml</path>
     <overlay>
       <params>
-        <param>/tu154/air-cond/prib/t-trub</param>
+        <param>tu154/systems/air-cond/prib/t-trub</param>
       </params>
     </overlay>
     <offsets>
@@ -574,7 +574,7 @@
     <path>Aircraft/tu154b/Instruments-3d/air-cond/p-cond/press.xml</path>
     <overlay>
       <params>
-        <param>/tu154/air-cond/prib/p-left</param>
+        <param>tu154/systems/air-cond/prib/p-left</param>
       </params>
     </overlay>
     <offsets>
@@ -590,7 +590,7 @@
     <path>Aircraft/tu154b/Instruments-3d/air-cond/p-cond/press.xml</path>
     <overlay>
       <params>
-        <param>/tu154/air-cond/prib/p-right</param>
+        <param>tu154/systems/air-cond/prib/p-right</param>
       </params>
     </overlay>
     <offsets>
