@@ -1,4 +1,5 @@
-<system name="Tu-154B-2: Rollshake">
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="Tu-154B-2: Air Conditioning">
 
 	<!--***************************** Indicators *******************************-->
 	<channel name="indicators_func" execrate="4">
@@ -394,6 +395,683 @@
 				</avg>
 			</function>
 		</fcs_function>
+
+	</channel>
+
+
+	<!--************************* Temperatures **************************-->
+	<channel name="temperatures_calc" execrate="12">
+
+		<!-- Calculate selectors -->
+		<fcs_function name="/tu154/systems/air-cond/variables/sel-cabin">
+			<function>
+				<sum>
+					<v>-10.0</v>
+					<product>
+						<v>2.0</v>
+						<p>/tu154/systems/air-cond/sel/sel-cabin</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/sel-sal-1">
+			<function>
+				<sum>
+					<v>-10.0</v>
+					<product>
+						<v>2.0</v>
+						<p>/tu154/systems/air-cond/sel/sel-sal-1</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/sel-sal-2">
+			<function>
+				<sum>
+					<v>-10.0</v>
+					<product>
+						<v>2.0</v>
+						<p>/tu154/systems/air-cond/sel/sel-sal-2</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/sel-mag-left">
+			<function>
+				<product>
+					<v>0.5</v>
+					<sum>
+						<v>-10.0</v>
+						<product>
+							<v>2.0</v>
+							<p>/tu154/systems/air-cond/sel/sel-mag-left</p>
+						</product>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/sel-mag-right">
+			<function>
+				<product>
+					<v>0.5</v>
+					<sum>
+						<v>-10.0</v>
+						<product>
+							<v>2.0</v>
+							<p>/tu154/systems/air-cond/sel/sel-mag-right</p>
+						</product>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+
+		<!-- Calculate goal temps -->
+		<!-- Cockpit -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal-cab-force">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/goal-cab</p>
+					<product>
+						<v>0.01</v>
+						<p>/tu154/systems/air-cond/swt/swt-cabin-gor</p>
+					</product>
+					<product>
+						<v>-0.01</v>
+						<p>/tu154/systems/air-cond/swt/swt-cabin-hol</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/goal-cab">
+			<default value="/tu154/systems/air-cond/variables/t-cab"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/sel-cabin">
+				/tu154/systems/air-cond/swt/swt-cabin-aut eq 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/goal-cab-force">
+				/tu154/systems/air-cond/swt/swt-cabin-gor eq 1
+				/tu154/systems/air-cond/swt/swt-cabin-hol eq 1
+			</test>
+		</switch>
+		
+		<!-- Pax cabin 1 -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal-sal-1-force">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/goal-sal-1</p>
+					<product>
+						<v>0.01</v>
+						<p>/tu154/systems/air-cond/swt/swt-sal-1-gor</p>
+					</product>
+					<product>
+						<v>-0.01</v>
+						<p>/tu154/systems/air-cond/swt/swt-sal-1-hol</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/goal-sal-1">
+			<default value="/tu154/systems/air-cond/variables/t-sal-1"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/sel-sal-1">
+				/tu154/systems/air-cond/swt/swt-sal-1-aut eq 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/goal-sal-1-force">
+				/tu154/systems/air-cond/swt/swt-sal-1-gor eq 1
+				/tu154/systems/air-cond/swt/swt-sal-1-hol eq 1
+			</test>
+		</switch>
+		
+		<!-- Pax cabin 2 -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal-sal-2-force">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/goal-sal-2</p>
+					<product>
+						<v>0.01</v>
+						<p>/tu154/systems/air-cond/swt/swt-sal-2-gor</p>
+					</product>
+					<product>
+						<v>-0.01</v>
+						<p>/tu154/systems/air-cond/swt/swt-sal-2-hol</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/goal-sal-2">
+			<default value="/tu154/systems/air-cond/variables/t-sal-2"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/sel-sal-2">
+				/tu154/systems/air-cond/swt/swt-sal-2-aut eq 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/goal-sal-2-force">
+				/tu154/systems/air-cond/swt/swt-sal-2-gor eq 1
+				/tu154/systems/air-cond/swt/swt-sal-2-hol eq 1
+			</test>
+		</switch>
+		
+		<!-- TH left (turbo freezer) -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal-th-left-force">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/goal-th-left</p>
+					<product>
+						<v>0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-th-left-gor</p>
+					</product>
+					<product>
+						<v>-0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-th-left-hol</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/goal-th-left">
+			<default value="/tu154/systems/air-cond/variables/goal-th-left"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/sel-mag-left">
+				/tu154/systems/air-cond/swt/swt-th-left-aut eq 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/goal-th-left-force">
+				/tu154/systems/air-cond/swt/swt-th-left-gor eq 1
+				/tu154/systems/air-cond/swt/swt-th-left-hol eq 1
+			</test>
+		</switch>
+		<!-- VVR left (Ait-to-air radiator) -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal-vvr-left-force">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/goal-vvr-left</p>
+					<product>
+						<v>0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-vvr-left-gor</p>
+					</product>
+					<product>
+						<v>-0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-vvr-left-hol</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/goal-vvr-left">
+			<default value="/tu154/systems/air-cond/variables/goal-vvr-left"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/sel-mag-left">
+				/tu154/systems/air-cond/swt/swt-vvr-left-aut eq 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/goal-vvr-left-force">
+				/tu154/systems/air-cond/swt/swt-vvr-left-gor eq 1
+				/tu154/systems/air-cond/swt/swt-vvr-left-hol eq 1
+			</test>
+		</switch>
+		<!-- Air pipeline left -->
+		<summer name="/tu154/systems/air-cond/variables/goal-mag-left">
+			<input>/tu154/systems/air-cond/variables/goal-th-left</input>
+			<input>/tu154/systems/air-cond/variables/goal-vvr-left</input>
+		</summer>
+		
+		<!-- TH right (turbo freezer) -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal-th-right-force">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/goal-th-right</p>
+					<product>
+						<v>0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-th-right-gor</p>
+					</product>
+					<product>
+						<v>-0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-th-right-hol</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/goal-th-right">
+			<default value="/tu154/systems/air-cond/variables/goal-th-right"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/sel-mag-right">
+				/tu154/systems/air-cond/swt/swt-th-right-aut eq 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/goal-th-right-force">
+				/tu154/systems/air-cond/swt/swt-th-right-gor eq 1
+				/tu154/systems/air-cond/swt/swt-th-right-hol eq 1
+			</test>
+		</switch>
+		<!-- VVR right (Ait-to-air radiator) -->
+		<fcs_function name="/tu154/systems/air-cond/variables/goal-vvr-right-force">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/goal-vvr-right</p>
+					<product>
+						<v>0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-vvr-right-gor</p>
+					</product>
+					<product>
+						<v>-0.05</v>
+						<p>/tu154/systems/air-cond/swt/swt-vvr-right-hol</p>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<switch name="/tu154/systems/air-cond/variables/goal-vvr-right">
+			<default value="/tu154/systems/air-cond/variables/goal-vvr-right"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/sel-mag-right">
+				/tu154/systems/air-cond/swt/swt-vvr-right-aut eq 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/goal-vvr-right-force">
+				/tu154/systems/air-cond/swt/swt-vvr-right-gor eq 1
+				/tu154/systems/air-cond/swt/swt-vvr-right-hol eq 1
+			</test>
+		</switch>
+		<!-- Air pipeline right -->
+		<summer name="/tu154/systems/air-cond/variables/goal-mag-right">
+			<input>/tu154/systems/air-cond/variables/goal-th-right</input>
+			<input>/tu154/systems/air-cond/variables/goal-vvr-right</input>
+		</summer>
+
+		<!-- Calculate outside influence -->
+		<fcs_function name="/tu154/systems/air-cond/variables/t-curr-cab">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-cab</p>
+					<product>
+						<v>0.000125</v> <!-- * 0.01 / 80 -->
+						<difference>
+							<p>/environment/temperature-degc</p>
+							<p>/tu154/systems/air-cond/variables/t-cab</p>
+						</difference>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t-curr-sal-1">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-sal-1</p>
+					<product>
+						<v>0.000125</v> <!-- * 0.01 / 80 -->
+						<difference>
+							<p>/environment/temperature-degc</p>
+							<p>/tu154/systems/air-cond/variables/t-sal-1</p>
+						</difference>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t-curr-sal-2">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-sal-2</p>
+					<product>
+						<v>0.000125</v> <!-- * 0.01 / 80 -->
+						<difference>
+							<p>/environment/temperature-degc</p>
+							<p>/tu154/systems/air-cond/variables/t-sal-2</p>
+						</difference>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t-curr-th-left">
+			<function>
+				<product>
+					<v>0.5</v>
+					<sum>
+						<p>/tu154/systems/air-cond/variables/tt-mag-left</p>
+						<product>
+							<v>0.000125</v> <!-- * 0.01 / 80 -->
+							<difference>
+								<p>/environment/temperature-degc</p>
+								<p>/tu154/systems/air-cond/variables/tt-mag-left</p>
+							</difference>
+						</product>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t-curr-vvr-left">
+			<function>
+				<product>
+					<v>0.5</v>
+					<sum>
+						<p>/tu154/systems/air-cond/variables/tt-mag-left</p>
+						<product>
+							<v>0.000125</v> <!-- * 0.01 / 80 -->
+							<difference>
+								<p>/environment/temperature-degc</p>
+								<p>/tu154/systems/air-cond/variables/tt-mag-left</p>
+							</difference>
+						</product>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+		<summer name="/tu154/systems/air-cond/variables/t-curr-mag-left">
+			<input>/tu154/systems/air-cond/variables/t-curr-th-left</input>
+			<input>/tu154/systems/air-cond/variables/t-curr-vvr-left</input>
+		</summer>
+		<fcs_function name="/tu154/systems/air-cond/variables/t-curr-th-right">
+			<function>
+				<product>
+					<v>0.5</v>
+					<sum>
+						<p>/tu154/systems/air-cond/variables/tt-mag-right</p>
+						<product>
+							<v>0.000125</v> <!-- * 0.01 / 80 -->
+							<difference>
+								<p>/environment/temperature-degc</p>
+								<p>/tu154/systems/air-cond/variables/tt-mag-right</p>
+							</difference>
+						</product>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t-curr-vvr-right">
+			<function>
+				<product>
+					<v>0.5</v>
+					<sum>
+						<p>/tu154/systems/air-cond/variables/tt-mag-right</p>
+						<product>
+							<v>0.000125</v> <!-- * 0.01 / 80 -->
+							<difference>
+								<p>/environment/temperature-degc</p>
+								<p>/tu154/systems/air-cond/variables/tt-mag-right</p>
+							</difference>
+						</product>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+		<summer name="/tu154/systems/air-cond/variables/t-curr-mag-right">
+			<input>/tu154/systems/air-cond/variables/t-curr-th-right</input>
+			<input>/tu154/systems/air-cond/variables/t-curr-vvr-right</input>
+		</summer>
+
+		<!-- Finally define pipelines temps -->
+		<switch name="/tu154/systems/air-cond/variables/tt-mag-left">
+			<default value="/tu154/systems/air-cond/variables/t-curr-mag-left"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-mag-left">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+			</test>
+		</switch>
+		<switch name="/tu154/systems/air-cond/variables/tt-mag-right">
+			<default value="/tu154/systems/air-cond/variables/t-curr-mag-right"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-mag-right">
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+			</test>
+		</switch>
+
+		<!-- Finally define cockpit and pax cabin temps -->
+		<summer name="/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab">
+			<input>/tu154/systems/air-cond/variables/goal-cab</input>
+			<input>-/tu154/systems/air-cond/variables/t-curr-cab</input>
+		</summer>
+		<summer name="/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1">
+			<input>/tu154/systems/air-cond/variables/goal-sal-1</input>
+			<input>-/tu154/systems/air-cond/variables/t-curr-sal-1</input>
+		</summer>
+		<summer name="/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2">
+			<input>/tu154/systems/air-cond/variables/goal-sal-2</input>
+			<input>-/tu154/systems/air-cond/variables/t-curr-sal-2</input>
+		</summer>
+
+		<fcs_function name="/tu154/systems/air-cond/variables/t_cab_iterated_double">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-curr-cab</p>
+					<product>
+						<v>0.02</v>
+						<quotient>
+							<p>/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab</p>
+							<max>
+								<v>0.0001</v>
+								<abs>
+									<p>/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab</p>
+								</abs>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t_sal-1_iterated_double">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-curr-sal-1</p>
+					<product>
+						<v>0.02</v>
+						<quotient>
+							<p>/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1</p>
+							<max>
+								<v>0.0001</v>
+								<abs>
+									<p>/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1</p>
+								</abs>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t_sal-2_iterated_double">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-curr-sal-2</p>
+					<product>
+						<v>0.02</v>
+						<quotient>
+							<p>/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2</p>
+							<max>
+								<v>0.0001</v>
+								<abs>
+									<p>/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2</p>
+								</abs>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t_cab_iterated_single">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-curr-cab</p>
+					<product>
+						<v>0.015</v>
+						<quotient>
+							<p>/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab</p>
+							<max>
+								<v>0.0001</v>
+								<abs>
+									<p>/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab</p>
+								</abs>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t_sal-1_iterated_single">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-curr-sal-1</p>
+					<product>
+						<v>0.015</v>
+						<quotient>
+							<p>/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1</p>
+							<max>
+								<v>0.0001</v>
+								<abs>
+									<p>/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1</p>
+								</abs>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+		<fcs_function name="/tu154/systems/air-cond/variables/t_sal-2_iterated_single">
+			<function>
+				<sum>
+					<p>/tu154/systems/air-cond/variables/t-curr-sal-2</p>
+					<product>
+						<v>0.015</v>
+						<quotient>
+							<p>/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2</p>
+							<max>
+								<v>0.0001</v>
+								<abs>
+									<p>/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2</p>
+								</abs>
+							</max>
+						</quotient>
+					</product>
+				</sum>
+			</function>
+		</fcs_function>
+
+		<switch name="/tu154/systems/air-cond/variables/t-cab">
+			<default value="/tu154/systems/air-cond/variables/t-curr-cab"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-cab">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+				/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab lt 0.02
+				/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab gt -0.02
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-cab">
+				/tu154/systems/air-cond/variables/air-cons-l le 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+				/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab lt 0.15
+				/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab gt -0.15
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-cab">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r le 1
+				/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab lt 0.15
+				/tu154/systems/air-cond/variables/diff_goal-cab_curr-cab gt -0.15
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/t_cab_iterated_double">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/t_cab_iterated_single">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+			</test>
+		</switch>
+		<switch name="/tu154/systems/air-cond/variables/t-sal-1">
+			<default value="/tu154/systems/air-cond/variables/t-curr-sal-1"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-sal-1">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+				/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1 lt 0.02
+				/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1 gt -0.02
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-sal-1">
+				/tu154/systems/air-cond/variables/air-cons-l le 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+				/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1 lt 0.15
+				/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1 gt -0.15
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-sal-1">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r le 1
+				/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1 lt 0.15
+				/tu154/systems/air-cond/variables/diff_goal-sal-1_curr-sal-1 gt -0.15
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/t_sal-1_iterated_double">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/t_sal-1_iterated_single">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+			</test>
+		</switch>
+		<switch name="/tu154/systems/air-cond/variables/t-sal-2">
+			<default value="/tu154/systems/air-cond/variables/t-curr-sal-2"/>
+			<test logic="AND" value="/environment/temperature-degc">
+				/tu154/systems/air-cond/run ne 1
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-sal-2">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+				/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2 lt 0.02
+				/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2 gt -0.02
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-sal-2">
+				/tu154/systems/air-cond/variables/air-cons-l le 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+				/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2 lt 0.15
+				/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2 gt -0.15
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/goal-sal-2">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r le 1
+				/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2 lt 0.15
+				/tu154/systems/air-cond/variables/diff_goal-sal-2_curr-sal-2 gt -0.15
+			</test>
+			<test logic="AND" value="/tu154/systems/air-cond/variables/t_sal-2_iterated_double">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+			</test>
+			<test logic="OR" value="/tu154/systems/air-cond/variables/t_sal-2_iterated_single">
+				/tu154/systems/air-cond/variables/air-cons-l gt 1
+				/tu154/systems/air-cond/variables/air-cons-r gt 1
+			</test>
+		</switch>
+		<fcs_function name="/tu154/systems/air-cond/variables/tt-dver">
+			<function>
+				<product>
+					<v>0.5</v>
+					<sum>
+						<p>/tu154/systems/air-cond/variables/t-curr-mag-left</p>
+						<p>/tu154/systems/air-cond/variables/t-curr-mag-right</p>
+					</sum>
+				</product>
+			</function>
+		</fcs_function>
+		<pure_gain name="/tu154/systems/air-cond/variables/tt-ekip">
+			<input>/tu154/systems/air-cond/variables/goal-cab</input>
+			<gain>1.0</gain>
+		</pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/variables/tt-sal-1">
+			<input>/tu154/systems/air-cond/variables/goal-sal-1</input>
+			<gain>1.0</gain>
+		</pure_gain>
+		<pure_gain name="/tu154/systems/air-cond/variables/tt-sal-2">
+			<input>/tu154/systems/air-cond/variables/goal-sal-2</input>
+			<gain>1.0</gain>
+		</pure_gain>
 
 	</channel>
 	

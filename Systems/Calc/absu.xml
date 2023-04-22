@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <system name="Tu-154B-2: ABSU Calc">
 
 	<channel name="absu_property_update" execrate="4">
