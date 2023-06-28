@@ -117,8 +117,8 @@
     <name>Speedbrake lever</name>
     <type>exponential</type>
     <filter-time>0.05</filter-time>
-    <input>surface-positions/speedbrake-pos-norm</input>
-    <output>surface-positions/speedbrake-pos-norm/anim</output>
+    <input>fdm/jsbsim/fcs/speedbrake-cmd</input>
+    <output>fdm/jsbsim/fcs/speedbrake-cmd/anim</output>
   </filter>
 
 </PropertyList>

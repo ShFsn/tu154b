@@ -1234,7 +1234,7 @@
     <condition>
       <not><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property></not>
     </condition>
-    <property>surface-positions/speedbrake-pos-norm/anim</property>
+    <property>fdm/jsbsim/fcs/speedbrake-cmd/anim</property>
     <interpolation>
       <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
       <entry><ind>	0.4</ind>	<dep>	50.0</dep></entry>
@@ -1251,10 +1251,42 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>knob</type>
+    <object-name>lever_speedbrake</object-name>
+    <!--<visible>true</visible>-->
+    <!--Decrease and Increase are inverted beacause 3d lever is being puuled down to extend-->
+    <decrease>
+      <binding>
+        <command>nasal</command>
+        <script>controls.stepSpoilers(1)</script>
+      </binding>
+    </decrease>
+    <increase>
+      <binding>
+        <command>nasal</command>
+        <script>controls.stepSpoilers(-1)</script>
+      </binding>
+    </increase>
+    <!--<hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>mapcase-page</tooltip-id>
+        <label>Page %s</label>
+        <property>tu154/instrumentation/mapcase/page</property>
+        <mapping>nasal</mapping>
+        <script>
+          var page = arg[0];
+          var pages = getprop("tu154/instrumentation/mapcase/total_pages");
+          return sprintf("%d/%d", page, pages);
+        </script>
+      </binding>
+    </hovered>-->
+  </animation>
+
   <!--Hide levers for navigator view - avoid shade nav indicators-->
   <animation>
     <type>select</type>
-    <object-name>lever_spee</object-name>
     <object-name>lever_thr1</object-name>
     <object-name>lever_thr2</object-name>
     <object-name>lever_thr3</object-name>
