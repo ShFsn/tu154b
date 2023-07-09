@@ -128,6 +128,18 @@
         <property>fdm/jsbsim/fcs/stabilizer-auto-pos</property>
       </binding>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>stab_man_cover_tooltip</tooltip-id>
+        <label>Stab. flaps counteract:%s</label>
+        <property>fdm/jsbsim/fcs/stab-manu-switch</property>
+        <mapping>nasal</mapping>
+        <script>
+          return ["\nAUTO", "\nMANUAL"][arg[0]]
+        </script>
+      </binding>
+    </hovered>
   </animation>
 
   <!--Stab auto selector-->
@@ -165,6 +177,18 @@
         <wrap>false</wrap>
       </binding>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>stab_auto_tooltip</tooltip-id>
+        <label>Stab. auto preset:%s</label>
+        <property>fdm/jsbsim/fcs/stab-auto-cmd</property>
+        <mapping>nasal</mapping>
+        <script>
+          return ["\nAFT (more than 35% MAC)", "\nCENTER (28 - 35% MAC)", "\nFORWARD (less than 28% MAC)"][arg[0]]
+        </script>
+      </binding>
+    </hovered>
   </animation>
   <animation>
     <type>translate</type>
@@ -229,6 +253,18 @@
         </binding>
       </mod-up>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>stab_manu_down_tooltip</tooltip-id>
+        <label>Stab.: %s</label>
+        <property>fdm/jsbsim/fcs/stab-manu-selector</property>
+        <mapping>nasal</mapping>
+        <script>
+          return ["NOSE DOWN", "-", "NOSE UP"][arg[0]]
+        </script>
+      </binding>
+    </hovered>
   </animation>
   <animation>
     <type>pick</type>
@@ -250,6 +286,18 @@
         </binding>
       </mod-up>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>stab_manu_up_tooltip</tooltip-id>
+        <label>Stab.: %s</label>
+        <property>fdm/jsbsim/fcs/stab-manu-selector</property>
+        <mapping>nasal</mapping>
+        <script>
+          return ["NOSE DOWN", "-", "NOSE UP"][arg[0]]
+        </script>
+      </binding>
+    </hovered>
   </animation>
 
 
