@@ -378,7 +378,7 @@
     </axis>
   </animation>
 
-  <!--<animation>
+  <animation>
     <type>material</type>
     <object-name>central_panel</object-name>
     <texture-prop>tu154/textures/lang/glare</texture-prop>
@@ -388,6 +388,6 @@
     <object-name>stab_manu_cover</object-name>
     <object-name>stab_auto_handle</object-name>
     <texture-prop>tu154/textures/lang/glare_misc</texture-prop>
-  </animation>-->
+  </animation>
 
 </PropertyList>
