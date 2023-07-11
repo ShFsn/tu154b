@@ -87,10 +87,21 @@
     <condition><property>tu154/constants/one</property></condition>
   </animation>
 
+  <!-- ############## Models include ############## -->
   <!-- Glareshield -->
   <model>
       <name>glare</name>
       <path>Aircraft/tu154b/Model/Cockpit/glare.xml</path>
+  </model>
+  <!--Groza radar-->
+  <model>
+    <name>groza</name>
+    <path>Aircraft/tu154b/Model/Cockpit/Groza/GROZA.xml</path>
+    <offsets>
+      <x-m>0.567</x-m>
+      <y-m>-0.141</y-m>
+      <z-m>0.895</z-m>
+    </offsets>
   </model>
 
 

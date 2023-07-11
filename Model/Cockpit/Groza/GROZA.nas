@@ -108,7 +108,7 @@ proj.addPlacement({"node": "l1_Groza"});
 proj.setColorBackground(0,0,0,1);
 
 var image = proj.createGroup().createChild("image")
-  .set("src", getprop("/sim/aircraft-dir")~"/Instruments-3d/GROZA/t154b2radar/placeholder"~sprintf("%s", resolution)~".png");
+  .set("src", getprop("/sim/aircraft-dir")~"/Model/Cockpit/Groza/t154b2radar/placeholder"~sprintf("%s", resolution)~".png");
 
 
 

@@ -80,9 +80,9 @@
     <file>Aircraft/tu154b/Nasal/air-conditioning.nas</file>
   </air-conditioning>
 
-  <GROZA>
-    <file>Aircraft/tu154b/Instruments-3d/GROZA/GROZA.nas</file>
-  </GROZA>
+  <Groza>
+    <file>Aircraft/tu154b/Model/Cockpit/Groza/GROZA.nas</file>
+  </Groza>
 
   <!-- Autopush -->
   <autopush>

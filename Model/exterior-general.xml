@@ -798,16 +798,6 @@
   </model>
 
   <!--************************** Central panel ***************************-->
-  <!--Groza radar-->
-  <model>
-    <name>groza</name>
-    <path>Aircraft/tu154b/Instruments-3d/GROZA/GROZA.xml</path>
-    <offsets>
-      <x-m>-22.583</x-m>
-      <y-m>-0.141</y-m>
-      <z-m>1.885</z-m>
-    </offsets>
-  </model>
   <!--Elevator & stabilizer position gauge-->
   <model>
     <name>ip-33</name>
@@ -3961,7 +3951,6 @@
     <object-name>copilot-indic-2</object-name>
     <object-name>copilot-indic-3</object-name>
     <object-name>sw-2</object-name>
-    <object-name>groza</object-name>
     <object-name>ip-33</object-name>
     <object-name>ip-32m</object-name>
     <object-name>in-3</object-name>
