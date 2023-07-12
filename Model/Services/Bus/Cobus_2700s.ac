@@ -1,6 +1,6 @@
 AC3Db
-MATERIAL "default" rgb 0.720 0.720 0.720  amb 0.720 0.720 0.720  emis 0.000 0.000 0.000  spec 0.200 0.200 0.200  shi 128 trans 0.000
-MATERIAL "Cobus_2700s" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.200 0.200 0.200  shi 128 trans 0.000
+MATERIAL "default" rgb 0.720 0.720 0.720  amb 0.720 0.720 0.720  emis 0.000 0.000 0.000  spec 0.200 0.200 0.200  shi 50 trans 0.000
+MATERIAL "Cobus_2700s" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.200 0.200 0.200  shi 50 trans 0.000
 OBJECT world
 name "Blender_exporter_v3.3__Cobus_2700s.ac"
 kids 3

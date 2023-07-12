@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+ <light>
+  <name>Lightspot_Tractor</name>
+  <type>spot</type>
+  <position>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </position>
+  <direction>
+   <!-- 7.8 -->
+   <pitch-deg>90.0</pitch-deg>
+   <heading-deg>0.0</heading-deg>
+  </direction>
+  <!-- Avoid backlit by setting 0.0 -->
+  <ambient>
+   <r>0.0</r>
+   <g>0.0</g>
+   <b>0.0</b>
+   <a>1.0</a>
+  </ambient>
+  <diffuse>
+   <r>1.0</r>
+   <g>0.6184</g>
+   <b>0.4488</b>
+   <a>1.0</a>
+  </diffuse>
+  <specular>
+   <r>1.0</r>
+   <g>0.6184</g>
+   <b>0.4488</b>
+   <a>1.0</a>
+  </specular>
+  <attenuation>
+   <c>0.5</c>
+   <l>0.005</l>
+   <q>0.001</q>
+  </attenuation>
+  <spot-exponent>15.0</spot-exponent>
+  <spot-cutoff>45</spot-cutoff>
+  <range-m>500</range-m>
+ </light>
+	
+</PropertyList>

@@ -6,30 +6,83 @@
 
 	
 	<effect>
-		<inherits-from>Effects/model-combined</inherits-from>
+		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
 		<object-name>Ramp</object-name>
+		<parameters><lightmap-enabled type="int">0</lightmap-enabled></parameters>
+	</effect>
+	<effect>
+		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
+		<object-name>Ramp_lm</object-name>
+		<parameters>
+			<lightmap-enabled type="int"><use>/environment/lightmap-factor</use></lightmap-enabled>
+			<texture n="3"><image>Aircraft/tu154b/Model/Services/Fuel-Truck/truck_lm.png</image></texture>
+		</parameters>
 	</effect>
 	
-	<!--<animation>
-		<name>Lights_all</name>
-		<object-name></object-name>
-	</animation>-->
-
 	<!-- Lights night illumination -->
-	<!--<animation>
+	<animation>
 		<type>material</type> 
-		<object-name>Lights_all</object-name>
-		<condition>		
-			<greater-than>		
-				<property>/sim/time/sun-angle-rad</property>
-				<value>1.45</value>
-			</greater-than>
-		</condition>
+		<object-name>Lights_front</object-name>
+		<object-name>Lights_rear</object-name>
+			<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>/environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+			</condition>
 		<emission>	
 			<red>0.7</red>	
 			<green>0.7</green>	
 			<blue>0.5</blue>
 		</emission>
-	</animation>-->
+	</animation>
+	
+	<model>
+		<name>Spot_L</name>
+		<path>Aircraft/tu154b/Model/Services/truck_lightspot.xml</path>
+		<offsets>
+			<x-m>16.78</x-m>
+			<y-m>2.83</y-m>
+			<z-m>-4.15</z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Spot_R</name>
+		<path>Aircraft/tu154b/Model/Services/truck_lightspot.xml</path>
+		<offsets>
+			<x-m>14.53</x-m>
+			<y-m>2.83</y-m>
+			<z-m>-4.15</z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<!-- dont show the light model during day-->
+	<animation>
+		<type>select</type> 
+		<object-name>Lights_front</object-name>
+		<object-name>Lights_rear</object-name>
+		<object-name>Spot_L</object-name>
+		<object-name>Spot_R</object-name>
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>/environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+			</condition>
+	</animation>
 
 </PropertyList>

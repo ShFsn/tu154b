@@ -5,18 +5,19 @@
 <PropertyList>
 
 	<path>Catering_Loader_Truck_VolvoFM-stowed.ac</path>
-	
+
 	<effect>
-		<inherits-from>Effects/model-combined</inherits-from>
+		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
 		<object-name>Catering</object-name>
+		<parameters><lightmap-enabled type="int">0</lightmap-enabled></parameters>
 	</effect>
-	
 	<effect>
-		<inherits-from>Effects/model-combined</inherits-from>
-		<object-name>fuel_pipe</object-name>
-		<object-name>fuel_pipe_disconnected</object-name>
-		<object-name>fuel_truck</object-name>
-		<object-name>handle</object-name>
+		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
+		<object-name>Catering_lm</object-name>
+		<parameters>
+			<lightmap-enabled type="int"><use>/environment/lightmap-factor</use></lightmap-enabled>
+			<texture n="3"><image>Aircraft/tu154b/Model/Services/Fuel-Truck/truck_lm.png</image></texture>
+		</parameters>
 	</effect>
 
 	<animation>
@@ -223,11 +224,34 @@
 		</emission>
 	</animation>
 	
+	<model>
+		<name>Spot_L</name>
+		<path>Aircraft/tu154b/Model/Services/truck_lightspot.xml</path>
+		<offsets>
+			<x-m>-4.65</x-m>
+			<y-m>-1.11</y-m>
+			<z-m>0.9</z-m>
+			<!--<heading-deg>0.0</heading-deg>-->
+		</offsets>
+	</model>
+	<model>
+		<name>Spot_R</name>
+		<path>Aircraft/tu154b/Model/Services/truck_lightspot.xml</path>
+		<offsets>
+			<x-m>-4.65</x-m>
+			<y-m>1.11</y-m>
+			<z-m>0.9</z-m>
+			<!--<heading-deg>0.0</heading-deg>-->
+		</offsets>
+	</model>
+	
 	<!-- dont show the light model during day-->
 	<animation>
 		<type>select</type> 
 		<object-name>Lights_front</object-name>
-		<!--<object-name>warning</object-name>-->
+		<object-name>Lights_rear</object-name>
+		<object-name>Spot_L</object-name>
+		<object-name>Spot_R</object-name>
 		<condition>
 				<or>
 					<greater-than>

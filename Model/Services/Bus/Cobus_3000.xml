@@ -12,10 +12,13 @@
 	</animation>-->
 	
 	<effect>
-		<inherits-from>Aircrafts/tu154/Model/Services/Bus/busLM</inherits-from>
+		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
 		<object-name>blah</object-name>
 		<object-name>Cobus_3000</object-name>
-		<parameters><texture n="3"><image>Aircrafts/tu154/Model/Services/Bus/Cobus_3000_lm.png</image></texture></parameters>
+		<parameters>
+			<lightmap-enabled type="int"><use>/environment/lightmap-factor</use></lightmap-enabled>
+			<texture n="3"><image>Aircraft/tu154b/Model/Services/Bus/Cobus_3000_lm.png</image></texture>
+		</parameters>
 	</effect>
 
  <effect>
@@ -26,17 +29,64 @@
 <animation>
 <type>material</type>
 	<object-name>Cobus_3000_Light</object-name>
-<condition>		
-<greater-than>		
-	<property>/sim/time/sun-angle-rad</property>
-	<value>1.47</value>
-</greater-than>
-</condition>
-<emission>	
-	<red>0.6</red>	
-	<green>0.6</green>	
-	<blue>0.6</blue>
-</emission>
+	<condition>
+		<or>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.45</value>
+			</greater-than>
+			<less-than>
+				<property>/environment/visibility-m</property>
+				<value>4500.00</value>
+			</less-than>
+		</or>
+	</condition>
+	<emission>
+		<red>0.6</red>	
+		<green>0.6</green>	
+		<blue>0.6</blue>
+	</emission>
 </animation>
+	
+	<model>
+		<name>Spot_L</name>
+		<path>Aircraft/tu154b/Model/Services/truck_lightspot.xml</path>
+		<offsets>
+			<x-m>-6.94</x-m>
+			<y-m>-1.4</y-m>
+			<z-m>0.95</z-m>
+			<!--<heading-deg>0.0</heading-deg>-->
+		</offsets>
+	</model>
+	<model>
+		<name>Spot_R</name>
+		<path>Aircraft/tu154b/Model/Services/truck_lightspot.xml</path>
+		<offsets>
+			<x-m>-6.94</x-m>
+			<y-m>1.4</y-m>
+			<z-m>0.95</z-m>
+			<!--<heading-deg>0.0</heading-deg>-->
+		</offsets>
+	</model>
+	
+	<!-- dont show the light model during day-->
+	<animation>
+		<type>select</type>
+		<object-name>Cobus_3000_Light</object-name>
+		<object-name>Spot_L</object-name>
+		<object-name>Spot_R</object-name>
+		<condition>
+				<or>
+					<greater-than>
+						<property>/sim/time/sun-angle-rad</property>
+						<value>1.45</value>
+					</greater-than>
+					<less-than>
+						<property>/environment/visibility-m</property>
+						<value>4500.00</value>
+					</less-than>
+				</or>
+			</condition>
+	</animation>
 
 </PropertyList>

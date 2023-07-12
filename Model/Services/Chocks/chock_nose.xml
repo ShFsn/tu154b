@@ -6,9 +6,10 @@
 
 	
 	<effect>
-		<inherits-from>Effects/model-combined</inherits-from>
+		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
 		<object-name>chock</object-name>
 		<object-name>chock.001</object-name>
+		<parameters><lightmap-enabled type="int">0</lightmap-enabled></parameters>
 	</effect>
 
 </PropertyList>

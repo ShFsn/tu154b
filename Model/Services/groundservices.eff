@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+  <inherits-from>Effects/model-combined</inherits-from>
+  <parameters>
+
+    <rain-enabled type="int">1</rain-enabled>
+
+    <!--<normalmap-dds type="int">0</normalmap-dds>
+    <texture n="2">
+      <wrap-s>clamp</wrap-s>
+      <wrap-t>clamp</wrap-t>
+      <internal-format>normalized</internal-format>
+    </texture>-->
+    
+    <!--<lightmap-enabled type="int"><use>/environment/lightmap-factor</use></lightmap-enabled>--> <!-- individual -->
+    <lightmap-multi type="int">0</lightmap-multi>
+    <lightmap-factor type="float">0.8</lightmap-factor>
+    <lightmap-color type="vec3d">1.0 0.95 0.75</lightmap-color>
+    <texture n="3">
+      <wrap-s>clamp</wrap-s>
+      <wrap-t>clamp</wrap-t>
+      <internal-format>normalized</internal-format>
+    </texture>
+
+    <reflection-enabled type="int">1</reflection-enabled>
+    <reflect-map-enabled type="int">0</reflect-map-enabled>
+    <reflection-correction type="float">-0.25</reflection-correction>
+    <reflection-dynamic type="int">1</reflection-dynamic>
+    <!--<texture n="4">
+      <filter>linear-mipmap-linear</filter>
+      <wrap-s>clamp</wrap-s>
+      <wrap-t>clamp</wrap-t>
+      <internal-format>normalized</internal-format>
+    </texture>-->
+    <texture n="5">
+      <type>cubemap</type>
+      <images>
+        <positive-x>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_px.png</positive-x>
+        <negative-x>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_nx.png</negative-x>
+        <positive-y>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_py.png</positive-y>
+        <negative-y>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_ny.png</negative-y>
+        <positive-z>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_pz.png</positive-z>
+        <negative-z>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_nz.png</negative-z>
+      </images>
+    </texture>
+    <reflection-fresnel-factor type="float">0.75</reflection-fresnel-factor>
+    <!--<reflection-rainbow type="float">0.2</reflection-rainbow>
+    <reflection-noise type="float">0.01</reflection-noise>-->
+
+  </parameters>
+
+    <!-- Generate coords for normal map. -->
+  <!--<generate>
+    <tangent type="int">6</tangent>
+    <binormal type="int">7</binormal>
+  </generate>
+  <technique n="4">
+    <pass>
+      <program>
+        <attribute>
+          <name>tangent</name>
+          <index>6</index>
+        </attribute>
+        <attribute>
+          <name>binormal</name>
+          <index>7</index>
+        </attribute>
+      </program>
+    </pass>
+  </technique>
+  <technique n="7">
+    <pass>
+      <program>
+        <attribute>
+          <name>tangent</name>
+          <index>6</index>
+        </attribute>
+        <attribute>
+          <name>binormal</name>
+          <index>7</index>
+        </attribute>
+      </program>
+    </pass>
+  </technique>
+  <technique n="9">
+    <pass>
+      <program>
+        <attribute>
+          <name>tangent</name>
+          <index>6</index>
+        </attribute>
+        <attribute>
+          <name>binormal</name>
+          <index>7</index>
+        </attribute>
+      </program>
+    </pass>
+  </technique>-->
+ 
+</PropertyList>

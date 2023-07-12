@@ -6,8 +6,9 @@
 
 	
 	<effect>
-		<inherits-from>Effects/model-combined</inherits-from>
+		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
 		<object-name>EPU</object-name>
+		<parameters><lightmap-enabled type="int">0</lightmap-enabled></parameters>
 	</effect>
 
 </PropertyList>
