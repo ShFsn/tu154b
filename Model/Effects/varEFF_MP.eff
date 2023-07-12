@@ -4,6 +4,8 @@
   <parameters>
 
     <normalmap-enabled type="int"><use>tu154/options/rendering/normal-maps/enable</use></normalmap-enabled>
+
+    <rain-enabled type="int">1</rain-enabled>
     
     <texture n="2">
       <image>Effects/var_norm.png</image>

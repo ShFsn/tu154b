@@ -12,7 +12,7 @@
 
     <reflection-enabled type="int">1</reflection-enabled>
     <reflect-map-enabled type="int">1</reflect-map-enabled>
-    <reflection-correction type="float">-0.5</reflection-correction>
+    <reflection-correction type="float">0.0</reflection-correction>
     <reflection-dynamic type="int">1</reflection-dynamic>
     <texture n="4">
       <filter>linear-mipmap-linear</filter>
@@ -31,9 +31,9 @@
         <negative-z>Aircraft/Generic/Effects/CubeMaps/fair-sky/fair-sky_nz.png</negative-z>
       </images>
     </texture>
-    <reflection-fresnel type="float">0.01</reflection-fresnel>
-    <reflection-rainbow type="float">0.2</reflection-rainbow>
-    <reflection-noise type="float">0.01</reflection-noise>
+    <reflection-fresnel-factor type="float">0.5</reflection-fresnel-factor> <!-- sums with reflection-correction -->
+    <!--<reflection-rainbow type="float">0.2</reflection-rainbow>
+    <reflection-noise type="float">0.01</reflection-noise>-->
 
   </parameters>
 
