@@ -154,11 +154,17 @@ var light_manager = {
         me.light_manager_timer.start();
         light_manager.enable_or_disable(getprop("/sim/multiplay/generic/bool[2]"), 0);
         light_manager.enable_or_disable(getprop("/sim/multiplay/generic/bool[3]"), 1);
+        light_manager.enable_or_disable(getprop("/tu154/light/nav/blue"), 2);
+        light_manager.enable_or_disable(getprop("/tu154/light/nav/blue"), 3);
+        light_manager.enable_or_disable(getprop("/tu154/light/strobe/strobe_2"), 4);
     },
 
     stop: func {
         light_manager.enable_or_disable(0, 0);
         light_manager.enable_or_disable(0, 1);
+        light_manager.enable_or_disable(0, 2);
+        light_manager.enable_or_disable(0, 3);
+        light_manager.enable_or_disable(0, 4);
         me.light_manager_timer.stop();
     },
 
@@ -333,6 +339,9 @@ setlistener("/tu154/light/headlight-selector", func (node) {
       } else {
             light_manager.enable_or_disable(0, 1);
       }
+    } else {
+        light_manager.enable_or_disable(0, 0);
+        light_manager.enable_or_disable(0, 1);
     }
 });
 setlistener("/tu154/light/retract", func (node) {
@@ -348,14 +357,26 @@ setlistener("/tu154/light/retract", func (node) {
       } else {
             light_manager.enable_or_disable(0, 1);
       }
+    } else {
+        light_manager.enable_or_disable(0, 0);
+        light_manager.enable_or_disable(0, 1);
     }
 });
 setlistener("/tu154/light/strobe/strobe_2", func (node) {
-      light_manager.enable_or_disable(node.getValue(), 4);
+    if (enable_lm == 1) {
+        light_manager.enable_or_disable(node.getValue(), 4);
+    } else {
+        light_manager.enable_or_disable(0, 4);
+    }
 }, 1, 0);
 setlistener("/tu154/light/nav/blue", func (node) {
-      light_manager.enable_or_disable(node.getValue(), 2);
-      light_manager.enable_or_disable(node.getValue(), 3);
+    if (enable_lm == 1) {
+        light_manager.enable_or_disable(node.getValue(), 2);
+        light_manager.enable_or_disable(node.getValue(), 3);
+    } else {
+        light_manager.enable_or_disable(0, 2);
+        light_manager.enable_or_disable(0, 3);
+    }
 });
 
 

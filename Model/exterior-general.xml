@@ -8077,6 +8077,7 @@
   <animation>
     <type>material</type>
     <object-name>left_nav</object-name>
+    <object-name>left_nav_lamp</object-name>
     <emission>
       <red>1.0</red>
       <green>0.0</green>
@@ -8087,6 +8088,7 @@
   <animation>
     <type>material</type>
     <object-name>right_nav</object-name>
+    <object-name>right_nav_lamp</object-name>
     <emission>
       <red>0.0</red>
       <green>1.0</green>

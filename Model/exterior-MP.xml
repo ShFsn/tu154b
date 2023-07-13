@@ -4,32 +4,54 @@
 
   <!-- Glass Shader-->
   <effect>
-      <inherits-from>Effects/glass</inherits-from>
-      <object-name>WindShield</object-name>
-      <object-name>LeftWindowGlassExt</object-name>
-      <object-name>RightWindowGlassExt</object-name>
+    <inherits-from>Effects/glass</inherits-from>
+    <object-name>WindShield</object-name>
+    <object-name>LeftWindowGlassExt</object-name>
+    <object-name>RightWindowGlassExt</object-name>
   </effect>
 
   <!-- Model shaders -->
   <effect include="Collections/ext_maina_combined.xml">
-      <inherits-from>Effects/mainaEFF_MP</inherits-from>
+    <inherits-from>Effects/mainaEFF_MP</inherits-from>
   </effect>
   <effect include="Collections/ext_mainb_combined.xml">
-      <inherits-from>Effects/mainbEFF_MP</inherits-from>
+    <inherits-from>Effects/mainbEFF_MP</inherits-from>
   </effect>
   <effect include="Collections/ext_var_combined.xml">
-      <inherits-from>Effects/varEFF_MP</inherits-from>
+    <inherits-from>Effects/varEFF_MP</inherits-from>
   </effect>
   <effect include="Collections/ext_gear_combined.xml">
-      <inherits-from>Effects/gearEFF_MP</inherits-from>
+    <inherits-from>Effects/gearEFF_MP</inherits-from>
   </effect>
   <effect include="Collections/ext_wing_combined.xml">
-      <inherits-from>Effects/wingEFF_MP</inherits-from>
+    <inherits-from>Effects/wingEFF_MP</inherits-from>
+  </effect>
+
+  <!-- Pieces with color.rgb -->
+  <effect>
+    <inherits-from>Effects/model-combined</inherits-from>
+    <!--Fuselage-->
+    <object-name>beacon_lower</object-name>
+    <object-name>beacon_upper</object-name>
+    <object-name>rear_nav_lamp</object-name>
+    <!--Left wing-->
+    <object-name>left_nav_lamp</object-name>
+    <!--Right wing-->
+    <object-name>right_nav_lamp</object-name>
+    <object-name>RefuelContourExt</object-name>
+    <object-name>RefuelContourInt</object-name>
+  </effect>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <!--Left wing-->
+    <object-name>left_nav</object-name>
+    <!--Right wing-->
+    <object-name>right_nav</object-name>
   </effect>
 
   <!-- Interior Model shaders TEMPORARY -->
   <effect include="Collections/interior_combined.xml">
-      <inherits-from>Effects/model-combined</inherits-from>
+    <inherits-from>Effects/model-combined</inherits-from>
   </effect>
 
 </PropertyList>
