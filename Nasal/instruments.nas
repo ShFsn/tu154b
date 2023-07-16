@@ -1514,7 +1514,6 @@ if( getprop("tu154/switches/pu-11-gpk") == 1 ) { # GA-3 correction
 	var offset = getprop("instrumentation/heading-indicator[1]/offset-deg");
 	if( offset == nil ) return;
 	setprop("instrumentation/heading-indicator[1]/offset-deg", offset+delta );
-	return;
 	}
 else	{ # osn
 	if( getprop("instrumentation/heading-indicator[0]/serviceable" ) != 1 ) return;
@@ -1526,7 +1525,6 @@ else	{ # osn
 	var offset = getprop("instrumentation/heading-indicator[0]/offset-deg");
 	if( offset == nil ) return;
 	setprop("instrumentation/heading-indicator[0]/offset-deg", offset+delta );
-	return;
 	}
    } # end GA-3 correction
    if( getprop("tu154/switches/pu-11-gpk") == 0 ) { # BGMK correction
@@ -1554,13 +1552,11 @@ if( getprop("tu154/switches/pu-11-corr") == 0 ) # kontr
 		var offset = getprop("instrumentation/heading-indicator[1]/offset-deg");
 		if( offset == nil ) return;
 		setprop("instrumentation/heading-indicator[1]/offset-deg", offset+delta );
-		return;
 		}
 	else	{ # to left
 		var offset = getprop("instrumentation/heading-indicator[1]/offset-deg");
 		if( offset == nil ) return;
 		setprop("instrumentation/heading-indicator[1]/offset-deg", offset-delta );
-		return;
 		}
 	}
 else	{	# osn
@@ -1570,13 +1566,11 @@ else	{	# osn
 		var offset = getprop("instrumentation/heading-indicator[0]/offset-deg");
 		if( offset == nil ) return;
 		setprop("instrumentation/heading-indicator[0]/offset-deg", offset+delta );
-		return;
 		}
 	else	{ # to left
 		var offset = getprop("instrumentation/heading-indicator[0]/offset-deg");
 		if( offset == nil ) return;
 		setprop("instrumentation/heading-indicator[0]/offset-deg", offset-delta );
-		return;
 		}
 
 	}
