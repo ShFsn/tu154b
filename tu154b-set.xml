@@ -322,6 +322,10 @@
     </realism>
 
     <systems>
+      <autopilot n="100">
+        <path>Aircraft/tu154b/Systems/Calc/workarounds.xml</path>
+      </autopilot>
+
       <property-rule n="100">
         <path>Aircraft/tu154b/Systems/property-rules.xml</path>
       </property-rule>

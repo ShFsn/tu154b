@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+
+
+ <!-- ABSU -->
+
+ <filter>
+  <output>/fdm/jsbsim/ap/input-heading-gyro-1</output>
+  <type>gain</type>
+  <gain>1.0</gain>
+  <input>
+    <expression>
+      <mod>
+        <property>/fdm/jsbsim/ap/input-heading-gyro-1-i</property>
+        <value>360.0</value>
+      </mod>
+    </expression>
+  </input>
+ </filter>
+
+ <filter>
+  <output>/fdm/jsbsim/ap/input-heading-gyro-2</output>
+  <type>gain</type>
+  <gain>1.0</gain>
+  <input>
+    <expression>
+      <mod>
+        <property>/fdm/jsbsim/ap/input-heading-gyro-2-i</property>
+        <value>360.0</value>
+      </mod>
+    </expression>
+  </input>
+ </filter>
+
+
+</PropertyList>

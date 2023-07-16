@@ -92,30 +92,26 @@
 
 
 		<!-- Delivery gyro heading to TKS compass system -->
-		<fcs_function name="ap/input-heading-gyro-1">
+		<fcs_function name="ap/input-heading-gyro-1-i">
 			<function>
-				<mod>
-					<sum>
-						<property>/orientation/heading-deg</property>
-						<property>/instrumentation/heading-indicator[0]/offset-deg</property>
-						<value> 360.0 </value>
-					</sum>
+				<sum>
+					<property>/orientation/heading-deg</property>
+					<property>/instrumentation/heading-indicator[0]/offset-deg</property>
 					<value> 360.0 </value>
-				</mod>
+				</sum>
 			</function>
 		</fcs_function>
-		<fcs_function name="ap/input-heading-gyro-2">
+		<!-- SEE MODULO IN WORKAROUNDS!!! -->
+		<fcs_function name="ap/input-heading-gyro-2-i">
 			<function>
-				<mod>
-					<sum>
-						<property>/orientation/heading-deg</property>
-						<property>/instrumentation/heading-indicator[1]/offset-deg</property>
-						<value> 360.0 </value>
-					</sum>
+				<sum>
+					<property>/orientation/heading-deg</property>
+					<property>/instrumentation/heading-indicator[1]/offset-deg</property>
 					<value> 360.0 </value>
-				</mod>
+				</sum>
 			</function>
 		</fcs_function>
+		<!-- SEE MODULO IN WORKAROUNDS!!! -->
 
 		<!-- PNP -->
 		<!-- "Plane" handle -->

@@ -1497,7 +1497,6 @@ var mk1 = getprop("fdm/jsbsim/instrumentation/km-5-1");
 if( mk1 == nil ) return;
 var mk2 = getprop("fdm/jsbsim/instrumentation/km-5-2");
 if( mk2 == nil ) return;
-help.tks();	# show help string
 if( getprop("tu154/switches/pu-11-gpk") == 1 ) { # GA-3 correction
 # parameters GA-3
    var gpk_1 = getprop("fdm/jsbsim/instrumentation/ga3-corrected-1");
@@ -1540,12 +1539,12 @@ else	{ # BGMK-1
         setprop("fdm/jsbsim/instrumentation/bgmk-corrector-1",1);
 	}
    } # end BGMK correction
+help.tks();	# show help string
 }
 
 # manually adjust gyro heading - GA-3 only
 tks_adj = func{
 if( getprop("tu154/switches/pu-11-gpk") != 0 ) return;
-help.tks();	# show help string
 var delta = 0.1;
 if( getprop("tu154/switches/pu-11-corr") == 0 ) # kontr
 	{
@@ -1581,6 +1580,7 @@ else	{	# osn
 		}
 
 	}
+help.tks();	# show help string
 }
 
 # TKS power support
