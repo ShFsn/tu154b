@@ -127,7 +127,7 @@
 	
 	<model>
 		<name>chock_left</name>
-		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.xml</path>
+		<path>Aircraft/tu154b/Model/Services/Chocks/chock_main.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>
@@ -140,7 +140,7 @@
 	
 	<model>
 		<name>chock_right</name>
-		<path>Aircraft/tu154b/Model/Services/Chocks/chock_nose.xml</path>
+		<path>Aircraft/tu154b/Model/Services/Chocks/chock_main.xml</path>
 		<condition>
 			<property>sim/multiplay/generic/bool[27]</property>
 		</condition>
