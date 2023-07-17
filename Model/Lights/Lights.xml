@@ -373,7 +373,7 @@
   <name>Lightcone_Collision_L</name>
   <path>Aircraft/tu154b/Model/Lights/red-lightcone.xml</path>
      <offsets>
-      <x-m>6.8417</x-m>
+      <x-m>6.9</x-m>
       <y-m>-18.772</y-m>
       <z-m>0.1192</z-m>
       <pitch-deg>90.0</pitch-deg>
@@ -384,7 +384,7 @@
   <name>Lightcone_Collision_R</name>
   <path>Aircraft/tu154b/Model/Lights/green-lightcone.xml</path>
      <offsets>
-      <x-m>6.8417</x-m>
+      <x-m>6.9</x-m>
       <y-m>18.772</y-m>
       <z-m>0.1192</z-m>
       <pitch-deg>90.0</pitch-deg>
@@ -436,7 +436,7 @@
   <name>navlight_l</name>
   <path>Aircraft/tu154b/Model/Lights/red.xml</path>
      <offsets>
-      <x-m>6.8417</x-m> 
+      <x-m>6.9</x-m> 
       <y-m>-18.772</y-m> 
       <z-m>0.1192</z-m>       
      </offsets>
@@ -445,7 +445,7 @@
   <name>navlight_r</name>
   <path>Aircraft/tu154b/Model/Lights/green.xml</path>
      <offsets>
-      <x-m>6.8417</x-m> 
+      <x-m>6.9</x-m> 
       <y-m>18.772</y-m> 
       <z-m>0.1192</z-m>       
      </offsets>
@@ -565,7 +565,7 @@
   <name>navlight_l_p</name>
   <path>Aircraft/tu154b/Model/Lights/procedural_light_nav_left.xml</path>
      <offsets>
-      <x-m>6.8417</x-m> 
+      <x-m>6.9</x-m> 
       <y-m>-18.772</y-m> 
       <z-m>0.1192</z-m>       
      </offsets>
@@ -574,7 +574,7 @@
   <name>navlight_l_p_2</name>
   <path>Aircraft/tu154b/Model/Lights/procedural_light_nav_left2.xml</path>
      <offsets>
-      <x-m>6.8417</x-m> 
+      <x-m>6.9</x-m> 
       <y-m>-18.772</y-m> 
       <z-m>0.1192</z-m>       
      </offsets>
@@ -583,7 +583,7 @@
   <name>navlight_r_p</name>
   <path>Aircraft/tu154b/Model/Lights/procedural_light_nav_right.xml</path>
      <offsets>
-      <x-m>6.8417</x-m> 
+      <x-m>6.9</x-m> 
       <y-m>18.772</y-m> 
       <z-m>0.1192</z-m>       
      </offsets>
@@ -592,7 +592,7 @@
   <name>navlight_r_p_2</name>
   <path>Aircraft/tu154b/Model/Lights/procedural_light_nav_right2.xml</path>
      <offsets>
-      <x-m>6.8417</x-m> 
+      <x-m>6.9</x-m> 
       <y-m>18.772</y-m> 
       <z-m>0.1192</z-m>       
      </offsets>
