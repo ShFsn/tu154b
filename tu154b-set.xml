@@ -478,4 +478,21 @@
 
   <!--******************************* END OF WEIGHTS AND FDM *******************************-->
 
+  <!--*********** DELIVER POWER TO NAV INSTRUMENTS (POSSIBLY A 2020.4 WORKAROUND) **********-->
+
+  <systems>
+    <electrical>
+      <outputs>
+        <adf n="0" type="float">0.0</adf>
+        <adf n="1" alias="/systems/electrical/outputs/adf[0]"/>
+        <dme n="0" type="float">0.0</dme>
+        <dme n="1" alias="/systems/electrical/outputs/dme[0]"/>
+        <dme n="2" alias="/systems/electrical/outputs/dme[0]"/>
+        <nav n="0" type="float">0.0</nav>
+        <nav n="1" alias="/systems/electrical/outputs/nav[0]"/>
+        <nav n="2" alias="/systems/electrical/outputs/nav[0]"/>
+      </outputs>
+    </electrical>
+  </systems>
+
 </PropertyList>

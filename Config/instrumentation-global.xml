@@ -35,15 +35,15 @@
     <radials>
       <selected-deg type="double">0.0</selected-deg>
     </radials>
-    <serviceable>true</serviceable>
+    <serviceable type="bool">true</serviceable>
     <cdi>
-      <serviceable>true</serviceable>
+      <serviceable type="bool">true</serviceable>
     </cdi>
     <gs>
-      <serviceable>true</serviceable>
+      <serviceable type="bool">true</serviceable>
     </gs>
     <to-from>
-      <serviceable>true</serviceable>
+      <serviceable type="bool">true</serviceable>
     </to-from>
     <slaved-to-gps type="bool">false</slaved-to-gps>
     <powered type="bool" >false</powered>
