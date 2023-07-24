@@ -289,9 +289,8 @@
       <path>Aircraft/tu154b/Sound/sound.xml</path>
       <internal type="bool">true</internal>
       <external type="bool">false</external>
+      <cockpit type="bool">true</cockpit>
       <pax type="bool">false</pax>
-      <window-open type="bool">false</window-open>
-      <loud-ext type="bool">true</loud-ext>
       <voices>
         <copilot type="string"></copilot>
       </voices>

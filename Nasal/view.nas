@@ -200,14 +200,9 @@ var resetView = func{
 view_checker = func{
       internal = getprop("/sim/current-view/internal");
       vnr = getprop("/sim/current-view/view-number-raw");
-      wind_l = getprop("/tu154/door/window-left");
-      wind_r = getprop("/tu154/door/window-right");
       if( internal == nil ) { return; }
       if( vnr == nil ) { return; }
-      if( wind_l == nil ) { return; }
-      if( wind_r == nil ) { return; }
 
-      setprop("/sim/sound/window-open", 0);
       if( internal == 1 or vnr == 105 or vnr == 106 or vnr == 107 or vnr == 108 or vnr == 118 or vnr == 119 ) {
             setprop("/sim/sound/internal", 1);
             setprop("/sim/sound/external", 0);
@@ -219,13 +214,13 @@ view_checker = func{
 
       if( vnr == 105 or vnr == 106 or vnr == 107 or vnr == 108 or vnr == 118 or vnr == 119 ) {
             setprop("/sim/sound/pax", 1);
+						setprop("/sim/sound/cockpit", 0);
       }
       else {
             setprop("/sim/sound/pax", 0);
-            if( wind_l != 0 or wind_r != 0 ) { setprop("/sim/sound/window-open", 1); }
+						if(internal == 1) { setprop("/sim/sound/cockpit", 1); }
+						else { setprop("/sim/sound/cockpit", 0); }
       }
 }
 setlistener("sim/current-view/view-number", view_checker);
-setlistener("tu154/door/window-right", view_checker);
-setlistener("tu154/door/window-left", view_checker);
 

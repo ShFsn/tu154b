@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+  <path>Sounds/rumble.wav</path>
+  <condition>
+    <property>engines/engine[0]/running</property>
+    <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+    <property>sim/sound/internal</property>
+  </condition>
+  <mode>looped</mode>
+  <position include="eng-1-pos.xml"/>
+  <volume>
+    <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+    <factor>0.43</factor>
+  </volume>
+  <max-dist>20000.0</max-dist>
+  <reference-dist>10.0</reference-dist>
+
+</PropertyList>

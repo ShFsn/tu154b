@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+
+<PropertyList include="eng-common-ext.xml">
+
+  <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
+
+  <mode>once</mode>
+
+  <volume>
+    <property>sim/sound/cockpit</property>
+  </volume>
+
+</PropertyList>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+
+<PropertyList include="cockpit-common.xml">
+
+  <mode>once</mode>
+
+  <volume include="cockpit-volume.xml"/>
+
+</PropertyList>

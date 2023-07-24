@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+  <expression>
+    <difference>
+      <property>sim/sound/internal</property>
+      <property>sim/sound/pax</property>
+    </difference>
+  </expression>
+
+</PropertyList>

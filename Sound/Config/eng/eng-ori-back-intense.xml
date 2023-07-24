@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+  <x>1.0</x>
+  <y>0.0</y>
+  <z>0.0</z>
+  <inner-angle>45.0</inner-angle>
+  <outer-angle>90.0</outer-angle>
+  <outer-gain>0.0</outer-gain>
+
+</PropertyList>

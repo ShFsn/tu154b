@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+
+<PropertyList include="eng-common-int.xml">
+
+  <path>Aircraft/tu154b/Sound/engine/nk8_shut.wav</path>
+  <mode>once</mode>
+  <volume>
+    <property>sim/sound/internal</property>
+    <factor>0.8</factor>
+  </volume>
+
+</PropertyList>

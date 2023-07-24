@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+
+<PropertyList include="gear-common.xml">
+
+  <path>Aircraft/tu154b/Sound/misc/bnroll2.wav</path>
+
+  <mode>looped</mode>
+  
+  <volume>
+    <property>velocities/groundspeed-kt</property>
+    <factor>0.003</factor>
+  </volume>
+
+</PropertyList>

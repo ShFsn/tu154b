@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+  <factor>0.0023</factor>
+  <!--<offset>0.0</offset>-->
+  <min>0.0</min>
+  <max>0.2</max>
+
+</PropertyList>
