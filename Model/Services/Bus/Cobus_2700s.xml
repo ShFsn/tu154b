@@ -3,7 +3,6 @@
     
 	<!--<animation>
 		<type>select</type>
-        <object-name>blah</object-name>
         <object-name>Cobus_2700s</object-name>
         <object-name>Cobus_2700s_Light</object-name>
 		<condition>
@@ -13,7 +12,6 @@
 	
 	<effect>
 		<inherits-from>Aircraft/tu154b/Model/Services/groundservices</inherits-from>
-		<object-name>blah</object-name>
 		<object-name>Cobus_2700s</object-name>
 		<parameters>
 			<lightmap-enabled type="int"><use>/environment/lightmap-factor</use></lightmap-enabled>
