@@ -164,12 +164,12 @@
             <location unit="M">
                 <x> 6.0 </x>
                 <y> 0.0 </y>
-                <z> -2.7 </z>
+                <z> -2.75 </z>
             </location>
             <static_friction> 0.6 </static_friction>
             <dynamic_friction> 0.8 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-            <spring_coeff unit="N/M"> 800000 </spring_coeff><!--800000-->
+            <spring_coeff unit="N/M"> 400000 </spring_coeff><!--800000-->
             <damping_coeff unit="N/M/SEC"> 150000 </damping_coeff><!--150000-->
             <max_steer unit="DEG"> 63.0 </max_steer>
             <brake_group> NONE </brake_group>
@@ -184,7 +184,7 @@
             <static_friction> 0.6 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction><!--0.02-->
-            <spring_coeff unit="N/M"> 1.7e+06 </spring_coeff><!--1.7e+06 -->
+            <spring_coeff unit="N/M"> 2.0e+06 </spring_coeff><!--1.7e+06 -->
             <damping_coeff unit="N/M/SEC"> 100000 </damping_coeff>
             <max_steer unit="DEG"> 0 </max_steer>
             <brake_group> LEFT </brake_group>
@@ -199,7 +199,7 @@
             <static_friction> 0.6 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-            <spring_coeff unit="N/M"> 1.7e+06 </spring_coeff>
+            <spring_coeff unit="N/M"> 2.0e+06 </spring_coeff>
             <!--<spring_coeff unit="N/M"> 3.1536e+06 </spring_coeff>-->
             <!--<damping_coeff unit="N/M/SEC"> 630720 </damping_coeff>-->
             <damping_coeff unit="N/M/SEC"> 100000 </damping_coeff><!--100000-->
@@ -212,7 +212,7 @@
             <location unit="M">
               <x>25.51</x>
               <y>-6.195</y>
-              <z>-2.7</z>
+              <z>-2.696</z>
             </location>
             <static_friction>0.0000</static_friction>
             <dynamic_friction>0.0000</dynamic_friction>
@@ -227,7 +227,7 @@
             <location unit="M">
               <x>28.13</x>
               <y>-6.195</y>
-              <z>-2.3</z>
+              <z>-2.304</z>
             </location>
             <static_friction>0.0000</static_friction>
             <dynamic_friction>0.0000</dynamic_friction>
@@ -242,7 +242,7 @@
             <location unit="M">
               <x>25.51</x>
               <y>6.195</y>
-              <z>-2.7</z>
+              <z>-2.696</z>
             </location>
             <static_friction>0.0000</static_friction>
             <dynamic_friction>0.0000</dynamic_friction>
@@ -257,7 +257,7 @@
             <location unit="M">
               <x>28.13</x>
               <y>6.195</y>
-              <z>-2.3</z>
+              <z>-2.304</z>
             </location>
             <static_friction>0.0000</static_friction>
             <dynamic_friction>0.0000</dynamic_friction>

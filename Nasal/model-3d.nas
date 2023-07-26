@@ -367,9 +367,9 @@ gear_handler = func{
       var pressure = getprop("gear/gear[1]/compression-norm");
       if( pressure == nil ) return;
       if (gear_l_f.getValue()) {
-            setprop("tu154/gear/rotation-left-deg", math.atan2(gear_l_c.getValue()-gear_l_f.getValue()+0.656, 4.3) * R2D);
+            setprop("tu154/gear/rotation-left-deg", math.atan2(gear_l_c.getValue()-gear_l_f.getValue()+0.64264, 4.3) * R2D);
       } else {            
-            setprop("tu154/gear/rotation-left-deg", math.atan2(gear_l_r.getValue()-gear_l_c.getValue()+0.656, 4.3) * R2D);
+            setprop("tu154/gear/rotation-left-deg", math.atan2(gear_l_r.getValue()-gear_l_c.getValue()+0.64264, 4.3) * R2D);
       }
       #if( pressure < 0.1 )setprop("tu154/gear/rotation-left-deg", 8.5 );
       #else setprop("tu154/gear/rotation-left-deg", rot );
@@ -378,9 +378,9 @@ gear_handler = func{
       pressure = getprop("gear/gear[2]/compression-norm");
       if( pressure == nil ) return;
       if (gear_r_f.getValue()) {
-            setprop("tu154/gear/rotation-right-deg", math.atan2(gear_r_c.getValue()-gear_r_f.getValue()+0.656, 4.3) * R2D);
+            setprop("tu154/gear/rotation-right-deg", math.atan2(gear_r_c.getValue()-gear_r_f.getValue()+0.64264, 4.3) * R2D);
       } else {            
-            setprop("tu154/gear/rotation-right-deg", math.atan2(gear_r_r.getValue()-gear_r_c.getValue()+0.656, 4.3) * R2D);
+            setprop("tu154/gear/rotation-right-deg", math.atan2(gear_r_r.getValue()-gear_r_c.getValue()+0.64264, 4.3) * R2D);
       }
       #if( pressure < 0.1 ) setprop("tu154/gear/rotation-right-deg", 8.5 );
       #else setprop("tu154/gear/rotation-right-deg", rot );

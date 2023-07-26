@@ -240,7 +240,7 @@
 					<difference>
 						<sum>
 							<property>gear/gear[0]/compression-norm</property>
-							<value>-0.656</value>
+							<value>-0.82</value>
 						</sum>
 						<product>
 							<sum>
