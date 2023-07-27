@@ -4690,9 +4690,9 @@
     <object-name>l_gear_object_5.1</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	0.5</ind>	<dep>	8.5</dep></entry>
       <!-- We need pitch -8.5 deg for non-pressured main gear  -->
-      <entry><ind>	0.9</ind>	<dep>	74.5</dep></entry>
+      <entry><ind>	0.9</ind>	<dep>	83.0</dep></entry>
     </interpolation>
     <center>
       <x-m>2.5153</x-m>
@@ -4755,10 +4755,10 @@
     <property>sim/multiplay/generic/float[3]</property>
     <interpolation>
       <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.218</ind>	<dep>	-0.8</dep></entry>
-      <entry><ind>	0.32</ind>	<dep>	-2.5</dep></entry>
-      <entry><ind>	0.422</ind>	<dep>	-4.5</dep></entry>
-      <entry><ind>	0.49</ind>	<dep>	-6.5</dep></entry>
+      <entry><ind>	0.218</ind>	<dep>	-0.88</dep></entry>
+      <entry><ind>	0.32</ind>	<dep>	-2.75</dep></entry>
+      <entry><ind>	0.422</ind>	<dep>	-4.75</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	-7.15</dep></entry>
     </interpolation>
     <center>
       <x-m>-1.285</x-m>
@@ -4818,27 +4818,6 @@
       <z>0.0</z>
     </axis>
   </animation>
-  <!--Turn cylinder-stabilizer to work position (main gear to horizont)-->
-  <animation>
-    <type>rotate</type>
-    <object-name>l_gear_object_6.2</object-name>
-    <object-name>l_gear_object_6.1</object-name>
-    <property>sim/multiplay/generic/float[5]</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.15</ind>	<dep>	-10.0</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>2.71</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.2354</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
 
   <!--turn Cylinder-Stabilizer by pressure-->
   <animation>
@@ -4848,7 +4827,7 @@
     <property>sim/multiplay/generic/float[3]</property>
     <interpolation>
       <entry><ind>	0.15</ind>	<dep>	 0.0</dep></entry>
-      <entry><ind>	0.235</ind>	<dep>	-6.0</dep></entry>
+      <entry><ind>	0.235</ind>	<dep>	-10.0</dep></entry>
       <entry><ind>	0.32</ind>	<dep>	-17.0</dep></entry>
       <entry><ind>	0.405</ind>	<dep>	-26.0</dep></entry>
       <entry><ind>	0.49</ind>	<dep>	-33.0</dep></entry>
@@ -4869,7 +4848,8 @@
     <type>rotate</type>
     <object-name>l_gear_object_6.2</object-name>
     <object-name>l_gear_object_6.1</object-name>
-    <property>sim/multiplay/generic/float[3]</property>
+    <property>sim/multiplay/generic/float[5]</property>
+    <offset-deg>-8.5</offset-deg>
     <center>
       <x-m>2.71</x-m>
       <y-m>0.0</y-m>
@@ -4918,27 +4898,6 @@
   </animation>
 
   <!--Pressuration-->
-  <!--Turn gear to horizont-->
-  <animation>
-    <type>rotate</type>
-    <object-name>l_gear_object_5.4</object-name>
-    <object-name>l_gear_object_5.1</object-name>
-    <property>sim/multiplay/generic/float[5]</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.15</ind>	<dep>	8.5</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>2.5153</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.23554</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
 
   <!--Cyl-stab levers-->
   <animation>
@@ -5140,7 +5099,7 @@
       <entry><ind>	0.235</ind>	<dep>	12.0</dep></entry>
       <entry><ind>	0.32</ind>	<dep>	27.0</dep></entry>
       <entry><ind>	0.405</ind>	<dep>	40.0</dep></entry>
-      <entry><ind>	0.49</ind>	<dep>	65.0</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	58.0</dep></entry>
     </interpolation>
     <center>
       <x-m>1.8</x-m>
@@ -5160,8 +5119,8 @@
     <property>sim/multiplay/generic/float[3]</property>
     <interpolation>
       <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.303</ind>	<dep>	10.0</dep></entry>
-      <entry><ind>	0.49</ind>	<dep>	25.0</dep></entry>
+      <entry><ind>	0.303</ind>	<dep>	22.5</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	54.0</dep></entry>
     </interpolation>
     <center>
       <x-m>1.6343</x-m>
@@ -5171,6 +5130,26 @@
     <axis>
       <x>0.0</x>
       <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>l_gear_object_3.4</object-name>
+    <property>sim/multiplay/generic/float[3]</property>
+    <interpolation>
+      <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	0.303</ind>	<dep>	23.0</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	56.5</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>1.6759</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.1988</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5333,8 +5312,8 @@
     <object-name>r_gear_object_5.1</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry><ind>	0.5</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.9</ind>	<dep>	74.5</dep></entry> 
+      <entry><ind>	0.5</ind>	<dep>	8.5</dep></entry>
+      <entry><ind>	0.9</ind>	<dep>	83.0</dep></entry> 
     </interpolation>
     <center>
       <x-m>2.5153</x-m>
@@ -5397,10 +5376,10 @@
     <property>sim/multiplay/generic/float[4]</property>
     <interpolation>
       <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.218</ind>	<dep>	-0.8</dep></entry>
-      <entry><ind>	0.32</ind>	<dep>	-2.5</dep></entry>
-      <entry><ind>	0.422</ind>	<dep>	-4.5</dep></entry>
-      <entry><ind>	0.49</ind>	<dep>	-6.5</dep></entry>
+      <entry><ind>	0.218</ind>	<dep>	-0.88</dep></entry>
+      <entry><ind>	0.32</ind>	<dep>	-2.75</dep></entry>
+      <entry><ind>	0.422</ind>	<dep>	-4.75</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	-7.15</dep></entry>
     </interpolation>
     <center>
       <x-m>-1.285</x-m>
@@ -5460,27 +5439,6 @@
       <z>0.0</z>
     </axis>
   </animation>
-  <!--Turn cylinder-stabilizer to work position (main gear to horizont)-->
-  <animation>
-    <type>rotate</type>
-    <object-name>r_gear_object_6.2</object-name>
-    <object-name>r_gear_object_6.1</object-name>
-    <property>sim/multiplay/generic/float[6]</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.15</ind>	<dep>	-10.0</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>2.71</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.2354</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
 
   <!--turn Cylinder-Stabilizer by pressure-->
   <animation>
@@ -5490,7 +5448,7 @@
     <property>sim/multiplay/generic/float[4]</property>
     <interpolation>
       <entry><ind>	0.15</ind>	<dep>	 0.0</dep></entry>
-      <entry><ind>	0.235</ind>	<dep>	-6.0</dep></entry>
+      <entry><ind>	0.235</ind>	<dep>	-10.0</dep></entry>
       <entry><ind>	0.32</ind>	<dep>	-17.0</dep></entry>
       <entry><ind>	0.405</ind>	<dep>	-26.0</dep></entry>
       <entry><ind>	0.49</ind>	<dep>	-33.0</dep></entry>
@@ -5511,7 +5469,8 @@
     <type>rotate</type>
     <object-name>r_gear_object_6.2</object-name>
     <object-name>r_gear_object_6.1</object-name>
-    <property>sim/multiplay/generic/float[4]</property>
+    <property>sim/multiplay/generic/float[6]</property>
+    <offset-deg>-8.5</offset-deg>
     <center>
       <x-m>2.71</x-m>
       <y-m>0.0</y-m>
@@ -5560,27 +5519,6 @@
   </animation>
 
   <!--Pressuration-->
-  <!--Turn gear to horizont-->
-  <animation>
-    <type>rotate</type>
-    <object-name>r_gear_object_5.4</object-name>
-    <object-name>r_gear_object_5.1</object-name>
-    <property>sim/multiplay/generic/float[6]</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.15</ind>	<dep>	8.5</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>2.5153</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.23554</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
 
   <!--Cyl-stab levers-->
   <animation>
@@ -5783,7 +5721,7 @@
       <entry><ind>	0.235</ind>	<dep>	12.0</dep></entry>
       <entry><ind>	0.32</ind>	<dep>	27.0</dep></entry>
       <entry><ind>	0.405</ind>	<dep>	40.0</dep></entry>
-      <entry><ind>	0.49</ind>	<dep>	65.0</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	58.0</dep></entry>
     </interpolation>
     <center>
       <x-m>1.8</x-m>
@@ -5803,8 +5741,8 @@
     <property>sim/multiplay/generic/float[4]</property>
     <interpolation>
       <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.303</ind>	<dep>	10.0</dep></entry>
-      <entry><ind>	0.49</ind>	<dep>	25.0</dep></entry>
+      <entry><ind>	0.303</ind>	<dep>	22.5</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	54.0</dep></entry>
     </interpolation>
     <center>
       <x-m>1.6343</x-m>
@@ -5814,6 +5752,26 @@
     <axis>
       <x>0.0</x>
       <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>r_gear_object_3.4</object-name>
+    <property>sim/multiplay/generic/float[4]</property>
+    <interpolation>
+      <entry><ind>	0.15</ind>	<dep>	0.0</dep></entry>
+      <entry><ind>	0.303</ind>	<dep>	23.0</dep></entry>
+      <entry><ind>	0.49</ind>	<dep>	56.5</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>1.6759</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.1988</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
