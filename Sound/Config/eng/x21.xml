@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-
-
-<PropertyList include="x-common.xml">
-
-  <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
-
-</PropertyList>

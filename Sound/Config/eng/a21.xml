@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-
-
-<PropertyList include="a-common.xml">
-
-  <path>Aircraft/tu154b/Sound/engine/nk8_a21.wav</path>
-
-</PropertyList>

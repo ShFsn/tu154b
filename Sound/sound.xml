@@ -13,10 +13,10 @@
 
 <PropertyList>
   <fx>
-    <!--################################## Cockpit ##################################-->
-    <!--################################## Voices ##################################-->
+    <!--********************* Cockpit *************************-->
+    <!--********************* Voices ***********************-->
     <!--Engine control-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>takeoff</name>
       <path>Aircraft/tu154b/Sound/voice/Eng_vzl.wav</path>
       <condition>
@@ -34,11 +34,15 @@
         </greater-than>
         <property>fdm/jsbsim/fcs/wow</property>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>1</x><y>-1</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
     <!--Generators on load-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>gen_on_load</name>
       <path>Aircraft/tu154b/Sound/voice/Eng_gen.wav</path>
       <condition>
@@ -58,26 +62,41 @@
         <not><property>tu154/lamps/gen-2-failure</property></not>
         <not><property>tu154/lamps/gen-3-failure</property></not>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-
-    <!--Engines/APU status-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>eng_1_slow</name>
       <path>Aircraft/tu154b/Sound/voice/Eng_1_m.wav</path>
       <property>engines/engine[0]/running</property>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>eng_2_slow</name>
       <path>Aircraft/tu154b/Sound/voice/Eng_2_m.wav</path>
       <property>engines/engine[1]/running</property>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>eng_3_slow</name>
       <path>Aircraft/tu154b/Sound/voice/Eng_3_m.wav</path>
       <property>engines/engine[2]/running</property>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>apu_off</name>
       <path>Aircraft/tu154b/Sound/voice/Eng_vsu.wav</path>
       <condition>
@@ -86,11 +105,15 @@
           <value>30.0</value>
         </less-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
     <!--Crew ready-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_ready</name>
       <path>Aircraft/tu154b/Sound/voice/St_Ready.wav</path>
       <condition>
@@ -99,9 +122,13 @@
           <value>0.9</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>eng_ready</name>
       <path>Aircraft/tu154b/Sound/voice/Eng_Ready.wav</path>
       <condition>
@@ -110,9 +137,13 @@
           <value>0.9</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>sp_ready</name>
       <path>Aircraft/tu154b/Sound/voice/2P_Ready.wav</path>
       <condition>
@@ -121,11 +152,13 @@
           <value>0.9</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-
-    <!--Gear lever status-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>gear_up</name>
       <path>Aircraft/tu154b/Sound/voice/2P_G_up_l.wav</path>
       <condition>
@@ -134,9 +167,13 @@
           <value>0.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>gear_down</name>
       <path>Aircraft/tu154b/Sound/voice/2P_G_down_l.wav</path>
       <condition>
@@ -145,9 +182,13 @@
           <value>1.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>gear_hs</name>
       <path>Aircraft/tu154b/Sound/voice/BI_Neutr_l.wav</path>
       <condition>
@@ -156,9 +197,13 @@
           <value>1</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>gear_neutr</name>
       <path>Aircraft/tu154b/Sound/voice/2P_Neutr_l.wav</path>
       <condition>
@@ -167,9 +212,13 @@
           <value>0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>gear_neutr_emerg2</name>
       <path>Aircraft/tu154b/Sound/voice/2P_Neutr_l.wav</path>
       <condition>
@@ -178,11 +227,15 @@
           <value>0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
     <!--Flaps control-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_flaps_retract</name>
       <path>Aircraft/tu154b/Sound/voice/St_z_ubir.wav</path>
       <condition>
@@ -191,9 +244,13 @@
           <value>0.2</value>
         </less-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_flaps_deploy</name>
       <path>Aircraft/tu154b/Sound/voice/St_z_vyp.wav</path>
       <condition>
@@ -202,9 +259,13 @@
           <value>3.0</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_flaps_28</name>
       <path>Aircraft/tu154b/Sound/voice/St_z_28.wav</path>
       <condition>
@@ -213,9 +274,13 @@
           <value>27.0</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_flaps_full</name>
       <path>Aircraft/tu154b/Sound/voice/St_z_Full.wav</path>
       <condition>
@@ -224,21 +289,29 @@
           <value>44.0</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
     <!--PPM-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_ppm</name>
       <path>Aircraft/tu154b/Sound/voice/St_PPM.wav</path>
       <condition>
         <property>tu154/systems/electrical/indicators/change-waypoint</property>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
-      <!--Navigator speed count-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <!--Navigator speed count-->
+    <voice>
       <name>s_v_r</name>
       <path>Aircraft/tu154b/Sound/voice/St_VR.wav</path>
       <condition>
@@ -247,9 +320,13 @@
           <property>fdm/jsbsim/instrumentation/v-r</property>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_2</name>
       <path>Aircraft/tu154b/Sound/voice/St_V2.wav</path>
       <condition>
@@ -258,9 +335,13 @@
           <property>fdm/jsbsim/instrumentation/v-2</property>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_1</name>
       <path>Aircraft/tu154b/Sound/voice/St_V1.wav</path>
       <condition>
@@ -269,9 +350,13 @@
           <property>fdm/jsbsim/instrumentation/v-1</property>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_220</name>
       <path>Aircraft/tu154b/Sound/voice/St_V_220.wav</path>
       <condition>
@@ -286,9 +371,13 @@
           </less-than>
         </and>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_200</name>
       <path>Aircraft/tu154b/Sound/voice/St_V_200.wav</path>
       <condition>
@@ -303,9 +392,13 @@
           </less-than>
         </and>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_180</name>
       <path>Aircraft/tu154b/Sound/voice/St_V_180.wav</path>
       <condition>
@@ -320,9 +413,13 @@
           </less-than>
         </and>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_160</name>
       <path>Aircraft/tu154b/Sound/voice/St_V_160.wav</path>
       <condition>
@@ -337,9 +434,13 @@
           </less-than>
         </and>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_140</name>
       <path>Aircraft/tu154b/Sound/voice/St_V_140.wav</path>
       <condition>
@@ -354,9 +455,13 @@
           </less-than>
         </and>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v_up</name>
       <path>Aircraft/tu154b/Sound/voice/St_V_up.wav</path>
       <condition>
@@ -365,11 +470,15 @@
           <value>100.0</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
     <!--Headlights-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_f_ub</name>
       <path>Aircraft/tu154b/Sound/voice/St_F_ub.wav</path>
       <condition>
@@ -381,9 +490,13 @@
           <not><property>tu154/light/headlight-selector</property></not>
         </and>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_f_vyp</name>
       <path>Aircraft/tu154b/Sound/voice/St_F_vyp.wav</path>
       <condition>
@@ -392,9 +505,13 @@
           <value>1</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_f_l</name>
       <path>Aircraft/tu154b/Sound/voice/St_F_L.wav</path>
       <condition>
@@ -403,11 +520,15 @@
           <value>1</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
     <!--Speed limits-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_v</name>
       <path>Aircraft/tu154b/Sound/voice/St_V_alert.wav</path>
       <condition>
@@ -472,11 +593,15 @@
           </and>
         </or>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
 
     <!--Navigator radio altimeter count-->
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_250</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_250.wav</path>
       <condition>
@@ -485,9 +610,13 @@
           <value>250.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_200</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_200.wav</path>
       <condition>
@@ -496,9 +625,13 @@
           <value>200.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_150</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_150.wav</path>
       <condition>
@@ -507,9 +640,13 @@
           <value>150.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_120</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_120.wav</path>
       <condition>
@@ -518,9 +655,13 @@
           <value>120.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_100</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_100.wav</path>
       <condition>
@@ -529,9 +670,13 @@
           <value>100.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_oz</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_oz.wav</path>
       <condition>
@@ -540,9 +685,13 @@
           <value>90.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_80</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_80.wav</path>
       <condition>
@@ -551,9 +700,13 @@
           <value>80.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_60</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_60.wav</path>
       <condition>
@@ -562,9 +715,13 @@
           <value>60.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_ch</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_vpr.wav</path>
       <condition>
@@ -573,9 +730,13 @@
           <value>55.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_40</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_40.wav</path>
       <condition>
@@ -584,9 +745,13 @@
           <value>40.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_30</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_30.wav</path>
       <condition>
@@ -595,9 +760,13 @@
           <value>30.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_20</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_20.wav</path>
       <condition>
@@ -606,9 +775,13 @@
           <value>20.0</value>
         </equals>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_10</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_10.wav</path>
       <condition>
@@ -618,9 +791,13 @@
         </equals>
         <property>tu154/systems/warning/voice/state</property>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_6</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_6.wav</path>
       <condition>
@@ -630,9 +807,13 @@
         </equals>
         <property>tu154/systems/warning/voice/state</property>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_3</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_3.wav</path>
       <condition>
@@ -642,9 +823,13 @@
           </equals>
         <property>tu154/systems/warning/voice/state</property>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <voice include="Config/cockpit/cockpit-once.xml">
+    <voice>
       <name>s_h_1</name>
       <path>Aircraft/tu154b/Sound/voice/St_H_1.wav</path>
       <condition>
@@ -654,115 +839,160 @@
         </equals>
         <property>tu154/systems/warning/voice/state</property>
       </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </voice>
-    <!--################################## End of Voices ##################################-->
+    <!--********************* End of Voices ***********************-->
 
     <!--PNK sound-->
-    <pnk include="Config/cockpit/cockpit-once.xml">
+    <pnk>
       <name>rv1_altitude</name>
       <path>Aircraft/tu154b/Sound/misc/telefony.wav</path>
       <property>tu154/instrumentation/rv-5m[0]/warn</property>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </pnk>
-    <pnk include="Config/cockpit/cockpit-once.xml">
+    <pnk>
       <name>rv2_altitude</name>
       <path>Aircraft/tu154b/Sound/misc/telefony.wav</path>
       <property>tu154/instrumentation/rv-5m[1]/warn</property>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </pnk>
 
+
+    <electrical>
+      <name>electrical</name>
+      <path>Aircraft/tu154b/Sound/misc/el_loop.wav</path>
+      <condition>
+        <or>
+          <property>tu154/systems/electrical/suppliers/battery_charge</property>
+          <property>tu154/switches/main-battery</property>
+        </or>
+      </condition>
+      <mode>looped</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
+    </electrical>
+
+
     <!--Signals-->
-    <horn include="Config/cockpit/cockpit-common.xml">
+    <horn>
       <name>horn_const</name>
       <path>Aircraft/tu154b/Sound/misc/sirena.wav</path>
       <mode>looped</mode>
       <condition>
         <property>tu154/systems/warning/horn/const</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
     </horn>
-    <horn include="Config/cockpit/cockpit-common.xml">
+    <horn>
       <name>horn_pulse</name>
       <path>Aircraft/tu154b/Sound/misc/sirena_pr.wav</path>
-      <mode>looped</mode>
       <condition>
         <not><property>tu154/systems/warning/horn/const</property></not>
         <property>tu154/systems/warning/horn/enabled</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </horn>
-    <dynamic include="Config/cockpit/cockpit-common.xml">
+
+    <dynamic>
       <name>dynamic_const</name>
       <path>Aircraft/tu154b/Sound/misc/dinamik.wav</path>
       <mode>looped</mode>
       <condition>
         <property>tu154/systems/warning/alarm/const</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </dynamic>
-    <dynamic include="Config/cockpit/cockpit-common.xml">
+    <dynamic>
       <name>dynamic_pulse</name>
       <path>Aircraft/tu154b/Sound/misc/dinamik_pr.wav</path>
-      <mode>looped</mode>
       <condition>
         <not><property>tu154/systems/warning/alarm/const</property></not>
         <property>tu154/systems/warning/alarm/enabled</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </dynamic>
-    <dynamic include="Config/cockpit/cockpit-common.xml">
+    <dynamic>
       <name>absu_warn</name>
       <path>Aircraft/tu154b/Sound/misc/dinamik_pr.wav</path>
-      <mode>looped</mode>
       <condition>
         <not><property>tu154/systems/warning/alarm/const</property></not>
         <not><property>tu154/systems/warning/alarm/enabled</property></not>
         <property>tu154/systems/warning/alarm/absu_warn</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </dynamic>
-    <marker include="Config/cockpit/cockpit-common.xml">
+
+    <marker>
       <name>inner</name>
       <path>Aircraft/tu154b/Sound/misc/omi_1.wav</path>
-      <mode>once</mode>
       <condition>
         <property>instrumentation/marker-beacon/inner</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </marker>
-    <marker include="Config/cockpit/cockpit-common.xml">
+    <marker>
       <name>middle</name>
       <path>Aircraft/tu154b/Sound/misc/omi_2.wav</path>
-      <mode>once</mode>
       <condition>
         <property>instrumentation/marker-beacon/middle</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </marker>
-    <marker include="Config/cockpit/cockpit-common.xml">
+    <marker>
       <name>outer</name>
       <path>Aircraft/tu154b/Sound/misc/omi_3.wav</path>
-      <mode>once</mode>
       <condition>
         <property>instrumentation/marker-beacon/outer</property>
       </condition>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0</x><y>0</y><z>1.5</z></position>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </marker>
 
     <!--Windows-->
-    <windows include="Config/cockpit/cockpit-common.xml">
+    <windows>
       <name>left window moving</name>
       <path>Aircraft/tu154b/Sound/misc/window-move.wav</path>
-      <mode>looped</mode>
       <condition>
         <greater-than>
           <property>tu154/door/window-left</property>
@@ -773,12 +1003,15 @@
           <value>1</value>
         </less-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </windows>
-    <windows include="Config/cockpit/cockpit-common.xml">
+    <windows>
       <name>left window close</name>
       <path>Aircraft/tu154b/Sound/misc/window-close.wav</path>
-      <mode>once</mode>
       <condition>
         <greater-than>
           <property>tu154/door/window-left</property>
@@ -789,12 +1022,15 @@
           <value>0.15</value>
         </less-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </windows>
-    <windows include="Config/cockpit/cockpit-common.xml">
+    <windows>
       <name>right window moving</name>
       <path>Aircraft/tu154b/Sound/misc/window-move.wav</path>
-      <mode>looped</mode>
       <condition>
         <greater-than>
           <property>tu154/door/window-right</property>
@@ -805,12 +1041,15 @@
           <value>1</value>
         </less-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </windows>
-    <windows include="Config/cockpit/cockpit-common.xml">
+    <windows>
       <name>right window close</name>
       <path>Aircraft/tu154b/Sound/misc/window-close.wav</path>
-      <mode>once</mode>
       <condition>
         <greater-than>
           <property>tu154/door/window-right</property>
@@ -821,73 +1060,72 @@
           <value>0.15</value>
         </less-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </windows>
-    <windows include="Config/cockpit/cockpit-common.xml">
+    <windows>
       <name>left window wind</name>
       <path>Aircraft/tu154b/Sound/misc/wind.wav</path>
-      <mode>looped</mode>
       <condition>
         <property>tu154/door/window-left</property>
       </condition>
-      <volume>
-        <property>tu154/door/window-left</property>
-      </volume>
-      <volume>
-        <property>velocities/airspeed-kt</property>
-        <factor>0.004</factor>
-      </volume>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>velocities/airspeed-kt</property><factor>0.004</factor></volume>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </windows>
-    <windows include="Config/cockpit/cockpit-common.xml">
+    <windows>
       <name>right window wind</name>
       <path>Aircraft/tu154b/Sound/misc/wind.wav</path>
-      <mode>looped</mode>
       <condition>
+        <property>sim/current-view/internal</property>
         <property>tu154/door/window-right</property>
       </condition>
-      <volume>
-        <property>tu154/door/window-right</property>
-      </volume>
-      <volume>
-        <property>velocities/airspeed-kt</property>
-        <factor>0.004</factor>
-      </volume>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>velocities/airspeed-kt</property><factor>0.004</factor></volume>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </windows>
 
-    <!--Windshield wipers-->
-    <!--<wipers include="Config/cockpit/cockpit-common.xml">
+    <!--Wipers-->
+    <!--<wipers>
       <name>left windshield wiper</name>
       <path>Aircraft/tu154b/Sound/misc/wiper.wav</path>
       <condition>
+        <property>sim/current-view/internal</property>
         <property>tu154/wipers/pos-left</property>
       </condition>
       <mode>in-transit</mode>
-      <position>
-        <x>-22.8</x>
-        <y>0.53</y>
-        <z>2.06</z>
-      </position>
-      <volume include="Config/cockpit/cockpit-volume.xml"/>
+      <position><x>-22.74</x><y>0.5</y><z>2.12</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </wipers>
-    <wipers include="Config/cockpit/cockpit-common.xml">
+    <wipers>
       <name>right windshield wiper</name>
       <path>Aircraft/tu154b/Sound/misc/wiper.wav</path>
       <condition>
+        <property>sim/current-view/internal</property>
         <property>tu154/wipers/pos-right</property>
       </condition>
       <mode>in-transit</mode>
-      <position>
-        <x>-22.8</x>
-        <y>-0.53</y>
-        <z>2.06</z>
-      </position>
-      <volume include="Config/cockpit/cockpit-volume.xml"/>
+      <position><x>-22.74</x><y>-0.5</y><z>2.12</z></position>
+      <volume><property>sim/sound/cockpit</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </wipers>-->
 
     <!--Cabin alerts-->
-    <cabin include="Config/cockpit/cabin-warn.xml">
+    <cabin>
       <name>seat belts</name>
       <path>Aircraft/tu154b/Sound/misc/cab_call.wav</path>
       <condition>
@@ -902,13 +1140,24 @@
           </equals>
         </or>
       </condition>
-      <!--<position>
-        <x>0.0</x>
-        <y>0.0</y>
-        <z>0.0</z>
-      </position>-->
+      <mode>once</mode>
+      <!--<position><x>0</x><y>0</y><z>1.5</z></position>-->
+      <volume>
+        <expression>
+          <propuct>
+            <property>tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+            <value>0.0185</value>
+            <sum>
+              <property>sim/sound/internal</property>
+              <property>sim/sound/pax</property>
+            </sum>
+          </propuct>
+        </expression>
+      </volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </cabin>
-    <cabin include="Config/cockpit/cabin-warn.xml">
+    <cabin>
       <name>no smoking</name>
       <path>Aircraft/tu154b/Sound/misc/cab_call.wav</path>
       <condition>
@@ -923,13 +1172,24 @@
           </equals>
         </or>
       </condition>
-      <!--<position>
-        <x>0.0</x>
-        <y>0.0</y>
-        <z>0.0</z>
-      </position>-->
+      <mode>once</mode>
+      <!--<position><x>0</x><y>0</y><z>1.5</z></position>-->
+      <volume>
+        <expression>
+          <propuct>
+            <property>tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+            <value>0.0185</value>
+            <sum>
+              <property>sim/sound/internal</property>
+              <property>sim/sound/pax</property>
+            </sum>
+          </propuct>
+        </expression>
+      </volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </cabin>
-    <cabin include="Config/cockpit/cabin-warn.xml">
+    <cabin>
       <name>exits</name>
       <path>Aircraft/tu154b/Sound/misc/cab_call.wav</path>
       <condition>
@@ -944,33 +1204,29 @@
           </equals>
         </or>
       </condition>
-      <!--<position>
-        <x>0.0</x>
-        <y>0.0</y>
-        <z>0.0</z>
-      </position>-->
+      <mode>once</mode>
+      <!--<position><x>0</x><y>0</y><z>1.5</z></position>-->
+      <volume>
+        <expression>
+          <propuct>
+            <property>tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+            <value>0.0185</value>
+            <sum>
+              <property>sim/sound/internal</property>
+              <property>sim/sound/pax</property>
+            </sum>
+          </propuct>
+        </expression>
+      </volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </cabin>
-
-    <electrical include="Config/cockpit/cockpit-common.xml">
-      <name>electrical</name>
-      <path>Aircraft/tu154b/Sound/misc/el_loop.wav</path>
-      <mode>looped</mode>
-      <condition>
-        <or>
-          <property>tu154/systems/electrical/suppliers/battery_charge</property>
-          <property>tu154/switches/main-battery</property>
-        </or>
-      </condition>
-      <position include="Config/cockpit/cockpit-common-pos.xml"/>
-      <volume include="Config/cockpit/cockpit-volume-dimmed.xml"/>
-    </electrical>
-    <!--################################## End of Cockpit ##################################-->
+    <!--********************* End of Cockpit ***********************-->
 
 
-
-    <!--************************************ LDG GEAR EFFECTS **************************************-->
-    <!--Gear moving sound-->
-    <gear include="Config/gear/gear-once.xml">
+    <!--************************************ GEAR EFFECTS **************************************-->
+    <!-- Gear moving sound-->
+    <gear>
       <name>gear up nose</name>
       <path>Aircraft/tu154b/Sound/misc/TYGEARUP.wav</path>
       <condition>
@@ -979,31 +1235,13 @@
           <value>0.9</value>
         </less-than>
       </condition>
-      <position include="Config/gear/gear-n-pos.xml"/>
+      <mode>once</mode>
+      <position><x>-17.94</x><y>0</y><z>-0.32</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </gear>
-    <gear include="Config/gear/gear-once.xml">
-      <name>gear up left</name>
-      <path>Aircraft/tu154b/Sound/misc/TYGEARUP.wav</path>
-      <condition>
-        <less-than>
-          <property>gear/gear[1]/position-norm</property>
-          <value>0.9</value>
-        </less-than>
-      </condition>
-      <position include="Config/gear/gear-l-pos.xml"/>
-    </gear>
-    <gear include="Config/gear/gear-once.xml">
-      <name>gear up right</name>
-      <path>Aircraft/tu154b/Sound/misc/TYGEARUP.wav</path>
-      <condition>
-        <less-than>
-          <property>gear/gear[2]/position-norm</property>
-          <value>0.9</value>
-        </less-than>
-      </condition>
-      <position include="Config/gear/gear-r-pos.xml"/>
-    </gear>
-    <gear include="Config/gear/gear-once.xml">
+    <gear>
       <name>gear down nose</name>
       <path>Aircraft/tu154b/Sound/misc/TYGEARDN.wav</path>
       <condition>
@@ -1012,9 +1250,28 @@
           <value>0.1</value>
         </greater-than>
       </condition>
-      <position include="Config/gear/gear-n-pos.xml"/>
+      <mode>once</mode>
+      <position><x>-17.94</x><y>0</y><z>-0.32</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </gear>
-    <gear include="Config/gear/gear-once.xml">
+    <gear>
+      <name>gear up left</name>
+      <path>Aircraft/tu154b/Sound/misc/TYGEARUP.wav</path>
+      <condition>
+        <less-than>
+          <property>gear/gear[1]/position-norm</property>
+          <value>0.9</value>
+        </less-than>
+      </condition>
+      <mode>once</mode>
+      <position><x>0.55</x><y>5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </gear>
+    <gear>
       <name>gear down left</name>
       <path>Aircraft/tu154b/Sound/misc/TYGEARDN.wav</path>
       <condition>
@@ -1023,9 +1280,28 @@
           <value>0.1</value>
         </greater-than>
       </condition>
-      <position include="Config/gear/gear-l-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0.55</x><y>5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </gear>
-    <gear include="Config/gear/gear-once.xml">
+    <gear>
+      <name>gear up right</name>
+      <path>Aircraft/tu154b/Sound/misc/TYGEARUP.wav</path>
+      <condition>
+        <less-than>
+          <property>gear/gear[2]/position-norm</property>
+          <value>0.9</value>
+        </less-than>
+      </condition>
+      <mode>once</mode>
+      <position><x>0.55</x><y>-5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </gear>
+    <gear>
       <name>gear down right</name>
       <path>Aircraft/tu154b/Sound/misc/TYGEARDN.wav</path>
       <condition>
@@ -1034,259 +1310,476 @@
           <value>0.1</value>
         </greater-than>
       </condition>
-      <position include="Config/gear/gear-r-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0.55</x><y>-5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </gear>
 
     <!--Touchdown sound-->
-    <gear include="Config/gear/gear-once.xml">
+    <gear>
       <name>wow nose</name>
       <path>Aircraft/tu154b/Sound/misc/osn_154.wav</path>
       <condition>
         <property>gear/gear[0]/wow</property>
         <property>gear/gear[0]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-n-pos.xml"/>
-    </gear>
-    <gear include="Config/gear/gear-once.xml">
+      <mode>once</mode>
+      <position><x>-17.94</x><y>0</y><z>-0.32</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
+    </gear> 
+    <gear>
       <name>wow left</name>
       <path>Aircraft/tu154b/Sound/misc/osn_154.wav</path>
       <condition>
         <property>gear/gear[1]/wow</property>
         <property>gear/gear[1]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-l-pos.xml"/>
-    </gear>
-    <gear include="Config/gear/gear-once.xml">
+      <mode>once</mode>
+      <position><x>0.55</x><y>5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
+    </gear> 
+    <gear>
       <name>wow right</name>
       <path>Aircraft/tu154b/Sound/misc/osn_154.wav</path>
       <condition>
         <property>gear/gear[2]/wow</property>
         <property>gear/gear[2]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-r-pos.xml"/>
+      <mode>once</mode>
+      <position><x>0.55</x><y>-5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </gear>
 
-    <!--Gear roll sound-->
-    <gear include="Config/gear/gear-roll.xml">
+    <!--Roll sound-->
+    <gear>
       <name>roll sound nose</name>
+      <path>Aircraft/tu154b/Sound/misc/bnroll2.wav</path>
       <condition>
-        <property>gear/gear[0]/wow</property>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
         <property>gear/gear[0]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-n-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>-17.94</x><y>0</y><z>-0.32</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <volume><property>velocities/groundspeed-kt</property><factor>0.003</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </gear>
-    <gear include="Config/gear/gear-roll.xml">
+    <gear>
       <name>roll sound left</name>
+      <path>Aircraft/tu154b/Sound/misc/bnroll2.wav</path>
       <condition>
-        <property>gear/gear[1]/wow</property>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
         <property>gear/gear[1]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-l-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>0.55</x><y>5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <volume><property>velocities/groundspeed-kt</property><factor>0.003</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </gear> 
-    <gear include="Config/gear/gear-roll.xml">
+    <gear>
       <name>roll sound right</name>
+      <path>Aircraft/tu154b/Sound/misc/bnroll2.wav</path>
       <condition>
-        <property>gear/gear[2]/wow</property>
+        <or>
+          <property>gear/gear[0]/wow</property>
+          <property>gear/gear[1]/wow</property>
+          <property>gear/gear[2]/wow</property>
+        </or>
         <property>gear/gear[2]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-r-pos.xml"/>
-    </gear> 
+      <mode>looped</mode>
+      <position><x>0.55</x><y>-5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <volume><property>velocities/groundspeed-kt</property><factor>0.003</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
+    </gear>
 
-    <gear include="Config/gear/gear-bump.xml">
+    <!-- Bump sound -->
+    <gear>
       <name>bump sound nose</name>
+      <path>Aircraft/tu154b/Sound/misc/bnroll2.wav</path>
       <condition>
         <property>gear/gear[0]/wow</property>
         <property>gear/gear[0]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-n-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>-17.94</x><y>0</y><z>-0.32</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <volume><property>velocities/groundspeed-kt</property><factor>0.004</factor></volume>
+      <volume><property>fdm/jsbsim/gear/unit[0]/friction/bumpiness</property><factor>3</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </gear>
-    <gear include="Config/gear/gear-bump.xml">
+    <gear>
       <name>bump sound left</name>
+      <path>Aircraft/tu154b/Sound/misc/bnroll2.wav</path>
       <condition>
         <property>gear/gear[1]/wow</property>
         <property>gear/gear[1]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-l-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>0.55</x><y>5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <volume><property>velocities/groundspeed-kt</property><factor>0.004</factor></volume>
+      <volume><property>fdm/jsbsim/gear/unit[1]/friction/bumpiness</property><factor>3</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </gear>
-    <gear include="Config/gear/gear-bump.xml">
+    <gear>
       <name>bump sound right</name>
+      <path>Aircraft/tu154b/Sound/misc/bnroll2.wav</path>
       <condition>
         <property>gear/gear[2]/wow</property>
         <property>gear/gear[2]/position-norm</property>
       </condition>
-      <position include="Config/gear/gear-r-pos.xml"/>
+      <mode>looped</mode>
+      <position><x>0.55</x><y>-5.77</y><z>-0.12</z></position>
+      <volume><property>sim/sound/internal</property></volume>
+      <volume><property>velocities/groundspeed-kt</property><factor>0.004</factor></volume>
+      <volume><property>fdm/jsbsim/gear/unit[2]/friction/bumpiness</property><factor>3</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>60.0</reference-dist>
     </gear>
-    <!--************************************ End of LDG GEAR EFFECTS **************************************-->
-
+    <!--************************************ End of GEAR EFFECTS **************************************-->
 
 
     <!--********************************* ENGINES SOUND ***********************************-->
     <!--APU sounds-->
-    <engine include="Config/eng/apu-common.xml">
+    <engine>
       <name>apu_start</name>
       <path>Aircraft/tu154b/Sound/misc/vsu_strt.wav</path>
-      <condition>
-        <property>controls/engines/engine[3]/starter</property>
-      </condition>
+      <condition><property>controls/engines/engine[3]/starter</property></condition>
       <mode>once</mode>
+      <position><x>17.0</x><y>0.0</y><z>3.5</z></position>
+      <volume><property>sim/sound/external</property><factor>0.5</factor><offset>0.5</offset></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/apu-common.xml">
+    <engine>
       <name>apu_loop</name>
       <path>Aircraft/tu154b/Sound/misc/vsu_act.wav</path>
-      <condition>
-        <property>engines/engine[3]/running</property>
-      </condition>
+      <condition><property>engines/engine[3]/running</property></condition>
       <mode>looped</mode>
+      <position><x>17.0</x><y>0.0</y><z>3.5</z></position>
+      <volume><property>sim/sound/external</property><factor>0.5</factor><offset>0.5</offset></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/apu-common.xml">
+    <engine>
       <name>apu_stop</name>
       <path>Aircraft/tu154b/Sound/misc/vsu_shut.wav</path>
-      <condition>
-        <not><property>engines/engine[3]/running</property></not>
-      </condition>
+      <condition><not><property>engines/engine[3]/running</property></not></condition>
       <mode>once</mode>
+      <position><x>17.0</x><y>0.0</y><z>3.5</z></position>
+      <volume><property>sim/sound/external</property><factor>0.5</factor><offset>0.5</offset></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <!--With opened window-->
-    <engine include="Config/eng/apu-win.xml">
+
+    <!--APU sounds with opened window-->
+    <engine>
       <name>apu_start_win_l</name>
       <path>Aircraft/tu154b/Sound/misc/vsu_strt.wav</path>
-      <condition>
-        <property>controls/engines/engine[3]/starter</property>
-      </condition>
+      <condition><property>controls/engines/engine[3]/starter</property></condition>
       <mode>once</mode>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
       <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/apu-win.xml">
-      <name>apu_start_win_r</name>
-      <path>Aircraft/tu154b/Sound/misc/vsu_strt.wav</path>
-      <condition>
-        <property>controls/engines/engine[3]/starter</property>
-      </condition>
-      <mode>once</mode>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume><property>tu154/door/window-right</property></volume>
-    </engine>
-    <engine include="Config/eng/apu-win.xml">
+    <engine>
       <name>apu_loop_win_l</name>
       <path>Aircraft/tu154b/Sound/misc/vsu_act.wav</path>
-      <condition>
-        <property>engines/engine[3]/running</property>
-      </condition>
+      <condition><property>engines/engine[3]/running</property></condition>
       <mode>looped</mode>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
       <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/apu-win.xml">
-      <name>apu_loop_win_r</name>
-      <path>Aircraft/tu154b/Sound/misc/vsu_act.wav</path>
-      <condition>
-        <property>engines/engine[3]/running</property>
-      </condition>
-      <mode>looped</mode>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume><property>tu154/door/window-right</property></volume>
-    </engine>
-    <engine include="Config/eng/apu-win.xml">
+    <engine>
       <name>apu_stop_win_l</name>
       <path>Aircraft/tu154b/Sound/misc/vsu_shut.wav</path>
-      <condition>
-        <not><property>engines/engine[3]/running</property></not>
-      </condition>
+      <condition><not><property>engines/engine[3]/running</property></not></condition>
       <mode>once</mode>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
       <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/apu-win.xml">
+    <engine>
+      <name>apu_start_win_r</name>
+      <path>Aircraft/tu154b/Sound/misc/vsu_strt.wav</path>
+      <condition><property>controls/engines/engine[3]/starter</property></condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>apu_loop_win_r</name>
+      <path>Aircraft/tu154b/Sound/misc/vsu_act.wav</path>
+      <condition><property>engines/engine[3]/running</property></condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
       <name>apu_stop_win_r</name>
       <path>Aircraft/tu154b/Sound/misc/vsu_shut.wav</path>
-      <condition>
-        <not><property>engines/engine[3]/running</property></not>
-      </condition>
+      <condition><not><property>engines/engine[3]/running</property></not></condition>
       <mode>once</mode>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
       <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.5</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <!--End of APU sounds-->
 
 
-    <!--REVERSERS-->
-    <!--Engine 1-->
-    <revers include="Config/eng/eng-rev-1-ext.xml">
+    <!--Reversers-->
+    <revers>
       <name>revers_1_1</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/external</property>
+        <property>engines/engine[0]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property><factor>0.28</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-1-ext.xml">
+    <revers>
       <name>revers_1_2</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/external</property>
+        <property>engines/engine[0]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property><factor>0.28</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-1-int.xml">
+    <revers>
       <name>revers_1_int_1</name>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <property>sim/sound/internal</property>
+        <property>engines/engine[0]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property><factor>0.43</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>10.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-1-int.xml">
+    <revers>
       <name>revers_1_int_2</name>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <property>sim/sound/internal</property>
+        <property>engines/engine[0]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property><factor>0.43</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>10.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-1-win.xml">
-      <name>revers_1_win_l</name>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume><property>tu154/door/window-left</property></volume>
-    </revers>
-    <revers include="Config/eng/eng-rev-1-win.xml">
-      <name>revers_1_win_r</name>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume><property>tu154/door/window-right</property></volume>
-    </revers>
-    <!--Engine 3-->
-    <revers include="Config/eng/eng-rev-3-ext.xml">
+    <revers>
       <name>revers_3_1</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/external</property>
+        <property>engines/engine[2]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property><factor>0.28</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-3-ext.xml">
+    <revers>
       <name>revers_3_2</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/external</property>
+        <property>engines/engine[2]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property><factor>0.28</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-3-int.xml">
+    <revers>
       <name>revers_3_int_1</name>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <property>sim/sound/internal</property>
+        <property>engines/engine[2]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property><factor>0.43</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>10.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-3-int.xml">
+    <revers>
       <name>revers_3_int_2</name>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <property>sim/sound/internal</property>
+        <property>engines/engine[2]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property><factor>0.43</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>10.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-3-win.xml">
-      <name>revers_3_win_l</name>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
+
+    <!--Reversers with opened window-->
+    <revers>
+      <name>revers_1_l</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/cockpit</property>
+        <property>engines/engine[0]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property><factor>0.28</factor></volume>
       <volume><property>tu154/door/window-left</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </revers>
-    <revers include="Config/eng/eng-rev-3-win.xml">
-      <name>revers_3_win_r</name>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
+    <revers>
+      <name>revers_1_r</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/cockpit</property>
+        <property>engines/engine[0]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property><factor>0.28</factor></volume>
       <volume><property>tu154/door/window-right</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </revers>
-    <!--End of REVERSERS-->
+    <revers>
+      <name>revers_3_l</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/cockpit</property>
+        <property>engines/engine[2]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property><factor>0.28</factor></volume>
+      <volume><property>tu154/door/window-left</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </revers>
+    <revers>
+      <name>revers_3_r</name>
+      <path>Sounds/exhaust_loop.wav</path>
+      <condition>
+        <property>sim/sound/cockpit</property>
+        <property>engines/engine[2]/running</property>
+        <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property>
+      </condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property><factor>0.28</factor></volume>
+      <volume><property>tu154/door/window-right</property></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </revers>
 
 
-    <!--ENGINES START-->
-    <!--Internal-->
-    <engine include="Config/eng/eng-start-int.xml">
+    <!--START ENGINES internal-->
+    <engine>
       <name>int_start_engine_1</name>
       <path>Aircraft/tu154b/Sound/engine/nk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[0]/starter</property>
       </condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.6</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-int.xml">
+    <engine>
       <name>int_start_engine_2</name>
       <path>Aircraft/tu154b/Sound/engine/nk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[1]/starter</property>
       </condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
+      <mode>once</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.6</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-int.xml">
+    <engine>
       <name>int_start_engine_3</name>
       <path>Aircraft/tu154b/Sound/engine/nk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[2]/starter</property>
       </condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.6</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-int.xml">
+    <engine>
       <name>int_starter_disc_1</name>
       <path>Aircraft/tu154b/Sound/engine/nk8_2strt.wav</path>
       <condition>
@@ -1295,9 +1788,13 @@
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.6</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-int.xml">
+    <engine>
       <name>int_starter_disc_2</name>
       <path>Aircraft/tu154b/Sound/engine/nk8_2strt.wav</path>
       <condition>
@@ -1306,9 +1803,13 @@
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
+      <mode>once</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.6</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-int.xml">
+    <engine>
       <name>int_starter_disc_3</name>
       <path>Aircraft/tu154b/Sound/engine/nk8_2strt.wav</path>
       <condition>
@@ -1317,873 +1818,1351 @@
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.6</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-
-    <!--External-->
-    <engine include="Config/eng/eng-start-ext.xml">
+    
+    <!--START ENGINES external-->
+    <engine>
       <name>ext_start_engine_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[0]/starter</property>
       </condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/external</property><factor>0.4</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-ext.xml">
+    <engine>
       <name>ext_start_engine_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[1]/starter</property>
       </condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
+      <mode>once</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>sim/sound/external</property><factor>0.4</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-ext.xml">
+    <engine>
       <name>ext_start_engine_3</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[2]/starter</property>
       </condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/external</property><factor>0.4</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-starter-disc-ext.xml">
+    <engine>
       <name>ext_starter_disc_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
       <condition>
         <greater-than>
           <property>engines/engine[0]/n2</property>
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/external</property><factor>0.25</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-starter-disc-ext.xml">
+    <engine>
       <name>ext_starter_disc_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
       <condition>
         <greater-than>
           <property>engines/engine[1]/n2</property>
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
+      <mode>once</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>sim/sound/external</property><factor>0.25</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-starter-disc-ext.xml">
+    <engine>
       <name>ext_starter_disc_3</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
       <condition>
         <greater-than>
           <property>engines/engine[2]/n2</property>
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/external</property><factor>0.25</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
 
-    <!--With opened window-->
-    <engine include="Config/eng/eng-start-win.xml">
+    <!--START ENGINES with opened window-->
+    <engine>
       <name>ext_start_engine_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[0]/starter</property>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-win.xml">
-      <name>ext_start_engine_1_win_r</name>
-      <condition>
-        <property>controls/engines/engine[0]/starter</property>
-      </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
-    </engine>
-    <engine include="Config/eng/eng-start-win.xml">
+    <engine>
       <name>ext_start_engine_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[1]/starter</property>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-win.xml">
-      <name>ext_start_engine_2_win_r</name>
-      <condition>
-        <property>controls/engines/engine[1]/starter</property>
-      </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
-    </engine>
-    <engine include="Config/eng/eng-start-win.xml">
+    <engine>
       <name>ext_start_engine_3_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
       <condition>
         <property>controls/engines/engine[2]/starter</property>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-start-win.xml">
-      <name>ext_start_engine_3_win_r</name>
-      <condition>
-        <property>controls/engines/engine[2]/starter</property>
-      </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
-    </engine>
-    <engine include="Config/eng/eng-starter-disc-win.xml">
+    <engine>
       <name>ext_starter_disc_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
       <condition>
         <greater-than>
           <property>engines/engine[0]/n2</property>
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.125</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-starter-disc-win.xml">
-      <name>ext_starter_disc_1_win_r</name>
-      <condition>
-        <greater-than>
-          <property>engines/engine[0]/n2</property>
-          <value>35</value>
-        </greater-than>
-      </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
-    </engine>
-    <engine include="Config/eng/eng-starter-disc-win.xml">
+    <engine>
       <name>ext_starter_disc_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
       <condition>
         <greater-than>
           <property>engines/engine[1]/n2</property>
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.125</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-starter-disc-win.xml">
-      <name>ext_starter_disc_2_win_r</name>
-      <condition>
-        <greater-than>
-          <property>engines/engine[1]/n2</property>
-          <value>35</value>
-        </greater-than>
-      </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
-    </engine>
-    <engine include="Config/eng/eng-starter-disc-win.xml">
+    <engine>
       <name>ext_starter_disc_3_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
       <condition>
         <greater-than>
           <property>engines/engine[2]/n2</property>
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.125</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-starter-disc-win.xml">
+    <engine>
+      <name>ext_start_engine_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
+      <condition>
+        <property>controls/engines/engine[0]/starter</property>
+      </condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>ext_start_engine_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
+      <condition>
+        <property>controls/engines/engine[1]/starter</property>
+      </condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>ext_start_engine_3_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_1strt.wav</path>
+      <condition>
+        <property>controls/engines/engine[2]/starter</property>
+      </condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>ext_starter_disc_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
+      <condition>
+        <greater-than>
+          <property>engines/engine[0]/n2</property>
+          <value>35</value>
+        </greater-than>
+      </condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.125</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>ext_starter_disc_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
+      <condition>
+        <greater-than>
+          <property>engines/engine[1]/n2</property>
+          <value>35</value>
+        </greater-than>
+      </condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.125</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
       <name>ext_starter_disc_3_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_2strt.wav</path>
       <condition>
         <greater-than>
           <property>engines/engine[2]/n2</property>
           <value>35</value>
         </greater-than>
       </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.125</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <!--End of ENGINES START-->
 
 
-    <!--ENGINES STOP-->
-    <!--Internal-->
-    <engine include="Config/eng/eng-stop-int.xml">
+    <!--STOP ENGINES internal-->
+    <engine>
       <name>int_stop_engine_1</name>
+      <path>Aircraft/tu154b/Sound/engine/nk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[0]/running</property></not>
       </condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.8</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-stop-int.xml">
+    <engine>
       <name>int_stop_engine_2</name>
+      <path>Aircraft/tu154b/Sound/engine/nk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[1]/running</property></not>
       </condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
+      <mode>once</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.8</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-stop-int.xml">
+    <engine>
       <name>int_stop_engine_3</name>
+      <path>Aircraft/tu154b/Sound/engine/nk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[2]/running</property></not>
       </condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/internal</property><factor>0.8</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <!--External-->
-    <engine include="Config/eng/eng-stop-ext.xml">
+
+    <!--STOP ENGINES external-->
+    <engine>
       <name>ext_stop_engine_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[0]/running</property></not>
       </condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/external</property><factor>0.4</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-stop-ext.xml">
+    <engine>
       <name>ext_stop_engine_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[1]/running</property></not>
       </condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
+      <mode>once</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>sim/sound/external</property><factor>0.4</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-stop-ext.xml">
+    <engine>
       <name>ext_stop_engine_3</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[2]/running</property></not>
       </condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
+      <mode>once</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>sim/sound/external</property><factor>0.4</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <!--With opened window-->
-    <engine include="Config/eng/eng-stop-win.xml">
+
+    <!--STOP ENGINES with opened window-->
+    <engine>
       <name>ext_stop_engine_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[0]/running</property></not>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-stop-win.xml">
-      <name>ext_stop_engine_1_win_r</name>
-      <condition>
-        <not><property>engines/engine[0]/running</property></not>
-      </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
-    </engine>
-    <engine include="Config/eng/eng-stop-win.xml">
+    <engine>
       <name>ext_stop_engine_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[1]/running</property></not>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-stop-win.xml">
-      <name>ext_stop_engine_2_win_r</name>
-      <condition>
-        <not><property>engines/engine[1]/running</property></not>
-      </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
-    </engine>
-    <engine include="Config/eng/eng-stop-win.xml">
+    <engine>
       <name>ext_stop_engine_3_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[2]/running</property></not>
       </condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-l.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/eng-stop-win.xml">
+    <engine>
+      <name>ext_stop_engine_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
+      <condition>
+        <not><property>engines/engine[0]/running</property></not>
+      </condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>ext_stop_engine_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
+      <condition>
+        <not><property>engines/engine[1]/running</property></not>
+      </condition>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
       <name>ext_stop_engine_3_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xnk8_shut.wav</path>
       <condition>
         <not><property>engines/engine[2]/running</property></not>
       </condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <volume include="Config/eng/win-vol-st-r.xml"/>
+      <mode>once</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property></volume>
+      <volume><property>sim/sound/cockpit</property><factor>0.2</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <!--End of ENGINES STOP-->
 
 
     <!--************************* COCKPIT ENGINE 1 SOUND *******************************-->
-    <engine include="Config/eng/a12.xml">
+    <engine>
       <name>jet_whine_1_5</name>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <pitch include="Config/eng/a12-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[0]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a12.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.016</factor><offset>0.0</offset><min>0.5</min><max>1.6</max></pitch>
+      <volume><property>engines/engine[0]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a13.xml">
+    <engine>
       <name>jet_whine_1_6</name>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[0]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a13.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>engines/engine[0]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a23.xml">
+    <engine>
       <name>combustion_1_3</name>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <pitch include="Config/eng/a23-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[0]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a23.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.012</factor><offset>0.0</offset><min>0.67</min><max>1.26</max></pitch>
+      <volume><property>engines/engine[0]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a21.xml">
+    <engine>
       <name>combustion_1_4</name>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[0]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a21.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <volume><property>engines/engine[0]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
 
     <!--************************* COCKPIT ENGINE 2 SOUND *******************************-->
-    <engine include="Config/eng/a12.xml">
+    <engine>
       <name>jet_whine_2_5</name>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <pitch include="Config/eng/a12-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[1]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a12.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.016</factor><offset>0.0</offset><min>0.5</min><max>1.6</max></pitch>
+      <volume><property>engines/engine[1]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a13.xml">
+    <engine>
       <name>jet_whine_2_6</name>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[1]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a13.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>engines/engine[1]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a23.xml">
+    <engine>
       <name>combustion_2_3</name>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <pitch include="Config/eng/a23-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[1]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a23.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.012</factor><offset>0.0</offset><min>0.67</min><max>1.26</max></pitch>
+      <volume><property>engines/engine[1]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a21.xml">
+    <engine>
       <name>combustion_2_4</name>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[1]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a21.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <volume><property>engines/engine[1]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
 
     <!--************************* COCKPIT ENGINE 3 SOUND *******************************-->
-    <engine include="Config/eng/a12.xml">
+    <engine>
       <name>jet_whine_3_5</name>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <pitch include="Config/eng/a12-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[2]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a12.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.016</factor><offset>0.0</offset><min>0.5</min><max>1.6</max></pitch>
+      <volume><property>engines/engine[2]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a13.xml">
+    <engine>
       <name>jet_whine_3_6</name>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[2]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a13.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>engines/engine[2]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a23.xml">
+    <engine>
       <name>combustion_3_3</name>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <pitch include="Config/eng/a23-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[2]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a23.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.012</factor><offset>0.0</offset><min>0.67</min><max>1.26</max></pitch>
+      <volume><property>engines/engine[2]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
-    <engine include="Config/eng/a21.xml">
+    <engine>
       <name>combustion_3_4</name>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <volume include="Config/eng/aXX-volume.xml"><property>engines/engine[2]/n2</property></volume>
+      <path>Aircraft/tu154b/Sound/engine/nk8_a21.wav</path>
+      <condition><property>sim/sound/internal</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <volume><property>engines/engine[2]/n2</property><factor>0.006</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>1.0</reference-dist>
     </engine>
 
 
-      <!--************************* ENGINE 1 EXTERNAL SOUND *******************************-->
-    <engine include="Config/eng/x11.xml">
+    <!--************************* ENGINE 1 EXTERNAL SOUND *******************************-->
+    <engine>
       <name>jet_whine_1_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
+    <engine>
       <name>jet_whine_1_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
+    <engine>
       <name>jet_whine_1_3</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
+    <engine>
       <name>jet_whine_1_4</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
+    <engine>
       <name>combustion_1_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[0]/n2</property></volume>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x22.xml">
+    <engine>
       <name>combustion_1_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x22-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <pitch include="Config/eng/x22-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_1_1</name>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back.xml"/>
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[0]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_1_2</name>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back.xml"/>
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[0]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_1_3</name>
-      <position include="Config/eng/eng-1-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back-intense.xml"/>
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[0]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>3.0</y><z>1.75</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>45.0</inner-angle><outer-angle>90.0</outer-angle><outer-gain>0.0</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
 
     <!--************************* ENGINE 2 EXTERNAL SOUND *******************************-->
-    <engine include="Config/eng/x11.xml">
+    <engine>
       <name>jet_whine_2_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
+    <engine>
       <name>jet_whine_2_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
+    <engine>
       <name>jet_whine_2_3</name>
-      <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
+      <condition>
+        <property>sim/sound/external</property>    </condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
+    <engine>
       <name>jet_whine_2_4</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
+    <engine>
       <name>combustion_2_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[1]/n2</property></volume>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x22.xml">
+    <engine>
       <name>combustion_2_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x22-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <pitch include="Config/eng/x22-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_2_1</name>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back.xml"/>    
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[1]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_2_2</name>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back.xml"/>    
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[1]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_2_3</name>
-      <position include="Config/eng/eng-2-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back-intense.xml"/>  
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[1]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>16.6</x><y>0.0</y><z>2.3</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>45.0</inner-angle><outer-angle>90.0</outer-angle><outer-gain>0.0</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
 
     <!--************************* ENGINE 3 EXTERNAL SOUND *******************************-->
-    <engine include="Config/eng/x11.xml">
+    <engine>
       <name>jet_whine_3_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
+    <engine>
       <name>jet_whine_3_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
+    <engine>
       <name>jet_whine_3_3</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
+    <engine>
       <name>jet_whine_3_4</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
+    <engine>
       <name>combustion_3_1</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[2]/n2</property></volume>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x22.xml">
+    <engine>
       <name>combustion_3_2</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/external</property></condition>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-forw.xml"/>
-      <volume include="Config/eng/x22-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <pitch include="Config/eng/x22-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_3_1</name>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back.xml"/>    
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[2]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_3_2</name>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back.xml"/>    
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[2]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/r.xml">
+    <engine>
       <name>rumble_3_3</name>
-      <position include="Config/eng/eng-3-pos.xml"/>
-      <orientation include="Config/eng/eng-ori-back-intense.xml"/>  
-      <volume include="Config/eng/r-vol.xml"><property>engines/engine[2]/n2</property></volume>
+      <path>Sounds/rumble.wav</path>
+      <condition><property>sim/sound/external</property></condition>
+      <mode>looped</mode>
+      <position><x>12.2</x><y>-3.0</y><z>1.75</z></position>
+      <orientation><x>1.0</x><y>0.0</y><z>0.0</z><inner-angle>45.0</inner-angle><outer-angle>90.0</outer-angle><outer-gain>0.0</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.01</factor></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
 
 
     <!--************************* ENGINE 1 WINDOW SOUND *******************************-->
-    <engine include="Config/eng/x11.xml">
+    <engine>
       <name>jet_whine_1_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x11.xml">
-      <name>jet_whine_1_1_win_r</name>
-      <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
-    </engine>
-    <engine include="Config/eng/x12.xml">
+    <engine>
       <name>jet_whine_1_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
-      <name>jet_whine_1_2_win_r</name>
-      <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
-    </engine>
-    <engine include="Config/eng/x13.xml">
+    <engine>
       <name>jet_whine_1_3_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
-      <name>jet_whine_1_3_win_r</name>
-      <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
-    </engine>
-    <engine include="Config/eng/x14.xml">
+    <engine>
       <name>jet_whine_1_4_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
-      <name>jet_whine_1_4_win_r</name>
-      <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
-    </engine>
-    <engine include="Config/eng/x21.xml">
+    <engine>
       <name>combustion_1_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
-      <name>combustion_1_1_win_r</name>
-      <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-    </engine>
-    <engine include="Config/eng/x22.xml">
+    <engine>
       <name>combustion_1_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x22-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x22-pitch.xml"><property>engines/engine[0]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
+    <engine>
+      <name>jet_whine_1_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
+      <condition><property>sim/sound/cockpit</property></condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>jet_whine_1_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
+      <condition><property>sim/sound/cockpit</property></condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>jet_whine_1_3_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
+      <condition><property>sim/sound/cockpit</property></condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
+      <name>jet_whine_1_4_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
+      <condition><property>sim/sound/cockpit</property></condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    <engine>
       <name>combustion_1_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[0]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-
+    <engine>
+      <name>combustion_1_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
+      <condition><property>sim/sound/cockpit</property></condition>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[0]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[0]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
+    </engine>
+    
     <!--************************* ENGINE 2 WINDOW SOUND *******************************-->
-    <engine include="Config/eng/x11.xml">
-      <name>jet_whine_1_1_win_l</name>
+    <engine>
+      <name>jet_whine_2_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x11.xml">
-      <name>jet_whine_1_1_win_r</name>
+    <engine>
+      <name>jet_whine_2_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
-      <name>jet_whine_1_2_win_l</name>
+    <engine>
+      <name>jet_whine_2_3_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
-      <name>jet_whine_1_2_win_r</name>
+    <engine>
+      <name>jet_whine_2_4_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
-      <name>jet_whine_1_3_win_l</name>
+    <engine>
+      <name>combustion_2_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
-      <name>jet_whine_1_3_win_r</name>
+    <engine>
+      <name>combustion_2_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
-      <name>jet_whine_1_4_win_l</name>
+    <engine>
+      <name>jet_whine_2_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
-      <name>jet_whine_1_4_win_r</name>
+    <engine>
+      <name>jet_whine_2_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
-      <name>combustion_1_1_win_l</name>
+    <engine>
+      <name>jet_whine_2_3_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
-      <name>combustion_1_1_win_r</name>
+    <engine>
+      <name>jet_whine_2_4_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x22.xml">
-      <name>combustion_1_2_win_l</name>
+    <engine>
+      <name>combustion_2_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x22-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x22-pitch.xml"><property>engines/engine[1]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
-      <name>combustion_1_1_win_r</name>
+    <engine>
+      <name>combustion_2_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[1]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[1]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[1]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
 
     <!--************************* ENGINE 3 WINDOW SOUND *******************************-->
-    <engine include="Config/eng/x11.xml">
-      <name>jet_whine_1_1_win_l</name>
+    <engine>
+      <name>jet_whine_3_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x11.xml">
-      <name>jet_whine_1_1_win_r</name>
+    <engine>
+      <name>jet_whine_3_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x11-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x11-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
-      <name>jet_whine_1_2_win_l</name>
+    <engine>
+      <name>jet_whine_3_3_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x12.xml">
-      <name>jet_whine_1_2_win_r</name>
+    <engine>
+      <name>jet_whine_3_4_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x12-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x12-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
-      <name>jet_whine_1_3_win_l</name>
+    <engine>
+      <name>combustion_3_1_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x13.xml">
-      <name>jet_whine_1_3_win_r</name>
+    <engine>
+      <name>combustion_3_2_win_l</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x13-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x13-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-left</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
-      <name>jet_whine_1_4_win_l</name>
+    <engine>
+      <name>jet_whine_3_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa11.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.01</factor><min>0.0</min><max>0.25</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0082</factor><offset>0.3</offset><min>0.5</min><max>1.127</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x14.xml">
-      <name>jet_whine_1_4_win_r</name>
+    <engine>
+      <name>jet_whine_3_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa12.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x14-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
-      <pitch include="Config/eng/x14-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0023</factor><min>0.0</min><max>0.2</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0156</factor><offset>0.22</offset><min>0.38</min><max>1.23</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
-      <name>combustion_1_1_win_l</name>
+    <engine>
+      <name>jet_whine_3_3_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa13.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.018</factor><offset>0.0</offset><min>0.23</min><max>1.78</max></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
-      <name>combustion_1_1_win_r</name>
+    <engine>
+      <name>jet_whine_3_4_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa14.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.0039</factor><min>0.0</min><max>0.35</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.0167</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x22.xml">
-      <name>combustion_1_2_win_l</name>
+    <engine>
+      <name>combustion_3_1_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa21.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-l-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x22-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-l.xml"/>
-      <pitch include="Config/eng/x22-pitch.xml"><property>engines/engine[2]/n2</property></pitch>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.003</factor><min>0.0</min><max>0.25</max></volume>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <engine include="Config/eng/x21.xml">
-      <name>combustion_1_1_win_r</name>
+    <engine>
+      <name>combustion_3_2_win_r</name>
+      <path>Aircraft/tu154b/Sound/engine/xtaa22.wav</path>
       <condition><property>sim/sound/cockpit</property></condition>
-      <position include="Config/cockpit/cockpit-win-r-pos.xml"/>
-      <!--<orientation include="Config/eng/eng-ori-forw.xml"/>-->
-      <volume include="Config/eng/x21-vol.xml"><property>engines/engine[2]/n2</property></volume>
-      <volume include="Config/eng/win-vol-r.xml"/>
+      <mode>looped</mode>
+      <position><x>-22.15</x><y>-0.94</y><z>2.1</z></position>
+      <volume><property>tu154/door/window-right</property><factor>0.5</factor></volume>
+      <orientation><x>-1.0</x><y>0.0</y><z>0.0</z><inner-angle>120.0</inner-angle><outer-angle>180.0</outer-angle><outer-gain>0.5</outer-gain></orientation>
+      <volume><property>engines/engine[2]/n2</property><factor>0.004</factor><min>0.0</min><max>0.4</max></volume>
+      <pitch><property>engines/engine[2]/n2</property><factor>0.013</factor><offset>0.0</offset></pitch>
+      <max-dist>20000.0</max-dist>
+      <reference-dist>5.0</reference-dist>
     </engine>
-    <!--********************************* End of ENGINES SOUND ******************************-->
+    <!--********************************* END ENGINES SOUND ******************************-->
   </fx> 
 
 </PropertyList>
