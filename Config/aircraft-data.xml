@@ -5,6 +5,7 @@
   <path>/instrumentation/GROZA/settings/tcas-blip-radius</path>
 
   <path>/tu154/options/keyboard/keyboard-mode</path>
+  <path>/tu154/options/keyboard/close-viewer</path>
   <path>/tu154/options/welcome/show-on-startup</path>
   <path>/tu154/options/gfx-warn/ignore-unnecessary</path>
   <path>/tu154/options/tooltips-color/r</path>

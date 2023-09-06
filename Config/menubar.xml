@@ -63,6 +63,14 @@
       </item>
 
       <item>
+        <label>Views &lt;Alt-V&gt;</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>viewer</dialog-name>
+        </binding>
+      </item>
+
+      <item>
         <label>Preferences</label>
         <binding>
           <command>dialog-show</command>

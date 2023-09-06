@@ -112,14 +112,14 @@
       </group>
       <checkbox>
         <halign>left</halign>
-        <label>Keyboard Mode</label>
+        <label>Keyboard Mode (FGCamera mode)</label>
         <property>/tu154/options/keyboard/keyboard-mode</property>
         <live>true</live>
         <binding><command>dialog-apply</command></binding>
       </checkbox>
 
       <text>
-        <label>1-9 buttons works as stated in Common Aircraft Keys, see aircraft help</label>
+        <label>1-9 buttons work as stated in Common Aircraft Keys by default, see aircraft help</label>
         <halign>left</halign>
       </text>
 

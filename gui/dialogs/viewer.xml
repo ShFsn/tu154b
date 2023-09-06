@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <name>viewer</name>
+  <layout>vbox</layout>
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <halign>left</halign>
+      <label>Tu-154B-2 Views</label>
+    </text>
+
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend/>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+  </group>
+
+  <hrule/>
+
+
+  <group>
+    <layout>hbox</layout>
+      
+    <text><label> </label></text>
+
+    <group>
+      <stretch>true</stretch>
+      <layout>vbox</layout>
+      <halign>center</halign>
+      <valign>top</valign>
+
+
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Cockpit Views</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+
+      <group>
+        <layout>table</layout>
+        <button>
+          <row>0</row>
+          <col>0</col>
+          <pref-height>30</pref-height>
+          <legend>1: Captain</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(0);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>1</col>
+          <pref-height>30</pref-height>
+          <legend>Alt-1: Captain Landing</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(14);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>2</col>
+          <pref-height>30</pref-height>
+          <legend>2: Copilot</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(1);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>3</col>
+          <pref-height>30</pref-height>
+          <legend>Alt-2: Copilot Landing</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(15);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+
+        <button>
+          <row>1</row>
+          <col>0</col>
+          <pref-height>30</pref-height>
+          <legend>3: Navigator</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(2);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>1</row>
+          <col>1</col>
+          <pref-height>30</pref-height>
+          <legend>Alt-3: Navigator General</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(16);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>1</row>
+          <col>2</col>
+          <pref-height>30</pref-height>
+          <legend>Mapcase</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(9);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>1</row>
+          <col>3</col>
+          <pref-height>30</pref-height>
+          <legend>4: Overhead</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(3);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+
+        <button>
+          <row>2</row>
+          <col>0</col>
+          <pref-height>30</pref-height>
+          <legend>5: Engineer</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(4);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>2</row>
+          <col>1</col>
+          <pref-height>30</pref-height>
+          <legend>Alt-5: Engineer Upper</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(17);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+      </group>
+
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Passenger Cabin Views</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+
+      <group>
+        <layout>table</layout>
+        <button>
+          <row>0</row>
+          <col>0</col>
+          <pref-height>30</pref-height>
+          <legend>6: Left Passenger Rear</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(5);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>1</col>
+          <pref-height>30</pref-height>
+          <legend>Alt-6: Left Passenger Front</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(18);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>1</row>
+          <col>0</col>
+          <pref-height>30</pref-height>
+          <legend>7: Right Passenger Rear</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(6);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>1</row>
+          <col>1</col>
+          <pref-height>30</pref-height>
+          <legend>Alt-7: Right Passenger Front</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(19);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+      </group>
+
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>External Views</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+
+      <group>
+        <layout>table</layout>
+        <button>
+          <row>0</row>
+          <col>0</col>
+          <pref-height>30</pref-height>
+          <legend>Refuelling</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(10);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>1</col>
+          <pref-height>30</pref-height>
+          <legend>Passenger Door</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(11);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>2</col>
+          <pref-height>30</pref-height>
+          <legend>Cargo Door Front</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(12);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>3</col>
+          <pref-height>30</pref-height>
+          <legend>Cargo Door Rear</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(13);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+      </group>
+
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>"External Camera" Views</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+
+      <group>
+        <layout>table</layout>
+        <button>
+          <row>0</row>
+          <col>0</col>
+          <pref-height>30</pref-height>
+          <legend>8: Tail</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(7);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+        <button>
+          <row>0</row>
+          <col>1</col>
+          <pref-height>30</pref-height>
+          <legend>9: Landing Gear</legend>
+          <binding>
+            <command>nasal</command>
+            <script>view.forceView(8);</script>
+          </binding>
+          <binding>
+            <condition><property>/tu154/options/keyboard/close-viewer</property></condition>
+            <command>dialog-close</command>
+          </binding>
+        </button>
+      </group>
+
+      <text><legend></legend></text>
+      
+      <checkbox>
+        <halign>left</halign>
+        <label>Close on switch</label>
+        <property>/tu154/options/keyboard/close-viewer</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+
+    </group>
+      
+    <text><label> </label></text>
+
+  </group>
+
+</PropertyList> 

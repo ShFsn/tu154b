@@ -483,6 +483,7 @@
 
     <keyboard>
       <keyboard-mode type="bool">false</keyboard-mode>
+      <close-viewer type="bool">true</close-viewer>
     </keyboard>
   
     <welcome>

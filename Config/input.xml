@@ -728,6 +728,17 @@
       </binding>
     </key>
 
+    <key n="118">
+      <name>Alt-V</name>
+      <desc>Handy Viewer</desc>
+      <mod-alt>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>viewer</dialog-name>
+        </binding>
+      </mod-alt>
+    </key>
+
     <key n="109">
       <name>M</name>
       <desc>Center aileron, elevator, and rudder</desc>
