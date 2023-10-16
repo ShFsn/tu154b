@@ -12,12 +12,12 @@
     <desc>Floating tooltips (additional descriptions) and mouse zones</desc>
   </key>
   <key>
-    <name>F/Shift+F/Ctrl+F</name>
-    <desc>AP On/Autothrottle On/AP-AT Off (F - autoFlight)</desc>
+    <name>F / Shift+F / Ctrl+F</name>
+    <desc>AP On / Autothrottle On / AP-AT Off (F - autoFlight)</desc>
   </key>
   <key>
-    <name>Shift+N/N/Ctrl+N/*</name>
-    <desc>Set nominal/0.85/0.7/0.0 thrust</desc>
+    <name>Shift+N / N / Ctrl+N / *</name>
+    <desc>Set nominal / 0.85n / 0.7n / Idle thrust</desc>
   </key>
   <key>
     <name>J/K</name>
@@ -32,8 +32,8 @@
     <desc>Center aileron, elevator, and rudder (in Middle)</desc>
   </key>
   <key>
-    <name>G/Shift+G/Ctrl+G</name>
-    <desc>Gear up, down, neutral</desc>
+    <name>G / Shift+G / Ctrl+G</name>
+    <desc>Gear up / down / neutral</desc>
   </key>
   <key>
     <name>[Keyboard Mode: Alt+] 1-9</name>
@@ -51,5 +51,14 @@
     <name>C</name>
     <desc>Reset current View</desc>
   </key>
+
+  <text>------------------ Common thrust settings ------------------
+  - Takeoff        -- 114 deg / 100 %
+  - Nominal        -- 106 deg / 91 %
+  - 0.85 nominal   -- 96 deg / 80 %
+  - 0.7 nominal    -- 86 deg / 69 %
+  - 0.6 nominal    -- 80 deg / 62 %
+  - 0.4 nominal    -- 66 deg / 46 %
+  - Idle           -- 40 deg / 17 %</text>
 
 </PropertyList>

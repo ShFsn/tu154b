@@ -263,17 +263,17 @@
       <binding>
         <command>property-assign</command>
         <property>/controls/engines/engine[0]/throttle</property>
-        <value>0.90</value>
+        <value>0.84</value>
       </binding>
       <binding>
         <command>property-assign</command>
         <property>/controls/engines/engine[1]/throttle</property>
-        <value>0.90</value>
+        <value>0.84</value>
       </binding>
       <binding>
         <command>property-assign</command>
         <property>/controls/engines/engine[2]/throttle</property>
-        <value>0.90</value>
+        <value>0.84</value>
       </binding>
     </key>
 
@@ -283,17 +283,17 @@
       <binding>
         <command>property-assign</command>
         <property>/controls/engines/engine[0]/throttle</property>
-        <value>0.87</value>
+        <value>0.75</value>
       </binding>
       <binding>
         <command>property-assign</command>
         <property>/controls/engines/engine[1]/throttle</property>
-        <value>0.87</value>
+        <value>0.75</value>
       </binding>
       <binding>
         <command>property-assign</command>
         <property>/controls/engines/engine[2]/throttle</property>
-        <value>0.87</value>
+        <value>0.75</value>
       </binding>
     </key>
 
