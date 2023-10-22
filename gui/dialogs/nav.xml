@@ -6,7 +6,7 @@
   <draggable>true</draggable>
 
   <nasal>
-    <open>
+    <open><![CDATA[
       var deg_norm = func(deg, min, max) {
           while (min > deg)
               deg += (max - min);
@@ -23,8 +23,8 @@
       }
 
       var dialog = cmdarg();
-      var list = dialog.getNode("list");
-      var fork_btn_legend = dialog.getNode("group[2]/button[2]/legend", 1);
+      var list = dialog.getNode("group[1]/list");
+      var fork_btn_legend = dialog.getNode("group[3]/button[2]/legend", 1);
       var route = props.globals.getNode("tu154/systems/nvu-calc/route", 1);
       var selected = props.globals.getNode("tu154/systems/nvu-calc/selected", 1);
       selected.setIntValue(-1);
@@ -196,11 +196,11 @@
       }
 
       calculate();
-    </open>
+    ]]></open>
 
-    <close>
-      <!-- Leave this empty or fix close/open on fork toggle first. -->
-    </close>
+    <close><![CDATA[
+      # Leave this empty or fix close/open on fork toggle first.
+    ]]></close>
   </nasal>
 
   <group>
@@ -231,22 +231,29 @@
 
   <hrule/>
 
-  <list>
-    <name>result</name>
+  <group>
+    <layout>vbox</layout>
+
     <halign>fill</halign>
     <valign>fill</valign>
     <stretch>true</stretch>
-    <pref-width>600</pref-width>
-    <pref-height>400</pref-height>
-    <property>tu154/systems/nvu-calc/selected</property>
-    <binding>
-      <command>dialog-apply</command>
-    </binding>
-    <binding>
-      <command>dialog-update</command>
-      <object-name>list</object-name>
-    </binding>
-  </list>
+
+    <list>
+      <name>result</name>
+      <halign>fill</halign>
+      <valign>fill</valign>
+      <stretch>true</stretch>
+      <pref-height>400</pref-height>
+      <property>tu154/systems/nvu-calc/selected</property>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>dialog-update</command>
+        <object-name>list</object-name>
+      </binding>
+    </list>
+  </group>
 
   <group>
     <layout>hbox</layout>
