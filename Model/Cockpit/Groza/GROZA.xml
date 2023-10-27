@@ -4,8 +4,24 @@
   <path>GROZA.ac</path>
 
   <effect>
-    <inherits-from>Effects/Tu-154B-2-instrumentglass</inherits-from>
+    <inherits-from>Effects/Tu154b-GrozaGlass</inherits-from>
     <object-name>Glass</object-name>
+  </effect>
+  <effect>
+    <inherits-from>Effects/Tu154b_Groza</inherits-from>
+    <object-name>Panel</object-name>
+    <object-name>b_off</object-name>
+    <object-name>b_on</object-name>
+    <object-name>Handle</object-name>
+    <object-name>kn_angle</object-name>
+    <object-name>kn_arcs</object-name>
+    <object-name>kn_brt</object-name>
+    <object-name>kn_contrast</object-name>
+    <object-name>kn_freq</object-name>
+    <object-name>kn_mode</object-name>
+    <object-name>kn_range</object-name>
+    <object-name>lamp_cover</object-name>
+    <object-name>Mounting</object-name>
   </effect>
 
   <animation>
