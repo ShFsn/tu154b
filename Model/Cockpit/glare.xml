@@ -17,7 +17,7 @@
 
   <!--**************************** Shaders *******************************-->
   <effect>
-    <inherits-from>Effects/model-combined</inherits-from>
+    <inherits-from>Effects/Tu154b_Cockpit</inherits-from>
     <object-name>central_panel</object-name>
     <object-name>sw_base</object-name>
     <object-name>spr_load_base</object-name>
@@ -31,6 +31,16 @@
     <object-name>trim_yaw_lever</object-name>
     <object-name>ind_danger_1_frame</object-name>
     <object-name>ind_danger_2_frame</object-name>
+  </effect>
+  <effect>
+    <inherits-from>Effects/GlareLM</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/light/cockpit/ind-left</use></lightmap-factor></parameters>
+    <object-name>light_left</object-name>
+  </effect>
+  <effect>
+    <inherits-from>Effects/GlareLM</inherits-from>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/light/cockpit/ind-right</use></lightmap-factor></parameters>
+    <object-name>light_right</object-name>
   </effect>
 
   <!--*********************** MP details deselect ************************-->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+  <inherits-from>Effects/model-combined-deferred</inherits-from>
+  <parameters>
+  
+    <reflection-enabled type="int">1</reflection-enabled>
+    <reflect-map-enabled type="int">0</reflect-map-enabled>
+    <reflection-dynamic type="int">0</reflection-dynamic>
+    <reflection-fresnel type="float">0.5</reflection-fresnel>
+    <reflection-rainbow type="float">0.3</reflection-rainbow>
+    <reflection-correction type="float">0.0</reflection-correction>
+
+    <lightmap-enabled type="int">1</lightmap-enabled>
+    <lightmap-multi type="int">1</lightmap-multi>
+    <lightmap-factor type="float" n="0">0.0</lightmap-factor> <!--DOME-->
+    <lightmap-color type="vec3d" n="0">4.0 4.0 4.0</lightmap-color>
+    <lightmap-factor type="float" n="1">0.0</lightmap-factor> <!--PANEL-->
+    <lightmap-color type="vec3d" n="1">4.0 4.0 4.0</lightmap-color>
+    <lightmap-factor type="float" n="2">0.0</lightmap-factor> <!--INDIVIDUAL-->
+    <lightmap-color type="vec3d" n="2">4.0 4.0 4.0</lightmap-color>
+    <lightmap-factor type="float" n="3">0.0</lightmap-factor>
+    <lightmap-color type="vec3d" n="3">4.0 4.0 4.0</lightmap-color>
+
+  </parameters>
+</PropertyList>

@@ -2,9 +2,11 @@
 <PropertyList>
   <inherits-from>Effects/Tu154b_Cockpit</inherits-from>
   <parameters>
+
+    <lightmap-color type="vec3d" n="2">1.5 1.5 1.5</lightmap-color>
   
     <texture n="3">
-      <image>Effects/indication_lm.png</image>
+      <image>Effects/glare_lm.png</image>
       <wrap-s>clamp</wrap-s>
       <wrap-t>clamp</wrap-t>
       <internal-format>normalized</internal-format>
