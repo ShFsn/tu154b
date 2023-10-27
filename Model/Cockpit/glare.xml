@@ -133,6 +133,10 @@
         <property>fdm/jsbsim/fcs/stab-manu-switch</property>
       </binding>
       <binding>
+        <command>property-toggle</command>
+        <property>tu154/sound/events/knob</property>
+      </binding>
+      <binding>
         <command>property-assign</command>
         <property>fdm/jsbsim/fcs/stab-manu-cmd</property>
         <property>fdm/jsbsim/fcs/stabilizer-auto-pos</property>
@@ -184,7 +188,11 @@
         <value>2.0</value>
         <value>1.0</value>
         <value>0.0</value>
-        <wrap>false</wrap>
+        <wrap>true</wrap>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>tu154/sound/events/handle</property>
       </binding>
     </action>
     <hovered>
@@ -255,11 +263,19 @@
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
         <value>2.0</value>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>tu154/sound/events/switch</property>
+      </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
           <property>fdm/jsbsim/fcs/stab-manu-selector</property>
           <value>1.0</value>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>tu154/sound/events/switch</property>
         </binding>
       </mod-up>
     </action>
@@ -288,11 +304,19 @@
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
         <value>0.0</value>
       </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>tu154/sound/events/switch</property>
+      </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
           <property>fdm/jsbsim/fcs/stab-manu-selector</property>
           <value>1.0</value>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>tu154/sound/events/switch</property>
         </binding>
       </mod-up>
     </action>

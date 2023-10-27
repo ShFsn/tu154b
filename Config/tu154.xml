@@ -51,6 +51,15 @@
     </nav>
   </light>
 
+  <sound>
+    <events>
+      <switch type="bool">false</switch>
+      <button type="bool">false</button>
+      <knob type="bool">false</knob>
+      <handle type="bool">false</handle>
+    </events>
+  </sound>
+
   <contrail>
     <smoke1 type="bool">false</smoke1>
     <smoke2 type="bool">false</smoke2>
