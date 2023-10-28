@@ -297,10 +297,6 @@
         <value type="bool">1</value>
         <value type="bool">0</value>
       </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
-      </binding>
     </action>
     <hovered>
       <binding>
@@ -339,10 +335,6 @@
         <max>11</max><!--<max>10</max>--><!--one extra step in needed due to wrapping-->
         <wrap>true</wrap>
       </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
-      </binding>
     </action>
     <hovered>
       <binding>
@@ -380,10 +372,6 @@
         <min>0</min>
         <max>1.01</max><!--<max>1</max>--><!--one extra step in needed due to wrapping-->
         <wrap>true</wrap>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
       </binding>
     </action>
     <hovered>
@@ -470,10 +458,6 @@
         <max>1.01</max><!--<max>1</max>--><!--one extra step in needed due to wrapping-->
         <wrap>true</wrap>
       </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
-      </binding>
     </action>
     <hovered>
       <binding>
@@ -511,10 +495,6 @@
         <min>0</min>
         <max>2.1</max><!--<max>2</max>--><!--one extra step in needed due to wrapping-->
         <wrap>true</wrap>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
       </binding>
     </action>
     <hovered>
