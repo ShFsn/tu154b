@@ -134,7 +134,7 @@
     <name>Left Passenger View Rear</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
-    <internal type="bool">false</internal>
+    <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >-2.01</x-offset-m>
@@ -163,7 +163,7 @@
     <name>Right Passenger View Rear</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
-    <internal type="bool">false</internal>
+    <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >2.01</x-offset-m>
@@ -192,7 +192,7 @@
     <name>Tail View</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
-    <internal type="bool">false</internal>
+    <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >0.0</x-offset-m>
@@ -221,7 +221,7 @@
     <name>Rear Gear View</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
-    <internal type="bool">false</internal>
+    <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >9.91</x-offset-m>
@@ -507,7 +507,7 @@
     <name>Left Passenger View Front</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
-    <internal type="bool">false</internal>
+    <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >-2.01</x-offset-m>
@@ -536,7 +536,7 @@
     <name>Right Passenger View Front</name>
     <!--<enabled type="bool" >true</enabled>-->
     <type>lookfrom</type>
-    <internal type="bool">false</internal>
+    <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <x-offset-m type="double" >2.01</x-offset-m>

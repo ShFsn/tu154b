@@ -1084,7 +1084,6 @@
       <name>right window wind</name>
       <path>Aircraft/tu154b/Sound/misc/wind.wav</path>
       <condition>
-        <property>sim/current-view/internal</property>
         <property>tu154/door/window-right</property>
       </condition>
       <mode>looped</mode>
