@@ -533,6 +533,10 @@
       </normal-maps>
     </rendering>
 
+    <controls>
+      <realistic-park type="bool">false</realistic-park>
+    </controls>
+
   </options>
 
   <textures>

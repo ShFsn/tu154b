@@ -136,7 +136,7 @@
       </group>
       <checkbox>
         <halign>left</halign>
-        <label>Synchronize zero-height cabin pressure with main altimeters pressure</label>
+        <label>(INOP) Synchronize zero-height cabin pressure with main altimeters pressure</label>
         <property>/tu154/air-cond/pressure-sync</property>
         <live>true</live>
         <!--<binding><command>dialog-apply</command></binding>-->
@@ -306,6 +306,45 @@
         </text>
 
       </group>
+      
+    </group>
+      
+    <text><label></label></text>
+
+    <vrule/>
+      
+    <text><label></label></text>
+
+    <group>
+      <stretch>true</stretch>
+      <layout>vbox</layout>
+      <halign>center</halign>
+      <valign>top</valign>
+
+      <group><layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text><label>Controls</label></text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
+        <halign>left</halign>
+        <label>Realistic parking brake</label>
+        <property>/tu154/options/controls/realistic-park</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+      <text>
+        <label>You will have to press brakes before setting parking.</label>
+        <halign>left</halign>
+      </text>
+      <text>
+        <label>Use with joystick or just set parking VERY quickly after releasing brakes.</label>
+        <halign>left</halign>
+      </text>
 
       <text><label> </label></text>
 

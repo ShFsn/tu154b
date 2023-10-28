@@ -15,5 +15,6 @@
   <path>/tu154/options/textures/english</path>
   <path>/tu154/options/rendering/dynamic-lighting/disable-multiplay</path>
   <path>/tu154/options/rendering/normal-maps/enable</path>
+  <path>/tu154/options/controls/realistic-park</path>
 
 </PropertyList>

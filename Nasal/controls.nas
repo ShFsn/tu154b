@@ -57,7 +57,10 @@ var selectParkBrk = func() {
 	if (!park_busy) {
 		park_busy = 1;
 		var state = getprop("controls/gear/brake-parking");
-		if (state) {
+		var brake_left = getprop("controls/gear/brake-left");
+		var brake_right = getprop("controls/gear/brake-right");
+		var opt_in = getprop("tu154/options/controls/realistic-park");
+		if (state and ((brake_left > 0.9 and brake_right > 0.9) or !opt_in)) {
 			applyBrakes(1, 0);
 			setprop("controls/gear/brake-parking", 1);
 			park_busy = 0;
