@@ -976,25 +976,40 @@
         </channel>
         
         <channel name="Brake">
-<!--Left-->
-<!--Check hydro power for brake-->
+          <!--Check hydro power for brake-->
+          <!--Left-->
           <switch name="gear/left-brake-cmd-switched">
             <default value="0.0"/>
             <test logic="OR" value="gear/brake-left">
               hs/hs1-busters-ok > 0
               gear/brake-parking > 0
             </test>
-            <output>fcs/left-brake-cmd-norm</output>
+            <output>fcs/left-brake-self-cmd-norm</output>
           </switch>
-<!--Right-->
-          
+          <!--Right-->
           <switch name="gear/right-brake-cmd-switched">
             <default value="0.0"/>
             <test logic="OR" value="gear/brake-right">
               hs/hs1-busters-ok > 0
               gear/brake-parking > 0
             </test>
-            <output>fcs/right-brake-cmd-norm</output>
+            <output>fcs/right-brake-self-cmd-norm</output>
+          </switch>
+
+          <!--Check for chocks (apply "invizible" brake if they are on)-->
+          <!--Left-->
+          <switch name="fcs/left-brake-cmd-norm">
+            <default value="fcs/left-brake-self-cmd-norm"/>
+            <test logic="OR" value="1.0">
+              /services/chocks/enable == 1
+            </test>
+          </switch>
+          <!--Right-->
+          <switch name="fcs/right-brake-cmd-norm">
+            <default value="fcs/right-brake-self-cmd-norm"/>
+            <test logic="OR" value="1.0">
+              /services/chocks/enable == 1
+            </test>
           </switch>
           
         </channel>
@@ -1052,6 +1067,20 @@
           <switch name="gear/steering-cmd-norm">
             <test value="hydraulics/tiller/autopush-cmd">
               external_reactions/tractor/connected == 1
+            </test>
+            <default value="gear/steering-cmd-norm"/>
+          </switch>
+
+          <!--Lock steering when chock are on-->
+          <switch name="gear/steering-cmd-chock-latch">
+            <test value="gear/steering-cmd-chock-latch">
+              /services/chocks/enable == 1
+            </test>
+            <default value="gear/steering-cmd-norm"/>
+          </switch>
+          <switch name="gear/steering-cmd-norm">
+            <test value="gear/steering-cmd-chock-latch">
+              /services/chocks/enable == 1
             </test>
             <default value="gear/steering-cmd-norm"/>
           </switch>

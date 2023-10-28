@@ -96,31 +96,18 @@ setlistener("tu154/rev-flaps/rev-flaps-offset", reversers);
 var gndservs = func{
       chockss = getprop("services/chocks/request");
       chocks = getprop("services/chocks/enable");
-      pb = getprop("/controls/gear/brake-parking");
       gs = getprop("/velocities/groundspeed-kt");
       if( chockss == nil ) { return; }
       if( chocks == nil ) { return; }
-      if( pb == nil ) { return; }
       if( gs == nil ) { return; }
 
-      print ( gs );
-
-      if ( gs > 1 ) { chockss = 0; chocks = 0; setprop("services/chocks/request", chockss); setprop("services/chocks/enable", chocks); }
-      if ( chockss == 1 and chocks == 0 and pb == 0 ) { chockss = 0; }
-      if ( chockss == 1 and chocks == 0 and pb == 1 ) { chocks = 1; }
-      if ( chockss == 1 and chocks == 1 and pb == 0 ) { pb = 1; }
-      if ( chockss == 1 and chocks == 1 and pb == 1 ) { setprop("/controls/gear/brake-left", pb); setprop("/controls/gear/brake-right", pb); }
-      if ( chockss == 0 ) { chocks = 0; }
+      if ( gs > 1 ) { chockss = 0; chocks = 0; }
+      else { chocks = chockss; }
 
       setprop("services/chocks/request", chockss);
       setprop("services/chocks/enable", chocks);
-      setprop("/controls/gear/brake-parking", pb);
 }
 setlistener("services/chocks/request", gndservs);
-setlistener("/controls/gear/brake-parking", gndservs);
-setlistener("/velocities/groundspeed-kt", gndservs);
-setlistener("/controls/gear/brake-left", gndservs);
-setlistener("/controls/gear/brake-right", gndservs);
 
 var catering_anim = func{
       state = getprop("services/catering/connect");

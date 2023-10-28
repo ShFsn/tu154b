@@ -4247,7 +4247,7 @@
   <name>Pushback</name>
   <path>Aircraft/tu154b/Model/Autopush/Truck.xml</path>
   <offsets>
-    <x-m>-17.85</x-m>
+    <x-m>-17.88</x-m>
     <y-m>0</y-m>
     <z-m>-2.75</z-m>
   </offsets>

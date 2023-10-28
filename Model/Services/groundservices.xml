@@ -304,5 +304,21 @@
 		</axis>
 	</animation>
 
+  <!--Nose chock steering-->
+  <animation>
+    <type>rotate</type>
+		<name>chock_nose</name>
+    <property>sim/multiplay/generic/float[10]</property>
+		<center>
+			<x-m>-17.88</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+  </animation>
 	
 </PropertyList>
