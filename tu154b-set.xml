@@ -128,6 +128,75 @@
         <nick>rdinit</nick>
       </author>
     </authors>
+		
+    <urls>
+      <home-page>https://github.com/ShFsn/tu154b</home-page>
+      <support>https://github.com/ShFsn/tu154b/issues</support>
+      <wikipedia>https://en.wikipedia.org/wiki/Tupolev_Tu-154</wikipedia>
+      <code-repository>https://github.com/ShFsn/tu154b</code-repository>
+    </urls>
+
+    <localized>
+      <ru>
+        <description>Туполев Ту-154Б-2</description>
+        <long-description>Туполев Ту-154 -- трёхдвигательный среднемагистральный узкофюзеляжный авиалайнер,
+разработанный в середине 1960-х. Совершил первый полёт в 1968 году, всего построено 918 машин,
+последняя в 2013 году. Является одним из самых быстрых авиалайнеров, крейсерская скорость -- 900 км/ч.
+Мог эксплуатироваться на неподготовленных полосах с минимальным обслуживанием.</long-description>
+
+        <author>Yurik V. Nikiforoff aka Yurik_nsk, Иван Стребков aka ShFsn</author>
+        
+        <authors>
+          <author>
+            <name>Yurik V. Nikiforoff</name>
+            <description>FDM, 2D и 3D инструменты, анимации, системы и пр.</description>
+            <nick>Yurik_nsk</nick>
+          </author>
+          <author>
+            <name>Francisco Jerez</name>
+            <description>Багфиксы</description>
+          </author>
+          <author>
+            <name>Tomash Brechko</name>
+            <description>Тестирование, программирование</description>
+          </author>
+          <author>
+            <name>Alfated</name>
+            <description>Текстуры, анимации, тестирование</description>
+          </author>
+          <author>
+            <name>Vitaliy.May and Co</name>
+            <description>GPL ливреи</description>
+          </author>
+          <author>
+            <name>Ruslan Gnatovsky</name>
+            <description>Электросистемы на языке nasal</description>
+            <nick>Gnat</nick>
+          </author>
+          <author>
+            <name>Specter</name>
+            <description>Модуль коэфициента трения</description>
+          </author>
+          <author>
+            <name>Иван Стребков</name>
+            <description>Различная поддержка и доработка модели начиная с 2021</description>
+            <nick>ShFsn</nick>
+          </author>
+          <author>
+            <name>Егор Чистов</name>
+            <description>Подсказки в кабине</description>
+            <nick>rdinit</nick>
+          </author>
+        </authors>
+        
+        <urls>
+          <home-page>https://github.com/ShFsn/tu154b</home-page>
+          <support>https://github.com/ShFsn/tu154b/issues</support>
+          <wikipedia>https://ru.wikipedia.org/wiki/Ту-154</wikipedia>
+          <code-repository>https://github.com/ShFsn/tu154b</code-repository>
+        </urls>
+      </ru>
+    </localized>
 
     <status>advanced production</status>
    
@@ -149,13 +218,6 @@
       <tag>three-engine</tag>
       <tag>3-engine</tag>
     </tags>
-		
-    <urls>
-      <home-page>https://github.com/ShFsn/tu154b</home-page>
-      <support>https://github.com/ShFsn/tu154b/issues</support>
-      <wikipedia>https://en.wikipedia.org/wiki/Tupolev_Tu-154</wikipedia>
-      <code-repository>https://github.com/ShFsn/tu154b</code-repository>
-    </urls>
 
     <rating>
       <FDM type="int">5</FDM>
