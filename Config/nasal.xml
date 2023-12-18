@@ -97,5 +97,9 @@
   <autopush_route>
     <file>Aircraft/tu154b/Nasal/Autopush/route.nas</file>
   </autopush_route>
+  
+  <HackCanvas>
+   <file>Aircraft/tu154b/Nasal/HackCanvas.nas</file>
+  </HackCanvas>
 
 </PropertyList>
