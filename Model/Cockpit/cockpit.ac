@@ -1,10 +1,9 @@
 AC3Db
-MATERIAL "mat_2.073" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 0.000
-MATERIAL "mat_4.020" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.900
-MATERIAL "mat_4.005" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 80 trans 0.000
-MATERIAL "DoorsPanelLight" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 1.000 1.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 0.000
-MATERIAL "mat_2.039" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 10 trans 1.000
-MATERIAL "mat_7" rgb 0.000 0.000 0.000  amb 0.000 0.000 0.000  emis 0.000 0.000 0.000  spec 0.000 0.000 0.000  shi 10 trans 0.000
+MATERIAL "vc07" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.030 0.030 0.030  shi 10 trans 0.000
+MATERIAL "vc09_glass" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 60 trans 0.900
+MATERIAL "pilots" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 0.000 0.000 0.000  spec 0.030 0.030 0.030  shi 80 trans 0.000
+MATERIAL "DoorsPanelLight" rgb 1.000 1.000 1.000  amb 1.000 1.000 1.000  emis 1.000 1.000 0.000  spec 0.030 0.030 0.030  shi 10 trans 0.000
+MATERIAL "hole" rgb 0.000 0.000 0.000  amb 0.000 0.000 0.000  emis 0.000 0.000 0.000  spec 0.030 0.030 0.030  shi 10 trans 0.000
 OBJECT world
 name "Blender_exporter_v3.3__cockpit.ac"
 kids 2
@@ -40520,7 +40519,7 @@ refs 3
 kids 0
 OBJECT group
 name "Cockpit_details"
-kids 32
+kids 30
 OBJECT poly
 name "CAX"
 data 8
@@ -83086,6 +83085,7 @@ name "mapcase_hs"
 data 15
 mapcase_hs.mesh
 crease 180.0
+texture "NDplace.png"
 numvert 4
 0.5555 0.5678 -0.09603
 0.5555 0.5678 -0.28604
@@ -83093,7 +83093,7 @@ numvert 4
 0.5555 0.7523 -0.28604
 numsurf 1
 SURF 0X10
-mat 4
+mat 0
 refs 4
 0 0 0
 1 1 0
@@ -92821,12 +92821,6 @@ refs 3
 1 0.74741 0.675235
 2 0.74741 0.68039
 kids 0
-OBJECT group
-name "Object0076"
-kids 0
-OBJECT group
-name "pnl_2"
-kids 0
 OBJECT poly
 name "rect_blank"
 data 10
@@ -92839,7 +92833,7 @@ numvert 4
 0.51108 0.92321 -0.83205
 numsurf 1
 SURF 0X0
-mat 5
+mat 4
 refs 4
 0 0 0
 3 1 0
