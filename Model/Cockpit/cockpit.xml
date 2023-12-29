@@ -16,10 +16,10 @@
   <path>cockpit.ac</path>
 
   <!--**************************** Shaders *******************************-->
-  <effect>
-    <inherits-from>Effects/Tu154b_Cockpit</inherits-from>
+  <!--<effect>
+    <inherits-from>Effects/Tu154b_Cockpit</inherits-from>-->
     <!--**********Details***********-->
-    <object-name>mapcase</object-name>
+    <!--<object-name>mapcase</object-name>-->
     <!--<object-name>mapcase_hs</object-name>
     <object-name>ndplace</object-name>
     <object-name>ndrange</object-name>
@@ -34,7 +34,7 @@
     <object-name>ndap_h</object-name>
     <object-name>ndctr_h</object-name>
     <object-name>ndrange_h</object-name>-->
-    <object-name>DoorsPanel</object-name>
+    <!--<object-name>DoorsPanel</object-name>
     <object-name>DoorsPanel_Unused</object-name>
     <object-name>DoorsPanel_CargoFront</object-name>
     <object-name>DoorsPanel_CargoMiddle</object-name>
@@ -86,9 +86,9 @@
     <object-name>fan3.001</object-name>
     <object-name>fan3.002</object-name>
     <object-name>emergency_brake_handl</object-name>
-    <object-name>CAX</object-name>
+    <object-name>CAX</object-name>-->
     <!--***********General geometry***********-->
-    <object-name>bi-chair</object-name>
+    <!--<object-name>bi-chair</object-name>
     <object-name>capt_panel</object-name>
     <object-name>interior_floor</object-name>
     <object-name>MESH17</object-name>
@@ -109,7 +109,7 @@
     <object-name>crew</object-name>
     <object-name>MESH19</object-name>
     <object-name>rect_blank</object-name>
-  </effect>
+  </effect>-->
 
   <effect>
     <inherits-from>Effects/glass</inherits-from>
