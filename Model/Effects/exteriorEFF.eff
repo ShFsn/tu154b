@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PropertyList>
-  <inherits-from>Effects/model-combined</inherits-from>
+  <inherits-from>Effects/model-combined-deferred</inherits-from>
   <parameters>
 
     <normalmap-dds type="int">0</normalmap-dds>
