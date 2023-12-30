@@ -196,23 +196,6 @@ if( arg[0] ) {
 		getprop("tu154/light/panel/amb-green-def") );
 	setprop("tu154/light/panel/amb-red",
 		getprop("tu154/light/panel/amb-red-def") );
-	# night VC textures
-	setprop("tu154/textures/tablo","tablo_1_n.rgb" );
-	setprop("tu154/textures/tablo_1","tablo_2_n.rgb" );
-	setprop("tu154/textures/tablo_2","tablo_3_n.rgb" );
-	setprop("tu154/textures/tablo_3","tablo_4_n.rgb" );
-	setprop("tu154/textures/tablo_4","tablo_5_n.rgb" );
-	setprop("tu154/textures/tablo_5","tablo_6_n.rgb" );
-	setprop("tu154/textures/tablo_6","tablo_7_n.rgb" );
-	setprop("tu154/textures/tablo_7","tablo_8_n.rgb" );
-	setprop("tu154/textures/tablo_8","tablo_9_n.rgb" );
-	setprop("tu154/textures/tablo_9","tablo_10_n.rgb" );
-	setprop("tu154/textures/tablo_10","tablo_11_n.rgb" );
-	setprop("tu154/textures/tablo_11","tablo_12_n.rgb" );
-	setprop("tu154/textures/tablo_12","tablo_13_n.rgb" );
-	setprop("tu154/textures/tablo_13","tablo_14_n.rgb" );
-	setprop("tu154/textures/tablo_14","tablo_15_n.rgb" );
-	setprop("tu154/textures/tablo_15","tablo_16_n.rgb" );
 
 	}
 else {
@@ -227,23 +210,6 @@ else {
         setprop("tu154/light/panel/amb-blue",0.0);
         setprop("tu154/light/panel/amb-green",0.0);
         setprop("tu154/light/panel/amb-red",0.0);
-	# Daily VC textures
-        setprop("tu154/textures/tablo","tablo_1.rgb" );
-        setprop("tu154/textures/tablo_1","tablo_2.rgb" );
-	setprop("tu154/textures/tablo_2","tablo_3.rgb" );
-	setprop("tu154/textures/tablo_3","tablo_4.rgb" );
-	setprop("tu154/textures/tablo_4","tablo_5.rgb" );
-	setprop("tu154/textures/tablo_5","tablo_6.rgb" );
-	setprop("tu154/textures/tablo_6","tablo_7.rgb" );
-	setprop("tu154/textures/tablo_7","tablo_8.rgb" );
-	setprop("tu154/textures/tablo_8","tablo_9.rgb" );
-	setprop("tu154/textures/tablo_9","tablo_10.rgb" );
-	setprop("tu154/textures/tablo_10","tablo_11.rgb" );
-	setprop("tu154/textures/tablo_11","tablo_12.rgb" );
-	setprop("tu154/textures/tablo_12","tablo_13.rgb" );
-	setprop("tu154/textures/tablo_13","tablo_14.rgb" );
-	setprop("tu154/textures/tablo_14","tablo_15.rgb" );
-	setprop("tu154/textures/tablo_15","tablo_16.rgb" );
 	}
 
 }
@@ -506,6 +472,7 @@ var check_lamps_capt = func{
 
 }
 
+var power_present = props.globals.getNode("tu154/light/cockpit/power-present");
 var indicator_handler = func{
 var pwr = getprop("tu154/systems/electrical/buses/DC27-bus-L/volts");
 if( pwr == nil ) return;
@@ -513,7 +480,11 @@ if(  pwr < 13.0 )
 	{ #27 V absent
 	blank_all();
 	not_ready.switch(0);
+	power_present.setBoolValue(0);
 	return;
+	}
+	else {
+	power_present.setBoolValue(1);
 	}
 # Check lamps on captain panel
 if( getprop( "tu154/systems/electrical/checking-lamps/main-panel" ) == 1.0 ) return;

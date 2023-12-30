@@ -3,7 +3,10 @@
   <inherits-from>Effects/Tu154b_Cockpit</inherits-from>
   <parameters>
 
-    <lightmap-color type="vec3d" n="2">1.5 1.5 1.5</lightmap-color>
+    <!-- RGB for flood lights: 1.000 0.839 0.667 -->
+    <lightmap-color type="vec3d" n="0">1.5 1.26 1.0</lightmap-color> <!-- Dome -->
+    <lightmap-color type="vec3d" n="1">1.5 1.26 1.0</lightmap-color> <!-- Panel lights -->
+    <lightmap-color type="vec3d" n="2">1.5 1.26 1.0</lightmap-color> <!-- Individual lights -->
   
     <texture n="3">
       <image>Effects/glare_lm.png</image>

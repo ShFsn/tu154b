@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <filter>
+    <name>Dome light</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/dome-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/dome</output>
+  </filter>
+
+  <filter>
+    <name>Panel left</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/panel-left-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/panel-left</output>
+  </filter>
+
+  <filter>
+    <name>Panel right</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/panel-right-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/panel-right</output>
+  </filter>
+
+  <filter>
+    <name>Panel overhead</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/panel-over-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/panel-over</output>
+  </filter>
+
+  <filter>
+    <name>Panel middle</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/panel-mid-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/panel-mid</output>
+  </filter>
+
+  <filter>
+    <name>Panel engineer</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/panel-eng-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/panel-eng</output>
+  </filter>
+
+  <filter>
+    <name>Instruments</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/instruments-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/instruments</output>
+  </filter>
+
+  <filter>
+    <name>Individual left</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/ind-left-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/ind-left</output>
+  </filter>
+
+  <filter>
+    <name>Individual right</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/ind-right-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/ind-right</output>
+  </filter>
+
+  <filter>
+    <name>Individual engineer</name>
+    <type>exponential</type>
+    <filter-time>0.032</filter-time>
+    <input>
+      <expression>
+        <product>
+          <property>tu154/light/cockpit/power-present</property>
+          <property>tu154/light/cockpit/ind-eng-in</property>
+        </product>
+      </expression>
+    </input>
+    <output>tu154/light/cockpit/ind-eng</output>
+  </filter>
+
+</PropertyList>

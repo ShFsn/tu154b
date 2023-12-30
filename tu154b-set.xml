@@ -412,6 +412,9 @@
       <property-rule n="107">
         <path>Aircraft/tu154b/Systems/Animations/engineer_panel.xml</path>
       </property-rule>
+      <property-rule n="108">
+        <path>Aircraft/tu154b/Systems/Animations/cockpit_lights.xml</path>
+      </property-rule>
 
       <wingflexer include="Systems/wingflexer-params.xml"/>
     </systems>
