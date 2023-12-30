@@ -15,9 +15,6 @@
     <lightmap-color type="vec3d" n="3">1.0 1.0 1.0 </lightmap-color>
     <texture n="3">
       <image>Effects/mainb_lm.png</image>
-      <wrap-s>clamp</wrap-s>
-      <wrap-t>clamp</wrap-t>
-      <internal-format>normalized</internal-format>
     </texture>
 
   </parameters>

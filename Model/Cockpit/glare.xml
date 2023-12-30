@@ -18,11 +18,6 @@
   <!--**************************** Shaders *******************************-->
   <effect>
     <inherits-from>Effects/Glare</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2">0.0</lightmap-factor>
-    </parameters>
     <object-name>central_panel</object-name>
     <object-name>sw_base</object-name>
     <object-name>spr_load_base</object-name>
@@ -39,20 +34,12 @@
   </effect>
   <effect>
     <inherits-from>Effects/Glare</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/light/cockpit/ind-left</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/light/cockpit/ind-left</use></lightmap-factor></parameters>
     <object-name>light_left</object-name>
   </effect>
   <effect>
     <inherits-from>Effects/Glare</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/light/cockpit/ind-right</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/light/cockpit/ind-right</use></lightmap-factor></parameters>
     <object-name>light_right</object-name>
   </effect>
 
@@ -337,101 +324,57 @@
   <effect>
     <object-name>ind_notready_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_notready</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_notready</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_falsetrim_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_falsetrim</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_falsetrim</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_bank_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_bank</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_bank</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_pitch_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_pitch</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_pitch</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_ap_fail_light</object-name>
     <inherits-from>Effects/LampsLM_Yellow</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_ap_fail</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_ap_fail</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_atfail_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_atfail</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_atfail</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_app_h_light</object-name>
     <inherits-from>Effects/LampsLM_Yellow</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_h</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_h</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_app_v_light</object-name>
     <inherits-from>Effects/LampsLM_Yellow</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_v</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_app_v</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_fire_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_fire</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_fire</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_danger_1_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_1</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_1</use></lightmap-factor></parameters>
   </effect>
   <effect>
     <object-name>ind_danger_2_light</object-name>
     <inherits-from>Effects/LampsLM_Red</inherits-from>
-    <parameters>
-      <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor>
-      <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor>
-      <lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_2</use></lightmap-factor>
-    </parameters>
+    <parameters><lightmap-factor type="float" n="2"><use>tu154/lamps/ind_danger_2</use></lightmap-factor></parameters>
   </effect>
 
 

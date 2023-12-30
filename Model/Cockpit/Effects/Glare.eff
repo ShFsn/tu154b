@@ -3,17 +3,16 @@
   <inherits-from>Effects/Tu154b_Cockpit</inherits-from>
   <parameters>
 
+    <lightmap-factor type="float" n="0"><use>tu154/light/cockpit/dome</use></lightmap-factor> <!-- Dome light -->
+    <lightmap-factor type="float" n="1"><use>tu154/light/cockpit/panel-over</use></lightmap-factor> <!-- Panel light -->
+    <lightmap-factor type="float" n="2">0.0</lightmap-factor> <!-- Individual light -->
+
     <!-- RGB for flood lights: 1.000 0.839 0.667 -->
     <lightmap-color type="vec3d" n="0">1.5 1.26 1.0</lightmap-color> <!-- Dome -->
     <lightmap-color type="vec3d" n="1">1.5 1.26 1.0</lightmap-color> <!-- Panel lights -->
     <lightmap-color type="vec3d" n="2">1.5 1.26 1.0</lightmap-color> <!-- Individual lights -->
   
-    <texture n="3">
-      <image>Effects/glare_lm.dds</image>
-      <wrap-s>clamp</wrap-s>
-      <wrap-t>clamp</wrap-t>
-      <internal-format>normalized</internal-format>
-    </texture>
+    <texture n="3"><image>Effects/glare_lm.dds</image></texture>
 
   </parameters>
 </PropertyList>

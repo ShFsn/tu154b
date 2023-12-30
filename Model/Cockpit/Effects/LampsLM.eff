@@ -5,12 +5,7 @@
     <lightmap-color type="vec3d" n="0">1.000 0.839 0.667</lightmap-color>
     <lightmap-color type="vec3d" n="1">1.000 0.839 0.667</lightmap-color>
   
-    <texture n="3">
-      <image>Effects/indication_lm.dds</image>
-      <wrap-s>clamp</wrap-s>
-      <wrap-t>clamp</wrap-t>
-      <internal-format>normalized</internal-format>
-    </texture>
+    <texture n="3"><image>Effects/indication_lm.dds</image></texture>
 
   </parameters>
 </PropertyList>
