@@ -128,11 +128,6 @@
   <model>
     <name>groza</name>
     <path>Aircraft/tu154b/Model/Cockpit/Groza/GROZA.xml</path>
-    <offsets>
-      <x-m>0.567</x-m>
-      <y-m>-0.141</y-m>
-      <z-m>0.895</z-m>
-    </offsets>
   </model>
 
   <!--*********************** MP details deselect ************************-->

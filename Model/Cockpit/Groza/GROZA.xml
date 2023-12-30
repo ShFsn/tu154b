@@ -9,7 +9,7 @@
   </effect>
   <effect>
     <inherits-from>Effects/Tu154b_Groza</inherits-from>
-    <object-name>Panel</object-name>
+    <object-name>Groza_Panel</object-name>
     <object-name>b_off</object-name>
     <object-name>b_on</object-name>
     <object-name>Handle</object-name>
@@ -58,8 +58,8 @@
     <property>instrumentation/GROZA/screen/sec_dir</property>
     <offset-deg>-3</offset-deg>
     <center>
-      <x>0.5</x>
-      <y>0.5</y>
+      <x>0.25</x>
+      <y>0.25</y>
     </center>
     <axis>
       <x>0</x>
@@ -73,8 +73,8 @@
     <property>instrumentation/GROZA/screen/sec_dir</property>
     <offset-deg>3</offset-deg>
     <center>
-      <x>0.5</x>
-      <y>0.5</y>
+      <x>0.25</x>
+      <y>0.25</y>
     </center>
     <axis>
       <x>0</x>
@@ -88,8 +88,8 @@
     <property>instrumentation/GROZA/screen/sec_dir</property>
     <factor>-0.25</factor>
     <center>
-      <x>0.5</x>
-      <y>0.5</y>
+      <x>0.75</x>
+      <y>0.25</y>
     </center>
     <axis>
       <x>0</x>
@@ -142,7 +142,7 @@
 
   <animation>
     <type>material</type>
-    <object-name>Panel</object-name>
+    <object-name>Groza_Panel</object-name>
     <emission>
       <red-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_r</red-prop>
       <green-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_g</green-prop>
@@ -318,8 +318,8 @@
     <offset-deg>0</offset-deg>
     <center>
       <x-m>0</x-m>
-      <y-m>0.09</y-m>
-      <z-m>-0.135</z-m>
+      <y-m>-0.051</y-m>
+      <z-m>0.76</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -356,8 +356,8 @@
     <offset-deg>127.5</offset-deg>
     <center>
       <x-m>0</x-m>
-      <y-m>0.165</y-m>
-      <z-m>-0.1145</z-m>
+      <y-m>0.024</y-m>
+      <z-m>0.7805</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -393,8 +393,8 @@
     <offset-deg>90</offset-deg>
     <center>
       <x-m>0</x-m>
-      <y-m>0.024</y-m>
-      <z-m>-0.16</z-m>
+      <y-m>-0.117</y-m>
+      <z-m>0.735</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -441,8 +441,8 @@
     <offset-deg>127.5</offset-deg>
     <center>
       <x-m>0</x-m>
-      <y-m>0.0675</y-m>
-      <z-m>-0.1735</z-m>
+      <y-m>-0.0735</y-m>
+      <z-m>0.7215</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -479,8 +479,8 @@
     <offset-deg>127.5</offset-deg>
     <center>
       <x-m>0</x-m>
-      <y-m>0.1125</y-m>
-      <z-m>-0.1735</z-m>
+      <y-m>-0.0285</y-m>
+      <z-m>0.7215</z-m>
     </center>
     <axis>
       <x>1</x>
@@ -515,8 +515,8 @@
     <offset-deg>60</offset-deg>
     <center>
       <x-m>0</x-m>
-      <y-m>0.156</y-m>
-      <z-m>-0.16</z-m>
+      <y-m>0.015</y-m>
+      <z-m>0.735</z-m>
     </center>
     <axis>
       <x>1</x>

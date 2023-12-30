@@ -35,11 +35,11 @@
       <ind-right type="double">0.0</ind-right>
       <ind-eng type="double">0.0</ind-eng>
       <dome-in type="double">0.0</dome-in>
-      <panel-left-in type="double">0.0</panel-left-in>
-      <panel-right-in type="double">0.0</panel-right-in>
-      <panel-over-in type="double">0.0</panel-over-in>
-      <panel-mid-in type="double">0.0</panel-mid-in>
-      <panel-eng-in type="double">0.0</panel-eng-in>
+      <panel-left-in alias="/tu154/switches/gauge-light"/>
+      <panel-right-in alias="/tu154/switches/gauge-light"/>
+      <panel-over-in alias="/tu154/switches/gauge-light"/>
+      <panel-mid-in alias="/tu154/switches/gauge-light"/>
+      <panel-eng-in alias="/tu154/switches/gauge-light"/>
       <instruments-in alias="/tu154/switches/gauge-light"/>
       <ind-left-in type="double">0.0</ind-left-in>
       <ind-right-in type="double">0.0</ind-right-in>
