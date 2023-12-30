@@ -18,14 +18,6 @@
     <output>controls/cockpit/glare/animations/stab-auto-handle</output>
   </filter>
 
-  <filter>
-    <name>Manual stab switch</name>
-    <type>noise-spike</type>
-    <max-rate-of-change>12.0</max-rate-of-change>
-    <input>fdm/jsbsim/fcs/stab-manu-selector</input>
-    <output>controls/cockpit/glare/animations/stab-manu-selector</output>
-  </filter>
-
 
   <filter>
     <name>Not ready for TO</name>

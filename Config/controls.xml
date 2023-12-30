@@ -7,8 +7,4 @@
     <nose-wheel-steering type="bool">false</nose-wheel-steering>
   </gear>
 
-  <cockpit>
-    <glare include="Aircraft/tu154b/Config/Controls/glare.xml"/>
-  </cockpit>
-
 </PropertyList>
