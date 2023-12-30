@@ -21,22 +21,25 @@ var yokes_tex = func() {
 }
 setlistener("tu154/options/textures/yokes", yokes_tex);
 
-var lang_postfix = ".png";
+var lang_postfix = ".";
+var name = [];
 var lang_switch = func() {
     if(getprop("tu154/options/textures/english")) {
-        lang_postfix = "_f.png";
+        lang_postfix = "_f.";
     } else {
-        lang_postfix = ".png";
+        lang_postfix = ".";
     }
 
     foreach (var node; props.globals.getNode("tu154/textures/lang").getChildren()) {
-        node.setValue(node.getName()~lang_postfix);
+        name = split(".", node.getValue());
+        name[0] = node.getName();
+        node.setValue(name[0]~lang_postfix~name[1]);
     }
 
     ########## TEMPORARY UNTIL THE COCKPIT IS REDONE ################
     foreach (var instr; props.globals.getNode("tu154/textures/instruments-3d").getChildren()) {
         foreach (var node; instr.getChildren()) {
-            node.setValue(split("tex_", node.getName())[1]~lang_postfix);
+            node.setValue(split("tex_", node.getName())[1]~lang_postfix~"png");
         }
     }
 }

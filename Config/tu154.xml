@@ -567,8 +567,8 @@
       <vc05_t type="string">vc05_t.png</vc05_t>
       <vc06_t type="string">vc06_t.png</vc06_t>
       <vc08_t type="string">vc08_t.png</vc08_t>
-      <glare type="string">glare.png</glare>
-      <glare_misc type="string">glare_misc.png</glare_misc>
+      <glare type="string">glare.dds</glare>
+      <glare_misc type="string">glare_misc.dds</glare_misc>
     </lang>
 
     <!-- TEMPORARY UNTIL THE COCKPIT IS REDONE-->

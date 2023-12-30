@@ -9,7 +9,7 @@
     <lightmap-color type="vec3d" n="2">1.5 1.26 1.0</lightmap-color> <!-- Individual lights -->
   
     <texture n="3">
-      <image>Effects/glare_lm.png</image>
+      <image>Effects/glare_lm.dds</image>
       <wrap-s>clamp</wrap-s>
       <wrap-t>clamp</wrap-t>
       <internal-format>normalized</internal-format>
