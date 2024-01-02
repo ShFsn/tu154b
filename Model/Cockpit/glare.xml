@@ -124,10 +124,14 @@
   <animation>
     <type>knob</type>
     <object-name>stab_manu_cover</object-name>
+    <drag-scale-px>-150</drag-scale-px>
     <action>
       <binding>
-        <command>property-toggle</command>
+        <command>property-cycle</command>
         <property>fdm/jsbsim/fcs/stab-manu-switch</property>
+        <value>0.0</value>
+        <value>1.0</value>
+        <wrap>false</wrap>
       </binding>
       <binding>
         <command>property-assign</command>
@@ -174,6 +178,8 @@
   <animation>
     <type>knob</type>
     <object-name>stab_auto</object-name>
+    <drag-scale-px>150</drag-scale-px>
+    <drag-direction>vertical</drag-direction>
     <action>
       <binding>
         <command>property-cycle</command>
@@ -241,40 +247,27 @@
   </animation>
   <!--Control-->
   <animation>
-    <type>pick</type>
+    <type>knob</type>
     <object-name>stab_manu_lever</object-name>
+    <drag-scale-px>150</drag-scale-px>
+    <drag-direction>vertical</drag-direction>
     <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
       <binding>
-        <command>property-assign</command>
+        <command>property-cycle</command>
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
         <value>2.0</value>
+        <value>1.0</value>
+        <value>0.0</value>
+        <wrap>false</wrap>
       </binding>
-      <mod-up>
-        <binding>
-          <command>property-assign</command>
-          <property>fdm/jsbsim/fcs/stab-manu-selector</property>
-          <value>1.0</value>
-        </binding>
-      </mod-up>
     </action>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
+    <release>
       <binding>
         <command>property-assign</command>
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
-        <value>0.0</value>
+        <value>1.0</value>
       </binding>
-      <mod-up>
-        <binding>
-          <command>property-assign</command>
-          <property>fdm/jsbsim/fcs/stab-manu-selector</property>
-          <value>1.0</value>
-        </binding>
-      </mod-up>
-    </action>
+    </release>
     <hovered>
       <binding>
         <command>set-tooltip</command>

@@ -373,6 +373,7 @@
     <type>knob</type>
     <object-name>kn_mode</object-name>
     <property>instrumentation/GROZA/global_mode</property>
+    <drag-scale-px>150</drag-scale-px>
     <factor>-30</factor>
     <offset-deg>90</offset-deg>
     <center>
@@ -491,6 +492,7 @@
     <type>knob</type>
     <object-name>kn_range</object-name>
     <property>instrumentation/GROZA/range/range_pos</property>
+    <drag-scale-px>150</drag-scale-px>
     <factor>-30</factor>
     <offset-deg>60</offset-deg>
     <center>
