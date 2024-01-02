@@ -3,10 +3,14 @@
 
   <path>GROZA.ac</path>
 
-  <effect>
+  <!--<effect>
     <inherits-from>Effects/Tu154b-GrozaGlass</inherits-from>
-    <object-name>Glass</object-name>
-  </effect>
+    <object-name>l4_Glass</object-name>
+    <object-name>l2.1_Sector</object-name>
+    <object-name>l2.2_Sector</object-name>
+    <object-name>l2.3_Curtain</object-name>
+    <object-name>l3.1_ScanLine</object-name>
+  </effect>-->
   <effect>
     <inherits-from>Effects/Tu154b_Groza</inherits-from>
     <object-name>Groza_Panel</object-name>
@@ -22,6 +26,8 @@
     <object-name>kn_range</object-name>
     <object-name>lamp_cover</object-name>
     <object-name>Mounting</object-name>
+    <!--<object-name>l1_Groza</object-name>
+    <object-name>l3_Screen</object-name>-->
   </effect>
 
   <animation>
@@ -29,6 +35,7 @@
     <object-name>l2.1_Sector</object-name>
     <object-name>l2.2_Sector</object-name>
     <object-name>l2.3_Curtain</object-name>
+    <object-name>l3.1_ScanLine</object-name>
   </animation>
 
  <effect>
@@ -56,7 +63,7 @@
     <type>texrotate</type>
     <object-name>l2.1_Sector</object-name>
     <property>instrumentation/GROZA/screen/sec_dir</property>
-    <offset-deg>-3</offset-deg>
+    <offset-deg>-1.5</offset-deg>
     <center>
       <x>0.25</x>
       <y>0.25</y>
@@ -71,7 +78,7 @@
     <type>texrotate</type>
     <object-name>l2.2_Sector</object-name>
     <property>instrumentation/GROZA/screen/sec_dir</property>
-    <offset-deg>3</offset-deg>
+    <offset-deg>1.5</offset-deg>
     <center>
       <x>0.25</x>
       <y>0.25</y>
@@ -150,10 +157,43 @@
     </emission>
   </animation>
 
+  <!-- Scan line -->
+  <animation>
+    <type>material</type>
+    <object-name>l3.1_ScanLine</object-name>
+    <transparency>
+      <alpha-prop>instrumentation/GROZA/screen/scline_brt</alpha-prop>
+    </transparency>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <expression>
+      <min>
+        <value>100</value>
+        <max>
+          <value>-100</value>
+          <property>instrumentation/GROZA/screen/sec_dir</property>
+        </max>
+      </min>
+    </expression>
+    <object-name>l3.1_ScanLine</object-name>
+    <center>
+      <x-m> 0.5623</x-m>
+      <y-m> -0.051</y-m>
+      <z-m> 0.815</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
   <!-- Hide canvas (saves FPS) -->
   <animation>
     <type>select</type>
     <object-name>l1_Groza</object-name>
+    <object-name>l3.1_ScanLine</object-name>
     <condition>
      <not>
        <or>
@@ -280,6 +320,13 @@
         <property>instrumentation/GROZA/screen/show_fade</property>
         <value type="bool">1</value>
         <value type="bool">0</value>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/GROZA/status/heat_est</property>
+        <step>-240</step>
+        <min>1</min>
+        <max>240</max>
       </binding>
     </action>
     <hovered>

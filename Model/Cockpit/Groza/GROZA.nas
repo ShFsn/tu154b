@@ -5,10 +5,10 @@ var wxradar = props.globals.getNode("/instrumentation/wxradar",1);
 # On/Off
 var serviceable = props.globals.initNode(rel_path~"status/serviceable", 0, "INT");                      # 0 - not available, 1 - available
 var power = props.globals.initNode(rel_path~"status/power", 0, "INT");                                  # 0 - power off, 1 - power on
-var heat_time = props.globals.initNode(rel_path~"status/heat_time", 240, "DOUBLE");                     # Heating time, 240 sec (3~5 min)
-var heat_est = props.globals.initNode(rel_path~"status/heat_est", 240, "DOUBLE");
-var stop_seq = props.globals.initNode(rel_path~"status/stop_seq", 3, "DOUBLE");
-var pause_seq = props.globals.initNode(rel_path~"status/pause_seq", 2, "DOUBLE");
+var heat_time = props.globals.initNode(rel_path~"status/heat_time", 240, "INT");                     # Heating time, 240 sec (3~5 min)
+var heat_est = props.globals.initNode(rel_path~"status/heat_est", 240, "INT");
+var stop_seq = props.globals.initNode(rel_path~"status/stop_seq", 3, "INT");
+var pause_seq = props.globals.initNode(rel_path~"status/pause_seq", 2, "INT");
 # Modes
 var global_mode = props.globals.initNode(rel_path~"global_mode", 1, "INT");                             # 1 -- Ready, 2 -- Terrain, 3 -- Meteo, 4 -- Turbulence
 # Position
@@ -25,6 +25,7 @@ var pitch_cmd = props.globals.getNode("fdm/jsbsim/attitude/theta-deg");
 var brightness = props.globals.initNode(rel_path~"screen/brightness", 0.5, "DOUBLE");
 var arcs_brightness = props.globals.initNode(rel_path~"screen/arcs_bright", 1, "DOUBLE");
 var arcs_brt = props.globals.initNode(rel_path~"screen/arcs_brt", 1, "DOUBLE");
+var scline_brt = props.globals.initNode(rel_path~"screen/scline_brt", 0, "DOUBLE");
 var lamp_brt = props.globals.initNode(rel_path~"screen/lamp-brt", 0, "DOUBLE");
 var fetch_dir = props.globals.initNode(rel_path~"screen/fetch_dir", 1, "BOOL");
 var sec_dir = props.globals.initNode(rel_path~"screen/sec_dir", 0, "DOUBLE");
@@ -37,6 +38,8 @@ var b_on = props.globals.initNode(rel_path~"buttons/b_on", 0, "DOUBLE");
 var b_off = props.globals.initNode(rel_path~"buttons/b_off", 0, "DOUBLE");
 var b_on_h = props.globals.initNode(rel_path~"buttons/b_on_h", 0, "DOUBLE");
 var b_off_h = props.globals.initNode(rel_path~"buttons/b_off_h", 0, "DOUBLE");
+var b_left = props.globals.initNode(rel_path~"buttons/b_left", 0, "DOUBLE");
+var b_right = props.globals.initNode(rel_path~"buttons/b_right", 0, "DOUBLE");
 # TCAS option (historically inaccurate)
 var blip_radius = props.globals.initNode(rel_path~"settings/tcas-blip-radius", 0, "INT");
 var tcas = props.globals.getNode("instrumentation/tcas/serviceable", 0, "BOOL");
@@ -57,8 +60,11 @@ var dDeg = dTime * 50;
 var ddDeg = dDeg/2;
 var antBearing = 0;
 var secBearing = -100 + ddDeg;
+var _secBearing = secBearing;
 var scanLine = [];
 var scanLen = 165 * resolution / 256;
+var scline_brt_req = 0.0;
+var scline_seq = 0;
 
 var i = 0;
 var heading = 0.0;
@@ -117,6 +123,8 @@ var loop = func() {
 
   ############################################################################ Standby ##################################################################################
   if (global_mode.getValue() == 1) {
+    scline_brt_req = 0.0;
+
     if (pause_seq.getValue() == 0 and secBearing + dDeg > 200) pause_seq.setValue(1);
     if (pause_seq.getValue() == 1 and secBearing + dDeg < -200) pause_seq.setValue(2);
     if (pause_seq.getValue() == 2 and stop_seq.getValue() == 0) {
@@ -132,6 +140,7 @@ var loop = func() {
       }
     }
   }
+  else if (global_mode.getValue() == 2 or global_mode.getValue() == 3 or global_mode.getValue() == 4) scline_brt_req = 1.0;
 
   if (math.abs(secBearing) <= 100) {
 
@@ -355,11 +364,56 @@ var loop = func() {
 
     image.dirtyPixels();
   }
+  
+  if (global_mode.getValue() == 5) {
+    if (antBearing >= 0 and antBearing < 200) {
+      for (i = 0; i < scanLen; i = i + 1) {
+        image.setPixel(antBearing,i, [0,0,0,1]);
+        image.setPixel(antBearing+1,i, [0,0,0,1]);
+      }
+    }
+
+    if (scline_seq == 0) {
+      if ((secBearing < 0 and fetch_dir.getValue()) or (secBearing > 0 and !fetch_dir.getValue())) scline_seq = 1;
+      else scline_seq = 2;
+      _secBearing = secBearing;
+    }
+    else if ((scline_seq == 1 or scline_seq == 2) and math.abs(secBearing + dDeg) > 200) scline_seq = 4;
+    else if ((scline_seq == 1 or scline_seq == 2) and math.abs(secBearing - _secBearing) > 100) {
+      if ((scline_seq == 1 and math.abs(_secBearing) > 50) or scline_seq == 2) {
+        secBearing = _secBearing;
+        fetch_dir.setValue(!fetch_dir.getValue());
+        dDeg = -dDeg;
+      }
+      if (scline_seq == 2) scline_seq = 4;
+      else scline_seq = 3;
+    }
+    else if (scline_seq == 3 and math.abs(secBearing) > 100) {
+      scline_seq = 5;
+      secBearing = ddDeg;
+      fetch_dir.setValue(!fetch_dir.getValue());
+      dDeg = -dDeg;
+    }
+    else if (scline_seq == 4 and math.abs(secBearing) < math.abs(dDeg)) scline_seq = 5;
+
+    if (scline_seq == 5) {
+      scline_brt_req = 1;
+
+      secBearing = secBearing - dDeg;
+      if (b_left.getValue() == 1) secBearing = secBearing - dDeg;
+      if (b_right.getValue() == 1) secBearing = secBearing + dDeg;
+    }
+    else {
+      scline_brt_req = 0;
+    }
+  }
+  else scline_seq = 0;
 
   ################################################################## Antenna moving ####################################################################
   secBearing = secBearing + dDeg;
-  antBearing = math.max(0, math.min(200 - dDeg, antBearing + dDeg));
+  antBearing = math.max(0, math.min(200 - dDeg, secBearing + 100 - ddDeg));
   interpolate(sec_dir.getPath(), secBearing, dTime);
+  scline_brt.setValue(scline_brt_req * power.getValue());
 
   if (stop_seq.getValue() == 1) {
     if (secBearing > 200) {
