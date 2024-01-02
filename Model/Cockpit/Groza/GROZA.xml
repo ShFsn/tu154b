@@ -209,19 +209,11 @@
         <property>instrumentation/GROZA/buttons/b_on</property>
         <value>1</value>
       </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/button</property>
-      </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
           <property>instrumentation/GROZA/buttons/b_on</property>
           <value>0</value>
-        </binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>tu154/sound/events/button</property>
         </binding>
       </mod-up>
     </action>
@@ -258,19 +250,11 @@
         <property>instrumentation/GROZA/buttons/b_off</property>
         <value>1</value>
       </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/button</property>
-      </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
           <property>instrumentation/GROZA/buttons/b_off</property>
           <value>0</value>
-        </binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>tu154/sound/events/button</property>
         </binding>
       </mod-up>
     </action>
@@ -332,8 +316,8 @@
         <property>instrumentation/GROZA/info/pitch_add</property>
         <factor>1</factor>
         <min>-15</min>
-        <max>11</max><!--<max>10</max>--><!--one extra step in needed due to wrapping-->
-        <wrap>true</wrap>
+        <max>10</max>
+        <wrap>false</wrap>
       </binding>
     </action>
     <hovered>
@@ -370,8 +354,8 @@
         <property>instrumentation/GROZA/screen/arcs_bright</property>
         <factor>0.01</factor>
         <min>0</min>
-        <max>1.01</max><!--<max>1</max>--><!--one extra step in needed due to wrapping-->
-        <wrap>true</wrap>
+        <max>1.0</max>
+        <wrap>false</wrap>
       </binding>
     </action>
     <hovered>
@@ -407,12 +391,8 @@
         <property>instrumentation/GROZA/global_mode</property>
         <factor>1</factor>
         <min>1</min>
-        <max>5</max><!--<max>4</max>--><!--one extra step in needed due to wrapping-->
-        <wrap>true</wrap>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
+        <max>4</max>
+        <wrap>false</wrap>
       </binding>
     </action>
     <hovered>
@@ -455,8 +435,8 @@
         <property>instrumentation/GROZA/screen/brightness</property>
         <factor>0.01</factor>
         <min>0</min>
-        <max>1.01</max><!--<max>1</max>--><!--one extra step in needed due to wrapping-->
-        <wrap>true</wrap>
+        <max>1.0</max>
+        <wrap>false</wrap>
       </binding>
     </action>
     <hovered>
@@ -493,8 +473,8 @@
         <property>instrumentation/GROZA/info/contrast</property>
         <factor>0.1</factor>
         <min>0</min>
-        <max>2.1</max><!--<max>2</max>--><!--one extra step in needed due to wrapping-->
-        <wrap>true</wrap>
+        <max>2.0</max>
+        <wrap>false</wrap>
       </binding>
     </action>
     <hovered>
@@ -529,12 +509,8 @@
         <property>instrumentation/GROZA/range/range_pos</property>
         <factor>1</factor>
         <min>0</min>
-        <max>5</max><!--<max>4</max>--><!--one extra step in needed due to wrapping-->
-        <wrap>true</wrap>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
+        <max>4</max>
+        <wrap>false</wrap>
       </binding>
     </action>
     <hovered>

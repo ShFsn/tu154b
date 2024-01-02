@@ -64,6 +64,10 @@
     <file>Aircraft/tu154b/Nasal/lights.nas</file>
   </lights>
 
+  <sounds>
+    <file>Aircraft/tu154b/Nasal/sounds.nas</file>
+  </sounds>
+
   <model-3d>
     <file>Aircraft/tu154b/Nasal/model-3d.nas</file>
   </model-3d>

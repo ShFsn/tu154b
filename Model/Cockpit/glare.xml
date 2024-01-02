@@ -122,19 +122,12 @@
     </axis>
   </animation>
   <animation>
-    <type>pick</type>
-    <object-name>stab_manu_cover</object-name>  
-    <visible>true</visible>
+    <type>knob</type>
+    <object-name>stab_manu_cover</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>fdm/jsbsim/fcs/stab-manu-switch</property>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/knob</property>
       </binding>
       <binding>
         <command>property-assign</command>
@@ -188,11 +181,7 @@
         <value>2.0</value>
         <value>1.0</value>
         <value>0.0</value>
-        <wrap>true</wrap>
-      </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/handle</property>
+        <wrap>false</wrap>
       </binding>
     </action>
     <hovered>
@@ -262,19 +251,11 @@
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
         <value>2.0</value>
       </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/switch</property>
-      </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
           <property>fdm/jsbsim/fcs/stab-manu-selector</property>
           <value>1.0</value>
-        </binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>tu154/sound/events/switch</property>
         </binding>
       </mod-up>
     </action>
@@ -286,19 +267,11 @@
         <property>fdm/jsbsim/fcs/stab-manu-selector</property>
         <value>0.0</value>
       </binding>
-      <binding>
-        <command>property-toggle</command>
-        <property>tu154/sound/events/switch</property>
-      </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
           <property>fdm/jsbsim/fcs/stab-manu-selector</property>
           <value>1.0</value>
-        </binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>tu154/sound/events/switch</property>
         </binding>
       </mod-up>
     </action>
