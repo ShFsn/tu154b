@@ -63,7 +63,7 @@
     <type>texrotate</type>
     <object-name>l2.1_Sector</object-name>
     <property>instrumentation/GROZA/screen/sec_dir</property>
-    <offset-deg>-1.5</offset-deg>
+    <offset-deg>-3</offset-deg>
     <center>
       <x>0.25</x>
       <y>0.25</y>
@@ -78,7 +78,7 @@
     <type>texrotate</type>
     <object-name>l2.2_Sector</object-name>
     <property>instrumentation/GROZA/screen/sec_dir</property>
-    <offset-deg>1.5</offset-deg>
+    <offset-deg>3</offset-deg>
     <center>
       <x>0.25</x>
       <y>0.25</y>
@@ -172,7 +172,25 @@
         <value>100</value>
         <max>
           <value>-100</value>
-          <property>instrumentation/GROZA/screen/sec_dir</property>
+          <sum>
+            <property>instrumentation/GROZA/screen/sec_dir</property>
+            <product>
+              <sum>
+                <value>3</value>
+                <product>
+                  <value>-6</value>
+                  <property>instrumentation/GROZA/screen/fetch_dir</property>
+                </product>
+              </sum>
+              <min>
+                <value>1</value>
+                <difference>
+                  <value>5</value>
+                  <property>instrumentation/GROZA/global_mode</property>
+                </difference>
+              </min>
+            </product>
+          </sum>
         </max>
       </min>
     </expression>
