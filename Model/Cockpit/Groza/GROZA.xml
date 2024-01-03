@@ -161,9 +161,27 @@
   <animation>
     <type>material</type>
     <object-name>l3.1_ScanLine</object-name>
-    <transparency>
-      <alpha-prop>instrumentation/GROZA/screen/scline_brt</alpha-prop>
-    </transparency>
+    <ambient>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </ambient>
+    <diffuse>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </diffuse>
+    <specular>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </specular>
+    <emission>
+      <red>1.0</red>
+      <green>1.0</green>
+      <blue>1.0</blue>
+      <factor-prop>instrumentation/GROZA/screen/scline_brt</factor-prop>
+    </emission>
   </animation>
   <animation>
     <type>rotate</type>
@@ -240,6 +258,7 @@
          <property>instrumentation/GROZA/status/pause_seq</property>
          <value>2</value>
        </equals>
+       <property>instrumentation/GROZA/screen/scline_cover</property>
      </or>
     </condition>
   </animation>
@@ -325,6 +344,55 @@
         <property>instrumentation/GROZA/status/power</property>
       </binding>
     </hovered>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b_left</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/GROZA/buttons/b_left</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>instrumentation/GROZA/buttons/b_left</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>b_right</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/GROZA/buttons/b_right</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>instrumentation/GROZA/buttons/b_right</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>b_left</object-name>
+    <object-name>b_right</object-name>
+    <transparency>
+      <alpha>0.0</alpha>
+    </transparency>
   </animation>
 
   <animation>
@@ -457,7 +525,7 @@
         <property>instrumentation/GROZA/global_mode</property>
         <factor>1</factor>
         <min>1</min>
-        <max>4</max>
+        <max>5</max>
         <wrap>false</wrap>
       </binding>
     </action>

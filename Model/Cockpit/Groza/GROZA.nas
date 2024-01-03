@@ -11,12 +11,14 @@ var stop_seq = props.globals.initNode(rel_path~"status/stop_seq", 3, "INT");
 var pause_seq = props.globals.initNode(rel_path~"status/pause_seq", 2, "INT");
 # Modes
 var global_mode = props.globals.initNode(rel_path~"global_mode", 1, "INT");                             # 1 -- Ready, 2 -- Terrain, 3 -- Meteo, 4 -- Turbulence
-# Position
+# Position and speed
 var ac_lat = props.globals.getNode("position/latitude-deg");
 var ac_lon = props.globals.getNode("position/longitude-deg");
 var ac_alt = props.globals.getNode("position/altitude-ft");
 var ac_hdg = props.globals.getNode("orientation/heading-deg");
 var ac_pitch = props.globals.getNode("orientation/pitch-deg");
+var ac_speed_north = props.globals.getNode("velocities/speed-north-fps");
+var ac_speed_east = props.globals.getNode("velocities/speed-east-fps");
 # Options
 var contrast = props.globals.initNode(rel_path~"info/contrast", 1, "DOUBLE");
 var pitch_add = props.globals.initNode(rel_path~"info/pitch_add", 0, "INT");
@@ -26,6 +28,7 @@ var brightness = props.globals.initNode(rel_path~"screen/brightness", 0.5, "DOUB
 var arcs_brightness = props.globals.initNode(rel_path~"screen/arcs_bright", 1, "DOUBLE");
 var arcs_brt = props.globals.initNode(rel_path~"screen/arcs_brt", 1, "DOUBLE");
 var scline_brt = props.globals.initNode(rel_path~"screen/scline_brt", 0, "DOUBLE");
+var scline_cover = props.globals.initNode(rel_path~"screen/scline_cover", 0, "BOOL");
 var lamp_brt = props.globals.initNode(rel_path~"screen/lamp-brt", 0, "DOUBLE");
 var fetch_dir = props.globals.initNode(rel_path~"screen/fetch_dir", 1, "BOOL");
 var sec_dir = props.globals.initNode(rel_path~"screen/sec_dir", 0, "DOUBLE");
@@ -87,6 +90,13 @@ var last_int = 0.0;
 var last_int_dist = 0.0;
 var calc_brt = 0.0;
 var point = 0.0;
+
+var speed_mod = 0.0;
+var speed_n = 0.0;
+var speed_e = 0.0;
+var track_deg = 0.0;
+var slip_deg = 0.0;
+var slip_cos = 0.0;
 
 var aircraft = [];
 var storms = [];
@@ -380,6 +390,7 @@ var loop = func() {
     }
     else if ((scline_seq == 1 or scline_seq == 2) and math.abs(secBearing + dDeg) > 200) scline_seq = 4;
     else if ((scline_seq == 1 or scline_seq == 2) and math.abs(secBearing - _secBearing) > 100) {
+      scline_cover.setValue(1);
       if ((scline_seq == 1 and math.abs(_secBearing) > 50) or scline_seq == 2) {
         secBearing = _secBearing;
         fetch_dir.setValue(!fetch_dir.getValue());
@@ -397,17 +408,26 @@ var loop = func() {
     else if (scline_seq == 4 and math.abs(secBearing) < math.abs(dDeg)) scline_seq = 5;
 
     if (scline_seq == 5) {
-      scline_brt_req = 1;
+      scline_cover.setValue(0);
+      speed_n = ac_speed_north.getValue();
+      speed_e = ac_speed_east.getValue();
+      speed_mod = math.sqrt(speed_n * speed_n + speed_e * speed_e);
+      track_deg = math.atan2(speed_e, speed_n) * R2D;
+      slip_deg = track_deg - ac_hdg.getValue();
+      slip_cos = math.cos((slip_deg - secBearing) * D2R);
+      scline_brt_req = 0.1 + 0.3 * math.pow(slip_cos, 10) + 0.6 * math.pow(slip_cos, 1000) * math.min(speed_mod * 0.005, 1.0);
+
+      print(speed_n, " ", speed_e, " ", speed_mod, " ", track_deg, " ", slip_deg, " ", scline_brt_req);
 
       secBearing = secBearing - dDeg;
-      if (b_left.getValue() == 1) secBearing = secBearing - dDeg;
-      if (b_right.getValue() == 1) secBearing = secBearing + dDeg;
+      if (b_left.getValue() == 1) secBearing = math.max(-100 + ddDeg, secBearing - math.abs(dDeg));
+      if (b_right.getValue() == 1) secBearing = math.min(100 - ddDeg, secBearing + math.abs(dDeg));
     }
     else {
       scline_brt_req = 0;
     }
   }
-  else scline_seq = 0;
+  else { scline_seq = 0; scline_cover.setValue(0); }
 
   ################################################################## Antenna moving ####################################################################
   secBearing = secBearing + dDeg;
