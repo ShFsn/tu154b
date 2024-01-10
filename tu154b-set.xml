@@ -559,4 +559,11 @@
     </electrical>
   </systems>
 
+  <test>
+    <exterior type="bool">false</exterior>
+    <mp type="bool">false</mp>
+    <cockpit type="bool">false</cockpit>
+    <instruments type="bool">false</instruments>
+  </test>
+
 </PropertyList>

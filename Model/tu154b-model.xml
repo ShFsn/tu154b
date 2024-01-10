@@ -84,13 +84,18 @@
     <object-name>exterior</object-name>
     <object-name>lights</object-name>
     <object-name>tooltips</object-name>
-    <condition><property>tu154/constants/one</property></condition>
+    <condition><property>test/exterior</property></condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>exterior-mp</object-name>
     <object-name>lights-mp</object-name>
-    <condition><not><property>tu154/constants/one</property></not></condition>
+    <condition><property>test/mp</property></condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>cockpit</object-name>
+    <condition><property>test/cockpit</property></condition>
   </animation>
 
 

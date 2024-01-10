@@ -4237,7 +4237,7 @@
   <animation>
     <type>select</type>
     <object-name>virtualcockpit3d</object-name>
-    <condition><property>tu154/constants/one</property></condition>
+    <condition><property>test/instruments</property></condition>
   </animation>
 
   <!--*************************** END PANELS ****************************-->
