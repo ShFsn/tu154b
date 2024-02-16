@@ -294,6 +294,14 @@ var switch_calc = func () {
     if (num(version[0]) == 2020 and num(version[1]) == 4 and num(version[2]) >= 0) version_req = 1;
 
     if (
+        # FG 2020.4.x Compositor lights are disabled
+        # FGBUG Dynamic-lighting switch does not turn off Compositor lights as of 2020-03-19
+        #(version_req != 1 or getprop("/sim/rendering/dynamic-lighting/enabled") != 1)
+        version_req != 1
+    ) { props.globals.getNode("/tu154/light/cockpit-not-backup", 1).setBoolValue(0); }
+    else { props.globals.getNode("/tu154/light/cockpit-not-backup", 1).setBoolValue(1); }
+
+    if (
         # If ALS is enabled and at least one supporting shader is at enough level to show the light
         getprop("/sim/rendering/shaders/skydome") and getprop("/sim/rendering/shaders/landmass") > 3 and
         # and FG 2020.4.x Compositor lights are disabled

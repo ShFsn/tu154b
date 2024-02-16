@@ -1775,7 +1775,7 @@
     <object-name>capt_panel</object-name>
     <condition>
       <not>
-        <property>tu154/light/compositor-on</property>
+        <property>tu154/light/cockpit-not-backup</property>
       </not>
     </condition>
     <emission>
@@ -1791,7 +1791,7 @@
     <object-name>MESH22</object-name>
     <condition>
       <not>
-        <property>tu154/light/compositor-on</property>
+        <property>tu154/light/cockpit-not-backup</property>
       </not>
     </condition>
     <emission>
@@ -1807,7 +1807,7 @@
     <object-name>MESH26</object-name>
     <condition>
       <not>
-        <property>tu154/light/compositor-on</property>
+        <property>tu154/light/cockpit-not-backup</property>
       </not>
     </condition>
     <emission>
@@ -1823,7 +1823,7 @@
     <object-name>MESH28</object-name>
     <condition>
       <not>
-        <property>tu154/light/compositor-on</property>
+        <property>tu154/light/cockpit-not-backup</property>
       </not>
     </condition>
     <emission>
@@ -1862,7 +1862,7 @@
     <object-name>lever_mi10</object-name>
     <condition>
       <not>
-        <property>tu154/light/compositor-on</property>
+        <property>tu154/light/cockpit-not-backup</property>
       </not>
     </condition>
     <emission>
