@@ -1845,7 +1845,7 @@
     <object-name>RightWindowGlass</object-name>
     <object-name>WiperLeft</object-name>
     <object-name>WiperRight</object-name>
-    <!--<object-name>MESH23</object-name>-->
+    <object-name>MESH23</object-name>
     <object-name>MESH25</object-name>
     <object-name>MESH27</object-name>
     <object-name>pnl_1</object-name>

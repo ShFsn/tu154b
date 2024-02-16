@@ -36,7 +36,7 @@
   <object-name>corner</object-name>
   <condition>
     <not>
-      <property>/tu154/light/compositor-on</property>
+      <property>/tu154/light/cockpit-not-backup</property>
     </not>
   </condition>
   <emission>
