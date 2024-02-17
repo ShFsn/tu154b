@@ -386,13 +386,16 @@
       </mod-up>
     </action>
   </animation>
-  <animation>
-    <type>material</type>
-    <object-name>b_left</object-name>
-    <object-name>b_right</object-name>
-    <transparency>
-      <alpha>0.0</alpha>
-    </transparency>
+  <animation> 
+    <type>select</type> 
+    <object-name>b_left</object-name> 
+    <object-name>b_right</object-name> 
+    <condition> 
+      <equals>
+        <property>instrumentation/GROZA/global_mode</property> 
+        <value>5</value> 
+      </equals> 
+    </condition> 
   </animation>
 
   <animation>
