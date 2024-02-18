@@ -293,6 +293,48 @@ var loop = func() {
       calc_brt = 2.0 * (lamp_brt.getValue() - 0.5);
       #point = 0.0;
 
+      aircraft = [];
+      #aDist = 0.0;
+      #aRadius = 0.0;
+      #dRadius = 0.0;
+      #aMin = 0.0;
+      #aMax = 0.0;
+      #aCourse = 0.0;
+      #aPos = geo.Coord.new();
+      foreach(var n; aimodels.getChildren("multiplayer") ~ aimodels.getChildren("swift") ~ aimodels.getChildren("aircraft")) {
+          if (n.getNode("controls/invisible",1).getValue()) {
+            continue
+          }
+          if (n.getName() == "aircraft") {
+            # AI aircraft below 40 kt have transponder off (see flightgear/src/Instrumentation/tcas.cxx)
+            if ((n.getNode("velocities/true-airspeed-kt",1).getValue() == nil) or (n.getNode("velocities/true-airspeed-kt",1).getValue() < 40.0)) {
+              continue
+            }
+          } else if (
+            # We look for any kind of responses here, not just the ones valid for TCAS.
+            ((n.getNode("instrumentation/transponder/altitude",1).getValue() == nil) or (n.getNode("instrumentation/transponder/altitude",1).getValue() == -9999)) and
+            ((n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == nil) or (n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == -9999))
+          ) {
+            continue
+          }
+          aPos.set_latlon(n.getNode("position/latitude-deg").getValue(), n.getNode("position/longitude-deg").getValue());
+          aCourse = pos.course_to(aPos);
+          aDist = pos.distance_to(aPos);
+          aRadius = 2 * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
+          dRadius = dDist;
+          aMax = math.fmod(aCourse - heading + aRadius + 540, 360) - 180;
+          aMin = math.fmod(aCourse - heading - aRadius + 540, 360) - 180;
+          # Height of the sprite is hand-tuned to be approx. square, may break with change of resolution.
+          if (secBearing > aMin and secBearing < aMax and aDist - dRadius < range.getValue() * 1290.0) {
+            append(aircraft, {
+              dMax: aDist + dRadius,
+              dMin: aDist - dRadius,
+              alt: n.getNode("position/altitude-ft").getValue() * FT2M,
+              });
+          }
+        }
+
+
       storms = [];
       #sCourse = 0.0;
       #sPos = geo.Coord.new();
@@ -364,6 +406,20 @@ var loop = func() {
 
         point = stop_seq.getValue() == 0 ? math.min(point, 1.0) : 0;
 
+        foreach(var n; aircraft) {
+          if (dist > n.dMin and dist < n.dMax) {
+            if (n.alt >= (alt - (alt - last_elev) / last_elev_dist * (n.dMax + n.dMin) * 0.5)) {
+              point = 1.0;
+            }
+          }
+        }
+
+        if ((dist <= 25000 and nDist > 25000) or (dist <= 50000 and nDist > 50000) or (dist <= 75000 and nDist > 75000) or (dist <= 100000 and nDist > 100000) or (dist <= 200000 and nDist > 200000) or (dist <= 300000 and nDist > 300000)) {
+          point += arcs_brt.getValue();
+        }
+
+        point = stop_seq.getValue() == 0 ? math.min(point, 1.0) : 0;
+
         image.setPixel(antBearing,i, [0,point,0,1]);
         image.setPixel(antBearing+1,i, [0,point,0,1]);
         pos.apply_course_distance(math.fmod((heading + secBearing + 360), 360), dDist);
@@ -374,7 +430,7 @@ var loop = func() {
 
     image.dirtyPixels();
   }
-  
+
   if (global_mode.getValue() == 5) {
     if (antBearing >= 0 and antBearing < 200) {
       for (i = 0; i < scanLen; i = i + 1) {
@@ -563,8 +619,8 @@ var Mode_helper = func() {
   }
 }
 setlistener(global_mode.getPath(), Mode_helper);
- 
- 
+
+
 ######################################################## Switch and knob position saving ####################################
 
 # FGBUG This does not work, idk why! Using -set.xml for now.

@@ -15,6 +15,8 @@ var event_button = func {
 }
 setlistener("instrumentation/GROZA/buttons/b_on", event_button, 0, 0);
 setlistener("instrumentation/GROZA/buttons/b_off", event_button, 0, 0);
+setlistener("instrumentation/GROZA/buttons/b_left", event_button, 0, 0);
+setlistener("instrumentation/GROZA/buttons/b_right", event_button, 0, 0);
 
 
 var event_knob = func {

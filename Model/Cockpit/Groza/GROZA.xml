@@ -16,6 +16,8 @@
     <object-name>Groza_Panel</object-name>
     <object-name>b_off</object-name>
     <object-name>b_on</object-name>
+    <object-name>b_left</object-name>
+    <object-name>b_right</object-name>
     <object-name>Handle</object-name>
     <object-name>kn_angle</object-name>
     <object-name>kn_arcs</object-name>
@@ -106,7 +108,7 @@
   </animation>
   <animation>
     <type>select</type>
-    <object-name>l2.1_Sector</object-name>    
+    <object-name>l2.1_Sector</object-name>
     <condition>
      <and>
        <equals>
@@ -347,6 +349,17 @@
   </animation>
 
   <animation>
+    <type>translate</type>
+    <object-name>b_left</object-name>
+    <property>instrumentation/GROZA/buttons/b_left</property>
+    <factor>0.00375</factor>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <animation>
     <type>pick</type>
     <object-name>b_left</object-name>
     <action>
@@ -365,6 +378,25 @@
         </binding>
       </mod-up>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Move the scan line to the left (Drift mode only!)</label>
+        <tooltip-id>Groza_scan_left</tooltip-id>
+      </binding>
+    </hovered>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>b_right</object-name>
+    <property>instrumentation/GROZA/buttons/b_right</property>
+    <factor>0.00375</factor>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
   </animation>
   <animation>
     <type>pick</type>
@@ -385,17 +417,13 @@
         </binding>
       </mod-up>
     </action>
-  </animation>
-  <animation> 
-    <type>select</type> 
-    <object-name>b_left</object-name> 
-    <object-name>b_right</object-name> 
-    <condition> 
-      <equals>
-        <property>instrumentation/GROZA/global_mode</property> 
-        <value>5</value> 
-      </equals> 
-    </condition> 
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Move the scan line to the right (Drift mode only!)</label>
+        <tooltip-id>Groza_scan_right</tooltip-id>
+      </binding>
+    </hovered>
   </animation>
 
   <animation>
@@ -504,7 +532,7 @@
       </binding>
     </hovered>
   </animation>
-  
+
   <animation>
     <type>knob</type>
     <object-name>kn_mode</object-name>
@@ -540,7 +568,7 @@
         <mapping>nasal</mapping>
         <property>instrumentation/GROZA/global_mode</property>
         <script>
-          var result =  ["Standby", "Terrain", "Weather", "Turbulence"][arg[0] - 1];
+          var result =  ["Standby", "Terrain", "Weather", "Turbulence", "Drift"][arg[0] - 1];
           if ((arg[0] - 1 == 1) and getprop("instrumentation/GROZA/settings/tcas-blip-radius") and getprop("instrumentation/tcas/serviceable")) {
             return result ~ " + TCAS"
           }
