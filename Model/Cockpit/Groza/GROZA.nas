@@ -44,8 +44,8 @@ var b_off_h = props.globals.initNode(rel_path~"buttons/b_off_h", 0, "DOUBLE");
 var b_left = props.globals.initNode(rel_path~"buttons/b_left", 0, "DOUBLE");
 var b_right = props.globals.initNode(rel_path~"buttons/b_right", 0, "DOUBLE");
 # TCAS option (historically inaccurate)
-var blip_radius = props.globals.initNode(rel_path~"settings/tcas-blip-radius", 0, "INT");
-var tcas = props.globals.getNode("instrumentation/tcas/serviceable", 0, "BOOL");
+#var blip_radius = props.globals.initNode(rel_path~"settings/tcas-blip-radius", 0, "INT");
+#var tcas = props.globals.getNode("instrumentation/tcas/serviceable", 0, "BOOL");
 var aimodels = props.globals.getNode("/ai/models",1);
 
 
@@ -180,38 +180,36 @@ var loop = func() {
       #aMax = 0.0;
       #aCourse = 0.0;
       #aPos = geo.Coord.new();
-      if(blip_radius.getValue() and tcas.getValue()) {
-        foreach(var n; aimodels.getChildren("multiplayer") ~ aimodels.getChildren("swift") ~ aimodels.getChildren("aircraft")) {
-          if (n.getNode("controls/invisible",1).getValue()) {
+      foreach(var n; aimodels.getChildren("multiplayer") ~ aimodels.getChildren("swift") ~ aimodels.getChildren("aircraft")) {
+        if (n.getNode("controls/invisible",1).getValue()) {
+          continue
+        }
+        if (n.getName() == "aircraft") {
+          # AI aircraft below 40 kt have transponder off (see flightgear/src/Instrumentation/tcas.cxx)
+          if ((n.getNode("velocities/true-airspeed-kt",1).getValue() == nil) or (n.getNode("velocities/true-airspeed-kt",1).getValue() < 40.0)) {
             continue
           }
-          if (n.getName() == "aircraft") {
-            # AI aircraft below 40 kt have transponder off (see flightgear/src/Instrumentation/tcas.cxx)
-            if ((n.getNode("velocities/true-airspeed-kt",1).getValue() == nil) or (n.getNode("velocities/true-airspeed-kt",1).getValue() < 40.0)) {
-              continue
-            }
-          } else if (
-            # We look for any kind of responses here, not just the ones valid for TCAS.
-            ((n.getNode("instrumentation/transponder/altitude",1).getValue() == nil) or (n.getNode("instrumentation/transponder/altitude",1).getValue() == -9999)) and
-            ((n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == nil) or (n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == -9999))
-          ) {
-            continue
-          }
-          aPos.set_latlon(n.getNode("position/latitude-deg").getValue(), n.getNode("position/longitude-deg").getValue());
-          aCourse = pos.course_to(aPos);
-          aDist = pos.distance_to(aPos);
-          aRadius = blip_radius.getValue() * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
-          dRadius = blip_radius.getValue() * dDist;
-          aMax = math.fmod(aCourse - heading + aRadius + 540, 360) - 180;
-          aMin = math.fmod(aCourse - heading - aRadius + 540, 360) - 180;
-          # Height of the sprite is hand-tuned to be approx. square, may break with change of resolution.
-          if (secBearing > aMin and secBearing < aMax and aDist - dRadius < range.getValue() * 1290.0) {
-            append(aircraft, {
-              dMax: aDist + dRadius,
-              dMin: aDist - dRadius,
-              alt: n.getNode("position/altitude-ft").getValue() * FT2M,
-              });
-          }
+        } else if (
+          # We look for any kind of responses here, not just the ones valid for TCAS.
+          ((n.getNode("instrumentation/transponder/altitude",1).getValue() == nil) or (n.getNode("instrumentation/transponder/altitude",1).getValue() == -9999)) and
+          ((n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == nil) or (n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == -9999))
+        ) {
+          continue
+        }
+        aPos.set_latlon(n.getNode("position/latitude-deg").getValue(), n.getNode("position/longitude-deg").getValue());
+        aCourse = pos.course_to(aPos);
+        aDist = pos.distance_to(aPos);
+        aRadius = 2.0 * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
+        dRadius = 2.0 * dDist;
+        aMax = math.fmod(aCourse - heading + aRadius + 540, 360) - 180;
+        aMin = math.fmod(aCourse - heading - aRadius + 540, 360) - 180;
+        # Height of the sprite is hand-tuned to be approx. square, may break with change of resolution.
+        if (secBearing > aMin and secBearing < aMax and aDist - dRadius < range.getValue() * 1290.0) {
+          append(aircraft, {
+            dMax: aDist + dRadius,
+            dMin: aDist - dRadius,
+            alt: n.getNode("position/altitude-ft").getValue() * FT2M,
+            });
         }
       }
 
@@ -302,37 +300,37 @@ var loop = func() {
       #aCourse = 0.0;
       #aPos = geo.Coord.new();
       foreach(var n; aimodels.getChildren("multiplayer") ~ aimodels.getChildren("swift") ~ aimodels.getChildren("aircraft")) {
-          if (n.getNode("controls/invisible",1).getValue()) {
-            continue
-          }
-          if (n.getName() == "aircraft") {
-            # AI aircraft below 40 kt have transponder off (see flightgear/src/Instrumentation/tcas.cxx)
-            if ((n.getNode("velocities/true-airspeed-kt",1).getValue() == nil) or (n.getNode("velocities/true-airspeed-kt",1).getValue() < 40.0)) {
-              continue
-            }
-          } else if (
-            # We look for any kind of responses here, not just the ones valid for TCAS.
-            ((n.getNode("instrumentation/transponder/altitude",1).getValue() == nil) or (n.getNode("instrumentation/transponder/altitude",1).getValue() == -9999)) and
-            ((n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == nil) or (n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == -9999))
-          ) {
-            continue
-          }
-          aPos.set_latlon(n.getNode("position/latitude-deg").getValue(), n.getNode("position/longitude-deg").getValue());
-          aCourse = pos.course_to(aPos);
-          aDist = pos.distance_to(aPos);
-          aRadius = 2 * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
-          dRadius = dDist;
-          aMax = math.fmod(aCourse - heading + aRadius + 540, 360) - 180;
-          aMin = math.fmod(aCourse - heading - aRadius + 540, 360) - 180;
-          # Height of the sprite is hand-tuned to be approx. square, may break with change of resolution.
-          if (secBearing > aMin and secBearing < aMax and aDist - dRadius < range.getValue() * 1290.0) {
-            append(aircraft, {
-              dMax: aDist + dRadius,
-              dMin: aDist - dRadius,
-              alt: n.getNode("position/altitude-ft").getValue() * FT2M,
-              });
-          }
+        if (n.getNode("controls/invisible",1).getValue()) {
+          continue
         }
+        if (n.getName() == "aircraft") {
+          # AI aircraft below 40 kt have transponder off (see flightgear/src/Instrumentation/tcas.cxx)
+          if ((n.getNode("velocities/true-airspeed-kt",1).getValue() == nil) or (n.getNode("velocities/true-airspeed-kt",1).getValue() < 40.0)) {
+            continue
+          }
+        } else if (
+          # We look for any kind of responses here, not just the ones valid for TCAS.
+          ((n.getNode("instrumentation/transponder/altitude",1).getValue() == nil) or (n.getNode("instrumentation/transponder/altitude",1).getValue() == -9999)) and
+          ((n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == nil) or (n.getNode("instrumentation/transponder/transmitted-id",1).getValue() == -9999))
+        ) {
+          continue
+        }
+        aPos.set_latlon(n.getNode("position/latitude-deg").getValue(), n.getNode("position/longitude-deg").getValue());
+        aCourse = pos.course_to(aPos);
+        aDist = pos.distance_to(aPos);
+        aRadius = 2.0 * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
+        dRadius = 2.0 * dDist;
+        aMax = math.fmod(aCourse - heading + aRadius + 540, 360) - 180;
+        aMin = math.fmod(aCourse - heading - aRadius + 540, 360) - 180;
+        # Height of the sprite is hand-tuned to be approx. square, may break with change of resolution.
+        if (secBearing > aMin and secBearing < aMax and aDist - dRadius < range.getValue() * 1290.0) {
+          append(aircraft, {
+            dMax: aDist + dRadius,
+            dMin: aDist - dRadius,
+            alt: n.getNode("position/altitude-ft").getValue() * FT2M,
+            });
+        }
+      }
 
 
       storms = [];
@@ -399,12 +397,6 @@ var loop = func() {
         if (global_mode.getValue() == 4) point = point > 0.5 ? math.max(3 - point * 5, 0.0) : point;
 
         point = math.max(contrast.getValue() * (point + calc_brt), 0.0);
-
-        if ((dist <= 25000 and nDist > 25000) or (dist <= 50000 and nDist > 50000) or (dist <= 75000 and nDist > 75000) or (dist <= 100000 and nDist > 100000) or (dist <= 200000 and nDist > 200000) or (dist <= 300000 and nDist > 300000)) {
-          point += arcs_brt.getValue();
-        }
-
-        point = stop_seq.getValue() == 0 ? math.min(point, 1.0) : 0;
 
         foreach(var n; aircraft) {
           if (dist > n.dMin and dist < n.dMax) {

@@ -141,54 +141,6 @@
         <live>true</live>
         <!--<binding><command>dialog-apply</command></binding>-->
       </checkbox>
-
-      <text><label> </label></text>
-
-      <group><layout>hbox</layout>
-        <hrule>
-          <stretch type="bool">true</stretch>
-        </hrule>
-        <text><label>"Groza" terrain and weather radar</label></text>
-        <hrule>
-          <stretch type="bool">true</stretch>
-        </hrule>
-      </group>
-      <group><layout>hbox</layout>
-        <!--<checkbox>
-          <halign>left</halign>
-          <label>TCAS, </label>
-          <property>sim/model/with-tcas</property>
-          <binding><command>dialog-apply</command></binding>
-        </checkbox>
-        <empty><stretch>true</stretch></empty>-->
-        <text>
-          <halign>left</halign>
-          <label>TCAS radar marks radius, lines (default: 0, off):</label>
-          <!--<enable><property>sim/model/with-tcas</property></enable>-->
-        </text>
-        <slider>
-          <halign>left</halign>
-          <min>0</min>
-          <max>8</max>
-          <step>1</step>
-          <property>instrumentation/GROZA/settings/tcas-blip-radius</property>
-          <live>true</live>
-          <binding><command>dialog-apply</command></binding>
-          <!--<enable><property>sim/model/with-tcas</property></enable>-->
-        </slider>
-        <text>
-          <halign>left</halign>
-          <pref-width>16</pref-width>
-          <property>instrumentation/GROZA/settings/tcas-blip-radius</property>
-          <live>true</live>
-          <!--<enable><property>sim/model/with-tcas</property></enable>-->
-        </text>
-      </group>
-      <text>
-        <label>Radar shows ALL replies, not only mode C or TCAS threats; historically inaccurate.</label>
-        <halign>left</halign>
-        <!--<enable><property>sim/model/with-tcas</property></enable>-->
-      </text>
       
       <text><label> </label></text>
 
