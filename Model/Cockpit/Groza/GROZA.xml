@@ -567,13 +567,7 @@
         <tooltip-id>Groza_mode</tooltip-id>
         <mapping>nasal</mapping>
         <property>instrumentation/GROZA/global_mode</property>
-        <script>
-          var result =  ["Standby", "Terrain", "Weather", "Turbulence", "Drift"][arg[0] - 1];
-          if ((arg[0] - 1 == 1) and getprop("instrumentation/GROZA/settings/tcas-blip-radius") and getprop("instrumentation/tcas/serviceable")) {
-            return result ~ " + TCAS"
-          }
-          return result
-        </script>
+        <script>return ["Standby", "Terrain", "Weather", "Turbulence", "Drift"][arg[0] - 1]</script>
       </binding>
     </hovered>
   </animation>
@@ -607,11 +601,11 @@
     <hovered>
       <binding>
         <command>set-tooltip</command>
-        <label>Brightness: %4d%%</label>
+        <label>Brightness: %4d%% (0%% - 200%%)</label>
         <tooltip-id>Groza_brt</tooltip-id>
         <mapping>nasal</mapping>
         <property>instrumentation/GROZA/screen/brightness</property>
-        <script>return 200*(arg[0]-0.5)</script>
+        <script>return 200*(arg[0])</script>
       </binding>
     </hovered>
   </animation>
@@ -645,7 +639,7 @@
     <hovered>
       <binding>
         <command>set-tooltip</command>
-        <label>Contrast: %2.1fx</label>
+        <label>Contrast: %2.1fx (0.0x - 2.0x)</label>
         <tooltip-id>Groza_contrast</tooltip-id>
         <property>instrumentation/GROZA/info/contrast</property>
       </binding>

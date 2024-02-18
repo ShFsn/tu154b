@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <path>/instrumentation/GROZA/settings/tcas-blip-radius</path>
+  <!--<path>/instrumentation/GROZA/settings/tcas-blip-radius</path>-->
 
   <path>/tu154/options/keyboard/keyboard-mode</path>
   <path>/tu154/options/keyboard/close-viewer</path>
