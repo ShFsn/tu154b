@@ -51,17 +51,6 @@
  </effect>
 
   <animation>
-    <type>material</type>
-    <object-name>l4_Glass</object-name>
-    <object-name>l5_Net</object-name>
-    <emission>
-      <red-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_r</red-prop>
-      <green-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_g</green-prop>
-      <blue-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_b</blue-prop>
-    </emission>
-  </animation>
-
-  <animation>
     <type>texrotate</type>
     <object-name>l2.1_Sector</object-name>
     <property>instrumentation/GROZA/screen/sec_dir</property>
@@ -147,16 +136,6 @@
        <value>1</value>
      </equals>
     </condition>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>Groza_Panel</object-name>
-    <emission>
-      <red-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_r</red-prop>
-      <green-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_g</green-prop>
-      <blue-prop>instrumentation/jsbsim/systems/lighting/lightsrc/cockpit-panels_b</blue-prop>
-    </emission>
   </animation>
 
   <!-- Scan line -->
@@ -685,12 +664,46 @@
     </hovered>
   </animation>
 
+  <!-- On-the-go language switch -->
   <animation>
     <type>material</type>
     <object-name>Groza_Panel</object-name>
     <object-name>b_on</object-name>
     <object-name>b_off</object-name>
     <texture-prop>tu154/textures/lang/GROZA</texture-prop>
+  </animation>
+
+  <!-- Old panel lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>Groza_Panel</object-name>
+    <object-name>b_off</object-name>
+    <object-name>b_on</object-name>
+    <object-name>b_left</object-name>
+    <object-name>b_right</object-name>
+    <object-name>Handle</object-name>
+    <object-name>kn_angle</object-name>
+    <object-name>kn_arcs</object-name>
+    <object-name>kn_brt</object-name>
+    <object-name>kn_contrast</object-name>
+    <object-name>kn_freq</object-name>
+    <object-name>kn_mode</object-name>
+    <object-name>kn_range</object-name>
+    <object-name>lamp_cover</object-name>
+    <object-name>Mounting</object-name>
+    <object-name>l4_Glass</object-name>
+    <object-name>l5_Net</object-name>
+    <condition>
+      <not>
+        <property>/tu154/light/cockpit-not-backup</property>
+      </not>
+    </condition>
+    <emission>
+      <red>0.067</red>
+      <green>0.067</green>
+      <blue>0.067</blue>
+      <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+    </emission>
   </animation>
 
 </PropertyList>
