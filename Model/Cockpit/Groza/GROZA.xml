@@ -280,8 +280,15 @@
         <command>set-tooltip</command>
         <label>Radar: enable (%s)</label>
         <tooltip-id>Groza_on</tooltip-id>
-        <mapping>on-off</mapping>
-        <property>instrumentation/GROZA/status/power</property>
+        <mapping>nasal</mapping>
+        <property>instrumentation/GROZA/status/heat_est</property>
+        <script>
+          var result = ["OFF", "ON"][getprop("instrumentation/GROZA/status/power")];
+          if ( getprop("instrumentation/GROZA/status/power") and arg[0] and !getprop("instrumentation/GROZA/status/serviceable") ) {
+            result = result ~ ", heating up";
+          }
+          return result
+        </script>
       </binding>
     </hovered>
   </animation>
@@ -321,8 +328,15 @@
         <command>set-tooltip</command>
         <label>Radar: disable (%s)</label>
         <tooltip-id>Groza_off</tooltip-id>
-        <mapping>on-off</mapping>
-        <property>instrumentation/GROZA/status/power</property>
+        <mapping>nasal</mapping>
+        <property>instrumentation/GROZA/status/heat_est</property>
+        <script>
+          var result = ["OFF", "ON"][getprop("instrumentation/GROZA/status/power")];
+          if ( getprop("instrumentation/GROZA/status/power") and arg[0] and !getprop("instrumentation/GROZA/status/serviceable") ) {
+            result = result ~ ", heating up";
+          }
+          return result
+        </script>
       </binding>
     </hovered>
   </animation>
