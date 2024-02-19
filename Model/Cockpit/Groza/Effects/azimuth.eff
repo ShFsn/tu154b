@@ -6,7 +6,7 @@
   <lightmap-multi type="int">0</lightmap-multi>
   <lightmap-color type="vec3d" n="0">1.0 0.773 0.561</lightmap-color>
   <texture n="3">
-   <image>Effects/Groza_screen_lm.png</image>
+   <image>Effects/Groza_screen_lm.dds</image>
   </texture>
  </parameters>
 </PropertyList>

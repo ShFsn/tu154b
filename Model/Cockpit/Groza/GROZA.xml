@@ -685,4 +685,12 @@
     </hovered>
   </animation>
 
+  <animation>
+    <type>material</type>
+    <object-name>Groza_Panel</object-name>
+    <object-name>b_on</object-name>
+    <object-name>b_off</object-name>
+    <texture-prop>tu154/textures/lang/GROZA</texture-prop>
+  </animation>
+
 </PropertyList>

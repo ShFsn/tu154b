@@ -569,6 +569,7 @@
       <vc08_t type="string">vc08_t.png</vc08_t>
       <glare type="string">glare.dds</glare>
       <glare_misc type="string">glare_misc.dds</glare_misc>
+      <GROZA type="string">GROZA.dds</GROZA>
     </lang>
 
     <!-- TEMPORARY UNTIL THE COCKPIT IS REDONE-->
