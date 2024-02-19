@@ -17,6 +17,22 @@
 
  <path>com.ac</path>
 
+  <!--External panel lighting-->
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <condition>
+      <not>
+        <property>/tu154/light/cockpit-not-backup</property>
+      </not>
+    </condition>
+    <emission>
+      <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+      <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+      <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+    </emission>
+  </animation>
+
  <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>base</object-name>

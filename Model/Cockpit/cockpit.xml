@@ -104,7 +104,6 @@
     <object-name>MESH28</object-name>
     <object-name>wall_left</object-name>
     <object-name>wall_right</object-name>
-    <object-name>EmergGearExtHandle</object-name>
     <object-name>right_hand_handle</object-name>
     <object-name>crew</object-name>
     <object-name>MESH19</object-name>
@@ -1769,73 +1768,60 @@
 
 
   <!-- **************** Old Panels light ***************** -->
-
   <animation>
     <type>material</type>
+    <object-name>pnl_1</object-name>
+    <object-name>pnl_2</object-name>
+    <!--**********Details***********-->
+    <object-name>DoorsPanel</object-name>
+    <object-name>lever_sti2</object-name>
+    <object-name>lever_sti8</object-name>
+    <object-name>lever_sti0</object-name>
+    <object-name>lever_sti7</object-name>
+    <object-name>right_hand_handle</object-name>
+    <object-name>MESH82</object-name>
+    <object-name>MESH84</object-name>
+    <object-name>MESH83</object-name>
+    <object-name>MESH85</object-name>
+    <object-name>taxi_handle</object-name>
+    <object-name>gear_handle</object-name>
+    <object-name>EmergGearExtHandle</object-name>
+    <object-name>flaps_handle</object-name>
+    <object-name>lever_thr3</object-name>
+    <object-name>thrust_re2</object-name>
+    <object-name>lever_thr2</object-name>
+    <object-name>lever_thr1</object-name>
+    <object-name>thrust_re0</object-name>
+    <object-name>lever_speedbrake</object-name>
+    <object-name>lever_thr6</object-name>
+    <object-name>lever_thr5</object-name>
+    <object-name>lever_thr4</object-name>
+    <object-name>MESH16</object-name>
+    <object-name>lever_mix0</object-name>
+    <object-name>lever_mix1</object-name>
+    <object-name>lever_mix8</object-name>
+    <object-name>lever_lamp_1</object-name>
+    <object-name>lever_mix3</object-name>
+    <object-name>lever_mix4</object-name>
+    <object-name>lever_mix9</object-name>
+    <object-name>lever_lamp_2</object-name>
+    <object-name>lever_mix6</object-name>
+    <object-name>lever_mix7</object-name>  
+    <object-name>lever_mi10</object-name>
+    <object-name>lever_lamp_3</object-name>
+    <object-name>fan1</object-name>
+    <object-name>fan1.001</object-name>
+    <object-name>fan2</object-name>
+    <object-name>fan2.001</object-name>
+    <object-name>fan3</object-name>
+    <object-name>fan3.001</object-name>
+    <object-name>fan3.002</object-name>
+    <object-name>emergency_brake_handl</object-name>
+    <object-name>CAX</object-name>
+    <!--***********General geometry***********-->
+    <object-name>bi-chair</object-name>
     <object-name>capt_panel</object-name>
-    <condition>
-      <not>
-        <property>tu154/light/cockpit-not-backup</property>
-      </not>
-    </condition>
-    <emission>
-      <red>0.067</red>
-      <green>0.067</green>
-      <blue>0.067</blue>
-      <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>MESH22</object-name>
-    <condition>
-      <not>
-        <property>tu154/light/cockpit-not-backup</property>
-      </not>
-    </condition>
-    <emission>
-      <red>0.067</red>
-      <green>0.067</green>
-      <blue>0.067</blue>
-      <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>MESH26</object-name>
-    <condition>
-      <not>
-        <property>tu154/light/cockpit-not-backup</property>
-      </not>
-    </condition>
-    <emission>
-      <red>0.067</red>
-      <green>0.067</green>
-      <blue>0.067</blue>
-      <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>MESH28</object-name>
-    <condition>
-      <not>
-        <property>tu154/light/cockpit-not-backup</property>
-      </not>
-    </condition>
-    <emission>
-      <red>0.067</red>
-      <green>0.067</green>
-      <blue>0.067</blue>
-      <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
+    <object-name>interior_floor</object-name>
     <object-name>MESH17</object-name>
     <object-name>LeftWindow</object-name>
     <object-name>LeftWindowHandle</object-name>
@@ -1843,23 +1829,17 @@
     <object-name>RightWindowHandle</object-name>
     <object-name>LeftWindowGlass</object-name>
     <object-name>RightWindowGlass</object-name>
-    <object-name>WiperLeft</object-name>
-    <object-name>WiperRight</object-name>
+    <object-name>MESH22</object-name>
     <object-name>MESH23</object-name>
     <object-name>MESH25</object-name>
+    <object-name>MESH26</object-name>
     <object-name>MESH27</object-name>
-    <object-name>pnl_1</object-name>
-    <object-name>pnl_2</object-name>
-    <object-name>MESH16</object-name>
-    <object-name>lever_thr4</object-name>
-    <object-name>lever_thr5</object-name>
-    <object-name>lever_thr6</object-name>
-    <object-name>lever_mix0</object-name>
-    <object-name>lever_mix3</object-name>
-    <object-name>lever_mix6</object-name>
-    <object-name>lever_mix8</object-name>
-    <object-name>lever_mix9</object-name>
-    <object-name>lever_mi10</object-name>
+    <object-name>MESH28</object-name>
+    <object-name>wall_left</object-name>
+    <object-name>wall_right</object-name>
+    <object-name>right_hand_handle</object-name>
+    <object-name>crew</object-name>
+    <object-name>MESH19</object-name>
     <condition>
       <not>
         <property>tu154/light/cockpit-not-backup</property>

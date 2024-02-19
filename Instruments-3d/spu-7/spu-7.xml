@@ -281,4 +281,41 @@
     </offsets>
   </text>-->
 
+  <!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>light_plate</object-name>
+    <emission>
+      <red-prop>sim/model/cabin-lighting/prib</red-prop>
+      <green-prop>sim/model/cabin-lighting/prib</green-prop>
+      <blue-prop>sim/model/cabin-lighting/prib-2</blue-prop>
+    </emission>
+  </animation>
+
+  <!--External panel lighting--> <!--BROKEN-->
+  <!--<animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>base.001</object-name>
+    <object-name>base.002</object-name> 
+    <object-name>disk</object-name>
+    <object-name>network_lever</object-name>
+    <object-name>press_me</object-name>
+    <object-name>source_select</object-name>
+    <object-name>spu-lever</object-name>
+    <object-name>spubox</object-name>
+    <object-name>vol_general</object-name>
+    <object-name>vol_listen</object-name>
+    <condition>
+      <not>
+        <property>/tu154/light/cockpit-not-backup</property>
+      </not>
+    </condition>
+    <emission>
+      <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+      <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+      <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+    </emission>
+  </animation>-->
+
 </PropertyList>

@@ -11,18 +11,26 @@
 3D instrument for Tu-154 -->
 <PropertyList>
  <path>ushdb_selector.ac</path>
-<!-- Internal instruments lighting -->
-<!--<animation>
+<!--External panel lighting-->
+<animation>
   <type>material</type>
-  <object-name>rect</object-name>
   <object-name>handle_1</object-name>
   <object-name>handle_2</object-name>
+  <object-name>rect_1</object-name>
+  <object-name>rect_2</object-name>
+  <object-name>sphere2</object-name>
+  <object-name>sphere2.001</object-name>
+  <condition>
+    <not>
+      <property>/tu154/light/cockpit-not-backup</property>
+    </not>
+  </condition>
   <emission>
-    <red-prop>tu154/light/instruments/int-red</red-prop>
-    <green-prop>tu154/light/instruments/int-green</green-prop>
-    <blue-prop>tu154/light/instruments/int-blue</blue-prop>
+    <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
   </emission>
-</animation>-->
+</animation>
 
 <animation>
   <type>rotate</type>

@@ -15,6 +15,10 @@
 <animation>
   <type>material</type>
   <object-name>base</object-name>
+  <object-name>disk</object-name>
+  <object-name>sphere1</object-name>
+  <object-name>sphere2</object-name>
+  <object-name>handle</object-name>
   <condition>
     <not>
       <property>/tu154/light/cockpit-not-backup</property>
@@ -24,21 +28,6 @@
     <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
     <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
     <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
-  </emission>
-</animation>
-<animation>
-  <type>material</type>
-  <object-name>base_switch</object-name>
-  <condition>
-    <not>
-      <property>/tu154/light/cockpit-not-backup</property>
-    </not>
-  </condition>
-  <emission>
-    <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
-    <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
-    <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
-    <factor>0.5</factor>
   </emission>
 </animation>
 

@@ -26,6 +26,10 @@
 <animation>
   <type>material</type>
   <object-name>base</object-name>
+  <object-name>base.001</object-name>
+  <object-name>base.002</object-name>
+  <object-name>power</object-name>
+  <object-name>reserve</object-name>
   <condition>
     <not>
       <property>/tu154/light/cockpit-not-backup</property>
