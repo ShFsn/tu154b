@@ -64,34 +64,34 @@
       <name>exterior</name>
       <path>Aircraft/tu154b/Model/exterior.xml</path>
   </model>
-  <model>
+  <!--<model>
       <name>exterior-mp</name>
       <path>Aircraft/tu154b/Model/exterior-MP.xml</path>
-  </model>
+  </model>-->
   <!-- Lights -->
   <model>
       <name>lights</name>
       <path>Aircraft/tu154b/Model/Lights/Lights.xml</path>
   </model>
-  <model>
+  <!--<model>
       <name>lights-mp</name>
       <path>Aircraft/tu154b/Model/Lights/Lights-MP.xml</path>
-  </model>
+  </model>-->
 
   <!-- Switch for Local / AI/MP -->
   <animation>
     <type>select</type>
-    <object-name>exterior</object-name>
-    <object-name>lights</object-name>
+    <!--<object-name>exterior</object-name>
+    <object-name>lights</object-name>-->
     <object-name>tooltips</object-name>
     <condition><property>tu154/constants/one</property></condition>
   </animation>
-  <animation>
+  <!--<animation>
     <type>select</type>
     <object-name>exterior-mp</object-name>
     <object-name>lights-mp</object-name>
     <condition><not><property>tu154/constants/one</property></not></condition>
-  </animation>
+  </animation>-->
 
 
   <!--
