@@ -47,6 +47,7 @@ var b_right = props.globals.initNode(rel_path~"buttons/b_right", 0, "DOUBLE");
 #var blip_radius = props.globals.initNode(rel_path~"settings/tcas-blip-radius", 0, "INT");
 #var tcas = props.globals.getNode("instrumentation/tcas/serviceable", 0, "BOOL");
 var aimodels = props.globals.getNode("/ai/models",1);
+#var maxAIfade = props.globals.initNode(rel_path~"settings/maxAIfade", 0.5, "DOUBLE");
 
 
 
@@ -199,8 +200,9 @@ var loop = func() {
         aPos.set_latlon(n.getNode("position/latitude-deg").getValue(), n.getNode("position/longitude-deg").getValue());
         aCourse = pos.course_to(aPos);
         aDist = pos.distance_to(aPos);
-        aRadius = 2.0 * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
-        dRadius = 2.0 * dDist;
+        echoSize = math.max(1.0, 60.0 / range.getValue());
+        aRadius = echoSize * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
+        dRadius = echoSize * dDist;
         aMax = math.fmod(aCourse - heading + aRadius + 540, 360) - 180;
         aMin = math.fmod(aCourse - heading - aRadius + 540, 360) - 180;
         # Height of the sprite is hand-tuned to be approx. square, may break with change of resolution.
@@ -252,7 +254,7 @@ var loop = func() {
         foreach(var n; aircraft) {
           if (dist > n.dMin and dist < n.dMax) {
             if (n.alt >= (alt - (alt - last_elev) / last_elev_dist * (n.dMax + n.dMin) * 0.5)) {
-              point = 1.0;
+              point = math.min(1.0, point + (1.0 + 0.75 * (60 / range.getValue() - 1)));
             }
           }
         }
@@ -318,8 +320,9 @@ var loop = func() {
         aPos.set_latlon(n.getNode("position/latitude-deg").getValue(), n.getNode("position/longitude-deg").getValue());
         aCourse = pos.course_to(aPos);
         aDist = pos.distance_to(aPos);
-        aRadius = 2.0 * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
-        dRadius = 2.0 * dDist;
+        echoSize = math.max(1.0, 60.0 / range.getValue());
+        aRadius = echoSize * 0.25 * math.atan2(math.tan(abs(dDeg) * D2R) * range.getValue() * 1000.0, aDist) * R2D;
+        dRadius = echoSize * dDist;
         aMax = math.fmod(aCourse - heading + aRadius + 540, 360) - 180;
         aMin = math.fmod(aCourse - heading - aRadius + 540, 360) - 180;
         # Height of the sprite is hand-tuned to be approx. square, may break with change of resolution.
@@ -394,14 +397,14 @@ var loop = func() {
           point = math.min(1, point);
         }
 
-        if (global_mode.getValue() == 4) point = point > 0.5 ? math.max(3 - point * 5, 0.0) : point;
+        if (global_mode.getValue() == 4) point = math.min(1.0, (point > 0.5 ? math.max(3 - point * 5, 0.0) : point) * 2);
 
         point = math.max(contrast.getValue() * (point + calc_brt), 0.0);
 
         foreach(var n; aircraft) {
           if (dist > n.dMin and dist < n.dMax) {
             if (n.alt >= (alt - (alt - last_elev) / last_elev_dist * (n.dMax + n.dMin) * 0.5)) {
-              point = 1.0;
+              point = math.min(1.0, point + (1.0 + 0.75 * (60 / range.getValue() - 1)));
             }
           }
         }
