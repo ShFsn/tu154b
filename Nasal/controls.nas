@@ -51,7 +51,23 @@ setlistener( "/controls/flight/elevator-trim", trim_handler );
 #
 # Brakes
 #
-props.globals.getNode("/sim/controls/brake-cancels-parking-brake", 1).setBoolValue(1);
+props.globals.getNode("/sim/controls/brake-cancels-parking-brake", 1).setBoolValue(0);
+var park_brk_latch = 0;
+
+var fullBrakeTime = 0.5;
+var applyBrakes = func(v, which = 0) {
+	print("Brakes pos: ", v);
+	var opt_in = getprop("tu154/options/controls/realistic-park");
+	if (!park_brk_latch) {
+		if (which <= 0) { interpolate("/controls/gear/brake-left", v, fullBrakeTime); }
+		if (which >= 0) { interpolate("/controls/gear/brake-right", v, fullBrakeTime); }
+	}
+	if (v and (!park_brk_latch or !opt_in)) {
+		setprop("/controls/gear/brake-parking", 0);
+	}
+	if (!v) park_brk_latch = 0;
+}
+
 var park_busy = 0;
 var selectParkBrk = func() {
 	if (!park_busy) {
@@ -63,6 +79,7 @@ var selectParkBrk = func() {
 		if (state and ((brake_left > 0.9 and brake_right > 0.9) or !opt_in)) {
 			applyBrakes(1, 0);
 			setprop("controls/gear/brake-parking", 1);
+			if (opt_in) park_brk_latch = 1;
 			park_busy = 0;
 			return;
 		}
@@ -75,7 +92,7 @@ var selectParkBrk = func() {
 	}
 }
 setlistener("controls/gear/brake-parking", selectParkBrk, 1, 0);
-applyParkingBrake(1);
+#applyParkingBrake(1);
 
 
 # Autostart
