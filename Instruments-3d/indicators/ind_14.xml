@@ -51,7 +51,7 @@
 </animation>
 <animation>
   <type>material</type>
-  <object-name>text_1</object-name>
+  <object-name>go_gear</object-name>
   <texture-prop>tu154/textures/instruments-3d/indicators/tex_69</texture-prop>
 </animation>
 

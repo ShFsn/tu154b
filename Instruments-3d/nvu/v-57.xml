@@ -471,7 +471,7 @@
 </animation>
 
 <!--Hide unuse digits-->
-<animation>
+<!--<animation>
   <type>select</type>
   <object-name>ones_2</object-name>
   <object-name>dec_2</object-name>
@@ -493,7 +493,7 @@
       <value>0.1</value>
     </less-than>
   </condition>
-</animation>
+</animation>-->
 
 <!-- Wind speed -->
 <animation>

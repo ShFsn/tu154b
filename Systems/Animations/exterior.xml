@@ -7,10 +7,10 @@
     <inverted>false</inverted>
     <input>
       <and>
-        <equals>
+        <greater-than>
           <property>tu154/light/retract</property>
-          <value>1.0</value>
-        </equals>
+          <value>0.0</value>
+        </greater-than>
         <greater-than>
           <property>tu154/light/headlight-selector</property>
           <value>0.95</value>
@@ -37,10 +37,10 @@
           <property>tu154/light/headlight-selector</property>
           <value>0.85</value>
         </less-than>
-        <equals>
+        <greater-than>
           <property>gear/gear/position-norm</property>
-          <value>1</value>
-        </equals>
+          <value>0.0</value>
+        </greater-than>
         <greater-than>
           <property>tu154/systems/electrical/buses/DC27-bus-L/volts</property>
           <value>0</value>

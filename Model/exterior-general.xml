@@ -7990,46 +7990,6 @@
 
 
   <!--********************** Lights Animation *************************-->
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>headlight_l</object-name>
-    <object-name>headlight_r</object-name>  
-    <property>rotors/main/blade[1]/flap-deg</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	-70.0</dep></entry>
-      <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
-    </interpolation>
-    <center>
-    <x-m>-3.71</x-m>
-    <y-m>0.0</y-m>
-    <z-m>-0.1</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>headlight_c</object-name>
-    <property>rotors/main/blade[1]/flap-deg</property>
-    <interpolation>
-      <entry><ind>	0.0</ind>	<dep>	-70.0</dep></entry>
-      <entry><ind>	1.0</ind>	<dep>	0.0</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>-19.037</x-m>
-      <y-m>0.0</y-m>
-      <z-m>-0.45</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
 
   <!--Nav light-->
   <animation>
@@ -8096,7 +8056,7 @@
     <property>rotors/main/blade[1]/flap-deg</property>
     <interpolation>
       <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.1</ind>	<dep>	90.0</dep></entry>
+      <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
     </interpolation>
     <center>
       <x-m>-3.934</x-m>
@@ -8117,7 +8077,7 @@
     <property>rotors/main/blade[1]/flap-deg</property>
     <interpolation>
       <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
-      <entry><ind>	0.1</ind>	<dep>	90.0</dep></entry>
+      <entry><ind>	1.0</ind>	<dep>	90.0</dep></entry>
     </interpolation>
     <center>
       <x-m>-19.037</x-m>

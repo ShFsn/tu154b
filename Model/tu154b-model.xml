@@ -22,7 +22,7 @@
   <!-- Auto Pushback -->
   <model>
     <name>goldhofert</name>
-    <path>Aircraft/tu154b/Model/Autopush/Goldhofert.xml</path>
+    <path>Aircraft/tu154b/Model/Autopush/Truck.xml</path>
     <offsets>
       <x-m>-17.89</x-m>
       <y-m>0.0</y-m>
