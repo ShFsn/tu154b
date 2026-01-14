@@ -295,15 +295,40 @@
   </integrator>
 
   <summer name="instrumentation/nvu/S-active-in">
-    <output>instrumentation/nvu/S-active</output>
+    <output>instrumentation/nvu/S-active-INS</output>
     <input>instrumentation/nvu/S-base-active</input>
     <input>instrumentation/nvu/S-integrator</input>
   </summer>
   <summer name="instrumentation/nvu/Z-active-in">
-    <output>instrumentation/nvu/Z-active</output>
+    <output>instrumentation/nvu/Z-active-INS</output>
     <input>instrumentation/nvu/Z-base-active</input>
     <input>instrumentation/nvu/Z-integrator</input>
   </summer>
+  
+  <switch name="instrumentation/nvu/S-active">
+    <default value="instrumentation/nvu/S-active-INS"/>
+    <test value="instrumentation/nvu/S-GPS">
+      instrumentation/nvu/active != 0
+      instrumentation/nvu/stopped != 0
+      instrumentation/nvu/GPS-active != 0
+    </test>
+  </switch>
+  <switch name="instrumentation/nvu/Z-active">
+    <default value="instrumentation/nvu/Z-active-INS"/>
+    <test value="instrumentation/nvu/Z-GPS">
+      instrumentation/nvu/active != 0
+      instrumentation/nvu/stopped != 0
+      instrumentation/nvu/GPS-active != 0
+    </test>
+  </switch>
+  <switch name="instrumentation/nvu/ZPU-active">
+    <default value="instrumentation/nvu/ZPU-active"/>
+    <test value="instrumentation/nvu/ZPU-GPS">
+      instrumentation/nvu/active != 0
+      instrumentation/nvu/stopped != 0
+      instrumentation/nvu/GPS-active != 0
+    </test>
+  </switch>
 
   <fcs_function name="instrumentation/nvu/transform-angle">
     <description>Affine transform angle in radians</description>

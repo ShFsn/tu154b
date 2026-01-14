@@ -26,6 +26,11 @@
         <stopped type="int">1</stopped>
         <Spm-active type="double">0</Spm-active>
         <Zpm-active type="double">0</Zpm-active>
+
+        <GPS-active type="bool">false</GPS-active>
+        <S-GPS type="double">0</S-GPS>
+        <Z-GPS type="double">0</Z-GPS>
+        <ZPU-GPS type="double">0</ZPU-GPS>
       </nvu>
     </instrumentation>
 

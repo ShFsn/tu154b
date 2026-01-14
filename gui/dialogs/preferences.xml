@@ -380,6 +380,21 @@
         <!--<enable><property>sim/model/with-tcas</property></enable>-->
       </text>
       
+      <text><label> </label></text>
+      
+      <checkbox>
+        <halign>left</halign>
+        <label>Generic GPS</label>
+        <property>/fdm/jsbsim/instrumentation/nvu/GPS-active</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+      <text>
+        <label>Feeds NVU with Route Manager data directly. CHEAT.</label>
+        <halign>left</halign>
+        <!--<enable><property>sim/model/with-tcas</property></enable>-->
+      </text>
+      
     </group>
       
     <text><label> </label></text>

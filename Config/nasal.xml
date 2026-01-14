@@ -7,6 +7,10 @@
     <file>Aircraft/tu154b/Nasal/instruments.nas</file>
   </instruments>
 
+  <instruments>
+    <file>Aircraft/tu154b/Nasal/gps-adapter.nas</file>
+  </instruments>
+
   <mapcase>
     <file>Aircraft/tu154b/Nasal/mapcase.nas</file>
     <file>Aircraft/tu154b/Nasal/ND.nas</file>
