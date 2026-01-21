@@ -117,7 +117,7 @@ var gps_handle = func() {
         if (-1.0 * dist_S <= LUR) {
             wp_curr_id = wp_curr_id + 1;
             wp_curr_id = (wp_curr_id >= fp.getPlanSize()) ? fp.getPlanSize() - 1 : wp_curr_id;
-            mode = 1;
+            gps_mode = 1;
         } else if (-1.0 * dist_S > LUR and fp.current > wp_curr_id) {
             wp_curr_id = fp.current;
             gps_mode = 2;
