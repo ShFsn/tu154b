@@ -1047,7 +1047,17 @@
             </function>
           </fcs_function>
 
-          <switch name="gear/steering-cmd-norm">
+	  <fcs_function name="gear/tiller-cmd-scaled">
+	    <function>
+	      <product>
+		<property>/controls/gear/tiller</property>
+		<value>0.015873</value>
+		<property>gear/steering</property>
+              </product>
+            </function>
+          </fcs_function>
+
+         <switch name="gear/steering-cmd-norm">
             <test value="0">
               gear/unit[0]/WOW == 0
               gear/steering-cmd-norm lt 0.25
@@ -1056,7 +1066,13 @@
             <test value="gear/steering-cmd-norm">
               gear/unit[0]/WOW == 0
             </test>
-            <test value="-gear/rudder-cmd-scaled">
+            <test value="-gear/tiller-cmd-scaled">
+              /controls/gear/separate-tiller-axis == 1
+              gear/nose-wheel-steering == 1
+              systems/electrical-ok == 1
+              hs/hs2-busters-ok == 1
+            </test>
+            <test value="-gear/rudder-cmd-scaled">              
               gear/nose-wheel-steering == 1
               systems/electrical-ok == 1
               hs/hs2-busters-ok == 1

@@ -125,6 +125,26 @@
 
       <text><label> </label></text>
 
+      <group>
+        <layout>hbox</layout>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+        <text>
+          <label>Joystick</label>
+        </text>
+        <hrule>
+          <stretch type="bool">true</stretch>
+        </hrule>
+      </group>
+      <checkbox>
+        <halign>left</halign>
+        <label>Separate tiller axis</label>
+        <property>/controls/gear/separate-tiller-axis</property>
+        <live>true</live>
+        <binding><command>dialog-apply</command></binding>
+      </checkbox>
+
       <group><layout>hbox</layout>
         <hrule>
           <stretch type="bool">true</stretch>

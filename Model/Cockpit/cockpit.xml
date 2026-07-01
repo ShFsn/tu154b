@@ -1068,6 +1068,7 @@
     <factor>50</factor>
     <condition>
       <not><property>tu154/switches/steering-limit</property></not>
+      <not><property>/controls/gear/separate-tiller-axis</property></not>
     </condition>
     <axis>
       <x1-m>0.723</x1-m>
@@ -1078,6 +1079,25 @@
       <z2-m>0.524</z2-m>
     </axis>
   </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>taxi_handle</object-name>
+  <property>controls/gear/tiller</property>
+  <factor>-50</factor>
+  <condition>
+    <not><property>tu154/switches/steering-limit</property></not>
+    <property>/controls/gear/separate-tiller-axis</property>
+  </condition>
+  <axis>
+    <x1-m>0.723</x1-m>
+    <y1-m>-0.815</y1-m>
+    <z1-m>0.535</z1-m>
+    <x2-m>0.7015</x2-m>
+    <y2-m>-0.825</y2-m>
+    <z2-m>0.524</z2-m>
+  </axis>
+</animation>
 
 
   <!--Gear handle-->
