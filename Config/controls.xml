@@ -5,6 +5,8 @@
   <gear>
     <steering>63.0</steering>
     <nose-wheel-steering type="bool">false</nose-wheel-steering>
+    <tiller type="double">0</tiller>
+    <separate-tiller-axis type="bool">false</separate-tiller-axis>
   </gear>
 
 </PropertyList>
