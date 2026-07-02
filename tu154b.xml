@@ -1047,12 +1047,12 @@
             </function>
           </fcs_function>
 
-	  <fcs_function name="gear/tiller-cmd-scaled">
-	    <function>
-	      <product>
-		<property>/controls/gear/tiller</property>
-		<value>0.015873</value>
-		<property>gear/steering</property>
+	        <fcs_function name="gear/tiller-cmd-scaled">
+	          <function>
+	            <product>
+		            <property>/controls/gear/tiller</property>
+		            <value>0.015873</value>
+		            <property>gear/steering</property>
               </product>
             </function>
           </fcs_function>
