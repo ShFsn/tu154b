@@ -69,9 +69,7 @@
       <stab-manu-cmd type="double">0.0</stab-manu-cmd>
       <stab-auto-cmd type="double">1.0</stab-auto-cmd>
       <stab-manu-switch type="double">0.0</stab-manu-switch>
-      <stab-manu-selector type="double">1.0</stab-manu-selector>
-
-      <revers-by-joy type="double">0.0</revers-by-joy>
+      <stab-manu-selector type="double">1.0</stab-manu-selector>      
       <revers-1-limit type="double">0.1</revers-1-limit>
       <revers-2-limit type="double">0.05</revers-2-limit><!-- Set here value about 0.03-0.06  if you want reverser control by joystick. Set revers-by-joy to 1 -->
 

@@ -14,7 +14,6 @@
 
 <property value="0.001"> ap/alt-gain </property>
 
-<!--<property> fcs/revers-by-joy </property>-->
 <property value="0.0"> fcs/revers-by-key </property>
 <property value="0.0"> ap/turbulence </property>
 <property value="0.0"> ap/met-neutral </property>
@@ -1257,44 +1256,56 @@ There is a system for enchance pitch control. It read pitch trimmer position and
 
       </channel>
 <!-- ***************************** Reverser ******************************* -->
-<channel name="Reverser">
+      <channel name="Reverser">
 
         <switch name="fcs/rev-1-left-cmd">
           <default value="0.0"/>
-          <test value="1.0">
+          <test value="1">
+            /controls/engines/reverser-control-mode == 0
             fcs/revers-by-key gt 0.5
           </test>
-          <test value="fcs/revers-by-joy">
+          <test value="1">
+            /controls/engines/reverser-control-mode == 1
             fcs/throttle-cmd-norm[0] lt fcs/revers-1-limit
+          </test>
+          <test value="/controls/engines/engine/reverser-lever">
+            /controls/engines/reverser-control-mode == 2
           </test>
         </switch>
         <switch name="fcs/rev-1-right-cmd">
           <default value="0.0"/>
-          <test value="1.0">
+          <test value="1">
+            /controls/engines/reverser-control-mode == 0
             fcs/revers-by-key gt 0.5
           </test>
-          <test value="fcs/revers-by-joy">
-            fcs/throttle-cmd-norm[2] lt fcs/revers-1-limit
+          <test value="1">
+            /controls/engines/reverser-control-mode == 1
+            fcs/throttle-cmd-norm[0] lt fcs/revers-1-limit
+          </test>
+          <test value="/controls/engines/engine[2]/reverser-lever">
+            /controls/engines/reverser-control-mode == 2
           </test>
         </switch>
         <switch name="fcs/rev-2-left-cmd">
-          <default value="0.0"/>
-          <test value="1.0">
+          <test value="1">
+            /controls/engines/reverser-control-mode == 0
             fcs/revers-by-key gt 0.5
           </test>
-          <test value="fcs/revers-by-joy">
-            fcs/throttle-cmd-norm[0] lt fcs/revers-2-limit
+          <test value="1">
+            /controls/engines/reverser-control-mode == 1
+            fcs/throttle-cmd-norm[0] lt fcs/revers-1-limit
           </test>
         </switch>
         <switch name="fcs/rev-2-right-cmd">
-          <default value="0.0"/>
-          <test value="1.0">
+          <test value="1">
+            /controls/engines/reverser-control-mode == 0
             fcs/revers-by-key gt 0.5
           </test>
-          <test value="fcs/revers-by-joy">
-            fcs/throttle-cmd-norm[2] lt fcs/revers-2-limit
+          <test value="1">
+            /controls/engines/reverser-control-mode == 1
+            fcs/throttle-cmd-norm[0] lt fcs/revers-1-limit
           </test>
-        </switch>
+        </switch>    
 
         <kinematic name="fcs/reverser-lever-left">
           <input>fcs/rev-1-left-cmd</input>
@@ -1308,7 +1319,7 @@ There is a system for enchance pitch control. It read pitch trimmer position and
               <time>2</time>
             </setting>
           </traverse>
-          <output>propulsion/engine[0]/reverser-angle-rad</output>
+          <output>propulsion/engine[2]/reverser-angle-rad</output>
         </kinematic>
 
         <kinematic name="fcs/reverser-lever-right">
@@ -1323,8 +1334,8 @@ There is a system for enchance pitch control. It read pitch trimmer position and
               <time>2</time>
             </setting>
           </traverse>
-          <output>propulsion/engine[2]/reverser-angle-rad</output>
-        </kinematic>
+          <output>propulsion/engine/reverser-angle-rad</output>
+        </kinematic>        
 
         <kinematic name="fcs/reverser-throttle-left">
           <input>fcs/rev-2-left-cmd</input>
@@ -1354,7 +1365,7 @@ There is a system for enchance pitch control. It read pitch trimmer position and
           </traverse>
         </kinematic>
 
-</channel>
+      </channel>
 <!-- ***************************** Autothrottle ******************************* -->
       <channel name="At">
 

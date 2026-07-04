@@ -2,6 +2,19 @@
 
 <PropertyList>
 
+  <engines>
+    <reverser-control-mode type="int">0</reverser-control-mode>
+    <engine>
+      <reverser-lever type="double">0.0</reverser-lever>
+    </engine>
+    <engine>
+      <!--Left blank to make indexes work-->
+    </engine>
+    <engine>
+      <reverser-lever type="double">0.0</reverser-lever>
+    </engine>
+  </engines>
+
   <gear>
     <steering>63.0</steering>
     <nose-wheel-steering type="bool">false</nose-wheel-steering>
