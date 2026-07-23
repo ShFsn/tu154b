@@ -117,8 +117,8 @@
     <pn-5>
       <heading-state type="double" >0.0</heading-state>
       <pitch-state type="double" >0.0</pitch-state>
-      <az-1-cmd type="double">0.0</az-1-cmd>
-      <az-2-cmd type="double">0.0</az-2-cmd>
+      <az-1 type="double">0.0</az-1>
+      <az-2 type="double">0.0</az-2>
     </pn-5>
     <pn-6>
       <serviceable type="bool" >true</serviceable>
