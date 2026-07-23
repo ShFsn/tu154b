@@ -7,25 +7,25 @@
 		<switch name="calc/absu/absu_property_update/vor-support/radial-actual">
 			<default value="/instrumentation/nav[0]/radials/actual-deg"/>
 			<test logic="AND" value="/instrumentation/nav[1]/radials/actual-deg">
-				/tu154/instrumentation/pn-5/az-2-cmd ne 0
+				/tu154/instrumentation/pn-5/az-2 ne 0
 			</test>
 		</switch>
 		<switch name="calc/absu/absu_property_update/vor-support/radial-reciprocal">
 			<default value="/instrumentation/nav[0]/radials/reciprocal-radial-deg"/>
 			<test logic="AND" value="/instrumentation/nav[1]/radials/reciprocal-radial-deg">
-				/tu154/instrumentation/pn-5/az-2-cmd ne 0
+				/tu154/instrumentation/pn-5/az-2 ne 0
 			</test>
 		</switch>
 		<switch name="calc/absu/absu_property_update/vor-support/radial-selected">
 			<default value="/instrumentation/nav[0]/radials/selected-deg"/>
 			<test logic="AND" value="/instrumentation/nav[1]/radials/selected-deg">
-				/tu154/instrumentation/pn-5/az-2-cmd ne 0
+				/tu154/instrumentation/pn-5/az-2 ne 0
 			</test>
 		</switch>
 		<switch name="calc/absu/absu_property_update/vor-support/to-flag">
 			<default value="/instrumentation/nav[0]/to-flag"/>
 			<test logic="AND" value="/instrumentation/nav[1]/to-flag">
-				/tu154/instrumentation/pn-5/az-2-cmd ne 0
+				/tu154/instrumentation/pn-5/az-2 ne 0
 			</test>
 		</switch>
 
