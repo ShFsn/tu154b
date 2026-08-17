@@ -1319,7 +1319,7 @@ There is a system for enchance pitch control. It read pitch trimmer position and
               <time>2</time>
             </setting>
           </traverse>
-          <output>propulsion/engine[2]/reverser-angle-rad</output>
+          <output>propulsion/engine[0]/reverser-angle-rad</output>
         </kinematic>
 
         <kinematic name="fcs/reverser-lever-right">
@@ -1334,7 +1334,7 @@ There is a system for enchance pitch control. It read pitch trimmer position and
               <time>2</time>
             </setting>
           </traverse>
-          <output>propulsion/engine/reverser-angle-rad</output>
+          <output>propulsion/engine[2]/reverser-angle-rad</output>
         </kinematic>        
 
         <kinematic name="fcs/reverser-throttle-left">
