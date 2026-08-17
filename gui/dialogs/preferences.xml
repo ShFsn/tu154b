@@ -145,6 +145,69 @@
         <binding><command>dialog-apply</command></binding>
       </checkbox>
 
+      <group>
+        <layout>hbox</layout>
+        <text>
+          <label>Reverser Control Mode:</label>
+          <halign>left</halign>
+        </text>
+        <combo>
+          <halign>left</halign>
+          <property>/controls/engines/reverser-control-mode</property>
+          <live>true</live>
+          <value>0</value>
+          <value>1</value>
+          <value>2</value>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+        </combo>
+      </group>
+      <text>
+        <label>0 = Reverse by Key; 1 = Reverse by Joy; 2 = Separate Reverser Axes</label>
+        <halign>left</halign>
+      </text>
+
+      <text>
+        <label>Reverser limit (for Reverser Control Mode == 1):</label>
+      </text>
+      <group>
+        <layout>hbox</layout>
+        <text>
+          <label>Revers 1 Limit:</label>
+          <halign>left</halign>
+        </text>
+        <input>
+          <property>/fdm/jsbsim/fcs/revers-1-limit</property>
+          <format>%0.0f</format>
+          <halign>left</halign>
+          <live>true</live>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+        </input>
+      </group>
+      <group>
+        <layout>hbox</layout>
+        <text>
+          <label>Revers 2 Limit:</label>
+          <halign>left</halign>
+        </text>
+        <input>
+          <property>/fdm/jsbsim/fcs/revers-2-limit</property>
+          <format>%0.0f</format>
+          <halign>left</halign>
+          <live>true</live>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+        </input>
+      </group>
+      <text>
+        <label>Recommended value is between 0.03 to 0.06</label>
+        <halign>left</halign>
+      </text>
+
       <group><layout>hbox</layout>
         <hrule>
           <stretch type="bool">true</stretch>

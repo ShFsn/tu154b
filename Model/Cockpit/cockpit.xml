@@ -1325,7 +1325,7 @@
   <animation>
     <type>rotate</type>
     <object-name>thrust_re0</object-name>
-    <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad/anim</property>
+    <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad/anim</property>
     <factor>28.65</factor>
     <center>
       <x-m>0.71229</x-m>
@@ -1342,7 +1342,7 @@
   <animation>
     <type>rotate</type>
     <object-name>thrust_re2</object-name>
-    <property>fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad/anim</property>
+    <property>fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad/anim</property>
     <factor>28.65</factor>
     <center>
       <x-m>0.71229</x-m>

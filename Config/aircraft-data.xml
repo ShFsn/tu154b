@@ -3,7 +3,10 @@
 <PropertyList>
 
   <!--<path>/instrumentation/GROZA/settings/tcas-blip-radius</path>-->
+  <path>/controls/engines/reverser-control-mode</path>
   <path>/controls/gear/separate-tiller-axis</path>
+  <path>/fdm/jsbsim/fcs/revers-1-limit</path>
+  <path>/fdm/jsbsim/fcs/revers-2-limit</path>
   <path>/tu154/options/keyboard/keyboard-mode</path>
   <path>/tu154/options/keyboard/close-viewer</path>
   <path>/tu154/options/welcome/show-on-startup</path>
